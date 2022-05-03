@@ -8,15 +8,25 @@
     "chromedriver": "^100.0.0",
     "wdio-chromedriver-service": "^7.3.2"
   },
+  "type": "commonjs",
   "scripts": {
-    "test:acc": "npx wdio run wdio.conf.js --spec devAssetCreateAccount.spec.js",
-    "test:org": "npx wdio run wdio.conf.js --spec devAssetCreateOrganisation.spec.js",
-    "allure:clean": "rm -rf allure-results/* allure-report/*",
+    "test:acc": "npx wdio run wdio.conf.js --spec createAccount.spec.js",
+    "test:org": "npx wdio run wdio.conf.js --spec createOrganisation.spec.js",
+    "test:org:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createOrganisation.spec.js",
+    "test:newreg": "npx wdio run wdio.conf.js --spec createNewRegister.spec.js",
+    "test:newreg:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createNewRegister.spec.js",
+    "test:assetgroup": "npx wdio run wdio.conf.js --spec createAssetGroup.spec.js",
+    "test:assetgroup:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createAssetGroup.spec.js",
     "allure:serve": "npx allure serve allure-results",
     "allure:generate": "npx allure generate allure-results --clean"
   },
   "dependencies": {
     "allure-commandline": "^2.17.2",
-    "chai": "^4.3.6"
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "mailslurp-client": "^15.7.5",
+    "prodperfect-mailsac": "^0.0.9",
+    "unique-names-generator": "^4.7.1"
   }
 }

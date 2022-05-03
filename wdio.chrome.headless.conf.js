@@ -11,10 +11,10 @@ exports.config = {
     maxInstances: 5,
 
     capabilities: [{
-        maxInstances: 1,
+        maxInstances: 5,
         browserName: 'chrome',
         'goog:chromeOptions': {
-            args: ['--start-maximized']
+            args: ['--headless', '--start-maximized', '--no-sandbox', '--disable-gpu', '--window-size=1280,800', '--allow-insecure-localhost']
         },
         acceptInsecureCerts: true
     },
@@ -110,12 +110,8 @@ exports.config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {Object}         browser      instance of created browser/device session
      */
-     before: function (capabilities, specs) {
-         browser.setNetworkConditions({
-             latency:1000,
-
-         })
-    },
+    // before: function (capabilities, specs) {
+    // },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
