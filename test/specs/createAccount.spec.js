@@ -25,6 +25,11 @@ const shortLastName = uniqueNamesGenerator({
 const tempGoogleMail = mainEmail + "+" + shortUserName + "@gmail.com";
 
 describe('Create account', () => {
+    after('delete created register', async () => {
+        await devAssetMainPage.clickUserProfileLink()
+        await devAssetMainPage.clickLogoutProfileBtn()
+        await expect(await authPage.isSignInBtnDisplayed()).true;
+    });
     it('should create account with valid credentials', async () => {
         //const inbox = await mailslurp.inboxController.createInbox({});
         //expect(inbox.emailAddress).contain('@mailslurp');

@@ -112,7 +112,7 @@ exports.config = {
      */
      before: function (capabilities, specs) {
          browser.setNetworkConditions({
-             latency:1000,
+             latency:500,
 
          })
     },

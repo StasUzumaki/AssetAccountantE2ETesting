@@ -12,18 +12,22 @@ const randomName = uniqueNamesGenerator({
 });
 const randomOrgName = randomName + "_org";
 
-before('land to dev asset page and login', async () => {
-    await browser.url(baseUrl.baseUrlLink)
-    await authPage.clickSignInBtn();
-    await authPage.isUserNameLoginFieldDisplayed();
-    await authPage.setUserNameValue(loginData.userEmail);
-    await authPage.clickNextBtn();
-    await authPage.isPasswordLoginFieldDisplayed();
-    await authPage.setPasswordSignInValue(loginData.userPassw);
-    await authPage.clickSignInSubmitBtn();
-});
-
 describe('create organisation', () => {
+    before('land to dev asset page and login', async () => {
+        await browser.url(baseUrl.baseUrlLink)
+        await authPage.clickSignInBtn();
+        await authPage.isUserNameLoginFieldDisplayed();
+        await authPage.setUserNameValue(loginData.userEmail);
+        await authPage.clickNextBtn();
+        await authPage.isPasswordLoginFieldDisplayed();
+        await authPage.setPasswordSignInValue(loginData.userPassw);
+        await authPage.clickSignInSubmitBtn();
+    });
+    after('delete created register', async () => {
+        await devAssetMainPage.clickUserProfileLink()
+        await devAssetMainPage.clickLogoutProfileBtn()
+        await expect(await authPage.isSignInBtnDisplayed()).true;
+    });
     it('should create a new organisation', async () => {
         await devAssetMainPage.clickCreateOrganisationSelectionDropDown()
         await devAssetMainPage.clickCreateNewOrganisationLink()

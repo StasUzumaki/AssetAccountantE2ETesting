@@ -1,7 +1,9 @@
 const loginData = {
 
     userEmail: 'devassetmaintestacc@mailsac.com',
-    userPassw: 'devAssetTest'
+    userPassw: 'devAssetTest',
+    userEmailAssetGrp: 'stasdevasset+assetgrouptemplatetesting@gmail.com',
+    userPasswAssetGrp: 'devAssetTest'
      
 }
 

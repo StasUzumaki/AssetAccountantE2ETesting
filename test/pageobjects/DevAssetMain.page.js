@@ -1,16 +1,22 @@
 const page = require('./page')
 
-const createRegisterBtn = '//*[@class="col-6 col-lg-3 demo-action"]/button'
+const userProfileLink = '#user-profile'
+const logoutProfileBtn = '//*[@id="avatar-dropdown-menu"]/button[3]'
+const assetsAddBtn = '//app-view-asset-actions/div/button'
+const createFirstRegisterBtn = '//*[@class="col-6 col-lg-3 demo-action"]/button'
+const createRegisterBtn = '//div/div[2]/div/button[3]'
 const createNewRegisterForm = '[class="modal-content"]'
+const tableWithRegisters = '//tbody/tr'
 const registerName = '[formcontrolname="name"]'
 const entityName = '[formcontrolname="entityName"]'
 const nextRegisterBtn = '[class="btn btn-primary ms-2"]'
 const tryForFreeBtn = '//*[contains(text(), "Try For Free")]'
+const demoRegisterBtn = '//div[2]/div/button[2]'
 const registerSelection = '#register-selection'
 const organisationSelectionDropDown = '#org-selection'
 const createNewOrganisationLink = '//*[contains(text(), " Create new organisation")]'
 const allRegisters = '[class="dropdown-item text-primary"]'
-const firstRegisterLink = '//*[@class="table ng-star-inserted"]/tbody/tr[1]/td[2]/a'
+const firstRegisterLink = '//table/tbody/tr/td[2]/a'
 const dropDownRegisterMenu = '#dropdownBasic1'
 const archiveBtn = '//*[contains(text(), "Archive")]'
 const archiveConfirmationOkBtn = `//*[@class='modal-footer']/button[2]`
@@ -26,11 +32,19 @@ const organisationNamesList = '//nav/section[2]/div/div'
 const demoRegisterLink = '[class="link ng-star-inserted"]'
 const organisationSettingsLink = '[name="settings"]'
 const settingsHeader = '[class="page-heading ng-star-inserted"] h3'
+const settingsHeaderWithExistingReg = '[class="page-heading"] h3' 
 const assetsLink = '[href*="/assets"]'
 const firstThingsFirstAlertMessage = '[class="alert-message"]'
 const createAssetGroupTemplateBtn = '[routerlink*="template"]'
+const createAssetGroupBlankBtn = '[routerlink="../assetgroups/new"]'
+const assetGroupNameBlankField = '//div/div/div[2]/div[1]/input[1]'
+const assetGroupDescriptionBlankField = '//div/div/div[2]/div[1]/input[2]'
+const assetGroupBlankSaveBtn = '//div[1]/div[2]/div/button'
+const assetGroupBlankSettingsSaveBtn = '//div[1]/div[2]/div/button[2]'
 const buildingsTemplateAssetForm = '//div[1]/label[1]/div'
 const buildingsTemplateCheckBox = '//*[@id="check[0]"]'
+const capitalWorksTemplateAssetForm = '//div[1]/label[2]/div'
+const capitalWorksTemplateCheckBox = '//*[@id="check[1]"]'
 const assetsGroupFromTemplateForms = '[class="CheckboxGrid pb-3"]'
 const newAssetGroupFromTemplateTitle = '[class="pe-2 me-auto"]'
 const templateSaveBtn = '[class="btn btn-primary mb-3"]'
@@ -42,12 +56,44 @@ const deleteConfirmationOkBtn =`//*[@class='modal-footer']/button[2]`
 const nameGroupField = '//app-standard-page-content[2]/div/div/div[2]/div[1]/input[1]'
 const descriptionGroupFiled = '//app-standard-page-content[2]/div/div/div[2]/div[1]/input[2]'
 const deleteConfirmationTitle = '//*[contains(text(), "Delete Confirmation")]'
+const assetsGroupList = 'div[class="ag-pinned-left-cols-container"] [row-id*="GROUP"]'
+const assetGroupBlankAlert = '[role="alertdialog"][aria-live="polite"]'
 
 class DevAssetMainpage {
-
-    async clickCreateRegisterBtn(){
-        return await page.click(createRegisterBtn)
+    async clickCreateFirstRegisterBtn(){
+        return await page.click(createFirstRegisterBtn)
     }
+    
+    async clickUserProfileLink(){
+        return await page.click(userProfileLink)
+    }
+
+    async clickLogoutProfileBtn(){
+        return await page.click(logoutProfileBtn)
+    }
+
+    async clickAssetsAddBtn(){
+        return await page.click(assetsAddBtn)
+    }
+
+    async getAllRegisters(){
+        return await page.getAllElements(tableWithRegisters)
+    }
+
+    async getRegistersListSize(){
+        await (await page.getElement(tableWithRegisters)).waitForDisplayed()
+        return await (await this.getAllRegisters()).length
+    }
+
+    async getAllAssetsGroup(){
+        return await page.getAllElements(assetsGroupList)
+    }
+
+    async getAssetsGroupListSize(){
+        await (await page.getElement(assetsGroupList)).waitForDisplayed()
+        return await (await this.getAllAssetsGroup()).length
+    }
+
     async isCreateRegisterBtnDisplayed(){
         return await page.isElementDisplayed(createRegisterBtn)
     }
@@ -67,9 +113,19 @@ class DevAssetMainpage {
     async clickTryForFreeBtn(){
         return await page.click(tryForFreeBtn)
     }
+
+    async clickCreateRegisterBtn(){
+        return await page.click(createRegisterBtn)
+    }
+
     async clickRegisterSelectionDropDown(){
         return await page.click(registerSelection)
     }
+
+    async clickDemoRegisterBtn(){
+        return await page.click(demoRegisterBtn)
+    }
+
     async clickAllRegistersLink(){
         return await page.click(allRegisters)
     }
@@ -77,9 +133,11 @@ class DevAssetMainpage {
     async clickFirstRegisterLink(){
         return await page.click(firstRegisterLink)
     }
+
     async clickCreateOrganisationSelectionDropDown(){
         return await page.click(organisationSelectionDropDown)
     }
+
     async clickCreateNewOrganisationLink(){
         return await page.click(createNewOrganisationLink)
     }
@@ -95,11 +153,17 @@ class DevAssetMainpage {
     async clickAssetsLink(){
         return await page.click(assetsLink)
     }
+
     async clickCreateAssetGroupTemplateBtn(){
         return await page.click(createAssetGroupTemplateBtn)
     }
+
     async clickBuidlingsTemtplateCheckBox(){
         return await page.click(buildingsTemplateCheckBox)
+    }
+
+    async clickCapitalWorksTemtplateCheckBox(){
+        return await page.click(capitalWorksTemplateCheckBox)
     }
 
     async clickDropDownRegisterMenu(){
@@ -137,6 +201,13 @@ class DevAssetMainpage {
     async clickDeleteCofirmationOkBtn(){
         return await page.click(deleteConfirmationOkBtn)
     }
+    async clickCreateAssetGroupBlankBtn(){
+        return await page.click(createAssetGroupBlankBtn)
+    }
+
+    async clickAssetGroupBlankSaveBtn(){
+        return await page.click(assetGroupBlankSaveBtn)
+    }
 
     async setOrganisationNameField(organisationNameFieldInput){
         return await page.setValue(organisationNameField, organisationNameFieldInput)
@@ -155,6 +226,18 @@ class DevAssetMainpage {
 
     async setBillingContactPhoneField(billingContactPhoneFieldInput){
         return await page.setValue(billingContactPhoneField, billingContactPhoneFieldInput)
+    }
+
+    async setAssetGroupDescriptionBlankFieldValue(assetGroupDescriptionBlankFieldInput){
+        return await page.setValue(assetGroupDescriptionBlankField, assetGroupDescriptionBlankFieldInput)
+    }
+
+    async setAssetGroupNameBlankFieldValue(assetGroupNameBlankFieldInput){
+        return await page.setValue(assetGroupNameBlankField, assetGroupNameBlankFieldInput)
+    }
+
+    async isAssetGroupBlankAlertDisplayed(){
+        return await page.isElementDisplayed(assetGroupBlankAlert)
     }
 
     async isNameGroupFieldDisplayed(){
@@ -192,6 +275,14 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(entityName)
     }
 
+    async isAssetGroupNameFieldDisplayed(){
+        return await page.isElementDisplayed(assetGroupNameBlankField)
+    }
+
+    async isAssetGroupDescriptionFieldDisplayed(){
+        return await page.isElementDisplayed(assetGroupDescriptionBlankField)
+    }
+
     async isAssetsGroupFromTemplateFormsDisplayed(){
         return await page.isElementDisplayed(assetsGroupFromTemplateForms)
     }
@@ -219,6 +310,10 @@ class DevAssetMainpage {
         return await page.getElementText(organisationNamesList)
     }
 
+    async getAssetGroupBlankAlertText(){
+        return await page.getElementText(assetGroupBlankAlert)
+    }
+
     async isBuildingsTemplateAssetFormClickable(){
         return await page.isElementClickable(buildingsTemplateAssetForm)
     }
@@ -230,6 +325,7 @@ class DevAssetMainpage {
     async isDemoRegisterLinkDisplayed(){
         return await page.isElementDisplayed(demoRegisterLink)
     }
+
     async isFirstThingsFirstAlertMessageDisplayed(){
         return await page.isElementDisplayed(firstThingsFirstAlertMessage)
     }
@@ -244,6 +340,14 @@ class DevAssetMainpage {
 
     async getSettingsHeaderText(){
         return await page.getElementText(settingsHeader)
+    }
+//
+    async isSettingsHeaderWithExistingRegDisplayed(){
+        return await page.isElementDisplayed(settingsHeaderWithExistingReg)
+    }
+
+    async getSettingsHeaderWithExistingRegText(){
+        return await page.getElementText(settingsHeaderWithExistingReg)
     }
 
     async getDemoRegisterText(){

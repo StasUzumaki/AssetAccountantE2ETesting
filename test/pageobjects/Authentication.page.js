@@ -1,4 +1,4 @@
-const Page = require('./page')
+const page = require('./page')
 
 const emailMailsacField = '[class*="myinbox form-control"]'
 const checkTheEmailBtn = '[class="btn btn-primary"]'
@@ -21,99 +21,103 @@ const organizationNameField = '[class*="form-control"]'
 const createOrganizationBtn = '[class*="btn-primary"]'
 const validationAlertMessage = '[class*="alert-message validation"]'
 
-class AuthPage {
+class Authpage {
 
     async setUserNameValue(userNameInput){
-        return await Page.setValue(userName, userNameInput)
+        return await page.setValue(userName, userNameInput)
     }
 
     async clickNextBtn(){
-        return await Page.click(nextBtn)
+        return await page.click(nextBtn)
     }
 
     async setPasswordSignInValue(passowrdSignInInput){
-        return await Page.setValue(passwordSignIn, passowrdSignInInput)
+        return await page.setValue(passwordSignIn, passowrdSignInInput)
     }
 
     async clickSignInSubmitBtn(){
-        return await Page.click(signInSubmitBtn)
+        return await page.click(signInSubmitBtn)
     }
 
     async clickCreateAccountBtn(){
-        return await Page.click(createAccBtn)
+        return await page.click(createAccBtn)
     }
 
     async clickOkVerifyBtn(){
-        return await Page.click(okVerifyBtn)
+        return await page.click(okVerifyBtn)
     }
 
     async clickCheckTheEmailBtn(){
-        return await Page.click(checkTheEmailBtn)
+        return await page.click(checkTheEmailBtn)
     }
     
     async setEmailMailsacFieldValue(emailMailsacFieldInput){
-        return await Page.setValue(emailMailsacField, emailMailsacFieldInput)
+        return await page.setValue(emailMailsacField, emailMailsacFieldInput)
     }
 
     async setFisrtNameValue(firstNameInput) {
-        return await Page.setValue(firstNameCreate, firstNameInput)
+        return await page.setValue(firstNameCreate, firstNameInput)
     }
 
     async setLastNameValue(lastNameInput){
-        return await Page.setValue(lastNameCreate, lastNameInput)
+        return await page.setValue(lastNameCreate, lastNameInput)
     }
 
     async setEmailValue(emailInput){
-        return await Page.setValue(email, emailInput)
+        return await page.setValue(email, emailInput)
     }
 
     async setPhoneNumberValue(PhoneInput){
-        return await Page.setValue(PhoneNumb, PhoneInput)
+        return await page.setValue(PhoneNumb, PhoneInput)
     }
 
     async setPasswordCreateAccValue(PasswordCreateAccInput){
-        return await Page.setValue(PasswordCreateAcc, PasswordCreateAccInput)
+        return await page.setValue(PasswordCreateAcc, PasswordCreateAccInput)
     }
 
     async setPasswordCreateAccConfirmValue(PasswordCreateAccConfirmInput){
-        return await Page.setValue(PasswordConfirm, PasswordCreateAccConfirmInput)
+        return await page.setValue(PasswordConfirm, PasswordCreateAccConfirmInput)
     }
 
     async clickRegisterBtn(){
-        return await Page.click(registerBtn)
+        return await page.click(registerBtn)
     }
 
     async clickSignInBtn(){
-        return await Page.click(signInBtn)
+        return await page.click(signInBtn)
+    }
+
+    async isSignInBtnDisplayed(){
+        return await page.isElementDisplayed(signInBtn)
     }
 
     async isEmailVerificationFormDisplayed(){
-        return await Page.isElementDisplayed(EmailVerificationForm)
+        return await page.isElementDisplayed(EmailVerificationForm)
     }
 
     async isUserNameLoginFieldDisplayed(){
-        return await Page.isElementDisplayed(userName)
+        return await page.isElementDisplayed(userName)
     }
 
     async isPasswordLoginFieldDisplayed(){
-        return await Page.isElementDisplayed(passwordSignIn)
+        return await page.isElementDisplayed(passwordSignIn)
     }
 
     async isOrganizationFieldDisplayed(){
-        return await Page.isElementDisplayed(organizationNameField)
+        return await page.isElementDisplayed(organizationNameField)
     }
 
     async setOrganizationNameFieldValue(organizationNameFieldInput){
-        return await Page.setValue(organizationNameField, organizationNameFieldInput)
+        return await page.setValue(organizationNameField, organizationNameFieldInput)
     }
 
     async clickCreateOrganizationBtn(){
-        return await Page.click(createOrganizationBtn)
+        return await page.click(createOrganizationBtn)
     }
 
     async isValidationAlertMessageDisplayed(){
-        return await Page.isElementDisplayed(validationAlertMessage)
+        return await page.isElementDisplayed(validationAlertMessage)
     }
 }
 
-module.exports = new AuthPage();
+module.exports = new Authpage();
