@@ -21,6 +21,11 @@
     "test:assetgrptemplate:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createAssetGroupTemplate.spec.js",
     "test:assetgrpblank": "npx wdio run wdio.conf.js --spec createAssetGroupBlank.spec.js",
     "test:assetgrpblank:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createAssetGroupBlank.spec.js",
+    
+    "test:asset": "npx wdio run wdio.conf.js --spec createAsset.spec.js",
+    "test:asset:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createAsset.spec.js",
+    "test:chngsub": "npx wdio run wdio.conf.js --spec changeSubscription.spec.js",
+    "test:chngsub:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec changeSubscription.spec.js",
     "allure:serve": "npx allure serve allure-results",
     "allure:generate": "npx allure generate allure-results --clean"
   },

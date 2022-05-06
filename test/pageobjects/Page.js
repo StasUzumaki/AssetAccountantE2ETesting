@@ -61,6 +61,16 @@ class Page {
     async isElementClickable(element) {
         return (await this.getElement(element)).isClickable();
     }
+
+    async clickDropdownItemByText(element, text) {
+        await this.waitUntilClickable(element);
+        await (await this.getElement(element)).selectByVisibleText(text);
+    }
+
+    async clickDropdownItemByIndex(element, index) {
+        await this.waitUntilClickable(element);
+        await (await this.getElement(element)).selectByIndex(index);
+    }
 }
 
 module.exports = new Page();

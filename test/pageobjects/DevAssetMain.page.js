@@ -3,6 +3,7 @@ const page = require('./page')
 const userProfileLink = '#user-profile'
 const logoutProfileBtn = '//*[@id="avatar-dropdown-menu"]/button[3]'
 const assetsAddBtn = '//app-view-asset-actions/div/button'
+const createAssetBtn = '[routerlink="./new"]'
 const createFirstRegisterBtn = '//*[@class="col-6 col-lg-3 demo-action"]/button'
 const createRegisterBtn = '//div/div[2]/div/button[3]'
 const createNewRegisterForm = '[class="modal-content"]'
@@ -15,12 +16,23 @@ const demoRegisterBtn = '//div[2]/div/button[2]'
 const registerSelection = '#register-selection'
 const organisationSelectionDropDown = '#org-selection'
 const createNewOrganisationLink = '//*[contains(text(), " Create new organisation")]'
+const registersLink = '//nav/section[2]/a'
+const organisationSettingsUpgradeBtn = '//app-payment-settings/div[1]/div/button'
 const allRegisters = '[class="dropdown-item text-primary"]'
 const firstRegisterLink = '//table/tbody/tr/td[2]/a'
 const dropDownRegisterMenu = '#dropdownBasic1'
 const archiveBtn = '//*[contains(text(), "Archive")]'
 const archiveConfirmationOkBtn = `//*[@class='modal-footer']/button[2]`
 const successArchivedRegisterMessage = '[aria-label*="Register "]'
+const newAssetNameField = '//app-form-control[1]/div/div[2]/input'
+const newAssetCodeNumberField = '//app-form-control[2]/div/div[2]/input'
+const newAssetDescriptionField = '[formcontrolname="description"]'
+const newAssetGroupSelect = '//app-asset-group-selector/select'
+const newAssetCostField = '//app-currency-input/div/input'
+const newAssetPurchaseDate = '//app-form-control[6]/div/div[2]/app-date-input/div/input'
+const newAssetQuantity = '[formcontrolname="quantity"]'
+const newAssetQuantityUnitsSelect = '//div/div[2]/div/select'
+//
 const createNewOrganisationForm = '[class="modal-content"]'
 const organisationNameField = '//form/div[1]/app-form-control[1]/div/div[2]/input'
 const organisationDescriptionField = '//form/div[1]/app-form-control[2]/div/div[2]/input'
@@ -30,7 +42,7 @@ const billingContactPhoneField = '//form/div[1]/div/app-form-control[3]/div/div[
 const newOrganisationSaveBtn = '//div[@class="modal-footer"]/button[2]'
 const organisationNamesList = '//nav/section[2]/div/div'
 const demoRegisterLink = '[class="link ng-star-inserted"]'
-const organisationSettingsLink = '[name="settings"]'
+const organisationSettingsLink = '//nav/section[3]/div/a[4]'
 const settingsHeader = '[class="page-heading ng-star-inserted"] h3'
 const settingsHeaderWithExistingReg = '[class="page-heading"] h3' 
 const assetsLink = '[href*="/assets"]'
@@ -39,14 +51,14 @@ const createAssetGroupTemplateBtn = '[routerlink*="template"]'
 const createAssetGroupBlankBtn = '[routerlink="../assetgroups/new"]'
 const assetGroupNameBlankField = '//div/div/div[2]/div[1]/input[1]'
 const assetGroupDescriptionBlankField = '//div/div/div[2]/div[1]/input[2]'
-const assetGroupBlankSaveBtn = '//div[1]/div[2]/div/button'
-const assetGroupBlankSettingsSaveBtn = '//div[1]/div[2]/div/button[2]'
+const assetGroupBlankSaveBtn = '//div/div[1]/div[2]/div/button'
 const buildingsTemplateAssetForm = '//div[1]/label[1]/div'
 const buildingsTemplateCheckBox = '//*[@id="check[0]"]'
 const capitalWorksTemplateAssetForm = '//div[1]/label[2]/div'
 const capitalWorksTemplateCheckBox = '//*[@id="check[1]"]'
 const assetsGroupFromTemplateForms = '[class="CheckboxGrid pb-3"]'
 const newAssetGroupFromTemplateTitle = '[class="pe-2 me-auto"]'
+const newAssetTitle = '[class="pe-2 me-auto"] h3'
 const templateSaveBtn = '[class="btn btn-primary mb-3"]'
 const successSavedAlertMessage = '[class="alert-message"] p'
 const exitBtn = '[routerlink="../../assets"]'
@@ -58,8 +70,75 @@ const descriptionGroupFiled = '//app-standard-page-content[2]/div/div/div[2]/div
 const deleteConfirmationTitle = '//*[contains(text(), "Delete Confirmation")]'
 const assetsGroupList = 'div[class="ag-pinned-left-cols-container"] [row-id*="GROUP"]'
 const assetGroupBlankAlert = '[role="alertdialog"][aria-live="polite"]'
+const assetGroupCardSection = '[class="row view-section"]'
+const depreciationForm = '//div/div[2]/app-depreciation-method-selector'
+const newAssetSaveBtn = '//form/div/div/button'
+const subscriptionAndPaymentLink = '#ngb-nav-8'
+const paymentForm = '[class="form-check"]'
+const toggleForAccountingFirms = '[class="switch"]'
 
 class DevAssetMainpage {
+
+    async isPaymentFormDisplayed(){
+        return await page.isElementDisplayed(paymentForm)
+    }
+
+    async isDepreciationFormDisplayed(){
+        return await page.isElementDisplayed(depreciationForm)
+    }
+
+    async selectNewAssetQuantityUnitsValue(){
+        return await page.clickDropdownItemByIndex(newAssetQuantityUnitsSelect, 1)
+    }
+
+    async setNewAssetQuantityValue(newAssetQuantityInput){
+        return await page.setValue(newAssetQuantity,newAssetQuantityInput)
+    }
+
+    async setNewAssetPurchaseDateValue(newAssetPurchaseDateInput){
+        return await page.setValue(newAssetPurchaseDate, newAssetPurchaseDateInput)
+    }
+
+    async setNewAssetCostValue(newAssetCostFieldInput){
+        return await page.setValue(newAssetCostField, newAssetCostFieldInput)
+    }
+
+    async setNewAssetCodeNumberValue(newAssetCodeNumberFieldInput){
+        return await page.setValue(newAssetCodeNumberField, newAssetCodeNumberFieldInput)
+    }
+
+    async setNewAssetNameValue(newAssetNameFieldInput){
+        return await page.setValue(newAssetNameField, newAssetNameFieldInput)
+    }
+
+    async setNewAssetDescriptionValue(newAssetDescriptionFieldInput){
+        return await page.setValue(newAssetDescriptionField, newAssetDescriptionFieldInput)
+    }
+
+    async selectNewAssetGroupValue(){
+        return await page.clickDropdownItemByIndex(newAssetGroupSelect, 1)
+    }
+
+    async clickToggleForAccountingFirms(){
+        return await page.click(toggleForAccountingFirms)
+    }
+
+    async clickOrganisationSettingsUpgradeBtn(){
+        return await page.click(organisationSettingsUpgradeBtn)
+    }
+
+    async clickRegistersLink(){
+        return await page.click(registersLink)
+    }
+
+    async clickSubscriptionAndPaymentLink(){
+        return await page.click(subscriptionAndPaymentLink)
+    }
+
+    async clickNewAssetSaveBtn(){
+        return await page.click(newAssetSaveBtn)
+    }
+
     async clickCreateFirstRegisterBtn(){
         return await page.click(createFirstRegisterBtn)
     }
@@ -74,6 +153,18 @@ class DevAssetMainpage {
 
     async clickAssetsAddBtn(){
         return await page.click(assetsAddBtn)
+    }
+
+    async clickCreateAssetBtn(){
+        return await page.click(createAssetBtn)
+    }
+
+    async isAssetsAddBtnDisplayed(){
+        return await page.isElementDisplayed(assetsAddBtn)
+    }
+
+    async isAssetCardSectionDisplayed(){
+        return await page.isElementDisplayed(assetGroupCardSection)
     }
 
     async getAllRegisters(){
@@ -236,6 +327,10 @@ class DevAssetMainpage {
         return await page.setValue(assetGroupNameBlankField, assetGroupNameBlankFieldInput)
     }
 
+    async isNewAssetTitleDisplayed(){
+        return await page.isElementDisplayed(newAssetTitle)
+    }
+
     async isAssetGroupBlankAlertDisplayed(){
         return await page.isElementDisplayed(assetGroupBlankAlert)
     }
@@ -302,6 +397,7 @@ class DevAssetMainpage {
     async getLinkText(linkSelector){
         return await page.getElementText(linkSelector);
     }
+
     async getSuccessfullySavedAlertMessageText(){
         return await page.getElementText(successSavedAlertMessage)
     }
