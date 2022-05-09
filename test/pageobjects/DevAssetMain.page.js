@@ -72,19 +72,114 @@ const assetsGroupList = 'div[class="ag-pinned-left-cols-container"] [row-id*="GR
 const assetGroupBlankAlert = '[role="alertdialog"][aria-live="polite"]'
 const assetGroupCardSection = '[class="row view-section"]'
 const depreciationForm = '//div/div[2]/app-depreciation-method-selector'
-const newAssetSaveBtn = '//form/div/div/button'
+const taxDepreciationForm = '//div[2]/app-depreciation-method-selector/div[1]'
+const accountsDepreciationForm = '//div[2]/app-depreciation-method-selector/div[2]'
+const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
 const subscriptionAndPaymentLink = '#ngb-nav-8'
 const paymentForm = '[class="form-check"]'
+const subscriptionForm = '[class="modal-content"]'
 const toggleForAccountingFirms = '[class="switch"]'
+const closeBtn = '[class="btn-close"]'
+const standartChangePlanBtn = '//div[3]//div/button'
+const paymentMethodForm = '//ngb-modal-window[2]/div/div'
+//paymentDetails
+const cardNumberField = '//div[2]/span/input'
+const cardExpiryField = '[name="exp-date"]'
+const cvcField = '[placeholder="CVC"]'
+//asset
+const assetDescriptionTitle = '//app-standard-page-content-grid/div/div[1]/h3'
+const reverseDropDown = '#reverse-dropdown'
+const deleteAssetBtn = '//app-standard-page-content-grid/div/div[2]/button[1]'
+const setQuantityBtn = '//div//div/div[2]/div[1]/div/button[2]'
+const firstUseBtn = '//button[contains(text(), "First Use")]'
+const purchaseBtn = '//button[contains(text(), "Purchase")]'
+const reversalConfirmationTitle = '//*[contains(text(), "Reversal Confirmation")]'
+const reversalConfirmationForm = '[class="modal-content"]'
+const firstUseAlertMessage = '[class="alert-message"]'
+const taxViewForm = '//app-standard-page-content/div'
+const taxDepreciationNotesField = '#reassessmentNotes'
+const selfAssessedCheckBox = '#asset-setting-1'
 
 class DevAssetMainpage {
+    
+    async clickSelfAssessedCheckBox(){
+        return await page.click(selfAssessedCheckBox)
+    }
 
+    async setTaxDepreciationNotesFieldValue(taxDepreciationNotesInput){
+        return await page.setValue(taxDepreciationNotesField, taxDepreciationNotesInput)
+    }
+
+    async isTaxViewFormDisplayed(){
+        return await page.isElementDisplayed(taxViewForm)
+    }
+
+    async isFirstUseAlertMessageDisplayted(){
+        return await page.isElementDisplayed(firstUseAlertMessage)
+    }
+
+    async isReversalConfirmationFormDisplayed(){
+        return await page.isElementDisplayed(reversalConfirmationForm)
+    }
+
+    async isReversalConfirmationTitleDisplayed(){
+        return await page.isElementDisplayed(reversalConfirmationTitle)
+    }
+
+    async clickDeleteAssetBtn(){
+        return await page.click(deleteAssetBtn)
+    }
+
+    async clickPurchaseBtn(){
+        return await page.click(purchaseBtn)
+    }
+
+    async clickFirstUseBtn(){
+        return await page.click(firstUseBtn)
+    }
+
+    async clickSetQuantityBtn(){
+        return await page.click(setQuantityBtn)
+    }
+
+    async clickReverseDropDown(){
+        return await page.click(reverseDropDown)
+    }
+
+    async isAssetDescriptionTitleDisplayed(){
+        return await page.isElementDisplayed(assetDescriptionTitle)
+    }
+
+    async setCardNumberFieldValue(cardNumberFieldInput){
+        return await page.setValue(cardNumberField, cardNumberFieldInput)
+    }
+
+    async setCardExpiryFieldValue(cardExpiryFieldInput){
+        return await page.setValue(cardExpiryField, cardExpiryFieldInput)
+    }
+
+    async setCvcFieldValue(cvcFieldInput){
+        return await page.setValue(cvcField, cvcFieldInput)
+    }
+    
     async isPaymentFormDisplayed(){
         return await page.isElementDisplayed(paymentForm)
     }
 
     async isDepreciationFormDisplayed(){
         return await page.isElementDisplayed(depreciationForm)
+    }
+
+    async isTaxDepreciationFormDisplayed(){
+        return await page.isElementDisplayed(taxDepreciationForm)
+    }
+
+    async isAccountsDepreciationFormDisplayed(){
+        return await page.isElementDisplayed(accountsDepreciationForm)
+    }
+
+    async isSubscriptionFormDisplayed(){
+        return await page.isElementDisplayed(subscriptionForm)
     }
 
     async selectNewAssetQuantityUnitsValue(){
@@ -119,8 +214,16 @@ class DevAssetMainpage {
         return await page.clickDropdownItemByIndex(newAssetGroupSelect, 1)
     }
 
+    async clickStandartChangePlanBtn(){
+        return await page.click(standartChangePlanBtn)
+    }
+
     async clickToggleForAccountingFirms(){
         return await page.click(toggleForAccountingFirms)
+    }
+
+    async clickCloseBtn(){
+        return await page.click(closeBtn)
     }
 
     async clickOrganisationSettingsUpgradeBtn(){
@@ -157,6 +260,10 @@ class DevAssetMainpage {
 
     async clickCreateAssetBtn(){
         return await page.click(createAssetBtn)
+    }
+
+    async isPaymentMethodFormDisplayed(){
+        return await page.isElementDisplayed(paymentMethodForm)
     }
 
     async isAssetsAddBtnDisplayed(){
