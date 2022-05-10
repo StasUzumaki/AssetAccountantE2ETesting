@@ -42,7 +42,6 @@ const billingContactPhoneField = '//form/div[1]/div/app-form-control[3]/div/div[
 const newOrganisationSaveBtn = '//div[@class="modal-footer"]/button[2]'
 const organisationNamesList = '//nav/section[2]/div/div'
 const demoRegisterLink = '[class="link ng-star-inserted"]'
-const organisationSettingsLink = '//nav/section[3]/div/a[4]'
 const settingsHeader = '[class="page-heading ng-star-inserted"] h3'
 const settingsHeaderWithExistingReg = '[class="page-heading"] h3' 
 const assetsLink = '[href*="/assets"]'
@@ -75,7 +74,20 @@ const depreciationForm = '//div/div[2]/app-depreciation-method-selector'
 const taxDepreciationForm = '//div[2]/app-depreciation-method-selector/div[1]'
 const accountsDepreciationForm = '//div[2]/app-depreciation-method-selector/div[2]'
 const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
+//register settings link
+const registerSettingsLink = '//nav/section[3]/div/a[5]'
+//organisation settings link
+const organisationSettingsLink = '//nav/section[3]/div/a[4]'
 const subscriptionAndPaymentLink = '#ngb-nav-8'
+const usersLink = '//*[contains(text(), "Users") and @class="nav-link"]'
+const inviteUserBtn = '[class="horizontal-wrap align-items-start"] button'
+const inviteUserForm = '//div/div//form'
+const emailInviteField = '//div/div[2]/input'
+const registerCheckBoxForInvite = '//table/tbody/tr[2]//input'
+const registerRoleDropDownMenu = '//form/div[2]/table/tbody/tr[2]/td[4]/div'
+const registerUserRoleBtn = '//table/tbody/tr[2]/td[4]/div/div/button[2]'
+const inviteBtn = '//form/div[3]/button[2]'
+const invintationAlert = '[role="alertdialog"][aria-live="polite"]'
 const paymentForm = '[class="form-check"]'
 const subscriptionForm = '[class="modal-content"]'
 const toggleForAccountingFirms = '[class="switch"]'
@@ -83,7 +95,7 @@ const closeBtn = '[class="btn-close"]'
 const standartChangePlanBtn = '//div[3]//div/button'
 const paymentMethodForm = '//ngb-modal-window[2]/div/div'
 //paymentDetails
-const cardNumberField = '//div[2]/span/input'
+const cardNumberField = '//*[@class="modal-content"]//app-form-control[1]/div/div[2]/label/div/input'
 const cardExpiryField = '[name="exp-date"]'
 const cvcField = '[placeholder="CVC"]'
 //asset
@@ -99,9 +111,115 @@ const firstUseAlertMessage = '[class="alert-message"]'
 const taxViewForm = '//app-standard-page-content/div'
 const taxDepreciationNotesField = '#reassessmentNotes'
 const selfAssessedCheckBox = '#asset-setting-1'
+const firstGroupLink = '//ng-component/div/div/div/a'
+const firstAssetLink = '//ng-component/div/div[1]/a'
+//journal
+const journalLink = '[href*="/journals"]'
+const createBtn = '//app-standard-page-content/div//div/div[2]/button'
+const createJournalForm = '//app-side-panel/div'
+const deleteJournalBtn = '//ul/li/div[3]/button'
+const createJournalBtn = '//app-create-journal/form/button'
+const journalTitle = '[class="pe-2 me-auto"]'
+const journalDescriptionField = '//div/div[2]/input'
+const currentlyJournals = '//app-standard-page-content-grid/div'
+const accountTypeCostCell = '//*[contains(text(), "Cost") and @col-id="accountCode" ]'
+const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @col-id="accountCode" ]'
 
 class DevAssetMainpage {
     
+
+    async clickRegisterSettingsLink(){
+        return await page.click(registerSettingsLink)
+    }
+
+    async getInvintationAlertText(){
+        return await page.getElementText(invintationAlert)
+    }
+
+    async isInvintationAlertDisplayed(){
+        return await page.isElementDisplayed(invintationAlert)
+    }
+
+    async setEmailInviteFieldValue(emailInviteFieldInput){
+        return await page.setValue(emailInviteField, emailInviteFieldInput)
+    }
+
+    async isInviteUserFormDisplayed(){
+        return await page.isElementDisplayed(inviteUserForm)
+    }
+
+    async clickRegisterUserRoleBtn(){
+        return await page.click(registerUserRoleBtn)
+    }
+
+    async clickRegisterRoleDropDown(){
+        return await page.click(registerRoleDropDownMenu)
+    }
+
+    async clickRegisterCheckBoxForInvite(){
+        return await page.click(registerCheckBoxForInvite)
+    }
+
+    async clickInviteBtn(){
+        return await page.click(inviteBtn)
+    }
+
+    async clickInviteUserBtn(){
+        return await page.click(inviteUserBtn)
+    }
+
+    async isAccountTypeClearingSuspenseCellDisplayed(){
+        return await page.isElementDisplayed(accountTypeClearingSuspenseCell)
+    }
+    
+    async isAccountTypeCostCellDisplayed(){
+        return await page.isElementDisplayed(accountTypeCostCell)
+    }
+
+    async isCurrentlyJournalsDisplayed(){
+        return await page.isElementDisplayed(currentlyJournals)
+    }
+
+    async isCreateJournalFormDisplayed(){
+        return await page.isElementDisplayed(createJournalForm)
+    }
+
+    async clickFirstGroupLink(){
+        return await page.click(firstGroupLink)
+    }
+
+    async clickFirstAssetLink(){
+        return await page.click(firstAssetLink)
+    }
+
+    async setJournalDescriptionFieldValue(journalDescriptionInput){
+        return await page.setValue(journalDescriptionField, journalDescriptionInput)
+    }
+
+    async getJournalTitleText(){
+        return await page.getElementText(journalTitle)
+    }
+
+    async isJournalTitleDisplayed(){
+        return await page.isElementDisplayed(journalTitle)
+    }
+
+    async clickCreateJournalBtn(){
+        return await page.click(createJournalBtn)
+    }
+
+    async clickDeleteJournalBtn(){
+        return await page.click(deleteJournalBtn)
+    }
+
+    async clickCreateBtn(){
+        return await page.click(createBtn)
+    }
+
+    async clickJournalLink(){
+        return await page.click(journalLink)
+    }
+
     async clickSelfAssessedCheckBox(){
         return await page.click(selfAssessedCheckBox)
     }
@@ -238,6 +356,10 @@ class DevAssetMainpage {
         return await page.click(subscriptionAndPaymentLink)
     }
 
+    async clickUsersLink(){
+        return await page.click(usersLink)
+    }
+
     async clickNewAssetSaveBtn(){
         return await page.click(newAssetSaveBtn)
     }
@@ -344,7 +466,7 @@ class DevAssetMainpage {
         return await page.click(newOrganisationSaveBtn)
     }
 
-    async clickCreateOrganisationSettingsLink(){
+    async clickOrganisationSettingsLink(){
         return await page.click(organisationSettingsLink)
     }
 
