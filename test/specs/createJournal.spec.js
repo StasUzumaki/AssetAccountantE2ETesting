@@ -6,6 +6,7 @@ const loginData = require('../../data/loginData')
 const baseUrl = require('../../data/baseURL')
 
 const journalDescr = 'Test Description'
+const randomCodeNumber = Math.floor(Math.random() * 1000);
 
 describe('create journal', () => {
     before('land to dev asset page and login', async () => {
@@ -80,7 +81,7 @@ describe('create journal', () => {
         await devAssetMainPage.clickCreateAssetBtn()
         await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;
         await devAssetMainPage.setNewAssetNameValue('TestAsset')
-        await devAssetMainPage.setNewAssetCodeNumberValue('111')
+        await devAssetMainPage.setNewAssetCodeNumberValue(randomCodeNumber)
         await devAssetMainPage.setNewAssetDescriptionValue('testDescr')
         await devAssetMainPage.selectNewAssetGroupValue()
         await devAssetMainPage.setNewAssetCostValue('200')

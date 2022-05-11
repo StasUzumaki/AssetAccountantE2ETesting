@@ -7,7 +7,9 @@ const loginData = {
     userEmailAssetTesting: 'stasdevasset+createassettesting@gmail.com',
     userPasswAssetTesting: 'devAssetTest',
     userEmailInviteToOrg: 'stasdevasset+inviteusers@gmail.com',
-    userPasswInviteToOrg: 'devAssetTest'
+    userPasswInviteToOrg: 'devAssetTest',
+    userEmailRegister: 'stasdevasset+registertesting@gmail.com',
+    userPasswRegister: 'devAssetTest'
 }
 
 module.exports = loginData;

@@ -76,9 +76,10 @@ const accountsDepreciationForm = '//div[2]/app-depreciation-method-selector/div[
 const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
 //register settings link
 const registerSettingsLink = '//nav/section[3]/div/a[5]'
+//need another register role locators
 //organisation settings link
 const organisationSettingsLink = '//nav/section[3]/div/a[4]'
-const subscriptionAndPaymentLink = '#ngb-nav-8'
+const subscriptionAndPaymentLink = '//*[contains(text(), "Subscription") and @class="nav-link"]'
 const usersLink = '//*[contains(text(), "Users") and @class="nav-link"]'
 const inviteUserBtn = '[class="horizontal-wrap align-items-start"] button'
 const inviteUserForm = '//div/div//form'
@@ -95,7 +96,7 @@ const closeBtn = '[class="btn-close"]'
 const standartChangePlanBtn = '//div[3]//div/button'
 const paymentMethodForm = '//ngb-modal-window[2]/div/div'
 //paymentDetails
-const cardNumberField = '//*[@class="modal-content"]//app-form-control[1]/div/div[2]/label/div/input'
+const cardNumberField = '(//form/div[1]//label/div[1]/input[1])[1]'
 const cardExpiryField = '[name="exp-date"]'
 const cvcField = '[placeholder="CVC"]'
 //asset

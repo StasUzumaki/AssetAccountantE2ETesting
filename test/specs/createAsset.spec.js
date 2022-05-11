@@ -5,6 +5,8 @@ const { expect } = require('chai');
 const loginData = require('../../data/loginData')
 const baseUrl = require('../../data/baseURL')
 
+const randomCodeNumber = Math.floor(Math.random() * 1000);
+
 describe('dev asset page', () => {
     before('land to dev asset page and login', async () => {
         await browser.url(baseUrl.baseUrlLink)
@@ -69,7 +71,7 @@ describe('dev asset page', () => {
         await devAssetMainPage.clickCreateAssetBtn()
         await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;
         await devAssetMainPage.setNewAssetNameValue('TestAsset')
-        await devAssetMainPage.setNewAssetCodeNumberValue('111')
+        await devAssetMainPage.setNewAssetCodeNumberValue(randomCodeNumber)
         await devAssetMainPage.setNewAssetDescriptionValue('testDescr')
         await devAssetMainPage.selectNewAssetGroupValue()
         await devAssetMainPage.setNewAssetCostValue('200')

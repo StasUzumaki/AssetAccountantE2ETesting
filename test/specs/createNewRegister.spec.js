@@ -18,10 +18,10 @@ describe('create a new register', () => {
         await browser.url(baseUrl.baseUrlLink)
         await authPage.clickSignInBtn();
         await authPage.isUserNameLoginFieldDisplayed();
-        await authPage.setUserNameValue(loginData.userEmail);
+        await authPage.setUserNameValue(loginData.userEmailRegister);
         await authPage.clickNextBtn();
         await authPage.isPasswordLoginFieldDisplayed();
-        await authPage.setPasswordSignInValue(loginData.userPassw);
+        await authPage.setPasswordSignInValue(loginData.userPasswRegister);
         await authPage.clickSignInSubmitBtn();
     });
     after('delete created registers', async () => {
@@ -32,7 +32,6 @@ describe('create a new register', () => {
             await devAssetMainPage.clickArchiveBtn()
             await devAssetMainPage.clickArchiveConfirmationOkBtn()
             await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true;
-            
         }
         await devAssetMainPage.clickDemoRegisterBtn()
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
@@ -42,6 +41,7 @@ describe('create a new register', () => {
         await expect(await authPage.isSignInBtnDisplayed()).true;
     });
     it('should create a new register', async () => {
+
         await devAssetMainPage.clickCreateFirstRegisterBtn()
         await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true;
         await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
@@ -60,7 +60,6 @@ describe('create a new register', () => {
         await devAssetMainPage.clickRegisterSelectionDropDown()
         await devAssetMainPage.clickAllRegistersLink()
     });
-
     it('should create a register with existing register', async () => {
         await devAssetMainPage.clickCreateRegisterBtn()
         await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true;
