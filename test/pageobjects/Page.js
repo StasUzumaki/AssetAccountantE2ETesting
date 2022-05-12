@@ -71,6 +71,10 @@ class Page {
         await this.waitUntilClickable(element);
         await (await this.getElement(element)).selectByIndex(index);
     }
+
+    async scrollElementIntoViewTop(element) {
+        await (await this.getElement(element)).scrollIntoView();
+    }
 }
 
 module.exports = new Page();

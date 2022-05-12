@@ -95,10 +95,13 @@ const toggleForAccountingFirms = '[class="switch"]'
 const closeBtn = '[class="btn-close"]'
 const standartChangePlanBtn = '//div[3]//div/button'
 const paymentMethodForm = '//ngb-modal-window[2]/div/div'
+const paymentUpgradeSubBtn = '[class="modal-footer"] button'
+const currentAccountPlan = '[class="card p-4 border"]'
+const currentPaymentMethodAlert = '[class="alert-message"]'
 //paymentDetails
-const cardNumberField = '(//form/div[1]//label/div[1]/input[1])[1]'
-const cardExpiryField = '[name="exp-date"]'
-const cvcField = '[placeholder="CVC"]'
+const cardNumberField = '//*[@id="root"]/form/span[2]/div/div[2]/span/input'//'(//form/div[1]//label/div[1]/input[1])[1]'
+const cardExpiryField = '//*[@id="root"]/form/span[2]/span/input'
+const cvcField = '//*[@id="root"]/form/span[2]/span/input'
 //asset
 const assetDescriptionTitle = '//app-standard-page-content-grid/div/div[1]/h3'
 const reverseDropDown = '#reverse-dropdown'
@@ -127,7 +130,26 @@ const accountTypeCostCell = '//*[contains(text(), "Cost") and @col-id="accountCo
 const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @col-id="accountCode" ]'
 
 class DevAssetMainpage {
-    
+
+    async getChangePlanText(text){
+        return await page.waitUntilElementIncludesText(organisationSettingsUpgradeBtn, text)
+    }
+
+    async isChangePlanBtnDisplayed(){
+        return await page.isElementDisplayed(organisationSettingsUpgradeBtn)
+    }
+
+    async isCurrentAccountPlanDispalyed(){
+        return await page.isElementDisplayed(currentAccountPlan)
+    }
+
+    async isCurrentPaymentMethodAlertDisplayed(){
+        return await page.isElementDisplayed(currentPaymentMethodAlert)
+    }
+
+    async clickPaymentUpgradeSubBtn(){
+        return await page.click(paymentUpgradeSubBtn)
+    }
 
     async clickRegisterSettingsLink(){
         return await page.click(registerSettingsLink)

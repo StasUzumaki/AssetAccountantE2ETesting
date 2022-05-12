@@ -17,7 +17,7 @@ const shortLastName = uniqueNamesGenerator({
     length: 1
 });
 const randomCodeNumber = Math.floor(Math.random() * 100);
-const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber+ "@gmail.com";
+const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber + "@gmail.com";
 
 describe('Create account', () => {
     before('land to dev asset page', async () => {
@@ -39,6 +39,9 @@ describe('Create account', () => {
         await authPage.clickRegisterBtn()
         await expect(await authPage.isEmailVerificationFormDisplayed()).true;
         await authPage.clickOkVerifyBtn()
+        await expect(await authPage.isSignInBtnDisplayed()).true;
+    });
+    it('should verify account by email', async () => {
         await browser.url('https://mail.google.com/')
         await googleMailPage.setEmailFieldValue(googleMailboxData.userEmail)
         await googleMailPage.clickNextBtn()
@@ -46,7 +49,15 @@ describe('Create account', () => {
         await googleMailPage.clickNextBtn()
         await googleMailPage.clickVerifyMessage()
         await expect(await googleMailPage.isVerifyLinkDisplayed()).true;
+        await googleMailPage.scrollIntoVerifyLink()
         await googleMailPage.clickVerifyLink()
+        await googleMailPage.clickBackBtn()
+        await googleMailPage.clickSelectVerifyMessageCheckBox()
+        await googleMailPage.clickCheckVerifyMessageBtn()
+        await expect(await googleMailPage.isAlertMessageDisplayed()).true;
+        await googleMailPage.clickCloseAlertMessageBtn()
+    });
+    it('should create organisation after email validation', async () => {
         const handles = await browser.getWindowHandles()
         await browser.closeWindow()
         await browser.switchToWindow(handles[1])
@@ -56,6 +67,7 @@ describe('Create account', () => {
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
     });
+});
     // const credentialsData = {
     //     Email: tempGoogleMail,
     //     UserName: shortUserName,
@@ -67,6 +79,5 @@ describe('Create account', () => {
     //     if (err) throw err;
     //     console.log('Data written to file');
     // });
-});
 
 

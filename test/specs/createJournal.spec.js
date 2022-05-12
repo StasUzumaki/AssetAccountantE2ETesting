@@ -87,12 +87,13 @@ describe('create journal', () => {
         await devAssetMainPage.setNewAssetCostValue('200')
         await devAssetMainPage.setNewAssetPurchaseDateValue('10/05/22')
         await devAssetMainPage.setNewAssetQuantityValue('1')
-        await expect(await devAssetMainPage.isDepreciationFormDisplayed()).true
         await devAssetMainPage.selectNewAssetQuantityUnitsValue()
+        await expect(await devAssetMainPage.isDepreciationFormDisplayed()).true
         await expect(await devAssetMainPage.isTaxDepreciationFormDisplayed()).true
         await expect(await devAssetMainPage.isAccountsDepreciationFormDisplayed()).true
-        await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
         await devAssetMainPage.clickSelfAssessedCheckBox()
+        await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
+        await browser.pause(1000)
         await devAssetMainPage.clickNewAssetSaveBtn()
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
     });
