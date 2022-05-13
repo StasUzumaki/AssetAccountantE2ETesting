@@ -117,6 +117,7 @@ const taxDepreciationNotesField = '#reassessmentNotes'
 const selfAssessedCheckBox = '#asset-setting-1'
 const firstGroupLink = '//ng-component/div/div/div/a'
 const firstAssetLink = '//ng-component/div/div[1]/a'
+const firstGroupListAssetsDropDown = '//*[@id="ngb-nav-21-panel"]/app-assets-grid//div[3]/div[1]/div[1]/div/span/span[2]'
 //journal
 const journalLink = '[href*="/journals"]'
 const createBtn = '//app-standard-page-content/div//div/div[2]/button'
@@ -125,11 +126,16 @@ const deleteJournalBtn = '//ul/li/div[3]/button'
 const createJournalBtn = '//app-create-journal/form/button'
 const journalTitle = '[class="pe-2 me-auto"]'
 const journalDescriptionField = '//div/div[2]/input'
-const currentlyJournals = '//app-standard-page-content-grid/div'
+const currentlyJournals = '//app-standard-page-content-grid/div/em'
 const accountTypeCostCell = '//*[contains(text(), "Cost") and @col-id="accountCode" ]'
 const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @col-id="accountCode" ]'
 
 class DevAssetMainpage {
+
+
+    async isFirstGroupListAssetsDropDownDisplayed(){
+        return await page.isElementDisplayed(firstGroupListAssetsDropDown)
+    }
 
     async getChangePlanText(text){
         return await page.waitUntilElementIncludesText(organisationSettingsUpgradeBtn, text)
@@ -205,6 +211,10 @@ class DevAssetMainpage {
 
     async isCreateJournalFormDisplayed(){
         return await page.isElementDisplayed(createJournalForm)
+    }
+    
+    async isFirstGroupLinkDisplayed(){
+        return await page.isElementDisplayed(firstGroupLink)
     }
 
     async clickFirstGroupLink(){

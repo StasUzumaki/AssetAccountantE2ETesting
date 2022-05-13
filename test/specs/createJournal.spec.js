@@ -18,14 +18,59 @@ describe('create journal', () => {
         await authPage.isPasswordLoginFieldDisplayed();
         await authPage.setPasswordSignInValue(loginData.userPasswAssetTesting);
         await authPage.clickSignInSubmitBtn();
+        await devAssetMainPage.clickFirstRegisterLink()
+        try {
+            //deleting existing asset
+            await devAssetMainPage.clickFirstGroupLink()
+            await devAssetMainPage.clickFirstAssetLink()
+            await devAssetMainPage.clickReverseDropDown()
+            await devAssetMainPage.clickSetQuantityBtn()
+            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+            await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+            await devAssetMainPage.clickDeleteCofirmationOkBtn()
+            await devAssetMainPage.clickReverseDropDown()
+            await devAssetMainPage.clickFirstUseBtn()
+            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+            await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+            await devAssetMainPage.clickDeleteCofirmationOkBtn()
+            await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true
+            await devAssetMainPage.clickReverseDropDown()
+            await devAssetMainPage.clickPurchaseBtn()
+            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+            await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+            await devAssetMainPage.clickDeleteCofirmationOkBtn()
+            await devAssetMainPage.clickDeleteAssetBtn()
+            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+            await devAssetMainPage.clickDeleteCofirmationOkBtn()
+            await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
+        } catch (err) {
+            console.log('asset has not been created yet')
+        }
+        try {
+            //delete existing asset group
+            await devAssetMainPage.clickEditGroupBtn()
+            await expect(await devAssetMainPage.isNameGroupFieldDisplayed()).true;
+            await expect(await devAssetMainPage.isDescriptionGroupFieldDisplayed()).true;
+            await devAssetMainPage.clickDeleteGroupBtn()
+            await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true;
+            await devAssetMainPage.clickDeleteCofirmationOkBtn()
+            await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
+            await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+
+            await devAssetMainPage.clickRegisterSelectionDropDown()
+            await devAssetMainPage.clickAllRegistersLink()
+            await devAssetMainPage.clickFirstRegisterLink()
+        } catch (err) {
+            console.log('asset group has not been created yet')
+        }
     });
     after('land to assets and delete created asset group (Blank)', async () => {
-        //deleting journal
+        // //deleting journal
         await devAssetMainPage.clickJournalLink()
         await devAssetMainPage.clickDeleteJournalBtn()
         await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
-        //deleting asset
+        // //deleting asset
         await devAssetMainPage.clickAssetsLink()
         await devAssetMainPage.clickFirstGroupLink()
         await devAssetMainPage.clickFirstAssetLink()
@@ -49,7 +94,7 @@ describe('create journal', () => {
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
-        //deleting asset group
+        // deleting asset group
         await devAssetMainPage.clickAssetsLink()
         await devAssetMainPage.clickEditGroupBtn()
         await expect(await devAssetMainPage.isNameGroupFieldDisplayed()).true;
@@ -65,7 +110,6 @@ describe('create journal', () => {
         await expect(await authPage.isSignInBtnDisplayed()).true;
     });
     it('should create asset group (from template) if no groups have been created', async () => {
-        await devAssetMainPage.clickFirstRegisterLink();
         await devAssetMainPage.clickCreateAssetGroupTemplateBtn();
         await expect(await devAssetMainPage.isNewAssetGroupFromTemplateTitleDisplayed()).true;
         await expect(await devAssetMainPage.getNewAssetGroupFromTemplateTitleText()).contain(`New Asset Group from Template`);
@@ -77,6 +121,7 @@ describe('create journal', () => {
     });
     it('should create asset', async () => {
         await devAssetMainPage.clickAssetsLink()
+        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
         await devAssetMainPage.clickAssetsAddBtn()
         await devAssetMainPage.clickCreateAssetBtn()
         await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;

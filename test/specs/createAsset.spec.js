@@ -67,6 +67,7 @@ describe('dev asset page', () => {
     });
     it('should create asset', async () => {
         await devAssetMainPage.clickAssetsLink()
+        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
         await devAssetMainPage.clickAssetsAddBtn()
         await devAssetMainPage.clickCreateAssetBtn()
         await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;

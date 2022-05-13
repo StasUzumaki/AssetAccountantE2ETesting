@@ -41,7 +41,7 @@ exports.config = {
 
     baseUrl: 'http://localhost',
 
-    waitforTimeout: 15000,
+    waitforTimeout: 20000,
 
     connectionRetryTimeout: 120000,
 
@@ -59,7 +59,7 @@ exports.config = {
 
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 90000
     },
     //
     // =====
@@ -112,7 +112,7 @@ exports.config = {
      */
     //  before: function (capabilities, specs) {
     //      browser.setNetworkConditions({
-    //          latency:500,
+    //          latency: 1000,
 
     //      })
     // },

@@ -1,4 +1,4 @@
-const defaultTimeout = 30000; // 25sec
+const defaultTimeout = 15000; // 15sec
 
 class Page {
 
