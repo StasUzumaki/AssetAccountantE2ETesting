@@ -1,4 +1,4 @@
-const defaultTimeout = 15000; // 15sec
+const defaultTimeout = 35000; // 35sec
 
 class Page {
 
@@ -74,6 +74,10 @@ class Page {
 
     async scrollElementIntoViewTop(element) {
         await (await this.getElement(element)).scrollIntoView();
+    }
+
+    async isElementExisting(element) {
+        return (await this.getElement(element)).isExisting();
     }
 }
 

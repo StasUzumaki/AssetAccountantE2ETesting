@@ -25,11 +25,13 @@
     "test:asset:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createAsset.spec.js",
     "test:journal": "npx wdio run wdio.conf.js --spec createJournal.spec.js",
     "test:journal:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createJournal.spec.js",
-    "test:invtoorg": "npx wdio run wdio.conf.js --spec inviteUserToOrganisation.spec.js",
-    "test:invtoorg:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec inviteUserToOrganisation.spec.js",
-
     "test:chngsub": "npx wdio run wdio.conf.js --spec changeSubscription.spec.js",
     "test:chngsub:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec changeSubscription.spec.js",
+    "test:triggersub": "npx wdio run wdio.conf.js --spec triggerSubscriptionUpgrade.spec.js",
+    "test:triggersub:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec triggerSubscriptionUpgrade.spec.js",
+
+    "test:invtoorg": "npx wdio run wdio.conf.js --spec inviteUserToOrganisation.spec.js",
+    "test:invtoorg:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec inviteUserToOrganisation.spec.js",
     "allure:serve": "npx allure serve allure-results",
     "allure:generate": "npx allure generate allure-results --clean"
   },

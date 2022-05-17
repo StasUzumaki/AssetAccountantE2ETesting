@@ -41,7 +41,7 @@ exports.config = {
 
     baseUrl: 'http://localhost',
 
-    waitforTimeout: 15000,
+    waitforTimeout: 10000,
 
     connectionRetryTimeout: 120000,
 

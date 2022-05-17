@@ -8,6 +8,7 @@ const createFirstRegisterBtn = '//*[@class="col-6 col-lg-3 demo-action"]/button'
 const createRegisterBtn = '//div/div[2]/div/button[3]'
 const createNewRegisterForm = '[class="modal-content"]'
 const tableWithRegisters = '//tbody/tr'
+const tableWithAssets = '[class="ag-cell-wrapper ag-row-group-leaf-indent ag-row-group-indent-1"]'
 const registerName = '[formcontrolname="name"]'
 const entityName = '[formcontrolname="entityName"]'
 const nextRegisterBtn = '[class="btn btn-primary ms-2"]'
@@ -77,6 +78,7 @@ const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
 //register settings link
 const registerSettingsLink = '//nav/section[3]/div/a[5]'
 //need another register role locators
+
 //organisation settings link
 const organisationSettingsLink = '//nav/section[3]/div/a[4]'
 const subscriptionAndPaymentLink = '//*[contains(text(), "Subscription") and @class="nav-link"]'
@@ -103,6 +105,7 @@ const cardNumberField = '//*[@id="root"]/form/span[2]/div/div[2]/span/input'//'(
 const cardExpiryField = '//*[@id="root"]/form/span[2]/span/input'
 const cvcField = '//*[@id="root"]/form/span[2]/span/input'
 //asset
+const contractedGroupDropDown = '//*/div[1]/div[1]/div/span/span[2]'
 const assetDescriptionTitle = '//app-standard-page-content-grid/div/div[1]/h3'
 const reverseDropDown = '#reverse-dropdown'
 const deleteAssetBtn = '//app-standard-page-content-grid/div/div[2]/button[1]'
@@ -116,8 +119,10 @@ const taxViewForm = '//app-standard-page-content/div'
 const taxDepreciationNotesField = '#reassessmentNotes'
 const selfAssessedCheckBox = '#asset-setting-1'
 const firstGroupLink = '//ng-component/div/div/div/a'
-const firstAssetLink = '//ng-component/div/div[1]/a'
+const firstAssetLink = '//*/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/span/span[4]/ng-component/div/div[1]/a'//'//ng-component/div/div[1]/a'
 const firstGroupListAssetsDropDown = '//*[@id="ngb-nav-21-panel"]/app-assets-grid//div[3]/div[1]/div[1]/div/span/span[2]'
+const subscriptionLimitAlert = '[class="alert-message"]'
+const newAssetUpgradeBtn = '//app-alert/div/div[2]/button'
 //journal
 const journalLink = '[href*="/journals"]'
 const createBtn = '//app-standard-page-content/div//div/div[2]/button'
@@ -132,6 +137,33 @@ const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @c
 
 class DevAssetMainpage {
 
+    async clickNewAssetUpgradeBtn(){
+        return await page.click(newAssetUpgradeBtn)
+    }
+
+    async isSubscriptionLimitAlertDisplayed(){
+        return await page.isElementDisplayed(subscriptionLimitAlert)
+    }
+
+    async getSubscriptionLimitAlertText(){
+        return await page.getElementText(subscriptionLimitAlert)
+    }
+
+    async isContractedGroupDropDownDisplayed(){
+        return await (await page.getElement(contractedGroupDropDown)).isDisplayed()
+    }
+
+    async clickContractedGroupDropDown(){
+        return await page.click(contractedGroupDropDown)
+    }
+
+    async isEditBtnDisplayed(){
+        return await page.isElementDisplayed(editGroupBtn)
+    }
+
+    async isGroupTemplateBtnDisplayed(){
+        return await (await page.getElement(createAssetGroupTemplateBtn)).isDisplayed()
+    }
 
     async isFirstGroupListAssetsDropDownDisplayed(){
         return await page.isElementDisplayed(firstGroupListAssetsDropDown)
@@ -165,6 +197,9 @@ class DevAssetMainpage {
         return await page.getElementText(invintationAlert)
     }
 
+    async isRegisterSettingsDisplayed(){
+        return await page.isElementDisplayed(registerSettingsLink)
+    }
     async isInvintationAlertDisplayed(){
         return await page.isElementDisplayed(invintationAlert)
     }
@@ -223,6 +258,10 @@ class DevAssetMainpage {
 
     async clickFirstAssetLink(){
         return await page.click(firstAssetLink)
+    }
+
+    async isFirstAssetLinkDisplayed(){
+        return await page.isElementDisplayed(firstAssetLink)
     }
 
     async setJournalDescriptionFieldValue(journalDescriptionInput){
@@ -447,6 +486,15 @@ class DevAssetMainpage {
         return await (await this.getAllAssetsGroup()).length
     }
 
+    async getAllAssets(){
+        return await page.getAllElements(tableWithAssets)
+    }
+
+    async getAssetsListSize(){
+        await (await page.getElement(tableWithAssets)).waitForDisplayed()
+        return await (await this.getAllAssets()).length
+    }
+
     async isCreateRegisterBtnDisplayed(){
         return await page.isElementDisplayed(createRegisterBtn)
     }
@@ -616,6 +664,7 @@ class DevAssetMainpage {
     async isCreateNewRegisterFormDisplayed(){
         return await page.isElementDisplayed(createNewRegisterForm)
     }
+
     async isCreateAssetGroupTemplateBtnDisplayed(){
         return await page.isElementDisplayed(createAssetGroupTemplateBtn)
     }
@@ -686,6 +735,10 @@ class DevAssetMainpage {
 
     async isFirstThingsFirstAlertMessageDisplayed(){
         return await page.isElementDisplayed(firstThingsFirstAlertMessage)
+    }
+
+    async isFirstThingsFirstAlertMessageExisting(){
+        return await page.isElementExisting(firstThingsFirstAlertMessage)
     }
 
     async getFirstThingsFirstAlertMessageText(){

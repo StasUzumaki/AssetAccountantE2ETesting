@@ -5,6 +5,7 @@ const googleMailboxData = require('../../data/googleMailboxData')
 const baseUrl = require('../../data/baseURL')
 const { expect } = require('chai');
 const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
+const helper = require('../pageobjects/helper');
 //const fs = require("fs")
 
 const mainEmail = 'stasdevasset'
@@ -16,6 +17,7 @@ const shortLastName = uniqueNamesGenerator({
     dictionaries: [colors],
     length: 1
 });
+const randomOrgName = shortUserName + '_org';
 const randomCodeNumber = Math.floor(Math.random() * 100);
 const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber + "@gmail.com";
 
@@ -24,9 +26,7 @@ describe('Create account', () => {
         await browser.url(baseUrl.baseUrlLink)
     });
     after('logout', async () => {
-        await devAssetMainPage.clickUserProfileLink()
-        await devAssetMainPage.clickLogoutProfileBtn()
-        await expect(await authPage.isSignInBtnDisplayed()).true;
+        await helper.logout()
     });
     it('should create account with valid credentials', async () => {
         await authPage.clickCreateAccountBtn();
@@ -43,6 +43,7 @@ describe('Create account', () => {
     });
     it('should verify account by email', async () => {
         await browser.url('https://mail.google.com/')
+        await browser.pause(2000)
         await googleMailPage.setEmailFieldValue(googleMailboxData.userEmail)
         await googleMailPage.clickNextBtn()
         await googleMailPage.setPasswordFieldValue(googleMailboxData.userPassword)
@@ -53,16 +54,17 @@ describe('Create account', () => {
         await googleMailPage.clickVerifyLink()
         await googleMailPage.clickBackBtn()
         await googleMailPage.clickSelectVerifyMessageCheckBox()
-        await googleMailPage.clickCheckVerifyMessageBtn()
+        await googleMailPage.clickDeleteVerifyMessageBtn()
         await expect(await googleMailPage.isAlertMessageDisplayed()).true;
         await googleMailPage.clickCloseAlertMessageBtn()
+        await browser.pause(2000)
     });
     it('should create organisation after email validation', async () => {
         const handles = await browser.getWindowHandles()
         await browser.closeWindow()
         await browser.switchToWindow(handles[1])
         await expect(await authPage.isOrganizationFieldDisplayed()).true;
-        await authPage.setOrganizationNameFieldValue('OrganizationTestName');
+        await authPage.setOrganizationNameFieldValue(randomOrgName);
         await authPage.clickCreateOrganizationBtn();
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');

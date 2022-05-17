@@ -41,7 +41,7 @@ exports.config = {
 
     baseUrl: 'http://localhost',
 
-    waitforTimeout: 20000,
+    waitforTimeout: 10000,
 
     connectionRetryTimeout: 120000,
 
@@ -59,7 +59,7 @@ exports.config = {
 
     mochaOpts: {
         ui: 'bdd',
-        timeout: 90000
+        timeout: 190000
     },
     //
     // =====

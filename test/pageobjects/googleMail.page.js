@@ -7,12 +7,11 @@ const VerifyMessage = '//div[@class="Cp"]//tbody/tr[1]'  //'//span//span[contain
 const inviteMessage = '//span[1][contains(text(), "You have been invited to Invite")]'
 const acceptInvitationLink = '[href*="/invitations/"]'
 const VerifyLink = '[href*="Authentication/VerifyEmail"]'
-const CheckVerifyMessageBtn = '//div[@act="10"]'
+const deleteVerifyMessageBtn = '//div[@act="10"]'
 const selectVerifyMessageCheckBox = '//div[@class="Cp"]//tbody/tr[1]/td[2]'
 const alertMessage = '//div[@role="alert"]//div[1]/div[2]'
 const backBtn = '(//div[@act="19"])'
 const closeAlertMessageBtn = '[class="bBe"]'
-
 
 class GoogleMailPage {
 
@@ -32,8 +31,8 @@ class GoogleMailPage {
         return await Page.click(selectVerifyMessageCheckBox)
     }
 
-    async clickCheckVerifyMessageBtn(){
-        return await Page.click(CheckVerifyMessageBtn)
+    async clickDeleteVerifyMessageBtn(){
+        return await Page.click(deleteVerifyMessageBtn)
     }
 
     async clickInviteMessage(){
