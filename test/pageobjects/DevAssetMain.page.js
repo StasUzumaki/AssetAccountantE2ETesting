@@ -1,3 +1,4 @@
+const { PageEmailPreviewFromJSON } = require('mailslurp-client')
 const page = require('./page')
 
 const userProfileLink = '#user-profile'
@@ -23,6 +24,7 @@ const allRegisters = '[class="dropdown-item text-primary"]'
 const firstRegisterLink = '//table/tbody/tr/td[2]/a'
 const dropDownRegisterMenu = '#dropdownBasic1'
 const archiveBtn = '//*[contains(text(), "Archive")]'
+const manageAccessBtn = '//*[contains(text(), "Manage")]'
 const archiveConfirmationOkBtn = `//*[@class='modal-footer']/button[2]`
 const successArchivedRegisterMessage = '[aria-label*="Register "]'
 const newAssetNameField = '//app-form-control[1]/div/div[2]/input'
@@ -80,6 +82,12 @@ const registerSettingsLink = '//nav/section[3]/div/a[5]'
 //need another register role locators
 
 //organisation settings link
+const invitedUserEmailCell = '//*/table/tbody/tr[2]/td[2]'
+const invitedUserNameCell = '//*/table/tbody/tr[2]/td[1]/label' 
+const invitedUserRoleCell = '//table/tbody/tr[2]/td[3]/label'
+const userAccessDropDown = '//table//tr[2]//td[4]/div/div/div/button'
+const userAccessRegisterRemoveBtn = '//table//tr[2]//td[4]/div/div/div//div/button'
+const userAccessOrgRemoveBtn = '//table//tr[2]//td[4]/div/div/div//div/button[2]'
 const organisationSettingsLink = '//nav/section[3]/div/a[4]'
 const subscriptionAndPaymentLink = '//*[contains(text(), "Subscription") and @class="nav-link"]'
 const usersLink = '//*[contains(text(), "Users") and @class="nav-link"]'
@@ -134,8 +142,60 @@ const journalDescriptionField = '//div/div[2]/input'
 const currentlyJournals = '//app-standard-page-content-grid/div/em'
 const accountTypeCostCell = '//*[contains(text(), "Cost") and @col-id="accountCode" ]'
 const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @col-id="accountCode" ]'
-
+const loadingImage = '[role="status"]'
 class DevAssetMainpage {
+
+    async isLoadingImageDisplayed(){
+        return await (await page.getElement(loadingImage)).waitForExist({reverse:true})
+    }
+
+    async isDeleteJournalBtnDisplayed(){
+        return await (await page.getElement(deleteJournalBtn)).isDisplayed()
+    }
+
+    async isInvitedUserEmailCellExist(){
+        return await(await page.getElement(invitedUserEmailCell)).waitForExist({reverse:true})
+    }
+
+    async clickUserAccessDropDown(){
+        return await page.click(userAccessDropDown)
+    }
+
+    async clickUserAccessRegisterRemoveBtn(){
+        return await page.click(userAccessRegisterRemoveBtn)
+    }
+
+    async clickUserAccessOrgRemoveBtn(){
+        return await page.click(userAccessOrgRemoveBtn)
+    }
+
+    async clickManageAccessBtn(){
+        return await page.click(manageAccessBtn)
+    }
+
+    async getInvitedUserNameCellText(){
+        return await page.getElementText(invitedUserNameCell)
+    }
+
+    async isInvitedUserNameCellDisplayed(){
+        return await page.isElementDisplayed(invitedUserNameCell)
+    }
+
+    async getInvitedUserEmailCellText(){
+        return await page.getElementText(invitedUserEmailCell)
+    }
+
+    async isInvitedUserEmailCellDisplayed(){
+        return await page.isElementDisplayed(invitedUserEmailCell)
+    }
+    //
+    async getInvitedUserRoleCellText(){
+        return await page.getElementText(invitedUserRoleCell)
+    }
+
+    async isInvitedUserRoleCellDisplayed(){
+        return await page.isElementDisplayed(invitedUserRoleCell)
+    }
 
     async clickNewAssetUpgradeBtn(){
         return await page.click(newAssetUpgradeBtn)
@@ -193,15 +253,16 @@ class DevAssetMainpage {
         return await page.click(registerSettingsLink)
     }
 
-    async getInvintationAlertText(){
-        return await page.getElementText(invintationAlert)
-    }
-
     async isRegisterSettingsDisplayed(){
         return await page.isElementDisplayed(registerSettingsLink)
     }
+
     async isInvintationAlertDisplayed(){
         return await page.isElementDisplayed(invintationAlert)
+    }
+
+    async getInvintationAlertText(){
+        return await page.getElementText(invintationAlert)
     }
 
     async setEmailInviteFieldValue(emailInviteFieldInput){
@@ -309,6 +370,10 @@ class DevAssetMainpage {
     }
 
     async isReversalConfirmationFormDisplayed(){
+        return await page.isElementDisplayed(reversalConfirmationForm)
+    }
+
+    async isDeleteConfirmationFormDisplayed(){
         return await page.isElementDisplayed(reversalConfirmationForm)
     }
 
@@ -655,6 +720,10 @@ class DevAssetMainpage {
 
     async isFirstRegisterLinkDisplayed(){
         return await page.isElementDisplayed(firstRegisterLink)
+    }
+
+    async getRegisterNameText(){
+        return await page.getElementText(firstRegisterLink)
     }
 
     async isCreateNewOrganisationFormDisplayed(){

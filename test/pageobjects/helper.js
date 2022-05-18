@@ -1,6 +1,8 @@
 const devAssetMainPage = require('./devAssetMain.page')
 const authPage = require('./authentication.page')
 const loginData = require('../../data/loginData')
+const googleMailPage = require('../pageobjects/googleMail.page')
+const googleMailboxData = require('../../data/googleMailboxData')
 const { expect } = require('chai')
 const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator')
 
@@ -15,6 +17,13 @@ const assetGroupName = randomName + randomCodeNumber + '_TestGroup';
 const registerNameSettings = randomName + '_TestRegister'
 
 class Helper {
+
+    async loginToGoogleMailBox(){
+        await googleMailPage.setEmailFieldValue(googleMailboxData.userEmail)
+        await googleMailPage.clickNextBtn()
+        await googleMailPage.setPasswordFieldValue(googleMailboxData.userPassword)
+        await googleMailPage.clickNextBtn()
+    }
 
     async loginToAccount() {
         await authPage.clickSignInBtn()
@@ -37,13 +46,13 @@ class Helper {
     }
 
     async loginToAccountCreateAsset() {
-        await authPage.clickSignInBtn();
-        await authPage.isUserNameLoginFieldDisplayed();
-        await authPage.setUserNameValue(loginData.userEmailAssetTesting);
-        await authPage.clickNextBtn();
-        await authPage.isPasswordLoginFieldDisplayed();
-        await authPage.setPasswordSignInValue(loginData.userPasswAssetTesting);
-        await authPage.clickSignInSubmitBtn();
+        await authPage.clickSignInBtn()
+        await authPage.isUserNameLoginFieldDisplayed()
+        await authPage.setUserNameValue(loginData.userEmailAssetTesting)
+        await authPage.clickNextBtn()
+        await authPage.isPasswordLoginFieldDisplayed()
+        await authPage.setPasswordSignInValue(loginData.userPasswAssetTesting)
+        await authPage.clickSignInSubmitBtn()
     }
 
     async loginToAccountRegister() {
@@ -53,6 +62,16 @@ class Helper {
         await authPage.clickNextBtn()
         await authPage.isPasswordLoginFieldDisplayed()
         await authPage.setPasswordSignInValue(loginData.userPasswRegister)
+        await authPage.clickSignInSubmitBtn()
+    }
+
+    async loginToAccountInvTo(){
+        await authPage.clickSignInBtn()
+        await authPage.isUserNameLoginFieldDisplayed()
+        await authPage.setUserNameValue(loginData.userEmailInviteTo)
+        await authPage.clickNextBtn()
+        await authPage.isPasswordLoginFieldDisplayed()
+        await authPage.setPasswordSignInValue(loginData.userPasswInviteTo)
         await authPage.clickSignInSubmitBtn()
     }
 
@@ -91,14 +110,14 @@ class Helper {
     async createOrganisation() {
         await devAssetMainPage.clickCreateOrganisationSelectionDropDown()
         await devAssetMainPage.clickCreateNewOrganisationLink()
-        await expect(await devAssetMainPage.isCreateNewOrganisationFormDisplayed()).true;
+        await expect(await devAssetMainPage.isCreateNewOrganisationFormDisplayed()).true
         await devAssetMainPage.setOrganisationNameField(randomOrgName)
         await devAssetMainPage.setOrganisationDescriptionField('testDescription')
         await devAssetMainPage.setBillingContactNameField(randomOrgName)
         await devAssetMainPage.setBillingContactEmailField(loginData.userEmail)
         await devAssetMainPage.setBillingContactPhoneField('8888888888')
         await devAssetMainPage.clickNewOrganisationSaveBtn()
-        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true;
+        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true
         await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${randomOrgName}`)
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')

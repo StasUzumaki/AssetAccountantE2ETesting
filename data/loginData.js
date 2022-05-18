@@ -6,8 +6,8 @@ const loginData = {
     userPasswAssetGrp: 'devAssetTest',
     userEmailAssetTesting: 'stasdevasset+createassettesting@gmail.com',
     userPasswAssetTesting: 'devAssetTest',
-    userEmailInviteToOrg: 'stasdevasset+inviteusers@gmail.com',
-    userPasswInviteToOrg: 'devAssetTest',
+    userEmailInviteTo: 'stasdevasset+inviteusers@gmail.com',
+    userPasswInviteTo: 'devAssetTest',
     userEmailRegister: 'stasdevasset+registertesting@gmail.com',
     userPasswRegister: 'devAssetTest'
 }
