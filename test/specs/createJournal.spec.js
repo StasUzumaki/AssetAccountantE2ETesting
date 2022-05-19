@@ -3,7 +3,7 @@ const { expect } = require('chai');
 const baseUrl = require('../../data/baseURL');
 const helper = require('../pageobjects/helper');
 
-const journalDescr = 'Test Description'
+const journalDescr = 'Test Description Movements for 31 May 2022'
 
 describe('create journal', () => {
     before('land to dev asset page and login', async () => {
@@ -11,6 +11,7 @@ describe('create journal', () => {
         await helper.loginToAccountCreateAsset()
         await devAssetMainPage.clickFirstRegisterLink()
         await expect(await devAssetMainPage.isRegisterSettingsDisplayed()).true
+        //checking existing assets groups and assets
         const GroupBtnTemplateValue = await devAssetMainPage.isGroupTemplateBtnDisplayed()
         switch (await GroupBtnTemplateValue) {
             case true:
@@ -30,28 +31,24 @@ describe('create journal', () => {
                 }
                 break;
         }
+        //checking existing journals
         await devAssetMainPage.clickJournalLink()
         await expect(await devAssetMainPage.isLoadingImageDisplayed()).true
         const DeleteJournalBtnValue = await devAssetMainPage.isDeleteJournalBtnDisplayed()
-        switch(await DeleteJournalBtnValue){
+        switch (await DeleteJournalBtnValue) {
             case true:
-                await devAssetMainPage.clickDeleteJournalBtn()
-                await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true
-                await devAssetMainPage.clickDeleteCofirmationOkBtn()
-                await expect(await devAssetMainPage.isCurrentlyJournalsDisplayed()).true
+                await helper.deleteJournals()
                 await devAssetMainPage.clickAssetsLink()
-            break;
+                break;
             case false:
                 await devAssetMainPage.clickAssetsLink()
                 break;
-            }
+        }
     });
     after('land to assets and delete created asset group (Blank)', async () => {
         // //deleting journal
         await devAssetMainPage.clickJournalLink()
-        await devAssetMainPage.clickDeleteJournalBtn()
-        await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true
-        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await helper.deleteJournals()
         // //deleting asset
         await devAssetMainPage.clickAssetsLink()
         await devAssetMainPage.clickFirstGroupLink()

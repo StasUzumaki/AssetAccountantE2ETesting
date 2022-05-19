@@ -18,7 +18,7 @@ const registerNameSettings = randomName + '_TestRegister'
 
 class Helper {
 
-    async loginToGoogleMailBox(){
+    async loginToGoogleMailBox() {
         await googleMailPage.setEmailFieldValue(googleMailboxData.userEmail)
         await googleMailPage.clickNextBtn()
         await googleMailPage.setPasswordFieldValue(googleMailboxData.userPassword)
@@ -65,7 +65,7 @@ class Helper {
         await authPage.clickSignInSubmitBtn()
     }
 
-    async loginToAccountInvTo(){
+    async loginToAccountInvTo() {
         await authPage.clickSignInBtn()
         await authPage.isUserNameLoginFieldDisplayed()
         await authPage.setUserNameValue(loginData.userEmailInviteTo)
@@ -178,33 +178,33 @@ class Helper {
         await expect(await devAssetMainPage.isTaxDepreciationFormDisplayed()).true
         await expect(await devAssetMainPage.isAccountsDepreciationFormDisplayed()).true
         // await devAssetMainPage.clickSelfAssessedCheckBox()
-        // await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
+        //await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
         await browser.pause(1000)
         await devAssetMainPage.clickNewAssetSaveBtn()
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
     }
 
     async deleteAsset() {
-            await devAssetMainPage.clickReverseDropDown()
-            await devAssetMainPage.clickSetQuantityBtn()
-            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-            await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
-            await devAssetMainPage.clickDeleteCofirmationOkBtn()
-            await devAssetMainPage.clickReverseDropDown()
-            await devAssetMainPage.clickFirstUseBtn()
-            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-            await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
-            await devAssetMainPage.clickDeleteCofirmationOkBtn()
-            await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true
-            await devAssetMainPage.clickReverseDropDown()
-            await devAssetMainPage.clickPurchaseBtn()
-            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-            await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
-            await devAssetMainPage.clickDeleteCofirmationOkBtn()
-            await devAssetMainPage.clickDeleteAssetBtn()
-            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-            await devAssetMainPage.clickDeleteCofirmationOkBtn()
-            await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickSetQuantityBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickFirstUseBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickPurchaseBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await devAssetMainPage.clickDeleteAssetBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
     }
     async deleteAllAssets() {
         await devAssetMainPage.clickContractedGroupDropDown()
@@ -237,6 +237,19 @@ class Helper {
             await devAssetMainPage.clickDeleteCofirmationOkBtn()
             await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
         }
+    }
+    async deleteJournals() {
+        await console.log("Journals list size: " + await devAssetMainPage.getJournalsListSize())
+        const journalsCount = await devAssetMainPage.getJournalsListSize()
+        for (let i = 0; i < journalsCount; i++) {
+            await expect(await devAssetMainPage.isFirstJournalItemDisplayed()).true
+            await devAssetMainPage.clickFirstJournalItemLink()
+            await expect(await devAssetMainPage.isExportJournalDropDownDisplayed()).true
+            await devAssetMainPage.clickDeleteCurrentJournalBtn()
+            await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true
+            await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        }
+        await expect(await devAssetMainPage.isCurrentlyJournalsDisplayed()).true
     }
 }
 

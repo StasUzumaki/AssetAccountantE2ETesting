@@ -64,12 +64,15 @@ describe('create a new register', () => {
         await devAssetMainPage.clickToggleForAccountingFirms()
         await devAssetMainPage.clickStandartChangePlanBtn()
         await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true
+        await expect(await devAssetMainPage.isCardNumberInputDisplayed()).true
         await browser.switchToFrame(1)
         await devAssetMainPage.setCardNumberFieldValue('4242 4242 4242 4242')
         await browser.switchToParentFrame()
+        await expect(await devAssetMainPage.isCardExpiryInputDisplayed()).true
         await browser.switchToFrame(2)
         await devAssetMainPage.setCardExpiryFieldValue('0324')
         await browser.switchToParentFrame()
+        await expect(await devAssetMainPage.isCvcInputDisplayed()).true
         await browser.switchToFrame(3)
         await devAssetMainPage.setCvcFieldValue('777')
         await browser.switchToParentFrame()

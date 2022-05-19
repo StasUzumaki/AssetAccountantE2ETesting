@@ -10,6 +10,8 @@ const createRegisterBtn = '//div/div[2]/div/button[3]'
 const createNewRegisterForm = '[class="modal-content"]'
 const tableWithRegisters = '//tbody/tr'
 const tableWithAssets = '[class="ag-cell-wrapper ag-row-group-leaf-indent ag-row-group-indent-1"]'
+const tableWithJournals = '[class="JournalItem-content"]'
+const firstJournalItem = '//ul/li[1]/div[2]/a'
 const registerName = '[formcontrolname="name"]'
 const entityName = '[formcontrolname="entityName"]'
 const nextRegisterBtn = '[class="btn btn-primary ms-2"]'
@@ -92,11 +94,14 @@ const organisationSettingsLink = '//nav/section[3]/div/a[4]'
 const subscriptionAndPaymentLink = '//*[contains(text(), "Subscription") and @class="nav-link"]'
 const usersLink = '//*[contains(text(), "Users") and @class="nav-link"]'
 const inviteUserBtn = '[class="horizontal-wrap align-items-start"] button'
+const registerInvitePanel = '[class="table ng-star-inserted"]'
 const inviteUserForm = '//div/div//form'
 const emailInviteField = '//div/div[2]/input'
 const registerCheckBoxForInvite = '//table/tbody/tr[2]//input'
 const registerRoleDropDownMenu = '//form/div[2]/table/tbody/tr[2]/td[4]/div'
 const registerUserRoleBtn = '//table/tbody/tr[2]/td[4]/div/div/button[2]'
+const registerSettingsRoleDropDownMenu = '//div/div[2]/div/button'
+const registerSettingsUserRoleBtn = '//div/div[2]/div/div/button[2]'
 const inviteBtn = '//form/div[3]/button[2]'
 const invintationAlert = '[role="alertdialog"][aria-live="polite"]'
 const paymentForm = '[class="form-check"]'
@@ -109,9 +114,12 @@ const paymentUpgradeSubBtn = '[class="modal-footer"] button'
 const currentAccountPlan = '[class="card p-4 border"]'
 const currentPaymentMethodAlert = '[class="alert-message"]'
 //paymentDetails
-const cardNumberField = '//*[@id="root"]/form/span[2]/div/div[2]/span/input'//'(//form/div[1]//label/div[1]/input[1])[1]'
+const cardNumberField = '//*[@id="root"]/form/span[2]/div/div[2]/span/input'
 const cardExpiryField = '//*[@id="root"]/form/span[2]/span/input'
 const cvcField = '//*[@id="root"]/form/span[2]/span/input'
+const cardNumberInput = '//app-form-control[1]/div/div[2]/label'
+const cardExpiryInput = '//app-form-control[2]/div/div[2]/label'
+const cvcInput = '//app-form-control[3]/div/div[2]/label'
 //asset
 const contractedGroupDropDown = '//*/div[1]/div[1]/div/span/span[2]'
 const assetDescriptionTitle = '//app-standard-page-content-grid/div/div[1]/h3'
@@ -136,6 +144,8 @@ const journalLink = '[href*="/journals"]'
 const createBtn = '//app-standard-page-content/div//div/div[2]/button'
 const createJournalForm = '//app-side-panel/div'
 const deleteJournalBtn = '//ul/li/div[3]/button'
+const deleteCurrentJournalBtn = '//app-standard-page-content-actions/div/div[2]/button'
+const exportJournalDropDown = '//*[@id="export-button"]'
 const createJournalBtn = '//app-create-journal/form/button'
 const journalTitle = '[class="pe-2 me-auto"]'
 const journalDescriptionField = '//div/div[2]/input'
@@ -144,6 +154,17 @@ const accountTypeCostCell = '//*[contains(text(), "Cost") and @col-id="accountCo
 const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @col-id="accountCode" ]'
 const loadingImage = '[role="status"]'
 class DevAssetMainpage {
+
+    async isRegisterInvitePanelDispalayed(){
+        return await page.isElementDisplayed(registerInvitePanel)
+    }
+
+    async isExportJournalDropDownDisplayed(){
+        return await page.isElementDisplayed(exportJournalDropDown)
+    }
+    async clickDeleteCurrentJournalBtn(){
+        return await page.click(deleteCurrentJournalBtn)
+    }
 
     async isLoadingImageDisplayed(){
         return await (await page.getElement(loadingImage)).waitForExist({reverse:true})
@@ -155,6 +176,14 @@ class DevAssetMainpage {
 
     async isInvitedUserEmailCellExist(){
         return await(await page.getElement(invitedUserEmailCell)).waitForExist({reverse:true})
+    }
+
+    async isFirstJournalItemDisplayed(){
+        return await page.isElementDisplayed(firstJournalItem)
+    }
+
+    async clickFirstJournalItemLink(){
+        return await page.click(firstJournalItem)
     }
 
     async clickUserAccessDropDown(){
@@ -279,6 +308,14 @@ class DevAssetMainpage {
 
     async clickRegisterRoleDropDown(){
         return await page.click(registerRoleDropDownMenu)
+    }
+
+    async clickRegisterSettingsRoleDropDownMenu(){
+        return await page.click(registerSettingsRoleDropDownMenu)
+    }
+
+    async clickRegisterSettingsUserRoleBtn(){
+        return await page.click(registerSettingsUserRoleBtn)
     }
 
     async clickRegisterCheckBoxForInvite(){
@@ -415,6 +452,18 @@ class DevAssetMainpage {
 
     async setCvcFieldValue(cvcFieldInput){
         return await page.setValue(cvcField, cvcFieldInput)
+    }
+
+    async isCardNumberInputDisplayed(){
+        return await page.isElementDisplayed(cardNumberInput)
+    }
+
+    async isCardExpiryInputDisplayed(){
+        return await page.isElementDisplayed(cardExpiryInput)
+    }
+
+    async isCvcInputDisplayed(){
+        return await page.isElementDisplayed(cvcInput)
     }
     
     async isPaymentFormDisplayed(){
@@ -558,6 +607,16 @@ class DevAssetMainpage {
     async getAssetsListSize(){
         await (await page.getElement(tableWithAssets)).waitForDisplayed()
         return await (await this.getAllAssets()).length
+    }
+
+    //
+    async getAllJournals(){
+        return await page.getAllElements(tableWithJournals)
+    }
+
+    async getJournalsListSize(){
+        await (await page.getElement(tableWithJournals)).waitForDisplayed()
+        return await (await this.getAllJournals()).length
     }
 
     async isCreateRegisterBtnDisplayed(){
