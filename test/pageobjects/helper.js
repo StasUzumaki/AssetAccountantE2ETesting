@@ -251,6 +251,43 @@ class Helper {
         }
         await expect(await devAssetMainPage.isCurrentlyJournalsDisplayed()).true
     }
+
+    async checkingExistingGroupsAndAssets() {
+        await expect(await devAssetMainPage.isRegisterSettingsDisplayed()).true
+        const GroupBtnTemplateValue = await devAssetMainPage.isGroupTemplateBtnDisplayed()
+        switch (await GroupBtnTemplateValue) {
+            case true:
+                await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
+                break;
+            case false:
+                await expect(await devAssetMainPage.isEditBtnDisplayed()).true
+                const ContractedGroupDropDownValue = await devAssetMainPage.isContractedGroupDropDownDisplayed()
+                if (await ContractedGroupDropDownValue === true) {
+                    await devAssetMainPage.clickFirstGroupLink()
+                    await devAssetMainPage.clickFirstAssetLink()
+                    await this.deleteAsset()
+                    await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
+                    await this.deleteAssetGroup()
+                } else {
+                    await this.deleteAssetGroup()
+                }
+                break;
+        }
+    }
+
+    async checkingExistingJournals() {
+        await expect(await devAssetMainPage.isLoadingImageDisplayed()).true
+        const DeleteJournalBtnValue = await devAssetMainPage.isDeleteJournalBtnDisplayed()
+        switch (await DeleteJournalBtnValue) {
+            case true:
+                await this.deleteJournals()
+                await devAssetMainPage.clickAssetsLink()
+                break;
+            case false:
+                await devAssetMainPage.clickAssetsLink()
+                break;
+        }
+    }
 }
 
 module.exports = new Helper();

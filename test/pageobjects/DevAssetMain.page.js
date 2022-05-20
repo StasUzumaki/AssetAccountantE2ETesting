@@ -153,8 +153,46 @@ const currentlyJournals = '//app-standard-page-content-grid/div/em'
 const accountTypeCostCell = '//*[contains(text(), "Cost") and @col-id="accountCode" ]'
 const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @col-id="accountCode" ]'
 const loadingImage = '[role="status"]'
-class DevAssetMainpage {
+//report
+const calendarBtn = '#calendar-selection'
+const currentFyBtn = '//div/div[3]/button[1]'
+const reportsBtn = '//app-view-asset-actions/button[2]'
+const reportForm = '//ng-component/form'
+const reportTypeDropDown = '[formcontrolname="reportType"]'
+const reportFormatDropDown = '[formcontrolname="format"]'
+const generateReportBtn = '//form/div[3]/button[2]'
 
+class DevAssetMainpage {
+    //report 
+    async clickCalendarBtn(){
+        return await page.click(calendarBtn)
+    }
+
+    async clickCurrentFyBtn(){
+        return await page.click(currentFyBtn)
+    }
+
+    async clickReportsBtn(){
+        return await page.click(reportsBtn)
+    }
+
+    async isReportFormDisplayed(){
+        return await page.isElementDisplayed(reportForm)
+    }
+
+    async selectReportTypeDropDownValue(){
+        return await page.clickDropdownItemByIndex(reportTypeDropDown, 2)
+    }
+
+    async selectReportFormatDropDown(selectValue){
+        return await page.clickDropdownItemByIndex(reportFormatDropDown, selectValue)
+    }
+    
+    async clickGenerateReportBtn(){
+        return await page.click(generateReportBtn)
+    }
+
+    //
     async isRegisterInvitePanelDispalayed(){
         return await page.isElementDisplayed(registerInvitePanel)
     }
@@ -162,6 +200,7 @@ class DevAssetMainpage {
     async isExportJournalDropDownDisplayed(){
         return await page.isElementDisplayed(exportJournalDropDown)
     }
+
     async clickDeleteCurrentJournalBtn(){
         return await page.click(deleteCurrentJournalBtn)
     }
@@ -609,7 +648,6 @@ class DevAssetMainpage {
         return await (await this.getAllAssets()).length
     }
 
-    //
     async getAllJournals(){
         return await page.getAllElements(tableWithJournals)
     }
@@ -741,6 +779,7 @@ class DevAssetMainpage {
     async setOrganisationDescriptionField(organisationDescriptionFieldInput){
         return await page.setValue(organisationDescriptionField, organisationDescriptionFieldInput)
     }
+
     async setBillingContactNameField(billingContactNameFieldInput){
         return await page.setValue(billingContactNameField, billingContactNameFieldInput)
     }
@@ -880,7 +919,7 @@ class DevAssetMainpage {
     async getSettingsHeaderText(){
         return await page.getElementText(settingsHeader)
     }
-//
+
     async isSettingsHeaderWithExistingRegDisplayed(){
         return await page.isElementDisplayed(settingsHeaderWithExistingReg)
     }

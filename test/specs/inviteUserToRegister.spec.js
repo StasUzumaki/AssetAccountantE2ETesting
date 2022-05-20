@@ -19,28 +19,43 @@ const randomCodeNumber = Math.floor(Math.random() * 100);
 const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber + "@gmail.com";
 const passwToAccount = 'devAssetTest'
 
-describe('invite user to organisation', () => {
+describe('invite user to register', () => {
     before('land to dev asset page and login', async () => {
         await browser.url(baseUrl.baseUrlLink)
         await helper.loginToAccountInvTo()
     });
     after('logout', async () => {
         await helper.logout()
-    });
-    it('should invite user and give them permissions for the Organisation and Register', async () => {
+        await helper.loginToAccountInvTo()
+        //delete created user from org
         await devAssetMainPage.clickFirstRegisterLink()
-        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
         await devAssetMainPage.clickOrganisationSettingsLink()
         await devAssetMainPage.clickUsersLink()
-        await devAssetMainPage.clickInviteUserBtn()
-        await expect(await devAssetMainPage.isInviteUserFormDisplayed()).true
-        await devAssetMainPage.setEmailInviteFieldValue(tempGoogleMail)
-        await devAssetMainPage.clickRegisterCheckBoxForInvite()
-        await devAssetMainPage.clickRegisterRoleDropDown()
-        await devAssetMainPage.clickRegisterUserRoleBtn()
-        await devAssetMainPage.clickInviteBtn()
+        await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true
+        await expect(await devAssetMainPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMail}`)
+        await devAssetMainPage.clickUserAccessDropDown()
+        await devAssetMainPage.clickUserAccessOrgRemoveBtn()
+        await expect(await devAssetMainPage.isDeleteConfirmationFormDisplayed()).true
+        await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
+        await expect(await devAssetMainPage.isInvitedUserEmailCellExist())
+        await helper.logout()
+    });
+    it('should invite user and give them permissions for the Register', async () => {
+        await devAssetMainPage.clickFirstRegisterLink();
+        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
+        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+        await devAssetMainPage.clickRegisterSettingsLink()
+        await devAssetMainPage.clickUsersLink()
+        await expect(await devAssetMainPage.isRegisterInvitePanelDispalayed()).true; 
+        await devAssetMainPage.clickInviteUserBtn()
+        await expect(await devAssetMainPage.isInviteUserFormDisplayed()).true;
+        await devAssetMainPage.setEmailInviteFieldValue(tempGoogleMail)
+        await devAssetMainPage.clickRegisterSettingsRoleDropDownMenu()
+        await devAssetMainPage.clickRegisterSettingsUserRoleBtn()
+        await devAssetMainPage.clickInviteBtn()
+        await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true;
         await expect(await devAssetMainPage.isInvitedUserNameCellDisplayed()).true
         await expect(await devAssetMainPage.getInvitedUserNameCellText()).contain(`(Invitation Pending)`)
         await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true
@@ -108,22 +123,9 @@ describe('invite user to organisation', () => {
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
         await expect(await devAssetMainPage.isInvitedUserRoleCellDisplayed()).true
         await expect(await devAssetMainPage.getInvitedUserRoleCellText()).contain('(No Access)')
-    });
-    it('should remove user from Organisation', async () => {
-        await devAssetMainPage.clickOrganisationSettingsLink()
-        await devAssetMainPage.clickUsersLink()
-        await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMail}`)
-        await devAssetMainPage.clickUserAccessDropDown()
-        await devAssetMainPage.clickUserAccessOrgRemoveBtn()
-        await expect(await devAssetMainPage.isDeleteConfirmationFormDisplayed()).true
-        await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true
-        await devAssetMainPage.clickDeleteCofirmationOkBtn()
-        await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
-        await expect(await devAssetMainPage.isInvitedUserEmailCellExist())
         await helper.logout()
     });
-    it('should login as removed user and validate that this is unsuccessful(should see "Create New Organisation" title)', async () => {
+    it('should login as removed user and see "You are now part of the organisation “Invite Users Testing Acc” but do not have access to any registers" alert)', async () => {
         await browser.url(baseUrl.baseUrlLink)
         await authPage.clickSignInBtn()
         await authPage.isUserNameLoginFieldDisplayed()
@@ -132,6 +134,7 @@ describe('invite user to organisation', () => {
         await authPage.isPasswordLoginFieldDisplayed()
         await authPage.setPasswordSignInValue(passwToAccount)
         await authPage.clickSignInSubmitBtn()
-        await expect(await authPage.isOrganizationFieldDisplayed()).true
+        await expect(await devAssetMainPage.isFirstThingsFirstAlertMessageDisplayed()).true
+        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain('You are now part of the organisation “Invite Users Testing Acc” but do not have access to any registers')
     });
 });

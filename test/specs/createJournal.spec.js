@@ -10,40 +10,11 @@ describe('create journal', () => {
         await browser.url(baseUrl.baseUrlLink)
         await helper.loginToAccountCreateAsset()
         await devAssetMainPage.clickFirstRegisterLink()
-        await expect(await devAssetMainPage.isRegisterSettingsDisplayed()).true
         //checking existing assets groups and assets
-        const GroupBtnTemplateValue = await devAssetMainPage.isGroupTemplateBtnDisplayed()
-        switch (await GroupBtnTemplateValue) {
-            case true:
-                await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
-                break;
-            case false:
-                await expect(await devAssetMainPage.isEditBtnDisplayed()).true
-                const ContractedGroupDropDownValue = await devAssetMainPage.isContractedGroupDropDownDisplayed()
-                if (await ContractedGroupDropDownValue === true) {
-                    await devAssetMainPage.clickFirstGroupLink()
-                    await devAssetMainPage.clickFirstAssetLink()
-                    await helper.deleteAsset()
-                    await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
-                    await helper.deleteAssetGroup()
-                } else {
-                    await helper.deleteAssetGroup()
-                }
-                break;
-        }
+        await helper.checkingExistingGroupsAndAssets()
         //checking existing journals
         await devAssetMainPage.clickJournalLink()
-        await expect(await devAssetMainPage.isLoadingImageDisplayed()).true
-        const DeleteJournalBtnValue = await devAssetMainPage.isDeleteJournalBtnDisplayed()
-        switch (await DeleteJournalBtnValue) {
-            case true:
-                await helper.deleteJournals()
-                await devAssetMainPage.clickAssetsLink()
-                break;
-            case false:
-                await devAssetMainPage.clickAssetsLink()
-                break;
-        }
+        await helper.checkingExistingJournals()
     });
     after('land to assets and delete created asset group (Blank)', async () => {
         // //deleting journal
