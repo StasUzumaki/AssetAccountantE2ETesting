@@ -2,6 +2,7 @@ const { PageEmailPreviewFromJSON } = require('mailslurp-client')
 const page = require('./page')
 
 const userProfileLink = '#user-profile'
+const userProfileName = '//*[@id="user-profile"]/span'
 const logoutProfileBtn = '//*[@id="avatar-dropdown-menu"]/button[3]'
 const assetsAddBtn = '//app-view-asset-actions/div/button'
 const createAssetBtn = '[routerlink="./new"]'
@@ -48,7 +49,7 @@ const newOrganisationSaveBtn = '//div[@class="modal-footer"]/button[2]'
 const organisationNamesList = '//nav/section[2]/div/div'
 const demoRegisterLink = '[class="link ng-star-inserted"]'
 const settingsHeader = '[class="page-heading ng-star-inserted"] h3'
-const settingsHeaderWithExistingReg = '[class="page-heading"] h3' 
+const settingsHeaderWithExistingReg = '[class="page-heading"] h3'
 const assetsLink = '[href*="/assets"]'
 const firstThingsFirstAlertMessage = '[class="alert-message"]'
 const createAssetGroupTemplateBtn = '[routerlink*="template"]'
@@ -68,7 +69,7 @@ const successSavedAlertMessage = '[class="alert-message"] p'
 const exitBtn = '[routerlink="../../assets"]'
 const editGroupBtn = '[title="Edit Group"]'
 const deleteGroupBtn = '[name="trash2"]'
-const deleteConfirmationOkBtn =`//*[@class='modal-footer']/button[2]`
+const deleteConfirmationOkBtn = `//*[@class='modal-footer']/button[2]`
 const nameGroupField = '//app-standard-page-content[2]/div/div/div[2]/div[1]/input[1]'
 const descriptionGroupFiled = '//app-standard-page-content[2]/div/div/div[2]/div[1]/input[2]'
 const deleteConfirmationTitle = '//*[contains(text(), "Delete Confirmation")]'
@@ -85,7 +86,7 @@ const registerSettingsLink = '//nav/section[3]/div/a[5]'
 
 //organisation settings link
 const invitedUserEmailCell = '//*/table/tbody/tr[2]/td[2]'
-const invitedUserNameCell = '//*/table/tbody/tr[2]/td[1]/label' 
+const invitedUserNameCell = '//*/table/tbody/tr[2]/td[1]/label'
 const invitedUserRoleCell = '//table/tbody/tr[2]/td[3]/label'
 const userAccessDropDown = '//table//tr[2]//td[4]/div/div/div/button'
 const userAccessRegisterRemoveBtn = '//table//tr[2]//td[4]/div/div/div//div/button'
@@ -139,6 +140,20 @@ const firstAssetLink = '//*/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/span/span
 const firstGroupListAssetsDropDown = '//*[@id="ngb-nav-21-panel"]/app-assets-grid//div[3]/div[1]/div[1]/div/span/span[2]'
 const subscriptionLimitAlert = '[class="alert-message"]'
 const newAssetUpgradeBtn = '//app-alert/div/div[2]/button'
+const assetDetailsLink = '[ngbnavitem="details"] a'
+const addAttachmentDropDownBtn = '#disposal-dropdown'
+const addLinkBtn = '//*[@class="dropdown-menu show"]/button[2]'
+const chooseFilesBtn = '//*[@class="dropdown-menu show"]/button[1]'
+const addLinkForm = '//form'
+const linkNameField = '[placeholder="Link file name"]'
+const urlField = '[placeholder="http or https"]'
+const addBtn = '//*[@class="modal-footer"]/button[1]'
+const attachmentsForm = '//*/app-standard-page-content-grid/ul'
+const firstAttachment = '//*/app-standard-page-content-grid/ul/li[1]'
+const attachmentsList = '//*/app-standard-page-content-grid/ul/li'
+const deleteLinkAttachmentBtn = '//*/ul/li[1]/div/div[3]/div/button[2]'
+const deleteFileAttachmentBtn = '//*/ul/li[1]/div/div[3]/div/button'
+const attachmentFileUploadInput = '#import-upload'
 //journal
 const journalLink = '[href*="/journals"]'
 const createBtn = '//app-standard-page-content/div//div/div[2]/button'
@@ -163,772 +178,851 @@ const reportFormatDropDown = '[formcontrolname="format"]'
 const generateReportBtn = '//form/div[3]/button[2]'
 
 class DevAssetMainpage {
+    async getUserProfileNameText() {
+        return await page.getElementText(userProfileName)
+    }
     //report 
-    async clickCalendarBtn(){
+    async clickCalendarBtn() {
         return await page.click(calendarBtn)
     }
 
-    async clickCurrentFyBtn(){
+    async clickCurrentFyBtn() {
         return await page.click(currentFyBtn)
     }
 
-    async clickReportsBtn(){
+    async clickReportsBtn() {
         return await page.click(reportsBtn)
     }
 
-    async isReportFormDisplayed(){
+    async isReportFormDisplayed() {
         return await page.isElementDisplayed(reportForm)
     }
 
-    async selectReportTypeDropDownValue(){
+    async selectReportTypeDropDownValue() {
         return await page.clickDropdownItemByIndex(reportTypeDropDown, 2)
     }
 
-    async selectReportFormatDropDown(selectValue){
+    async selectReportFormatDropDown(selectValue) {
         return await page.clickDropdownItemByIndex(reportFormatDropDown, selectValue)
     }
-    
-    async clickGenerateReportBtn(){
+
+    async clickGenerateReportBtn() {
         return await page.click(generateReportBtn)
     }
 
+    async isGenerateReportBtnClikable() {
+        return await (await page.getElement(generateReportBtn)).waitForClickable()
+    }
+    //asset
+    async clickAssetDetailsLink() {
+        return await page.click(assetDetailsLink)
+    }
+
+    async clickAddAttachmentDropDownBtn() {
+        return await page.click(addAttachmentDropDownBtn)
+    }
+
+    async clickAddLinkBtn() {
+        return await page.click(addLinkBtn)
+    }
+
+    async clickChooseFilesBtn() {
+        return await page.click(chooseFilesBtn)
+    }
+
+    async isAddLinkFormDisplayed() {
+        return await page.isElementDisplayed(addLinkForm)
+    }
+
+    async setLinkNameFieldValue(linkNameFieldInput) {
+        return await page.setValue(linkNameField, linkNameFieldInput)
+    }
+
+    async setUrlFieldValue(urlFieldInput) {
+        return await page.setValue(urlField, urlFieldInput)
+    }
+
+    async clickAddBtn() {
+        return await page.click(addBtn)
+    }
+
+    async isAttachmentsFormDisplayed() {
+        return await page.isElementDisplayed(attachmentsForm)
+    }
+
+    async getFirstAttachmentText() {
+        return await page.getElementText(firstAttachment)
+    }
+
+    async getAllAttachments() {
+        return await page.getAllElements(attachmentsList)
+    }
+
+    async getAttachmentsListSize() {
+        await (await page.getElement(attachmentsList)).waitForDisplayed()
+        return await (await this.getAllAttachments()).length
+    }
+
+    async clickDeleteLinkAttachmentBtn() {
+        return await page.click(deleteLinkAttachmentBtn)
+    }
+
+    async clickDeleteFileAttachmentBtn() {
+        return await page.click(deleteFileAttachmentBtn)
+    }
+
+    async setAttachmentFileUploadInputValue(attachmentFileUpload){
+        return await page.setValue(attachmentFileUploadInput, attachmentFileUpload)
+    }
+    
     //
-    async isRegisterInvitePanelDispalayed(){
+    async isRegisterInvitePanelDispalayed() {
         return await page.isElementDisplayed(registerInvitePanel)
     }
 
-    async isExportJournalDropDownDisplayed(){
+    async isExportJournalDropDownDisplayed() {
         return await page.isElementDisplayed(exportJournalDropDown)
     }
 
-    async clickDeleteCurrentJournalBtn(){
+    async clickDeleteCurrentJournalBtn() {
         return await page.click(deleteCurrentJournalBtn)
     }
 
-    async isLoadingImageDisplayed(){
-        return await (await page.getElement(loadingImage)).waitForExist({reverse:true})
+    async isAttachmentsFormExist() {
+        return await (await page.getElement(attachmentsForm)).waitForExist({ reverse: true })
+    }
+    async isAddLinkFormExist() {
+        return await (await page.getElement(addLinkForm)).waitForExist({ reverse: true })
     }
 
-    async isDeleteJournalBtnDisplayed(){
+    async isLoadingImageDisplayed() {
+        return await (await page.getElement(loadingImage)).waitForExist({ reverse: true })
+    }
+
+    async isDeleteJournalBtnDisplayed() {
         return await (await page.getElement(deleteJournalBtn)).isDisplayed()
     }
 
-    async isInvitedUserEmailCellExist(){
-        return await(await page.getElement(invitedUserEmailCell)).waitForExist({reverse:true})
+    async isFirstAttachmentExist() {
+        return await (await page.getElement(firstAttachment)).waitForExist({ reverse: false })
     }
 
-    async isFirstJournalItemDisplayed(){
+    async isInvitedUserEmailCellExist() {
+        return await (await page.getElement(invitedUserEmailCell)).waitForExist({ reverse: true })
+    }
+
+    async isFirstJournalItemDisplayed() {
         return await page.isElementDisplayed(firstJournalItem)
     }
 
-    async clickFirstJournalItemLink(){
+    async clickFirstJournalItemLink() {
         return await page.click(firstJournalItem)
     }
 
-    async clickUserAccessDropDown(){
+    async clickUserAccessDropDown() {
         return await page.click(userAccessDropDown)
     }
 
-    async clickUserAccessRegisterRemoveBtn(){
+    async clickUserAccessRegisterRemoveBtn() {
         return await page.click(userAccessRegisterRemoveBtn)
     }
 
-    async clickUserAccessOrgRemoveBtn(){
+    async clickUserAccessOrgRemoveBtn() {
         return await page.click(userAccessOrgRemoveBtn)
     }
 
-    async clickManageAccessBtn(){
+    async clickManageAccessBtn() {
         return await page.click(manageAccessBtn)
     }
 
-    async getInvitedUserNameCellText(){
+    async getInvitedUserNameCellText() {
         return await page.getElementText(invitedUserNameCell)
     }
 
-    async isInvitedUserNameCellDisplayed(){
+    async isInvitedUserNameCellDisplayed() {
         return await page.isElementDisplayed(invitedUserNameCell)
     }
 
-    async getInvitedUserEmailCellText(){
+    async getInvitedUserEmailCellText() {
         return await page.getElementText(invitedUserEmailCell)
     }
 
-    async isInvitedUserEmailCellDisplayed(){
+    async isInvitedUserEmailCellDisplayed() {
         return await page.isElementDisplayed(invitedUserEmailCell)
     }
     //
-    async getInvitedUserRoleCellText(){
+    async getInvitedUserRoleCellText() {
         return await page.getElementText(invitedUserRoleCell)
     }
 
-    async isInvitedUserRoleCellDisplayed(){
+    async isInvitedUserRoleCellDisplayed() {
         return await page.isElementDisplayed(invitedUserRoleCell)
     }
 
-    async clickNewAssetUpgradeBtn(){
+    async clickNewAssetUpgradeBtn() {
         return await page.click(newAssetUpgradeBtn)
     }
 
-    async isSubscriptionLimitAlertDisplayed(){
+    async isSubscriptionLimitAlertDisplayed() {
         return await page.isElementDisplayed(subscriptionLimitAlert)
     }
 
-    async getSubscriptionLimitAlertText(){
+    async getSubscriptionLimitAlertText() {
         return await page.getElementText(subscriptionLimitAlert)
     }
 
-    async isContractedGroupDropDownDisplayed(){
+    async isContractedGroupDropDownDisplayed() {
         return await (await page.getElement(contractedGroupDropDown)).isDisplayed()
     }
 
-    async clickContractedGroupDropDown(){
+    async clickContractedGroupDropDown() {
         return await page.click(contractedGroupDropDown)
     }
 
-    async isEditBtnDisplayed(){
+    async isEditBtnDisplayed() {
         return await page.isElementDisplayed(editGroupBtn)
     }
 
-    async isGroupTemplateBtnDisplayed(){
+    async isGroupTemplateBtnDisplayed() {
         return await (await page.getElement(createAssetGroupTemplateBtn)).isDisplayed()
     }
 
-    async isFirstGroupListAssetsDropDownDisplayed(){
+    async isFirstGroupListAssetsDropDownDisplayed() {
         return await page.isElementDisplayed(firstGroupListAssetsDropDown)
     }
 
-    async getChangePlanText(text){
+    async getChangePlanText(text) {
         return await page.waitUntilElementIncludesText(organisationSettingsUpgradeBtn, text)
     }
 
-    async isChangePlanBtnDisplayed(){
+    async isChangePlanBtnDisplayed() {
         return await page.isElementDisplayed(organisationSettingsUpgradeBtn)
     }
 
-    async isCurrentAccountPlanDispalyed(){
+    async isCurrentAccountPlanDispalyed() {
         return await page.isElementDisplayed(currentAccountPlan)
     }
 
-    async isCurrentPaymentMethodAlertDisplayed(){
+    async isCurrentPaymentMethodAlertDisplayed() {
         return await page.isElementDisplayed(currentPaymentMethodAlert)
     }
 
-    async clickPaymentUpgradeSubBtn(){
+    async clickPaymentUpgradeSubBtn() {
         return await page.click(paymentUpgradeSubBtn)
     }
 
-    async clickRegisterSettingsLink(){
+    async clickRegisterSettingsLink() {
         return await page.click(registerSettingsLink)
     }
 
-    async isRegisterSettingsDisplayed(){
+    async isRegisterSettingsDisplayed() {
         return await page.isElementDisplayed(registerSettingsLink)
     }
 
-    async isInvintationAlertDisplayed(){
+    async isInvintationAlertDisplayed() {
         return await page.isElementDisplayed(invintationAlert)
     }
 
-    async getInvintationAlertText(){
+    async getInvintationAlertText() {
         return await page.getElementText(invintationAlert)
     }
 
-    async setEmailInviteFieldValue(emailInviteFieldInput){
+    async setEmailInviteFieldValue(emailInviteFieldInput) {
         return await page.setValue(emailInviteField, emailInviteFieldInput)
     }
 
-    async isInviteUserFormDisplayed(){
+    async isInviteUserFormDisplayed() {
         return await page.isElementDisplayed(inviteUserForm)
     }
 
-    async clickRegisterUserRoleBtn(){
+    async clickRegisterUserRoleBtn() {
         return await page.click(registerUserRoleBtn)
     }
 
-    async clickRegisterRoleDropDown(){
+    async clickRegisterRoleDropDown() {
         return await page.click(registerRoleDropDownMenu)
     }
 
-    async clickRegisterSettingsRoleDropDownMenu(){
+    async clickRegisterSettingsRoleDropDownMenu() {
         return await page.click(registerSettingsRoleDropDownMenu)
     }
 
-    async clickRegisterSettingsUserRoleBtn(){
+    async clickRegisterSettingsUserRoleBtn() {
         return await page.click(registerSettingsUserRoleBtn)
     }
 
-    async clickRegisterCheckBoxForInvite(){
+    async clickRegisterCheckBoxForInvite() {
         return await page.click(registerCheckBoxForInvite)
     }
 
-    async clickInviteBtn(){
+    async clickInviteBtn() {
         return await page.click(inviteBtn)
     }
 
-    async clickInviteUserBtn(){
+    async clickInviteUserBtn() {
         return await page.click(inviteUserBtn)
     }
 
-    async isAccountTypeClearingSuspenseCellDisplayed(){
+    async isAccountTypeClearingSuspenseCellDisplayed() {
         return await page.isElementDisplayed(accountTypeClearingSuspenseCell)
     }
-    
-    async isAccountTypeCostCellDisplayed(){
+
+    async isAccountTypeCostCellDisplayed() {
         return await page.isElementDisplayed(accountTypeCostCell)
     }
 
-    async isCurrentlyJournalsDisplayed(){
+    async isCurrentlyJournalsDisplayed() {
         return await page.isElementDisplayed(currentlyJournals)
     }
 
-    async isCreateJournalFormDisplayed(){
+    async isCreateJournalFormDisplayed() {
         return await page.isElementDisplayed(createJournalForm)
     }
-    
-    async isFirstGroupLinkDisplayed(){
+
+    async isFirstGroupLinkDisplayed() {
         return await page.isElementDisplayed(firstGroupLink)
     }
 
-    async clickFirstGroupLink(){
+    async clickFirstGroupLink() {
         return await page.click(firstGroupLink)
     }
 
-    async clickFirstAssetLink(){
+    async clickFirstAssetLink() {
         return await page.click(firstAssetLink)
     }
 
-    async isFirstAssetLinkDisplayed(){
+    async isFirstAssetLinkDisplayed() {
         return await page.isElementDisplayed(firstAssetLink)
     }
 
-    async setJournalDescriptionFieldValue(journalDescriptionInput){
+    async setJournalDescriptionFieldValue(journalDescriptionInput) {
         return await page.setValue(journalDescriptionField, journalDescriptionInput)
     }
 
-    async getJournalTitleText(){
+    async getJournalTitleText() {
         return await page.getElementText(journalTitle)
     }
 
-    async isJournalTitleDisplayed(){
+    async isJournalTitleDisplayed() {
         return await page.isElementDisplayed(journalTitle)
     }
 
-    async clickCreateJournalBtn(){
+    async clickCreateJournalBtn() {
         return await page.click(createJournalBtn)
     }
 
-    async clickDeleteJournalBtn(){
+    async clickDeleteJournalBtn() {
         return await page.click(deleteJournalBtn)
     }
 
-    async clickCreateBtn(){
+    async clickCreateBtn() {
         return await page.click(createBtn)
     }
 
-    async clickJournalLink(){
+    async clickJournalLink() {
         return await page.click(journalLink)
     }
 
-    async clickSelfAssessedCheckBox(){
+    async clickSelfAssessedCheckBox() {
         return await page.click(selfAssessedCheckBox)
     }
 
-    async setTaxDepreciationNotesFieldValue(taxDepreciationNotesInput){
+    async setTaxDepreciationNotesFieldValue(taxDepreciationNotesInput) {
         return await page.setValue(taxDepreciationNotesField, taxDepreciationNotesInput)
     }
 
-    async isTaxViewFormDisplayed(){
+    async isTaxViewFormDisplayed() {
         return await page.isElementDisplayed(taxViewForm)
     }
 
-    async isFirstUseAlertMessageDisplayted(){
+    async isFirstUseAlertMessageDisplayted() {
         return await page.isElementDisplayed(firstUseAlertMessage)
     }
 
-    async isReversalConfirmationFormDisplayed(){
+    async isReversalConfirmationFormDisplayed() {
         return await page.isElementDisplayed(reversalConfirmationForm)
     }
 
-    async isDeleteConfirmationFormDisplayed(){
+    async isDeleteConfirmationFormDisplayed() {
         return await page.isElementDisplayed(reversalConfirmationForm)
     }
 
-    async isReversalConfirmationTitleDisplayed(){
+    async isReversalConfirmationTitleDisplayed() {
         return await page.isElementDisplayed(reversalConfirmationTitle)
     }
 
-    async clickDeleteAssetBtn(){
+    async clickDeleteAssetBtn() {
         return await page.click(deleteAssetBtn)
     }
 
-    async clickPurchaseBtn(){
+    async clickPurchaseBtn() {
         return await page.click(purchaseBtn)
     }
 
-    async clickFirstUseBtn(){
+    async clickFirstUseBtn() {
         return await page.click(firstUseBtn)
     }
 
-    async clickSetQuantityBtn(){
+    async clickSetQuantityBtn() {
         return await page.click(setQuantityBtn)
     }
 
-    async clickReverseDropDown(){
+    async clickReverseDropDown() {
         return await page.click(reverseDropDown)
     }
 
-    async isAssetDescriptionTitleDisplayed(){
+    async isAssetDescriptionTitleDisplayed() {
         return await page.isElementDisplayed(assetDescriptionTitle)
     }
 
-    async setCardNumberFieldValue(cardNumberFieldInput){
+    async setCardNumberFieldValue(cardNumberFieldInput) {
         return await page.setValue(cardNumberField, cardNumberFieldInput)
     }
 
-    async setCardExpiryFieldValue(cardExpiryFieldInput){
+    async setCardExpiryFieldValue(cardExpiryFieldInput) {
         return await page.setValue(cardExpiryField, cardExpiryFieldInput)
     }
 
-    async setCvcFieldValue(cvcFieldInput){
+    async setCvcFieldValue(cvcFieldInput) {
         return await page.setValue(cvcField, cvcFieldInput)
     }
 
-    async isCardNumberInputDisplayed(){
+    async isCardNumberInputDisplayed() {
         return await page.isElementDisplayed(cardNumberInput)
     }
 
-    async isCardExpiryInputDisplayed(){
+    async isCardExpiryInputDisplayed() {
         return await page.isElementDisplayed(cardExpiryInput)
     }
 
-    async isCvcInputDisplayed(){
+    async isCvcInputDisplayed() {
         return await page.isElementDisplayed(cvcInput)
     }
-    
-    async isPaymentFormDisplayed(){
+
+    async isPaymentFormDisplayed() {
         return await page.isElementDisplayed(paymentForm)
     }
 
-    async isDepreciationFormDisplayed(){
+    async isDepreciationFormDisplayed() {
         return await page.isElementDisplayed(depreciationForm)
     }
 
-    async isTaxDepreciationFormDisplayed(){
+    async isTaxDepreciationFormDisplayed() {
         return await page.isElementDisplayed(taxDepreciationForm)
     }
 
-    async isAccountsDepreciationFormDisplayed(){
+    async isAccountsDepreciationFormDisplayed() {
         return await page.isElementDisplayed(accountsDepreciationForm)
     }
 
-    async isSubscriptionFormDisplayed(){
+    async isSubscriptionFormDisplayed() {
         return await page.isElementDisplayed(subscriptionForm)
     }
 
-    async selectNewAssetQuantityUnitsValue(){
+    async selectNewAssetQuantityUnitsValue() {
         return await page.clickDropdownItemByIndex(newAssetQuantityUnitsSelect, 1)
     }
 
-    async setNewAssetQuantityValue(newAssetQuantityInput){
-        return await page.setValue(newAssetQuantity,newAssetQuantityInput)
+    async setNewAssetQuantityValue(newAssetQuantityInput) {
+        return await page.setValue(newAssetQuantity, newAssetQuantityInput)
     }
 
-    async setNewAssetPurchaseDateValue(newAssetPurchaseDateInput){
+    async setNewAssetPurchaseDateValue(newAssetPurchaseDateInput) {
         return await page.setValue(newAssetPurchaseDate, newAssetPurchaseDateInput)
     }
 
-    async setNewAssetCostValue(newAssetCostFieldInput){
+    async setNewAssetCostValue(newAssetCostFieldInput) {
         return await page.setValue(newAssetCostField, newAssetCostFieldInput)
     }
 
-    async setNewAssetCodeNumberValue(newAssetCodeNumberFieldInput){
+    async setNewAssetCodeNumberValue(newAssetCodeNumberFieldInput) {
         return await page.setValue(newAssetCodeNumberField, newAssetCodeNumberFieldInput)
     }
 
-    async setNewAssetNameValue(newAssetNameFieldInput){
+    async setNewAssetNameValue(newAssetNameFieldInput) {
         return await page.setValue(newAssetNameField, newAssetNameFieldInput)
     }
 
-    async setNewAssetDescriptionValue(newAssetDescriptionFieldInput){
+    async setNewAssetDescriptionValue(newAssetDescriptionFieldInput) {
         return await page.setValue(newAssetDescriptionField, newAssetDescriptionFieldInput)
     }
 
-    async selectNewAssetGroupValue(){
+    async selectNewAssetGroupValue() {
         return await page.clickDropdownItemByIndex(newAssetGroupSelect, 1)
     }
 
-    async clickStandartChangePlanBtn(){
+    async clickStandartChangePlanBtn() {
         return await page.click(standartChangePlanBtn)
     }
 
-    async clickToggleForAccountingFirms(){
+    async clickToggleForAccountingFirms() {
         return await page.click(toggleForAccountingFirms)
     }
 
-    async clickCloseBtn(){
+    async clickCloseBtn() {
         return await page.click(closeBtn)
     }
 
-    async clickOrganisationSettingsUpgradeBtn(){
+    async clickOrganisationSettingsUpgradeBtn() {
         return await page.click(organisationSettingsUpgradeBtn)
     }
 
-    async clickRegistersLink(){
+    async clickRegistersLink() {
         return await page.click(registersLink)
     }
 
-    async clickSubscriptionAndPaymentLink(){
+    async clickSubscriptionAndPaymentLink() {
         return await page.click(subscriptionAndPaymentLink)
     }
 
-    async clickUsersLink(){
+    async clickUsersLink() {
         return await page.click(usersLink)
     }
 
-    async clickNewAssetSaveBtn(){
+    async clickNewAssetSaveBtn() {
         return await page.click(newAssetSaveBtn)
     }
 
-    async clickCreateFirstRegisterBtn(){
+    async clickCreateFirstRegisterBtn() {
         return await page.click(createFirstRegisterBtn)
     }
-    
-    async clickUserProfileLink(){
+
+    async clickUserProfileLink() {
         return await page.click(userProfileLink)
     }
 
-    async clickLogoutProfileBtn(){
+    async clickLogoutProfileBtn() {
         return await page.click(logoutProfileBtn)
     }
 
-    async clickAssetsAddBtn(){
+    async clickAssetsAddBtn() {
         return await page.click(assetsAddBtn)
     }
 
-    async clickCreateAssetBtn(){
+    async clickCreateAssetBtn() {
         return await page.click(createAssetBtn)
     }
 
-    async isPaymentMethodFormDisplayed(){
+    async isPaymentMethodFormDisplayed() {
         return await page.isElementDisplayed(paymentMethodForm)
     }
 
-    async isAssetsAddBtnDisplayed(){
+    async isAssetsAddBtnDisplayed() {
         return await page.isElementDisplayed(assetsAddBtn)
     }
 
-    async isAssetCardSectionDisplayed(){
+    async isAssetCardSectionDisplayed() {
         return await page.isElementDisplayed(assetGroupCardSection)
     }
 
-    async getAllRegisters(){
+    async getAllRegisters() {
         return await page.getAllElements(tableWithRegisters)
     }
 
-    async getRegistersListSize(){
+    async getRegistersListSize() {
         await (await page.getElement(tableWithRegisters)).waitForDisplayed()
         return await (await this.getAllRegisters()).length
     }
 
-    async getAllAssetsGroup(){
+    async getAllAssetsGroup() {
         return await page.getAllElements(assetsGroupList)
     }
 
-    async getAssetsGroupListSize(){
+    async getAssetsGroupListSize() {
         await (await page.getElement(assetsGroupList)).waitForDisplayed()
         return await (await this.getAllAssetsGroup()).length
     }
 
-    async getAllAssets(){
+    async getAllAssets() {
         return await page.getAllElements(tableWithAssets)
     }
 
-    async getAssetsListSize(){
+    async getAssetsListSize() {
         await (await page.getElement(tableWithAssets)).waitForDisplayed()
         return await (await this.getAllAssets()).length
     }
 
-    async getAllJournals(){
+    async getAllJournals() {
         return await page.getAllElements(tableWithJournals)
     }
 
-    async getJournalsListSize(){
+    async getJournalsListSize() {
         await (await page.getElement(tableWithJournals)).waitForDisplayed()
         return await (await this.getAllJournals()).length
     }
 
-    async isCreateRegisterBtnDisplayed(){
+    async isCreateRegisterBtnDisplayed() {
         return await page.isElementDisplayed(createRegisterBtn)
     }
 
-    async setRegisterNameValue(registerNameInput){
+    async setRegisterNameValue(registerNameInput) {
         return await page.setValue(registerName, registerNameInput)
     }
- 
-    async setRegisterEntityValue(entityNameInput){
+
+    async setRegisterEntityValue(entityNameInput) {
         return await page.setValue(entityName, entityNameInput)
     }
 
-    async clickNextRegisterBtn(){
+    async clickNextRegisterBtn() {
         return await page.click(nextRegisterBtn)
     }
 
-    async clickTryForFreeBtn(){
+    async clickTryForFreeBtn() {
         return await page.click(tryForFreeBtn)
     }
 
-    async clickCreateRegisterBtn(){
+    async clickCreateRegisterBtn() {
         return await page.click(createRegisterBtn)
     }
 
-    async clickRegisterSelectionDropDown(){
+    async clickRegisterSelectionDropDown() {
         return await page.click(registerSelection)
     }
 
-    async clickDemoRegisterBtn(){
+    async clickDemoRegisterBtn() {
         return await page.click(demoRegisterBtn)
     }
 
-    async clickAllRegistersLink(){
+    async clickAllRegistersLink() {
         return await page.click(allRegisters)
     }
 
-    async clickFirstRegisterLink(){
+    async clickFirstRegisterLink() {
         return await page.click(firstRegisterLink)
     }
 
-    async clickCreateOrganisationSelectionDropDown(){
+    async clickCreateOrganisationSelectionDropDown() {
         return await page.click(organisationSelectionDropDown)
     }
 
-    async clickCreateNewOrganisationLink(){
+    async clickCreateNewOrganisationLink() {
         return await page.click(createNewOrganisationLink)
     }
 
-    async clickNewOrganisationSaveBtn(){
+    async clickNewOrganisationSaveBtn() {
         return await page.click(newOrganisationSaveBtn)
     }
 
-    async clickOrganisationSettingsLink(){
+    async clickOrganisationSettingsLink() {
         return await page.click(organisationSettingsLink)
     }
 
-    async clickAssetsLink(){
+    async clickAssetsLink() {
         return await page.click(assetsLink)
     }
 
-    async clickCreateAssetGroupTemplateBtn(){
+    async clickCreateAssetGroupTemplateBtn() {
         return await page.click(createAssetGroupTemplateBtn)
     }
 
-    async clickBuidlingsTemtplateCheckBox(){
+    async clickBuidlingsTemtplateCheckBox() {
         return await page.click(buildingsTemplateCheckBox)
     }
 
-    async clickCapitalWorksTemtplateCheckBox(){
+    async clickCapitalWorksTemtplateCheckBox() {
         return await page.click(capitalWorksTemplateCheckBox)
     }
 
-    async clickDropDownRegisterMenu(){
+    async clickDropDownRegisterMenu() {
         return await page.click(dropDownRegisterMenu)
     }
 
-    async clickArchiveBtn(){
+    async clickArchiveBtn() {
         return await page.click(archiveBtn)
     }
 
-    async clickArchiveConfirmationOkBtn(){
+    async clickArchiveConfirmationOkBtn() {
         return await page.click(archiveConfirmationOkBtn)
     }
 
-    async clickBuidlingsTemtplateAssetForm(){
+    async clickBuidlingsTemtplateAssetForm() {
         return await page.click(buildingsTemplateAssetForm)
     }
 
-    async clickTemplateSaveBtn(){
+    async clickTemplateSaveBtn() {
         return await page.click(templateSaveBtn)
     }
 
-    async clickExitBtn(){
+    async clickExitBtn() {
         return await page.click(exitBtn)
     }
 
-    async clickEditGroupBtn(){
+    async clickEditGroupBtn() {
         return await page.click(editGroupBtn)
     }
 
-    async clickDeleteGroupBtn(){
+    async clickDeleteGroupBtn() {
         return await page.click(deleteGroupBtn)
     }
 
-    async clickDeleteCofirmationOkBtn(){
+    async clickDeleteCofirmationOkBtn() {
         return await page.click(deleteConfirmationOkBtn)
     }
-    async clickCreateAssetGroupBlankBtn(){
+    async clickCreateAssetGroupBlankBtn() {
         return await page.click(createAssetGroupBlankBtn)
     }
 
-    async clickAssetGroupBlankSaveBtn(){
+    async clickAssetGroupBlankSaveBtn() {
         return await page.click(assetGroupBlankSaveBtn)
     }
 
-    async setOrganisationNameField(organisationNameFieldInput){
+    async setOrganisationNameField(organisationNameFieldInput) {
         return await page.setValue(organisationNameField, organisationNameFieldInput)
     }
 
-    async setOrganisationDescriptionField(organisationDescriptionFieldInput){
+    async setOrganisationDescriptionField(organisationDescriptionFieldInput) {
         return await page.setValue(organisationDescriptionField, organisationDescriptionFieldInput)
     }
 
-    async setBillingContactNameField(billingContactNameFieldInput){
+    async setBillingContactNameField(billingContactNameFieldInput) {
         return await page.setValue(billingContactNameField, billingContactNameFieldInput)
     }
-    
-    async setBillingContactEmailField(billingContactEmailFieldInput){
+
+    async setBillingContactEmailField(billingContactEmailFieldInput) {
         return await page.setValue(billingContactEmailField, billingContactEmailFieldInput)
     }
 
-    async setBillingContactPhoneField(billingContactPhoneFieldInput){
+    async setBillingContactPhoneField(billingContactPhoneFieldInput) {
         return await page.setValue(billingContactPhoneField, billingContactPhoneFieldInput)
     }
 
-    async setAssetGroupDescriptionBlankFieldValue(assetGroupDescriptionBlankFieldInput){
+    async setAssetGroupDescriptionBlankFieldValue(assetGroupDescriptionBlankFieldInput) {
         return await page.setValue(assetGroupDescriptionBlankField, assetGroupDescriptionBlankFieldInput)
     }
 
-    async setAssetGroupNameBlankFieldValue(assetGroupNameBlankFieldInput){
+    async setAssetGroupNameBlankFieldValue(assetGroupNameBlankFieldInput) {
         return await page.setValue(assetGroupNameBlankField, assetGroupNameBlankFieldInput)
     }
 
-    async isNewAssetTitleDisplayed(){
+    async isNewAssetTitleDisplayed() {
         return await page.isElementDisplayed(newAssetTitle)
     }
 
-    async isAssetGroupBlankAlertDisplayed(){
+    async isAssetGroupBlankAlertDisplayed() {
         return await page.isElementDisplayed(assetGroupBlankAlert)
     }
 
-    async isNameGroupFieldDisplayed(){
+    async isNameGroupFieldDisplayed() {
         return await page.isElementDisplayed(nameGroupField)
     }
 
-    async isDescriptionGroupFieldDisplayed(){
+    async isDescriptionGroupFieldDisplayed() {
         return await page.isElementDisplayed(descriptionGroupFiled)
     }
 
-    async isFirstRegisterLinkDisplayed(){
+    async isFirstRegisterLinkDisplayed() {
         return await page.isElementDisplayed(firstRegisterLink)
     }
 
-    async getRegisterNameText(){
+    async getRegisterNameText() {
         return await page.getElementText(firstRegisterLink)
     }
 
-    async isCreateNewOrganisationFormDisplayed(){
+    async isCreateNewOrganisationFormDisplayed() {
         return await page.isElementDisplayed(createNewOrganisationForm)
     }
 
-    async isCreateNewRegisterFormDisplayed(){
+    async isCreateNewRegisterFormDisplayed() {
         return await page.isElementDisplayed(createNewRegisterForm)
     }
 
-    async isCreateAssetGroupTemplateBtnDisplayed(){
+    async isCreateAssetGroupTemplateBtnDisplayed() {
         return await page.isElementDisplayed(createAssetGroupTemplateBtn)
     }
 
-    async isSuccessArchivedRegisterMessageDisplayed(){
+    async isSuccessArchivedRegisterMessageDisplayed() {
         return await page.isElementDisplayed(successArchivedRegisterMessage)
     }
 
-    async isRegisterNameFieldDisplayed(){
+    async isRegisterNameFieldDisplayed() {
         return await page.isElementDisplayed(registerName)
     }
 
-    async isEntityNameFieldDisplayed(){
+    async isEntityNameFieldDisplayed() {
         return await page.isElementDisplayed(entityName)
     }
 
-    async isAssetGroupNameFieldDisplayed(){
+    async isAssetGroupNameFieldDisplayed() {
         return await page.isElementDisplayed(assetGroupNameBlankField)
     }
 
-    async isAssetGroupDescriptionFieldDisplayed(){
+    async isAssetGroupDescriptionFieldDisplayed() {
         return await page.isElementDisplayed(assetGroupDescriptionBlankField)
     }
 
-    async isAssetsGroupFromTemplateFormsDisplayed(){
+    async isAssetsGroupFromTemplateFormsDisplayed() {
         return await page.isElementDisplayed(assetsGroupFromTemplateForms)
     }
 
-    async isNewAssetGroupFromTemplateTitleDisplayed(){
+    async isNewAssetGroupFromTemplateTitleDisplayed() {
         return await page.isElementDisplayed(newAssetGroupFromTemplateTitle)
     }
 
-    async isDeleteConfirmationTitleDisplayed(){
+    async isDeleteConfirmationTitleDisplayed() {
         return await page.isElementDisplayed(deleteConfirmationTitle)
     }
 
-    async getNewAssetGroupFromTemplateTitleText(){
+    async getNewAssetGroupFromTemplateTitleText() {
         return await page.getElementText(newAssetGroupFromTemplateTitle)
     }
 
-    async getLinkText(linkSelector){
+    async getLinkText(linkSelector) {
         return await page.getElementText(linkSelector);
     }
 
-    async getSuccessfullySavedAlertMessageText(){
+    async getSuccessfullySavedAlertMessageText() {
         return await page.getElementText(successSavedAlertMessage)
     }
 
-    async getCurrentOrganisationNamesListText(){
+    async getCurrentOrganisationNamesListText() {
         return await page.getElementText(organisationNamesList)
     }
 
-    async getAssetGroupBlankAlertText(){
+    async getAssetGroupBlankAlertText() {
         return await page.getElementText(assetGroupBlankAlert)
     }
 
-    async isBuildingsTemplateAssetFormClickable(){
+    async isBuildingsTemplateAssetFormClickable() {
         return await page.isElementClickable(buildingsTemplateAssetForm)
     }
 
-    async isSuccessfullySavedAlertMessageDisplayed(){
+    async isSuccessfullySavedAlertMessageDisplayed() {
         return await page.isElementDisplayed(successSavedAlertMessage)
     }
 
-    async isDemoRegisterLinkDisplayed(){
+    async isDemoRegisterLinkDisplayed() {
         return await page.isElementDisplayed(demoRegisterLink)
     }
 
-    async isFirstThingsFirstAlertMessageDisplayed(){
+    async isFirstThingsFirstAlertMessageDisplayed() {
         return await page.isElementDisplayed(firstThingsFirstAlertMessage)
     }
 
-    async isFirstThingsFirstAlertMessageExisting(){
+    async isFirstThingsFirstAlertMessageExisting() {
         return await page.isElementExisting(firstThingsFirstAlertMessage)
     }
 
-    async getFirstThingsFirstAlertMessageText(){
+    async getFirstThingsFirstAlertMessageText() {
         return await page.getElementText(firstThingsFirstAlertMessage)
     }
 
-    async isSettingsHeaderDisplayed(){
+    async isSettingsHeaderDisplayed() {
         return await page.isElementDisplayed(settingsHeader)
     }
 
-    async getSettingsHeaderText(){
+    async getSettingsHeaderText() {
         return await page.getElementText(settingsHeader)
     }
 
-    async isSettingsHeaderWithExistingRegDisplayed(){
+    async isSettingsHeaderWithExistingRegDisplayed() {
         return await page.isElementDisplayed(settingsHeaderWithExistingReg)
     }
 
-    async getSettingsHeaderWithExistingRegText(){
+    async getSettingsHeaderWithExistingRegText() {
         return await page.getElementText(settingsHeaderWithExistingReg)
     }
 
-    async getDemoRegisterText(){
+    async getDemoRegisterText() {
         return await page.getElementText(demoRegisterLink)
     }
 }

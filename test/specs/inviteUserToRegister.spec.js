@@ -64,6 +64,7 @@ describe('invite user to register', () => {
     });
     it('should find and accept email invitation', async () => {
         await browser.url('https://mail.google.com/')
+        await browser.pause(2000)
         await helper.loginToGoogleMailBox()
         await googleMailPage.clickInviteMessage()
         await googleMailPage.clickAcceptInvitationLinkLink()
@@ -88,7 +89,7 @@ describe('invite user to register', () => {
         await authPage.clickRegisterBtn()
         await expect(await authPage.isEmailVerificationFormDisplayed()).true
         await authPage.clickOkVerifyBtn()
-        await browser.pause(5000)
+        await browser.pause(7000)
     });
     it('should verify account by email and validate that user can access the Register they have been invited to', async () => {
         await browser.url('https://mail.google.com/')

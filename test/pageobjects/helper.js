@@ -3,9 +3,36 @@ const authPage = require('./authentication.page')
 const loginData = require('../../data/loginData')
 const googleMailPage = require('../pageobjects/googleMail.page')
 const googleMailboxData = require('../../data/googleMailboxData')
+const fs = require('fs');
+const pdfParse = require('pdf-parse');
+const path = require('path');
+const csv = require('fast-csv');
 const { expect } = require('chai')
 const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator')
 
+function getDateTime() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var day = now.getDate();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    if (hour.toString().length == 1) {
+        hour = '0' + hour;
+    }
+    if (day.toString().length == 1) {
+        day = '0' + day;
+    }
+    if (minute.toString().length == 1) {
+        minute = '0' + minute;
+    }
+    if (hour <= 11) {
+        timesOfDay = ' AM';
+    } else {
+        timesOfDay = ' PM';
+    }
+    var dateTime = day + ', ' + year //+ ' ' + hour + ':' + minute + timesOfDay;
+    return dateTime;
+}
 const randomCodeNumber = Math.floor(Math.random() * 1000);
 const randomName = uniqueNamesGenerator({
     dictionaries: [adjectives, animals, colors],
@@ -15,6 +42,8 @@ const randomOrgName = randomName + '_org';
 const randomAssetName = randomName + '_Asset';
 const assetGroupName = randomName + randomCodeNumber + '_TestGroup';
 const registerNameSettings = randomName + '_TestRegister'
+const currentPdfFilePath = '../Downloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
+const currentCsvFilePath = '../Downloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
 
 class Helper {
 
@@ -288,6 +317,173 @@ class Helper {
                 break;
         }
     }
+
+    async addLinkAttachment() {
+        const currentUserProfileName = await devAssetMainPage.getUserProfileNameText()
+        const currentTime = getDateTime()
+        const randomCodeNumber = Math.floor(Math.random() * 1000);
+        const testNameForLink = "testNameForLink" + randomCodeNumber
+        const urlForLink = "https://" + "testURL" + randomCodeNumber + ".com"
+        await devAssetMainPage.clickAddAttachmentDropDownBtn()
+        await devAssetMainPage.clickAddLinkBtn()
+        await expect(await devAssetMainPage.isAddLinkFormDisplayed()).true
+        await devAssetMainPage.setLinkNameFieldValue(testNameForLink)
+        await devAssetMainPage.setUrlFieldValue(urlForLink)
+        await devAssetMainPage.clickAddBtn()
+        await expect(await devAssetMainPage.isAddLinkFormExist())
+        await expect(await devAssetMainPage.isAttachmentsFormDisplayed()).true
+        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`Link added by ${currentUserProfileName}`)
+        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${testNameForLink}`)
+        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${currentTime}`)
+    }
+
+    async addFilesAttachment() {
+        const currentUserProfileName = await devAssetMainPage.getUserProfileNameText()
+        const currentTime = getDateTime()
+        const filePath = path.join(__dirname, '../../data/testFileForAttachment.txt')
+        const remoteFilePath = await browser.uploadFile(filePath)
+        //await devAssetMainPage.clickAddAttachmentDropDownBtn()
+        //await devAssetMainPage.clickChooseFilesBtn()
+        await browser.execute(async () => {
+            document.getElementById('import-upload').style.display = 'block';
+        })
+        await devAssetMainPage.setAttachmentFileUploadInputValue(remoteFilePath)
+        await browser.execute(async () => {
+            document.getElementById('import-upload').style.display = 'none';
+        })
+        await expect(await devAssetMainPage.isAttachmentsFormDisplayed()).true
+        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`Uploaded by ${currentUserProfileName}`)
+        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${currentTime}`)
+    }
+
+    async deleteAllLinkAttachments() {
+        await console.log("Attachments list size: " + await devAssetMainPage.getAttachmentsListSize())
+        const attahcmentsCount = await devAssetMainPage.getAttachmentsListSize()
+        for (let i = 0; i < attahcmentsCount; i++) {
+            await devAssetMainPage.clickDeleteLinkAttachmentBtn()
+            await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true
+            await devAssetMainPage.clickDeleteCofirmationOkBtn()
+
+        }
+        await expect(await devAssetMainPage.isAttachmentsFormExist())
+    }
+    async deleteAllFilesAttachments() {
+        await console.log("Attachments list size: " + await devAssetMainPage.getAttachmentsListSize())
+        const attahcmentsCount = await devAssetMainPage.getAttachmentsListSize()
+        for (let i = 0; i < attahcmentsCount; i++) {
+            await devAssetMainPage.clickDeleteFileAttachmentBtn()
+            await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true
+            await devAssetMainPage.clickDeleteCofirmationOkBtn()
+
+        }
+        await expect(await devAssetMainPage.isAttachmentsFormExist())
+    }
+
+    async pdfValidation() {
+        const readPdf = async (uri = path.resolve(assetPDF)) => {
+            const buffer = fs.readFileSync(uri);
+            try {
+                const data = await pdfParse(buffer);
+
+                // The content
+                console.log('Content: ', data.text);
+                //console.log('Does it includes: ', data.text.includes(`${randomAssetName}`));
+
+                // Total page
+                console.log('Total pages: ', data.numpages);
+
+            } catch (err) {
+                throw new Error(err);
+            }
+        }
+        const assetPDF = currentPdfFilePath;
+        readPdf(assetPDF)
+    }
+
+    async csvValidation() {
+        // This function reads data from a given CSV file
+        const readCSV = (filePath = path.resolve(currentCsvFilePath)) => {
+            const readStream = fs.createReadStream(filePath);
+            const data = [];
+            readStream
+                .pipe(csv.parse())
+                .on('data', (row) => {
+                    data.push(row);
+                    console.log('1 row:', row[0]);
+                    console.log('2 row:', row[1]);
+                    console.log('3 row:', row[2]);
+                    console.log('\n');
+                })
+                .on('end', (rowCount) => {
+                    console.log(`${rowCount} rows has been parsed!`);
+
+                    console.log(data);
+                })
+                .on('error', (error) => console.error(error));
+        };
+
+        // Try it
+        const assetCsv = path.resolve(currentCsvFilePath);
+        readCSV(assetCsv);
+    }
+
+    async deletePdfFileFromDir() {
+        const filePath = currentPdfFilePath
+        fs.unlink(filePath, (err) => {
+            if (err) {
+                console.error(err)
+                return
+            }
+            //file removed
+        })
+    }
+    async deleteCsvFileFromDir() {
+        const filePath = currentCsvFilePath
+        fs.unlink(filePath, (err) => {
+            if (err) {
+                console.error(err)
+                return
+            }
+            //file removed
+        })
+    }
+
+    async checkingIfPdfFileIsDownloaded() {
+        const fileExists = async (path = path.resolve(filePath)) => {
+            try {
+                await fs.promises.access(path);
+                //file exist
+                return true
+            } catch (err) {
+                //file does not exist
+                return false
+            }
+        }
+        const filePath = currentPdfFilePath;
+        const exists = await fileExists(filePath)
+        if (!exists) {
+            throw 'PDF File DOES not exist!!'
+        }
+    }
+
+    async checkingIfCsvFileIsDownloaded() {
+        const fileExists = async (path = path.resolve(filePath)) => {
+            try {
+                await fs.promises.access(path);
+                //file exist
+                return true
+            } catch (err) {
+                //file does not exist
+                return false
+            }
+        }
+        const filePath = currentCsvFilePath;
+        const exists = await fileExists(filePath)
+        if (!exists) {
+            throw 'CSV File DOES not exist!!'
+        }
+    }
+
 }
 
 module.exports = new Helper();
