@@ -41,6 +41,7 @@ const randomName = uniqueNamesGenerator({
 const randomOrgName = randomName + '_org';
 const randomAssetName = randomName + '_Asset';
 const assetGroupName = randomName + randomCodeNumber + '_TestGroup';
+const randomLeaseName = randomName + '_Lease';
 const registerNameSettings = randomName + '_TestRegister'
 const currentPdfFilePath = '../Downloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
 const currentCsvFilePath = '../Downloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
@@ -342,8 +343,6 @@ class Helper {
         const currentTime = getDateTime()
         const filePath = path.join(__dirname, '../../data/testFileForAttachment.txt')
         const remoteFilePath = await browser.uploadFile(filePath)
-        //await devAssetMainPage.clickAddAttachmentDropDownBtn()
-        //await devAssetMainPage.clickChooseFilesBtn()
         await browser.execute(async () => {
             document.getElementById('import-upload').style.display = 'block';
         })
@@ -421,8 +420,6 @@ class Helper {
                 })
                 .on('error', (error) => console.error(error));
         };
-
-        // Try it
         const assetCsv = path.resolve(currentCsvFilePath);
         readCSV(assetCsv);
     }
@@ -437,6 +434,7 @@ class Helper {
             //file removed
         })
     }
+
     async deleteCsvFileFromDir() {
         const filePath = currentCsvFilePath
         fs.unlink(filePath, (err) => {
@@ -448,7 +446,7 @@ class Helper {
         })
     }
 
-    async checkingIfPdfFileIsDownloaded() {
+    async checkingIfPdfFileIsExist() {
         const fileExists = async (path = path.resolve(filePath)) => {
             try {
                 await fs.promises.access(path);
@@ -466,7 +464,7 @@ class Helper {
         }
     }
 
-    async checkingIfCsvFileIsDownloaded() {
+    async checkingIfCsvFileIsExist() {
         const fileExists = async (path = path.resolve(filePath)) => {
             try {
                 await fs.promises.access(path);
@@ -482,6 +480,55 @@ class Helper {
         if (!exists) {
             throw 'CSV File DOES not exist!!'
         }
+    }
+
+    async waitForFileExists(filePath, timeout) {
+        return new Promise(function (resolve, reject) {
+
+            let timer = setTimeout(function () {
+                watcher.close();
+                reject(new Error('File did not exists and was not created during the timeout.'));
+            }, timeout);
+
+            fs.access(filePath, fs.constants.R_OK, function (err) {
+                if (!err) {
+                    clearTimeout(timer);
+                    watcher.close();
+                    resolve();
+                }
+            });
+
+            let dir = path.dirname(filePath);
+            let basename = path.basename(filePath);
+            let watcher = fs.watch(dir, function (eventType, filename) {
+                if (eventType === 'rename' && filename === basename) {
+                    clearTimeout(timer);
+                    watcher.close();
+                    resolve();
+                }
+            });
+        });
+    }
+
+    async fillingOutLeaseForm() {
+        const randomCodeNumber = Math.floor(Math.random() * 100);
+        await expect(await devAssetMainPage.isNewLeaseAssetFormDisplayed()).true
+        await expect(await devAssetMainPage.isPaymentLeaseAssetFormDisplayed()).true
+        await expect(await devAssetMainPage.isAmountLeaseFormDisplayed()).true
+        await devAssetMainPage.setLeaseNameFieldValue(randomLeaseName + randomCodeNumber)
+        await devAssetMainPage.setLeaseCodeNumberFieldValue(randomCodeNumber)
+        await devAssetMainPage.setLeaseDescrFieldValue('test descritpion for lease')
+        await devAssetMainPage.setLeaseGroupSelectValue()
+        await devAssetMainPage.clickHirePurchaseYesBtn()
+        await devAssetMainPage.clickHirePurchaseNoBtn()
+        await devAssetMainPage.setLeaseStartDateValue('20/05/2022')
+        await devAssetMainPage.setLeaseFirstUseDateValue('25/05/2022')
+        await devAssetMainPage.setLeaseQuantityFieldValue('1')
+        await devAssetMainPage.setLeaseQuantityUnitsSelectValue()
+    }
+
+    async fillingOutLeasePaymentForm(){
+        
     }
 
 }

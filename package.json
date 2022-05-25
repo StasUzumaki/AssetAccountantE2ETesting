@@ -37,6 +37,9 @@
     "test:report:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createReport.spec.js",
     "test:attach": "npx wdio run wdio.conf.js --spec createAttachment.spec.js",
     "test:attach:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createAttachment.spec.js",
+
+    "test:lease": "npx wdio run wdio.conf.js --spec createLease.spec.js",
+    "test:lease:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createLease.spec.js",
     "allure:serve": "npx allure serve allure-results",
     "allure:generate": "npx allure generate allure-results --clean"
   },

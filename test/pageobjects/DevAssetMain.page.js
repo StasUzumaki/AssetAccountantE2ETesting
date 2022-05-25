@@ -82,8 +82,6 @@ const accountsDepreciationForm = '//div[2]/app-depreciation-method-selector/div[
 const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
 //register settings link
 const registerSettingsLink = '//nav/section[3]/div/a[5]'
-//need another register role locators
-
 //organisation settings link
 const invitedUserEmailCell = '//*/table/tbody/tr[2]/td[2]'
 const invitedUserNameCell = '//*/table/tbody/tr[2]/td[1]/label'
@@ -170,17 +168,93 @@ const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @c
 const loadingImage = '[role="status"]'
 //report
 const calendarBtn = '#calendar-selection'
+const periodsForm = '[aria-labelledby="calendar-selection"]'
 const currentFyBtn = '//div/div[3]/button[1]'
 const reportsBtn = '//app-view-asset-actions/button[2]'
 const reportForm = '//ng-component/form'
 const reportTypeDropDown = '[formcontrolname="reportType"]'
 const reportFormatDropDown = '[formcontrolname="format"]'
 const generateReportBtn = '//form/div[3]/button[2]'
+const reportStartDate = '//app-form-control[3]//input'
+const reportEndDate = '//app-form-control[4]//input'
+//lease
+const createHpLeaseAssetBtn = '[routerlink="./new-rou"]'
+const newLeaseAssetForm = '//app-standard-page-content[1]/div/div'
+const paymentLeaseAssetForm = '//app-standard-page-content[2]/div/div'
+const amountLeaseForm = '//app-standard-page-content[3]/div/div'
+const leaseNameField = '[formcontrolname="name"]'
+const leaseCodeNumberField = '[formcontrolname="code"]'
+const leaseDescrField = '[formcontrolname="description"]'
+const leaseGroupSelect = '//app-asset-group-selector/select'
+const hirePurchaseYesBtn = '[for="hirePurchase-yes"]'
+const hirePurchaseNoBtn = '[for="hirePurchase-no"]'
+const leaseStartDate = '[formcontrolname="acquisitionDate"] input'
+const leaseFirstUseDate = '[formcontrolname="firstUseDate"] input'
+const leaseQuantityField = '[formcontrolname="quantity"]'
+const leaseQuantityUnitsSelect = '//div//div/select'
 
 class DevAssetMainpage {
     async getUserProfileNameText() {
         return await page.getElementText(userProfileName)
     }
+    //lease 
+    async clickCreateHpLeaseAssetBtn(){
+        return await page.click(createHpLeaseAssetBtn)
+    }
+
+    async clickHirePurchaseYesBtn(){
+        return await page.click(hirePurchaseYesBtn)
+    }
+
+    async clickHirePurchaseNoBtn(){
+        return await page.click(hirePurchaseNoBtn)
+    }
+
+    async isNewLeaseAssetFormDisplayed(){
+        return await page.isElementDisplayed(newLeaseAssetForm)
+    }
+
+    async isPaymentLeaseAssetFormDisplayed(){
+        return await page.isElementDisplayed(paymentLeaseAssetForm)
+    }
+
+    async isAmountLeaseFormDisplayed(){
+        return await page.isElementDisplayed(amountLeaseForm)
+    }
+
+    async setLeaseNameFieldValue(leaseNameFieldInput){
+        return await page.setValue(leaseNameField, leaseNameFieldInput)
+    }
+
+    async setLeaseCodeNumberFieldValue(leaseCodeNumberFieldInput){
+        return await page.setValue(leaseCodeNumberField, leaseCodeNumberFieldInput)
+    }
+
+    async setLeaseDescrFieldValue(leaseDescrFieldInput){
+        return await page.setValue(leaseDescrField, leaseDescrFieldInput)
+    }
+
+    async setLeaseGroupSelectValue(){
+        return await page.clickDropdownItemByIndex(leaseGroupSelect, 1)
+    }
+
+    async setLeaseQuantityUnitsSelectValue(){
+        return await page.clickDropdownItemByIndex(leaseQuantityUnitsSelect, 1)
+    }
+
+    async setLeaseStartDateValue(leaseStartDateInput){
+        return await page.setValue(leaseStartDate, leaseStartDateInput)
+    }
+
+    async setLeaseFirstUseDateValue(leaseFirstUseDateInput){
+        return await page.setValue(leaseFirstUseDate, leaseFirstUseDateInput)
+    }
+
+    async setLeaseQuantityFieldValue(leaseQuantityFieldInput){
+        return await page.setValue(leaseQuantityField, leaseQuantityFieldInput)
+    }
+
+
     //report 
     async clickCalendarBtn() {
         return await page.click(calendarBtn)
@@ -198,6 +272,10 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(reportForm)
     }
 
+    async isPeriodsFormDisplayed(){
+        return await page.isElementDisplayed(periodsForm)
+    }
+
     async selectReportTypeDropDownValue() {
         return await page.clickDropdownItemByIndex(reportTypeDropDown, 2)
     }
@@ -212,6 +290,14 @@ class DevAssetMainpage {
 
     async isGenerateReportBtnClikable() {
         return await (await page.getElement(generateReportBtn)).waitForClickable()
+    }
+
+    async setReportStartDateValue(reportStartDateInput){
+        return await page.setValue(reportStartDate, reportStartDateInput)
+    }
+
+    async setReportEndDateValue(reportEndDateInput){
+        return await page.setValue(reportEndDate, reportEndDateInput)
     }
     //asset
     async clickAssetDetailsLink() {
@@ -291,6 +377,7 @@ class DevAssetMainpage {
     async isAttachmentsFormExist() {
         return await (await page.getElement(attachmentsForm)).waitForExist({ reverse: true })
     }
+    
     async isAddLinkFormExist() {
         return await (await page.getElement(addLinkForm)).waitForExist({ reverse: true })
     }
