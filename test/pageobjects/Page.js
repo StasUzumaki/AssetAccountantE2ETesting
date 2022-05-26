@@ -43,6 +43,11 @@ class Page {
         await (await this.getElement(element)).addValue(value);
     }
 
+    async getElementValue(element) {
+        await this.waitUntilDisplayed(element, defaultTimeout);
+        return (await this.getElement(element)).getValue();
+    }
+
     async getElementText(element) {
         await this.waitUntilDisplayed(element);
         return (await this.getElement(element)).getText();

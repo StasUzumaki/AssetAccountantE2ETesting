@@ -127,6 +127,7 @@ const deleteAssetBtn = '//app-standard-page-content-grid/div/div[2]/button[1]'
 const setQuantityBtn = '//div//div/div[2]/div[1]/div/button[2]'
 const firstUseBtn = '//button[contains(text(), "First Use")]'
 const purchaseBtn = '//button[contains(text(), "Purchase")]'
+const leaseBtn = '//button[contains(text(), "Lease")]'
 const reversalConfirmationTitle = '//*[contains(text(), "Reversal Confirmation")]'
 const reversalConfirmationForm = '[class="modal-content"]'
 const firstUseAlertMessage = '[class="alert-message"]'
@@ -192,12 +193,59 @@ const leaseStartDate = '[formcontrolname="acquisitionDate"] input'
 const leaseFirstUseDate = '[formcontrolname="firstUseDate"] input'
 const leaseQuantityField = '[formcontrolname="quantity"]'
 const leaseQuantityUnitsSelect = '//div//div/select'
+const paymentDateField = '[formcontrolname="paymentDate"] input'
+const paymentPrincipalField = '[formcontrolname="principal"] input'
+const paymentInterestField = '[formcontrolname="interest"] input'
+const paymentOtherField = '[formcontrolname="other"] input'
+const leaseSaveBtn = '//form/div/div/button'
+const leaseTaxDepreciationForm = '//app-depreciation-method-selector/div[1]'
+const leaseAccountsDepreciationForm = '//app-depreciation-method-selector/div[2]'
+const leaseColumnHeader = '[col-id="LeaseGroup_0"]'
+const alertMessageGenerateScheduleBtn = '[class="alert-message"] button'
+const generatePaymentScheduleForm = '//app-side-panel/div'
+const generatePaymentScheduleTitle = '//app-side-panel/div//h3'
+const amountFinancedField = '[formcontrolname="amountFinanced"] input'
+const amountCapitalisedField = '[formcontrolname="amountCapitalised"] input'
+const addPaymentsBtn = '//form/div[3]/div[1]/button'
+const firstLeasePaymentField = '//form/div[2]/div[1]/div[2]//input'
+const firstFrequencyDropDown = '//form/div[2]/div[1]/div[4]/div/select'
+const secondLeasePaymentField = '//form/div[2]/div[2]/div[2]//input'
+const secondFrequencyDropDown = '//form/div[2]/div[2]/div[4]/div/select'
+const secondQuantityField = '//form/div[2]/div[2]/div[4]/div[1]/input'
+const generateScheduleBtn = '//div[3]/div[2]/button[1]'
+const useScheduleBtn = '//div[3]/div[2]/button[2]'
+const paymentScheduleTable = '//app-generate-payment-schedule/table'
+
 
 class DevAssetMainpage {
     async getUserProfileNameText() {
         return await page.getElementText(userProfileName)
     }
     //lease 
+    async getAmountCapitalisedFieldValue(){
+        return await page.getElementValue(amountCapitalisedField)
+    }
+
+    async setFirstFrequencyDropDownValue(firstFrequencyDropDownValue){
+        return await page.clickDropdownItemByIndex(firstFrequencyDropDown, firstFrequencyDropDownValue)
+    }
+
+    async setSecondFrequencyDropDownValue(secondFrequencyDropDownValue){
+        return await page.clickDropdownItemByIndex(secondFrequencyDropDown, secondFrequencyDropDownValue)
+    }
+
+    async clickGenerateScheduleBtn(){
+        return await page.click(generateScheduleBtn)
+    }
+
+    async clickLeaseBtn(){
+        return await page.click(leaseBtn)
+    }
+
+    async clickUseScheduleBtn(){
+        return await page.click(useScheduleBtn)
+    }
+
     async clickCreateHpLeaseAssetBtn(){
         return await page.click(createHpLeaseAssetBtn)
     }
@@ -208,6 +256,22 @@ class DevAssetMainpage {
 
     async clickHirePurchaseNoBtn(){
         return await page.click(hirePurchaseNoBtn)
+    }
+
+    async clickLeaseSaveBtn(){
+        return await page.click(leaseSaveBtn)
+    }
+
+    async clickAddPaymentsBtn(){
+        return await page.click(addPaymentsBtn)
+    }
+
+    async getGeneratePaymentScheduleTitleText(){
+        return await page.getElementText(generatePaymentScheduleTitle)
+    }
+
+    async isPaymentScheduleTableDisplayed(){
+        return await page.isElementDisplayed(paymentScheduleTable)
     }
 
     async isNewLeaseAssetFormDisplayed(){
@@ -222,6 +286,38 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(amountLeaseForm)
     }
 
+    async isLeaseTaxDepreciationFormDisplayed(){
+        return await page.isElementDisplayed(leaseTaxDepreciationForm)
+    }
+
+    async isLeaseAccountsDepreciationFormDisplayed(){
+        return await page.isElementDisplayed(leaseAccountsDepreciationForm)
+    }
+
+    async isLeaseColumnHeaderDisplayed(){
+        return await page.isElementDisplayed(leaseColumnHeader)
+    }
+
+    async isGeneratePaymentScheduleFormDisplayed(){
+        return await page.isElementDisplayed(generatePaymentScheduleForm)
+    }
+
+    async setSecondQuantityFieldValue(secondQuantityFieldInput){
+        return await page.setValue(secondQuantityField, secondQuantityFieldInput)
+    }
+
+    async setFirstLeasePaymentFieldValue(firstLeasePaymentFieldInput){
+        return await page.setValue(firstLeasePaymentField, firstLeasePaymentFieldInput)
+    }
+
+    async setSecondLeasePaymentFieldValue(secondLeasePaymentFieldInput){
+        return await page.setValue(secondLeasePaymentField, secondLeasePaymentFieldInput)
+    }
+
+    async setAmountFinancedFieldValue(amountFinancedFieldInput){
+        return await page.setValue(amountFinancedField, amountFinancedFieldInput)
+    }
+    
     async setLeaseNameFieldValue(leaseNameFieldInput){
         return await page.setValue(leaseNameField, leaseNameFieldInput)
     }
@@ -254,6 +350,25 @@ class DevAssetMainpage {
         return await page.setValue(leaseQuantityField, leaseQuantityFieldInput)
     }
 
+    async setPaymentDateFieldValue(paymentDateFieldInput){
+        return await page.setValue(paymentDateField, paymentDateFieldInput)
+    }
+
+    async setPaymentPrincipalFieldValue(paymentPrincipalFieldInput){
+        return await page.setValue(paymentPrincipalField, paymentPrincipalFieldInput)
+    }
+
+    async setPaymentInterestFieldValue(paymentInterestFieldInput){
+        return await page.setValue(paymentInterestField, paymentInterestFieldInput)
+    }
+
+    async setPaymentOtherFieldValue(paymentOtherFieldInput){
+        return await page.setValue(paymentOtherField, paymentOtherFieldInput)
+    }
+
+    async clickAlertMessageGenerateScheduleBtn(){
+        return await page.click(alertMessageGenerateScheduleBtn)
+    }
 
     //report 
     async clickCalendarBtn() {
@@ -334,6 +449,10 @@ class DevAssetMainpage {
 
     async isAttachmentsFormDisplayed() {
         return await page.isElementDisplayed(attachmentsForm)
+    }
+
+    async isPurchaseBtnDisplayed(){
+        return await (await page.getElement(purchaseBtn)).isDisplayed()
     }
 
     async getFirstAttachmentText() {

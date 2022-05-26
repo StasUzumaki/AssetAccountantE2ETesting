@@ -4,6 +4,7 @@ const loginData = require('../../data/loginData')
 const googleMailPage = require('../pageobjects/googleMail.page')
 const googleMailboxData = require('../../data/googleMailboxData')
 const fs = require('fs');
+const assert = require('assert');
 const pdfParse = require('pdf-parse');
 const path = require('path');
 const csv = require('fast-csv');
@@ -293,9 +294,10 @@ class Helper {
                 await expect(await devAssetMainPage.isEditBtnDisplayed()).true
                 const ContractedGroupDropDownValue = await devAssetMainPage.isContractedGroupDropDownDisplayed()
                 if (await ContractedGroupDropDownValue === true) {
-                    await devAssetMainPage.clickFirstGroupLink()
-                    await devAssetMainPage.clickFirstAssetLink()
-                    await this.deleteAsset()
+                    // await devAssetMainPage.clickFirstGroupLink()
+                    // await devAssetMainPage.clickFirstAssetLink()
+                    // await this.deleteAsset()
+                    await this.deleteAllAssets()
                     await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
                     await this.deleteAssetGroup()
                 } else {
@@ -485,6 +487,16 @@ class Helper {
     async waitForFileExists(filePath, timeout) {
         return new Promise(function (resolve, reject) {
 
+            let dir = path.dirname(filePath);
+            let basename = path.basename(filePath);
+            let watcher = fs.watch(dir, function (eventType, filename) {
+                if (eventType === 'rename' && filename === basename) {
+                    clearTimeout(timer);
+                    watcher.close();
+                    resolve();
+                }
+            });
+
             let timer = setTimeout(function () {
                 watcher.close();
                 reject(new Error('File did not exists and was not created during the timeout.'));
@@ -498,15 +510,6 @@ class Helper {
                 }
             });
 
-            let dir = path.dirname(filePath);
-            let basename = path.basename(filePath);
-            let watcher = fs.watch(dir, function (eventType, filename) {
-                if (eventType === 'rename' && filename === basename) {
-                    clearTimeout(timer);
-                    watcher.close();
-                    resolve();
-                }
-            });
         });
     }
 
@@ -521,14 +524,57 @@ class Helper {
         await devAssetMainPage.setLeaseGroupSelectValue()
         await devAssetMainPage.clickHirePurchaseYesBtn()
         await devAssetMainPage.clickHirePurchaseNoBtn()
-        await devAssetMainPage.setLeaseStartDateValue('20/05/2022')
+        await devAssetMainPage.setLeaseStartDateValue('10/05/2022')
         await devAssetMainPage.setLeaseFirstUseDateValue('25/05/2022')
         await devAssetMainPage.setLeaseQuantityFieldValue('1')
         await devAssetMainPage.setLeaseQuantityUnitsSelectValue()
     }
 
-    async fillingOutLeasePaymentForm(){
-        
+    async fillingOutLeasePaymentForm() {
+        await devAssetMainPage.setPaymentDateFieldValue('20/05/2022')
+        await devAssetMainPage.setPaymentPrincipalFieldValue(200)
+        await devAssetMainPage.setPaymentInterestFieldValue(500)
+        await devAssetMainPage.setPaymentOtherFieldValue(100)
+    }
+
+    async generatePaymentSchedule(){
+        await expect(await devAssetMainPage.isGeneratePaymentScheduleFormDisplayed()).true
+        await expect(await devAssetMainPage.getGeneratePaymentScheduleTitleText()).contain('Generate Payment Schedule')
+        await devAssetMainPage.setAmountFinancedFieldValue(50000)
+        await devAssetMainPage.setFirstLeasePaymentFieldValue(1500)
+        await devAssetMainPage.setFirstFrequencyDropDownValue(1)
+        await devAssetMainPage.clickAddPaymentsBtn()
+        await devAssetMainPage.setSecondLeasePaymentFieldValue(2500)
+        await devAssetMainPage.setSecondFrequencyDropDownValue(4)
+        await devAssetMainPage.setSecondQuantityFieldValue(24)
+        await devAssetMainPage.clickGenerateScheduleBtn()
+        await expect(await devAssetMainPage.isPaymentScheduleTableDisplayed()).true
+        await devAssetMainPage.clickUseScheduleBtn()
+        const amountCapitalisedValue = await devAssetMainPage.getAmountCapitalisedFieldValue()
+        assert.strictEqual(amountCapitalisedValue, '50000', "Values are not equal!!!!")
+    }
+
+    async deleteLease(){
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickSetQuantityBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickFirstUseBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickLeaseBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await devAssetMainPage.clickDeleteAssetBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
     }
 
 }
