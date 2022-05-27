@@ -4,8 +4,8 @@ const baseUrl = require('../../data/baseURL');
 const helper = require('../pageobjects/helper');
 const fs = require('fs');
 
-const filePathPdf = '../Downloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
-const filePathCsv = '../Downloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
+const filePathPdf = './tempDownloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
+const filePathCsv = './tempDownloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
 
 describe('create report', () => {
     before('land to dev asset page and login', async () => {
@@ -17,19 +17,17 @@ describe('create report', () => {
         //checking existing journals
         await devAssetMainPage.clickJournalLink()
         await helper.checkingExistingJournals()
-        await helper.deletePdfFileFromDir()
-        await helper.deleteCsvFileFromDir()
+        // await helper.deletePdfFileFromDir()
+        // await helper.deleteCsvFileFromDir()
     });
     after('land to assets and delete created asset group (Blank)', async () => {
         //delete pdf report
-        await helper.deletePdfFileFromDir()
+        //await helper.deletePdfFileFromDir()
         //delete csv report
-        await helper.deleteCsvFileFromDir()
+        //await helper.deleteCsvFileFromDir()
         //deleting asset
         await devAssetMainPage.clickAssetsLink()
-        await devAssetMainPage.clickFirstGroupLink()
-        await devAssetMainPage.clickFirstAssetLink()
-        await helper.deleteAsset()
+        await helper.deleteAllAssets()
         // deleting asset group
         await helper.deleteAssetGroup()
         //logout

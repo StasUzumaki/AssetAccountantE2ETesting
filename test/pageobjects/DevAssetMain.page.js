@@ -201,6 +201,7 @@ const leaseSaveBtn = '//form/div/div/button'
 const leaseTaxDepreciationForm = '//app-depreciation-method-selector/div[1]'
 const leaseAccountsDepreciationForm = '//app-depreciation-method-selector/div[2]'
 const leaseColumnHeader = '[col-id="LeaseGroup_0"]'
+const assetColumnHeader = '[col-id="AssetGroup_0"]'
 const alertMessageGenerateScheduleBtn = '[class="alert-message"] button'
 const generatePaymentScheduleForm = '//app-side-panel/div'
 const generatePaymentScheduleTitle = '//app-side-panel/div//h3'
@@ -295,7 +296,11 @@ class DevAssetMainpage {
     }
 
     async isLeaseColumnHeaderDisplayed(){
-        return await page.isElementDisplayed(leaseColumnHeader)
+        return await (await page.getElement(leaseColumnHeader)).isDisplayed()
+    }
+
+    async isAssetColumnHeaderDisplayed(){
+        return await page.isElementDisplayed(assetColumnHeader)
     }
 
     async isGeneratePaymentScheduleFormDisplayed(){

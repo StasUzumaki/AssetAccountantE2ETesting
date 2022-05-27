@@ -1,5 +1,6 @@
 const devAssetMainPage = require('./devAssetMain.page')
 const authPage = require('./authentication.page')
+const intuitSignUpPage = require('../pageobjects/intuitSignUp.page')
 const loginData = require('../../data/loginData')
 const googleMailPage = require('../pageobjects/googleMail.page')
 const googleMailboxData = require('../../data/googleMailboxData')
@@ -44,8 +45,10 @@ const randomAssetName = randomName + '_Asset';
 const assetGroupName = randomName + randomCodeNumber + '_TestGroup';
 const randomLeaseName = randomName + '_Lease';
 const registerNameSettings = randomName + '_TestRegister'
-const currentPdfFilePath = '../Downloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
-const currentCsvFilePath = '../Downloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
+const filePathes = {
+    currentPdfFilePath: './tempDownloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf',
+    currentCsvFilePath: './tempDownloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
+}
 
 class Helper {
 
@@ -247,26 +250,53 @@ class Helper {
             await devAssetMainPage.clickFirstGroupLink()
             await devAssetMainPage.isFirstAssetLinkDisplayed()
             await devAssetMainPage.clickFirstAssetLink()
-            await devAssetMainPage.clickReverseDropDown()
-            await devAssetMainPage.clickSetQuantityBtn()
-            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-            await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
-            await devAssetMainPage.clickDeleteCofirmationOkBtn()
-            await devAssetMainPage.clickReverseDropDown()
-            await devAssetMainPage.clickFirstUseBtn()
-            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-            await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
-            await devAssetMainPage.clickDeleteCofirmationOkBtn()
-            await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true
-            await devAssetMainPage.clickReverseDropDown()
-            await devAssetMainPage.clickPurchaseBtn()
-            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-            await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
-            await devAssetMainPage.clickDeleteCofirmationOkBtn()
-            await devAssetMainPage.clickDeleteAssetBtn()
-            await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-            await devAssetMainPage.clickDeleteCofirmationOkBtn()
-            await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
+            await expect(await devAssetMainPage.isAssetColumnHeaderDisplayed()).true
+            //checking if that lease
+            const leaseColumnDisplayed = await devAssetMainPage.isLeaseColumnHeaderDisplayed()
+            if (await leaseColumnDisplayed === true) {
+                await devAssetMainPage.clickReverseDropDown()
+                await devAssetMainPage.clickSetQuantityBtn()
+                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+                await devAssetMainPage.clickDeleteCofirmationOkBtn()
+                await devAssetMainPage.clickReverseDropDown()
+                await devAssetMainPage.clickFirstUseBtn()
+                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+                await devAssetMainPage.clickDeleteCofirmationOkBtn()
+                await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true
+                await devAssetMainPage.clickReverseDropDown()
+                await devAssetMainPage.clickLeaseBtn()
+                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+                await devAssetMainPage.clickDeleteCofirmationOkBtn()
+                await devAssetMainPage.clickDeleteAssetBtn()
+                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+                await devAssetMainPage.clickDeleteCofirmationOkBtn()
+                await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
+            } else {
+                await devAssetMainPage.clickReverseDropDown()
+                await devAssetMainPage.clickSetQuantityBtn()
+                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+                await devAssetMainPage.clickDeleteCofirmationOkBtn()
+                await devAssetMainPage.clickReverseDropDown()
+                await devAssetMainPage.clickFirstUseBtn()
+                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+                await devAssetMainPage.clickDeleteCofirmationOkBtn()
+                await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true
+                await devAssetMainPage.clickReverseDropDown()
+                await devAssetMainPage.clickPurchaseBtn()
+                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
+                await devAssetMainPage.clickDeleteCofirmationOkBtn()
+                await devAssetMainPage.clickDeleteAssetBtn()
+                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+                await devAssetMainPage.clickDeleteCofirmationOkBtn()
+                await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
+            }
+
         }
     }
     async deleteJournals() {
@@ -381,7 +411,7 @@ class Helper {
     }
 
     async pdfValidation() {
-        const readPdf = async (uri = path.resolve(assetPDF)) => {
+        const readPdf = async (uri = assetPDF) => {
             const buffer = fs.readFileSync(uri);
             try {
                 const data = await pdfParse(buffer);
@@ -397,13 +427,13 @@ class Helper {
                 throw new Error(err);
             }
         }
-        const assetPDF = currentPdfFilePath;
+        const assetPDF = filePathes.currentPdfFilePath;
         readPdf(assetPDF)
     }
 
     async csvValidation() {
         // This function reads data from a given CSV file
-        const readCSV = (filePath = path.resolve(currentCsvFilePath)) => {
+        const readCSV = (filePath = assetCsv) => {
             const readStream = fs.createReadStream(filePath);
             const data = [];
             readStream
@@ -422,12 +452,12 @@ class Helper {
                 })
                 .on('error', (error) => console.error(error));
         };
-        const assetCsv = path.resolve(currentCsvFilePath);
+        const assetCsv = filePathes.currentCsvFilePath;
         readCSV(assetCsv);
     }
 
     async deletePdfFileFromDir() {
-        const filePath = currentPdfFilePath
+        const filePath = filePathes.currentPdfFilePath
         fs.unlink(filePath, (err) => {
             if (err) {
                 console.error(err)
@@ -438,7 +468,7 @@ class Helper {
     }
 
     async deleteCsvFileFromDir() {
-        const filePath = currentCsvFilePath
+        const filePath = filePathes.currentCsvFilePath
         fs.unlink(filePath, (err) => {
             if (err) {
                 console.error(err)
@@ -449,7 +479,7 @@ class Helper {
     }
 
     async checkingIfPdfFileIsExist() {
-        const fileExists = async (path = path.resolve(filePath)) => {
+        const fileExists = async (path = filePath) => {
             try {
                 await fs.promises.access(path);
                 //file exist
@@ -459,7 +489,7 @@ class Helper {
                 return false
             }
         }
-        const filePath = currentPdfFilePath;
+        const filePath = filePathes.currentPdfFilePath;
         const exists = await fileExists(filePath)
         if (!exists) {
             throw 'PDF File DOES not exist!!'
@@ -467,7 +497,7 @@ class Helper {
     }
 
     async checkingIfCsvFileIsExist() {
-        const fileExists = async (path = path.resolve(filePath)) => {
+        const fileExists = async (path = filePath) => {
             try {
                 await fs.promises.access(path);
                 //file exist
@@ -477,7 +507,7 @@ class Helper {
                 return false
             }
         }
-        const filePath = currentCsvFilePath;
+        const filePath = filePathes.currentCsvFilePath;
         const exists = await fileExists(filePath)
         if (!exists) {
             throw 'CSV File DOES not exist!!'
@@ -537,7 +567,7 @@ class Helper {
         await devAssetMainPage.setPaymentOtherFieldValue(100)
     }
 
-    async generatePaymentSchedule(){
+    async generatePaymentSchedule() {
         await expect(await devAssetMainPage.isGeneratePaymentScheduleFormDisplayed()).true
         await expect(await devAssetMainPage.getGeneratePaymentScheduleTitleText()).contain('Generate Payment Schedule')
         await devAssetMainPage.setAmountFinancedFieldValue(50000)
@@ -554,7 +584,7 @@ class Helper {
         assert.strictEqual(amountCapitalisedValue, '50000', "Values are not equal!!!!")
     }
 
-    async deleteLease(){
+    async deleteLease() {
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickSetQuantityBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true

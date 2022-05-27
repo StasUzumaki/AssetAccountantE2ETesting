@@ -34,12 +34,12 @@
     "test:invtoreg": "npx wdio run wdio.conf.js --spec inviteUserToRegister.spec.js",
     "test:invtoreg:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec inviteUserToRegister.spec.js",
     "test:report": "npx wdio run wdio.conf.js --spec createReport.spec.js",
-    "test:report:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createReport.spec.js",
     "test:attach": "npx wdio run wdio.conf.js --spec createAttachment.spec.js",
     "test:attach:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createAttachment.spec.js",
-
     "test:lease": "npx wdio run wdio.conf.js --spec createLease.spec.js",
     "test:lease:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createLease.spec.js",
+
+    "test:accfromqbo": "npx wdio run wdio.conf.js --spec createAccountFromQbo.spec.js",
     "allure:serve": "npx allure serve allure-results",
     "allure:generate": "npx allure generate allure-results --clean"
   },
