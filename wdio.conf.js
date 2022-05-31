@@ -21,27 +21,30 @@ exports.config = {
         browserName: 'chrome',
         'goog:chromeOptions': {
             prefs: {
-                'download.default_directory': downloadDir
+                'download.default_directory': downloadDir,
+                'profile.cookie_controls_mode': 0,
+                'profile.managed_default_content_settings.javascript': 1
+
             },
-            args: ['--start-maximized']
+            args: ['--start-maximized', '--incognito', '--disable-gpu']
         },
         acceptInsecureCerts: true
     },
-       /* {
-            maxInstances: 1,
-            browserName: 'firefox',
-            'moz:firefoxOptions': {
-                binary: '/Program Files/Firefox Nightly/firefox',
-                args: ['--start-maximized']
-            }
-        },
-        {
-            maxInstances: 1,
-            browserName: "MicrosoftEdge",
-            'ms:edgeOptions': {
-                args: ['--start-maximized']
-            }
-        }*/
+        /* {
+             maxInstances: 1,
+             browserName: 'firefox',
+             'moz:firefoxOptions': {
+                 binary: '/Program Files/Firefox Nightly/firefox',
+                 args: ['--start-maximized']
+             }
+         },
+         {
+             maxInstances: 1,
+             browserName: "MicrosoftEdge",
+             'ms:edgeOptions': {
+                 args: ['--start-maximized']
+             }
+         }*/
     ],
 
     logLevel: 'info',
@@ -57,7 +60,7 @@ exports.config = {
     connectionRetryCount: 3,
 
     services: [['chromedriver']],
-    
+
     framework: 'mocha',
 
     reporters: [['allure', {
@@ -81,10 +84,10 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      */
     onPrepare: function (config, capabilities) {
-        if(fs.existsSync(downloadDir)){
+        if (fs.existsSync(downloadDir)) {
             rmdir(downloadDir)
         }
-        if(!fs.existsSync(downloadDir)){
+        if (!fs.existsSync(downloadDir)) {
             fs.mkdirSync(downloadDir)
         }
     },
@@ -215,7 +218,7 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    onComplete: function(exitCode, config, capabilities, results) {
+    onComplete: function (exitCode, config, capabilities, results) {
         rmdir(downloadDir)
     },
     /**
