@@ -218,6 +218,7 @@ const useScheduleBtn = '//div[3]/div[2]/button[2]'
 const paymentScheduleTable = '//app-generate-payment-schedule/table'
 
 
+
 class DevAssetMainpage {
     async getUserProfileNameText() {
         return await page.getElementText(userProfileName)

@@ -1,7 +1,7 @@
 const intuitSignUpPage = require('../test/pageobjects/intuitSignUp.page')
-
 const { expect } = require('chai')
-const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator')
+const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
+const intuitMainPage = require('../test/pageobjects/intuitMain.page');
 
 const randomCodeNumber = Math.floor(Math.random() * 1000);
 const mainEmail = 'stasdevasset'
@@ -15,7 +15,7 @@ const shortLastName = uniqueNamesGenerator({
 });
 const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber + "@gmail.com";
 const passwIntuit = 'DevAsset_123'
-const phoneIntuit = '9999999999'
+const phoneIntuit = Math.random().toString().slice(2,12)
 
 class IntuitAccounts{
 
@@ -33,6 +33,10 @@ class IntuitAccounts{
         await expect(await intuitSignUpPage.isNotificationMessageDisplayed()).true
         await intuitSignUpPage.clickContinueToIntuitBtn()
         await expect(await intuitSignUpPage.isHeaderGetStartedBtnDisplayed()).true
+    }
+
+    async confirmEmailIntuit(){
+        await intuitMainPage.setConfirmEmailFieldValue(tempGoogleMail)
     }
 }
 

@@ -3,7 +3,7 @@ const Page = require('./page')
 const emailField = '#identifierId'
 const nextBtn = '[class="FliLIb DL0QTb"]'
 const passwordField = '[type="password"]'
-const VerifyMessage = '//div[@class="Cp"]//tbody/tr[1]'  //'//span//span[contains(text(), "Welcome to AssetAccountant")]'
+const VerifyMessage = '//div[@class="Cp"]//tbody/tr[1]' 
 const inviteMessage = '//span[1][contains(text(), "You have been invited to Invite")]'
 const acceptInvitationLink = '[href*="/invitations/"]'
 const VerifyLink = '[href*="Authentication/VerifyEmail"]'
@@ -12,8 +12,13 @@ const selectVerifyMessageCheckBox = '//div[2]/div[1]/div[1]/div/div/div[1]/div/d
 const alertMessage = '//div[@role="alert"]//div[1]/div[2]'
 const backBtn = '(//div[@act="19"])'
 const closeAlertMessageBtn = '[class="bBe"]'
+const verifyEmailIntuitLink = '//div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div[2]//table/tbody/tr/td/table/tbody/tr[4]/td/p[3]/a'
 
 class GoogleMailPage {
+
+    async clickVerifyEmailIntuitLink(){
+        return await Page.click(verifyEmailIntuitLink)
+    }
 
     async clickBackBtn(){
         return await Page.click(backBtn)
