@@ -1,6 +1,10 @@
 const page = require('./page')
 
 const title = '[class="ius-header"]'
+const signInBtn = '#ius-identifier-first-submit-btn'
+const signInToQuickBooksAccountBtn = '//div/section/div/form/div[3]/button'
+const signInEmailField = '#ius-userid'
+const signInPasswordField = '#ius-password'
 const signUpBtn = '[data-name="Sign Up"]'
 const signUpForm = '#ius-sign-up-wrapper'
 const emailField = '#ius-email'
@@ -16,7 +20,25 @@ const continueToIntuitBtn = '#ius-sign-up-notification-continue-btn'
 const headerGetStartedBtn = '//*[@id="app"]/div[1]/div/div/div[1]/div/div[2]/div[1]/div/div[2]/a'
 const confirmationIcon = '[data-testid="confirmation-icon"]'
 
+
 class IntuitSignUp {
+
+    async clickSignInToQuickBooksAccountBtn(){
+        return await page.click(signInToQuickBooksAccountBtn)
+    }
+
+    async setsignInPasswordFieldValue(signInPasswordFieldInput){
+        return await page.setValue(signInPasswordField, signInPasswordFieldInput)
+    }
+
+    async setSignInEmailFieldValue(signInEmailFieldInput){
+        return await page.setValue(signInEmailField, signInEmailFieldInput)
+    }
+    //
+    async isSignInBtnDisplayed(){
+        return await page.isElementDisplayed(signInBtn)
+    }
+
     async clickVerifyWithTextMessageCheckBox(){
         return await page.click(verifyWithTextMessageCheckBox)
     }

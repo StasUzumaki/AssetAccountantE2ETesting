@@ -38,6 +38,18 @@ class IntuitAccounts{
     async confirmEmailIntuit(){
         await intuitMainPage.setConfirmEmailFieldValue(tempGoogleMail)
     }
+
+    async loginToQuickBooksAccount(){
+        await intuitSignUpPage.setSignInEmailFieldValue(tempGoogleMail)
+        await intuitSignUpPage.setsignInPasswordFieldValue(passwIntuit)
+        await intuitSignUpPage.clickSignInToQuickBooksAccountBtn()
+    }
+
+    async logoutFromIntuitAcc(){
+        await intuitMainPage.clickIntuitProfileIcon()
+        await intuitMainPage.clickIntuitSignOutBtn()
+        await expect(await intuitSignUpPage.isSignInBtnDisplayed()).true
+    }
 }
 
 module.exports = new IntuitAccounts()

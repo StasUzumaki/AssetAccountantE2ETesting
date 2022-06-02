@@ -20,7 +20,6 @@ const EmailVerificationForm = '[class="card-body"]'
 const organizationNameField = '[class*="form-control"]'
 const createOrganizationBtn = '[class*="btn-primary"]'
 const validationAlertMessage = '[class*="alert-message validation"]'
-const tryAgainBtn = '//div/div/div[1]/div[2]/div/a'
 
 class Authpage {
 

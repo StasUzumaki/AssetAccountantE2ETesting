@@ -14,7 +14,6 @@ const addSandboxCompany = '[class*="sandbox-add"]'
 const australiaCountryValue = '/html/body/div[5]/div/div/div[2]'
 const addBtn = '[data-automation-id="add-submit-button"]'
 const sandboxCompanyId = '//table/tbody/tr[2]/td[2]/div/div/div/div/span[1]'
-const authorizeBtn = '[class*="btn-connect"]'
 const validationLink = '//div/div/div[1]/div[2]/div/p[2]/a'
 const signInAndSecurityLink = '#iam-account-manager-security'
 const intuitValidateEmailLink = '//div[2]/div/span[1]/span/div/span/span'
@@ -23,8 +22,18 @@ const confirmEmailField = '[aria-label="confirmEmailAddress"]'
 const saveBtn = '#ius-email-manager-btn-save'
 const sendVerificationEmailBtn = '//div[2]/div[2]/div/div[3]/button[1]'
 const intuitEmailConfirmationForm = '/html/body/section/div/div/div/section/header'
+const intuitProfileIcon = '#blue-dot'
+const intuitSignOutBtn = '//div[4]/div[2]/div[2]/div[2]/div/button[2]'
 
 class IntuitMainPage {
+
+    async clickIntuitSignOutBtn(){
+        return await page.click(intuitSignOutBtn)
+    }
+
+    async clickIntuitProfileIcon(){
+        return await page.click(intuitProfileIcon)
+    }
 
     async isIntuitEmailConfirmationFormDisplayed(){
         return await page.isElementDisplayed(intuitEmailConfirmationForm)
@@ -56,10 +65,6 @@ class IntuitMainPage {
 
     async clickValidationLink(){
         return await page.click(validationLink)
-    }
-
-    async clickAuthorizeBtn(){
-        return await page.click(authorizeBtn)
     }
 
     async getSandboxCompanyIdText(){

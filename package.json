@@ -40,7 +40,6 @@
     "test:lease:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createLease.spec.js",
     "test:accfromqbo": "npx wdio run wdio.conf.js --spec createAccountFromQbo.spec.js",
     "test:accfromqbo:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createAccountFromQbo.spec.js",
-
     "allure:serve": "npx allure serve allure-results",
     "allure:generate": "npx allure generate allure-results --clean"
   },
@@ -48,9 +47,9 @@
     "allure-commandline": "^2.17.2",
     "axios": "^0.27.2",
     "chai": "^4.3.6",
-    "dotenv": "^16.0.0",
+    "dotenv": "^16.0.1",
     "fast-csv": "^4.3.6",
-    "mailslurp-client": "^15.7.5",
+    "mailslurp-client": "^15.9.0",
     "pdf-parse": "^1.1.1",
     "prodperfect-mailsac": "^0.0.9",
     "unique-names-generator": "^4.7.1"

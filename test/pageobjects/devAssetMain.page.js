@@ -216,10 +216,63 @@ const secondQuantityField = '//form/div[2]/div[2]/div[4]/div[1]/input'
 const generateScheduleBtn = '//div[3]/div[2]/button[1]'
 const useScheduleBtn = '//div[3]/div[2]/button[2]'
 const paymentScheduleTable = '//app-generate-payment-schedule/table'
-
+//quickbook connection
+const tryAgainBtn = '//div/div/div[1]/div[2]/div/a'
+const newOrganisationSelect = '#organisationId'
+const quickbooksConnectBtn = '//app-quickbooks-select-register//button[2]'
+const quickbooksAlertMessage = '[class="alert-message"]'
+const quickbooksDisconnectBtn = '//div/div/app-alert/div/div[2]/div/button'
+const disconnectConfirmationForm = '[class="modal-content"]'
+const disconnectConfirmationBtn = '//ng-component/div[3]/button[2]'
+const externalIntegrationForm = '//app-view-integrations/div'
+//integration 
+const quickbooksOnlineDropDown = '//*[@id="static-1-header"]/button'
+const connectToQuickBooksBtn = '//app-quickbooks-connect/div/input'
 
 
 class DevAssetMainpage {
+    //integration
+    async clickConnectToQuickBooksBtn(){
+        return await page.click(connectToQuickBooksBtn)
+    }
+
+    async clickQuickbooksOnlineDropDown(){
+        return await page.click(quickbooksOnlineDropDown)
+    }
+
+    //quickbook connection
+    async isExternalIntegrationFormDisplayed(){
+        return await page.isElementDisplayed(externalIntegrationForm)
+    }
+
+    async clickDisconnectConfirmationBtn(){
+        return await page.click(disconnectConfirmationBtn)
+    }
+
+    async isDisconnectConfirmationFormDisplayed(){
+        return await page.isElementDisplayed(disconnectConfirmationForm)
+    }
+
+    async clickQuickbooksDisconnectBtn(){
+        return await page.click(quickbooksDisconnectBtn)
+    }
+
+    async isQuickbooksAlertMessageDisplayed(){
+        return await page.isElementDisplayed(quickbooksAlertMessage)
+    }
+
+    async clickQuickbooksConnectBtn(){
+        return await page.click(quickbooksConnectBtn)
+    }
+
+    async isNewOrganisationSelectDisplayed(){
+        return await page.isElementDisplayed(newOrganisationSelect)
+    }
+
+    async clickTryAgainBtn(){
+        return await page.click(tryAgainBtn)
+    }
+    ///profile
     async getUserProfileNameText() {
         return await page.getElementText(userProfileName)
     }
