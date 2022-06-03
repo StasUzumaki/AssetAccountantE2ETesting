@@ -241,6 +241,10 @@ class DevAssetMainpage {
     }
 
     //quickbook connection
+    async selectNewOrganisationValue(newOrganisationSelectValue){
+        return await page.clickDropdownItemByIndex(newOrganisationSelect, newOrganisationSelectValue)
+    }
+
     async isExternalIntegrationFormDisplayed(){
         return await page.isElementDisplayed(externalIntegrationForm)
     }
@@ -259,6 +263,10 @@ class DevAssetMainpage {
 
     async isQuickbooksAlertMessageDisplayed(){
         return await page.isElementDisplayed(quickbooksAlertMessage)
+    }
+
+    async getQuickbooksAlertMessageText(){
+        return await page.getElementText(quickbooksAlertMessage)
     }
 
     async clickQuickbooksConnectBtn(){

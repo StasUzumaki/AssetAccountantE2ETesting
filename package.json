@@ -40,6 +40,8 @@
     "test:lease:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createLease.spec.js",
     "test:accfromqbo": "npx wdio run wdio.conf.js --spec createAccountFromQbo.spec.js",
     "test:accfromqbo:chrome:headless": "npx wdio run wdio.chrome.headless.conf.js --spec createAccountFromQbo.spec.js",
+
+    "test:loginqbo": "npx wdio run wdio.conf.js --spec loginToExistAccFromQbo.spec.js",
     "allure:serve": "npx allure serve allure-results",
     "allure:generate": "npx allure generate allure-results --clean"
   },

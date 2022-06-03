@@ -91,6 +91,7 @@ describe('Create an AA account from QBO / connect to QBO from AA', () => {
         await expect(await devAssetMainPage.isNewOrganisationSelectDisplayed()).true
         await devAssetMainPage.clickQuickbooksConnectBtn()
         await expect(await devAssetMainPage.isQuickbooksAlertMessageDisplayed()).true
+        await expect(await devAssetMainPage.getQuickbooksAlertMessageText()).contain('(Sandbox Company_AU_2)')
     }); 
     it('should disconnect from QuickBooks', async () => {
         await devAssetMainPage.clickQuickbooksDisconnectBtn()
@@ -108,6 +109,7 @@ describe('Create an AA account from QBO / connect to QBO from AA', () => {
         await devAssetMainPage.clickQuickbooksOnlineDropDown()
         await devAssetMainPage.clickConnectToQuickBooksBtn()
         await intuitAccounts.loginToQuickBooksAccount()
+        await intuitSignUpPage.clickSkipForNowBtn()
     }); 
     it('should add AU company and connect QuickBooks to AA', async () => {
         await quickbooksPage.clickSearchForCompanyDropDown()
@@ -116,6 +118,7 @@ describe('Create an AA account from QBO / connect to QBO from AA', () => {
         await expect(await quickbooksPage.isAuthorizeConnectFormDisplayed()).true
         await quickbooksPage.clickConnectBtn()
         await expect(await devAssetMainPage.isQuickbooksAlertMessageDisplayed()).true
+        await expect(await devAssetMainPage.getQuickbooksAlertMessageText()).contain('(Sandbox Company_AU_2)')
     });
     it('should disconnect from QuickBooks again', async () => {
         await devAssetMainPage.clickQuickbooksDisconnectBtn()

@@ -6,7 +6,7 @@ const planningDropDown = '#idsDropdownTextField5'
 const otherPlanningValue = '//div/div/ul[5]'
 const devExperienceDropDown = '#idsDropdownTextField8'
 const advancedExperienceValue = '//div/div/ul[3]'
-const doneBtn = '[class="Step-mainButtons-f3aa5c1"]'
+const doneBtn = '//div/div/div[2]/footer/div/button'
 const apiDocsAndToolsLink = '[data-name="API Docs & Tools"]'
 const sandboxLink = '//*[@id="accordion"]/div[1]/div[2]/div/a[4]'
 const countryDropDown = '//div/fieldset/label[1]/span[2]/div/div/div/label/div'
@@ -14,6 +14,7 @@ const addSandboxCompany = '[class*="sandbox-add"]'
 const australiaCountryValue = '/html/body/div[5]/div/div/div[2]'
 const addBtn = '[data-automation-id="add-submit-button"]'
 const sandboxCompanyId = '//table/tbody/tr[2]/td[2]/div/div/div/div/span[1]'
+const sandboxAuCompanyId = '//table/tbody/tr/td[2]/div/div/div/div/span[1]'
 const validationLink = '//div/div/div[1]/div[2]/div/p[2]/a'
 const signInAndSecurityLink = '#iam-account-manager-security'
 const intuitValidateEmailLink = '//div[2]/div/span[1]/span/div/span/span'
@@ -24,8 +25,15 @@ const sendVerificationEmailBtn = '//div[2]/div[2]/div/div[3]/button[1]'
 const intuitEmailConfirmationForm = '/html/body/section/div/div/div/section/header'
 const intuitProfileIcon = '#blue-dot'
 const intuitSignOutBtn = '//div[4]/div[2]/div[2]/div[2]/div/button[2]'
+const accountDropDownMenu = '//div[1]/div[5]/button'
+
+
 
 class IntuitMainPage {
+
+    async getSandboxAuCompanyIdText(){
+        return await page.getElementText(sandboxAuCompanyId)
+    }
 
     async clickIntuitSignOutBtn(){
         return await page.click(intuitSignOutBtn)

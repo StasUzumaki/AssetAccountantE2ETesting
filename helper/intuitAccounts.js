@@ -14,8 +14,8 @@ const shortLastName = uniqueNamesGenerator({
     length: 1
 });
 const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber + "@gmail.com";
+const existingEmailForIntuit = 'stasdevasset+fundamental118@gmail.com'
 const passwIntuit = 'DevAsset_123'
-const phoneIntuit = Math.random().toString().slice(2,12)
 
 class IntuitAccounts{
 
@@ -25,18 +25,13 @@ class IntuitAccounts{
         await intuitSignUpPage.setEmailFieldValue(tempGoogleMail)
         await intuitSignUpPage.setFirstNameFieldValue(shortUserName)
         await intuitSignUpPage.setLastNameFieldValue(shortLastName)
-        await intuitSignUpPage.setPhoneFieldValue(phoneIntuit)
-        await intuitSignUpPage.clickVerifyWithTextMessageCheckBox()
         await intuitSignUpPage.setPasswordFieldValue(passwIntuit)
+        await browser.pause(2000)
         await intuitSignUpPage.setConfirnPasswordFieldValue(passwIntuit)
         await intuitSignUpPage.clickCreateAccountBtn()
         await expect(await intuitSignUpPage.isNotificationMessageDisplayed()).true
         await intuitSignUpPage.clickContinueToIntuitBtn()
         await expect(await intuitSignUpPage.isHeaderGetStartedBtnDisplayed()).true
-    }
-
-    async confirmEmailIntuit(){
-        await intuitMainPage.setConfirmEmailFieldValue(tempGoogleMail)
     }
 
     async loginToQuickBooksAccount(){
@@ -49,6 +44,12 @@ class IntuitAccounts{
         await intuitMainPage.clickIntuitProfileIcon()
         await intuitMainPage.clickIntuitSignOutBtn()
         await expect(await intuitSignUpPage.isSignInBtnDisplayed()).true
+    }
+
+    async loginToExistingtIntuitAccount(){
+        await intuitSignUpPage.setSignInEmailFieldValue(existingEmailForIntuit)
+        await intuitSignUpPage.setsignInPasswordFieldValue(passwIntuit)
+        await intuitSignUpPage.clickSignInToQuickBooksAccountBtn()
     }
 }
 

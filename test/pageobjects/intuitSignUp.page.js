@@ -1,6 +1,8 @@
 const page = require('./page')
 
 const title = '[class="ius-header"]'
+const skipForNowBtn = '#ius-verified-user-update-btn-skip'
+const signInMainPageBtn = '[data-name="Sign In"]'
 const signInBtn = '#ius-identifier-first-submit-btn'
 const signInToQuickBooksAccountBtn = '//div/section/div/form/div[3]/button'
 const signInEmailField = '#ius-userid'
@@ -22,6 +24,14 @@ const confirmationIcon = '[data-testid="confirmation-icon"]'
 
 
 class IntuitSignUp {
+
+    async clickSkipForNowBtn(){
+        return await page.click(skipForNowBtn)
+    }
+
+    async clickSignInMainPageBtn(){
+        return await page.click(signInMainPageBtn)
+    }
 
     async clickSignInToQuickBooksAccountBtn(){
         return await page.click(signInToQuickBooksAccountBtn)
