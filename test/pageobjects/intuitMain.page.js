@@ -8,7 +8,10 @@ const devExperienceDropDown = '#idsDropdownTextField8'
 const advancedExperienceValue = '//div/div/ul[3]'
 const doneBtn = '//div/div/div[2]/footer/div/button'
 const apiDocsAndToolsLink = '[data-name="API Docs & Tools"]'
+const headerAccordion = '#header-accordion'
 const sandboxLink = '//*[@id="accordion"]/div[1]/div[2]/div/a[4]'
+const countryList = '[aria-label="menuWrapper"]'
+const addSandboxCompanyForm = '[aria-labelledby="idsModalHeader1"]'
 const countryDropDown = '//div/fieldset/label[1]/span[2]/div/div/div/label/div'
 const addSandboxCompany = '[class*="sandbox-add"]'
 const australiaCountryValue = '/html/body/div[5]/div/div/div[2]'
@@ -25,11 +28,20 @@ const sendVerificationEmailBtn = '//div[2]/div[2]/div/div[3]/button[1]'
 const intuitEmailConfirmationForm = '/html/body/section/div/div/div/section/header'
 const intuitProfileIcon = '#blue-dot'
 const intuitSignOutBtn = '//div[4]/div[2]/div[2]/div[2]/div/button[2]'
-const accountDropDownMenu = '//div[1]/div[5]/button'
-
-
 
 class IntuitMainPage {
+
+    async isAddSandboxCompanyFormDisplayed(){
+        return await page.isElementDisplayed(addSandboxCompanyForm)
+    }
+
+    async isCountryListDisplayed(){
+        return await page.isElementDisplayed(countryList)
+    }
+
+    async isHeaderAccordionDisplayed() {
+        return await (await page.getElement(headerAccordion)).waitForDisplayed({ timeout: 1000})
+    }
 
     async getSandboxAuCompanyIdText(){
         return await page.getElementText(sandboxAuCompanyId)
@@ -45,6 +57,10 @@ class IntuitMainPage {
 
     async isIntuitEmailConfirmationFormDisplayed(){
         return await page.isElementDisplayed(intuitEmailConfirmationForm)
+    }
+
+    async isDoneBtnClickable(){
+        return await page.isElementClickable(doneBtn)
     }
 
     async clickSendVerificationEmailBtn(){

@@ -8,13 +8,17 @@ const inviteMessage = '//span[1][contains(text(), "You have been invited to Invi
 const acceptInvitationLink = '[href*="/invitations/"]'
 const VerifyLink = '[href*="Authentication/VerifyEmail"]'
 const deleteVerifyMessageBtn = '//div[@act="10"]'
-const selectVerifyMessageCheckBox = '//div[2]/div[1]/div[1]/div/div/div[1]/div/div[1]/span'
+const selectVerifyMessageCheckBox = '//div[2]/div/div/div/div/div[1]/div/div[1]/div[1]/div/div/div[1]/div/div[1]/span'
 const alertMessage = '//div[@role="alert"]//div[1]/div[2]'
 const backBtn = '(//div[@act="19"])'
 const closeAlertMessageBtn = '[class="bBe"]'
 const verifyEmailIntuitLink = '//div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div[2]//table/tbody/tr/td/table/tbody/tr[4]/td/p[3]/a'
 
 class GoogleMailPage {
+
+    async isSelectVerifyMessageCheckBoxClickable(){
+        return await Page.isElementClickable(selectVerifyMessageCheckBox)
+    }
 
     async clickVerifyEmailIntuitLink(){
         return await Page.click(verifyEmailIntuitLink)

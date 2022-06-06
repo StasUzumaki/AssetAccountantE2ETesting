@@ -18,14 +18,15 @@ describe('Create an AA account from QBO / connect to QBO from AA', () => {
     after('logout', async () => {
         await helper.logout()
         //deleting all mails
-        const handles = await browser.getWindowHandles()
-        await browser.switchToWindow(handles[2])
-        await googleMailPage.clickBackBtn()
-        await googleMailPage.clickSelectVerifyMessageCheckBox()
-        await googleMailPage.clickDeleteVerifyMessageBtn()
-        await expect(await googleMailPage.isAlertMessageDisplayed()).true;
-        await googleMailPage.clickCloseAlertMessageBtn()
-        await browser.closeWindow() 
+        // const handles = await browser.getWindowHandles()
+        // await browser.switchToWindow(handles[2])
+        // await googleMailPage.clickBackBtn()
+        // await expect(await googleMailPage.isSelectVerifyMessageCheckBoxClickable()).true
+        // await googleMailPage.clickSelectVerifyMessageCheckBox()
+        // await googleMailPage.clickDeleteVerifyMessageBtn()
+        // await expect(await googleMailPage.isAlertMessageDisplayed()).true;
+        // await googleMailPage.clickCloseAlertMessageBtn()
+        // await browser.closeWindow() 
     });
     it('should have create intuit account', async () => {
         await intuitAccounts.createAccountIntuit()
@@ -39,6 +40,7 @@ describe('Create an AA account from QBO / connect to QBO from AA', () => {
         await intuitMainPage.clickDevExperienceDropDown()
         await intuitMainPage.clickAdvancedExperienceValue()
         await browser.pause(2000)
+        await expect(await intuitMainPage.isDoneBtnClickable()).true
         await intuitMainPage.clickDoneBtn()
         await expect(await intuitSignUpPage.isHeaderGetStartedBtnDisplayed()).true
     });
@@ -46,7 +48,9 @@ describe('Create an AA account from QBO / connect to QBO from AA', () => {
         await intuitMainPage.clickApiDocsAndToolsLink()
         await intuitMainPage.clickSandboxLink()
         await intuitMainPage.clickAddSandboxBtn()
+        await expect(await intuitMainPage.isAddSandboxCompanyFormDisplayed()).true
         await intuitMainPage.clickCountryDropDown()
+        await expect(await intuitMainPage.isCountryListDisplayed()).true
         await intuitMainPage.clickAustraliaCountryValue()
         await intuitMainPage.clickAddBtn()
     });
@@ -75,8 +79,16 @@ describe('Create an AA account from QBO / connect to QBO from AA', () => {
         await googleMailPage.clickNextBtn()
         await googleMailPage.clickVerifyMessage()
         await googleMailPage.clickVerifyEmailIntuitLink()
+        await googleMailPage.clickBackBtn()
+        await expect(await googleMailPage.isSelectVerifyMessageCheckBoxClickable()).true
+        await googleMailPage.clickSelectVerifyMessageCheckBox()
+        await googleMailPage.clickDeleteVerifyMessageBtn()
+        await browser.pause(2000)
+        await expect(await googleMailPage.isAlertMessageDisplayed()).true;
+        await googleMailPage.clickCloseAlertMessageBtn()
+        await browser.closeWindow() 
         const handles = await browser.getWindowHandles()
-        await browser.switchToWindow(handles[3])
+        await browser.switchToWindow(handles[2])
         await expect(await intuitMainPage.isIntuitEmailConfirmationFormDisplayed()).true
         await browser.closeWindow()
         await browser.switchToWindow(handles[0])

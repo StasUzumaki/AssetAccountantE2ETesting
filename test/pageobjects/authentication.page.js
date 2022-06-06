@@ -20,8 +20,13 @@ const EmailVerificationForm = '[class="card-body"]'
 const organizationNameField = '[class*="form-control"]'
 const createOrganizationBtn = '[class*="btn-primary"]'
 const validationAlertMessage = '[class*="alert-message validation"]'
+const intuitSignInLink = '[class="Login-intuit"]'
 
 class Authpage {
+
+    async clickIntuitSignLink(){
+        return await page.click(intuitSignInLink)
+    }
 
     async setUserNameValue(userNameInput){
         return await page.setValue(userName, userNameInput)
