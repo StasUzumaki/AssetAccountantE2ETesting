@@ -13,8 +13,18 @@ const alertMessage = '//div[@role="alert"]//div[1]/div[2]'
 const backBtn = '(//div[@act="19"])'
 const closeAlertMessageBtn = '[class="bBe"]'
 const verifyEmailIntuitLink = '//div/table/tr/td[1]/div[2]/div[2]/div/div[3]/div[2]//table/tbody/tr/td/table/tbody/tr[4]/td/p[3]/a'
+const xeroConfirmMail = '//span[1][contains(text(), "Confirm your email address")]'
+const xeroVerifyLink = '//center/table/tbody/tr[2]/td/p[3]/a'
 
 class GoogleMailPage {
+
+    async clickXeroVerifyLink(){
+        return await Page.click(xeroVerifyLink)
+    }
+
+    async clickXeroConfirmMail(){
+        return await Page.click(xeroConfirmMail)
+    }
 
     async isSelectVerifyMessageCheckBoxClickable(){
         return await Page.isElementClickable(selectVerifyMessageCheckBox)

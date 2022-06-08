@@ -1,0 +1,85 @@
+const devAssetMainPage = require('../pageobjects/devAssetMain.page');
+const authPage = require('../pageobjects/authentication.page')
+const helper = require('../pageobjects/helper');
+const xeroSignUpPage = require('../pageobjects/xeroSignUp.page');
+const xeroAccounts = require('../../helper/xeroAccounts');
+const xeroMainPage = require('../pageobjects/xeroMain.page');
+const xeroLogInPage = require('../pageobjects/xeroLogIn.page');
+const { expect } = require('chai');
+const baseUrl = require('../../data/baseURL');
+const googleMailPage = require('../pageobjects/googleMail.page')
+const googleMailboxData = require('../../data/googleMailboxData')
+const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
+
+
+const shortLastName = uniqueNamesGenerator({
+    dictionaries: [colors],
+    length: 1
+});
+const randomOrgName = shortLastName + '_org';
+const xeroPass = 'XeroPassword123'
+
+describe('Sign in with Xero', () => {
+    before('land to Xero developer page', async () => {
+        await browser.url(baseUrl.baseUrlXeroLink)
+    });
+    after('logout', async () => { 
+        await browser.switchWindow('dev.asset.accountant')
+        await helper.logout()
+    });
+    it('should have create Xero account', async () => {
+        await xeroSignUpPage.clickXeroMainPageSignUpBtn()
+        await browser.closeWindow()
+        await browser.switchWindow('Sign up for free trial | Xero')
+        await xeroAccounts.createAccountXero()
+    });
+    it('should verify intuit account by email', async () => {
+        await browser.newWindow('https://mail.google.com/')
+        await browser.pause(15000)
+        await googleMailPage.setEmailFieldValue(googleMailboxData.userEmail)
+        await googleMailPage.clickNextBtn()
+        await googleMailPage.setPasswordFieldValue(googleMailboxData.userPassword)
+        await googleMailPage.clickNextBtn()
+        await googleMailPage.clickXeroConfirmMail()
+        await googleMailPage.clickXeroVerifyLink()
+        await googleMailPage.clickBackBtn()
+        await expect(await googleMailPage.isSelectVerifyMessageCheckBoxClickable()).true
+        await googleMailPage.clickSelectVerifyMessageCheckBox()
+        await googleMailPage.clickDeleteVerifyMessageBtn()
+        await browser.pause(2000)
+        await expect(await googleMailPage.isAlertMessageDisplayed()).true;
+        await googleMailPage.clickCloseAlertMessageBtn()
+        await browser.closeWindow()
+        await await browser.switchWindow('Activate Account | Xero Accounting')
+    });
+    it('should have activate Xero account', async () => {
+        await xeroSignUpPage.setPasswordValue(xeroPass)
+        await xeroSignUpPage.selectLocationDropDownValue()
+        await xeroSignUpPage.clickSubmitBtn()
+        await expect(await xeroSignUpPage.isAddYourBusinessFormDisplayed()).true
+    });
+    it('should have fill out business form', async () => {
+        await xeroAccounts.filloutBusinessForm('DevAssetAcc', 'Financial Asset Broking Services')
+        await expect(await xeroMainPage.isWelcomeBannerImgDisplayed()).true
+        await expect(await xeroMainPage.getWelcomeBannerText()).contain('Hi, let’s get set up')
+    });
+    it('should have land to dev asset accountant page and choose login with Xero', async () => {
+        await browser.newWindow(baseUrl.baseUrlLink)
+        await authPage.clickSignInBtn()
+        await authPage.clickXeroSignInLink()
+        await expect(await xeroLogInPage.isAssetAccountantDevAccessFormDisplayed()).true
+    });
+    it('should allow access to AA', async () => {
+        await xeroLogInPage.clickAllowAccessBtn()
+        await expect(await authPage.isOrganizationFieldDisplayed()).true;
+        await authPage.setOrganizationNameFieldValue(randomOrgName);
+        await authPage.clickCreateOrganizationBtn();
+        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
+        await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
+    });
+    it('should log out from Xero account', async () => {
+        await browser.switchWindow('go.xero.com')
+        await xeroAccounts.logoutXeroAccout()
+        await expect(await xeroLogInPage.isLogInBtnDisplayed()).true
+    }); 
+});

@@ -21,8 +21,12 @@ const organizationNameField = '[class*="form-control"]'
 const createOrganizationBtn = '[class*="btn-primary"]'
 const validationAlertMessage = '[class*="alert-message validation"]'
 const intuitSignInLink = '[class="Login-intuit"]'
+const xeroSignInLink = '[class="btn btn-white Login-xero"]'
 
 class Authpage {
+    async clickXeroSignInLink(){
+        return await page.click(xeroSignInLink)
+    }
 
     async clickIntuitSignLink(){
         return await page.click(intuitSignInLink)

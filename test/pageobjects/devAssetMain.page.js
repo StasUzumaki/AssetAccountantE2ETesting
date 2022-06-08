@@ -82,6 +82,8 @@ const accountsDepreciationForm = '//div[2]/app-depreciation-method-selector/div[
 const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
 //register settings link
 const registerSettingsLink = '//nav/section[3]/div/a[5]'
+const integrationsLink = '//form/div/ul/li[4]/a'
+
 //organisation settings link
 const invitedUserEmailCell = '//*/table/tbody/tr[2]/td[2]'
 const invitedUserNameCell = '//*/table/tbody/tr[2]/td[1]/label'
@@ -228,10 +230,22 @@ const externalIntegrationForm = '//app-view-integrations/div'
 //integration 
 const quickbooksOnlineDropDown = '//*[@id="static-1-header"]/button'
 const connectToQuickBooksBtn = '//app-quickbooks-connect/div/input'
-
+const xeroDropDown = '//*[@id="static-3-header"]/button'
+const connectXeroBtn = '//app-xero-connect/input'
 
 class DevAssetMainpage {
+    async clickIntegrationsLink(){
+        return await page.click(integrationsLink)
+    }
     //integration
+    async clickConnectXeroBtn(){
+        return await page.click(connectXeroBtn)
+    }
+
+    async clickXeroDropDown(){
+        return await page.click(xeroDropDown)
+    }
+
     async clickConnectToQuickBooksBtn(){
         return await page.click(connectToQuickBooksBtn)
     }
@@ -280,7 +294,7 @@ class DevAssetMainpage {
     async clickTryAgainBtn(){
         return await page.click(tryAgainBtn)
     }
-    ///profile
+    //profile
     async getUserProfileNameText() {
         return await page.getElementText(userProfileName)
     }

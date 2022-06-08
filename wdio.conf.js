@@ -1,10 +1,13 @@
 const path = require('path')
 const fs = require('fs');
 const rmdir = require('./util/rmdir')
+require('dotenv').config()
 
 global.downloadDir = path.join(__dirname, 'tempDownloads')
 
 exports.config = {
+    user: process.env.BROWSERSTACK_USERNAME,
+    key: process.env.BROWSERSTACK_ACCESS_KEY,
 
     specs: [
         './test/specs/**/*.js'
@@ -26,7 +29,7 @@ exports.config = {
                 'profile.managed_default_content_settings.javascript': 1
 
             },
-            args: ['--start-maximized', '--incognito', '--disable-gpu']
+            args: ['--start-maximized', '--disable-extensions', '--disable-gpu']
         },
         acceptInsecureCerts: true
     },
@@ -59,7 +62,9 @@ exports.config = {
 
     connectionRetryCount: 3,
 
-    services: [['chromedriver']],
+    services: [/* ['browserstack', {
+        browserstackLocal: false
+    }],*/ ['chromedriver']],
 
     framework: 'mocha',
 
