@@ -23,9 +23,6 @@ describe('create journal', () => {
         // //deleting asset
         await devAssetMainPage.clickAssetsLink()
         await helper.deleteAllAssets()
-        // await devAssetMainPage.clickFirstGroupLink()
-        // await devAssetMainPage.clickFirstAssetLink()
-        // await helper.deleteAsset()
         // deleting asset group
         await helper.deleteAssetGroup()
         //logout

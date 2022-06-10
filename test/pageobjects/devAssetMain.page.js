@@ -83,7 +83,6 @@ const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
 //register settings link
 const registerSettingsLink = '//nav/section[3]/div/a[5]'
 const integrationsLink = '//form/div/ul/li[4]/a'
-
 //organisation settings link
 const invitedUserEmailCell = '//*/table/tbody/tr[2]/td[2]'
 const invitedUserNameCell = '//*/table/tbody/tr[2]/td[1]/label'
@@ -169,6 +168,13 @@ const currentlyJournals = '//app-standard-page-content-grid/div/em'
 const accountTypeCostCell = '//*[contains(text(), "Cost") and @col-id="accountCode" ]'
 const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @col-id="accountCode" ]'
 const loadingImage = '[role="status"]'
+const postToXeroBtn = '//div/div[2]/button[2]'
+const chooseTransactionForm = '//div/div[2]/app-post-journal'
+const postBtn = '//app-post-journal/form/div/button[1]'
+const depreciationCheckBox = '//*[@id="include-depreciation"]'
+const purchasesCheckBox = '//*[@id="include-purchases"]'
+const successfulllyPostedToXeroAlert = '[class="alert-message"]'
+const viewJournalInXeroLink = '//app-alert/div/div[2]/p[2]/a'
 //report
 const calendarBtn = '#calendar-selection'
 const periodsForm = '[aria-labelledby="calendar-selection"]'
@@ -231,67 +237,210 @@ const externalIntegrationForm = '//app-view-integrations/div'
 const quickbooksOnlineDropDown = '//*[@id="static-1-header"]/button'
 const connectToQuickBooksBtn = '//app-quickbooks-connect/div/input'
 const xeroDropDown = '//*[@id="static-3-header"]/button'
-const connectXeroBtn = '//app-xero-connect/input'
+const connectToXeroBtn = '//app-xero-connect/input'
+const xeroDisconnectBtn = '//app-alert/div/div[2]/div/button'
+const xeroAlertMessage = '[class="alert-message"]'
+//general ledger accounts
+const taxDepreciationMethodDropDown = '//app-depreciation-method-selector/div[1]/div[1]/select'
+const taxDepreciationEffectiveLife = '//div[1]/div[2]/app-autocalc-life/div/input'
+const accountsDepreciationMethodDropDown = '//app-depreciation-method-selector/div[2]/div[1]/select'
+const accountsDepreciationEffectiveLife = '//div[2]/div[2]/app-autocalc-life/div/input'
+const generalLedgerEditBtn = '//app-standard-page-content/div/div[1]/div/div/button'
+const clearingSuspenceDropDown = '//*[@id="Clearing/Suspense"]'
+const costDropDown = '//*[@id="Cost"]'
+const accumulatedDepreciationDropDown = '//*[@id="Accumulated Depreciation"]'
+const depreciationExpenseDropDown = '//*[@id="Depreciation Expense"]'
+const immediateClaimDropDown = '//*[@id="Immediate Claim"]'
+const profitOnDisposalDropDown = '//*[@id="Profit on Disposal"]'
+const lossOnDisposalDropDown = '//*[@id="Loss on Disposal"]'
+const revaluationReserveDropDown = '//*[@id="Revaluation Reserve"]'
+const accumulatedImpairmentDropDown = '//*[@id="Accumulated Impairment"]'
+const revaluationLossDropDown = '//*[@id="Revaluation Loss"]'
+const impairmentLossDropDown = '//*[@id="Impairment Loss"]'
+const currentLeaseLiabilityDropDown = '//*[@id="Current Lease Liability"]'
+const nonCurrentLeaseLiabilityDropDown = '//*[@id="Non Current Lease Liability"]'
+const leasePaymentClearingDropDown = '//*[@id="Lease Payment Clearing"]'
+const currentUnexpiredInterestDropDown = '//*[@id="Current Unexpired Interest"]'
+const nonCurrentUnexpiredInterestDropDown = '//*[@id="Non Current Unexpired Interest"]'
+const interestChargeDropDown = '//*[@id="Interest Charge"]'
+const profitOnTerminationOfLeaseDropDown = '//*[@id="Profit on Termination of Lease"]'
+const lossOnTerminationOfLeaseDropDown = '//*[@id="Loss on Termination of Lease"]'
+const generalLedgerSaveBtn = '//form/div[2]/button[2]'
+const generalLedgerAccountsAlert = '[role="alertdialog"][aria-live="polite"]'
 
 class DevAssetMainpage {
-    async clickIntegrationsLink(){
+
+    //general ledger accounts
+    async setAccountsDepreciationEffectiveLifeValue(accountsDepreciationEffectiveLifeValue){
+        return await page.setValue(accountsDepreciationEffectiveLife, accountsDepreciationEffectiveLifeValue)
+    }
+
+    async setTaxDepreciationEffectiveLifeValue(taxDepreciationEffectiveLifeInput){
+        return await page.setValue(taxDepreciationEffectiveLife, taxDepreciationEffectiveLifeInput)
+    }
+
+    async selectAccountsDepreciationMethodDropDownValue(accountsDepreciationMethodDropDownValue){
+        return await page.clickDropdownItemByIndex(accountsDepreciationMethodDropDown, accountsDepreciationMethodDropDownValue)
+    }
+
+    async selectTaxDepreciationMethodDropDownValue(taxDepreciationMethodDropDownValue){
+        return await page.clickDropdownItemByIndex(taxDepreciationMethodDropDown, taxDepreciationMethodDropDownValue)
+    }
+
+    async clickGeneralLedgerSaveBtn(){
+        return await page.click(generalLedgerSaveBtn)
+    }
+
+    async selectLossOnTerminationOfLeaseDropDownValue(lossOnTerminationOfLeaseDropDownValue){
+        return await page.clickDropdownItemByIndex(lossOnTerminationOfLeaseDropDown, lossOnTerminationOfLeaseDropDownValue)
+    }
+
+    async selectProfitOnTerminationOfLeaseDropDownValue(profitOnTerminationOfLeaseDropDownValue){
+        return await page.clickDropdownItemByIndex(profitOnTerminationOfLeaseDropDown, profitOnTerminationOfLeaseDropDownValue)
+    }
+
+    async selectInterestChargeDropDownValue(interestChargeDropDownValue){
+        return await page.clickDropdownItemByIndex(interestChargeDropDown, interestChargeDropDownValue)
+    }
+
+    async selectNonCurrentUnexpiredInterestDropDownValue(nonCurrentUnexpiredInterestDropDownValue){
+        return await page.clickDropdownItemByIndex(nonCurrentUnexpiredInterestDropDown, nonCurrentUnexpiredInterestDropDownValue)
+    }
+
+    async selectCurrentUnexpiredInterestDropDownValue(currentUnexpiredInterestDropDownValue){
+        return await page.clickDropdownItemByIndex(currentUnexpiredInterestDropDown, currentUnexpiredInterestDropDownValue)
+    }
+
+    async selectLeasePaymentClearingDropDownValue(leasePaymentClearingDropDownValue){
+        return await page.clickDropdownItemByIndex(leasePaymentClearingDropDown, leasePaymentClearingDropDownValue)
+    }
+
+    async selectNonCurrentLeaseLiabilityDropDownValue(nonCurrentLeaseLiabilityDropDownValue){
+        return await page.clickDropdownItemByIndex(nonCurrentLeaseLiabilityDropDown, nonCurrentLeaseLiabilityDropDownValue)
+    }
+
+    async selectCurrentLeaseLiabilityDropDownValue(currentLeaseLiabilityDropDownValue){
+        return await page.clickDropdownItemByIndex(currentLeaseLiabilityDropDown, currentLeaseLiabilityDropDownValue)
+    }
+
+    async selectImpairmentLossDropDownValue(impairmentLossDropDownValue){
+        return await page.clickDropdownItemByIndex(impairmentLossDropDown, impairmentLossDropDownValue)
+    }
+
+    async selectRevaluationLossDropDownValue(revaluationLossDropDownValue){
+        return await page.clickDropdownItemByIndex(revaluationLossDropDown, revaluationLossDropDownValue)
+    }
+    
+    async selectAccumulatedImpairmentDropDownValue(accumulatedImpairmentDropDownValue){
+        return await page.clickDropdownItemByIndex(accumulatedImpairmentDropDown, accumulatedImpairmentDropDownValue)
+    }
+
+    async selectRevaluationReserveDropDownValue(revaluationReserveDropDownValue){
+        return await page.clickDropdownItemByIndex(revaluationReserveDropDown, revaluationReserveDropDownValue)
+    }
+
+    async selectLossOnDisposalDropDownValue(lossOnDisposalDropDownValue){
+        return await page.clickDropdownItemByIndex(lossOnDisposalDropDown, lossOnDisposalDropDownValue)
+    }
+
+    async selectProfitOnDisposalDropDownValue(profitOnDisposalDropDownValue){
+        return await page.clickDropdownItemByIndex(profitOnDisposalDropDown, profitOnDisposalDropDownValue)
+    }
+
+    async selectImmediateClaimDropDownValue(immediateClaimDropDownValue){
+        return await page.clickDropdownItemByIndex(immediateClaimDropDown, immediateClaimDropDownValue)
+    }
+
+    async selectDepreciationExpenseValue(depreciationExpenseDropDownValue){
+        return await page.clickDropdownItemByIndex(depreciationExpenseDropDown, depreciationExpenseDropDownValue)
+    }
+
+    async selectAccumulatedDepreciationDropDownValue(accumulatedDepreciationDropDownValue) {
+        return await page.clickDropdownItemByIndex(accumulatedDepreciationDropDown, accumulatedDepreciationDropDownValue)
+    }
+
+    async selectCostDropDownValue(costDropDownValue) {
+        return await page.clickDropdownItemByIndex(costDropDown, costDropDownValue)
+    }
+
+    async selectClearingSuspenceDropDownValue(clearingSuspenceDropDownValue) {
+        return await page.clickDropdownItemByIndex(clearingSuspenceDropDown, clearingSuspenceDropDownValue)
+    }
+
+    async clickGeneralLedgerEditBtn() {
+        return await page.click(generalLedgerEditBtn)
+    }
+    //
+    async isXeroAlertMessageDisplayed() {
+        return await page.isElementDisplayed(xeroAlertMessage)
+    }
+
+    async getXeroAlertMessageText() {
+        return await page.click(xeroAlertMessage)
+    }
+
+    async clickXeroDisconnectBtn() {
+        return await page.click(xeroDisconnectBtn)
+    }
+
+    async clickIntegrationsLink() {
         return await page.click(integrationsLink)
     }
     //integration
-    async clickConnectXeroBtn(){
-        return await page.click(connectXeroBtn)
+    async clickConnectToXeroBtn() {
+        return await page.click(connectToXeroBtn)
     }
 
-    async clickXeroDropDown(){
+    async clickXeroDropDown() {
         return await page.click(xeroDropDown)
     }
 
-    async clickConnectToQuickBooksBtn(){
+    async clickConnectToQuickBooksBtn() {
         return await page.click(connectToQuickBooksBtn)
     }
 
-    async clickQuickbooksOnlineDropDown(){
+    async clickQuickbooksOnlineDropDown() {
         return await page.click(quickbooksOnlineDropDown)
     }
 
     //quickbook connection
-    async selectNewOrganisationValue(newOrganisationSelectValue){
+    async selectNewOrganisationValue(newOrganisationSelectValue) {
         return await page.clickDropdownItemByIndex(newOrganisationSelect, newOrganisationSelectValue)
     }
 
-    async isExternalIntegrationFormDisplayed(){
+    async isExternalIntegrationFormDisplayed() {
         return await page.isElementDisplayed(externalIntegrationForm)
     }
 
-    async clickDisconnectConfirmationBtn(){
+    async clickDisconnectConfirmationBtn() {
         return await page.click(disconnectConfirmationBtn)
     }
 
-    async isDisconnectConfirmationFormDisplayed(){
+    async isDisconnectConfirmationFormDisplayed() {
         return await page.isElementDisplayed(disconnectConfirmationForm)
     }
 
-    async clickQuickbooksDisconnectBtn(){
+    async clickQuickbooksDisconnectBtn() {
         return await page.click(quickbooksDisconnectBtn)
     }
 
-    async isQuickbooksAlertMessageDisplayed(){
+    async isQuickbooksAlertMessageDisplayed() {
         return await page.isElementDisplayed(quickbooksAlertMessage)
     }
 
-    async getQuickbooksAlertMessageText(){
+    async getQuickbooksAlertMessageText() {
         return await page.getElementText(quickbooksAlertMessage)
     }
 
-    async clickQuickbooksConnectBtn(){
+    async clickQuickbooksConnectBtn() {
         return await page.click(quickbooksConnectBtn)
     }
 
-    async isNewOrganisationSelectDisplayed(){
+    async isNewOrganisationSelectDisplayed() {
         return await page.isElementDisplayed(newOrganisationSelect)
     }
 
-    async clickTryAgainBtn(){
+    async clickTryAgainBtn() {
         return await page.click(tryAgainBtn)
     }
     //profile
@@ -299,155 +448,155 @@ class DevAssetMainpage {
         return await page.getElementText(userProfileName)
     }
     //lease 
-    async getAmountCapitalisedFieldValue(){
+    async getAmountCapitalisedFieldValue() {
         return await page.getElementValue(amountCapitalisedField)
     }
 
-    async setFirstFrequencyDropDownValue(firstFrequencyDropDownValue){
+    async setFirstFrequencyDropDownValue(firstFrequencyDropDownValue) {
         return await page.clickDropdownItemByIndex(firstFrequencyDropDown, firstFrequencyDropDownValue)
     }
 
-    async setSecondFrequencyDropDownValue(secondFrequencyDropDownValue){
+    async setSecondFrequencyDropDownValue(secondFrequencyDropDownValue) {
         return await page.clickDropdownItemByIndex(secondFrequencyDropDown, secondFrequencyDropDownValue)
     }
 
-    async clickGenerateScheduleBtn(){
+    async clickGenerateScheduleBtn() {
         return await page.click(generateScheduleBtn)
     }
 
-    async clickLeaseBtn(){
+    async clickLeaseBtn() {
         return await page.click(leaseBtn)
     }
 
-    async clickUseScheduleBtn(){
+    async clickUseScheduleBtn() {
         return await page.click(useScheduleBtn)
     }
 
-    async clickCreateHpLeaseAssetBtn(){
+    async clickCreateHpLeaseAssetBtn() {
         return await page.click(createHpLeaseAssetBtn)
     }
 
-    async clickHirePurchaseYesBtn(){
+    async clickHirePurchaseYesBtn() {
         return await page.click(hirePurchaseYesBtn)
     }
 
-    async clickHirePurchaseNoBtn(){
+    async clickHirePurchaseNoBtn() {
         return await page.click(hirePurchaseNoBtn)
     }
 
-    async clickLeaseSaveBtn(){
+    async clickLeaseSaveBtn() {
         return await page.click(leaseSaveBtn)
     }
 
-    async clickAddPaymentsBtn(){
+    async clickAddPaymentsBtn() {
         return await page.click(addPaymentsBtn)
     }
 
-    async getGeneratePaymentScheduleTitleText(){
+    async getGeneratePaymentScheduleTitleText() {
         return await page.getElementText(generatePaymentScheduleTitle)
     }
 
-    async isPaymentScheduleTableDisplayed(){
+    async isPaymentScheduleTableDisplayed() {
         return await page.isElementDisplayed(paymentScheduleTable)
     }
 
-    async isNewLeaseAssetFormDisplayed(){
+    async isNewLeaseAssetFormDisplayed() {
         return await page.isElementDisplayed(newLeaseAssetForm)
     }
 
-    async isPaymentLeaseAssetFormDisplayed(){
+    async isPaymentLeaseAssetFormDisplayed() {
         return await page.isElementDisplayed(paymentLeaseAssetForm)
     }
 
-    async isAmountLeaseFormDisplayed(){
+    async isAmountLeaseFormDisplayed() {
         return await page.isElementDisplayed(amountLeaseForm)
     }
 
-    async isLeaseTaxDepreciationFormDisplayed(){
+    async isLeaseTaxDepreciationFormDisplayed() {
         return await page.isElementDisplayed(leaseTaxDepreciationForm)
     }
 
-    async isLeaseAccountsDepreciationFormDisplayed(){
+    async isLeaseAccountsDepreciationFormDisplayed() {
         return await page.isElementDisplayed(leaseAccountsDepreciationForm)
     }
 
-    async isLeaseColumnHeaderDisplayed(){
+    async isLeaseColumnHeaderDisplayed() {
         return await (await page.getElement(leaseColumnHeader)).isDisplayed()
     }
 
-    async isAssetColumnHeaderDisplayed(){
+    async isAssetColumnHeaderDisplayed() {
         return await page.isElementDisplayed(assetColumnHeader)
     }
 
-    async isGeneratePaymentScheduleFormDisplayed(){
+    async isGeneratePaymentScheduleFormDisplayed() {
         return await page.isElementDisplayed(generatePaymentScheduleForm)
     }
 
-    async setSecondQuantityFieldValue(secondQuantityFieldInput){
+    async setSecondQuantityFieldValue(secondQuantityFieldInput) {
         return await page.setValue(secondQuantityField, secondQuantityFieldInput)
     }
 
-    async setFirstLeasePaymentFieldValue(firstLeasePaymentFieldInput){
+    async setFirstLeasePaymentFieldValue(firstLeasePaymentFieldInput) {
         return await page.setValue(firstLeasePaymentField, firstLeasePaymentFieldInput)
     }
 
-    async setSecondLeasePaymentFieldValue(secondLeasePaymentFieldInput){
+    async setSecondLeasePaymentFieldValue(secondLeasePaymentFieldInput) {
         return await page.setValue(secondLeasePaymentField, secondLeasePaymentFieldInput)
     }
 
-    async setAmountFinancedFieldValue(amountFinancedFieldInput){
+    async setAmountFinancedFieldValue(amountFinancedFieldInput) {
         return await page.setValue(amountFinancedField, amountFinancedFieldInput)
     }
-    
-    async setLeaseNameFieldValue(leaseNameFieldInput){
+
+    async setLeaseNameFieldValue(leaseNameFieldInput) {
         return await page.setValue(leaseNameField, leaseNameFieldInput)
     }
 
-    async setLeaseCodeNumberFieldValue(leaseCodeNumberFieldInput){
+    async setLeaseCodeNumberFieldValue(leaseCodeNumberFieldInput) {
         return await page.setValue(leaseCodeNumberField, leaseCodeNumberFieldInput)
     }
 
-    async setLeaseDescrFieldValue(leaseDescrFieldInput){
+    async setLeaseDescrFieldValue(leaseDescrFieldInput) {
         return await page.setValue(leaseDescrField, leaseDescrFieldInput)
     }
 
-    async setLeaseGroupSelectValue(){
+    async setLeaseGroupSelectValue() {
         return await page.clickDropdownItemByIndex(leaseGroupSelect, 1)
     }
 
-    async setLeaseQuantityUnitsSelectValue(){
+    async setLeaseQuantityUnitsSelectValue() {
         return await page.clickDropdownItemByIndex(leaseQuantityUnitsSelect, 1)
     }
 
-    async setLeaseStartDateValue(leaseStartDateInput){
+    async setLeaseStartDateValue(leaseStartDateInput) {
         return await page.setValue(leaseStartDate, leaseStartDateInput)
     }
 
-    async setLeaseFirstUseDateValue(leaseFirstUseDateInput){
+    async setLeaseFirstUseDateValue(leaseFirstUseDateInput) {
         return await page.setValue(leaseFirstUseDate, leaseFirstUseDateInput)
     }
 
-    async setLeaseQuantityFieldValue(leaseQuantityFieldInput){
+    async setLeaseQuantityFieldValue(leaseQuantityFieldInput) {
         return await page.setValue(leaseQuantityField, leaseQuantityFieldInput)
     }
 
-    async setPaymentDateFieldValue(paymentDateFieldInput){
+    async setPaymentDateFieldValue(paymentDateFieldInput) {
         return await page.setValue(paymentDateField, paymentDateFieldInput)
     }
 
-    async setPaymentPrincipalFieldValue(paymentPrincipalFieldInput){
+    async setPaymentPrincipalFieldValue(paymentPrincipalFieldInput) {
         return await page.setValue(paymentPrincipalField, paymentPrincipalFieldInput)
     }
 
-    async setPaymentInterestFieldValue(paymentInterestFieldInput){
+    async setPaymentInterestFieldValue(paymentInterestFieldInput) {
         return await page.setValue(paymentInterestField, paymentInterestFieldInput)
     }
 
-    async setPaymentOtherFieldValue(paymentOtherFieldInput){
+    async setPaymentOtherFieldValue(paymentOtherFieldInput) {
         return await page.setValue(paymentOtherField, paymentOtherFieldInput)
     }
 
-    async clickAlertMessageGenerateScheduleBtn(){
+    async clickAlertMessageGenerateScheduleBtn() {
         return await page.click(alertMessageGenerateScheduleBtn)
     }
 
@@ -468,7 +617,7 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(reportForm)
     }
 
-    async isPeriodsFormDisplayed(){
+    async isPeriodsFormDisplayed() {
         return await page.isElementDisplayed(periodsForm)
     }
 
@@ -488,11 +637,11 @@ class DevAssetMainpage {
         return await (await page.getElement(generateReportBtn)).waitForClickable()
     }
 
-    async setReportStartDateValue(reportStartDateInput){
+    async setReportStartDateValue(reportStartDateInput) {
         return await page.setValue(reportStartDate, reportStartDateInput)
     }
 
-    async setReportEndDateValue(reportEndDateInput){
+    async setReportEndDateValue(reportEndDateInput) {
         return await page.setValue(reportEndDate, reportEndDateInput)
     }
     //asset
@@ -532,7 +681,7 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(attachmentsForm)
     }
 
-    async isPurchaseBtnDisplayed(){
+    async isPurchaseBtnDisplayed() {
         return await (await page.getElement(purchaseBtn)).isDisplayed()
     }
 
@@ -557,10 +706,10 @@ class DevAssetMainpage {
         return await page.click(deleteFileAttachmentBtn)
     }
 
-    async setAttachmentFileUploadInputValue(attachmentFileUpload){
+    async setAttachmentFileUploadInputValue(attachmentFileUpload) {
         return await page.setValue(attachmentFileUploadInput, attachmentFileUpload)
     }
-    
+
     //
     async isRegisterInvitePanelDispalayed() {
         return await page.isElementDisplayed(registerInvitePanel)
@@ -577,7 +726,7 @@ class DevAssetMainpage {
     async isAttachmentsFormExist() {
         return await (await page.getElement(attachmentsForm)).waitForExist({ reverse: true })
     }
-    
+
     async isAddLinkFormExist() {
         return await (await page.getElement(addLinkForm)).waitForExist({ reverse: true })
     }
@@ -794,6 +943,18 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(journalTitle)
     }
 
+    async getSuccessfulllyPostedToXeroAlertText(){
+        return await page.getElementText(successfulllyPostedToXeroAlert)
+    }
+
+    async isSuccessfulllyPostedToXeroAlertDisplayed(){
+        return await page.isElementDisplayed(successfulllyPostedToXeroAlert)
+    }
+
+    async clickViewJournalInXeroLink(){
+        return await page.click(viewJournalInXeroLink)
+    }
+
     async clickCreateJournalBtn() {
         return await page.click(createJournalBtn)
     }
@@ -808,6 +969,26 @@ class DevAssetMainpage {
 
     async clickJournalLink() {
         return await page.click(journalLink)
+    }
+
+    async clickPurchasesCheckBox(){
+        return await page.click(purchasesCheckBox)
+    }
+
+    async clickDepreciationCheckBox(){
+        return await page.click(depreciationCheckBox)
+    }
+
+    async clickPostBtn(){
+        return await page.click(postBtn)
+    }
+
+    async isChooseTransactionFormDisplayed(){
+        return await page.isElementDisplayed(chooseTransactionForm)
+    }
+
+    async clickPostToXeroBtn(){
+        return await page.click(postToXeroBtn)
     }
 
     async clickSelfAssessedCheckBox() {

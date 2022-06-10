@@ -6,7 +6,7 @@ const helper = require('../pageobjects/helper');
 const intuitAccounts = require('../../helper/intuitAccounts');
 
 
-describe('create a new register', () => {
+describe('Map Chart of Accounts to QBO and post a Journal', () => {
     before('land to dev asset page and login', async () => {
         await browser.url(baseUrl.baseUrlLink)
         await helper.loginToAccountRegister()

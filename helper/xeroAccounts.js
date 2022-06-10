@@ -15,6 +15,7 @@ const shortLastName = uniqueNamesGenerator({
     length: 1
 });
 const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber + "@gmail.com";
+const xeroMail = 'stasdevasset+loud508@gmail.com'
 const xeroPass = 'XeroPassword123'
 const phoneXero = Math.random().toString().slice(2, 12)
 
@@ -54,6 +55,12 @@ class XeroAccounts {
     }
     async logInToXeroAccout(){
         await xeroLogInPage.setEmailLogInValue(tempGoogleMail)
+        await xeroLogInPage.setPasswordLogInValue(xeroPass)
+        await xeroLogInPage.clickLogInBtn()
+    }
+
+    async logInToExistingXeroAcc(){
+        await xeroLogInPage.setEmailLogInValue(xeroMail)
         await xeroLogInPage.setPasswordLogInValue(xeroPass)
         await xeroLogInPage.clickLogInBtn()
     }

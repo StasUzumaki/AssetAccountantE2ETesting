@@ -18,7 +18,8 @@ const registerBtn = '[class="btn btn-lg btn-primary"]';
 const okVerifyBtn = '[class=" mt-3"]'
 const EmailVerificationForm = '[class="card-body"]'
 const organizationNameField = '[class*="form-control"]'
-const createOrganizationBtn = '[class*="btn-primary"]'
+const countryDropDown = '//div/div/div/select'
+const createOrganizationBtn = '//div/div/form/div/div/button'
 const validationAlertMessage = '[class*="alert-message validation"]'
 const intuitSignInLink = '[class="Login-intuit"]'
 const xeroSignInLink = '[class="btn btn-white Login-xero"]'
@@ -118,6 +119,10 @@ class Authpage {
 
     async setOrganizationNameFieldValue(organizationNameFieldInput){
         return await page.setValue(organizationNameField, organizationNameFieldInput)
+    }
+
+    async selectCountryDropDownValue(countryDropDownValue){
+        return await page.clickDropdownItemByIndex(countryDropDown, countryDropDownValue)
     }
 
     async clickCreateOrganizationBtn(){

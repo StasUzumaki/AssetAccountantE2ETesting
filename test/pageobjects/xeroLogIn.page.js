@@ -8,8 +8,23 @@ const secondLayerOfSecurityText = '//div/div[1]/h1'
 const notNowBtn = '//div/div[1]/button[2]'
 const allowAccessBtn = '//form/button[1]'
 const assetAccountantDevAccessForm = '/html/body/div/div/div/div[2]/div'
+const organisationDataForm = '//*[@id="tenant-dropdown"]/div/div/div/div[2]'
+const approveBtn = '//*[@id="approveButton"]'
+const signUpLink = '[href*="https://www.xero.com/signup/"]'
 
 class XeroLogInPage{
+    async clickSignUpLink(){
+        return await page.click(signUpLink)
+    }
+    
+    async clickApproveBtn(){
+        return await page.click(approveBtn)
+    }
+
+    async isOrganisationDataFormDisplayed(){
+        return await page.isElementDisplayed(organisationDataForm)
+    }
+    
     async clickAllowAccessBtn(){
         return await page.click(allowAccessBtn)
     }

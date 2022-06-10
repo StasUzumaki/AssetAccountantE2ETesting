@@ -196,6 +196,43 @@ class Helper {
         await expect(await devAssetMainPage.isAssetCardSectionDisplayed()).true
     }
 
+    async createAssetGroupBlankWithGeneralLedger() {
+        const randomCodeNumber = Math.floor(Math.random() * 100);
+        await devAssetMainPage.clickCreateAssetGroupBlankBtn()
+        await expect(await devAssetMainPage.isAssetGroupNameFieldDisplayed()).true
+        await devAssetMainPage.setAssetGroupNameBlankFieldValue(assetGroupName + randomCodeNumber)
+        await expect(await devAssetMainPage.isAssetGroupDescriptionFieldDisplayed()).true
+        await devAssetMainPage.setAssetGroupDescriptionBlankFieldValue('TestGroupDescription')
+        await devAssetMainPage.selectTaxDepreciationMethodDropDownValue(1)
+        await devAssetMainPage.setTaxDepreciationEffectiveLifeValue('1')
+        await devAssetMainPage.selectAccountsDepreciationMethodDropDownValue(1)
+        await devAssetMainPage.setAccountsDepreciationEffectiveLifeValue('1')
+        await devAssetMainPage.clickGeneralLedgerEditBtn()
+        await devAssetMainPage.selectClearingSuspenceDropDownValue(2)
+        await devAssetMainPage.selectCostDropDownValue(4)
+        await devAssetMainPage.selectAccumulatedDepreciationDropDownValue(3)
+        await devAssetMainPage.selectDepreciationExpenseValue(2)
+        await devAssetMainPage.selectImmediateClaimDropDownValue(2)
+        await devAssetMainPage.selectProfitOnDisposalDropDownValue(4)
+        await devAssetMainPage.selectLossOnDisposalDropDownValue(6)
+        await devAssetMainPage.selectRevaluationReserveDropDownValue(2)
+        await devAssetMainPage.selectAccumulatedImpairmentDropDownValue(3)
+        await devAssetMainPage.selectRevaluationLossDropDownValue(2)
+        await devAssetMainPage.selectImpairmentLossDropDownValue(4)
+        await devAssetMainPage.selectCurrentLeaseLiabilityDropDownValue(4)
+        await devAssetMainPage.selectNonCurrentLeaseLiabilityDropDownValue(3)
+        await devAssetMainPage.selectLeasePaymentClearingDropDownValue(2)
+        await devAssetMainPage.selectCurrentUnexpiredInterestDropDownValue(1)
+        await devAssetMainPage.selectNonCurrentUnexpiredInterestDropDownValue(4)
+        await devAssetMainPage.selectInterestChargeDropDownValue(2)
+        await devAssetMainPage.selectProfitOnTerminationOfLeaseDropDownValue(5)
+        await devAssetMainPage.selectLossOnTerminationOfLeaseDropDownValue(4)
+        await devAssetMainPage.clickGeneralLedgerSaveBtn()
+        await devAssetMainPage.clickAssetGroupBlankSaveBtn()
+        await expect(await devAssetMainPage.isAssetGroupBlankAlertDisplayed()).true
+        await expect(await devAssetMainPage.isAssetCardSectionDisplayed()).true
+    }
+
     async createAsset() {
         const randomCodeNumber = Math.floor(Math.random() * 1000);
         await devAssetMainPage.clickCreateAssetBtn()
