@@ -42,6 +42,7 @@ const newAssetQuantityUnitsSelect = '//div/div[2]/div/select'
 const createNewOrganisationForm = '[class="modal-content"]'
 const organisationNameField = '//form/div[1]/app-form-control[1]/div/div[2]/input'
 const organisationDescriptionField = '//form/div[1]/app-form-control[2]/div/div[2]/input'
+const selectCountry = '//app-form-control[3]/div/div[2]/select'
 const billingContactNameField = '//form/div[1]/div/app-form-control[1]/div/div[2]/input'
 const billingContactEmailField = '//form/div[1]/div/app-form-control[2]/div/div[2]/input'
 const billingContactPhoneField = '//form/div[1]/div/app-form-control[3]/div/div[2]/input'
@@ -91,6 +92,7 @@ const userAccessDropDown = '//table//tr[2]//td[4]/div/div/div/button'
 const userAccessRegisterRemoveBtn = '//table//tr[2]//td[4]/div/div/div//div/button'
 const userAccessOrgRemoveBtn = '//table//tr[2]//td[4]/div/div/div//div/button[2]'
 const organisationSettingsLink = '//nav/section[3]/div/a[4]'
+const organisationSettings = '//*[contains(text(), "Organisation Settings")]'
 const subscriptionAndPaymentLink = '//*[contains(text(), "Subscription") and @class="nav-link"]'
 const usersLink = '//*[contains(text(), "Users") and @class="nav-link"]'
 const inviteUserBtn = '[class="horizontal-wrap align-items-start"] button'
@@ -125,7 +127,7 @@ const contractedGroupDropDown = '//*/div[1]/div[1]/div/span/span[2]'
 const assetDescriptionTitle = '//app-standard-page-content-grid/div/div[1]/h3'
 const reverseDropDown = '#reverse-dropdown'
 const deleteAssetBtn = '//app-standard-page-content-grid/div/div[2]/button[1]'
-const setQuantityBtn = '//div//div/div[2]/div[1]/div/button[2]'
+const setQuantityBtn = '//button[contains(text(), "Set Quantity")]'
 const firstUseBtn = '//button[contains(text(), "First Use")]'
 const purchaseBtn = '//button[contains(text(), "Purchase")]'
 const leaseBtn = '//button[contains(text(), "Lease")]'
@@ -165,8 +167,8 @@ const createJournalBtn = '//app-create-journal/form/button'
 const journalTitle = '[class="pe-2 me-auto"]'
 const journalDescriptionField = '//div/div[2]/input'
 const currentlyJournals = '//app-standard-page-content-grid/div/em'
-const accountTypeCostCell = '//*[contains(text(), "Cost") and @col-id="accountCode" ]'
-const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @col-id="accountCode" ]'
+const accountTypeCostCell = '//*[contains(text(), "Cost") and @col-id="glAccountDisplayName" ]'
+const accountTypeClearingSuspenseCell = '//*[contains(text(), "Clearing") and @col-id="glAccountDisplayName"]'
 const loadingImage = '[role="status"]'
 const postToXeroBtn = '//div/div[2]/button[2]'
 const chooseTransactionForm = '//div/div[2]/app-post-journal'
@@ -174,7 +176,10 @@ const postBtn = '//app-post-journal/form/div/button[1]'
 const depreciationCheckBox = '//*[@id="include-depreciation"]'
 const purchasesCheckBox = '//*[@id="include-purchases"]'
 const successfulllyPostedToXeroAlert = '[class="alert-message"]'
+const successfulllyPostedToExcelAlert = '[class="alert-message"]'
 const viewJournalInXeroLink = '//app-alert/div/div[2]/p[2]/a'
+const exportDropDown = '//*[@id="export-button"]'
+const exportAsExcelBtn = '//app-export-button/div/div/button[1]'
 //report
 const calendarBtn = '#calendar-selection'
 const periodsForm = '[aria-labelledby="calendar-selection"]'
@@ -524,6 +529,10 @@ class DevAssetMainpage {
         return await (await page.getElement(leaseColumnHeader)).isDisplayed()
     }
 
+    async isRegisterLinkDisplayed() {
+        return await (await page.getElement(firstRegisterLink)).isDisplayed()
+    }
+
     async isAssetColumnHeaderDisplayed() {
         return await page.isElementDisplayed(assetColumnHeader)
     }
@@ -854,6 +863,10 @@ class DevAssetMainpage {
     async isRegisterSettingsDisplayed() {
         return await page.isElementDisplayed(registerSettingsLink)
     }
+    
+    async isOrganisationSettingsDisplayed(){
+        return await page.isElementDisplayed(organisationSettings)
+    }
 
     async isInvintationAlertDisplayed() {
         return await page.isElementDisplayed(invintationAlert)
@@ -949,6 +962,22 @@ class DevAssetMainpage {
 
     async isSuccessfulllyPostedToXeroAlertDisplayed(){
         return await page.isElementDisplayed(successfulllyPostedToXeroAlert)
+    }
+
+    async getSuccessfulllyPostedToExcelAlertText(){
+        return await page.getElementText(successfulllyPostedToExcelAlert)
+    }
+
+    async isSuccessfulllyPostedToExcelAlertDisplayed(){
+        return await page.isElementDisplayed(successfulllyPostedToExcelAlert)
+    }
+
+    async clickExportAsExcelBtn(){
+        return await page.click(exportAsExcelBtn)
+    }
+
+    async clickExportDropDownBtn(){
+        return await page.click(exportDropDown)
     }
 
     async clickViewJournalInXeroLink(){
@@ -1332,6 +1361,10 @@ class DevAssetMainpage {
 
     async clickAssetGroupBlankSaveBtn() {
         return await page.click(assetGroupBlankSaveBtn)
+    }
+
+    async selectCountryValue(){
+        return await page.clickDropdownItemByIndex(selectCountry, 1)
     }
 
     async setOrganisationNameField(organisationNameFieldInput) {

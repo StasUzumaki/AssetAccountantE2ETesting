@@ -65,6 +65,8 @@ describe('Create account', () => {
         await browser.switchToWindow(handles[1])
         await expect(await authPage.isOrganizationFieldDisplayed()).true;
         await authPage.setOrganizationNameFieldValue(randomOrgName);
+        await browser.pause(1000)
+        await authPage.selectCountryDropDownValue(0)
         await authPage.clickCreateOrganizationBtn();
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');

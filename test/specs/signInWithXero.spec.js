@@ -73,6 +73,8 @@ describe('Sign in with Xero', () => {
         await xeroLogInPage.clickAllowAccessBtn()
         await expect(await authPage.isOrganizationFieldDisplayed()).true;
         await authPage.setOrganizationNameFieldValue(randomOrgName);
+        await browser.pause(2000)
+        await authPage.selectCountryDropDownValue(0)
         await authPage.clickCreateOrganizationBtn();
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');

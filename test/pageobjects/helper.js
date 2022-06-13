@@ -147,6 +147,7 @@ class Helper {
         await expect(await devAssetMainPage.isCreateNewOrganisationFormDisplayed()).true
         await devAssetMainPage.setOrganisationNameField(randomOrgName)
         await devAssetMainPage.setOrganisationDescriptionField('testDescription')
+        await devAssetMainPage.selectCountryValue()
         await devAssetMainPage.setBillingContactNameField(randomOrgName)
         await devAssetMainPage.setBillingContactEmailField(loginData.userEmail)
         await devAssetMainPage.setBillingContactPhoneField('8888888888')
@@ -296,17 +297,13 @@ class Helper {
                 await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
                 await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
                 await devAssetMainPage.clickDeleteCofirmationOkBtn()
-                await devAssetMainPage.clickReverseDropDown()
-                await devAssetMainPage.clickFirstUseBtn()
-                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
-                await devAssetMainPage.clickDeleteCofirmationOkBtn()
                 await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true
                 await devAssetMainPage.clickReverseDropDown()
                 await devAssetMainPage.clickLeaseBtn()
                 await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
                 await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true
                 await devAssetMainPage.clickDeleteCofirmationOkBtn()
+                await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true
                 await devAssetMainPage.clickDeleteAssetBtn()
                 await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
                 await devAssetMainPage.clickDeleteCofirmationOkBtn()
@@ -350,6 +347,41 @@ class Helper {
         await expect(await devAssetMainPage.isCurrentlyJournalsDisplayed()).true
     }
 
+    async deleteAllRegisters() {
+        await console.log("Register list size: " + await devAssetMainPage.getRegistersListSize())
+        const registersCount = await devAssetMainPage.getRegistersListSize()
+        for (let i = 0; i < registersCount; i++) {
+            await devAssetMainPage.clickDropDownRegisterMenu()
+            await devAssetMainPage.clickArchiveBtn()
+            await devAssetMainPage.clickArchiveConfirmationOkBtn()
+            await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true
+        }
+        await devAssetMainPage.clickDemoRegisterBtn()
+        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
+        await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')
+    }
+
+    async checkingExistingRegisters() {
+        await expect(await devAssetMainPage.isOrganisationSettingsDisplayed()).true
+        const registerLink = await devAssetMainPage.isRegisterLinkDisplayed()
+        switch (await registerLink) {
+            case true:
+                await console.log("Register list size: " + await devAssetMainPage.getRegistersListSize())
+                const registersCount = await devAssetMainPage.getRegistersListSize()
+                for (let i = 0; i < registersCount; i++) {
+                    await devAssetMainPage.clickDropDownRegisterMenu()
+                    await devAssetMainPage.clickArchiveBtn()
+                    await devAssetMainPage.clickArchiveConfirmationOkBtn()
+                    await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true
+                    await browser.pause(1000)
+                }
+                await browser.refresh()
+            case false:
+                await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
+                await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
+        }
+    }
+
     async checkingExistingGroupsAndAssets() {
         await expect(await devAssetMainPage.isRegisterSettingsDisplayed()).true
         const GroupBtnTemplateValue = await devAssetMainPage.isGroupTemplateBtnDisplayed()
@@ -361,9 +393,6 @@ class Helper {
                 await expect(await devAssetMainPage.isEditBtnDisplayed()).true
                 const ContractedGroupDropDownValue = await devAssetMainPage.isContractedGroupDropDownDisplayed()
                 if (await ContractedGroupDropDownValue === true) {
-                    // await devAssetMainPage.clickFirstGroupLink()
-                    // await devAssetMainPage.clickFirstAssetLink()
-                    // await this.deleteAsset()
                     await this.deleteAllAssets()
                     await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
                     await this.deleteAssetGroup()

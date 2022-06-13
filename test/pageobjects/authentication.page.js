@@ -18,7 +18,7 @@ const registerBtn = '[class="btn btn-lg btn-primary"]';
 const okVerifyBtn = '[class=" mt-3"]'
 const EmailVerificationForm = '[class="card-body"]'
 const organizationNameField = '[class*="form-control"]'
-const countryDropDown = '//div/div/div/select'
+const countryDropDown = '[formcontrolname="countryId"]'//'//div/div/div/select'
 const createOrganizationBtn = '//div/div/form/div/div/button'
 const validationAlertMessage = '[class*="alert-message validation"]'
 const intuitSignInLink = '[class="Login-intuit"]'

@@ -17,14 +17,8 @@ describe('create report', () => {
         //checking existing journals
         await devAssetMainPage.clickJournalLink()
         await helper.checkingExistingJournals()
-        // await helper.deletePdfFileFromDir()
-        // await helper.deleteCsvFileFromDir()
     });
     after('land to assets and delete created asset group (Blank)', async () => {
-        //delete pdf report
-        //await helper.deletePdfFileFromDir()
-        //delete csv report
-        //await helper.deleteCsvFileFromDir()
         //deleting asset
         await devAssetMainPage.clickAssetsLink()
         await helper.deleteAllAssets()

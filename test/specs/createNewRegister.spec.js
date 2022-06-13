@@ -8,19 +8,10 @@ describe('create a new register', () => {
     before('land to dev asset page and login', async () => {
         await browser.url(baseUrl.baseUrlLink)
         await helper.loginToAccountRegister()
+        await helper.checkingExistingRegisters()
     });
     after('delete created registers and logout', async () => {
-        await console.log("Register list size: " + await devAssetMainPage.getRegistersListSize())
-        const registersCount = await devAssetMainPage.getRegistersListSize()
-        for(let i = 0; i < registersCount; i++) {
-            await devAssetMainPage.clickDropDownRegisterMenu()
-            await devAssetMainPage.clickArchiveBtn()
-            await devAssetMainPage.clickArchiveConfirmationOkBtn()
-            await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true
-        }
-        await devAssetMainPage.clickDemoRegisterBtn()
-        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
-        await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')
+        await helper.deleteAllRegisters()
         await helper.logout()
     });
     it('should create a new register', async () => {
