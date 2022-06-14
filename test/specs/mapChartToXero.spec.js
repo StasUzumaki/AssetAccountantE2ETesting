@@ -33,8 +33,7 @@ describe('Map Chart of Accounts to Xero and post a Journal', () => {
         await helper.deleteAllAssets()
         // deleting asset group
         await helper.deleteAssetGroup()
-        // await devAssetMainPage.clickAllRegistersLink()
-        // await devAssetMainPage.clickFirstRegisterLink()
+        //logout
         await helper.logout()
     });
     ////create acc on xero
@@ -64,7 +63,7 @@ describe('Map Chart of Accounts to Xero and post a Journal', () => {
         await browser.closeWindow()
     });
     it('should have activate Xero account', async () => {
-        await await browser.switchWindow('Activate Account | Xero Accounting')
+        await browser.switchWindow('Activate Account | Xero Accounting')
         await xeroSignUpPage.setPasswordValue(xeroPass)
         await xeroSignUpPage.selectLocationDropDownValue()
         await xeroSignUpPage.clickSubmitBtn()
@@ -140,9 +139,16 @@ describe('Map Chart of Accounts to Xero and post a Journal', () => {
         const handles = await browser.getWindowHandles()
         await browser.switchToWindow(handles[3])
         await expect(await xeroMainPage.isJournalFromAssetAccountantDisplayed()).true
-        await browser.closeWindow()
-        await browser.switchWindow('dev.asset.accountant')
     });
+    it('should disconnect from from Xero', async () => {
+        await browser.switchWindow('dev.asset.accountant')
+        await devAssetMainPage.clickRegisterSettingsWithXeroLink()
+        await devAssetMainPage.clickIntegrationsLink()
+        await devAssetMainPage.clickXeroDisconnectBtn()
+        await expect(await devAssetMainPage.isDisconnectConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDisconnectConfirmationBtn() 
+        await expect(await devAssetMainPage.isExternalIntegrationFormDisplayed()).true
+    }); 
     it('should log out from Xero account', async () => {
         await browser.switchWindow('go.xero.com')
         await xeroAccounts.logoutXeroAccout()

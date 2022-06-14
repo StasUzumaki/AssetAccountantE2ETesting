@@ -1,32 +1,26 @@
-const devAssetMainPage = require('../pageobjects/devAssetMain.page');
 const authPage = require('../pageobjects/authentication.page')
+const devAssetMainPage = require('../pageobjects/devAssetMain.page');
+const { expect } = require('chai');
+const baseUrl = require('../../data/baseURL')
 const helper = require('../pageobjects/helper');
 const xeroSignUpPage = require('../pageobjects/xeroSignUp.page');
 const xeroAccounts = require('../../helper/xeroAccounts');
 const xeroMainPage = require('../pageobjects/xeroMain.page');
 const xeroLogInPage = require('../pageobjects/xeroLogIn.page');
-const { expect } = require('chai');
-const baseUrl = require('../../data/baseURL');
 const googleMailPage = require('../pageobjects/googleMail.page')
 const googleMailboxData = require('../../data/googleMailboxData')
-const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
 
-
-const shortLastName = uniqueNamesGenerator({
-    dictionaries: [colors],
-    length: 1
-});
-const randomOrgName = shortLastName + '_org';
 const xeroPass = 'XeroPassword123'
 
-describe('Sign in with Xero', () => {
-    before('land to Xero developer page', async () => {
+describe('Create an account from Xero', () => {
+    before('land to dev xero page and create account', async () => {
         await browser.url(baseUrl.baseUrlXeroLink)
     });
-    after('logout', async () => { 
+    after('logout from AA account', async () => {
         await browser.switchWindow('dev.asset.accountant')
         await helper.logout()
     });
+    ////create acc on xero
     it('should have create Xero account', async () => {
         await xeroSignUpPage.clickXeroMainPageSignUpBtn()
         await browser.closeWindow()
@@ -44,15 +38,16 @@ describe('Sign in with Xero', () => {
         await googleMailPage.clickXeroVerifyLink()
         await googleMailPage.clickBackBtn()
         await expect(await googleMailPage.isSelectVerifyMessageCheckBoxClickable()).true
+        await browser.pause(1000)
         await googleMailPage.clickSelectVerifyMessageCheckBox()
         await googleMailPage.clickDeleteVerifyMessageBtn()
         await browser.pause(2000)
         await expect(await googleMailPage.isAlertMessageDisplayed()).true;
         await googleMailPage.clickCloseAlertMessageBtn()
         await browser.closeWindow()
-        await browser.switchWindow('Activate Account | Xero Accounting')
     });
     it('should have activate Xero account', async () => {
+        await browser.switchWindow('Activate Account | Xero Accounting')
         await xeroSignUpPage.setPasswordValue(xeroPass)
         await xeroSignUpPage.selectLocationDropDownValue()
         await xeroSignUpPage.clickSubmitBtn()
@@ -63,30 +58,21 @@ describe('Sign in with Xero', () => {
         await expect(await xeroMainPage.isWelcomeBannerImgDisplayed()).true
         await expect(await xeroMainPage.getWelcomeBannerText()).contain('Hi, let’s get set up')
     });
-    it('should have land to dev asset accountant page and choose login with Xero', async () => {
-        await browser.newWindow(baseUrl.baseUrlLink)
-        await authPage.clickSignInBtn()
-        await authPage.clickXeroSignInLink()
+    it('should land to dev account link and allow access to AA ', async () => {
+        await browser.newWindow('https://dev.asset.accountant/xero/launch?tenantId=f84af28e-a8c0-4321-b33a-8b07cf40ea4a')
         await expect(await xeroLogInPage.isAssetAccountantDevAccessFormDisplayed()).true
-    });
-    it('should allow access to AA', async () => {
         await xeroLogInPage.clickAllowAccessBtn()
-        await expect(await authPage.isOrganizationFieldDisplayed()).true;
-        await authPage.setOrganizationNameFieldValue(randomOrgName);
-        await browser.pause(2000)
-        await authPage.selectCountryDropDownValue(0)
-        await authPage.clickCreateOrganizationBtn();
-        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
-        await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
-    });
-    it('should connect to Xero and verify that', async () => {
-        await devAssetMainPage.clickRegisterSettingsLink()
-        await devAssetMainPage.clickIntegrationsLink()
-        await devAssetMainPage.clickXeroDropDown()
-        await devAssetMainPage.clickConnectToXeroBtn()
         await expect(await xeroLogInPage.isOrganisationDataFormDisplayed()).true
         await xeroLogInPage.clickApproveBtn()
-    }); 
+    });
+    it('should choose Tenant and `create new` organisation', async () => {
+        await expect(await devAssetMainPage.isSetUptoUseFormDisplayed()).true
+        await devAssetMainPage.clickSetUpToUseConnectBtn()
+    });
+    it('should have validate that we are connected with Xero', async () => {
+        await expect(await devAssetMainPage.isXeroAlertMessageDisplayed()).true
+        await expect(await devAssetMainPage.getXeroAlertMessageText()).contain('You are connected to Xero')
+    });
     it('should disconnect from from Xero', async () => {
         await devAssetMainPage.clickXeroDisconnectBtn()
         await expect(await devAssetMainPage.isDisconnectConfirmationFormDisplayed()).true

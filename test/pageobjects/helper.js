@@ -242,18 +242,44 @@ class Helper {
         await devAssetMainPage.setNewAssetCodeNumberValue(randomCodeNumber)
         await devAssetMainPage.setNewAssetDescriptionValue('testDescr')
         await devAssetMainPage.selectNewAssetGroupValue()
-        await devAssetMainPage.setNewAssetCostValue('200')
+        await devAssetMainPage.setNewAssetCostValue('500')
         await devAssetMainPage.setNewAssetPurchaseDateValue('06/05/22')
-        await devAssetMainPage.setNewAssetQuantityValue('1')
+        await devAssetMainPage.setNewAssetQuantityValue('10')
         await devAssetMainPage.selectNewAssetQuantityUnitsValue()
         await expect(await devAssetMainPage.isDepreciationFormDisplayed()).true
         await expect(await devAssetMainPage.isTaxDepreciationFormDisplayed()).true
         await expect(await devAssetMainPage.isAccountsDepreciationFormDisplayed()).true
-        // await devAssetMainPage.clickSelfAssessedCheckBox()
+        //await devAssetMainPage.clickSelfAssessedCheckBox()
         //await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
         await browser.pause(1000)
         await devAssetMainPage.clickNewAssetSaveBtn()
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await devAssetMainPage.clickActionsDropDownBtn()
+        await devAssetMainPage.clickAddOpeningBalanceBtn()
+        await devAssetMainPage.selectOpeningBalanceDateValue()
+        await devAssetMainPage.setTaxWdvValue(300)
+        await devAssetMainPage.setAccountsWdvValue(400)
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isTypeOpeningBalanceCellDisplayed()).true
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickOpeningBalanceBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await browser.pause(3000)
+        await devAssetMainPage.clickActionsDropDownBtn()
+        await devAssetMainPage.clickActionSellBtn()
+        await devAssetMainPage.setDateOfSaleValue('06/05/22')
+        await devAssetMainPage.setSaleProceedsValue(200)
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusSoldDisplayed()).true
+        await browser.pause(3000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickSaleBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        // need write off 
     }
 
     async deleteAsset() {

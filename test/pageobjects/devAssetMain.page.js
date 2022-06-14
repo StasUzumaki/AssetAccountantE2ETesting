@@ -1,6 +1,7 @@
 const { PageEmailPreviewFromJSON } = require('mailslurp-client')
 const page = require('./page')
 
+const saveBtn = '[type="submit"]'
 const userProfileLink = '#user-profile'
 const userProfileName = '//*[@id="user-profile"]/span'
 const logoutProfileBtn = '//*[@id="avatar-dropdown-menu"]/button[3]'
@@ -83,6 +84,7 @@ const accountsDepreciationForm = '//div[2]/app-depreciation-method-selector/div[
 const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
 //register settings link
 const registerSettingsLink = '//nav/section[3]/div/a[5]'
+const registerSettingsWithXeroLink = '//nav/section[3]/div/a[6]'
 const integrationsLink = '//form/div/ul/li[4]/a'
 //organisation settings link
 const invitedUserEmailCell = '//*/table/tbody/tr[2]/td[2]'
@@ -123,6 +125,9 @@ const cardNumberInput = '//app-form-control[1]/div/div[2]/label'
 const cardExpiryInput = '//app-form-control[2]/div/div[2]/label'
 const cvcInput = '//app-form-control[3]/div/div[2]/label'
 //asset
+const assetStatus = '//app-standard-page-content-grid/div/div[1]/span/span'
+const assetStatusSold = '[class="badge asset-status rounded-pill bg-dark"]'
+const assetStatusIsUse = '[class="badge asset-status rounded-pill bg-success"]'
 const contractedGroupDropDown = '//*/div[1]/div[1]/div/span/span[2]'
 const assetDescriptionTitle = '//app-standard-page-content-grid/div/div[1]/h3'
 const reverseDropDown = '#reverse-dropdown'
@@ -156,6 +161,22 @@ const attachmentsList = '//*/app-standard-page-content-grid/ul/li'
 const deleteLinkAttachmentBtn = '//*/ul/li[1]/div/div[3]/div/button[2]'
 const deleteFileAttachmentBtn = '//*/ul/li[1]/div/div[3]/div/button'
 const attachmentFileUploadInput = '#import-upload'
+const actionsDropDownBtn = '//div/div[2]/div[2]/button'
+const addOpeningBalanceBtn = '//div[2]/div[2]/div/button[1]'
+const openingBalanceDate = '//app-period-selector/select'
+const taxWdv = '//app-form-control[2]//input'
+const accountsWdv = '//app-form-control[3]//input'
+const openingBalanceBtn = '//button[contains(text(), "Opening Balance")]'
+const typeOpeningBalanceCell = '//div[3]/div[2]/div/div/div[3]/div[2]'
+const typeOpeningBalanceReservedCell = '//div[2]/div[3]/div[2]/div/div/div[4]/div[2]'
+const actionSellBtn = '//div/app-standard-page-content-grid/div/div[2]/div[2]/div/button[4]'
+const dateOfSale = '//app-date-input/div/input'
+const saleProceeds = '//app-currency-input/div/input'
+const sale = '//button[contains(text(), "Sale")]'
+const actionWriteOffBtn = '//div[2]/div[2]/div/button[5]'
+const dateOfWriteOff = '//app-date-input/div/input'
+const writeOffBtn = '//button[contains(text(), "Write Off")]'
+
 //journal
 const journalLink = '[href*="/journals"]'
 const createBtn = '//app-standard-page-content/div//div/div[2]/button'
@@ -245,6 +266,8 @@ const xeroDropDown = '//*[@id="static-3-header"]/button'
 const connectToXeroBtn = '//app-xero-connect/input'
 const xeroDisconnectBtn = '//app-alert/div/div[2]/div/button'
 const xeroAlertMessage = '[class="alert-message"]'
+const setUptoUseForm = '//div/div/div/div[2]/form'
+const setUpToUseConnectBtn = '//form/div[2]/div[1]/button[2]'
 //general ledger accounts
 const taxDepreciationMethodDropDown = '//app-depreciation-method-selector/div[1]/div[1]/select'
 const taxDepreciationEffectiveLife = '//div[1]/div[2]/app-autocalc-life/div/input'
@@ -271,7 +294,6 @@ const interestChargeDropDown = '//*[@id="Interest Charge"]'
 const profitOnTerminationOfLeaseDropDown = '//*[@id="Profit on Termination of Lease"]'
 const lossOnTerminationOfLeaseDropDown = '//*[@id="Loss on Termination of Lease"]'
 const generalLedgerSaveBtn = '//form/div[2]/button[2]'
-const generalLedgerAccountsAlert = '[role="alertdialog"][aria-live="polite"]'
 
 class DevAssetMainpage {
 
@@ -381,7 +403,7 @@ class DevAssetMainpage {
     }
 
     async getXeroAlertMessageText() {
-        return await page.click(xeroAlertMessage)
+        return await page.getElementText(xeroAlertMessage)
     }
 
     async clickXeroDisconnectBtn() {
@@ -392,6 +414,14 @@ class DevAssetMainpage {
         return await page.click(integrationsLink)
     }
     //integration
+    async clickSetUpToUseConnectBtn(){
+        return await page.click(setUpToUseConnectBtn)
+    }
+
+    async isSetUptoUseFormDisplayed(){
+        return await page.isElementDisplayed(setUptoUseForm)
+    }
+
     async clickConnectToXeroBtn() {
         return await page.click(connectToXeroBtn)
     }
@@ -451,6 +481,10 @@ class DevAssetMainpage {
     //profile
     async getUserProfileNameText() {
         return await page.getElementText(userProfileName)
+    }
+
+    async clickSaveBtn(){
+        return await page.click(saveBtn)
     }
     //lease 
     async getAmountCapitalisedFieldValue() {
@@ -719,6 +753,65 @@ class DevAssetMainpage {
         return await page.setValue(attachmentFileUploadInput, attachmentFileUpload)
     }
 
+    async clickActionsDropDownBtn(){
+        return await page.click(actionsDropDownBtn)
+    }
+
+    async clickAddOpeningBalanceBtn(){
+        return await page.click(addOpeningBalanceBtn)
+    }
+
+    async selectOpeningBalanceDateValue(){
+        return await page.clickDropdownItemByIndex(openingBalanceDate, 2)
+    }
+
+    async setTaxWdvValue(taxWdvValue){
+        return await page.setValue(taxWdv, taxWdvValue)
+    }
+
+    async setAccountsWdvValue(accountsWdvValue){
+        return await page.setValue(accountsWdv, accountsWdvValue)
+    }
+
+    async clickOpeningBalanceBtn(){
+        return await page.click(openingBalanceBtn)
+    }
+
+    async isTypeOpeningBalanceCellDisplayed(){
+        return await page.isElementDisplayed(typeOpeningBalanceCell)
+    }
+
+    async isTypeOpeningBalanceReservedCellDisplayed(){
+        return await page.isElementDisplayed(typeOpeningBalanceReservedCell)
+    }
+
+    async clickActionSellBtn(){
+        return await page.click(actionSellBtn)
+    }
+
+    async setDateOfSaleValue(dateOfSaleValue){
+        return await page.setValue(dateOfSale, dateOfSaleValue)
+    }
+
+    async setSaleProceedsValue(saleProceedsValue){
+        return await page.setValue(saleProceeds, saleProceedsValue)
+    }
+
+    async clickSaleBtn(){
+        return await page.click(sale)
+    }
+
+    async clickActionWriteOffBtn(){
+        return await page.click(actionWriteOffBtn)
+    }
+
+    async setDateOfWriteOffValue(dateOfWriteOffValue){
+        return await page.setValue(dateOfWriteOff, dateOfWriteOffValue)
+    }
+
+    async clickWriteOffBtn(){
+        return await page.click(writeOffBtn)
+    }
     //
     async isRegisterInvitePanelDispalayed() {
         return await page.isElementDisplayed(registerInvitePanel)
@@ -820,6 +913,22 @@ class DevAssetMainpage {
         return await (await page.getElement(contractedGroupDropDown)).isDisplayed()
     }
 
+    async isAssetStatusDisplayed(){
+        return await page.isElementDisplayed(assetStatus)
+    }
+
+    async isAssetStatusSoldDisplayed(){
+        return await page.isElementDisplayed(assetStatusSold)
+    }
+
+    async isAssetStatusIsUseDispayed(){
+        return await page.isElementDisplayed(assetStatusIsUse)
+    }
+
+    async getAssetStatusText(){
+        return await page.getElementText(assetStatus)
+    }
+
     async clickContractedGroupDropDown() {
         return await page.click(contractedGroupDropDown)
     }
@@ -858,6 +967,10 @@ class DevAssetMainpage {
 
     async clickRegisterSettingsLink() {
         return await page.click(registerSettingsLink)
+    }
+
+    async clickRegisterSettingsWithXeroLink(){
+        return await page.click(registerSettingsWithXeroLink)
     }
 
     async isRegisterSettingsDisplayed() {
