@@ -86,6 +86,7 @@ const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
 const registerSettingsLink = '//nav/section[3]/div/a[5]'
 const registerSettingsWithXeroLink = '//nav/section[3]/div/a[6]'
 const integrationsLink = '//form/div/ul/li[4]/a'
+const classificationLink = '//form/div/ul/li[3]/a'
 //organisation settings link
 const invitedUserEmailCell = '//*/table/tbody/tr[2]/td[2]'
 const invitedUserNameCell = '//*/table/tbody/tr[2]/td[1]/label'
@@ -175,8 +176,38 @@ const saleProceeds = '//app-currency-input/div/input'
 const sale = '//button[contains(text(), "Sale")]'
 const actionWriteOffBtn = '//div[2]/div[2]/div/button[5]'
 const dateOfWriteOff = '//app-date-input/div/input'
-const writeOffBtn = '//button[contains(text(), "Write Off")]'
-
+const writenOffBtn = '//button[contains(text(), "Write Off")]'
+const actionSellPartialBtn = '//div/div[2]/div[2]/div/button[6]'
+const disposedQuantity = '[formcontrolname="disposedQuantity"]'
+const salePartialBtn = '//button[contains(text(), "Sale (Partial)")]'
+const actionWriteOffPartialBtn = '//div/div[2]/div[2]/div/button[7]'
+const writeOffPartialBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button'
+const assetTaxTabLink = '//div[1]/ul/li[1]/a'
+const assetAddDropDown = '//div[2]/div[2]/div/div/button'
+const reassessmentBtn = '//div[2]/div[2]/div/div/div/button[1]'
+const reassessmentTaxBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const transferToPoolBtn = '//div[2]/div[2]/div/div/div/button[2]'
+const lowValuePoolRadioBtn = '//*[@id="AULVPSBP-AU_LVP"]'
+const pool = '[formcontrolname="poolCode"]'
+const writtenDownValue = '//form/div[1]/div[2]/div/div[1]'
+const transferToPoolTaxBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const lowValuePoolLink = '//div[1]/div/h4/a'
+const adjustmentBtn = '//div[2]/div[2]/div/div/div/button[3]'
+const notesField = '[formcontrolname="notes"]'
+const adjustmentTaxBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const reassessmentOfTaxableUseBtn = '//div[2]/div[2]/div/div/div/button[4]'
+const taxableUseBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const taxableUsageValueField = '//app-percentage-input/div/input'
+const assetAccountsTabLink = '//div[1]/ul/li[2]/a'
+const revaluationBtn = '//div[2]/div[2]/div/div/div/button[2]'
+const revaluedAmountField = '//app-currency-input/div/input' 
+const revaluationAccountsBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const revalueAssetDate = '//app-period-selector/select'
+const impairmentBtn = '//div[2]/div/div/div/button[3]'
+const impairedValueField = '//app-currency-input/div/input'
+const impairAssetDate = '//app-period-selector/select'
+const impairmentAccountsBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const accountsAdjustmentBtn = '//div[2]/div/div/div/button[4]'
 //journal
 const journalLink = '[href*="/journals"]'
 const createBtn = '//app-standard-page-content/div//div/div[2]/button'
@@ -259,6 +290,28 @@ const quickbooksDisconnectBtn = '//div/div/app-alert/div/div[2]/div/button'
 const disconnectConfirmationForm = '[class="modal-content"]'
 const disconnectConfirmationBtn = '//ng-component/div[3]/button[2]'
 const externalIntegrationForm = '//app-view-integrations/div'
+//classification
+const addClassificationBtn = '//*[contains(text(), "Add Classification")]'
+const classificationNameField = '[formcontrolname="name"]'
+const firstOptionField = '//div[2]/div/div[1]/div/input'
+const secondOptionField = '//div[2]/div/div[2]/div/input'
+const thirdOptionField = '//div[2]/div/div[3]/div/input'
+const fourthOptionField = '//div[2]/div/div[4]/div/input'
+const fifthOptionField = '//div[2]/div/div[5]/div/input'
+const firstClassification = '//app-standard-page-content-grid/div/ul/li[1]'
+const secondClassification = '//app-standard-page-content-grid/div/ul/li[2]'
+const firstClassificationDropDown = '//app-edit-field-allocations[1]//div[2]/div/div[1]/select'
+const secondClassificationDropDown = '//app-edit-field-allocations[2]//div[2]/div/div[1]/select'
+const firstClassificationAddedCell = '//div[4]//child-cell/div[1]/div'
+const secondClassificationAddedCell = '//div[5]//child-cell/div[1]/div'
+const firstClassificationTransferLink = '//div[2]/div[1]/div/a'
+const secondClassificationTransferLink = '//div[2]/div[2]/div/a'
+const transferEffectiveDate = '//app-period-selector/select'
+const transferClassificationDropDown = '//div/div[2]/div/div[1]/select'
+const firstClassificationUpdatedCell = '//div[3]/div[2]/div/div/div[6]/div[2]'
+const secondClassificationUpdatedCell = '//div[3]/div[2]/div/div/div[7]/div[2]'
+const reverseTransferBtn = '//app-standard-page/app-standard-page-content//div/div[2]/div[1]/div/button[3]'
+
 //integration 
 const quickbooksOnlineDropDown = '//*[@id="static-1-header"]/button'
 const connectToQuickBooksBtn = '//app-quickbooks-connect/div/input'
@@ -298,87 +351,87 @@ const generalLedgerSaveBtn = '//form/div[2]/button[2]'
 class DevAssetMainpage {
 
     //general ledger accounts
-    async setAccountsDepreciationEffectiveLifeValue(accountsDepreciationEffectiveLifeValue){
+    async setAccountsDepreciationEffectiveLifeValue(accountsDepreciationEffectiveLifeValue) {
         return await page.setValue(accountsDepreciationEffectiveLife, accountsDepreciationEffectiveLifeValue)
     }
 
-    async setTaxDepreciationEffectiveLifeValue(taxDepreciationEffectiveLifeInput){
+    async setTaxDepreciationEffectiveLifeValue(taxDepreciationEffectiveLifeInput) {
         return await page.setValue(taxDepreciationEffectiveLife, taxDepreciationEffectiveLifeInput)
     }
 
-    async selectAccountsDepreciationMethodDropDownValue(accountsDepreciationMethodDropDownValue){
+    async selectAccountsDepreciationMethodDropDownValue(accountsDepreciationMethodDropDownValue) {
         return await page.clickDropdownItemByIndex(accountsDepreciationMethodDropDown, accountsDepreciationMethodDropDownValue)
     }
 
-    async selectTaxDepreciationMethodDropDownValue(taxDepreciationMethodDropDownValue){
+    async selectTaxDepreciationMethodDropDownValue(taxDepreciationMethodDropDownValue) {
         return await page.clickDropdownItemByIndex(taxDepreciationMethodDropDown, taxDepreciationMethodDropDownValue)
     }
 
-    async clickGeneralLedgerSaveBtn(){
+    async clickGeneralLedgerSaveBtn() {
         return await page.click(generalLedgerSaveBtn)
     }
 
-    async selectLossOnTerminationOfLeaseDropDownValue(lossOnTerminationOfLeaseDropDownValue){
+    async selectLossOnTerminationOfLeaseDropDownValue(lossOnTerminationOfLeaseDropDownValue) {
         return await page.clickDropdownItemByIndex(lossOnTerminationOfLeaseDropDown, lossOnTerminationOfLeaseDropDownValue)
     }
 
-    async selectProfitOnTerminationOfLeaseDropDownValue(profitOnTerminationOfLeaseDropDownValue){
+    async selectProfitOnTerminationOfLeaseDropDownValue(profitOnTerminationOfLeaseDropDownValue) {
         return await page.clickDropdownItemByIndex(profitOnTerminationOfLeaseDropDown, profitOnTerminationOfLeaseDropDownValue)
     }
 
-    async selectInterestChargeDropDownValue(interestChargeDropDownValue){
+    async selectInterestChargeDropDownValue(interestChargeDropDownValue) {
         return await page.clickDropdownItemByIndex(interestChargeDropDown, interestChargeDropDownValue)
     }
 
-    async selectNonCurrentUnexpiredInterestDropDownValue(nonCurrentUnexpiredInterestDropDownValue){
+    async selectNonCurrentUnexpiredInterestDropDownValue(nonCurrentUnexpiredInterestDropDownValue) {
         return await page.clickDropdownItemByIndex(nonCurrentUnexpiredInterestDropDown, nonCurrentUnexpiredInterestDropDownValue)
     }
 
-    async selectCurrentUnexpiredInterestDropDownValue(currentUnexpiredInterestDropDownValue){
+    async selectCurrentUnexpiredInterestDropDownValue(currentUnexpiredInterestDropDownValue) {
         return await page.clickDropdownItemByIndex(currentUnexpiredInterestDropDown, currentUnexpiredInterestDropDownValue)
     }
 
-    async selectLeasePaymentClearingDropDownValue(leasePaymentClearingDropDownValue){
+    async selectLeasePaymentClearingDropDownValue(leasePaymentClearingDropDownValue) {
         return await page.clickDropdownItemByIndex(leasePaymentClearingDropDown, leasePaymentClearingDropDownValue)
     }
 
-    async selectNonCurrentLeaseLiabilityDropDownValue(nonCurrentLeaseLiabilityDropDownValue){
+    async selectNonCurrentLeaseLiabilityDropDownValue(nonCurrentLeaseLiabilityDropDownValue) {
         return await page.clickDropdownItemByIndex(nonCurrentLeaseLiabilityDropDown, nonCurrentLeaseLiabilityDropDownValue)
     }
 
-    async selectCurrentLeaseLiabilityDropDownValue(currentLeaseLiabilityDropDownValue){
+    async selectCurrentLeaseLiabilityDropDownValue(currentLeaseLiabilityDropDownValue) {
         return await page.clickDropdownItemByIndex(currentLeaseLiabilityDropDown, currentLeaseLiabilityDropDownValue)
     }
 
-    async selectImpairmentLossDropDownValue(impairmentLossDropDownValue){
+    async selectImpairmentLossDropDownValue(impairmentLossDropDownValue) {
         return await page.clickDropdownItemByIndex(impairmentLossDropDown, impairmentLossDropDownValue)
     }
 
-    async selectRevaluationLossDropDownValue(revaluationLossDropDownValue){
+    async selectRevaluationLossDropDownValue(revaluationLossDropDownValue) {
         return await page.clickDropdownItemByIndex(revaluationLossDropDown, revaluationLossDropDownValue)
     }
-    
-    async selectAccumulatedImpairmentDropDownValue(accumulatedImpairmentDropDownValue){
+
+    async selectAccumulatedImpairmentDropDownValue(accumulatedImpairmentDropDownValue) {
         return await page.clickDropdownItemByIndex(accumulatedImpairmentDropDown, accumulatedImpairmentDropDownValue)
     }
 
-    async selectRevaluationReserveDropDownValue(revaluationReserveDropDownValue){
+    async selectRevaluationReserveDropDownValue(revaluationReserveDropDownValue) {
         return await page.clickDropdownItemByIndex(revaluationReserveDropDown, revaluationReserveDropDownValue)
     }
 
-    async selectLossOnDisposalDropDownValue(lossOnDisposalDropDownValue){
+    async selectLossOnDisposalDropDownValue(lossOnDisposalDropDownValue) {
         return await page.clickDropdownItemByIndex(lossOnDisposalDropDown, lossOnDisposalDropDownValue)
     }
 
-    async selectProfitOnDisposalDropDownValue(profitOnDisposalDropDownValue){
+    async selectProfitOnDisposalDropDownValue(profitOnDisposalDropDownValue) {
         return await page.clickDropdownItemByIndex(profitOnDisposalDropDown, profitOnDisposalDropDownValue)
     }
 
-    async selectImmediateClaimDropDownValue(immediateClaimDropDownValue){
+    async selectImmediateClaimDropDownValue(immediateClaimDropDownValue) {
         return await page.clickDropdownItemByIndex(immediateClaimDropDown, immediateClaimDropDownValue)
     }
 
-    async selectDepreciationExpenseValue(depreciationExpenseDropDownValue){
+    async selectDepreciationExpenseValue(depreciationExpenseDropDownValue) {
         return await page.clickDropdownItemByIndex(depreciationExpenseDropDown, depreciationExpenseDropDownValue)
     }
 
@@ -413,12 +466,104 @@ class DevAssetMainpage {
     async clickIntegrationsLink() {
         return await page.click(integrationsLink)
     }
+
+    async clickClassificationLink(){
+        return await page.click(classificationLink)
+    }
+    //classification
+    async clickAddClassificationBtn(){
+        return await page.click(addClassificationBtn)
+    }
+
+    async setClassificationNameFieldValue(classificationNameFieldValue){
+        return await page.setValue(classificationNameField, classificationNameFieldValue)
+    }
+
+    async setFirstOptionFieldValue(firstOptionFieldValue){
+        return await page.setValue(firstOptionField, firstOptionFieldValue)
+    }
+
+    async setSecondOptionFieldValue(secondOptionFieldValue){
+        return await page.setValue(secondOptionField, secondOptionFieldValue)
+    }
+
+    async setThirdOptionFieldValue(thirdOptionFieldValue){
+        return await page.setValue(thirdOptionField, thirdOptionFieldValue)
+    }
+
+    async setFourthOptionFieldValue(fourthOptionFieldValue){
+        return await page.setValue(fourthOptionField, fourthOptionFieldValue)
+    }
+
+    async setFifthOptionFieldValue(fifthOptionFieldValue){
+        return await page.setValue(fifthOptionField, fifthOptionFieldValue)
+    }
+
+    async isFirstClassificationDisplayed(){
+        return await page.isElementDisplayed(firstClassification)
+    }
+
+    async isSecondClassificationDisplayed(){
+        return await page.isElementDisplayed(secondClassification)
+    }
+
+    async selectFirstClassificationDropDownValue(firstClassificationDropDownValue){
+        return await page.clickDropdownItemByIndex(firstClassificationDropDown, firstClassificationDropDownValue)
+    }
+
+    async selectSecondClassificationDropDownValue(secondClassificationDropDownValue){
+        return await page.clickDropdownItemByIndex(secondClassificationDropDown, secondClassificationDropDownValue)
+    }
+
+    async isFirstClassificationAddedCellDisplayed(){
+        return await page.isElementDisplayed(firstClassificationAddedCell)
+    }
+
+    async isSecondClassificationAddedCellDisplayed(){
+        return await page.isElementDisplayed(secondClassificationAddedCell)
+    }
+
+    async selectTransferEffectiveDateValue(transferEffectiveDateValue){
+        return await page.clickDropdownItemByIndex(transferEffectiveDate, transferEffectiveDateValue)
+    }
+
+    async selectTransferClassificationDropDownValue(transferClassificationDropDownValue){
+        return await page.clickDropdownItemByIndex(transferClassificationDropDown, transferClassificationDropDownValue)
+    }
+
+    async clickFirstClassificationTransferLink(){
+        return await page.click(firstClassificationTransferLink)
+    }
+
+    async clickSecondClassificationTransferLink(){
+        return await page.click(secondClassificationTransferLink)
+    }
+
+    async isFirstClassificationUpdatedCellDisplayed(){
+        return await page.isElementDisplayed(firstClassificationUpdatedCell)
+    }
+
+    async isSecondClassificationUpdatedCellDisplayed(){
+        return await page.isElementDisplayed(secondClassificationUpdatedCell)
+    }
+
+    async getFirstClassificationUpdatedCellText(){
+        return await page.getElementText(firstClassificationUpdatedCell)
+    }
+
+    async getSecondClassificationUpdatedCellText(){
+        return await page.getElementText(secondClassificationUpdatedCell)
+    }
+
+    async clickReverseTransferBtn(){
+        return await page.click(reverseTransferBtn)
+    }
     //integration
-    async clickSetUpToUseConnectBtn(){
+    async clickSetUpToUseConnectBtn() {
         return await page.click(setUpToUseConnectBtn)
     }
 
-    async isSetUptoUseFormDisplayed(){
+    async isSetUptoUseFormDisplayed() {
         return await page.isElementDisplayed(setUptoUseForm)
     }
 
@@ -483,7 +628,7 @@ class DevAssetMainpage {
         return await page.getElementText(userProfileName)
     }
 
-    async clickSaveBtn(){
+    async clickSaveBtn() {
         return await page.click(saveBtn)
     }
     //lease 
@@ -753,64 +898,188 @@ class DevAssetMainpage {
         return await page.setValue(attachmentFileUploadInput, attachmentFileUpload)
     }
 
-    async clickActionsDropDownBtn(){
+    async clickActionsDropDownBtn() {
         return await page.click(actionsDropDownBtn)
     }
 
-    async clickAddOpeningBalanceBtn(){
+    async clickAddOpeningBalanceBtn() {
         return await page.click(addOpeningBalanceBtn)
     }
 
-    async selectOpeningBalanceDateValue(){
+    async selectOpeningBalanceDateValue() {
         return await page.clickDropdownItemByIndex(openingBalanceDate, 2)
     }
 
-    async setTaxWdvValue(taxWdvValue){
+    async setTaxWdvValue(taxWdvValue) {
         return await page.setValue(taxWdv, taxWdvValue)
     }
 
-    async setAccountsWdvValue(accountsWdvValue){
+    async setAccountsWdvValue(accountsWdvValue) {
         return await page.setValue(accountsWdv, accountsWdvValue)
     }
 
-    async clickOpeningBalanceBtn(){
+    async clickOpeningBalanceBtn() {
         return await page.click(openingBalanceBtn)
     }
 
-    async isTypeOpeningBalanceCellDisplayed(){
+    async isTypeOpeningBalanceCellDisplayed() {
         return await page.isElementDisplayed(typeOpeningBalanceCell)
     }
 
-    async isTypeOpeningBalanceReservedCellDisplayed(){
+    async isTypeOpeningBalanceReservedCellDisplayed() {
         return await page.isElementDisplayed(typeOpeningBalanceReservedCell)
     }
 
-    async clickActionSellBtn(){
+    async clickActionSellBtn() {
         return await page.click(actionSellBtn)
     }
 
-    async setDateOfSaleValue(dateOfSaleValue){
+    async setDateOfSaleValue(dateOfSaleValue) {
         return await page.setValue(dateOfSale, dateOfSaleValue)
     }
 
-    async setSaleProceedsValue(saleProceedsValue){
+    async setSaleProceedsValue(saleProceedsValue) {
         return await page.setValue(saleProceeds, saleProceedsValue)
     }
 
-    async clickSaleBtn(){
+    async clickSaleBtn() {
         return await page.click(sale)
     }
 
-    async clickActionWriteOffBtn(){
+    async clickActionWriteOffBtn() {
         return await page.click(actionWriteOffBtn)
     }
 
-    async setDateOfWriteOffValue(dateOfWriteOffValue){
+    async setDateOfWriteOffValue(dateOfWriteOffValue) {
         return await page.setValue(dateOfWriteOff, dateOfWriteOffValue)
     }
 
-    async clickWriteOffBtn(){
-        return await page.click(writeOffBtn)
+    async clickWritenOffBtn() {
+        return await page.click(writenOffBtn)
+    }
+
+    async clickActionSellPartialBtn() {
+        return await page.click(actionSellPartialBtn)
+    }
+
+    async setDisposedQuantityValue(disposedQuantityValue) {
+        return await page.setValue(disposedQuantity, disposedQuantityValue)
+    }
+
+    async clickSalePartialBtn() {
+        return await page.click(salePartialBtn)
+    }
+
+    async clickActionWriteOffPartialBtn() {
+        return await page.click(actionWriteOffPartialBtn)
+    }
+
+    async clickWriteOffPartialBtn() {
+        return await page.click(writeOffPartialBtn)
+    }
+
+    async clickAssetTaxTabLink() {
+        return await page.click(assetTaxTabLink)
+    }
+
+    async clickAssetAddDropDown(){
+        return await page.click(assetAddDropDown)
+    }
+
+    async clickReassessmentBtn(){
+        return await page.click(reassessmentBtn)
+    }
+
+    async clickReassessmentTaxBtn(){
+        return await page.click(reassessmentTaxBtn)
+    }
+
+    async clickTransferToPoolBtn(){
+        return await page.click(transferToPoolBtn)
+    }
+
+    async clickLowValuePoolRadioBtn(){
+        return await page.click(lowValuePoolRadioBtn)
+    }
+
+    async selectPoolValue(){
+        return await page.clickDropdownItemByIndex(pool, 1)
+    }
+
+    async isWrittenDownValueDisplayed(){
+        return await page.isElementDisplayed(writtenDownValue)
+    }
+
+    async clickTransferToPoolTax(){
+        return await page.click(transferToPoolTaxBtn)
+    }
+
+    async isLowValuePoolLinkDisplayed(){
+        return await page.isElementDisplayed(lowValuePoolLink)
+    }
+
+    async clickAdjustmentBtn(){
+        return await page.click(adjustmentBtn)
+    }
+
+    async isNotesFieldDisplayed(){
+        return await page.isElementDisplayed(notesField)
+    }
+
+    async clickAdjustmentTaxBtn(){
+        return await page.click(adjustmentTaxBtn)
+    }
+
+    async clickReassessmentOfTaxableUseBtn(){
+        return await page.click(reassessmentOfTaxableUseBtn)
+    }
+
+    async clickTaxableUseBtn(){
+        return await page.click(taxableUseBtn)
+    }
+
+    async isTaxableUsageValueFieldDisplayed(){
+        return await page.isElementDisplayed(taxableUsageValueField)
+    }
+
+    async clickAssetAccountsTabLink(){
+        return await page.click(assetAccountsTabLink)
+    }
+
+    async clickRevaluationBtn(){
+        return await page.click(revaluationBtn)
+    }
+
+    async setRevaluedAmountFieldValue(revaluedAmountFieldValue){
+        return await page.setValue(revaluedAmountField, revaluedAmountFieldValue)
+    }
+
+    async clickRevaluationAccountsBtn(){
+        return await page.click(revaluationAccountsBtn)
+    }
+
+    async selectRevalueAssetDateValue(revalueAssetDateValue){
+        return await page.clickDropdownItemByIndex(revalueAssetDate, revalueAssetDateValue)
+    }
+
+    async clickImpairmentBtn(){
+        return await page.click(impairmentBtn)
+    }
+
+    async setImpairedValueFieldValue(impairedValueFieldValue){
+        return await page.setValue(impairedValueField, impairedValueFieldValue)
+    }
+
+    async selectImpairAssetDateValue(impairAssetDateValue){
+        return await page.clickDropdownItemByIndex(impairAssetDate, impairAssetDateValue)
+    }
+
+    async clickImpairmentAccountsBtn(){
+        return await page.click(impairmentAccountsBtn)
+    }
+
+    async clickAccountsAdjustmentBtn(){
+        return await page.click(accountsAdjustmentBtn)
     }
     //
     async isRegisterInvitePanelDispalayed() {
@@ -913,19 +1182,19 @@ class DevAssetMainpage {
         return await (await page.getElement(contractedGroupDropDown)).isDisplayed()
     }
 
-    async isAssetStatusDisplayed(){
+    async isAssetStatusDisplayed() {
         return await page.isElementDisplayed(assetStatus)
     }
 
-    async isAssetStatusSoldDisplayed(){
+    async isAssetStatusSoldDisplayed() {
         return await page.isElementDisplayed(assetStatusSold)
     }
 
-    async isAssetStatusIsUseDispayed(){
+    async isAssetStatusIsUseDispayed() {
         return await page.isElementDisplayed(assetStatusIsUse)
     }
 
-    async getAssetStatusText(){
+    async getAssetStatusText() {
         return await page.getElementText(assetStatus)
     }
 
@@ -969,15 +1238,15 @@ class DevAssetMainpage {
         return await page.click(registerSettingsLink)
     }
 
-    async clickRegisterSettingsWithXeroLink(){
+    async clickRegisterSettingsWithXeroLink() {
         return await page.click(registerSettingsWithXeroLink)
     }
 
     async isRegisterSettingsDisplayed() {
         return await page.isElementDisplayed(registerSettingsLink)
     }
-    
-    async isOrganisationSettingsDisplayed(){
+
+    async isOrganisationSettingsDisplayed() {
         return await page.isElementDisplayed(organisationSettings)
     }
 
@@ -1069,31 +1338,31 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(journalTitle)
     }
 
-    async getSuccessfulllyPostedToXeroAlertText(){
+    async getSuccessfulllyPostedToXeroAlertText() {
         return await page.getElementText(successfulllyPostedToXeroAlert)
     }
 
-    async isSuccessfulllyPostedToXeroAlertDisplayed(){
+    async isSuccessfulllyPostedToXeroAlertDisplayed() {
         return await page.isElementDisplayed(successfulllyPostedToXeroAlert)
     }
 
-    async getSuccessfulllyPostedToExcelAlertText(){
+    async getSuccessfulllyPostedToExcelAlertText() {
         return await page.getElementText(successfulllyPostedToExcelAlert)
     }
 
-    async isSuccessfulllyPostedToExcelAlertDisplayed(){
+    async isSuccessfulllyPostedToExcelAlertDisplayed() {
         return await page.isElementDisplayed(successfulllyPostedToExcelAlert)
     }
 
-    async clickExportAsExcelBtn(){
+    async clickExportAsExcelBtn() {
         return await page.click(exportAsExcelBtn)
     }
 
-    async clickExportDropDownBtn(){
+    async clickExportDropDownBtn() {
         return await page.click(exportDropDown)
     }
 
-    async clickViewJournalInXeroLink(){
+    async clickViewJournalInXeroLink() {
         return await page.click(viewJournalInXeroLink)
     }
 
@@ -1113,23 +1382,23 @@ class DevAssetMainpage {
         return await page.click(journalLink)
     }
 
-    async clickPurchasesCheckBox(){
+    async clickPurchasesCheckBox() {
         return await page.click(purchasesCheckBox)
     }
 
-    async clickDepreciationCheckBox(){
+    async clickDepreciationCheckBox() {
         return await page.click(depreciationCheckBox)
     }
 
-    async clickPostBtn(){
+    async clickPostBtn() {
         return await page.click(postBtn)
     }
 
-    async isChooseTransactionFormDisplayed(){
+    async isChooseTransactionFormDisplayed() {
         return await page.isElementDisplayed(chooseTransactionForm)
     }
 
-    async clickPostToXeroBtn(){
+    async clickPostToXeroBtn() {
         return await page.click(postToXeroBtn)
     }
 
@@ -1476,7 +1745,7 @@ class DevAssetMainpage {
         return await page.click(assetGroupBlankSaveBtn)
     }
 
-    async selectCountryValue(){
+    async selectCountryValue() {
         return await page.clickDropdownItemByIndex(selectCountry, 1)
     }
 

@@ -96,7 +96,8 @@ describe('Sign in with Intuit', () => {
         await authPage.clickCreateOrganizationBtn();
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
-    }); 
+    });
+    //need disc from QBO acc 
     it('should sign out from QuickBooks account', async () => {
         const handles = await browser.getWindowHandles()
         await browser.switchToWindow(handles[1])

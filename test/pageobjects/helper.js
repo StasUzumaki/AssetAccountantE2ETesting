@@ -52,6 +52,14 @@ const filePathes = {
 
 class Helper {
 
+    async randomClassificationName() {
+        const randomClassName = uniqueNamesGenerator({
+            dictionaries: [adjectives, animals, colors],
+            length: 2
+        });
+        return randomClassName;
+    }
+
     async loginToGoogleMailBox() {
         await googleMailPage.setEmailFieldValue(googleMailboxData.userEmail)
         await googleMailPage.clickNextBtn()
@@ -254,6 +262,31 @@ class Helper {
         await browser.pause(1000)
         await devAssetMainPage.clickNewAssetSaveBtn()
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async createAssetClassification() {
+        const randomCodeNumber = Math.floor(Math.random() * 1000);
+        await devAssetMainPage.clickCreateAssetBtn()
+        await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;
+        await devAssetMainPage.setNewAssetNameValue(randomAssetName + randomCodeNumber)
+        await devAssetMainPage.setNewAssetCodeNumberValue(randomCodeNumber)
+        await devAssetMainPage.setNewAssetDescriptionValue('testDescr')
+        await devAssetMainPage.selectNewAssetGroupValue()
+        await devAssetMainPage.setNewAssetCostValue('1000')
+        await devAssetMainPage.setNewAssetPurchaseDateValue('06/05/22')
+        await devAssetMainPage.setNewAssetQuantityValue('5')
+        await devAssetMainPage.selectNewAssetQuantityUnitsValue()
+        await devAssetMainPage.selectFirstClassificationDropDownValue(2)
+        await devAssetMainPage.selectSecondClassificationDropDownValue(2)
+        await expect(await devAssetMainPage.isDepreciationFormDisplayed()).true
+        await expect(await devAssetMainPage.isTaxDepreciationFormDisplayed()).true
+        await expect(await devAssetMainPage.isAccountsDepreciationFormDisplayed()).true
+        await browser.pause(1000)
+        await devAssetMainPage.clickNewAssetSaveBtn()
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async assetAddOpeningBalance() {
         await devAssetMainPage.clickActionsDropDownBtn()
         await devAssetMainPage.clickAddOpeningBalanceBtn()
         await devAssetMainPage.selectOpeningBalanceDateValue()
@@ -261,10 +294,19 @@ class Helper {
         await devAssetMainPage.setAccountsWdvValue(400)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isTypeOpeningBalanceCellDisplayed()).true
+    }
+
+    async assetReverseOpeningBalance() {
+        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickOpeningBalanceBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async assetSell() {
         await browser.pause(3000)
         await devAssetMainPage.clickActionsDropDownBtn()
         await devAssetMainPage.clickActionSellBtn()
@@ -272,14 +314,237 @@ class Helper {
         await devAssetMainPage.setSaleProceedsValue(200)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusSoldDisplayed()).true
-        await browser.pause(3000)
+    }
+
+    async assetReverseSale() {
+        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickSaleBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
-        // need write off 
+    }
+
+    async assetWriteOff() {
+        await devAssetMainPage.clickActionsDropDownBtn()
+        await devAssetMainPage.clickActionWriteOffBtn()
+        await devAssetMainPage.setDateOfWriteOffValue('06/05/22')
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusSoldDisplayed()).true
+    }
+
+    async assetReverseWriteOff() {
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickWritenOffBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async assetPartialSell() {
+        await devAssetMainPage.clickActionsDropDownBtn()
+        await devAssetMainPage.clickActionSellPartialBtn()
+        await devAssetMainPage.setSaleProceedsValue(100)
+        await devAssetMainPage.setDisposedQuantityValue(2)
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+    }
+
+    async assetReversePartialSale() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickSalePartialBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async assetPartialWriteOff() {
+        await devAssetMainPage.clickActionsDropDownBtn()
+        await devAssetMainPage.clickActionWriteOffPartialBtn()
+        await devAssetMainPage.setDisposedQuantityValue(5)
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+    }
+
+    async assetReversePartialWriteOff() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickWriteOffPartialBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async taxAddReassessment() {
+        await devAssetMainPage.clickAssetTaxTabLink()
+        await devAssetMainPage.clickAssetAddDropDown()
+        await devAssetMainPage.clickReassessmentBtn()
+        await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
+        await browser.pause(2000)
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+    }
+
+    async taxReverseReassessment() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickReassessmentTaxBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async taxAddTransferToPool() {
+        await devAssetMainPage.clickAssetAddDropDown()
+        await devAssetMainPage.clickTransferToPoolBtn()
+        await devAssetMainPage.selectPoolValue()
+        await expect(await devAssetMainPage.isWrittenDownValueDisplayed()).true
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isLowValuePoolLinkDisplayed()).true
+    }
+
+    async taxReverseTransferToPool() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickTransferToPoolTax()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async taxAddAdjustment() {
+        await devAssetMainPage.clickAssetAddDropDown()
+        await devAssetMainPage.clickAdjustmentBtn()
+        await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+    }
+
+    async taxReverseAdjustment() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickAdjustmentTaxBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async taxAddReassessmentTaxableUse() {
+        await devAssetMainPage.clickAssetAddDropDown()
+        await devAssetMainPage.clickReassessmentOfTaxableUseBtn()
+        await expect(await devAssetMainPage.isTaxableUsageValueFieldDisplayed()).true
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+    }
+
+    async taxReverseReassessmentTaxableUse() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickTaxableUseBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async accountsAddReassessment() {
+        await devAssetMainPage.clickAssetAccountsTabLink()
+        await devAssetMainPage.clickAssetAddDropDown()
+        await devAssetMainPage.clickReassessmentBtn()
+        await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
+        await browser.pause(2000)
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+    }
+
+    async accountsReverseReasessment() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickReassessmentTaxBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async accountsAddRevaluation() {
+        await devAssetMainPage.clickAssetAccountsTabLink()
+        await devAssetMainPage.clickAssetAddDropDown()
+        await devAssetMainPage.clickRevaluationBtn()
+        await devAssetMainPage.selectRevalueAssetDateValue(1)
+        await devAssetMainPage.setRevaluedAmountFieldValue(100)
+        await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+    }
+
+    async accountsReverseRevaluation() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickRevaluationAccountsBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async accountsAddImpairment() {
+        await devAssetMainPage.clickAssetAccountsTabLink()
+        await devAssetMainPage.clickAssetAddDropDown()
+        await devAssetMainPage.clickImpairmentBtn()
+        await devAssetMainPage.selectImpairAssetDateValue(1)
+        await devAssetMainPage.setImpairedValueFieldValue(100)
+        await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+    }
+
+    async accountsReverseImpairment() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickImpairmentAccountsBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async accountsAddAdjustment() {
+        await devAssetMainPage.clickAssetAccountsTabLink()
+        await devAssetMainPage.clickAssetAddDropDown()
+        await devAssetMainPage.clickAccountsAdjustmentBtn()
+        await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+    }
+
+    async accountsReverseAdjustment() {
+        await browser.pause(4000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickAdjustmentTaxBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+    }
+
+    async addClassification() {
+        await devAssetMainPage.clickAddClassificationBtn()
+        await devAssetMainPage.setClassificationNameFieldValue(await this.randomClassificationName())
+        await devAssetMainPage.setFirstOptionFieldValue(await this.randomClassificationName())
+        await devAssetMainPage.setSecondOptionFieldValue(await this.randomClassificationName())
+        await devAssetMainPage.setThirdOptionFieldValue(await this.randomClassificationName())
+        await devAssetMainPage.setFourthOptionFieldValue(await this.randomClassificationName())
+        await devAssetMainPage.setFifthOptionFieldValue(await this.randomClassificationName())
+        await devAssetMainPage.clickSaveBtn()
     }
 
     async deleteAsset() {
@@ -304,6 +569,7 @@ class Helper {
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true
     }
+
     async deleteAllAssets() {
         await devAssetMainPage.clickContractedGroupDropDown()
         await devAssetMainPage.isFirstAssetLinkDisplayed()
@@ -359,6 +625,30 @@ class Helper {
 
         }
     }
+
+    async deleteClassificationInAsset() {
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickReverseTransferBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await browser.pause(3000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickReverseTransferBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await browser.pause(3000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickReverseTransferBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await browser.pause(3000)
+        await devAssetMainPage.clickReverseDropDown()
+        await devAssetMainPage.clickReverseTransferBtn()
+        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await devAssetMainPage.clickDeleteCofirmationOkBtn()
+        await browser.pause(3000)
+    }
+
     async deleteJournals() {
         await console.log("Journals list size: " + await devAssetMainPage.getJournalsListSize())
         const journalsCount = await devAssetMainPage.getJournalsListSize()
