@@ -9,7 +9,9 @@ const loginData = {
     userEmailInviteTo: 'stasdevasset+inviteusers@gmail.com',
     userPasswInviteTo: 'devAssetTest',
     userEmailRegister: 'stasdevasset+registertesting@gmail.com',
-    userPasswRegister: 'devAssetTest'
+    userPasswRegister: 'devAssetTest',
+    userEmailAccountUser: 'stasdevasset+accountuser@gmail.com',
+    userPasswAccountUser: 'SuperTestAccount'
 }
 
 module.exports = loginData;

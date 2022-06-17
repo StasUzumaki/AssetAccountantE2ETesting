@@ -40,6 +40,16 @@ const randomName = uniqueNamesGenerator({
     dictionaries: [adjectives, animals, colors],
     length: 2
 });
+const shortUserName = uniqueNamesGenerator({
+    dictionaries: [adjectives, animals, colors],
+    length: 1
+});
+const shortLastName = uniqueNamesGenerator({
+    dictionaries: [colors],
+    length: 1
+});
+const mainEmail = 'stasdevasset';
+const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber + "@gmail.com";
 const randomOrgName = randomName + '_org';
 const randomAssetName = randomName + '_Asset';
 const assetGroupName = randomName + randomCodeNumber + '_TestGroup';
@@ -106,6 +116,15 @@ class Helper {
         await authPage.setPasswordSignInValue(loginData.userPasswRegister)
         await authPage.clickSignInSubmitBtn()
     }
+    async loginToAccountUserSuperTest() {
+        await authPage.clickSignInBtn()
+        await authPage.isUserNameLoginFieldDisplayed()
+        await authPage.setUserNameValue(loginData.userEmailAccountUser)
+        await authPage.clickNextBtn()
+        await authPage.isPasswordLoginFieldDisplayed()
+        await authPage.setPasswordSignInValue(loginData.userPasswAccountUser)
+        await authPage.clickSignInSubmitBtn()
+    }
 
     async loginToAccountInvTo() {
         await authPage.clickSignInBtn()
@@ -121,6 +140,17 @@ class Helper {
         await devAssetMainPage.clickUserProfileLink()
         await devAssetMainPage.clickLogoutProfileBtn()
         await expect(await authPage.isSignInBtnDisplayed()).true
+    }
+
+    async createAssetAccount(){
+        await authPage.clickCreateAccountBtn();
+        await authPage.setFisrtNameValue(shortUserName)
+        await authPage.setLastNameValue(shortLastName)
+        await authPage.setEmailValue(tempGoogleMail)
+        await authPage.setPhoneNumberValue('7777777777')
+        await authPage.setPasswordCreateAccValue('devAssetTest')
+        await authPage.setPasswordCreateAccConfirmValue('devAssetTest')
+        await authPage.clickRegisterBtn()
     }
 
     async createRegister() {
