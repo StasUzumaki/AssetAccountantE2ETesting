@@ -36,73 +36,73 @@ describe('Account / User', () => {
         await helper.deleteAllRegisters()
         await helper.logout()
     });
-    // xit('should create account with valid credentials', async () => {
-    //     await helper.createAssetAccount()
-    //     await expect(await authPage.isEmailVerificationFormDisplayed()).true;
-    //     await authPage.clickOkVerifyBtn()
-    //     await expect(await authPage.isSignInBtnDisplayed()).true;
-    // });
-    // xit('should verify account by email', async () => {
-    //     await browser.url('https://mail.google.com/')
-    //     await browser.pause(7000)
-    //     await helper.loginToGoogleMailBox()
-    //     await googleMailPage.clickVerifyMessage()
-    //     await expect(await googleMailPage.isVerifyLinkDisplayed()).true;
-    //     await googleMailPage.scrollIntoVerifyLink()
-    //     await googleMailPage.clickVerifyLink()
-    //     await googleMailPage.clickBackBtn()
-    //     await googleMailPage.clickSelectVerifyMessageCheckBox()
-    //     await googleMailPage.clickDeleteVerifyMessageBtn()
-    //     await expect(await googleMailPage.isAlertMessageDisplayed()).true;
-    //     await googleMailPage.clickCloseAlertMessageBtn()
-    //     await browser.pause(2000)
-    // });
-    // xit('should create organisation after email validation', async () => {
-    //     const handles = await browser.getWindowHandles()
-    //     await browser.closeWindow()
-    //     await browser.switchToWindow(handles[1])
-    //     await expect(await authPage.isOrganizationFieldDisplayed()).true;
-    //     await authPage.setOrganizationNameFieldValue(randomOrgName);
-    //     await browser.pause(1000)
-    //     await authPage.selectCountryDropDownValue(0)
-    //     await authPage.clickCreateOrganizationBtn();
-    //     await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
-    //     await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
-    // });
-    // //change sub
-    // xit('should create a new register', async () => {
-    //     await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
-    //     await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
-    //     await devAssetMainPage.clickCreateFirstRegisterBtn()
-    //     await helper.createRegister()
-    //     await devAssetMainPage.clickAssetsLink()
-    //     await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
-    //     await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
-    // });
-    // xit('should change subscription plan', async () => {
-    //     await devAssetMainPage.clickOrganisationSettingsLink()
-    //     await devAssetMainPage.clickSubscriptionAndPaymentLink()
-    //     await expect(await devAssetMainPage.isPaymentFormDisplayed()).true
-    //     await devAssetMainPage.clickOrganisationSettingsUpgradeBtn()
-    //     await expect(await devAssetMainPage.isSubscriptionFormDisplayed()).true
-    //     await devAssetMainPage.clickToggleForAccountingFirms()
-    //     await devAssetMainPage.clickStandartChangePlanBtn()
-    //     await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true
-    //     await browser.switchToFrame(5)
-    //     await devAssetMainPage.setCardNumberFieldValue('4242 4242 4242 4242')
-    //     await browser.switchToParentFrame()
-    //     await browser.switchToFrame(6)
-    //     await devAssetMainPage.setCardExpiryFieldValue('0324')
-    //     await browser.switchToParentFrame()
-    //     await browser.switchToFrame(7)
-    //     await devAssetMainPage.setCvcFieldValue('777')
-    //     await browser.switchToParentFrame()
-    //     await devAssetMainPage.clickPaymentUpgradeSubBtn()
-    //     await expect(await devAssetMainPage.isCurrentPaymentMethodAlertDisplayed()).true
-    //     await expect(await devAssetMainPage.isCurrentAccountPlanDispalyed()).true
-    //     await expect(await devAssetMainPage.isChangePlanBtnDisplayed()).true
-    //     await helper.logout()
-    // });
+    it('should create account with valid credentials', async () => {
+        await helper.createAssetAccount()
+        await expect(await authPage.isEmailVerificationFormDisplayed()).true;
+        await authPage.clickOkVerifyBtn()
+        await expect(await authPage.isSignInBtnDisplayed()).true;
+    });
+    it('should verify account by email', async () => {
+        await browser.url('https://mail.google.com/')
+        await browser.pause(7000)
+        await helper.loginToGoogleMailBox()
+        await googleMailPage.clickVerifyMessage()
+        await expect(await googleMailPage.isVerifyLinkDisplayed()).true;
+        await googleMailPage.scrollIntoVerifyLink()
+        await googleMailPage.clickVerifyLink()
+        await googleMailPage.clickBackBtn()
+        await googleMailPage.clickSelectVerifyMessageCheckBox()
+        await googleMailPage.clickDeleteVerifyMessageBtn()
+        await expect(await googleMailPage.isAlertMessageDisplayed()).true;
+        await googleMailPage.clickCloseAlertMessageBtn()
+        await browser.pause(2000)
+    });
+    it('should create organisation after email validation', async () => {
+        const handles = await browser.getWindowHandles()
+        await browser.closeWindow()
+        await browser.switchToWindow(handles[1])
+        await expect(await authPage.isOrganizationFieldDisplayed()).true;
+        await authPage.setOrganizationNameFieldValue(randomOrgName);
+        await browser.pause(1000)
+        await authPage.selectCountryDropDownValue(0)
+        await authPage.clickCreateOrganizationBtn();
+        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
+        await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
+    });
+    //change sub
+    it('should create a new register', async () => {
+        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
+        await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
+        await devAssetMainPage.clickCreateFirstRegisterBtn()
+        await helper.createRegister()
+        await devAssetMainPage.clickAssetsLink()
+        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
+        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+    });
+    it('should change subscription plan', async () => {
+        await devAssetMainPage.clickOrganisationSettingsLink()
+        await devAssetMainPage.clickSubscriptionAndPaymentLink()
+        await expect(await devAssetMainPage.isPaymentFormDisplayed()).true
+        await devAssetMainPage.clickOrganisationSettingsUpgradeBtn()
+        await expect(await devAssetMainPage.isSubscriptionFormDisplayed()).true
+        await devAssetMainPage.clickToggleForAccountingFirms()
+        await devAssetMainPage.clickStandartChangePlanBtn()
+        await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true
+        await browser.switchToFrame(5)
+        await devAssetMainPage.setCardNumberFieldValue('4242 4242 4242 4242')
+        await browser.switchToParentFrame()
+        await browser.switchToFrame(6)
+        await devAssetMainPage.setCardExpiryFieldValue('0324')
+        await browser.switchToParentFrame()
+        await browser.switchToFrame(7)
+        await devAssetMainPage.setCvcFieldValue('777')
+        await browser.switchToParentFrame()
+        await devAssetMainPage.clickPaymentUpgradeSubBtn()
+        await expect(await devAssetMainPage.isCurrentPaymentMethodAlertDisplayed()).true
+        await expect(await devAssetMainPage.isCurrentAccountPlanDispalyed()).true
+        await expect(await devAssetMainPage.isChangePlanBtnDisplayed()).true
+        await helper.logout()
+    });
     //login to existing acc
     it('should login to existing account', async () => {
         await browser.url(baseUrl.baseUrlLink)
