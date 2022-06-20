@@ -126,6 +126,16 @@ class Helper {
         await authPage.clickSignInSubmitBtn()
     }
 
+    async loginToAccountAssetSuperTest() {
+        await authPage.clickSignInBtn()
+        await authPage.isUserNameLoginFieldDisplayed()
+        await authPage.setUserNameValue(loginData.userEmailAccountAssetSuperTest)
+        await authPage.clickNextBtn()
+        await authPage.isPasswordLoginFieldDisplayed()
+        await authPage.setPasswordSignInValue(loginData.userPasswAccountAssetSuperTest)
+        await authPage.clickSignInSubmitBtn()
+    }
+
     async loginToAccountInvTo() {
         await authPage.clickSignInBtn()
         await authPage.isUserNameLoginFieldDisplayed()
@@ -159,6 +169,7 @@ class Helper {
         await devAssetMainPage.setRegisterNameValue(registerNameSettings)
         await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
         await devAssetMainPage.setRegisterEntityValue('testRegisterEntity')
+        await browser.pause(2000)
         await devAssetMainPage.clickNextRegisterBtn()
         await devAssetMainPage.clickTryForFreeBtn()
         await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true
@@ -415,6 +426,8 @@ class Helper {
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickReassessmentBtn()
         await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
+        await devAssetMainPage.selectReassessMethodDropDownValue(5)
+        await devAssetMainPage.setEffectiveLifeFieldValue(5)
         await browser.pause(2000)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
@@ -452,6 +465,8 @@ class Helper {
     async taxAddAdjustment() {
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickAdjustmentBtn()
+        await devAssetMainPage.setCostChangeFieldValue(1000)
+        await devAssetMainPage.setDepreciationChangeFieldValue('-300')
         await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
@@ -471,6 +486,7 @@ class Helper {
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickReassessmentOfTaxableUseBtn()
         await expect(await devAssetMainPage.isTaxableUsageValueFieldDisplayed()).true
+        await devAssetMainPage.setTaxableUsageValueFieldValue(80)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
     }
@@ -490,6 +506,8 @@ class Helper {
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickReassessmentBtn()
         await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
+        await devAssetMainPage.selectReassessMethodDropDownValue(2)
+        await devAssetMainPage.setEffectiveLifeFieldValue(10)
         await browser.pause(2000)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
@@ -551,6 +569,8 @@ class Helper {
         await devAssetMainPage.clickAssetAccountsTabLink()
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickAccountsAdjustmentBtn()
+        await devAssetMainPage.setCostChangeFieldValue(1000)
+        await devAssetMainPage.setDepreciationChangeFieldValue('-300')
         await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true

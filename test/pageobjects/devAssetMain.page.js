@@ -185,6 +185,9 @@ const writeOffPartialBtn = '//app-standard-page/app-standard-page-content//div[2
 const assetTaxTabLink = '//div[1]/ul/li[1]/a'
 const assetAddDropDown = '//div[2]/div[2]/div/div/button'
 const reassessmentBtn = '//div[2]/div[2]/div/div/div/button[1]'
+const reassessMethodDropDown = '[formcontrolname="depreciationMethodId"]'
+const effectiveLifeField = '//app-autocalc-life/div/input'
+const effectiveLifeDropDown = '//app-autocalc-life/select'
 const reassessmentTaxBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
 const transferToPoolBtn = '//div[2]/div[2]/div/div/div/button[2]'
 const lowValuePoolRadioBtn = '//*[@id="AULVPSBP-AU_LVP"]'
@@ -194,6 +197,8 @@ const transferToPoolTaxBtn = '//app-standard-page/app-standard-page-content//div
 const lowValuePoolLink = '//div[1]/div/h4/a'
 const adjustmentBtn = '//div[2]/div[2]/div/div/div/button[3]'
 const notesField = '[formcontrolname="notes"]'
+const costChangeField = '//form/div[1]/app-form-control[2]//input'
+const depreciationChangeField = '//form/div[1]/app-form-control[3]//input'
 const adjustmentTaxBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
 const reassessmentOfTaxableUseBtn = '//div[2]/div[2]/div/div/div/button[4]'
 const taxableUseBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
@@ -990,6 +995,18 @@ class DevAssetMainpage {
         return await page.click(reassessmentBtn)
     }
 
+    async selectReassessMethodDropDownValue(reassessMethodDropDownValue){
+        return await page.clickDropdownItemByIndex(reassessMethodDropDown, reassessMethodDropDownValue)
+    }
+
+    async selectEffectiveLifeDropDownValue(effectiveLifeDropDownValue){
+        return await page.clickDropdownItemByIndex(effectiveLifeDropDown, effectiveLifeDropDownValue)
+    }
+
+    async setEffectiveLifeFieldValue(effectiveLifeFieldValue){
+        return await page.setValue(effectiveLifeField, effectiveLifeFieldValue)
+    }
+
     async clickReassessmentTaxBtn(){
         return await page.click(reassessmentTaxBtn)
     }
@@ -1026,6 +1043,14 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(notesField)
     }
 
+    async setCostChangeFieldValue(costChangeFieldValue){
+        return await page.setValue(costChangeField, costChangeFieldValue)
+    }
+
+    async setDepreciationChangeFieldValue(depreciationChangeFieldValue){
+        return await page.setValue(depreciationChangeField, depreciationChangeFieldValue)
+    }
+
     async clickAdjustmentTaxBtn(){
         return await page.click(adjustmentTaxBtn)
     }
@@ -1040,6 +1065,10 @@ class DevAssetMainpage {
 
     async isTaxableUsageValueFieldDisplayed(){
         return await page.isElementDisplayed(taxableUsageValueField)
+    }
+    
+    async setTaxableUsageValueFieldValue(taxableUsageValueFieldValue){
+        return await page.setValue(taxableUsageValueField, taxableUsageValueFieldValue)
     }
 
     async clickAssetAccountsTabLink(){

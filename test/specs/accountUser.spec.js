@@ -146,8 +146,8 @@ describe('Account / User', () => {
     });
     it('should find and accept email invitation', async () => {
         await browser.url('https://mail.google.com/')
-        await browser.pause(2000)
-        await helper.loginToGoogleMailBox()
+        await browser.pause(7000)
+        //await helper.loginToGoogleMailBox()
         await googleMailPage.clickInviteMessage()
         await googleMailPage.clickAcceptInvitationLinkLink()
         await googleMailPage.clickBackBtn()
@@ -262,7 +262,7 @@ describe('Account / User', () => {
     });
     it('should find and accept email invitation', async () => {
         await browser.url('https://mail.google.com/')
-        await browser.pause(5000)
+        await browser.pause(7000)
         //await helper.loginToGoogleMailBox()
         await googleMailPage.clickInviteMessage()
         await googleMailPage.clickAcceptInvitationLinkLink()
