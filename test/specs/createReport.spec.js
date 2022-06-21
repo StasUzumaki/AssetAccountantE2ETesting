@@ -59,7 +59,7 @@ describe('create report', () => {
         //check if the file is exist
         await helper.checkingIfPdfFileIsExist()
         //pdf validation
-        await helper.pdfValidation()
+        await helper.pdfValidation(filePathPdf)
     });
     it('should create CSV report', async () => {
         await expect(await devAssetMainPage.isReportFormDisplayed()).true
@@ -78,7 +78,7 @@ describe('create report', () => {
         //check if the file is exist
         await helper.checkingIfCsvFileIsExist()
         // cvs file validation
-        await helper.csvValidation()
+        await helper.csvValidation(filePathCsv)
         await devAssetMainPage.clickCloseBtn()
     });
 });

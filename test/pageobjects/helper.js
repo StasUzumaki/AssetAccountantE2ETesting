@@ -52,7 +52,7 @@ const mainEmail = 'stasdevasset';
 const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber + "@gmail.com";
 const randomOrgName = randomName + '_org';
 const randomAssetName = randomName + '_Asset';
-const assetGroupName = randomName + randomCodeNumber + '_TestGroup';
+const assetGroupName = 'TestGroup' + randomName + randomCodeNumber + '_Blank';
 const randomLeaseName = randomName + '_Lease';
 const registerNameSettings = randomName + '_TestRegister'
 const filePathes = {
@@ -842,15 +842,14 @@ class Helper {
         await expect(await devAssetMainPage.isAttachmentsFormExist())
     }
 
-    async pdfValidation() {
-        const readPdf = async (uri = assetPDF) => {
+    async pdfValidation(currPath) {
+        const readPdf = async (uri = currPath) => {
             const buffer = fs.readFileSync(uri);
             try {
                 const data = await pdfParse(buffer);
 
                 // The content
                 console.log('Content: ', data.text);
-                //console.log('Does it includes: ', data.text.includes(`${randomAssetName}`));
 
                 // Total page
                 console.log('Total pages: ', data.numpages);
@@ -859,13 +858,13 @@ class Helper {
                 throw new Error(err);
             }
         }
-        const assetPDF = filePathes.currentPdfFilePath;
+        const assetPDF = filePathes.currPath;
         readPdf(assetPDF)
     }
 
-    async csvValidation() {
+    async csvValidation(currPath) {
         // This function reads data from a given CSV file
-        const readCSV = (filePath = assetCsv) => {
+        const readCSV = (filePath = currPath) => {
             const readStream = fs.createReadStream(filePath);
             const data = [];
             readStream
@@ -884,7 +883,7 @@ class Helper {
                 })
                 .on('error', (error) => console.error(error));
         };
-        const assetCsv = filePathes.currentCsvFilePath;
+        const assetCsv = filePathes.currPath;
         readCSV(assetCsv);
     }
 
