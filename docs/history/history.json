@@ -3271,25 +3271,17 @@
       "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 20,
+      "passed" : 19,
       "unknown" : 0,
-      "total" : 21
+      "total" : 20
     },
     "items" : [ {
-      "uid" : "45adcea32786ff62",
+      "uid" : "d0421d647cfd1722",
       "status" : "passed",
       "time" : {
-        "start" : 1655898227085,
-        "stop" : 1655898254506,
-        "duration" : 27421
-      }
-    }, {
-      "uid" : "174946389c359317",
-      "status" : "passed",
-      "time" : {
-        "start" : 1655898094655,
-        "stop" : 1655898112362,
-        "duration" : 17707
+        "start" : 1655903138192,
+        "stop" : 1655903155433,
+        "duration" : 17241
       }
     }, {
       "uid" : "34e38def6afc9bb3",
@@ -3434,6 +3426,15 @@
         "start" : 1655893558425,
         "stop" : 1655893576472,
         "duration" : 18047
+      }
+    }, {
+      "uid" : "3f4d01406c6c524e",
+      "status" : "failed",
+      "statusDetails" : "expected 'Demo Register' to include 'Demos Register'      \n                      actual expected\n                      \n                      'Demo Register'undefined\n                      ",
+      "time" : {
+        "start" : 1655879433916,
+        "stop" : 1655879461620,
+        "duration" : 27704
       }
     } ]
   },
