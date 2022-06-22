@@ -3271,11 +3271,19 @@
       "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     },
     "items" : [ {
+      "uid" : "b0b96b2d52881637",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655893558425,
+        "stop" : 1655893576472,
+        "duration" : 18047
+      }
+    }, {
       "uid" : "3f4d01406c6c524e",
       "status" : "failed",
       "statusDetails" : "expected 'Demo Register' to include 'Demos Register'      \n                      actual expected\n                      \n                      'Demo Register'undefined\n                      ",

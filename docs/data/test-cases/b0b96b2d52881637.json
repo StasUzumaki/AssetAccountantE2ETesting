@@ -1,0 +1,82 @@
+{
+  "uid" : "b0b96b2d52881637",
+  "name" : "should login to existing account",
+  "fullName" : "login to account.should login to existing account",
+  "historyId" : "c1b8dca11bc8dbb3c02e16917960a743",
+  "time" : {
+    "start" : 1655893558425,
+    "stop" : 1655893576472,
+    "duration" : 18047
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : true,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "login to account"
+  }, {
+    "name" : "testClass",
+    "value" : "login to account"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login to existing account"
+  }, {
+    "name" : "package",
+    "value" : "login to account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "3f4d01406c6c524e",
+        "status" : "failed",
+        "statusDetails" : "expected 'Demo Register' to include 'Demos Register'      \n                      actual expected\n                      \n                      'Demo Register'undefined\n                      ",
+        "time" : {
+          "start" : 1655879433916,
+          "stop" : 1655879461620,
+          "duration" : 27704
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b0b96b2d52881637.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}
