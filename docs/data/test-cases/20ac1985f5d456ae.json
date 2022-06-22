@@ -1,0 +1,62 @@
+{
+  "uid" : "20ac1985f5d456ae",
+  "name" : "should verify that we can see the journal in Xero",
+  "fullName" : "Map Chart of Accounts to Xero and post a Journal.should verify that we can see the journal in Xero",
+  "historyId" : "adc7aa0723fe04b9af991a4725fdf16d",
+  "time" : {
+    "start" : 1655194948298,
+    "stop" : 1655195240450,
+    "duration" : 292152
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "Timeout of 250000ms exceeded. The execution in the test \"Map Chart of Accounts to Xero and post a Journal should verify that we can see the journal in Xero\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\mapChartToXero.spec.js)",
+  "statusTrace" : "Error: Timeout of 250000ms exceeded. The execution in the test \"Map Chart of Accounts to Xero and post a Journal should verify that we can see the journal in Xero\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\mapChartToXero.spec.js)\n                    at createTimeoutError (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\errors.js:498:15)\n                    at Test.Runnable._timeoutError (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:431:10)\n                    at Timeout.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:246:24)\n                    at listOnTimeout (node:internal/timers:559:17)\n                    at processTimers (node:internal/timers:502:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testClass",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify that we can see the journal in Xero"
+  }, {
+    "name" : "package",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "20ac1985f5d456ae.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

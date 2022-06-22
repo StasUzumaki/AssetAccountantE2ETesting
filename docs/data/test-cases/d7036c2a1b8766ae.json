@@ -1,0 +1,60 @@
+{
+  "uid" : "d7036c2a1b8766ae",
+  "name" : "should add and reverse transfer to pool",
+  "fullName" : "Asset Super Test.should add and reverse transfer to pool",
+  "historyId" : "a555d82e67c2f42307be033673cc3531",
+  "time" : {
+    "start" : 1655800405056,
+    "stop" : 1655800417334,
+    "duration" : 12278
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add and reverse transfer to pool"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d7036c2a1b8766ae.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

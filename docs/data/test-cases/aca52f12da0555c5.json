@@ -1,0 +1,62 @@
+{
+  "uid" : "aca52f12da0555c5",
+  "name" : "should create 11 asset",
+  "fullName" : "create a new register.should create 11 asset",
+  "historyId" : "1d3aa27d937f5dcfc6bcd9e21f1c1b0a",
+  "time" : {
+    "start" : 1655111210956,
+    "stop" : 1655111383343,
+    "duration" : 172387
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create 11 asset"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "aca52f12da0555c5.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

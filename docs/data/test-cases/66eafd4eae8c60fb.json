@@ -1,0 +1,143 @@
+{
+  "uid" : "66eafd4eae8c60fb",
+  "name" : "should verify account by email",
+  "fullName" : "Create account.should verify account by email",
+  "historyId" : "d064306d8a06df19adf233860a81dcfc",
+  "time" : {
+    "start" : 1655452163161,
+    "stop" : 1655452208848,
+    "duration" : 45687
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 10,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create account"
+  }, {
+    "name" : "testClass",
+    "value" : "Create account"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify account by email"
+  }, {
+    "name" : "package",
+    "value" : "Create account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "85d73da8f3704f32",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1655452022151,
+        "stop" : 1655452065275,
+        "duration" : 43124
+      }
+    }, {
+      "uid" : "12a0345e9bd9310b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655449383152,
+        "stop" : 1655449404573,
+        "duration" : 21421
+      }
+    }, {
+      "uid" : "81328d1765d302f2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655449233953,
+        "stop" : 1655449259578,
+        "duration" : 25625
+      }
+    }, {
+      "uid" : "20666ef2662a6fd8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655128429331,
+        "stop" : 1655128447839,
+        "duration" : 18508
+      }
+    }, {
+      "uid" : "29dea073b863c355",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655105987586,
+        "stop" : 1655106010780,
+        "duration" : 23194
+      }
+    }, {
+      "uid" : "f24e3d6be71732bb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655101689726,
+        "stop" : 1655101709049,
+        "duration" : 19323
+      }
+    }, {
+      "uid" : "9ec58b0b04f03882",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655101344946,
+        "stop" : 1655101367505,
+        "duration" : 22559
+      }
+    }, {
+      "uid" : "692b04bc5aafdc4a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655101262897,
+        "stop" : 1655101282473,
+        "duration" : 19576
+      }
+    }, {
+      "uid" : "2b0c9fc3470d680c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655101081136,
+        "stop" : 1655101101373,
+        "duration" : 20237
+      }
+    }, {
+      "uid" : "996a051728cd4b93",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653983830323,
+        "stop" : 1653983852042,
+        "duration" : 21719
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "66eafd4eae8c60fb.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

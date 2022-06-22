@@ -1,0 +1,60 @@
+{
+  "uid" : "ba9345ff744a428e",
+  "name" : "should have create intuit account",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.should have create intuit account",
+  "historyId" : "cc2477c75598849fa08f2ca1ab28650a",
+  "time" : {
+    "start" : 1654002806791,
+    "stop" : 1654002840980,
+    "duration" : 34189
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have create intuit account"
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ba9345ff744a428e.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

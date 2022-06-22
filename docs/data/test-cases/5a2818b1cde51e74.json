@@ -1,0 +1,77 @@
+{
+  "uid" : "5a2818b1cde51e74",
+  "name" : "\"after each\" hook for dev asset page",
+  "fullName" : "dev asset page.\"after each\" hook for dev asset page",
+  "historyId" : "f33470cb11ec582734e4e432b97718b4",
+  "time" : {
+    "start" : 1651654034679,
+    "stop" : 1651654061425,
+    "duration" : 26746
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 25000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 25000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitForClickable (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:20:9)\n                    at async Page.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:26:9)\n                    at async DevAssetMainpage.clickExitBtn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:130:16)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAssetGroup.spec.js:20:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"after each\" hook for dev asset page"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-100.0.4896.127"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "57f6f6e64a7a15fc",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1651647927868,
+        "stop" : 1651647962881,
+        "duration" : 35013
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "5a2818b1cde51e74.json",
+  "parameterValues" : [ "chrome-100.0.4896.127" ]
+}

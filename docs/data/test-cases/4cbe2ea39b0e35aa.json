@@ -1,0 +1,259 @@
+{
+  "uid" : "4cbe2ea39b0e35aa",
+  "name" : "should verify account by email and validate that user can access the Register they have been invited to",
+  "fullName" : "Account / User.should verify account by email and validate that user can access the Register they have been invited to",
+  "historyId" : "844651a4933cc0a470fcb45410193565",
+  "time" : {
+    "start" : 1655473083120,
+    "stop" : 1655473103979,
+    "duration" : 20859
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 24,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify account by email and validate that user can access the Register they have been invited to"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "7261f265bb292d44",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655472958849,
+        "stop" : 1655472981608,
+        "duration" : 22759
+      }
+    }, {
+      "uid" : "99edd6df76a2b615",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655470417710,
+        "stop" : 1655470438537,
+        "duration" : 20827
+      }
+    }, {
+      "uid" : "cf079c97f334fd91",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655470294930,
+        "stop" : 1655470315856,
+        "duration" : 20926
+      }
+    }, {
+      "uid" : "75b4ea59f7205689",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655469189233,
+        "stop" : 1655469208187,
+        "duration" : 18954
+      }
+    }, {
+      "uid" : "216a6519384922e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655469068262,
+        "stop" : 1655469089561,
+        "duration" : 21299
+      }
+    }, {
+      "uid" : "89351468a84d5360",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655467050092,
+        "stop" : 1655467072546,
+        "duration" : 22454
+      }
+    }, {
+      "uid" : "cd09d426052b296c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655466915104,
+        "stop" : 1655466949533,
+        "duration" : 34429
+      }
+    }, {
+      "uid" : "20ef2745a31e07eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655466259133,
+        "stop" : 1655466280407,
+        "duration" : 21274
+      }
+    }, {
+      "uid" : "23c49f39ff35942",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655466128625,
+        "stop" : 1655466152920,
+        "duration" : 24295
+      }
+    }, {
+      "uid" : "f0b2706ebdec0ad7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655464179678,
+        "stop" : 1655464192454,
+        "duration" : 12776
+      }
+    }, {
+      "uid" : "e622172d24638d54",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655464087224,
+        "stop" : 1655464098756,
+        "duration" : 11532
+      }
+    }, {
+      "uid" : "d7fcc9984a6118c4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655463881879,
+        "stop" : 1655463894490,
+        "duration" : 12611
+      }
+    }, {
+      "uid" : "257421995066dad4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655463777646,
+        "stop" : 1655463791280,
+        "duration" : 13634
+      }
+    }, {
+      "uid" : "75a0b980f5acc116",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655463456224,
+        "stop" : 1655463468234,
+        "duration" : 12010
+      }
+    }, {
+      "uid" : "b03539cc972bc4da",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655463361886,
+        "stop" : 1655463374405,
+        "duration" : 12519
+      }
+    }, {
+      "uid" : "f7055d9a90f05197",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1655462427514,
+        "stop" : 1655462484182,
+        "duration" : 56668
+      }
+    }, {
+      "uid" : "76f66a5de66bda44",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655462240178,
+        "stop" : 1655462255011,
+        "duration" : 14833
+      }
+    }, {
+      "uid" : "c760ca8e6b4b7a37",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1655461770192,
+        "stop" : 1655461807408,
+        "duration" : 37216
+      }
+    }, {
+      "uid" : "12e6bf1d54356671",
+      "status" : "failed",
+      "statusDetails" : "expected false to be true      \n                      actual expected\n                      \n                      falsetrue\n                      ",
+      "time" : {
+        "start" : 1655461465754,
+        "stop" : 1655461473435,
+        "duration" : 7681
+      }
+    }, {
+      "uid" : "a1d460937b56a6f7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655461234303,
+        "stop" : 1655461247139,
+        "duration" : 12836
+      }
+    }, {
+      "uid" : "cc45d85476a791b3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655459517267,
+        "stop" : 1655459530049,
+        "duration" : 12782
+      }
+    }, {
+      "uid" : "182d4797a69ea5ef",
+      "status" : "failed",
+      "statusDetails" : "expected 'controlled_dinosaur_TestRegister' to include 'InviteUsers_Register'      \n                      actual expected\n                      \n                      'controlled_dinosaur_TestRegister'undefined\n                      ",
+      "time" : {
+        "start" : 1655458734030,
+        "stop" : 1655458751791,
+        "duration" : 17761
+      }
+    }, {
+      "uid" : "410fe900630b9be6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655456353417,
+        "stop" : 1655456385626,
+        "duration" : 32209
+      }
+    }, {
+      "uid" : "9211b8e3e31fd88",
+      "status" : "failed",
+      "statusDetails" : "expected 'integral_bat_TestRegister' to include 'InviteUsers_Register'      \n                      actual expected\n                      \n                      'integral_bat_TestRegister'undefined\n                      ",
+      "time" : {
+        "start" : 1655455288509,
+        "stop" : 1655455305195,
+        "duration" : 16686
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4cbe2ea39b0e35aa.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

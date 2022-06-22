@@ -1,0 +1,62 @@
+{
+  "uid" : "33c45c9009340692",
+  "name" : "should create a new org",
+  "fullName" : "create a new register.should create a new org",
+  "historyId" : "a593ad1eb9ba0aea6dd1688d826c8426",
+  "time" : {
+    "start" : 1652944964951,
+    "stop" : 1652945048320,
+    "duration" : 83369
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.isElementDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:57:9)\n                    at async DevAssetMainpage.isSettingsHeaderDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:818:16)\n                    at async Helper.createOrganisation (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:120:22)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\triggerSubscriptionUpgrade.spec.js:27:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a new org"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "33c45c9009340692.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

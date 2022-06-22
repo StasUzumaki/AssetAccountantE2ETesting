@@ -1,0 +1,62 @@
+{
+  "uid" : "6a058033c357dcb3",
+  "name" : "should create asset group (from template) if no groups have been created",
+  "fullName" : "create a new register.should create asset group (from template) if no groups have been created",
+  "historyId" : "5cc463224438bf27d6f70fe9b1316a1d",
+  "time" : {
+    "start" : 1655111115348,
+    "stop" : 1655111117430,
+    "duration" : 2082
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset group (from template) if no groups have been created"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6a058033c357dcb3.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

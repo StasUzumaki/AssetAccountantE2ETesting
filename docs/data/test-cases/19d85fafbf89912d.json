@@ -1,0 +1,60 @@
+{
+  "uid" : "19d85fafbf89912d",
+  "name" : "should create a new register",
+  "fullName" : "create a new register.should create a new register",
+  "historyId" : "a7947aca7320770fadb768c147b3e9cc",
+  "time" : {
+    "start" : 1651678581114,
+    "stop" : 1651678598889,
+    "duration" : 17775
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a new register"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-100.0.4896.127"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "19d85fafbf89912d.json",
+  "parameterValues" : [ "chrome-100.0.4896.127" ]
+}

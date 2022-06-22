@@ -1,0 +1,62 @@
+{
+  "uid" : "b7ac0aba797e7555",
+  "name" : "should create asset group (from template) if no groups have been created",
+  "fullName" : "create a new register.should create asset group (from template) if no groups have been created",
+  "historyId" : "32ee9944da718a3836960f13f6d4a6b8",
+  "time" : {
+    "start" : 1652945089382,
+    "stop" : 1652945124402,
+    "duration" : 35020
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilClickable (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:26:9)\n                    at async Page.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:32:9)\n                    at async DevAssetMainpage.clickCreateAssetGroupTemplateBtn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:624:16)\n                    at async Helper.createAssetGroupFromTemplate (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:143:9)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\triggerSubscriptionUpgrade.spec.js:39:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset group (from template) if no groups have been created"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b7ac0aba797e7555.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

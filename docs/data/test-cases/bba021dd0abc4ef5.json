@@ -1,0 +1,62 @@
+{
+  "uid" : "bba021dd0abc4ef5",
+  "name" : "should create journal",
+  "fullName" : "Asset Super Test.should create journal",
+  "historyId" : "edd425e7f361f713c64790455a361694",
+  "time" : {
+    "start" : 1655730879096,
+    "stop" : 1655730921573,
+    "duration" : 42477
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.isElementDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:62:9)\n                    at async DevAssetMainpage.isAccountTypeCostCellDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:1331:16)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js:162:22)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create journal"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bba021dd0abc4ef5.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

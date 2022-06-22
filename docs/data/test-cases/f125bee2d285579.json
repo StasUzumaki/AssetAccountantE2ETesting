@@ -1,0 +1,60 @@
+{
+  "uid" : "f125bee2d285579",
+  "name" : "should create asset",
+  "fullName" : "Map Chart of Accounts to Xero and post a Journal.should create asset",
+  "historyId" : "e890663499cb35366301129be1f7a57b",
+  "time" : {
+    "start" : 1655128254342,
+    "stop" : 1655128267811,
+    "duration" : 13469
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testClass",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset"
+  }, {
+    "name" : "package",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f125bee2d285579.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

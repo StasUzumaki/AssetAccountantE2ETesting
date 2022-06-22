@@ -1,0 +1,79 @@
+{
+  "uid" : "c9b43d0622b124b6",
+  "name" : "should have validate that we are connected with Xero",
+  "fullName" : "Create an account from Xero.should have validate that we are connected with Xero",
+  "historyId" : "846b87847c1101818e2cfaea2ca7fe3f",
+  "time" : {
+    "start" : 1655198423927,
+    "stop" : 1655198432021,
+    "duration" : 8094
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have validate that we are connected with Xero"
+  }, {
+    "name" : "package",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "cf93568f05adc7bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655194164246,
+        "stop" : 1655194173530,
+        "duration" : 9284
+      }
+    }, {
+      "uid" : "eaa7eb23e55548a0",
+      "status" : "broken",
+      "statusDetails" : "the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string",
+      "time" : {
+        "start" : 1655193785642,
+        "stop" : 1655193794605,
+        "duration" : 8963
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c9b43d0622b124b6.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

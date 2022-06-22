@@ -1,0 +1,62 @@
+{
+  "uid" : "579f878dedd87b6e",
+  "name" : "should change subscription plan",
+  "fullName" : "create a new register.should change subscription plan",
+  "historyId" : "9f6f029df90923e3d4f4f187ae7814b3",
+  "time" : {
+    "start" : 1652361292616,
+    "stop" : 1652361311609,
+    "duration" : 18993
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Expected values to be strictly equal:\n                + actual - expected\n                \n                + 'Upgrade'\n                - 'Change Plan'      \n                      actual expected\n                      \n                      'UpgradeChange Plan'\n                      ",
+  "statusTrace" : "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n                + actual - expected\n                \n                + 'Upgrade'\n                - 'Change Plan'\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\changeSubscription.spec.js:91:16)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should change subscription plan"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "579f878dedd87b6e.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

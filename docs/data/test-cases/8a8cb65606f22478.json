@@ -1,0 +1,115 @@
+{
+  "uid" : "8a8cb65606f22478",
+  "name" : "should link to account tab, add and reverse revaluation",
+  "fullName" : "dev asset page.should link to account tab, add and reverse revaluation",
+  "historyId" : "4014f9a65a40f115a8ea90c59a66771",
+  "time" : {
+    "start" : 1655711493028,
+    "stop" : 1655711493028,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 7,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should link to account tab, add and reverse revaluation"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f95485f1986e44dd",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655711353515,
+        "stop" : 1655711353515,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "ae9181475236162e",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655711029098,
+        "stop" : 1655711029099,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "44b077abf031e57d",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655710888861,
+        "stop" : 1655710888861,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "8a5add37c70c4cae",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655710500658,
+        "stop" : 1655710500658,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "4486d2e06fd0901d",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655709709963,
+        "stop" : 1655709709963,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "2e8be1ed2dd7a631",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655709198850,
+        "stop" : 1655709198850,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "c422106e86fbedc9",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655361716446,
+        "stop" : 1655361716446,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8a8cb65606f22478.json",
+  "parameterValues" : [ ]
+}

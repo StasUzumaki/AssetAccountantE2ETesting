@@ -1,0 +1,52 @@
+{
+  "uid" : "af0c9086ae6bb910",
+  "name" : "should link to account tab, add and reverse impairment",
+  "fullName" : "Asset Super Test.should link to account tab, add and reverse impairment",
+  "historyId" : "e44ac093f30d3f5aea812ee492b90c9",
+  "time" : {
+    "start" : 1655799374835,
+    "stop" : 1655799374835,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should link to account tab, add and reverse impairment"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "af0c9086ae6bb910.json",
+  "parameterValues" : [ ]
+}

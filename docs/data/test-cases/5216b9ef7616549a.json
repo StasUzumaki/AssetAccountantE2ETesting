@@ -1,0 +1,62 @@
+{
+  "uid" : "5216b9ef7616549a",
+  "name" : "should create account with valid credentials",
+  "fullName" : "Create account.should create account with valid credentials",
+  "historyId" : "90231e064947e7c5b818050453e9f274",
+  "time" : {
+    "start" : 1652348125650,
+    "stop" : 1652348202492,
+    "duration" : 76842
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "Timeout of 60000ms exceeded. The execution in the test \"Create account should create account with valid credentials\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js)",
+  "statusTrace" : "Error: Timeout of 60000ms exceeded. The execution in the test \"Create account should create account with valid credentials\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js)\n                    at createTimeoutError (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\errors.js:498:15)\n                    at Test.Runnable._timeoutError (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:431:10)\n                    at Timeout.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:246:24)\n                    at listOnTimeout (node:internal/timers:559:17)\n                    at processTimers (node:internal/timers:502:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create account"
+  }, {
+    "name" : "testClass",
+    "value" : "Create account"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create account with valid credentials"
+  }, {
+    "name" : "package",
+    "value" : "Create account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5216b9ef7616549a.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

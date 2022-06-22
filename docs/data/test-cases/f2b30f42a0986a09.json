@@ -1,0 +1,62 @@
+{
+  "uid" : "f2b30f42a0986a09",
+  "name" : "\"after all\" hook for create report",
+  "fullName" : "create report.\"after all\" hook for create report",
+  "historyId" : "c718f9c91b32c8d000269fe4d9f2c0cc",
+  "time" : {
+    "start" : 1653477097635,
+    "stop" : 1653477133476,
+    "duration" : 35841
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilClickable (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:26:9)\n                    at async Page.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:32:9)\n                    at async DevAssetMainpage.clickFirstAssetLink (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:507:16)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createReport.spec.js:32:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"after all\" hook for create report"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f2b30f42a0986a09.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

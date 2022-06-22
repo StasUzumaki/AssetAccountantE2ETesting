@@ -1,0 +1,60 @@
+{
+  "uid" : "d1833cb08828dfb5",
+  "name" : "should create asset group from template if no groups have been created",
+  "fullName" : "dev asset page.should create asset group from template if no groups have been created",
+  "historyId" : "df324b9052c76f81adf00c44f65d7d29",
+  "time" : {
+    "start" : 1652795096175,
+    "stop" : 1652795128925,
+    "duration" : 32750
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset group from template if no groups have been created"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d1833cb08828dfb5.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

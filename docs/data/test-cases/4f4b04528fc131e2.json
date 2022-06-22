@@ -1,0 +1,62 @@
+{
+  "uid" : "4f4b04528fc131e2",
+  "name" : "should create asset",
+  "fullName" : "Asset Super Test.should create asset",
+  "historyId" : "b9ac3463f7d421b26b1e358b7b5584f8",
+  "time" : {
+    "start" : 1655721337202,
+    "stop" : 1655721381877,
+    "duration" : 44675
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.isElementDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:62:9)\n                    at async DevAssetMainpage.isAssetDescriptionTitleDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:1483:16)\n                    at async Helper.createAssetClassification (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:327:22)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js:51:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4f4b04528fc131e2.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

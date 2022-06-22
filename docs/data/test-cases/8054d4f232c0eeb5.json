@@ -1,0 +1,60 @@
+{
+  "uid" : "8054d4f232c0eeb5",
+  "name" : "should create HP/Lease",
+  "fullName" : "Asset Super Test.should create HP/Lease",
+  "historyId" : "c680f587368300a4ebb33227325eb4a2",
+  "time" : {
+    "start" : 1655807016866,
+    "stop" : 1655807032672,
+    "duration" : 15806
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create HP/Lease"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8054d4f232c0eeb5.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

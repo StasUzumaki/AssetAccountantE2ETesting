@@ -1,0 +1,60 @@
+{
+  "uid" : "f07bda1359c3f95c",
+  "name" : "should login to existing account",
+  "fullName" : "Account / User.should login to existing account",
+  "historyId" : "dc7fc8f82411e6ec5605da82449d472",
+  "time" : {
+    "start" : 1655462284902,
+    "stop" : 1655462301752,
+    "duration" : 16850
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login to existing account"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f07bda1359c3f95c.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

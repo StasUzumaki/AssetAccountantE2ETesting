@@ -1,0 +1,86 @@
+{
+  "uid" : "b42f6efce88551f2",
+  "name" : "\"after all\" hook for Create an AA account from QBO / connect to QBO from AA",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.\"after all\" hook for Create an AA account from QBO / connect to QBO from AA",
+  "historyId" : "30c87c278eda2ad1885c5092fc9373bf",
+  "time" : {
+    "start" : 1654254264888,
+    "stop" : 1654254334904,
+    "duration" : 70016
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilClickable (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:26:9)\n                    at async Page.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:32:9)\n                    at async DevAssetMainpage.clickUserProfileLink (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:956:16)\n                    at async Helper.logout (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:113:9)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccountFromQbo.spec.js:19:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"after all\" hook for Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c56da5f0ed56ea53",
+      "status" : "broken",
+      "statusDetails" : "Malformed type for \"handle\" parameter of command switchToWindow\n                Expected: string\n                Actual: undefined\n                \n                For more info see https://w3c.github.io/webdriver/#dfn-switch-to-window\n                ",
+      "time" : {
+        "start" : 1654151821626,
+        "stop" : 1654151862991,
+        "duration" : 41365
+      }
+    }, {
+      "uid" : "d232ebcfde743890",
+      "status" : "broken",
+      "statusDetails" : "Malformed type for \"handle\" parameter of command switchToWindow\n                Expected: string\n                Actual: undefined\n                \n                For more info see https://w3c.github.io/webdriver/#dfn-switch-to-window\n                ",
+      "time" : {
+        "start" : 1654151603281,
+        "stop" : 1654151645483,
+        "duration" : 42202
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "b42f6efce88551f2.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

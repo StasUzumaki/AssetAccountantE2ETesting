@@ -1,0 +1,304 @@
+{
+  "uid" : "473315de4afad412",
+  "name" : "should create account with valid credentials",
+  "fullName" : "Create account.should create account with valid credentials",
+  "historyId" : "79ee3db83cc6629a793b052b9b4dede9",
+  "time" : {
+    "start" : 1651587667224,
+    "stop" : 1651587707842,
+    "duration" : 40618
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 29,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create account"
+  }, {
+    "name" : "testClass",
+    "value" : "Create account"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create account with valid credentials"
+  }, {
+    "name" : "package",
+    "value" : "Create account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-100.0.4896.127"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "db3fec02ab46fc1e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651578596914,
+        "stop" : 1651578648552,
+        "duration" : 51638
+      }
+    }, {
+      "uid" : "18d1c90659638ae4",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"Create account should create account with valid credentials\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js)",
+      "time" : {
+        "start" : 1651578517166,
+        "stop" : 1651578577175,
+        "duration" : 60009
+      }
+    }, {
+      "uid" : "a0c275aaad189823",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651576169843,
+        "stop" : 1651576188359,
+        "duration" : 18516
+      }
+    }, {
+      "uid" : "9ad9769169cf9ec3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651575442813,
+        "stop" : 1651575463156,
+        "duration" : 20343
+      }
+    }, {
+      "uid" : "e97d1aeba75bbd06",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651574332061,
+        "stop" : 1651574349439,
+        "duration" : 17378
+      }
+    }, {
+      "uid" : "340fd3a51af9ecc0",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 30000ms",
+      "time" : {
+        "start" : 1651572182018,
+        "stop" : 1651572234291,
+        "duration" : 52273
+      }
+    }, {
+      "uid" : "3e795338a598d696",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651571373764,
+        "stop" : 1651571396379,
+        "duration" : 22615
+      }
+    }, {
+      "uid" : "cc6ce37aefccc9ea",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651569972070,
+        "stop" : 1651569993904,
+        "duration" : 21834
+      }
+    }, {
+      "uid" : "73dd6c688fa75e26",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651568613867,
+        "stop" : 1651568636662,
+        "duration" : 22795
+      }
+    }, {
+      "uid" : "b45621408101d33e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651568382557,
+        "stop" : 1651568414017,
+        "duration" : 31460
+      }
+    }, {
+      "uid" : "2cceaa7052aba388",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651568254838,
+        "stop" : 1651568278239,
+        "duration" : 23401
+      }
+    }, {
+      "uid" : "8562cb507b670bbb",
+      "status" : "broken",
+      "statusDetails" : "latestEmail.map is not a function",
+      "time" : {
+        "start" : 1651567927542,
+        "stop" : 1651567953129,
+        "duration" : 25587
+      }
+    }, {
+      "uid" : "74b03d89dde75b5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651567751025,
+        "stop" : 1651567773419,
+        "duration" : 22394
+      }
+    }, {
+      "uid" : "bbafeba31871d15e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651567679925,
+        "stop" : 1651567703841,
+        "duration" : 23916
+      }
+    }, {
+      "uid" : "d8f958d07dec2cf1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651567544874,
+        "stop" : 1651567566058,
+        "duration" : 21184
+      }
+    }, {
+      "uid" : "edf4e4af72ecf3bf",
+      "status" : "broken",
+      "statusDetails" : "timeoutMs is not defined",
+      "time" : {
+        "start" : 1651567445412,
+        "stop" : 1651567463802,
+        "duration" : 18390
+      }
+    }, {
+      "uid" : "a97ff2ac836fbeb9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651566644257,
+        "stop" : 1651566645823,
+        "duration" : 1566
+      }
+    }, {
+      "uid" : "5b2d64675ed852ef",
+      "status" : "broken",
+      "statusDetails" : "Invalid Chai property: toContain. Did you mean \"contain\"?",
+      "time" : {
+        "start" : 1651566596957,
+        "stop" : 1651566597881,
+        "duration" : 924
+      }
+    }, {
+      "uid" : "31c412c34f09e0ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651559733083,
+        "stop" : 1651559790396,
+        "duration" : 57313
+      }
+    }, {
+      "uid" : "d7c2a4036ab8a17b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651507012495,
+        "stop" : 1651507053973,
+        "duration" : 41478
+      }
+    }, {
+      "uid" : "2d32552b3577f9e0",
+      "status" : "broken",
+      "statusDetails" : "No window found with title, url or name matching \"https://dev.asset.accountant/create-organisation\"",
+      "time" : {
+        "start" : 1651506887170,
+        "stop" : 1651506918758,
+        "duration" : 31588
+      }
+    }, {
+      "uid" : "3cca569aeac0a1e7",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651506401054,
+        "stop" : 1651506459014,
+        "duration" : 57960
+      }
+    }, {
+      "uid" : "a87d3c9c22d025ed",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651499337406,
+        "stop" : 1651499384163,
+        "duration" : 46757
+      }
+    }, {
+      "uid" : "af03d68e6e3d20cd",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651499263558,
+        "stop" : 1651499308460,
+        "duration" : 44902
+      }
+    }, {
+      "uid" : "661adc2f299e9f3c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651498383399,
+        "stop" : 1651498424497,
+        "duration" : 41098
+      }
+    }, {
+      "uid" : "54a43f61c4a27536",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651497254496,
+        "stop" : 1651497295369,
+        "duration" : 40873
+      }
+    }, {
+      "uid" : "ce9c8ffabe321b3d",
+      "status" : "broken",
+      "statusDetails" : "No window found with title, url or name matching \"https://dev.asset.accountant/create-organisation\"",
+      "time" : {
+        "start" : 1651497127298,
+        "stop" : 1651497156808,
+        "duration" : 29510
+      }
+    }, {
+      "uid" : "4eda39a33b1e92cb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651494280464,
+        "stop" : 1651494320570,
+        "duration" : 40106
+      }
+    }, {
+      "uid" : "85c39ea4c86ead1d",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651492375060,
+        "stop" : 1651492431877,
+        "duration" : 56817
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "473315de4afad412.json",
+  "parameterValues" : [ "chrome-100.0.4896.127" ]
+}

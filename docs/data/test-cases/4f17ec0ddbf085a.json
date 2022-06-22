@@ -1,0 +1,89 @@
+{
+  "uid" : "4f17ec0ddbf085a",
+  "name" : "should have fill Welcome form",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.should have fill Welcome form",
+  "historyId" : "dab8070da139fe28d3edec3cdd15467c",
+  "time" : {
+    "start" : 1654000904466,
+    "stop" : 1654000904471,
+    "duration" : 5
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 3,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "1-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have fill Welcome form"
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "msedge-101.0.1210.32"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ca62701d44575b31",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654000061775,
+        "stop" : 1654000076812,
+        "duration" : 15037
+      }
+    }, {
+      "uid" : "7b583bbf46329546",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653999982931,
+        "stop" : 1653999998369,
+        "duration" : 15438
+      }
+    }, {
+      "uid" : "90841db4d98baf43",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653999789898,
+        "stop" : 1653999824913,
+        "duration" : 35015
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4f17ec0ddbf085a.json",
+  "parameterValues" : [ "msedge-101.0.1210.32" ]
+}

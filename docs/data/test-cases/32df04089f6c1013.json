@@ -1,0 +1,50 @@
+{
+  "uid" : "32df04089f6c1013",
+  "name" : "should change subscription plan",
+  "fullName" : "Account / User.should change subscription plan",
+  "historyId" : "92395907a318792cba2249f2ffddc13f",
+  "time" : {
+    "start" : 1655459442356,
+    "stop" : 1655459442356,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should change subscription plan"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "32df04089f6c1013.json",
+  "parameterValues" : [ ]
+}

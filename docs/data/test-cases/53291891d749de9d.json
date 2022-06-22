@@ -1,0 +1,77 @@
+{
+  "uid" : "53291891d749de9d",
+  "name" : "should cheking if CSV file exist and validate it",
+  "fullName" : "Asset Super Test.should cheking if CSV file exist and validate it",
+  "historyId" : "5b51a1dd5bd07a994203a956db78cbd8",
+  "time" : {
+    "start" : 1655796494699,
+    "stop" : 1655796537083,
+    "duration" : 42384
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "done() called multiple times in test <Asset Super Test should cheking if CSV file exist and validate it> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js",
+  "statusTrace" : "Error: done() called multiple times in test <Asset Super Test should cheking if CSV file exist and validate it> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js\n                    at createMultipleDoneError (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\errors.js:428:13)\n                    at multiple (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:290:24)\n                    at done (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:301:14)\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:371:11\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should cheking if CSV file exist and validate it"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c443ab0b5de1a03e",
+      "status" : "broken",
+      "statusDetails" : "the string \"CSV File DOES not exist!!\" was thrown, throw an Error :)",
+      "time" : {
+        "start" : 1655796140945,
+        "stop" : 1655796193873,
+        "duration" : 52928
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "53291891d749de9d.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

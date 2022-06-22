@@ -1,0 +1,62 @@
+{
+  "uid" : "2b4dbf07c0f24bf2",
+  "name" : "should login to master account, remove user from Register",
+  "fullName" : "Account / User.should login to master account, remove user from Register",
+  "historyId" : "838291e0edcb5c3e4f95a86b403f1adf",
+  "time" : {
+    "start" : 1655459530053,
+    "stop" : 1655459540793,
+    "duration" : 10740
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected 'stasdevasset+super82@gmail.com' to include 'stasdevasset+spatial44@gmail.com'      \n                      actual expected\n                      \n                      'stasdevasset+super82@gmail.com'undefined\n                      ",
+  "statusTrace" : "AssertionError: expected 'stasdevasset+super82@gmail.com' to include 'stasdevasset+spatial44@gmail.com'\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\accountUser.spec.js:321:76)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login to master account, remove user from Register"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2b4dbf07c0f24bf2.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

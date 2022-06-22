@@ -1,0 +1,50 @@
+{
+  "uid" : "33b3dd7dcbeb68ba",
+  "name" : "should verify account by email",
+  "fullName" : "Account / User.should verify account by email",
+  "historyId" : "3e7e594ebc1ae7a13c1aaab29f489b27",
+  "time" : {
+    "start" : 1655458641829,
+    "stop" : 1655458641829,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify account by email"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "33b3dd7dcbeb68ba.json",
+  "parameterValues" : [ ]
+}

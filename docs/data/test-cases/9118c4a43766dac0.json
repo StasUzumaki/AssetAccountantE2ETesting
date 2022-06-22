@@ -1,0 +1,150 @@
+{
+  "uid" : "9118c4a43766dac0",
+  "name" : "should invite user and give them permissions for the Organisation and Register",
+  "fullName" : "Account / User.should invite user and give them permissions for the Organisation and Register",
+  "historyId" : "ceeb19f9111af5098949d6d66beda4e9",
+  "time" : {
+    "start" : 1655472898428,
+    "stop" : 1655472919085,
+    "duration" : 20657
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 11,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should invite user and give them permissions for the Organisation and Register"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "64b93afa6273ea23",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655470234599,
+        "stop" : 1655470253076,
+        "duration" : 18477
+      }
+    }, {
+      "uid" : "48a660c783e2045a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655469011346,
+        "stop" : 1655469029231,
+        "duration" : 17885
+      }
+    }, {
+      "uid" : "e602cb42b2895e9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655466857647,
+        "stop" : 1655466877162,
+        "duration" : 19515
+      }
+    }, {
+      "uid" : "6e05b607c53be890",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655466067861,
+        "stop" : 1655466087825,
+        "duration" : 19964
+      }
+    }, {
+      "uid" : "5b9332132d545b04",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655464048385,
+        "stop" : 1655464062042,
+        "duration" : 13657
+      }
+    }, {
+      "uid" : "57019c6cb2e23df",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655463736004,
+        "stop" : 1655463750211,
+        "duration" : 14207
+      }
+    }, {
+      "uid" : "f73febc348c5ec52",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655463320222,
+        "stop" : 1655463333373,
+        "duration" : 13151
+      }
+    }, {
+      "uid" : "a0170e0a28bafc6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655462203261,
+        "stop" : 1655462215050,
+        "duration" : 11789
+      }
+    }, {
+      "uid" : "68443215b34322b1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655461424541,
+        "stop" : 1655461438011,
+        "duration" : 13470
+      }
+    }, {
+      "uid" : "6a8a37fbd3a3c0bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655456295503,
+        "stop" : 1655456315333,
+        "duration" : 19830
+      }
+    }, {
+      "uid" : "52458eb482a4afb3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655455234160,
+        "stop" : 1655455251677,
+        "duration" : 17517
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9118c4a43766dac0.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

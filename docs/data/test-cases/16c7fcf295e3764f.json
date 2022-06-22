@@ -1,0 +1,62 @@
+{
+  "uid" : "16c7fcf295e3764f",
+  "name" : "\"after all\" hook for Sign in with Xero",
+  "fullName" : "Sign in with Xero.\"after all\" hook for Sign in with Xero",
+  "historyId" : "d85da3a72ca86014fb4396af94f8b6e2",
+  "time" : {
+    "start" : 1654683367997,
+    "stop" : 1654683451308,
+    "duration" : 83311
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "chrome not reachable\n                  (Session info: chrome=102.0.5005.63)",
+  "statusTrace" : "chrome not reachable: chrome not reachable\n                  (Session info: chrome=102.0.5005.63)\n                    at getErrorFromResponseBody (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriver\\build\\utils.js:197:12)\n                    at NodeJSRequest._request (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriver\\build\\request\\index.js:158:60)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Browser.switchWindow (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\switchWindow.js:38:18)\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\signInWithXero.spec.js:27:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"after all\" hook for Sign in with Xero"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "16c7fcf295e3764f.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

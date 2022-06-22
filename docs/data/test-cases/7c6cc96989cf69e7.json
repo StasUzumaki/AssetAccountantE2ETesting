@@ -1,0 +1,62 @@
+{
+  "uid" : "7c6cc96989cf69e7",
+  "name" : "should wait for PDF file to download",
+  "fullName" : "create report.should wait for PDF file to download",
+  "historyId" : "d8b8df1938865d956a563ae9df499c99",
+  "time" : {
+    "start" : 1653641619387,
+    "stop" : 1653641619403,
+    "duration" : 16
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "The \"path\" argument must be of type string. Received undefined",
+  "statusTrace" : "TypeError [ERR_INVALID_ARG_TYPE]: The \"path\" argument must be of type string. Received undefined\n                    at new NodeError (node:internal/errors:371:5)\n                    at validateString (node:internal/validators:120:11)\n                    at Object.dirname (node:path:654:5)\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:521:28\n                    at new Promise (<anonymous>)\n                    at Helper.waitForFileExists (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:519:16)\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createReport.spec.js:64:22)\n                    at Context.executeAsync (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:331:27)\n                    at Context.testFrameworkFnWrapper (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\test-framework\\testFnWrapper.js:51:32)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "should wait for PDF file to download"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7c6cc96989cf69e7.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

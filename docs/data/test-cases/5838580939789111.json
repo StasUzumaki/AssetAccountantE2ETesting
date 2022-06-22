@@ -1,0 +1,409 @@
+{
+  "uid" : "5838580939789111",
+  "name" : "should verify intuit account by email",
+  "fullName" : "Sign in with Xero.should verify intuit account by email",
+  "historyId" : "a0f0ab90476b8dcecf8cb9c38bdf5557",
+  "time" : {
+    "start" : 1655127178561,
+    "stop" : 1655127211125,
+    "duration" : 32564
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 42,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify intuit account by email"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3fe6a09617f86a47",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655126666386,
+        "stop" : 1655126694638,
+        "duration" : 28252
+      }
+    }, {
+      "uid" : "e52f938b06c92046",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654766444024,
+        "stop" : 1654766467849,
+        "duration" : 23825
+      }
+    }, {
+      "uid" : "4b6c2f81a0d182ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654764238674,
+        "stop" : 1654764271291,
+        "duration" : 32617
+      }
+    }, {
+      "uid" : "3580d982ff197572",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654761590814,
+        "stop" : 1654761627965,
+        "duration" : 37151
+      }
+    }, {
+      "uid" : "ae4dddeb4e8e8642",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654756609300,
+        "stop" : 1654756642979,
+        "duration" : 33679
+      }
+    }, {
+      "uid" : "f47a3f79ba750887",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654756130706,
+        "stop" : 1654756163039,
+        "duration" : 32333
+      }
+    }, {
+      "uid" : "57d1b8ef194c5105",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654695054282,
+        "stop" : 1654695083837,
+        "duration" : 29555
+      }
+    }, {
+      "uid" : "53ee007684af3e55",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654689799126,
+        "stop" : 1654689829709,
+        "duration" : 30583
+      }
+    }, {
+      "uid" : "1ac43e877d5c984f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654687396757,
+        "stop" : 1654687427646,
+        "duration" : 30889
+      }
+    }, {
+      "uid" : "b7816d01f3871a28",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654686535704,
+        "stop" : 1654686574564,
+        "duration" : 38860
+      }
+    }, {
+      "uid" : "17aaacbab36e2af8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654685799687,
+        "stop" : 1654685827493,
+        "duration" : 27806
+      }
+    }, {
+      "uid" : "481074813c3e4464",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654683201802,
+        "stop" : 1654683233713,
+        "duration" : 31911
+      }
+    }, {
+      "uid" : "e462bbd4bf39444a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654683033031,
+        "stop" : 1654683062718,
+        "duration" : 29687
+      }
+    }, {
+      "uid" : "9e3cd2886f5161aa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654682694771,
+        "stop" : 1654682722858,
+        "duration" : 28087
+      }
+    }, {
+      "uid" : "f1f54e2c2f961ae0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654682060859,
+        "stop" : 1654682118563,
+        "duration" : 57704
+      }
+    }, {
+      "uid" : "a39710773777a5b6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654680804034,
+        "stop" : 1654680833716,
+        "duration" : 29682
+      }
+    }, {
+      "uid" : "57e80232da22e26a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654680415484,
+        "stop" : 1654680446934,
+        "duration" : 31450
+      }
+    }, {
+      "uid" : "61732ff8438935e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654679928129,
+        "stop" : 1654679958781,
+        "duration" : 30652
+      }
+    }, {
+      "uid" : "2fb9380964db46b5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654679649044,
+        "stop" : 1654679671511,
+        "duration" : 22467
+      }
+    }, {
+      "uid" : "8777f9a382e05d6b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654679413255,
+        "stop" : 1654679439610,
+        "duration" : 26355
+      }
+    }, {
+      "uid" : "d68f5cbe3e459d6b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654679202880,
+        "stop" : 1654679238457,
+        "duration" : 35577
+      }
+    }, {
+      "uid" : "d6dfa5b78504371f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654678856284,
+        "stop" : 1654678883600,
+        "duration" : 27316
+      }
+    }, {
+      "uid" : "ba4ea24a9bd850d6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654677204203,
+        "stop" : 1654677234355,
+        "duration" : 30152
+      }
+    }, {
+      "uid" : "72fc9708bd5c0dcb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654676212225,
+        "stop" : 1654676239347,
+        "duration" : 27122
+      }
+    }, {
+      "uid" : "c68a170d03ed713d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654676024457,
+        "stop" : 1654676051581,
+        "duration" : 27124
+      }
+    }, {
+      "uid" : "1c55f5d0b1d76ccc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654672882293,
+        "stop" : 1654672910785,
+        "duration" : 28492
+      }
+    }, {
+      "uid" : "ee3c9b0d4e19c48",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654672703735,
+        "stop" : 1654672734452,
+        "duration" : 30717
+      }
+    }, {
+      "uid" : "d367e9e452631a30",
+      "status" : "broken",
+      "statusDetails" : "page is not defined",
+      "time" : {
+        "start" : 1654672566743,
+        "stop" : 1654672589621,
+        "duration" : 22878
+      }
+    }, {
+      "uid" : "b85d996167135866",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654672436488,
+        "stop" : 1654672484152,
+        "duration" : 47664
+      }
+    }, {
+      "uid" : "b8c943b44d68a7f1",
+      "status" : "broken",
+      "statusDetails" : "page is not defined",
+      "time" : {
+        "start" : 1654672346536,
+        "stop" : 1654672386604,
+        "duration" : 40068
+      }
+    }, {
+      "uid" : "2eb0b292b892f811",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654672210745,
+        "stop" : 1654672258576,
+        "duration" : 47831
+      }
+    }, {
+      "uid" : "1c3c07a228262948",
+      "status" : "broken",
+      "statusDetails" : "page is not defined",
+      "time" : {
+        "start" : 1654671839901,
+        "stop" : 1654671865234,
+        "duration" : 25333
+      }
+    }, {
+      "uid" : "5b90ee2c35fc6f57",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654669117757,
+        "stop" : 1654669145051,
+        "duration" : 27294
+      }
+    }, {
+      "uid" : "3dad38da1bd8e3d5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654610001619,
+        "stop" : 1654610019548,
+        "duration" : 17929
+      }
+    }, {
+      "uid" : "9158d8c4690695e6",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition failed with the following reason: no such window: target window already closed\n                from unknown error: web view not found\n                  (Session info: chrome=102.0.5005.63)",
+      "time" : {
+        "start" : 1654609811609,
+        "stop" : 1654609857016,
+        "duration" : 45407
+      }
+    }, {
+      "uid" : "b1bc96309ec5f1",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654609522375,
+        "stop" : 1654609567773,
+        "duration" : 45398
+      }
+    }, {
+      "uid" : "442d8a0ae5e80218",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654609342129,
+        "stop" : 1654609360072,
+        "duration" : 17943
+      }
+    }, {
+      "uid" : "31f95aacc6fb783e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654609129500,
+        "stop" : 1654609147456,
+        "duration" : 17956
+      }
+    }, {
+      "uid" : "cb5f2e8b4fdd30d8",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654608987613,
+        "stop" : 1654609034787,
+        "duration" : 47174
+      }
+    }, {
+      "uid" : "9417e0094276463c",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654608787686,
+        "stop" : 1654608834997,
+        "duration" : 47311
+      }
+    }, {
+      "uid" : "d53fccdf89272c62",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654608500270,
+        "stop" : 1654608547416,
+        "duration" : 47146
+      }
+    }, {
+      "uid" : "14d8de1c8d4ba64a",
+      "status" : "broken",
+      "statusDetails" : "page is not defined",
+      "time" : {
+        "start" : 1654608439942,
+        "stop" : 1654608452066,
+        "duration" : 12124
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5838580939789111.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

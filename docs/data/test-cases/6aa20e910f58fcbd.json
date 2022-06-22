@@ -1,0 +1,62 @@
+{
+  "uid" : "6aa20e910f58fcbd",
+  "name" : "should create CSV report",
+  "fullName" : "create report.should create CSV report",
+  "historyId" : "ad868a91449f22230056218e3e834e34",
+  "time" : {
+    "start" : 1653467456722,
+    "stop" : 1653467456730,
+    "duration" : 8
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create CSV report"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6aa20e910f58fcbd.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

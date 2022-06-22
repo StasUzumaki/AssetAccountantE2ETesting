@@ -1,0 +1,380 @@
+{
+  "uid" : "760094c5a3014718",
+  "name" : "should create intuit account",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.should create intuit account",
+  "historyId" : "ce529c841f3a8a4c590cc784e75cd24",
+  "time" : {
+    "start" : 1653898853672,
+    "stop" : 1653898895308,
+    "duration" : 41636
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.isElementDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:62:9)\n                    at async IntuitSignUp.isNotificationMessageDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\intuitSignUp.page.js:45:16)\n                    at async IntuitAccounts.createAccountIntuit (C:\\Users\\oyani\\AssetAccountantE2ETesting\\helper\\intuitAccounts.js:33:22)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccountFromQbo.spec.js:17:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 36,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create intuit account"
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "9aa96eea034a8b",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653898650041,
+        "stop" : 1653898691901,
+        "duration" : 41860
+      }
+    }, {
+      "uid" : "9a7e329e56ad9e8a",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653898598149,
+        "stop" : 1653898640493,
+        "duration" : 42344
+      }
+    }, {
+      "uid" : "425512f813bd88db",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653898009801,
+        "stop" : 1653898051747,
+        "duration" : 41946
+      }
+    }, {
+      "uid" : "440e807776dedbd4",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653897926258,
+        "stop" : 1653897968505,
+        "duration" : 42247
+      }
+    }, {
+      "uid" : "49dcbbe1bd61cf26",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653897410739,
+        "stop" : 1653897454091,
+        "duration" : 43352
+      }
+    }, {
+      "uid" : "1fe6bcddc2908113",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653896921546,
+        "stop" : 1653896962849,
+        "duration" : 41303
+      }
+    }, {
+      "uid" : "af9af10fff4e556c",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653896675205,
+        "stop" : 1653896717569,
+        "duration" : 42364
+      }
+    }, {
+      "uid" : "f93bd9ea662d14c2",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653895826186,
+        "stop" : 1653895867319,
+        "duration" : 41133
+      }
+    }, {
+      "uid" : "b0a5bb0a4a8615d9",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653895776165,
+        "stop" : 1653895817927,
+        "duration" : 41762
+      }
+    }, {
+      "uid" : "18b58e8d35af61f0",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653895384942,
+        "stop" : 1653895426604,
+        "duration" : 41662
+      }
+    }, {
+      "uid" : "661f2801ff60b8b",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653895271263,
+        "stop" : 1653895312325,
+        "duration" : 41062
+      }
+    }, {
+      "uid" : "4beec8030ee350f5",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653894944268,
+        "stop" : 1653894985162,
+        "duration" : 40894
+      }
+    }, {
+      "uid" : "b15dbb87fbb888b7",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653894891779,
+        "stop" : 1653894934170,
+        "duration" : 42391
+      }
+    }, {
+      "uid" : "14727c5ee74e3456",
+      "status" : "broken",
+      "statusDetails" : "element not interactable\n                  (Session info: chrome=101.0.4951.67)",
+      "time" : {
+        "start" : 1653894712090,
+        "stop" : 1653894718525,
+        "duration" : 6435
+      }
+    }, {
+      "uid" : "82eacce3b4a35c20",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653894600816,
+        "stop" : 1653894642237,
+        "duration" : 41421
+      }
+    }, {
+      "uid" : "dca33eafaf35ea64",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653894421760,
+        "stop" : 1653894447087,
+        "duration" : 25327
+      }
+    }, {
+      "uid" : "b8e15e0644331770",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653894328367,
+        "stop" : 1653894351547,
+        "duration" : 23180
+      }
+    }, {
+      "uid" : "f6dcb2d70555c0d9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653894284400,
+        "stop" : 1653894307783,
+        "duration" : 23383
+      }
+    }, {
+      "uid" : "9ae10acbffd2c3d5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653894201614,
+        "stop" : 1653894224745,
+        "duration" : 23131
+      }
+    }, {
+      "uid" : "b6bb856125df774b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653894152694,
+        "stop" : 1653894165871,
+        "duration" : 13177
+      }
+    }, {
+      "uid" : "adf4f1cdd009f183",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653894077115,
+        "stop" : 1653894090413,
+        "duration" : 13298
+      }
+    }, {
+      "uid" : "d2b634f322dffb5a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653894030441,
+        "stop" : 1653894054846,
+        "duration" : 24405
+      }
+    }, {
+      "uid" : "b16cd0580174137b",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653893839268,
+        "stop" : 1653893880381,
+        "duration" : 41113
+      }
+    }, {
+      "uid" : "c050dec916b1e929",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653893577097,
+        "stop" : 1653893600208,
+        "duration" : 23111
+      }
+    }, {
+      "uid" : "a83d4e4de4d88e17",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653893009630,
+        "stop" : 1653893057664,
+        "duration" : 48034
+      }
+    }, {
+      "uid" : "542557c8be554bee",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653892906820,
+        "stop" : 1653892954069,
+        "duration" : 47249
+      }
+    }, {
+      "uid" : "c01c296f01ffee9",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653892229400,
+        "stop" : 1653892284972,
+        "duration" : 55572
+      }
+    }, {
+      "uid" : "3f1ca2242d4ea242",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653660122473,
+        "stop" : 1653660145610,
+        "duration" : 23137
+      }
+    }, {
+      "uid" : "8da0dae91d4952ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653659676013,
+        "stop" : 1653659695531,
+        "duration" : 19518
+      }
+    }, {
+      "uid" : "d73c050becdef398",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653659626218,
+        "stop" : 1653659667430,
+        "duration" : 41212
+      }
+    }, {
+      "uid" : "924bf5c328a3cdf9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653659570859,
+        "stop" : 1653659585746,
+        "duration" : 14887
+      }
+    }, {
+      "uid" : "74059e750183a671",
+      "status" : "broken",
+      "statusDetails" : "Cannot read properties of undefined (reading 'reload')",
+      "time" : {
+        "start" : 1653659466087,
+        "stop" : 1653659475607,
+        "duration" : 9520
+      }
+    }, {
+      "uid" : "5e6b8281538d2af",
+      "status" : "broken",
+      "statusDetails" : "location is not defined",
+      "time" : {
+        "start" : 1653659372791,
+        "stop" : 1653659382439,
+        "duration" : 9648
+      }
+    }, {
+      "uid" : "efe0272e1233272b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653658587435,
+        "stop" : 1653658609284,
+        "duration" : 21849
+      }
+    }, {
+      "uid" : "33afe98e220302f3",
+      "status" : "failed",
+      "statusDetails" : "expected undefined to be true      \n                      actual expected\n                      \n                      undefinedtrue\n                      ",
+      "time" : {
+        "start" : 1653658502673,
+        "stop" : 1653658512406,
+        "duration" : 9733
+      }
+    }, {
+      "uid" : "5c4c341defa2197d",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653658449561,
+        "stop" : 1653658491419,
+        "duration" : 41858
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "760094c5a3014718.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

@@ -1,0 +1,62 @@
+{
+  "uid" : "e3ba7ec3e9fc619b",
+  "name" : "should create journal",
+  "fullName" : "create journal.should create journal",
+  "historyId" : "a07e14f57f50b0b875f2782e8be4fe9d",
+  "time" : {
+    "start" : 1652774836628,
+    "stop" : 1652774849449,
+    "duration" : 12821
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create journal"
+  }, {
+    "name" : "testClass",
+    "value" : "create journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create journal"
+  }, {
+    "name" : "package",
+    "value" : "create journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e3ba7ec3e9fc619b.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

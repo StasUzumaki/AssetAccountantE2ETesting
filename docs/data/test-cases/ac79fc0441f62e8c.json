@@ -1,0 +1,123 @@
+{
+  "uid" : "ac79fc0441f62e8c",
+  "name" : "should create account with valid credentials",
+  "fullName" : "invite user to organisation.should create account with valid credentials",
+  "historyId" : "bb0f72fb4341a6ac8de8f33ed0f7b566",
+  "time" : {
+    "start" : 1652272664661,
+    "stop" : 1652272715557,
+    "duration" : 50896
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 7,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testClass",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create account with valid credentials"
+  }, {
+    "name" : "package",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "79770656f3704b53",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652272126052,
+        "stop" : 1652272167511,
+        "duration" : 41459
+      }
+    }, {
+      "uid" : "cd5155bfc125ece9",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652268967745,
+        "stop" : 1652268967748,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "9f314a3897fc4694",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652268595213,
+        "stop" : 1652268595216,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "a051d75425d430de",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652267386115,
+        "stop" : 1652267386119,
+        "duration" : 4
+      }
+    }, {
+      "uid" : "a014af423b69bcf6",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652267187769,
+        "stop" : 1652267187771,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "d332ef71af47e3da",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652266691299,
+        "stop" : 1652266691300,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "88550538b6fef79a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652263492175,
+        "stop" : 1652263539152,
+        "duration" : 46977
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ac79fc0441f62e8c.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

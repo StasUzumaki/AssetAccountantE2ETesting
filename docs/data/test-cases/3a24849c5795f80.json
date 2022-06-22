@@ -1,0 +1,60 @@
+{
+  "uid" : "3a24849c5795f80",
+  "name" : "should have logout from Xero account",
+  "fullName" : "Sign in with Xero.should have logout from Xero account",
+  "historyId" : "56ff6b76305bd637f4d3e89d2ae5d3a",
+  "time" : {
+    "start" : 1654679694455,
+    "stop" : 1654679697294,
+    "duration" : 2839
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have logout from Xero account"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3a24849c5795f80.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

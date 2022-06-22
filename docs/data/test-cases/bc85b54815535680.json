@@ -1,0 +1,62 @@
+{
+  "uid" : "bc85b54815535680",
+  "name" : "should create a register with existing register",
+  "fullName" : "create a new register.should create a register with existing register",
+  "historyId" : "4af1e638ca1f580dd8a919b77da48a8",
+  "time" : {
+    "start" : 1652697807470,
+    "stop" : 1652697836292,
+    "duration" : 28822
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected 'Register Testing Org' to include 'mixed_clownfish_TestRegister › Settin…'      \n                      actual expected\n                      \n                      'Register Testing Org'undefined\n                      ",
+  "statusTrace" : "AssertionError: expected 'Register Testing Org' to include 'mixed_clownfish_TestRegister › Settin…'\n                    at Helper.createRegisterWithExistingRegister (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:75:70)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createNewRegister.spec.js:46:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a register with existing register"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bc85b54815535680.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

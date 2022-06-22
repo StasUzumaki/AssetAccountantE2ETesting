@@ -1,0 +1,62 @@
+{
+  "uid" : "b2eae7db18d7f3e6",
+  "name" : "should create ",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.should create ",
+  "historyId" : "eadb1b0dce264335b4c2e603b2684d63",
+  "time" : {
+    "start" : 1653658146914,
+    "stop" : 1653658188031,
+    "duration" : 41117
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilClickable (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:26:9)\n                    at async Page.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:32:9)\n                    at async IntuitSignUp.clickVerifyWithTextMessageCheckBox (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\intuitSignUp.page.js:20:16)\n                    at async IntuitAccounts.createAccountIntuit (C:\\Users\\oyani\\AssetAccountantE2ETesting\\helper\\intuitAccounts.js:29:9)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccountFromQbo.spec.js:14:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create "
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b2eae7db18d7f3e6.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

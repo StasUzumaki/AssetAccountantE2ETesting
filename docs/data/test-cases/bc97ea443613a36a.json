@@ -1,0 +1,60 @@
+{
+  "uid" : "bc97ea443613a36a",
+  "name" : "should partial sell asset and reverse partial sale",
+  "fullName" : "dev asset page.should partial sell asset and reverse partial sale",
+  "historyId" : "e42ced311c52637165cc206b88217e2d",
+  "time" : {
+    "start" : 1655363156142,
+    "stop" : 1655363164349,
+    "duration" : 8207
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should partial sell asset and reverse partial sale"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bc97ea443613a36a.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

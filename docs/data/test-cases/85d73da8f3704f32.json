@@ -1,0 +1,62 @@
+{
+  "uid" : "85d73da8f3704f32",
+  "name" : "should verify account by email",
+  "fullName" : "Create account.should verify account by email",
+  "historyId" : "d064306d8a06df19adf233860a81dcfc",
+  "time" : {
+    "start" : 1655452022151,
+    "stop" : 1655452065275,
+    "duration" : 43124
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilClickable (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:26:9)\n                    at async Page.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:32:9)\n                    at async GoogleMailPage.clickVerifyMessage (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\googleMail.page.js:78:16)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js:33:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create account"
+  }, {
+    "name" : "testClass",
+    "value" : "Create account"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify account by email"
+  }, {
+    "name" : "package",
+    "value" : "Create account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "85d73da8f3704f32.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

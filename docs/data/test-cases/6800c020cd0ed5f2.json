@@ -1,0 +1,194 @@
+{
+  "uid" : "6800c020cd0ed5f2",
+  "name" : "\"before all\" hook for create journal",
+  "fullName" : "create journal.\"before all\" hook for create journal",
+  "historyId" : "72293f0790429936449956dea5a22c34",
+  "time" : {
+    "start" : 1652708827989,
+    "stop" : 1652708872660,
+    "duration" : 44671
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 25000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 25000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.isElementDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:57:9)\n                    at async DevAssetMainpage.isCreateAssetGroupTemplateBtnDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:621:16)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createJournal.spec.js:15:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 14,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create journal"
+  }, {
+    "name" : "testClass",
+    "value" : "create journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"before all\" hook for create journal"
+  }, {
+    "name" : "package",
+    "value" : "create journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a1ea2208d0cc7762",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1652708060180,
+        "stop" : 1652708103516,
+        "duration" : 43336
+      }
+    }, {
+      "uid" : "c617ec8ba177c068",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1652705725669,
+        "stop" : 1652705771127,
+        "duration" : 45458
+      }
+    }, {
+      "uid" : "b67c21ae5ec85286",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1652705639696,
+        "stop" : 1652705687624,
+        "duration" : 47928
+      }
+    }, {
+      "uid" : "27c06e3a5e3162ba",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1652700977177,
+        "stop" : 1652701018052,
+        "duration" : 40875
+      }
+    }, {
+      "uid" : "115298db18543d04",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1652700553691,
+        "stop" : 1652700594497,
+        "duration" : 40806
+      }
+    }, {
+      "uid" : "8088abaf9174e983",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 15000ms",
+      "time" : {
+        "start" : 1652681251773,
+        "stop" : 1652681296596,
+        "duration" : 44823
+      }
+    }, {
+      "uid" : "4c43517f99da76ae",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"create journal \"before all\" hook for \"should create asset group (from template) if no groups have been created\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createJournal.spec.js)",
+      "time" : {
+        "start" : 1652447172669,
+        "stop" : 1652447232678,
+        "duration" : 60009
+      }
+    }, {
+      "uid" : "77e5f51f08ceb0a8",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"create journal \"before all\" hook for \"should create asset group (from template) if no groups have been created\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createJournal.spec.js)",
+      "time" : {
+        "start" : 1652446776870,
+        "stop" : 1652446836884,
+        "duration" : 60014
+      }
+    }, {
+      "uid" : "359221f132e7a887",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"create journal \"before all\" hook for \"should create asset group (from template) if no groups have been created\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createJournal.spec.js)",
+      "time" : {
+        "start" : 1652444942709,
+        "stop" : 1652445002718,
+        "duration" : 60009
+      }
+    }, {
+      "uid" : "227b3dac4fd5b09",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"create journal \"before all\" hook for \"should create asset group (from template) if no groups have been created\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createJournal.spec.js)",
+      "time" : {
+        "start" : 1652443382977,
+        "stop" : 1652443442989,
+        "duration" : 60012
+      }
+    }, {
+      "uid" : "8d228ed6519b94f9",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"create journal \"before all\" hook for \"should create asset group (from template) if no groups have been created\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createJournal.spec.js)",
+      "time" : {
+        "start" : 1652443265433,
+        "stop" : 1652443325441,
+        "duration" : 60008
+      }
+    }, {
+      "uid" : "ccdec880ef2af19c",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"create journal \"before all\" hook for \"should create asset group (from template) if no groups have been created\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createJournal.spec.js)",
+      "time" : {
+        "start" : 1652442387964,
+        "stop" : 1652442447971,
+        "duration" : 60007
+      }
+    }, {
+      "uid" : "79d98a87427bec01",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"create journal \"before all\" hook for \"should create asset group (from template) if no groups have been created\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createJournal.spec.js)",
+      "time" : {
+        "start" : 1652441912622,
+        "stop" : 1652441972640,
+        "duration" : 60018
+      }
+    }, {
+      "uid" : "baba452e82292d7a",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"create journal \"before all\" hook for \"should create asset group (from template) if no groups have been created\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createJournal.spec.js)",
+      "time" : {
+        "start" : 1652428277455,
+        "stop" : 1652428337478,
+        "duration" : 60023
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "6800c020cd0ed5f2.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

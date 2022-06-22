@@ -1,0 +1,77 @@
+{
+  "uid" : "b708b4afde5ba3bb",
+  "name" : "should login as removed user and see \"You are now part of the organisation “SuperTest_Org” but do not have access to any registers\" alert)",
+  "fullName" : "Account / User.should login as removed user and see \"You are now part of the organisation “SuperTest_Org” but do not have access to any registers\" alert)",
+  "historyId" : "41f3384ad669b66cf93b29cbe3237e1c",
+  "time" : {
+    "start" : 1655463909967,
+    "stop" : 1655463918955,
+    "duration" : 8988
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected 'First things first\\nYou are now part …' to include 'You are now part of the organisation …'      \n                      actual expected\n                      \n                      'First things first\\nYou are now part of the organisation “envious_lizard_org” but do not have access to any registers, please contact your admin to get access to the registers you need.'undefined\n                      ",
+  "statusTrace" : "AssertionError: expected 'First things first\\nYou are now part …' to include 'You are now part of the organisation …'\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\accountUser.spec.js:330:84)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login as removed user and see \"You are now part of the organisation “SuperTest_Org” but do not have access to any registers\" alert)"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "cc36ec3449556f83",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1655463484180,
+        "stop" : 1655463524451,
+        "duration" : 40271
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "b708b4afde5ba3bb.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

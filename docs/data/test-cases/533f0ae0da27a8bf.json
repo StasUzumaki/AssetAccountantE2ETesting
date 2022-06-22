@@ -1,0 +1,60 @@
+{
+  "uid" : "533f0ae0da27a8bf",
+  "name" : "should login as removed user and see \"You are now part of the organisation \"org_name” but do not have access to any registers\" alert)",
+  "fullName" : "Account / User.should login as removed user and see \"You are now part of the organisation \"org_name” but do not have access to any registers\" alert)",
+  "historyId" : "8d3ecf8321df1efaefc6d080b4b1dbd4",
+  "time" : {
+    "start" : 1655469230435,
+    "stop" : 1655469248758,
+    "duration" : 18323
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login as removed user and see \"You are now part of the organisation \"org_name” but do not have access to any registers\" alert)"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "533f0ae0da27a8bf.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

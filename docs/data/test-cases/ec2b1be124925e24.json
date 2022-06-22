@@ -1,0 +1,78 @@
+{
+  "uid" : "ec2b1be124925e24",
+  "name" : "should choose Tenant and `create new` organisation",
+  "fullName" : "Create an account from Xero.should choose Tenant and `create new` organisation",
+  "historyId" : "9a654409a0774ede555cc59d3fc7fb9",
+  "time" : {
+    "start" : 1655198419785,
+    "stop" : 1655198423927,
+    "duration" : 4142
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should choose Tenant and `create new` organisation"
+  }, {
+    "name" : "package",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1a8c5c5b1d320b9d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655194158823,
+        "stop" : 1655194164245,
+        "duration" : 5422
+      }
+    }, {
+      "uid" : "cea57b1b0952177f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655193780152,
+        "stop" : 1655193785640,
+        "duration" : 5488
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ec2b1be124925e24.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

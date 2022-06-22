@@ -1,0 +1,60 @@
+{
+  "uid" : "e67055472536f8db",
+  "name" : "should disconnect from from Xero",
+  "fullName" : "Map Chart of Accounts to Xero and post a Journal.should disconnect from from Xero",
+  "historyId" : "65c0a78bfa6c5f376dcd9723351e3789",
+  "time" : {
+    "start" : 1655196473926,
+    "stop" : 1655196496435,
+    "duration" : 22509
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testClass",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should disconnect from from Xero"
+  }, {
+    "name" : "package",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e67055472536f8db.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

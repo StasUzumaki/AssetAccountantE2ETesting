@@ -1,0 +1,97 @@
+{
+  "uid" : "a04b5eb755c82950",
+  "name" : "should create a new register",
+  "fullName" : "Account / User.should create a new register",
+  "historyId" : "d4df3496e698800c0be3922316366d95",
+  "time" : {
+    "start" : 1655461387171,
+    "stop" : 1655461387171,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 5,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a new register"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f8bb74242c01b9bb",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655461163342,
+        "stop" : 1655461163342,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "b0b09d112a8f9f7b",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655459442356,
+        "stop" : 1655459442356,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "17b2cbe306b6112f",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655458641829,
+        "stop" : 1655458641829,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "54661b117cea0371",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655456255731,
+        "stop" : 1655456255731,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "1ba27b24dba40258",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655455191988,
+        "stop" : 1655455191988,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a04b5eb755c82950.json",
+  "parameterValues" : [ ]
+}

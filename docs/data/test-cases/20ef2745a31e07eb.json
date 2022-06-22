@@ -1,0 +1,60 @@
+{
+  "uid" : "20ef2745a31e07eb",
+  "name" : "should verify account by email and validate that user can access the Register they have been invited to",
+  "fullName" : "Account / User.should verify account by email and validate that user can access the Register they have been invited to",
+  "historyId" : "844651a4933cc0a470fcb45410193565",
+  "time" : {
+    "start" : 1655466259133,
+    "stop" : 1655466280407,
+    "duration" : 21274
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify account by email and validate that user can access the Register they have been invited to"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "20ef2745a31e07eb.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

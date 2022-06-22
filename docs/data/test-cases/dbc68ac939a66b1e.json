@@ -1,0 +1,60 @@
+{
+  "uid" : "dbc68ac939a66b1e",
+  "name" : "should create asset group (Blank)",
+  "fullName" : "Map Chart of Accounts to Xero and post a Journal.should create asset group (Blank)",
+  "historyId" : "f5d21e230fc98c1c8706cee1cb8b4544",
+  "time" : {
+    "start" : 1654865808539,
+    "stop" : 1654865820984,
+    "duration" : 12445
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testClass",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset group (Blank)"
+  }, {
+    "name" : "package",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "dbc68ac939a66b1e.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

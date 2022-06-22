@@ -1,0 +1,60 @@
+{
+  "uid" : "c4bd65d204ef5806",
+  "name" : "should create asset group (from template) if no groups have been created",
+  "fullName" : "create attachment.should create asset group (from template) if no groups have been created",
+  "historyId" : "331b0603be2f422ffa263cfca0cc9be6",
+  "time" : {
+    "start" : 1653377622121,
+    "stop" : 1653377700646,
+    "duration" : 78525
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create attachment"
+  }, {
+    "name" : "testClass",
+    "value" : "create attachment"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset group (from template) if no groups have been created"
+  }, {
+    "name" : "package",
+    "value" : "create attachment"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c4bd65d204ef5806.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

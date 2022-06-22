@@ -1,0 +1,60 @@
+{
+  "uid" : "9ec58b0b04f03882",
+  "name" : "should verify account by email",
+  "fullName" : "Create account.should verify account by email",
+  "historyId" : "d064306d8a06df19adf233860a81dcfc",
+  "time" : {
+    "start" : 1655101344946,
+    "stop" : 1655101367505,
+    "duration" : 22559
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create account"
+  }, {
+    "name" : "testClass",
+    "value" : "Create account"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify account by email"
+  }, {
+    "name" : "package",
+    "value" : "Create account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9ec58b0b04f03882.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

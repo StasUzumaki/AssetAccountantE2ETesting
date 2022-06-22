@@ -1,0 +1,60 @@
+{
+  "uid" : "94fca5b0cc6ae2a3",
+  "name" : "should login to master account, remove user from Register",
+  "fullName" : "invite user to organisation.should login to master account, remove user from Register",
+  "historyId" : "c384b22d08365fdbf57a1f13fc6aa533",
+  "time" : {
+    "start" : 1653055116271,
+    "stop" : 1653055128391,
+    "duration" : 12120
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testClass",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login to master account, remove user from Register"
+  }, {
+    "name" : "package",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "94fca5b0cc6ae2a3.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

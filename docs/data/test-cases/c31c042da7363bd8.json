@@ -1,0 +1,62 @@
+{
+  "uid" : "c31c042da7363bd8",
+  "name" : "should login as removed user and see \"You are now part of the organisation “Invite Users Testing Acc” but do not have access to any registers\" alert)",
+  "fullName" : "invite user to register.should login as removed user and see \"You are now part of the organisation “Invite Users Testing Acc” but do not have access to any registers\" alert)",
+  "historyId" : "9d771c9e005c0695a820783185775540",
+  "time" : {
+    "start" : 1653029935176,
+    "stop" : 1653029976837,
+    "duration" : 41661
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "invite user to register"
+  }, {
+    "name" : "testClass",
+    "value" : "invite user to register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login as removed user and see \"You are now part of the organisation “Invite Users Testing Acc” but do not have access to any registers\" alert)"
+  }, {
+    "name" : "package",
+    "value" : "invite user to register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c31c042da7363bd8.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

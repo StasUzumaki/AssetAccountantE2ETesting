@@ -1,0 +1,166 @@
+{
+  "uid" : "9d6f7fa1995d92a4",
+  "name" : "should create journal",
+  "fullName" : "Map Chart of Accounts to Xero and post a Journal.should create journal",
+  "historyId" : "5d757655463681be749cce84806d347a",
+  "time" : {
+    "start" : 1655198253897,
+    "stop" : 1655198259183,
+    "duration" : 5286
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 13,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testClass",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create journal"
+  }, {
+    "name" : "package",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "cf26433f0caa1910",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655197293715,
+        "stop" : 1655197304153,
+        "duration" : 10438
+      }
+    }, {
+      "uid" : "6e53672c5d1358ae",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655196826034,
+        "stop" : 1655196832389,
+        "duration" : 6355
+      }
+    }, {
+      "uid" : "e2a506ce8a404833",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655196460106,
+        "stop" : 1655196466942,
+        "duration" : 6836
+      }
+    }, {
+      "uid" : "8a7d519c15ce3cef",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655196114691,
+        "stop" : 1655196121751,
+        "duration" : 7060
+      }
+    }, {
+      "uid" : "a44046444d6b72a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655195622852,
+        "stop" : 1655195630581,
+        "duration" : 7729
+      }
+    }, {
+      "uid" : "36c787eb79e4df18",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655194935434,
+        "stop" : 1655194944695,
+        "duration" : 9261
+      }
+    }, {
+      "uid" : "578a0106665c9023",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655128267811,
+        "stop" : 1655128273065,
+        "duration" : 5254
+      }
+    }, {
+      "uid" : "3fd03b012e86ad89",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654865830463,
+        "stop" : 1654865835963,
+        "duration" : 5500
+      }
+    }, {
+      "uid" : "902828e8e5cbace2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654865351289,
+        "stop" : 1654865356764,
+        "duration" : 5475
+      }
+    }, {
+      "uid" : "ef6dd16251aacbf8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654862369605,
+        "stop" : 1654862374968,
+        "duration" : 5363
+      }
+    }, {
+      "uid" : "fca49372932e18fd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654861777713,
+        "stop" : 1654861783074,
+        "duration" : 5361
+      }
+    }, {
+      "uid" : "5e5260f88208ba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654859844510,
+        "stop" : 1654859849858,
+        "duration" : 5348
+      }
+    }, {
+      "uid" : "e9c051b6f4e2997",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654859288905,
+        "stop" : 1654859294178,
+        "duration" : 5273
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9d6f7fa1995d92a4.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

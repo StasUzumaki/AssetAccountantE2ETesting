@@ -1,0 +1,50 @@
+{
+  "uid" : "e71d801db72b2e8",
+  "name" : "should link to account tab, add and reverse impairment",
+  "fullName" : "dev asset page.should link to account tab, add and reverse impairment",
+  "historyId" : "7651b8ed2d8b0d9776e894494ca45e35",
+  "time" : {
+    "start" : 1655711353516,
+    "stop" : 1655711353516,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should link to account tab, add and reverse impairment"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e71d801db72b2e8.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,95 @@
+{
+  "uid" : "a9d5a655901b155c",
+  "name" : "should login to master account, remove user from Register",
+  "fullName" : "invite user to register.should login to master account, remove user from Register",
+  "historyId" : "48cd22592fc97439afcc907859cb85d9",
+  "time" : {
+    "start" : 1653029912304,
+    "stop" : 1653029935174,
+    "duration" : 22870
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 4,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "invite user to register"
+  }, {
+    "name" : "testClass",
+    "value" : "invite user to register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login to master account, remove user from Register"
+  }, {
+    "name" : "package",
+    "value" : "invite user to register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "7b7f262103808841",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653029462310,
+        "stop" : 1653029509428,
+        "duration" : 47118
+      }
+    }, {
+      "uid" : "9bff06d7138c1978",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653027451699,
+        "stop" : 1653027473964,
+        "duration" : 22265
+      }
+    }, {
+      "uid" : "8a1996dfd554e1bf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652966565859,
+        "stop" : 1652966582486,
+        "duration" : 16627
+      }
+    }, {
+      "uid" : "8932a6b01c31c1a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652965818125,
+        "stop" : 1652965834576,
+        "duration" : 16451
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a9d5a655901b155c.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

@@ -1,0 +1,417 @@
+{
+  "uid" : "e3f8db5ebdbbb760",
+  "name" : "should create journal",
+  "fullName" : "create journal.should create journal",
+  "historyId" : "a07e14f57f50b0b875f2782e8be4fe9d",
+  "time" : {
+    "start" : 1653573864036,
+    "stop" : 1653573902870,
+    "duration" : 38834
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 42,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-6"
+  }, {
+    "name" : "suite",
+    "value" : "create journal"
+  }, {
+    "name" : "testClass",
+    "value" : "create journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create journal"
+  }, {
+    "name" : "package",
+    "value" : "create journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a4b27fdf8b9d7cf5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653572887342,
+        "stop" : 1653572926129,
+        "duration" : 38787
+      }
+    }, {
+      "uid" : "1b7f957eeb494519",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653042980404,
+        "stop" : 1653043016569,
+        "duration" : 36165
+      }
+    }, {
+      "uid" : "2779083738b3aa14",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652967214979,
+        "stop" : 1652967310246,
+        "duration" : 95267
+      }
+    }, {
+      "uid" : "cdca8b85f95f3211",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652953282875,
+        "stop" : 1652953319747,
+        "duration" : 36872
+      }
+    }, {
+      "uid" : "b2530be6aef4b09e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652953019020,
+        "stop" : 1652953053377,
+        "duration" : 34357
+      }
+    }, {
+      "uid" : "e05896d3256fb259",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652952329380,
+        "stop" : 1652952362697,
+        "duration" : 33317
+      }
+    }, {
+      "uid" : "aeaabc4f2448448",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652946938453,
+        "stop" : 1652946981712,
+        "duration" : 43259
+      }
+    }, {
+      "uid" : "4290a31c3ded1a33",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652881443352,
+        "stop" : 1652881477834,
+        "duration" : 34482
+      }
+    }, {
+      "uid" : "b951ff9221f9bb02",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652881317390,
+        "stop" : 1652881352293,
+        "duration" : 34903
+      }
+    }, {
+      "uid" : "eedb638d32db4710",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652879113183,
+        "stop" : 1652879146178,
+        "duration" : 32995
+      }
+    }, {
+      "uid" : "2cfb5c36bbdddcaf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652878986417,
+        "stop" : 1652879029095,
+        "duration" : 42678
+      }
+    }, {
+      "uid" : "8047eaf18fd75fcb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652878396895,
+        "stop" : 1652878437984,
+        "duration" : 41089
+      }
+    }, {
+      "uid" : "ecc44f3a474e6baf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652877941718,
+        "stop" : 1652877973969,
+        "duration" : 32251
+      }
+    }, {
+      "uid" : "4c513ef87d267664",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652877592373,
+        "stop" : 1652877653615,
+        "duration" : 61242
+      }
+    }, {
+      "uid" : "aa9d4b7ac3c3d074",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652795393280,
+        "stop" : 1652795429194,
+        "duration" : 35914
+      }
+    }, {
+      "uid" : "990d2f1d29d7864d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652777993701,
+        "stop" : 1652778042973,
+        "duration" : 49272
+      }
+    }, {
+      "uid" : "9b019486e1c150a4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652777775752,
+        "stop" : 1652777818665,
+        "duration" : 42913
+      }
+    }, {
+      "uid" : "b8757ba5bc5aa8c",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652777292634,
+        "stop" : 1652777330067,
+        "duration" : 37433
+      }
+    }, {
+      "uid" : "35a095b21a45bc4f",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652776997472,
+        "stop" : 1652777009614,
+        "duration" : 12142
+      }
+    }, {
+      "uid" : "70407e90bf6d9e54",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652776891399,
+        "stop" : 1652776908501,
+        "duration" : 17102
+      }
+    }, {
+      "uid" : "a5796ca6bad0ab8f",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652774923601,
+        "stop" : 1652774935918,
+        "duration" : 12317
+      }
+    }, {
+      "uid" : "e3ba7ec3e9fc619b",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652774836628,
+        "stop" : 1652774849449,
+        "duration" : 12821
+      }
+    }, {
+      "uid" : "38302da66f3a5355",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652774774067,
+        "stop" : 1652774788403,
+        "duration" : 14336
+      }
+    }, {
+      "uid" : "e52751238fbd587d",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652774700752,
+        "stop" : 1652774700756,
+        "duration" : 4
+      }
+    }, {
+      "uid" : "c6e7b7fc2ab254b2",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652774440991,
+        "stop" : 1652774440998,
+        "duration" : 7
+      }
+    }, {
+      "uid" : "cd462b3e6dc88869",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652774150886,
+        "stop" : 1652774150892,
+        "duration" : 6
+      }
+    }, {
+      "uid" : "687078f52699c514",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652773908599,
+        "stop" : 1652773908604,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "5eee7e546e142619",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652773666471,
+        "stop" : 1652773666479,
+        "duration" : 8
+      }
+    }, {
+      "uid" : "3f3c67f3f6d7f73d",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652772291930,
+        "stop" : 1652772291931,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "453334cc9ea5f8b3",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652772018045,
+        "stop" : 1652772018052,
+        "duration" : 7
+      }
+    }, {
+      "uid" : "6b7346ed34220e50",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652771858308,
+        "stop" : 1652771858310,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "2e3827e8d6042a64",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652771396381,
+        "stop" : 1652771396384,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "ef628edb852c4aab",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652771272567,
+        "stop" : 1652771272567,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "c952b9aedf7712e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652771064823,
+        "stop" : 1652771064828,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "26571506a709926b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652770940643,
+        "stop" : 1652770947014,
+        "duration" : 6371
+      }
+    }, {
+      "uid" : "43260ca42fa5b64c",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652770646540,
+        "stop" : 1652770652937,
+        "duration" : 6397
+      }
+    }, {
+      "uid" : "fbdf4ff97db46213",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652770571247,
+        "stop" : 1652770577559,
+        "duration" : 6312
+      }
+    }, {
+      "uid" : "2fd86ba30a59de28",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652770444403,
+        "stop" : 1652770449530,
+        "duration" : 5127
+      }
+    }, {
+      "uid" : "1464bb8f332dd2f0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652769649703,
+        "stop" : 1652769659346,
+        "duration" : 9643
+      }
+    }, {
+      "uid" : "b0a0cd52d0bb1136",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652768737349,
+        "stop" : 1652768755921,
+        "duration" : 18572
+      }
+    }, {
+      "uid" : "8f6c96af82087b8",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652768668720,
+        "stop" : 1652768673475,
+        "duration" : 4755
+      }
+    }, {
+      "uid" : "8423e81889a309cb",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1652768607175,
+        "stop" : 1652768611877,
+        "duration" : 4702
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e3f8db5ebdbbb760.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

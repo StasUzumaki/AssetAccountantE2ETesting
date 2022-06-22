@@ -1,0 +1,62 @@
+{
+  "uid" : "59cf781cd2cd364f",
+  "name" : "should create and fail 11 asset and change subscription plan",
+  "fullName" : "Account / User.should create and fail 11 asset and change subscription plan",
+  "historyId" : "70b1ed4869c1d0467708dd833bf66120",
+  "time" : {
+    "start" : 1655712741361,
+    "stop" : 1655712744528,
+    "duration" : 3167
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create and fail 11 asset and change subscription plan"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "59cf781cd2cd364f.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

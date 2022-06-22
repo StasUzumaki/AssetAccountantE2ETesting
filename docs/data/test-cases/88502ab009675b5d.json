@@ -1,0 +1,118 @@
+{
+  "uid" : "88502ab009675b5d",
+  "name" : "should add and reverse transfer to pool",
+  "fullName" : "Asset Super Test.should add and reverse transfer to pool",
+  "historyId" : "a555d82e67c2f42307be033673cc3531",
+  "time" : {
+    "start" : 1655813457473,
+    "stop" : 1655813472474,
+    "duration" : 15001
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 7,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add and reverse transfer to pool"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4c4c771ae9188a38",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655803473379,
+        "stop" : 1655803485322,
+        "duration" : 11943
+      }
+    }, {
+      "uid" : "b2a56c9329c33ec5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655802588199,
+        "stop" : 1655802600901,
+        "duration" : 12702
+      }
+    }, {
+      "uid" : "d7036c2a1b8766ae",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655800405056,
+        "stop" : 1655800417334,
+        "duration" : 12278
+      }
+    }, {
+      "uid" : "284886809896b50e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655799785042,
+        "stop" : 1655799796992,
+        "duration" : 11950
+      }
+    }, {
+      "uid" : "be756424d9501f3d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655799326029,
+        "stop" : 1655799337898,
+        "duration" : 11869
+      }
+    }, {
+      "uid" : "3677bdfe58c4b509",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655798591554,
+        "stop" : 1655798603806,
+        "duration" : 12252
+      }
+    }, {
+      "uid" : "8e18672b0fc64fa1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655718217168,
+        "stop" : 1655718261835,
+        "duration" : 44667
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "88502ab009675b5d.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

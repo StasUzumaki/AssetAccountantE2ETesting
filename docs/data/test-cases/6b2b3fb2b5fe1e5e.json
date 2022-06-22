@@ -1,0 +1,60 @@
+{
+  "uid" : "6b2b3fb2b5fe1e5e",
+  "name" : "should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)",
+  "fullName" : "invite user to organisation.should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)",
+  "historyId" : "cb3481a78f9b5deb28c6534d46fdd7d0",
+  "time" : {
+    "start" : 1652956622925,
+    "stop" : 1652956634123,
+    "duration" : 11198
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testClass",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)"
+  }, {
+    "name" : "package",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6b2b3fb2b5fe1e5e.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

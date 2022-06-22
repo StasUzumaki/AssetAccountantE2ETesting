@@ -1,0 +1,97 @@
+{
+  "uid" : "c506a0fb154a1e5a",
+  "name" : "should add and reverse transfer to pool",
+  "fullName" : "Asset Super Test.should add and reverse transfer to pool",
+  "historyId" : "90db761d5c090867a72f993a9e3fe0df",
+  "time" : {
+    "start" : 1655818526766,
+    "stop" : 1655818526766,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 5,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add and reverse transfer to pool"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2ccee118de48a21a",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655814515143,
+        "stop" : 1655814515143,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "c86da78fd09954d9",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655809788112,
+        "stop" : 1655809788112,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "b433b855b85f869f",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655808087103,
+        "stop" : 1655808087103,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "929ea570d6fd6a83",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655806927331,
+        "stop" : 1655806927331,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "6a92d3b8acc326ca",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655805771776,
+        "stop" : 1655805771776,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c506a0fb154a1e5a.json",
+  "parameterValues" : [ ]
+}

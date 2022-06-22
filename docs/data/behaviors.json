@@ -1,0 +1,6499 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "should create a new organisation",
+    "uid" : "b72be19c3c4c71e3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1651499483286,
+      "stop" : 1651499490591,
+      "duration" : 7305
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "test",
+    "uid" : "ce68b003d3bb3a4d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1651504019048,
+      "stop" : 1651504019048,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 18,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "login to account without email validation",
+    "uid" : "b1ca7c0f52c41c28",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1651559679749,
+      "stop" : 1651559679749,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "7f04592038a7cf46",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1651559679749,
+      "stop" : 1651559679749,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 14,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "60df309b0242f156",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1651576854884,
+      "stop" : 1651576879537,
+      "duration" : 24653
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Firefox-101.0" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "7263467e366f4a2a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1651577922901,
+      "stop" : 1651577945468,
+      "duration" : 22567
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : true,
+    "parameters" : [ "Edge-100.0.1185.50" ]
+  }, {
+    "name" : "should create asset group from template",
+    "uid" : "d7976a8ef4dc7cd6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1651585996281,
+      "stop" : 1651586027433,
+      "duration" : 31152
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 16,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "\"after all\" hook for dev asset page",
+    "uid" : "a9ca11cec2e7885a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1651586588413,
+      "stop" : 1651586618273,
+      "duration" : 29860
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "473315de4afad412",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1651587667224,
+      "stop" : 1651587707842,
+      "duration" : 40618
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 29,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "\"before each\" hook for dev asset page",
+    "uid" : "a48f791a38cfef6d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1651647891247,
+      "stop" : 1651647927866,
+      "duration" : 36619
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "should create asset group(blank) if no groups have been created",
+    "uid" : "a81fe2626dfd48c2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "unknown",
+    "time" : {
+      "start" : 1651648270654,
+      "stop" : 0,
+      "duration" : -1651648270654
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "\"before all\" hook for dev asset page",
+    "uid" : "c7b39ede5af907f5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1651652008789,
+      "stop" : 1651652029853,
+      "duration" : 21064
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "should create asset group from template if no groups have been created",
+    "uid" : "3a2f42b351edacf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1651653995404,
+      "stop" : 1651654034677,
+      "duration" : 39273
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 8,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "\"after each\" hook for dev asset page",
+    "uid" : "5a2818b1cde51e74",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1651654034679,
+      "stop" : 1651654061425,
+      "duration" : 26746
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "should get text a menu link",
+    "uid" : "9bc0f64f4c87348f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1651674903955,
+      "stop" : 1651674924427,
+      "duration" : 20472
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "422ce590981432df",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1651674924430,
+      "stop" : 1651674924430,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "\"after all\" hook for create a new register",
+    "uid" : "d660eaa1aaf6aa14",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1651675005666,
+      "stop" : 1651675005676,
+      "duration" : 10
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 8,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "\"before all\" hook for create a new register",
+    "uid" : "8551fed5f2df3ecf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1651678970293,
+      "stop" : 1651678977407,
+      "duration" : 7114
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "eff9fbefbd62fc87",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1651680844971,
+      "stop" : 1651680866706,
+      "duration" : 21735
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 45,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "should create a register with existing register",
+    "uid" : "d87d93d51aa9004a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1651680866707,
+      "stop" : 1651680866708,
+      "duration" : 1
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 33,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-100.0.4896.127" ]
+  }, {
+    "name" : "should create asset group(blank) if no groups have been created",
+    "uid" : "5225cc055eb46e44",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1651739779695,
+      "stop" : 1651739792311,
+      "duration" : 12616
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset from template if no groups have been created",
+    "uid" : "f668ef2d407117a1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1651827230736,
+      "stop" : 1651827259205,
+      "duration" : 28469
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "\"before all\" hook for create a new register",
+    "uid" : "8567012a6fe5c751",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652084620865,
+      "stop" : 1652084680873,
+      "duration" : 60008
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "\"before all\" hook for dev asset page",
+    "uid" : "3376d0c2f0c65a85",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652103294581,
+      "stop" : 1652103354587,
+      "duration" : 60006
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create journal",
+    "uid" : "57871bab352eb668",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652185080169,
+      "stop" : 1652185119043,
+      "duration" : 38874
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 8,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should invite user and give them permissions for the Organisation and Register",
+    "uid" : "8dd72b44befa8060",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652187651270,
+      "stop" : 1652187684641,
+      "duration" : 33371
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "\"after all\" hook for invite user to organisation",
+    "uid" : "48855a50cc0a1c4f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652271946339,
+      "stop" : 1652272000189,
+      "duration" : 53850
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should invite user and give them permissions for the Organisation and Register",
+    "uid" : "179f3f98c550745d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652272616579,
+      "stop" : 1652272650765,
+      "duration" : 34186
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 13,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should find and accept email invitation",
+    "uid" : "ab9b45e28fa98519",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652272650765,
+      "stop" : 1652272664660,
+      "duration" : 13895
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 10,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "ac79fc0441f62e8c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652272664661,
+      "stop" : 1652272715557,
+      "duration" : 50896
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "\"after all\" hook for Create account",
+    "uid" : "d2450e943acd4843",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652344843133,
+      "stop" : 1652344948807,
+      "duration" : 105674
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "\"after all\" hook for create a new register",
+    "uid" : "965652012aabfd75",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652355116131,
+      "stop" : 1652355179135,
+      "duration" : 63004
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 18,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "\"after all\" hook for create journal",
+    "uid" : "b8426d062cadec61",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652681296601,
+      "stop" : 1652681311616,
+      "duration" : 15015
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should login to existing account",
+    "uid" : "a0909869da41f0a1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652683286486,
+      "stop" : 1652683323040,
+      "duration" : 36554
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "\"after all\" hook for login to account",
+    "uid" : "a9d5e5d6fe909bd0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652685842320,
+      "stop" : 1652685872090,
+      "duration" : 29770
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create a new organisation",
+    "uid" : "edcee3098f1c8d2c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652688900992,
+      "stop" : 1652688939964,
+      "duration" : 38972
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "\"after all\" hook for dev asset page",
+    "uid" : "aac6623084b5eb9d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652692918149,
+      "stop" : 1652692961231,
+      "duration" : 43082
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 32,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "5cafd7925ab027ad",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652698978908,
+      "stop" : 1652698990818,
+      "duration" : 11910
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 17,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create a new org",
+    "uid" : "648c79fa83277c71",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652703511694,
+      "stop" : 1652703546084,
+      "duration" : 34390
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 31,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should change subscription plan",
+    "uid" : "9688c0ea1ee09ea6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652703554240,
+      "stop" : 1652703573307,
+      "duration" : 19067
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 19,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset group from template if no groups have been created",
+    "uid" : "c8a51fd4701888bf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652703826175,
+      "stop" : 1652703839899,
+      "duration" : 13724
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 33,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset group from template with existing group",
+    "uid" : "90bceaaee9ca4869",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652703839900,
+      "stop" : 1652703862593,
+      "duration" : 22693
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset group (Blank) if no groups have been created",
+    "uid" : "b32974b9a1b3a9a8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652703915993,
+      "stop" : 1652703932174,
+      "duration" : 16181
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 12,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset group (Blank) with existing group",
+    "uid" : "314db1fff0c3c233",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652703932174,
+      "stop" : 1652703949569,
+      "duration" : 17395
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "13a4ec3d3e8143c8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652705001122,
+      "stop" : 1652705040629,
+      "duration" : 39507
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 88,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "9aa19b992aaa1268",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652705040629,
+      "stop" : 1652705078266,
+      "duration" : 37637
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 81,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "b01505a99cc1794e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652706316044,
+      "stop" : 1652706349896,
+      "duration" : 33852
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 52,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create a register with existing register",
+    "uid" : "27c8aa3e324169d8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652706349896,
+      "stop" : 1652706373828,
+      "duration" : 23932
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 20,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "f057138dbb384e7a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652706988085,
+      "stop" : 1652707005160,
+      "duration" : 17075
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 52,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should verify account by email",
+    "uid" : "7c155f689d6f76ad",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652707005161,
+      "stop" : 1652707021086,
+      "duration" : 15925
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 20,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create organisation after email validation",
+    "uid" : "8ef35b560308f951",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652707021087,
+      "stop" : 1652707039294,
+      "duration" : 18207
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 20,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "6dbc576c9886a543",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652708775630,
+      "stop" : 1652708803620,
+      "duration" : 27990
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 36,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "\"before all\" hook for create journal",
+    "uid" : "6800c020cd0ed5f2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652708827989,
+      "stop" : 1652708872660,
+      "duration" : 44671
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 14,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create journal",
+    "uid" : "d18626bdc4c6bcb5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652708872671,
+      "stop" : 1652708877948,
+      "duration" : 5277
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 46,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.54" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "bd730872f4714f24",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1652776997472,
+      "stop" : 1652776997472,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 36,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should create 11 assets",
+    "uid" : "63b5bd1b27d95ebf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652790306064,
+      "stop" : 1652790390774,
+      "duration" : 84710
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset group from template with existing group",
+    "uid" : "6d4f60d141b7638f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652795229519,
+      "stop" : 1652795251066,
+      "duration" : 21547
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"after all\" hook for invite user to organisation",
+    "uid" : "98830a04ab44c905",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652861051087,
+      "stop" : 1652861106953,
+      "duration" : 55866
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should find and accept email invitation",
+    "uid" : "6e804a023358cc61",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1652866502991,
+      "stop" : 1652866502991,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 16,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "d511362325141572",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1652866502991,
+      "stop" : 1652866502991,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 16,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should verify account by email",
+    "uid" : "e68e6d2bf06d011c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652867876374,
+      "stop" : 1652867888749,
+      "duration" : 12375
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 22,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should login to master account, remove user from Register and Organisation",
+    "uid" : "d04716e7d54385fb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652873982378,
+      "stop" : 1652874004687,
+      "duration" : 22309
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create organisation after email validation",
+    "uid" : "9a633a84dc782483",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652874832708,
+      "stop" : 1652874849802,
+      "duration" : 17094
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should ",
+    "uid" : "fd20328ac9c4673c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652875365650,
+      "stop" : 1652875378983,
+      "duration" : 13333
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should login as removed user and validate that this is unsuccessful()",
+    "uid" : "da6a03c7ac3710e1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652875619898,
+      "stop" : 1652875631030,
+      "duration" : 11132
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"before all\" hook for create journal",
+    "uid" : "95f1c1302ae3746",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652879646814,
+      "stop" : 1652879669452,
+      "duration" : 22638
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 8,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"after all\" hook for create journal",
+    "uid" : "64974ba4fedbbd05",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652880860091,
+      "stop" : 1652880904342,
+      "duration" : 44251
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create 11 asset",
+    "uid" : "274d7d159c39c192",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652955779467,
+      "stop" : 1652955808494,
+      "duration" : 29027
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 6,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)",
+    "uid" : "4d1e1989294b6fde",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1652965834577,
+      "stop" : 1652965880114,
+      "duration" : 45537
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should login as removed user and validate that this is unsuccessful(should see \"You are now part of the organisation “Invite Users Testing Acc” but do not have access to any registers\" alert)",
+    "uid" : "61450ca8fdc07928",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1652966582487,
+      "stop" : 1652966611586,
+      "duration" : 29099
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"after all\" hook for invite user to register",
+    "uid" : "8c1d916a51e554f9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653029509438,
+      "stop" : 1653029601261,
+      "duration" : 91823
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should invite user and give them permissions for the Organisation and Register",
+    "uid" : "f5e62642f80ca707",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653029813617,
+      "stop" : 1653029856525,
+      "duration" : 42908
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should find and accept email invitation",
+    "uid" : "3729f891c9233306",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653029856528,
+      "stop" : 1653029878546,
+      "duration" : 22018
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "c8c6262586e9bcae",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653029878548,
+      "stop" : 1653029888282,
+      "duration" : 9734
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should verify account by email and validate that user can access the Register they have been invited to",
+    "uid" : "e09a05f72c6dc23c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653029888283,
+      "stop" : 1653029912302,
+      "duration" : 24019
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should login to master account, remove user from Register",
+    "uid" : "a9d5a655901b155c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653029912304,
+      "stop" : 1653029935174,
+      "duration" : 22870
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should login as removed user and see \"You are now part of the organisation “Invite Users Testing Acc” but do not have access to any registers\" alert)",
+    "uid" : "c31c042da7363bd8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653029935176,
+      "stop" : 1653029976837,
+      "duration" : 41661
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"after all\" hook for create attachment",
+    "uid" : "83383ed3e594990f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653295740970,
+      "stop" : 1653295780678,
+      "duration" : 39708
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create report",
+    "uid" : "4c1dc86f161ddc85",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653384294767,
+      "stop" : 1653384329624,
+      "duration" : 34857
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 26,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should change subscription plan",
+    "uid" : "1e1cef1495643551",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653573326286,
+      "stop" : 1653573347711,
+      "duration" : 21425
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "b6d3e7dd06cb57c1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653573350880,
+      "stop" : 1653573404001,
+      "duration" : 53121
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should verify account by email",
+    "uid" : "2d5a4380f0b1e89f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653573404003,
+      "stop" : 1653573443073,
+      "duration" : 39070
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"after all\" hook for Create account",
+    "uid" : "9bb6837be49da317",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653573443078,
+      "stop" : 1653573482258,
+      "duration" : 39180
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "3eff6dcaebf75e2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653573485053,
+      "stop" : 1653573512115,
+      "duration" : 27062
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "f9b4ba65d776bf2d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653573512116,
+      "stop" : 1653573553546,
+      "duration" : 41430
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset group (Blank) if no groups have been created",
+    "uid" : "5aa41aedc4db7593",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653573597205,
+      "stop" : 1653573614300,
+      "duration" : 17095
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset group (Blank) with existing group",
+    "uid" : "c1fb02ac305009f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653573614300,
+      "stop" : 1653573632505,
+      "duration" : 18205
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset group from template if no groups have been created",
+    "uid" : "b13cf0782ccfd75f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653573635374,
+      "stop" : 1653573674931,
+      "duration" : 39557
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "5f48e1fed7907b97",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653573814438,
+      "stop" : 1653573843044,
+      "duration" : 28606
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 37,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "679c71db100e6374",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653573843045,
+      "stop" : 1653573864036,
+      "duration" : 20991
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 19,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create journal",
+    "uid" : "e3f8db5ebdbbb760",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653573864036,
+      "stop" : 1653573902870,
+      "duration" : 38834
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 42,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create a register with existing register",
+    "uid" : "3316b3cd787810c9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574026222,
+      "stop" : 1653574048750,
+      "duration" : 22528
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create a new organisation",
+    "uid" : "7a3efd880b1f527e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574051552,
+      "stop" : 1653574098027,
+      "duration" : 46475
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"before all\" hook for create report",
+    "uid" : "ef12b640a49c0f61",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653574100783,
+      "stop" : 1653574182305,
+      "duration" : 81522
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should invite user and give them permissions for the Organisation and Register",
+    "uid" : "678994d55d932773",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574219917,
+      "stop" : 1653574253942,
+      "duration" : 34025
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 41,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should find and accept email invitation",
+    "uid" : "95270a85abf13ab7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574253942,
+      "stop" : 1653574281924,
+      "duration" : 27982
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "2472af0961c57356",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574281924,
+      "stop" : 1653574293789,
+      "duration" : 11865
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should verify account by email and validate that user can access the Register they have been invited to",
+    "uid" : "e62efd2b5c46206c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574293789,
+      "stop" : 1653574307005,
+      "duration" : 13216
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 17,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should login to master account, remove user from Register",
+    "uid" : "7f1837910b19d084",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574307006,
+      "stop" : 1653574319712,
+      "duration" : 12706
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should remove user from Organisation",
+    "uid" : "b1f89ee558598b88",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574319713,
+      "stop" : 1653574327556,
+      "duration" : 7843
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)",
+    "uid" : "17635c3124e0872a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574327556,
+      "stop" : 1653574340042,
+      "duration" : 12486
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create a new org",
+    "uid" : "b1c0a7f33f6986dd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574510219,
+      "stop" : 1653574561155,
+      "duration" : 50936
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 21,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "22c48a83e462b25e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574561156,
+      "stop" : 1653574569735,
+      "duration" : 8579
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 23,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "dcffc83a42bc73d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653574569736,
+      "stop" : 1653574573240,
+      "duration" : 3504
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 18,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create 10 assets",
+    "uid" : "b88c7c334fb26ef7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653574573240,
+      "stop" : 1653574748773,
+      "duration" : 175533
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create and fail 11 asset and change subscription plan",
+    "uid" : "df5fcdb7e1cd952d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653574748776,
+      "stop" : 1653574803024,
+      "duration" : 54248
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"after all\" hook for create a new register",
+    "uid" : "b5cec41da90fc66",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653574803028,
+      "stop" : 1653574900620,
+      "duration" : 97592
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 8,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"after all\" hook for create report",
+    "uid" : "a0e19ea716afe0d8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653643781501,
+      "stop" : 1653643816516,
+      "duration" : 35015
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create HP/Lease",
+    "uid" : "a56d89ad6cdac9b2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653647465734,
+      "stop" : 1653647512050,
+      "duration" : 46316
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 21,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "1ebcb5875af6c774",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653657231761,
+      "stop" : 1653657273634,
+      "duration" : 41873
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 37,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "9cc61b285717787f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653657273634,
+      "stop" : 1653657295408,
+      "duration" : 21774
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 37,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should add link attachment",
+    "uid" : "7f5bd13ecf33f94c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653657295410,
+      "stop" : 1653657301551,
+      "duration" : 6141
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 36,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should add file attachment",
+    "uid" : "ae11a97f183db6d6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653657301552,
+      "stop" : 1653657339893,
+      "duration" : 38341
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "\"before all\" hook for Create an AA account from QBO / connect to QBO from AA",
+    "uid" : "47099256f72b1fd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653657609750,
+      "stop" : 1653657609752,
+      "duration" : 2
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create ",
+    "uid" : "f38eac8ab96c60fd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653658268843,
+      "stop" : 1653658313111,
+      "duration" : 44268
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "e853b3b8855ab594",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653660303268,
+      "stop" : 1653660333104,
+      "duration" : 29836
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 128,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "bc95044918762d69",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653660333105,
+      "stop" : 1653660353089,
+      "duration" : 19984
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 106,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create PDF report",
+    "uid" : "15f08951a974d9b2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653660353089,
+      "stop" : 1653660365197,
+      "duration" : 12108
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 79,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should wait for PDF file to download",
+    "uid" : "feb2ec9cca4ae233",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653660365198,
+      "stop" : 1653660365203,
+      "duration" : 5
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should cheking if PDF file exist and validate it",
+    "uid" : "514c2ffa4c3ad4f6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653660365204,
+      "stop" : 1653660365281,
+      "duration" : 77
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create CSV report",
+    "uid" : "b51de2b8ee2fe8e8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653660365551,
+      "stop" : 1653660368605,
+      "duration" : 3054
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 68,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should wait for CSV file to download",
+    "uid" : "35253a09199e80f9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653660368607,
+      "stop" : 1653660368625,
+      "duration" : 18
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should cheking if CSV file exist and validate it",
+    "uid" : "e673157e3099ec04",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1653660368626,
+      "stop" : 1653660398017,
+      "duration" : 29391
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 19,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create intuit account",
+    "uid" : "706ecffe30ede455",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653895159473,
+      "stop" : 1653895200388,
+      "duration" : 40915
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "Edge-101.0.1210.53" ]
+  }, {
+    "name" : "should create intuit account",
+    "uid" : "760094c5a3014718",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653898853672,
+      "stop" : 1653898895308,
+      "duration" : 41636
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 36,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-101.0.4951.67" ]
+  }, {
+    "name" : "should create intuit account",
+    "uid" : "e2ff5ff7419a32a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653910349277,
+      "stop" : 1653910390479,
+      "duration" : 41202
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 10,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should fill in Welcome form",
+    "uid" : "195745f802583733",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1653910390484,
+      "stop" : 1653910425021,
+      "duration" : 34537
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have create intuit account",
+    "uid" : "7960fa966307edf4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654000842464,
+      "stop" : 1654000904458,
+      "duration" : 61994
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : true,
+    "parameters" : [ "msedge-101.0.1210.32" ]
+  }, {
+    "name" : "should have fill Welcome form",
+    "uid" : "4f17ec0ddbf085a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654000904466,
+      "stop" : 1654000904471,
+      "duration" : 5
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : true,
+    "parameters" : [ "msedge-101.0.1210.32" ]
+  }, {
+    "name" : "should have create intuit account",
+    "uid" : "e177ec0126b38389",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654002292821,
+      "stop" : 1654002343962,
+      "duration" : 51141
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "firefox-100.0" ]
+  }, {
+    "name" : "should have fill Welcome form",
+    "uid" : "ea1eacdb55eeb833",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654002343975,
+      "stop" : 1654002343977,
+      "duration" : 2
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "firefox-100.0" ]
+  }, {
+    "name" : "should have create intuit account",
+    "uid" : "1fdc54cf60aa5245",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654083766167,
+      "stop" : 1654083796675,
+      "duration" : 30508
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 11,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.61" ]
+  }, {
+    "name" : "should have fill Welcome form",
+    "uid" : "32a0b47a6d048d19",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654083796678,
+      "stop" : 1654083813263,
+      "duration" : 16585
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 11,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.61" ]
+  }, {
+    "name" : "should have fill Welcome form",
+    "uid" : "e0c13801d404dcb7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654253942935,
+      "stop" : 1654253977942,
+      "duration" : 35007
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 95,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "sholud have sent a confirmation email for intuit account",
+    "uid" : "611ce634f156923d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1654254047961,
+      "stop" : 1654254048038,
+      "duration" : 77
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify intuit account by email",
+    "uid" : "70e6cc03b6b2cf62",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654254048039,
+      "stop" : 1654254089518,
+      "duration" : 41479
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "\"after all\" hook for Create an AA account from QBO / connect to QBO from AA",
+    "uid" : "b42f6efce88551f2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654254264888,
+      "stop" : 1654254334904,
+      "duration" : 70016
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "a1175a0d06ed27af",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496562283,
+      "stop" : 1654496578621,
+      "duration" : 16338
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create PDF report",
+    "uid" : "2c1624513a16a8af",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496578622,
+      "stop" : 1654496589358,
+      "duration" : 10736
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should wait for PDF file to download",
+    "uid" : "dbc37e871983c125",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496589359,
+      "stop" : 1654496589488,
+      "duration" : 129
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should cheking if PDF file exist and validate it",
+    "uid" : "a8b923157e082e87",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496589494,
+      "stop" : 1654496589645,
+      "duration" : 151
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create CSV report",
+    "uid" : "9cf5fadb8bce89dd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496590006,
+      "stop" : 1654496592724,
+      "duration" : 2718
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should wait for CSV file to download",
+    "uid" : "c9611c4565f95d7a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496592724,
+      "stop" : 1654496592756,
+      "duration" : 32
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should cheking if CSV file exist and validate it",
+    "uid" : "fa2112691e087a0c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496592757,
+      "stop" : 1654496625658,
+      "duration" : 32901
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have create intuit account",
+    "uid" : "cc8f4c452040a53",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496651627,
+      "stop" : 1654496662017,
+      "duration" : 10390
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 100,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should add a sandbox company for Australia",
+    "uid" : "a27f7e5d665ef335",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496662017,
+      "stop" : 1654496664853,
+      "duration" : 2836
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should follow the URL for connect the QBO company",
+    "uid" : "d376194e8cad8636",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496664854,
+      "stop" : 1654496675526,
+      "duration" : 10672
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should connect to AA and create new organisation",
+    "uid" : "d72e7f9eeb311581",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496675529,
+      "stop" : 1654496706672,
+      "duration" : 31143
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should disconnect from QuickBooks",
+    "uid" : "4809aa2ca5ef42cf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496706673,
+      "stop" : 1654496708695,
+      "duration" : 2022
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should sign out from QuickBooks account",
+    "uid" : "fdcaefc20fc71bc8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496708695,
+      "stop" : 1654496716172,
+      "duration" : 7477
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should connect and sign in to QuickBooks account",
+    "uid" : "60cca72d19d33aa9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496716173,
+      "stop" : 1654496723666,
+      "duration" : 7493
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should add AU company and connect QuickBooks to AA",
+    "uid" : "1b67da450fb1ccaf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496723667,
+      "stop" : 1654496736744,
+      "duration" : 13077
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should disconnect from QuickBooks again",
+    "uid" : "a2cdd45e9aedf52b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496736745,
+      "stop" : 1654496738224,
+      "duration" : 1479
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should sign out from QuickBooks account again",
+    "uid" : "9ec56a647b748733",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654496738226,
+      "stop" : 1654496753620,
+      "duration" : 15394
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "\"before all\" hook for Sign in with Xero",
+    "uid" : "cd8684ad967ca437",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654597556394,
+      "stop" : 1654597806398,
+      "duration" : 250004
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify intuit account by email",
+    "uid" : "5e45b49841e76b2d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654607488592,
+      "stop" : 1654607488592,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 26,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should have logout of intuit account ",
+    "uid" : "b5ac33fdc914d352",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654669145052,
+      "stop" : 1654669145052,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 36,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should have activate xero account ",
+    "uid" : "7fd9b08d0a295734",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654672734454,
+      "stop" : 1654672734455,
+      "duration" : 1
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should have activate xero account ",
+    "uid" : "13ac3125166280bd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654672910787,
+      "stop" : 1654672923045,
+      "duration" : 12258
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have create xero account",
+    "uid" : "8285df7aa2857451",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654676185960,
+      "stop" : 1654676212224,
+      "duration" : 26264
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 45,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have activate xero account",
+    "uid" : "3a32822c0448a7b1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654676239350,
+      "stop" : 1654676251502,
+      "duration" : 12152
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have land to dev asset accountant page and choose login with Intuit",
+    "uid" : "cbcaf29f81802628",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654676262437,
+      "stop" : 1654676262438,
+      "duration" : 1
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 45,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should have logout from Xero account",
+    "uid" : "62aa6d3f5a1ffa53",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654680470298,
+      "stop" : 1654680473665,
+      "duration" : 3367
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 6,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have enter creedntials for xero login",
+    "uid" : "44b030f59be4c493",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654680904708,
+      "stop" : 1654680939724,
+      "duration" : 35016
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 54,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have logout from Xero account",
+    "uid" : "d7767a7588f34a3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654682141521,
+      "stop" : 1654682141521,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "\"after all\" hook for create a new register",
+    "uid" : "bfcd797318714f2b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654693457297,
+      "stop" : 1654693490373,
+      "duration" : 33076
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify that we connect to Xero",
+    "uid" : "bfdbea7533b32021",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654756221493,
+      "stop" : 1654756221493,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should verify that we connect to Xero",
+    "uid" : "efd3faf3ebb8aaf6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654756706745,
+      "stop" : 1654756718702,
+      "duration" : 11957
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "\"after all\" hook for Sign in with Xero",
+    "uid" : "4652ac23c2944d3f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654765205828,
+      "stop" : 1654765236071,
+      "duration" : 30243
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have connect and create Xero account",
+    "uid" : "96a49aa9ca3940e4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1654772121644,
+      "stop" : 1654772148066,
+      "duration" : 26422
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should connect to existing Xero account",
+    "uid" : "1dfef78636d751f5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654774489426,
+      "stop" : 1654774513643,
+      "duration" : 24217
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "d0f67609f3b5464c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1654775014674,
+      "stop" : 1654775014674,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "\"after all\" hook for Map Chart of Accounts to Xero and post a Journal",
+    "uid" : "7f14ba3b7e19be6e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1654865850289,
+      "stop" : 1654865888048,
+      "duration" : 37759
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 15,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "\"after all\" hook for create report",
+    "uid" : "7acd43d8dac3c313",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655108504765,
+      "stop" : 1655108554211,
+      "duration" : 49446
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should change subscription plan",
+    "uid" : "6e8590d36cacc48c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655110830493,
+      "stop" : 1655110848592,
+      "duration" : 18099
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a new org",
+    "uid" : "84813bde1ac7b8f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655111076513,
+      "stop" : 1655111108037,
+      "duration" : 31524
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "6a058033c357dcb3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655111115348,
+      "stop" : 1655111117430,
+      "duration" : 2082
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create 10 assets",
+    "uid" : "15791861edfe1a28",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655111117430,
+      "stop" : 1655111208479,
+      "duration" : 91049
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create and fail 11 asset and change subscription plan",
+    "uid" : "af0ca30ea70f506b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655111208480,
+      "stop" : 1655111210956,
+      "duration" : 2476
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create 11 asset",
+    "uid" : "aca52f12da0555c5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655111210956,
+      "stop" : 1655111383343,
+      "duration" : 172387
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "\"after all\" hook for create journal",
+    "uid" : "ca3c6e5ceca4cb10",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655116228403,
+      "stop" : 1655116237608,
+      "duration" : 9205
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "557662e639470b76",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655119291675,
+      "stop" : 1655119330744,
+      "duration" : 39069
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 13,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create HP/Lease",
+    "uid" : "f04321ceacce584d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655119330744,
+      "stop" : 1655119360740,
+      "duration" : 29996
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have create Xero account",
+    "uid" : "199fc91e53200ac4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655127154178,
+      "stop" : 1655127178560,
+      "duration" : 24382
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify intuit account by email",
+    "uid" : "5838580939789111",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655127178561,
+      "stop" : 1655127211125,
+      "duration" : 32564
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 42,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have activate Xero account",
+    "uid" : "fe6dc08b2f5f1c42",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655127211127,
+      "stop" : 1655127220126,
+      "duration" : 8999
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 23,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have fill out business form",
+    "uid" : "300ed41cb8267df3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655127220126,
+      "stop" : 1655127231380,
+      "duration" : 11254
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 25,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have land to dev asset accountant page and choose login with Xero",
+    "uid" : "efbe19ce38659249",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655127231380,
+      "stop" : 1655127243865,
+      "duration" : 12485
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 23,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should allow access to AA",
+    "uid" : "95c3e803578aca7f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655127243866,
+      "stop" : 1655127262790,
+      "duration" : 18924
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 15,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should connect to Xero and verify that",
+    "uid" : "b7a7f6a779e63787",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655127262791,
+      "stop" : 1655127268651,
+      "duration" : 5860
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should disconnect from from Xero",
+    "uid" : "ba817410a04e4e8d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655127268651,
+      "stop" : 1655127280030,
+      "duration" : 11379
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should log out from Xero account",
+    "uid" : "bae9a94143afc4b1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655127280031,
+      "stop" : 1655127286906,
+      "duration" : 6875
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 14,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "fe582df3fb6ddc6c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655128520536,
+      "stop" : 1655128556785,
+      "duration" : 36249
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 6,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a register with existing register",
+    "uid" : "67ce18b0e92ca870",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655128556785,
+      "stop" : 1655128573251,
+      "duration" : 16466
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a new organisation",
+    "uid" : "fa88de7e12568b8f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655128584217,
+      "stop" : 1655128621983,
+      "duration" : 37766
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "a471890b2e3480ec",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655128722946,
+      "stop" : 1655128751769,
+      "duration" : 28823
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 11,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "ea5c7a670e302548",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655128751769,
+      "stop" : 1655128770755,
+      "duration" : 18986
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 11,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create journal",
+    "uid" : "2991770fa1ad407d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655128770757,
+      "stop" : 1655128775751,
+      "duration" : 4994
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 11,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should post journal to Spreadsheet",
+    "uid" : "60285a8c5ecfc36e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655128775752,
+      "stop" : 1655128777364,
+      "duration" : 1612
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 8,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should wait for Excel file to download",
+    "uid" : "5cfd2a97226e9150",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655128777365,
+      "stop" : 1655128777367,
+      "duration" : 2
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should read Excel file",
+    "uid" : "bf07e0183a3064fc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655128777367,
+      "stop" : 1655128809463,
+      "duration" : 32096
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have create Xero account",
+    "uid" : "90a3ce1c4cb3c323",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198093187,
+      "stop" : 1655198122933,
+      "duration" : 29746
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 28,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify intuit account by email",
+    "uid" : "9c75815fa3cba3bb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198122933,
+      "stop" : 1655198152815,
+      "duration" : 29882
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 30,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have activate Xero account",
+    "uid" : "1bad759483e97670",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198152816,
+      "stop" : 1655198165099,
+      "duration" : 12283
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 30,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have fill out business form",
+    "uid" : "e741fc34adc35d96",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198165099,
+      "stop" : 1655198176031,
+      "duration" : 10932
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 30,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have land to dev asset accountant page and choose login with Xero",
+    "uid" : "77d8f1555e1513c6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198176031,
+      "stop" : 1655198193590,
+      "duration" : 17559
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 30,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should allow access to AA",
+    "uid" : "976721bbaf4b3be2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198193591,
+      "stop" : 1655198212448,
+      "duration" : 18857
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 30,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "df12727280f14dbc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198212450,
+      "stop" : 1655198219639,
+      "duration" : 7189
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 27,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should connect to Xero and verify that",
+    "uid" : "7a1b59fca1dd1bb9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198219639,
+      "stop" : 1655198233479,
+      "duration" : 13840
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 23,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset group (Blank)",
+    "uid" : "8075f8e29ff5d1d2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198233480,
+      "stop" : 1655198244270,
+      "duration" : 10790
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 17,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "72ba1eb943889a47",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198244270,
+      "stop" : 1655198253897,
+      "duration" : 9627
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 16,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create journal",
+    "uid" : "9d6f7fa1995d92a4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198253897,
+      "stop" : 1655198259183,
+      "duration" : 5286
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 13,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should post journal to Xero",
+    "uid" : "973eb9d49ca3dc70",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198259183,
+      "stop" : 1655198262046,
+      "duration" : 2863
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 12,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify that we can see the journal in Xero",
+    "uid" : "25c8a3e5f1c0f35f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198262046,
+      "stop" : 1655198263809,
+      "duration" : 1763
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should disconnect from from Xero",
+    "uid" : "aaf7b53713a137f7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198263809,
+      "stop" : 1655198268623,
+      "duration" : 4814
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should log out from Xero account",
+    "uid" : "bee1725d7292da58",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198268623,
+      "stop" : 1655198301417,
+      "duration" : 32794
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 6,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have create Xero account",
+    "uid" : "7d1cccdfc25bdf77",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198319925,
+      "stop" : 1655198349622,
+      "duration" : 29697
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify Xero account by email",
+    "uid" : "737f9f678e1849d2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198349624,
+      "stop" : 1655198378031,
+      "duration" : 28407
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have activate Xero account",
+    "uid" : "d80f47cd6d453e63",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198378033,
+      "stop" : 1655198387041,
+      "duration" : 9008
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have fill out business form",
+    "uid" : "50be2f61edc2d3a1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198387041,
+      "stop" : 1655198398162,
+      "duration" : 11121
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should land to dev account link and allow access to AA ",
+    "uid" : "72f185680e69dfe7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198398163,
+      "stop" : 1655198419784,
+      "duration" : 21621
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should choose Tenant and `create new` organisation",
+    "uid" : "ec2b1be124925e24",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198419785,
+      "stop" : 1655198423927,
+      "duration" : 4142
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should have validate that we are connected with Xero",
+    "uid" : "c9b43d0622b124b6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198423927,
+      "stop" : 1655198432021,
+      "duration" : 8094
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should disconnect from from Xero",
+    "uid" : "43679bd8e61e550a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198432021,
+      "stop" : 1655198434298,
+      "duration" : 2277
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should log out from Xero account",
+    "uid" : "eb5b7ce945b16b92",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655198434299,
+      "stop" : 1655198442686,
+      "duration" : 8387
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "\"after all\" hook for dev asset page",
+    "uid" : "79c410c775a1e114",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655385569939,
+      "stop" : 1655385625372,
+      "duration" : 55433
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 10,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "cd00f68cda7da3a4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655386384783,
+      "stop" : 1655386418787,
+      "duration" : 34004
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 14,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create classifications",
+    "uid" : "611adf0e14dad741",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655386418788,
+      "stop" : 1655386424767,
+      "duration" : 5979
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 12,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify that Classifications have been added",
+    "uid" : "dced16d7aa6c69ab",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655386447623,
+      "stop" : 1655386448804,
+      "duration" : 1181
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should make some transfer",
+    "uid" : "6101e21244f2d628",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655386448804,
+      "stop" : 1655386452397,
+      "duration" : 3593
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify that Classifications have been transferred",
+    "uid" : "3c098a628f0fe00f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655386452397,
+      "stop" : 1655386508791,
+      "duration" : 56394
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "e65ec1f8b8b43d9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655386953778,
+      "stop" : 1655386982730,
+      "duration" : 28952
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 58,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "9c0a74e183d6c554",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655386982730,
+      "stop" : 1655387002067,
+      "duration" : 19337
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 52,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should add and reverse opening balance",
+    "uid" : "38b63f40daf6ea9b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387002070,
+      "stop" : 1655387008787,
+      "duration" : 6717
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 6,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should add sell and reverse sale",
+    "uid" : "c01f2e55c7675fa",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387008788,
+      "stop" : 1655387020507,
+      "duration" : 11719
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should write off asset and reverse write off",
+    "uid" : "cf56ed06981c5be1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387020507,
+      "stop" : 1655387028071,
+      "duration" : 7564
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should partial sell asset and reverse partial sale",
+    "uid" : "26e75aabd2e30fb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387028071,
+      "stop" : 1655387035222,
+      "duration" : 7151
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should partial write off asset and reverse partial write off",
+    "uid" : "5617a000956e5265",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387035222,
+      "stop" : 1655387043108,
+      "duration" : 7886
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should add and reverse reassessment",
+    "uid" : "c212914105b5ae23",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387043109,
+      "stop" : 1655387054765,
+      "duration" : 11656
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should add and reverse transfer to pool",
+    "uid" : "ae4d2bdb0fd3ecc5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387054767,
+      "stop" : 1655387080381,
+      "duration" : 25614
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should add and reverse adjustment",
+    "uid" : "eff626f5999df8b2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387080383,
+      "stop" : 1655387088764,
+      "duration" : 8381
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should add and reverse reassessment taxable use",
+    "uid" : "8179373c2c013e7a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387088764,
+      "stop" : 1655387097558,
+      "duration" : 8794
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should link to account tab, add and reverse reassessment",
+    "uid" : "33ecf83cfaafa539",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387097559,
+      "stop" : 1655387110760,
+      "duration" : 13201
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should link to account tab, add and reverse revaluation",
+    "uid" : "c3e662668ba1d2bf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387110760,
+      "stop" : 1655387121053,
+      "duration" : 10293
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should link to account tab, add and reverse impairment",
+    "uid" : "441e0048c2af8868",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387121053,
+      "stop" : 1655387132045,
+      "duration" : 10992
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 6,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should link to account tab, add and reverse adjustment",
+    "uid" : "24a707be4e869122",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655387132045,
+      "stop" : 1655387184438,
+      "duration" : 52393
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 6,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "2d642c29357edfc4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655449417616,
+      "stop" : 1655449427545,
+      "duration" : 9929
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should change subscription plan",
+    "uid" : "d771e1a5adaac94d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655449427548,
+      "stop" : 1655449450164,
+      "duration" : 22616
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "\"after all\" hook for Create account",
+    "uid" : "1f15a4eae6f47c88",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655452065281,
+      "stop" : 1655452100702,
+      "duration" : 35421
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "619bb2c458c31ecf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655452143248,
+      "stop" : 1655452163160,
+      "duration" : 19912
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 10,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify account by email",
+    "uid" : "66eafd4eae8c60fb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655452163161,
+      "stop" : 1655452208848,
+      "duration" : 45687
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 10,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create organisation after email validation",
+    "uid" : "5f00c93a598ea215",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655452208851,
+      "stop" : 1655452226659,
+      "duration" : 17808
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify account by email",
+    "uid" : "3b899508782d0964",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655452314232,
+      "stop" : 1655452342774,
+      "duration" : 28542
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create organisation after email validation",
+    "uid" : "dcfdc555dd71c2c8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655452342777,
+      "stop" : 1655452356368,
+      "duration" : 13591
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should change subscription plan",
+    "uid" : "e8525a489916d666",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655452365561,
+      "stop" : 1655452386869,
+      "duration" : 21308
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify account by email",
+    "uid" : "f4f89b74a98e0569",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655461387170,
+      "stop" : 1655461387170,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should create organisation after email validation",
+    "uid" : "eff495a28e7a7cd4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655461387171,
+      "stop" : 1655461387171,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should change subscription plan",
+    "uid" : "c2217baf74f3c35a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655461387171,
+      "stop" : 1655461387171,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "a04b5eb755c82950",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655461387171,
+      "stop" : 1655461387171,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should login as removed user and see \"You are now part of the organisation “Invite Users Testing Acc” but do not have access to any registers\" alert)",
+    "uid" : "7690f238ecace9dc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655462520965,
+      "stop" : 1655462556815,
+      "duration" : 35850
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should login as removed user and see \"You are now part of the organisation “SuperTest_Org” but do not have access to any registers\" alert)",
+    "uid" : "b708b4afde5ba3bb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655463909967,
+      "stop" : 1655463918955,
+      "duration" : 8988
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "\"after all\" hook for Account / User",
+    "uid" : "2cd3792e56f8758a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655467301290,
+      "stop" : 1655467444339,
+      "duration" : 143049
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a new organisation",
+    "uid" : "5816e71f4d36d8ef",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655472872249,
+      "stop" : 1655472889566,
+      "duration" : 17317
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 12,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "3a0b19385ef1edf8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655472889567,
+      "stop" : 1655472898426,
+      "duration" : 8859
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 18,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should invite user and give them permissions for the Organisation and Register",
+    "uid" : "9118c4a43766dac0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655472898428,
+      "stop" : 1655472919085,
+      "duration" : 20657
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 11,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should remove user from Organisation",
+    "uid" : "dceb8c9f1091a352",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655472998112,
+      "stop" : 1655473007865,
+      "duration" : 9753
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 11,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)",
+    "uid" : "a0f2921f13d85b47",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473007865,
+      "stop" : 1655473025253,
+      "duration" : 17388
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should login to existing account",
+    "uid" : "90e511904209f75f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473025254,
+      "stop" : 1655473035643,
+      "duration" : 10389
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 25,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should invite user and give them permissions for the Register",
+    "uid" : "db39280d9c8d227f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473035644,
+      "stop" : 1655473056041,
+      "duration" : 20397
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 12,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should find and accept email invitation",
+    "uid" : "d5d489afec4e28eb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473056043,
+      "stop" : 1655473070214,
+      "duration" : 14171
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "6c39b37e9d29ccd7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473070214,
+      "stop" : 1655473083119,
+      "duration" : 12905
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 31,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should verify account by email and validate that user can access the Register they have been invited to",
+    "uid" : "4cbe2ea39b0e35aa",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473083120,
+      "stop" : 1655473103979,
+      "duration" : 20859
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should login to master account, remove user from Register",
+    "uid" : "a297b562cb51f0d3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473103979,
+      "stop" : 1655473126171,
+      "duration" : 22192
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 24,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should login as removed user and see \"You are now part of the organisation \"org_name” but do not have access to any registers\" alert)",
+    "uid" : "e7b82d40a5a89f9c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473126173,
+      "stop" : 1655473144102,
+      "duration" : 17929
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should login to master account and remove user from Organisation",
+    "uid" : "8ccfe49f3b8191a2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473144103,
+      "stop" : 1655473162034,
+      "duration" : 17931
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 10,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "3319d8b532e28d9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473162035,
+      "stop" : 1655473169208,
+      "duration" : 7173
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create 10 assets",
+    "uid" : "8874bdfe587493cf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473169210,
+      "stop" : 1655473300567,
+      "duration" : 131357
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create and fail 11 asset and change subscription plan",
+    "uid" : "bdde6c42b574fb64",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473300570,
+      "stop" : 1655473305200,
+      "duration" : 4630
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should create 11 asset",
+    "uid" : "c0a4edf6d150dc71",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655473305201,
+      "stop" : 1655473337048,
+      "duration" : 31847
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.63" ]
+  }, {
+    "name" : "should add and reverse reassessment taxable use",
+    "uid" : "473bb2d9e1e46093",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711017018,
+      "stop" : 1655711017018,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should partial write off asset and reverse partial write off",
+    "uid" : "aff3a9858dc76a2b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711485827,
+      "stop" : 1655711485827,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should add and reverse opening balance",
+    "uid" : "8cfbbf8619e96a6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711485827,
+      "stop" : 1655711485827,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should partial sell asset and reverse partial sale",
+    "uid" : "9eef388d3eed9fb1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711485827,
+      "stop" : 1655711485827,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should add sell and reverse sale",
+    "uid" : "4248385d70130e5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711485827,
+      "stop" : 1655711485827,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should write off asset and reverse write off",
+    "uid" : "a0b98dcd4170039b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711485827,
+      "stop" : 1655711485827,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should add and reverse adjustment",
+    "uid" : "4a93cdb69ed9d18",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711485828,
+      "stop" : 1655711485828,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should add and reverse reassessment",
+    "uid" : "5c41abceaddc79b5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711485828,
+      "stop" : 1655711485828,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should add and reverse transfer to pool",
+    "uid" : "7939137521e34b8b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711485828,
+      "stop" : 1655711485828,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should link to account tab, add and reverse reassessment",
+    "uid" : "f3f64d1fac70cf3d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711493027,
+      "stop" : 1655711493028,
+      "duration" : 1
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should link to account tab, add and reverse revaluation",
+    "uid" : "8a8cb65606f22478",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711493028,
+      "stop" : 1655711493028,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should link to account tab, add and reverse impairment",
+    "uid" : "23875a4a06a1e7d0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655711493028,
+      "stop" : 1655711493028,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 6,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "41a9657766e16dc2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711571918,
+      "stop" : 1655711601202,
+      "duration" : 29284
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "449bb5879907500a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711601203,
+      "stop" : 1655711621221,
+      "duration" : 20018
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add and reverse opening balance",
+    "uid" : "f072de60f4e3904d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711621224,
+      "stop" : 1655711627615,
+      "duration" : 6391
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add sell and reverse sale",
+    "uid" : "97bf6d611427c598",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711627616,
+      "stop" : 1655711639350,
+      "duration" : 11734
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should write off asset and reverse write off",
+    "uid" : "479b7a2591acb020",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711639351,
+      "stop" : 1655711646421,
+      "duration" : 7070
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should partial sell asset and reverse partial sale",
+    "uid" : "5079a122ce475a70",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711646421,
+      "stop" : 1655711653571,
+      "duration" : 7150
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should partial write off asset and reverse partial write off",
+    "uid" : "6d9063885e20efd5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711653571,
+      "stop" : 1655711661858,
+      "duration" : 8287
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add and reverse reassessment",
+    "uid" : "99005eb713c10563",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711661859,
+      "stop" : 1655711673625,
+      "duration" : 11766
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 4,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add and reverse transfer to pool",
+    "uid" : "1efb194234aa8371",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711673626,
+      "stop" : 1655711703258,
+      "duration" : 29632
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add and reverse adjustment",
+    "uid" : "a1b0ab022efa6bc6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711703259,
+      "stop" : 1655711711601,
+      "duration" : 8342
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 6,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add and reverse reassessment taxable use",
+    "uid" : "a58d49d44ed48abe",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711711601,
+      "stop" : 1655711720074,
+      "duration" : 8473
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should link to account tab, add and reverse reassessment",
+    "uid" : "2a00baead74c2566",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711720074,
+      "stop" : 1655711732239,
+      "duration" : 12165
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should link to account tab, add and reverse revaluation",
+    "uid" : "a7853e6e0f2b6161",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711732239,
+      "stop" : 1655711741255,
+      "duration" : 9016
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should link to account tab, add and reverse impairment",
+    "uid" : "1bc119b3dc0949c9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711741256,
+      "stop" : 1655711751470,
+      "duration" : 10214
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should link to account tab, add and reverse adjustment",
+    "uid" : "a2deb6fdd30cc3d1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655711751471,
+      "stop" : 1655711797024,
+      "duration" : 45553
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should verify account by email",
+    "uid" : "9fe46fe872cee60",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712264907,
+      "stop" : 1655712286941,
+      "duration" : 22034
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create organisation after email validation",
+    "uid" : "630e098aab08a5df",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712286942,
+      "stop" : 1655712297540,
+      "duration" : 10598
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should change subscription plan",
+    "uid" : "31e488cdc37154da",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712307125,
+      "stop" : 1655712324631,
+      "duration" : 17506
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create a new organisation",
+    "uid" : "f877a4086ac7661b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712336098,
+      "stop" : 1655712344684,
+      "duration" : 8586
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create a new register",
+    "uid" : "2285f2981374b3a0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712344684,
+      "stop" : 1655712353496,
+      "duration" : 8812
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should invite user and give them permissions for the Organisation and Register",
+    "uid" : "abfc638db7a71c7d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712353496,
+      "stop" : 1655712365828,
+      "duration" : 12332
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should remove user from Organisation",
+    "uid" : "eb2bf59e1be8fe9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712420119,
+      "stop" : 1655712427089,
+      "duration" : 6970
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)",
+    "uid" : "8e4f8dcc5cf633f7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712427089,
+      "stop" : 1655712438167,
+      "duration" : 11078
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should login to existing account",
+    "uid" : "20c2137133ae165c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712438167,
+      "stop" : 1655712443792,
+      "duration" : 5625
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should invite user and give them permissions for the Register",
+    "uid" : "c09e6f7731da708e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712443792,
+      "stop" : 1655712460647,
+      "duration" : 16855
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should find and accept email invitation",
+    "uid" : "7bda14da320df5ef",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712460647,
+      "stop" : 1655712476005,
+      "duration" : 15358
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create account with valid credentials",
+    "uid" : "71959422b47b3013",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712476005,
+      "stop" : 1655712487049,
+      "duration" : 11044
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should verify account by email and validate that user can access the Register they have been invited to",
+    "uid" : "acccf90426fcca75",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712487050,
+      "stop" : 1655712499544,
+      "duration" : 12494
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should login to master account, remove user from Register",
+    "uid" : "194f6c087fe14702",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712499544,
+      "stop" : 1655712515424,
+      "duration" : 15880
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should login as removed user and see \"You are now part of the organisation \"org_name” but do not have access to any registers\" alert)",
+    "uid" : "4963da1fa96ca832",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712515425,
+      "stop" : 1655712528026,
+      "duration" : 12601
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should login to master account and remove user from Organisation",
+    "uid" : "3f0c2eb1be3bf1f8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712528026,
+      "stop" : 1655712540791,
+      "duration" : 12765
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "f227e26c5cee6507",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712540791,
+      "stop" : 1655712545574,
+      "duration" : 4783
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create 10 assets",
+    "uid" : "ed60b44dccc01d7e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712545574,
+      "stop" : 1655712741360,
+      "duration" : 195786
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create and fail 11 asset and change subscription plan",
+    "uid" : "59cf781cd2cd364f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712741361,
+      "stop" : 1655712744528,
+      "duration" : 3167
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create 11 asset",
+    "uid" : "d31b1d46e2bc432b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655712744528,
+      "stop" : 1655712780262,
+      "duration" : 35734
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should have create intuit account",
+    "uid" : "6b09c0840827b055",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713447085,
+      "stop" : 1655713494909,
+      "duration" : 47824
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add a sandbox company for Australia",
+    "uid" : "67a468cd533d4727",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713494912,
+      "stop" : 1655713529920,
+      "duration" : 35008
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should follow the URL for connect the QBO company",
+    "uid" : "a3e060c564a3c20a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713529921,
+      "stop" : 1655713564946,
+      "duration" : 35025
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should connect to AA and create new organisation",
+    "uid" : "69034083f1c6becc",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713564949,
+      "stop" : 1655713599961,
+      "duration" : 35012
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should disconnect from QuickBooks",
+    "uid" : "84f4ac95c2048f31",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713599964,
+      "stop" : 1655713634979,
+      "duration" : 35015
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should sign out from QuickBooks account",
+    "uid" : "1fe2a14d1fbc1484",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713634980,
+      "stop" : 1655713656369,
+      "duration" : 21389
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should connect and sign in to QuickBooks account",
+    "uid" : "3a9d6ad8f425616f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713656370,
+      "stop" : 1655713705118,
+      "duration" : 48748
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add AU company and connect QuickBooks to AA",
+    "uid" : "335f7205b778a238",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713705118,
+      "stop" : 1655713753805,
+      "duration" : 48687
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should disconnect from QuickBooks again",
+    "uid" : "78c2611419f37855",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713753808,
+      "stop" : 1655713802549,
+      "duration" : 48741
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "\"after all\" hook for Create an AA account from QBO / connect to QBO from AA",
+    "uid" : "5ffdf9b431487edd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655713802549,
+      "stop" : 1655713859553,
+      "duration" : 57004
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should cheking if PDF file exist and validate it",
+    "uid" : "5c5c81bc7c68ec9f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655796493071,
+      "stop" : 1655796493072,
+      "duration" : 1
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 2,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should cheking if CSV file exist and validate it",
+    "uid" : "53291891d749de9d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655796494699,
+      "stop" : 1655796537083,
+      "duration" : 42384
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 1,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should link to account tab, add and reverse impairment",
+    "uid" : "af0c9086ae6bb910",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655799374835,
+      "stop" : 1655799374835,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should validate PDF file",
+    "uid" : "cfa69122a3f1f464",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655801436560,
+      "stop" : 1655801436560,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 3,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should add and reverse transfer to pool",
+    "uid" : "88502ab009675b5d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655813457473,
+      "stop" : 1655813472474,
+      "duration" : 15001
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 7,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "\"after all\" hook for Asset Super Test",
+    "uid" : "3655347604c44419",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1655813622214,
+      "stop" : 1655813671695,
+      "duration" : 49481
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 9,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "b1be807e5bfcb2ee",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655817148356,
+      "stop" : 1655817183783,
+      "duration" : 35427
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "584948aa8ff9e604",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655817183785,
+      "stop" : 1655817196800,
+      "duration" : 13015
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create PDF report",
+    "uid" : "9fe002b2fffcf148",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655817196801,
+      "stop" : 1655817207831,
+      "duration" : 11030
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should wait for PDF file to download",
+    "uid" : "4671094b5480259c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655817207832,
+      "stop" : 1655817207837,
+      "duration" : 5
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should cheking if PDF file exist and validate it",
+    "uid" : "6ef05b517f7b34b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655817207838,
+      "stop" : 1655817207933,
+      "duration" : 95
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create CSV report",
+    "uid" : "15f2b72235896449",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655817208257,
+      "stop" : 1655817210922,
+      "duration" : 2665
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should wait for CSV file to download",
+    "uid" : "81e6c3af1889c552",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655817210923,
+      "stop" : 1655817210926,
+      "duration" : 3
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should cheking if CSV file exist and validate it",
+    "uid" : "f6ce4d7b0406619",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655817210926,
+      "stop" : 1655817243172,
+      "duration" : 32246
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should login to existing account",
+    "uid" : "bbd496eb85c2d43",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818400671,
+      "stop" : 1655818431949,
+      "duration" : 31278
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 41,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create asset group (from template) if no groups have been created",
+    "uid" : "3ac20db9324b5b1f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818431950,
+      "stop" : 1655818435324,
+      "duration" : 3374
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 40,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create asset group (Blank) with existing group",
+    "uid" : "ab0ab5efdcb47e08",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818435326,
+      "stop" : 1655818440897,
+      "duration" : 5571
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 40,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create classifications",
+    "uid" : "4a8c9768d5d6faa8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818440898,
+      "stop" : 1655818449271,
+      "duration" : 8373
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 39,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create asset",
+    "uid" : "1927dec79257956b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818449274,
+      "stop" : 1655818463886,
+      "duration" : 14612
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 38,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add and reverse opening balance",
+    "uid" : "6411d080273d8e00",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818463887,
+      "stop" : 1655818472003,
+      "duration" : 8116
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 15,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add sell and reverse sale",
+    "uid" : "b826b4c8e73e12c8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818472004,
+      "stop" : 1655818485338,
+      "duration" : 13334
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 15,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should write off asset and reverse write off",
+    "uid" : "58da4978f46d6d0d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818485339,
+      "stop" : 1655818494506,
+      "duration" : 9167
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 15,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should partial sell asset and reverse partial sale",
+    "uid" : "d418cff1858e12a8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818494506,
+      "stop" : 1655818502983,
+      "duration" : 8477
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 14,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should partial write off asset and reverse partial write off",
+    "uid" : "f46f576bffffd517",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818502983,
+      "stop" : 1655818513896,
+      "duration" : 10913
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 14,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add and reverse reassessment",
+    "uid" : "b8966ee97ddfd0be",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818513896,
+      "stop" : 1655818526766,
+      "duration" : 12870
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 14,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add and reverse transfer to pool",
+    "uid" : "c506a0fb154a1e5a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1655818526766,
+      "stop" : 1655818526766,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 5,
+    "retriesStatusChange" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "should add and reverse adjustment",
+    "uid" : "5ab67913d225a3b1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818526767,
+      "stop" : 1655818537218,
+      "duration" : 10451
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 13,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add and reverse reassessment taxable use",
+    "uid" : "8705830480ef08b6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818537219,
+      "stop" : 1655818547167,
+      "duration" : 9948
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 13,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should link to account tab, add and reverse reassessment",
+    "uid" : "848774b088a0b8f9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818547167,
+      "stop" : 1655818561372,
+      "duration" : 14205
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 13,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should link to account tab, add and reverse revaluation",
+    "uid" : "1af7562d561fa9d0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818561373,
+      "stop" : 1655818571526,
+      "duration" : 10153
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 13,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should link to account tab, add and reverse impairment",
+    "uid" : "58720459d1fa78bd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818571527,
+      "stop" : 1655818584279,
+      "duration" : 12752
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 12,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should link to account tab, add and reverse adjustment",
+    "uid" : "8bbfeba119205287",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818584279,
+      "stop" : 1655818605268,
+      "duration" : 20989
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 38,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add link attachment",
+    "uid" : "c773bee1e901e705",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818605269,
+      "stop" : 1655818610571,
+      "duration" : 5302
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 35,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should add file attachment",
+    "uid" : "f63ffd285e2c25cf",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818610572,
+      "stop" : 1655818615000,
+      "duration" : 4428
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 35,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create HP/Lease",
+    "uid" : "5e93596102901d75",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818615000,
+      "stop" : 1655818629974,
+      "duration" : 14974
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 33,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create journal",
+    "uid" : "bc4c192ce501876e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818629974,
+      "stop" : 1655818636284,
+      "duration" : 6310
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 30,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should post journal to Spreadsheet",
+    "uid" : "4bf27a5f3a7c2448",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818636284,
+      "stop" : 1655818638138,
+      "duration" : 1854
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 30,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should wait for Excel file to download",
+    "uid" : "7971067c85eac66a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818638139,
+      "stop" : 1655818638143,
+      "duration" : 4
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 30,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should read Excel file",
+    "uid" : "d66fbeaae7b824a9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818638143,
+      "stop" : 1655818638148,
+      "duration" : 5
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 28,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create PDF report",
+    "uid" : "427710bbb497d57e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818638149,
+      "stop" : 1655818646868,
+      "duration" : 8719
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 25,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should wait for PDF file to download",
+    "uid" : "dd095c31c8860f64",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818646868,
+      "stop" : 1655818647033,
+      "duration" : 165
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 25,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should validate PDF file",
+    "uid" : "e6c1b37bb14a4674",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818647033,
+      "stop" : 1655818647134,
+      "duration" : 101
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 18,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should create CSV report",
+    "uid" : "46231b29591d1e99",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818647466,
+      "stop" : 1655818649505,
+      "duration" : 2039
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 25,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should wait for CSV file to download",
+    "uid" : "54d96fe642e6e943",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818649506,
+      "stop" : 1655818649509,
+      "duration" : 3
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 25,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should validate CSV file",
+    "uid" : "b594a6f921592876",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1655818649509,
+      "stop" : 1655818709457,
+      "duration" : 59948
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 19,
+    "retriesStatusChange" : true,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  }, {
+    "name" : "should login to existing account",
+    "uid" : "3f4d01406c6c524e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1655879433916,
+      "stop" : 1655879461620,
+      "duration" : 27704
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "newPassed" : false,
+    "newBroken" : false,
+    "retriesCount" : 0,
+    "retriesStatusChange" : false,
+    "parameters" : [ "chrome-102.0.5005.115" ]
+  } ]
+}

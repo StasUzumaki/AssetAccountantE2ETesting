@@ -1,0 +1,50 @@
+{
+  "uid" : "9cdc031566bc9a6c",
+  "name" : "should write off asset and reverse write off",
+  "fullName" : "dev asset page.should write off asset and reverse write off",
+  "historyId" : "75f4d758bbd72fbc1101ccdeb41a61e0",
+  "time" : {
+    "start" : 1655711313762,
+    "stop" : 1655711313762,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should write off asset and reverse write off"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9cdc031566bc9a6c.json",
+  "parameterValues" : [ ]
+}

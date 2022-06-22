@@ -1,0 +1,182 @@
+{
+  "uid" : "95c3e803578aca7f",
+  "name" : "should allow access to AA",
+  "fullName" : "Sign in with Xero.should allow access to AA",
+  "historyId" : "c67443fe01d3fab08edeadc4793952f0",
+  "time" : {
+    "start" : 1655127243866,
+    "stop" : 1655127262790,
+    "duration" : 18924
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 15,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should allow access to AA"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e46a2026e29b6d39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655126725452,
+        "stop" : 1655126749084,
+        "duration" : 23632
+      }
+    }, {
+      "uid" : "8b0c7652eb763e49",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654766504815,
+        "stop" : 1654766521681,
+        "duration" : 16866
+      }
+    }, {
+      "uid" : "95e94ac5fde7025",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654764310749,
+        "stop" : 1654764330081,
+        "duration" : 19332
+      }
+    }, {
+      "uid" : "ee71c95340544be1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654761675351,
+        "stop" : 1654761694941,
+        "duration" : 19590
+      }
+    }, {
+      "uid" : "4c333751918c4da4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654756684215,
+        "stop" : 1654756706744,
+        "duration" : 22529
+      }
+    }, {
+      "uid" : "8934b9f69f9256e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654756201208,
+        "stop" : 1654756221491,
+        "duration" : 20283
+      }
+    }, {
+      "uid" : "8f64cd86ecc194cb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654695115974,
+        "stop" : 1654695132582,
+        "duration" : 16608
+      }
+    }, {
+      "uid" : "5f855cdf26bc1233",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654689860987,
+        "stop" : 1654689880810,
+        "duration" : 19823
+      }
+    }, {
+      "uid" : "233219a342cddcaa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654687461654,
+        "stop" : 1654687478649,
+        "duration" : 16995
+      }
+    }, {
+      "uid" : "cea9b74d5e27b19",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654686611910,
+        "stop" : 1654686629572,
+        "duration" : 17662
+      }
+    }, {
+      "uid" : "3b488eff1c723455",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654685861977,
+        "stop" : 1654685878916,
+        "duration" : 16939
+      }
+    }, {
+      "uid" : "8ecb3d0d5246eb92",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654683268832,
+        "stop" : 1654683284949,
+        "duration" : 16117
+      }
+    }, {
+      "uid" : "80d6d4ddfbe66f1a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654683099669,
+        "stop" : 1654683115772,
+        "duration" : 16103
+      }
+    }, {
+      "uid" : "51d1bb6603760aff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654682758386,
+        "stop" : 1654682776851,
+        "duration" : 18465
+      }
+    }, {
+      "uid" : "28d22ec44cc3481d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654682155311,
+        "stop" : 1654682173643,
+        "duration" : 18332
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "95c3e803578aca7f.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

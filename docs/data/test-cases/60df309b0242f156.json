@@ -1,0 +1,68 @@
+{
+  "uid" : "60df309b0242f156",
+  "name" : "should create account with valid credentials",
+  "fullName" : "Create account.should create account with valid credentials",
+  "historyId" : "d321cd05d3ed30f4977a7e4a46e51c51",
+  "time" : {
+    "start" : 1651576854884,
+    "stop" : 1651576879537,
+    "duration" : 24653
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "Protocol error (Input.dispatchMouseEvent): Target closed.",
+  "statusTrace" : "Protocol error (Input.dispatchMouseEvent): Target closed.\n                ProtocolError: Protocol error (Input.dispatchMouseEvent): Target closed.\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\Connection.js:230:24\n                    at new Promise (<anonymous>)\n                    at CDPSession.send (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\Connection.js:226:16)\n                    at Mouse.down (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\Input.js:379:28)\n                    at Mouse.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\Input.js:368:24)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async ElementHandle.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\JSHandle.js:497:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create account"
+  }, {
+    "name" : "testClass",
+    "value" : "Create account"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create account with valid credentials"
+  }, {
+    "name" : "package",
+    "value" : "Create account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Firefox-101.0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "60df309b0242f156.json",
+  "parameterValues" : [ "Firefox-101.0" ]
+}

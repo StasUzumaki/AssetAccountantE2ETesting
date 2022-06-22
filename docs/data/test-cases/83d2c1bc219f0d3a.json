@@ -1,0 +1,62 @@
+{
+  "uid" : "83d2c1bc219f0d3a",
+  "name" : "should create a new register",
+  "fullName" : "create a new register.should create a new register",
+  "historyId" : "a7947aca7320770fadb768c147b3e9cc",
+  "time" : {
+    "start" : 1651679342331,
+    "stop" : 1651679372271,
+    "duration" : 29940
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "this.getAllRegisters(...).size is not a function",
+  "statusTrace" : "TypeError: this.getAllRegisters(...).size is not a function\n                    at DevAssetMainpage.getRegistersListSize (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:67:45)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createNewRegister.spec.js:45:52)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a new register"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-100.0.4896.127"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "83d2c1bc219f0d3a.json",
+  "parameterValues" : [ "chrome-100.0.4896.127" ]
+}

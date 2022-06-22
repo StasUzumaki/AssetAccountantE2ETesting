@@ -1,0 +1,70 @@
+{
+  "uid" : "3316b3cd787810c9",
+  "name" : "should create a register with existing register",
+  "fullName" : "create a new register.should create a register with existing register",
+  "historyId" : "9ac46fcb40aa68a90a105fde4a04907b",
+  "time" : {
+    "start" : 1653574026222,
+    "stop" : 1653574048750,
+    "duration" : 22528
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-8"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a register with existing register"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ab4b57942e8436e6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652795477584,
+        "stop" : 1652795495241,
+        "duration" : 17657
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3316b3cd787810c9.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

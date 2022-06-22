@@ -1,0 +1,1298 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Protocol error (Input.dispatchMouseEvent): Target closed.",
+      "children" : [ {
+        "name" : "should create account with valid credentials",
+        "uid" : "60df309b0242f156",
+        "parentUid" : "d36ef75f9474c9e4c3d9e7d986d26e9f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1651576854884,
+          "stop" : 1651576879537,
+          "duration" : 24653
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "Firefox-101.0" ]
+      } ],
+      "uid" : "d36ef75f9474c9e4c3d9e7d986d26e9f"
+    }, {
+      "name" : "net::ERR_CONNECTION_REFUSED at http://localhost/https%3A%2F%2Fdev.auth.faktored.com%2FAccount%2FAuthentication%2FVerifyEmail%3Ftoken%3DCfDJ8IdauIoS%252bS5CqvJMi8Ld8zYY0PVtGYtfV52QrAxeE4Xy7dFfMVOuL5vrc9pkM25tYB7KatM9XA1MVctc2lgZIS2UEMEJeM1b8V8eQ8uGbR2mQkP396f1JNsSzQSPhEzk%252bhbCrl8gDrS9QMkMuP%252bukYV4OpP%252bDQkQH9qinHDoO%252frpemUZP8c%252fI66mwXz8nPc3TXnPVctGOn4rkRBqzV7DGgfyDQqCveYKAH%252bbC96XIu1nD%252bIclIanEg3iLbUVj1%252fErg%253d%253d%26amp%3Bemail%3D36a710c5-4084-42af-b10f-0bcf0096a870%2540mailslurp.com%26amp%3BreturnUrl%3D%252fconnect%252fauthorize%252fcallback%253fresponse_type%253did_token%252520token%2526client_id%253dAssetAccountant%2526state%253dZG5oWnU0UHN2ZHVIRkJ6bHRwemppYjVFQWNsc3ppdS5LbW52cFBkU3hHdEUy%253bhttps%2525253A%2525252F%2525252Fdev.asset.accountant%2525252F%2526redirect_uri%253dhttps%25253A%25252F%25252Fdev.asset.accountant%2526scope%253dopenid%252520profile%252520email%252520asset-accountant-api.registers%2526nonce%253dZG5oWnU0UHN2ZHVIRkJ6bHRwemppYjVFQWNsc3ppdS5LbW52cFBkU3hHdEUy",
+      "children" : [ {
+        "name" : "should create account with valid credentials",
+        "uid" : "7263467e366f4a2a",
+        "parentUid" : "06d1d42dce81ced096645dcffb48a674",
+        "status" : "broken",
+        "time" : {
+          "start" : 1651577922901,
+          "stop" : 1651577945468,
+          "duration" : 22567
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 3,
+        "retriesStatusChange" : true,
+        "parameters" : [ "Edge-100.0.1185.50" ]
+      } ],
+      "uid" : "06d1d42dce81ced096645dcffb48a674"
+    }, {
+      "name" : "waitUntil condition timed out after 35000ms",
+      "children" : [ {
+        "name" : "\"before each\" hook for dev asset page",
+        "uid" : "a48f791a38cfef6d",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1651647891247,
+          "stop" : 1651647927866,
+          "duration" : 36619
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-100.0.4896.127" ]
+      }, {
+        "name" : "\"after all\" hook for invite user to organisation",
+        "uid" : "98830a04ab44c905",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652861051087,
+          "stop" : 1652861106953,
+          "duration" : 55866
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "\"after all\" hook for create journal",
+        "uid" : "64974ba4fedbbd05",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652880860091,
+          "stop" : 1652880904342,
+          "duration" : 44251
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 3,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)",
+        "uid" : "4d1e1989294b6fde",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652965834577,
+          "stop" : 1652965880114,
+          "duration" : 45537
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "\"after all\" hook for invite user to register",
+        "uid" : "8c1d916a51e554f9",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653029509438,
+          "stop" : 1653029601261,
+          "duration" : 91823
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "should create account with valid credentials",
+        "uid" : "b6d3e7dd06cb57c1",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653573350880,
+          "stop" : 1653573404001,
+          "duration" : 53121
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "should verify account by email",
+        "uid" : "2d5a4380f0b1e89f",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653573404003,
+          "stop" : 1653573443073,
+          "duration" : 39070
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "\"before all\" hook for create report",
+        "uid" : "ef12b640a49c0f61",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653574100783,
+          "stop" : 1653574182305,
+          "duration" : 81522
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 3,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "should create 10 assets",
+        "uid" : "b88c7c334fb26ef7",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653574573240,
+          "stop" : 1653574748773,
+          "duration" : 175533
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 9,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "should create and fail 11 asset and change subscription plan",
+        "uid" : "df5fcdb7e1cd952d",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653574748776,
+          "stop" : 1653574803024,
+          "duration" : 54248
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 9,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "\"after all\" hook for create a new register",
+        "uid" : "b5cec41da90fc66",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653574803028,
+          "stop" : 1653574900620,
+          "duration" : 97592
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 8,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "\"after all\" hook for create report",
+        "uid" : "a0e19ea716afe0d8",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653643781501,
+          "stop" : 1653643816516,
+          "duration" : 35015
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 7,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "should create intuit account",
+        "uid" : "706ecffe30ede455",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653895159473,
+          "stop" : 1653895200388,
+          "duration" : 40915
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "Edge-101.0.1210.53" ]
+      }, {
+        "name" : "should create intuit account",
+        "uid" : "760094c5a3014718",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653898853672,
+          "stop" : 1653898895308,
+          "duration" : 41636
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 36,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "should create intuit account",
+        "uid" : "e2ff5ff7419a32a",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653910349277,
+          "stop" : 1653910390479,
+          "duration" : 41202
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 10,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "should fill in Welcome form",
+        "uid" : "195745f802583733",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653910390484,
+          "stop" : 1653910425021,
+          "duration" : 34537
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "should have create intuit account",
+        "uid" : "7960fa966307edf4",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654000842464,
+          "stop" : 1654000904458,
+          "duration" : 61994
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 3,
+        "retriesStatusChange" : true,
+        "parameters" : [ "msedge-101.0.1210.32" ]
+      }, {
+        "name" : "should have create intuit account",
+        "uid" : "e177ec0126b38389",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654002292821,
+          "stop" : 1654002343962,
+          "duration" : 51141
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ "firefox-100.0" ]
+      }, {
+        "name" : "should have fill Welcome form",
+        "uid" : "e0c13801d404dcb7",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654253942935,
+          "stop" : 1654253977942,
+          "duration" : 35007
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 95,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "should verify intuit account by email",
+        "uid" : "70e6cc03b6b2cf62",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654254048039,
+          "stop" : 1654254089518,
+          "duration" : 41479
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "\"after all\" hook for Create an AA account from QBO / connect to QBO from AA",
+        "uid" : "b42f6efce88551f2",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654254264888,
+          "stop" : 1654254334904,
+          "duration" : 70016
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "should have enter creedntials for xero login",
+        "uid" : "44b030f59be4c493",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654680904708,
+          "stop" : 1654680939724,
+          "duration" : 35016
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 54,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "\"after all\" hook for Map Chart of Accounts to Xero and post a Journal",
+        "uid" : "7f14ba3b7e19be6e",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654865850289,
+          "stop" : 1654865888048,
+          "duration" : 37759
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 15,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "\"after all\" hook for create report",
+        "uid" : "7acd43d8dac3c313",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655108504765,
+          "stop" : 1655108554211,
+          "duration" : 49446
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "\"after all\" hook for dev asset page",
+        "uid" : "79c410c775a1e114",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655385569939,
+          "stop" : 1655385625372,
+          "duration" : 55433
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 10,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "should login as removed user and see \"You are now part of the organisation “Invite Users Testing Acc” but do not have access to any registers\" alert)",
+        "uid" : "7690f238ecace9dc",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655462520965,
+          "stop" : 1655462556815,
+          "duration" : 35850
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 4,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "\"after all\" hook for Account / User",
+        "uid" : "2cd3792e56f8758a",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655467301290,
+          "stop" : 1655467444339,
+          "duration" : 143049
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      }, {
+        "name" : "should have create intuit account",
+        "uid" : "6b09c0840827b055",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713447085,
+          "stop" : 1655713494909,
+          "duration" : 47824
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      }, {
+        "name" : "should add a sandbox company for Australia",
+        "uid" : "67a468cd533d4727",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713494912,
+          "stop" : 1655713529920,
+          "duration" : 35008
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      }, {
+        "name" : "should follow the URL for connect the QBO company",
+        "uid" : "a3e060c564a3c20a",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713529921,
+          "stop" : 1655713564946,
+          "duration" : 35025
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      }, {
+        "name" : "should connect to AA and create new organisation",
+        "uid" : "69034083f1c6becc",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713564949,
+          "stop" : 1655713599961,
+          "duration" : 35012
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      }, {
+        "name" : "should disconnect from QuickBooks",
+        "uid" : "84f4ac95c2048f31",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713599964,
+          "stop" : 1655713634979,
+          "duration" : 35015
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      }, {
+        "name" : "\"after all\" hook for Asset Super Test",
+        "uid" : "3655347604c44419",
+        "parentUid" : "5bfd31db234e9a389bb0605af9444ed8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655813622214,
+          "stop" : 1655813671695,
+          "duration" : 49481
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 9,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      } ],
+      "uid" : "5bfd31db234e9a389bb0605af9444ed8"
+    }, {
+      "name" : "read ECONNRESET",
+      "children" : [ {
+        "name" : "\"before all\" hook for dev asset page",
+        "uid" : "c7b39ede5af907f5",
+        "parentUid" : "49b37d5f02a90a77309f1ec8ba0ccf99",
+        "status" : "broken",
+        "time" : {
+          "start" : 1651652008789,
+          "stop" : 1651652029853,
+          "duration" : 21064
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-100.0.4896.127" ]
+      } ],
+      "uid" : "49b37d5f02a90a77309f1ec8ba0ccf99"
+    }, {
+      "name" : "waitUntil condition timed out after 25000ms",
+      "children" : [ {
+        "name" : "\"after each\" hook for dev asset page",
+        "uid" : "5a2818b1cde51e74",
+        "parentUid" : "8bece24d53aa2abc3d4996b1582a9c87",
+        "status" : "broken",
+        "time" : {
+          "start" : 1651654034679,
+          "stop" : 1651654061425,
+          "duration" : 26746
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-100.0.4896.127" ]
+      }, {
+        "name" : "\"before all\" hook for create journal",
+        "uid" : "6800c020cd0ed5f2",
+        "parentUid" : "8bece24d53aa2abc3d4996b1582a9c87",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652708827989,
+          "stop" : 1652708872660,
+          "duration" : 44671
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 14,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.54" ]
+      } ],
+      "uid" : "8bece24d53aa2abc3d4996b1582a9c87"
+    }, {
+      "name" : "text.$$ is not a function",
+      "children" : [ {
+        "name" : "should get text a menu link",
+        "uid" : "9bc0f64f4c87348f",
+        "parentUid" : "40f00a5fe607bf68a2cc89232be6f553",
+        "status" : "broken",
+        "time" : {
+          "start" : 1651674903955,
+          "stop" : 1651674924427,
+          "duration" : 20472
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-100.0.4896.127" ]
+      } ],
+      "uid" : "40f00a5fe607bf68a2cc89232be6f553"
+    }, {
+      "name" : "devAssetMainPage.useCasesElementsText is not a function",
+      "children" : [ {
+        "name" : "\"after all\" hook for create a new register",
+        "uid" : "d660eaa1aaf6aa14",
+        "parentUid" : "26af2056f54c46f1ff95493bf62ca9ba",
+        "status" : "broken",
+        "time" : {
+          "start" : 1651675005666,
+          "stop" : 1651675005676,
+          "duration" : 10
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 8,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-100.0.4896.127" ]
+      } ],
+      "uid" : "26af2056f54c46f1ff95493bf62ca9ba"
+    }, {
+      "name" : "this.waitForClickable is not a function",
+      "children" : [ {
+        "name" : "\"before all\" hook for create a new register",
+        "uid" : "8551fed5f2df3ecf",
+        "parentUid" : "ac1e677ba11c680522ae170a40a6345d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1651678970293,
+          "stop" : 1651678977407,
+          "duration" : 7114
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-100.0.4896.127" ]
+      } ],
+      "uid" : "ac1e677ba11c680522ae170a40a6345d"
+    }, {
+      "name" : "Timeout of 60000ms exceeded. The execution in the test \"create a new register \"before all\" hook for \"should create a new register\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\changeSubscription.spec.js)",
+      "children" : [ {
+        "name" : "\"before all\" hook for create a new register",
+        "uid" : "8567012a6fe5c751",
+        "parentUid" : "60abb0d935f43578bc9b9c70604772d7",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652084620865,
+          "stop" : 1652084680873,
+          "duration" : 60008
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.54" ]
+      } ],
+      "uid" : "60abb0d935f43578bc9b9c70604772d7"
+    }, {
+      "name" : "Timeout of 60000ms exceeded. The execution in the test \"dev asset page \"before all\" hook for \"should create asset group (from template) if no groups have been created\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAsset.spec.js)",
+      "children" : [ {
+        "name" : "\"before all\" hook for dev asset page",
+        "uid" : "3376d0c2f0c65a85",
+        "parentUid" : "b002df7d4ded9be0974c59d54f92b4cf",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652103294581,
+          "stop" : 1652103354587,
+          "duration" : 60006
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.54" ]
+      } ],
+      "uid" : "b002df7d4ded9be0974c59d54f92b4cf"
+    }, {
+      "name" : "waitUntil condition timed out after 30000ms",
+      "children" : [ {
+        "name" : "\"after all\" hook for invite user to organisation",
+        "uid" : "48855a50cc0a1c4f",
+        "parentUid" : "c69744ccc335217116395bbe55b44fe9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652271946339,
+          "stop" : 1652272000189,
+          "duration" : 53850
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 3,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.54" ]
+      }, {
+        "name" : "\"after all\" hook for Create account",
+        "uid" : "d2450e943acd4843",
+        "parentUid" : "c69744ccc335217116395bbe55b44fe9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652344843133,
+          "stop" : 1652344948807,
+          "duration" : 105674
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 9,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.54" ]
+      }, {
+        "name" : "\"after all\" hook for create a new register",
+        "uid" : "965652012aabfd75",
+        "parentUid" : "c69744ccc335217116395bbe55b44fe9",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652355116131,
+          "stop" : 1652355179135,
+          "duration" : 63004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 18,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.54" ]
+      } ],
+      "uid" : "c69744ccc335217116395bbe55b44fe9"
+    }, {
+      "name" : "waitUntil condition timed out after 15000ms",
+      "children" : [ {
+        "name" : "\"after all\" hook for create journal",
+        "uid" : "b8426d062cadec61",
+        "parentUid" : "7a32765981bcc7398deb824e5d577aab",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652681296601,
+          "stop" : 1652681311616,
+          "duration" : 15015
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 4,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.54" ]
+      }, {
+        "name" : "\"after all\" hook for login to account",
+        "uid" : "a9d5e5d6fe909bd0",
+        "parentUid" : "7a32765981bcc7398deb824e5d577aab",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652685842320,
+          "stop" : 1652685872090,
+          "duration" : 29770
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 3,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.54" ]
+      }, {
+        "name" : "\"after all\" hook for dev asset page",
+        "uid" : "aac6623084b5eb9d",
+        "parentUid" : "7a32765981bcc7398deb824e5d577aab",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652692918149,
+          "stop" : 1652692961231,
+          "duration" : 43082
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 32,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-101.0.4951.54" ]
+      } ],
+      "uid" : "7a32765981bcc7398deb824e5d577aab"
+    }, {
+      "name" : "(intermediate value).idDisplayed is not a function",
+      "children" : [ {
+        "name" : "\"before all\" hook for create journal",
+        "uid" : "95f1c1302ae3746",
+        "parentUid" : "48af3c8e72733fce3ed5822bf4647abe",
+        "status" : "broken",
+        "time" : {
+          "start" : 1652879646814,
+          "stop" : 1652879669452,
+          "duration" : 22638
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 8,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      } ],
+      "uid" : "48af3c8e72733fce3ed5822bf4647abe"
+    }, {
+      "name" : "waitUntil condition failed with the following reason: no such window: target window already closed\n                from unknown error: web view not found\n                  (Session info: chrome=101.0.4951.67)",
+      "children" : [ {
+        "name" : "\"after all\" hook for create attachment",
+        "uid" : "83383ed3e594990f",
+        "parentUid" : "91d570e127febd8bba85a86e9f1ea7fa",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653295740970,
+          "stop" : 1653295780678,
+          "duration" : 39708
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      } ],
+      "uid" : "91d570e127febd8bba85a86e9f1ea7fa"
+    }, {
+      "name" : "waitUntil condition failed with the following reason: invalid session id",
+      "children" : [ {
+        "name" : "\"after all\" hook for Create account",
+        "uid" : "9bb6837be49da317",
+        "parentUid" : "626d7b103ae0907992fffe9ea8704a6e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653573443078,
+          "stop" : 1653573482258,
+          "duration" : 39180
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      }, {
+        "name" : "\"after all\" hook for Create account",
+        "uid" : "1f15a4eae6f47c88",
+        "parentUid" : "626d7b103ae0907992fffe9ea8704a6e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655452065281,
+          "stop" : 1655452100702,
+          "duration" : 35421
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      } ],
+      "uid" : "626d7b103ae0907992fffe9ea8704a6e"
+    }, {
+      "name" : "Parameter for \"url\" command needs to be type of string",
+      "children" : [ {
+        "name" : "\"before all\" hook for Create an AA account from QBO / connect to QBO from AA",
+        "uid" : "47099256f72b1fd",
+        "parentUid" : "6ab152e4f0d5f0578886512683edcc38",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653657609750,
+          "stop" : 1653657609752,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      } ],
+      "uid" : "6ab152e4f0d5f0578886512683edcc38"
+    }, {
+      "name" : "waitUntil condition failed with the following reason: invalid selector: Unable to locate an element with the xpath expression //*[@id=\"app\"]//div[2/div[1]/div/div[2]/a because of the following error:\n                SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id=\"app\"]//div[2/div[1]/div/div[2]/a' is not a valid XPath expression.\n                  (Session info: chrome=101.0.4951.67)",
+      "children" : [ {
+        "name" : "should create ",
+        "uid" : "f38eac8ab96c60fd",
+        "parentUid" : "056043a9f703f4cbdc05d8ba2aa6b7ac",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653658268843,
+          "stop" : 1653658313111,
+          "duration" : 44268
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 3,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-101.0.4951.67" ]
+      } ],
+      "uid" : "056043a9f703f4cbdc05d8ba2aa6b7ac"
+    }, {
+      "name" : "Timeout of 250000ms exceeded. The execution in the test \"Sign in with Xero \"before all\" hook for \"should have create xero account\"\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\signInWithXero.spec.js)",
+      "children" : [ {
+        "name" : "\"before all\" hook for Sign in with Xero",
+        "uid" : "cd8684ad967ca437",
+        "parentUid" : "8d8ebc69f785ba898969b740bf2d6a21",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654597556394,
+          "stop" : 1654597806398,
+          "duration" : 250004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      } ],
+      "uid" : "8d8ebc69f785ba898969b740bf2d6a21"
+    }, {
+      "name" : "element (\"//tbody/tr\") still not displayed after 20000ms",
+      "children" : [ {
+        "name" : "\"after all\" hook for create a new register",
+        "uid" : "bfcd797318714f2b",
+        "parentUid" : "e273a90f2bcbe42a09e9d4c5570f8f77",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654693457297,
+          "stop" : 1654693490373,
+          "duration" : 33076
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      } ],
+      "uid" : "e273a90f2bcbe42a09e9d4c5570f8f77"
+    }, {
+      "name" : "No window found with title, url or name matching \"dev.asset.accountant\"",
+      "children" : [ {
+        "name" : "\"after all\" hook for Sign in with Xero",
+        "uid" : "4652ac23c2944d3f",
+        "parentUid" : "15381527e1a0bda84c07ae1c5408404b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1654765205828,
+          "stop" : 1654765236071,
+          "duration" : 30243
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 4,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      } ],
+      "uid" : "15381527e1a0bda84c07ae1c5408404b"
+    }, {
+      "name" : "stale element reference: element is not attached to the page document\n                  (Session info: chrome=102.0.5005.63)",
+      "children" : [ {
+        "name" : "\"after all\" hook for create journal",
+        "uid" : "ca3c6e5ceca4cb10",
+        "parentUid" : "1cca21a89d99402d5073698e1f4ea781",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655116228403,
+          "stop" : 1655116237608,
+          "duration" : 9205
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      } ],
+      "uid" : "1cca21a89d99402d5073698e1f4ea781"
+    }, {
+      "name" : "chrome not reachable\n                  (Session info: chrome=102.0.5005.115)",
+      "children" : [ {
+        "name" : "should sign out from QuickBooks account",
+        "uid" : "1fe2a14d1fbc1484",
+        "parentUid" : "874bde65a75bbe60e26d45b76fa799e0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713634980,
+          "stop" : 1655713656369,
+          "duration" : 21389
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      } ],
+      "uid" : "874bde65a75bbe60e26d45b76fa799e0"
+    }, {
+      "name" : "waitUntil condition failed with the following reason: chrome not reachable\n                  (Session info: chrome=102.0.5005.115)",
+      "children" : [ {
+        "name" : "should connect and sign in to QuickBooks account",
+        "uid" : "3a9d6ad8f425616f",
+        "parentUid" : "60cc7eaf8e158e8eab6723f6d78d2f62",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713656370,
+          "stop" : 1655713705118,
+          "duration" : 48748
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      }, {
+        "name" : "should add AU company and connect QuickBooks to AA",
+        "uid" : "335f7205b778a238",
+        "parentUid" : "60cc7eaf8e158e8eab6723f6d78d2f62",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713705118,
+          "stop" : 1655713753805,
+          "duration" : 48687
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      }, {
+        "name" : "should disconnect from QuickBooks again",
+        "uid" : "78c2611419f37855",
+        "parentUid" : "60cc7eaf8e158e8eab6723f6d78d2f62",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713753808,
+          "stop" : 1655713802549,
+          "duration" : 48741
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      }, {
+        "name" : "\"after all\" hook for Create an AA account from QBO / connect to QBO from AA",
+        "uid" : "5ffdf9b431487edd",
+        "parentUid" : "60cc7eaf8e158e8eab6723f6d78d2f62",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655713802549,
+          "stop" : 1655713859553,
+          "duration" : 57004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      } ],
+      "uid" : "60cc7eaf8e158e8eab6723f6d78d2f62"
+    }, {
+      "name" : "done() called multiple times in test <Asset Super Test should cheking if CSV file exist and validate it> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js",
+      "children" : [ {
+        "name" : "should cheking if CSV file exist and validate it",
+        "uid" : "53291891d749de9d",
+        "parentUid" : "edb709885f187f83169964fa1123171f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1655796494699,
+          "stop" : 1655796537083,
+          "duration" : 42384
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      } ],
+      "uid" : "edb709885f187f83169964fa1123171f"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "expected undefined to be true",
+      "children" : [ {
+        "name" : "\"after all\" hook for dev asset page",
+        "uid" : "a9ca11cec2e7885a",
+        "parentUid" : "61e86e5f912829d4e3d42c9173c917a7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1651586588413,
+          "stop" : 1651586618273,
+          "duration" : 29860
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-100.0.4896.127" ]
+      } ],
+      "uid" : "61e86e5f912829d4e3d42c9173c917a7"
+    }, {
+      "name" : "Malformed type for \"handle\" parameter of command switchToWindow\n                Expected: string\n                Actual: undefined\n                \n                For more info see https://w3c.github.io/webdriver/#dfn-switch-to-window\n                ",
+      "children" : [ {
+        "name" : "sholud have sent a confirmation email for intuit account",
+        "uid" : "611ce634f156923d",
+        "parentUid" : "77b6ad08a8eb107a082221f2c635e05d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1654254047961,
+          "stop" : 1654254048038,
+          "duration" : 77
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      } ],
+      "uid" : "77b6ad08a8eb107a082221f2c635e05d"
+    }, {
+      "name" : "expected 'First things first\\nYou are now part …' to include 'You are now part of the organisation …'      \n                      actual expected\n                      \n                      'First things first\\nYou are now part of the organisation “envious_lizard_org” but do not have access to any registers, please contact your admin to get access to the registers you need.'undefined\n                      ",
+      "children" : [ {
+        "name" : "should login as removed user and see \"You are now part of the organisation “SuperTest_Org” but do not have access to any registers\" alert)",
+        "uid" : "b708b4afde5ba3bb",
+        "parentUid" : "b058a3a44f252863250024edd2bf61a4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655463909967,
+          "stop" : 1655463918955,
+          "duration" : 8988
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ "chrome-102.0.5005.63" ]
+      } ],
+      "uid" : "b058a3a44f252863250024edd2bf61a4"
+    }, {
+      "name" : "expected 'Demo Register' to include 'Demos Register'      \n                      actual expected\n                      \n                      'Demo Register'undefined\n                      ",
+      "children" : [ {
+        "name" : "should login to existing account",
+        "uid" : "3f4d01406c6c524e",
+        "parentUid" : "ce8ba2003f035b0ede76ee0d1af0ed05",
+        "status" : "failed",
+        "time" : {
+          "start" : 1655879433916,
+          "stop" : 1655879461620,
+          "duration" : 27704
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "chrome-102.0.5005.115" ]
+      } ],
+      "uid" : "ce8ba2003f035b0ede76ee0d1af0ed05"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

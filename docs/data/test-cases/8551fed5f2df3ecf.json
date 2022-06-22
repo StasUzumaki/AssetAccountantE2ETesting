@@ -1,0 +1,68 @@
+{
+  "uid" : "8551fed5f2df3ecf",
+  "name" : "\"before all\" hook for create a new register",
+  "fullName" : "create a new register.\"before all\" hook for create a new register",
+  "historyId" : "c0525b440500f545053b8f9f81e47583",
+  "time" : {
+    "start" : 1651678970293,
+    "stop" : 1651678977407,
+    "duration" : 7114
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "this.waitForClickable is not a function",
+  "statusTrace" : "TypeError: this.waitForClickable is not a function\n                    at Page.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:26:20)\n                    at AuthPage.clickSignInBtn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\authentication.page.js:87:27)\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createNewRegister.spec.js:19:24)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"before all\" hook for create a new register"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-100.0.4896.127"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "8551fed5f2df3ecf.json",
+  "parameterValues" : [ "chrome-100.0.4896.127" ]
+}

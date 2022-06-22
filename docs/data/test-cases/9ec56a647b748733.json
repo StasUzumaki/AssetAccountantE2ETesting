@@ -1,0 +1,94 @@
+{
+  "uid" : "9ec56a647b748733",
+  "name" : "should sign out from QuickBooks account again",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.should sign out from QuickBooks account again",
+  "historyId" : "7144b292a09502b1d96f32dada6ea5f2",
+  "time" : {
+    "start" : 1654496738226,
+    "stop" : 1654496753620,
+    "duration" : 15394
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 4,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "should sign out from QuickBooks account again"
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ea4d19952baa5004",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654495460447,
+        "stop" : 1654495476691,
+        "duration" : 16244
+      }
+    }, {
+      "uid" : "676bbbc876d891a6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654495115573,
+        "stop" : 1654495130388,
+        "duration" : 14815
+      }
+    }, {
+      "uid" : "96ac6949fcb883ea",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654265367766,
+        "stop" : 1654265379634,
+        "duration" : 11868
+      }
+    }, {
+      "uid" : "768778e0b7de91c8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654264341667,
+        "stop" : 1654264353019,
+        "duration" : 11352
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9ec56a647b748733.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

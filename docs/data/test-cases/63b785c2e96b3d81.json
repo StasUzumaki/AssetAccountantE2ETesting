@@ -1,0 +1,62 @@
+{
+  "uid" : "63b785c2e96b3d81",
+  "name" : "should add link attachment",
+  "fullName" : "create attachment.should add link attachment",
+  "historyId" : "a3134f6f272ed8431a23ece979dd0b15",
+  "time" : {
+    "start" : 1653300066300,
+    "stop" : 1653300068899,
+    "duration" : 2599
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected 'testNameForLink342\\nLink added by Cre…' to include '23, 2022 13:01 PM'      \n                      actual expected\n                      \n                      'testNameForLink342\\nLink added by Create Asset Testing at May 23, 2022 1:01 PM'undefined\n                      ",
+  "statusTrace" : "AssertionError: expected 'testNameForLink342\\nLink added by Cre…' to include '23, 2022 13:01 PM'\n                    at Helper.addLinkAttachment (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:329:71)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAttachment.spec.js:39:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create attachment"
+  }, {
+    "name" : "testClass",
+    "value" : "create attachment"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add link attachment"
+  }, {
+    "name" : "package",
+    "value" : "create attachment"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "63b785c2e96b3d81.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

@@ -1,0 +1,307 @@
+{
+  "uid" : "976721bbaf4b3be2",
+  "name" : "should allow access to AA",
+  "fullName" : "Map Chart of Accounts to Xero and post a Journal.should allow access to AA",
+  "historyId" : "f9ab24cdcb3371410d15ffa1d0b58219",
+  "time" : {
+    "start" : 1655198193591,
+    "stop" : 1655198212448,
+    "duration" : 18857
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 30,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testClass",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should allow access to AA"
+  }, {
+    "name" : "package",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "af646955ba49ced3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655197202629,
+        "stop" : 1655197226859,
+        "duration" : 24230
+      }
+    }, {
+      "uid" : "7de1d6b1e91914ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655196749282,
+        "stop" : 1655196771717,
+        "duration" : 22435
+      }
+    }, {
+      "uid" : "4c9fe52233a7c7c8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655196383664,
+        "stop" : 1655196404886,
+        "duration" : 21222
+      }
+    }, {
+      "uid" : "3dbabf53b1cda5a1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655196038350,
+        "stop" : 1655196060657,
+        "duration" : 22307
+      }
+    }, {
+      "uid" : "8d3da7f90ca3de1c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655195542840,
+        "stop" : 1655195566832,
+        "duration" : 23992
+      }
+    }, {
+      "uid" : "16832d734a70a9d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655194853122,
+        "stop" : 1655194877573,
+        "duration" : 24451
+      }
+    }, {
+      "uid" : "4aa7dfa440f1d9a7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655128201138,
+        "stop" : 1655128219295,
+        "duration" : 18157
+      }
+    }, {
+      "uid" : "ffcb1d0c4fdcd687",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654868763743,
+        "stop" : 1654868784556,
+        "duration" : 20813
+      }
+    }, {
+      "uid" : "13c27d8abcfb4433",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654868276400,
+        "stop" : 1654868318987,
+        "duration" : 42587
+      }
+    }, {
+      "uid" : "3932acf874607eea",
+      "status" : "broken",
+      "statusDetails" : "Select element doesn't contain any option element",
+      "time" : {
+        "start" : 1654868156294,
+        "stop" : 1654868163272,
+        "duration" : 6978
+      }
+    }, {
+      "uid" : "284a04b398344e5b",
+      "status" : "broken",
+      "statusDetails" : "Select element doesn't contain any option element",
+      "time" : {
+        "start" : 1654867914364,
+        "stop" : 1654867921983,
+        "duration" : 7619
+      }
+    }, {
+      "uid" : "1266c5850ba8d1b1",
+      "status" : "broken",
+      "statusDetails" : "Select element doesn't contain any option element",
+      "time" : {
+        "start" : 1654867630417,
+        "stop" : 1654867637892,
+        "duration" : 7475
+      }
+    }, {
+      "uid" : "903994f467419958",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654865756163,
+        "stop" : 1654865782385,
+        "duration" : 26222
+      }
+    }, {
+      "uid" : "7ab510bd3bcc653b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654865277538,
+        "stop" : 1654865308569,
+        "duration" : 31031
+      }
+    }, {
+      "uid" : "3e7439e2b70d1d20",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654862295503,
+        "stop" : 1654862317218,
+        "duration" : 21715
+      }
+    }, {
+      "uid" : "3ba0b2e2708c8704",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654861702291,
+        "stop" : 1654861724569,
+        "duration" : 22278
+      }
+    }, {
+      "uid" : "5796967933e6960e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654859769846,
+        "stop" : 1654859792741,
+        "duration" : 22895
+      }
+    }, {
+      "uid" : "52b54539e0b3c5b5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654859211653,
+        "stop" : 1654859236450,
+        "duration" : 24797
+      }
+    }, {
+      "uid" : "2d133152b8e97fc5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654855670239,
+        "stop" : 1654855692176,
+        "duration" : 21937
+      }
+    }, {
+      "uid" : "edcbdb2c1ea510a5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654853431145,
+        "stop" : 1654853455198,
+        "duration" : 24053
+      }
+    }, {
+      "uid" : "d6113b90b6bfd826",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654851764843,
+        "stop" : 1654851788904,
+        "duration" : 24061
+      }
+    }, {
+      "uid" : "43a1eb8960026ef5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654850990040,
+        "stop" : 1654851014927,
+        "duration" : 24887
+      }
+    }, {
+      "uid" : "a9870129c61d26b9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654847186197,
+        "stop" : 1654847217497,
+        "duration" : 31300
+      }
+    }, {
+      "uid" : "a3b53c5465bc5c00",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654841468957,
+        "stop" : 1654841494962,
+        "duration" : 26005
+      }
+    }, {
+      "uid" : "520d12dd5d1fdd15",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654774984385,
+        "stop" : 1654775000508,
+        "duration" : 16123
+      }
+    }, {
+      "uid" : "4fc31c2b6346fc24",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654774728281,
+        "stop" : 1654774745666,
+        "duration" : 17385
+      }
+    }, {
+      "uid" : "b4ca37f2211cee45",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654774420995,
+        "stop" : 1654774437924,
+        "duration" : 16929
+      }
+    }, {
+      "uid" : "9abba0ed024517bb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654773452228,
+        "stop" : 1654773468745,
+        "duration" : 16517
+      }
+    }, {
+      "uid" : "102fcddd1cc14fc8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654772205024,
+        "stop" : 1654772222199,
+        "duration" : 17175
+      }
+    }, {
+      "uid" : "5ee8517752531986",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654770981024,
+        "stop" : 1654771016027,
+        "duration" : 35003
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "976721bbaf4b3be2.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

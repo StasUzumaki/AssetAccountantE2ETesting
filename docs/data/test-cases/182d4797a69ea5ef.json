@@ -1,0 +1,62 @@
+{
+  "uid" : "182d4797a69ea5ef",
+  "name" : "should verify account by email and validate that user can access the Register they have been invited to",
+  "fullName" : "Account / User.should verify account by email and validate that user can access the Register they have been invited to",
+  "historyId" : "844651a4933cc0a470fcb45410193565",
+  "time" : {
+    "start" : 1655458734030,
+    "stop" : 1655458751791,
+    "duration" : 17761
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected 'controlled_dinosaur_TestRegister' to include 'InviteUsers_Register'      \n                      actual expected\n                      \n                      'controlled_dinosaur_TestRegister'undefined\n                      ",
+  "statusTrace" : "AssertionError: expected 'controlled_dinosaur_TestRegister' to include 'InviteUsers_Register'\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\accountUser.spec.js:311:68)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify account by email and validate that user can access the Register they have been invited to"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "182d4797a69ea5ef.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

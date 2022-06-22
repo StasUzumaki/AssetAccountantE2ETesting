@@ -1,0 +1,95 @@
+{
+  "uid" : "c8c6262586e9bcae",
+  "name" : "should create account with valid credentials",
+  "fullName" : "invite user to register.should create account with valid credentials",
+  "historyId" : "3af8e8cb070f506ef7974a23f1c02d5d",
+  "time" : {
+    "start" : 1653029878548,
+    "stop" : 1653029888282,
+    "duration" : 9734
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 4,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "invite user to register"
+  }, {
+    "name" : "testClass",
+    "value" : "invite user to register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create account with valid credentials"
+  }, {
+    "name" : "package",
+    "value" : "invite user to register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a868dc59d30ef536",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653029391352,
+        "stop" : 1653029426364,
+        "duration" : 35012
+      }
+    }, {
+      "uid" : "10d6635c2f2a363b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653027418656,
+        "stop" : 1653027428393,
+        "duration" : 9737
+      }
+    }, {
+      "uid" : "4ebddf99703c889d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652966546615,
+        "stop" : 1652966553529,
+        "duration" : 6914
+      }
+    }, {
+      "uid" : "a884da153ff74bee",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652965797264,
+        "stop" : 1652965805469,
+        "duration" : 8205
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c8c6262586e9bcae.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

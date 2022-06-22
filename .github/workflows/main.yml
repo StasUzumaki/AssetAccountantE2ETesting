@@ -4,16 +4,18 @@ on:
     branches:
       - 'main' # Set branch of the GH repo to push
 jobs:
-  test_suite: # Name of the job
-      runs-on: windows-latest # Choosing OS
+  Run_test: # Name of the job
+      runs-on: ubuntu-latest # Choosing OS
       steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '16.14.2' # In command line run “node -v” and choose your version
-      - run: npm ci
-#      - run: npm config set script-shell "C:\Program Files\Git\bin\bash.exe"
+          node-version: [16.14.2] # In command line run “node -v” and choose your version
+      - run: npm i -g npm@latest
+      - run: npm i npm@latest
+      - run: npm i
       - name: run test
+      #trying to run test
         run: npm run test:login # Our name of the headless script
       - name: Copy History
         if: always()
@@ -44,7 +46,7 @@ jobs:
         uses: cpina/github-action-push-to-another-repository@v1.3
         if: always()
         env:
-          API_TOKEN_GITHUB: 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 # Instruction where to get token is below
+          API_TOKEN_GITHUB: ${{secrets.API_TOKEN_GITHUB}} # Instruction where to get token is below
         with:
           source-directory: 'docs'
           destination-github-username: 'Stas' # Your username

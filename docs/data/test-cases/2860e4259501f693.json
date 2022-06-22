@@ -1,0 +1,62 @@
+{
+  "uid" : "2860e4259501f693",
+  "name" : "should have create xero account",
+  "fullName" : "Sign in with Xero.should have create xero account",
+  "historyId" : "1b989a43cfd789b0e180d9c61746bd09",
+  "time" : {
+    "start" : 1654597489711,
+    "stop" : 1654597533433,
+    "duration" : 43722
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.setValue (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:37:9)\n                    at async XeroSignUp.setFirstNameValue (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\xeroSignUp.page.js:37:16)\n                    at async XeroAccounts.createAccountXero (C:\\Users\\oyani\\AssetAccountantE2ETesting\\helper\\xeroAccounts.js:21:9)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\signInWithXero.spec.js:27:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have create xero account"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2860e4259501f693.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

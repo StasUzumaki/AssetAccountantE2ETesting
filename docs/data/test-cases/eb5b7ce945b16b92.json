@@ -1,0 +1,78 @@
+{
+  "uid" : "eb5b7ce945b16b92",
+  "name" : "should log out from Xero account",
+  "fullName" : "Create an account from Xero.should log out from Xero account",
+  "historyId" : "f0ad261e9c904ed0dae84ecb51561672",
+  "time" : {
+    "start" : 1655198434299,
+    "stop" : 1655198442686,
+    "duration" : 8387
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should log out from Xero account"
+  }, {
+    "name" : "package",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1172cba03a0c7304",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655194176334,
+        "stop" : 1655194187040,
+        "duration" : 10706
+      }
+    }, {
+      "uid" : "e15e6f95358aaa92",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655193797393,
+        "stop" : 1655193808380,
+        "duration" : 10987
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "eb5b7ce945b16b92.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

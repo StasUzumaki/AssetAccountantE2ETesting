@@ -1,0 +1,102 @@
+{
+  "uid" : "e7b82d40a5a89f9c",
+  "name" : "should login as removed user and see \"You are now part of the organisation \"org_name” but do not have access to any registers\" alert)",
+  "fullName" : "Account / User.should login as removed user and see \"You are now part of the organisation \"org_name” but do not have access to any registers\" alert)",
+  "historyId" : "8d3ecf8321df1efaefc6d080b4b1dbd4",
+  "time" : {
+    "start" : 1655473126173,
+    "stop" : 1655473144102,
+    "duration" : 17929
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 5,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login as removed user and see \"You are now part of the organisation \"org_name” but do not have access to any registers\" alert)"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "453870fda3810101",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655470462019,
+        "stop" : 1655470479093,
+        "duration" : 17074
+      }
+    }, {
+      "uid" : "533f0ae0da27a8bf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655469230435,
+        "stop" : 1655469248758,
+        "duration" : 18323
+      }
+    }, {
+      "uid" : "819dff8f17b7fc38",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655467094532,
+        "stop" : 1655467112589,
+        "duration" : 18057
+      }
+    }, {
+      "uid" : "ee4b7aad2676cb7b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655466302243,
+        "stop" : 1655466320592,
+        "duration" : 18349
+      }
+    }, {
+      "uid" : "bd4b07a40041e75c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655464208679,
+        "stop" : 1655464221260,
+        "duration" : 12581
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e7b82d40a5a89f9c.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

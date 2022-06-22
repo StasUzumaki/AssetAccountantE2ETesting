@@ -1,0 +1,62 @@
+{
+  "uid" : "f704a16bfb7be1f9",
+  "name" : "should verify intuit account by email",
+  "fullName" : "Map Chart of Accounts to Xero and post a Journal.should verify intuit account by email",
+  "historyId" : "1d17b3e7fde0be00b5788f41d48c488b",
+  "time" : {
+    "start" : 1654868218558,
+    "stop" : 1654868243266,
+    "duration" : 24708
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected false to be true      \n                      actual expected\n                      \n                      falsetrue\n                      ",
+  "statusTrace" : "AssertionError: expected false to be true\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\mapChartToXero.spec.js:57:84)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testClass",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should verify intuit account by email"
+  }, {
+    "name" : "package",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f704a16bfb7be1f9.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

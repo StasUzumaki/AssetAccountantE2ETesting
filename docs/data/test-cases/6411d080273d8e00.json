@@ -1,0 +1,182 @@
+{
+  "uid" : "6411d080273d8e00",
+  "name" : "should add and reverse opening balance",
+  "fullName" : "Asset Super Test.should add and reverse opening balance",
+  "historyId" : "3b40903bd22f8bac95e8f5f3e607f4c5",
+  "time" : {
+    "start" : 1655818463887,
+    "stop" : 1655818472003,
+    "duration" : 8116
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 15,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add and reverse opening balance"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "59646ebc279be34a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655814450917,
+        "stop" : 1655814458478,
+        "duration" : 7561
+      }
+    }, {
+      "uid" : "4df948d7f16a1c8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655813393222,
+        "stop" : 1655813401229,
+        "duration" : 8007
+      }
+    }, {
+      "uid" : "80e8cc05d4cf1910",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655809725613,
+        "stop" : 1655809733715,
+        "duration" : 8102
+      }
+    }, {
+      "uid" : "204aa73c0bcc47cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655808023851,
+        "stop" : 1655808032112,
+        "duration" : 8261
+      }
+    }, {
+      "uid" : "42bf0f38d16d4135",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655806862341,
+        "stop" : 1655806870579,
+        "duration" : 8238
+      }
+    }, {
+      "uid" : "f9de1d863fb832f1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655805709084,
+        "stop" : 1655805718425,
+        "duration" : 9341
+      }
+    }, {
+      "uid" : "33512a249a827acd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655805086429,
+        "stop" : 1655805095462,
+        "duration" : 9033
+      }
+    }, {
+      "uid" : "1963b4dfa4e67c4a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655804501269,
+        "stop" : 1655804509288,
+        "duration" : 8019
+      }
+    }, {
+      "uid" : "a6fca2b1f69b073",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655803421376,
+        "stop" : 1655803427868,
+        "duration" : 6492
+      }
+    }, {
+      "uid" : "3754f282d1cbfe20",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655802536051,
+        "stop" : 1655802542746,
+        "duration" : 6695
+      }
+    }, {
+      "uid" : "5ddba7bbef9d2abc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655800354344,
+        "stop" : 1655800360804,
+        "duration" : 6460
+      }
+    }, {
+      "uid" : "66101202912cfa5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655799734058,
+        "stop" : 1655799740393,
+        "duration" : 6335
+      }
+    }, {
+      "uid" : "cfe8edf169d0627a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655799269965,
+        "stop" : 1655799278698,
+        "duration" : 8733
+      }
+    }, {
+      "uid" : "7d7614ac3aaa631d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655798538434,
+        "stop" : 1655798544758,
+        "duration" : 6324
+      }
+    }, {
+      "uid" : "5e1818840a3e8632",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655718153750,
+        "stop" : 1655718161474,
+        "duration" : 7724
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6411d080273d8e00.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

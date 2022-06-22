@@ -1,0 +1,60 @@
+{
+  "uid" : "adb9e52e8c7f88c2",
+  "name" : "should link to account tab, add and reverse revaluation",
+  "fullName" : "Asset Super Test.should link to account tab, add and reverse revaluation",
+  "historyId" : "285497cf1e390251debd611c874faca8",
+  "time" : {
+    "start" : 1655803513714,
+    "stop" : 1655803522512,
+    "duration" : 8798
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should link to account tab, add and reverse revaluation"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "adb9e52e8c7f88c2.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

@@ -1,0 +1,62 @@
+{
+  "uid" : "f0ac060ab1f08ef0",
+  "name" : "\"after all\" hook for dev asset page",
+  "fullName" : "dev asset page.\"after all\" hook for dev asset page",
+  "historyId" : "6465b8976f72ba300c393ce78ff8cba4",
+  "time" : {
+    "start" : 1651746287366,
+    "stop" : 1651746301927,
+    "duration" : 14561
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "Cannot read properties of undefined (reading 'length')",
+  "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'length')\n                    at DevAssetMainpage.getAssetsGroupListSize (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:95:52)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAssetGroupTemplate.spec.js:64:52)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"after all\" hook for dev asset page"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f0ac060ab1f08ef0.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

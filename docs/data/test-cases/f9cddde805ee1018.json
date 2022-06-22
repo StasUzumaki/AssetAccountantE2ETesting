@@ -1,0 +1,62 @@
+{
+  "uid" : "f9cddde805ee1018",
+  "name" : "should create CSV report",
+  "fullName" : "create report.should create CSV report",
+  "historyId" : "ad868a91449f22230056218e3e834e34",
+  "time" : {
+    "start" : 1653398207052,
+    "stop" : 1653398208719,
+    "duration" : 1667
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "row is not defined",
+  "statusTrace" : "ReferenceError: row is not defined\n                    at CsvParserStream.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:418:70)\n                    at CsvParserStream.emit (node:events:526:28)\n                    at CsvParserStream.emit (node:domain:475:12)\n                    at CsvParserStream.emit (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@fast-csv\\parse\\build\\src\\CsvParserStream.js:45:23)\n                    at endReadableNT (node:internal/streams/readable:1345:12)\n                    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create CSV report"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f9cddde805ee1018.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

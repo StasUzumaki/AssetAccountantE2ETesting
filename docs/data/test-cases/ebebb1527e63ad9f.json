@@ -1,0 +1,60 @@
+{
+  "uid" : "ebebb1527e63ad9f",
+  "name" : "should post journal to Spreadsheet",
+  "fullName" : "Asset Super Test.should post journal to Spreadsheet",
+  "historyId" : "440d4395fd3354a0677013d99ca38e3e",
+  "time" : {
+    "start" : 1655803300610,
+    "stop" : 1655803302608,
+    "duration" : 1998
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should post journal to Spreadsheet"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ebebb1527e63ad9f.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

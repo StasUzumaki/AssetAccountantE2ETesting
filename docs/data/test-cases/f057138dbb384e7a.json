@@ -1,0 +1,485 @@
+{
+  "uid" : "f057138dbb384e7a",
+  "name" : "should create account with valid credentials",
+  "fullName" : "Create account.should create account with valid credentials",
+  "historyId" : "90231e064947e7c5b818050453e9f274",
+  "time" : {
+    "start" : 1652706988085,
+    "stop" : 1652707005160,
+    "duration" : 17075
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 52,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create account"
+  }, {
+    "name" : "testClass",
+    "value" : "Create account"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create account with valid credentials"
+  }, {
+    "name" : "package",
+    "value" : "Create account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "53437924a458eb4e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652705220065,
+        "stop" : 1652705238486,
+        "duration" : 18421
+      }
+    }, {
+      "uid" : "37c82b2474f1be40",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652703230623,
+        "stop" : 1652703249242,
+        "duration" : 18619
+      }
+    }, {
+      "uid" : "2de14da99206c93e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652703171637,
+        "stop" : 1652703188893,
+        "duration" : 17256
+      }
+    }, {
+      "uid" : "9ca5c261e7eeb500",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652703104135,
+        "stop" : 1652703121297,
+        "duration" : 17162
+      }
+    }, {
+      "uid" : "ff4d27643dfea0a2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652703018664,
+        "stop" : 1652703035556,
+        "duration" : 16892
+      }
+    }, {
+      "uid" : "7f82a96f38c964c4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652696251981,
+        "stop" : 1652696266868,
+        "duration" : 14887
+      }
+    }, {
+      "uid" : "a9a236f5abbc4282",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652363753805,
+        "stop" : 1652363770743,
+        "duration" : 16938
+      }
+    }, {
+      "uid" : "1f9e118c14de3fa5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350818309,
+        "stop" : 1652350833409,
+        "duration" : 15100
+      }
+    }, {
+      "uid" : "b0e85b6965c8b701",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350752710,
+        "stop" : 1652350768963,
+        "duration" : 16253
+      }
+    }, {
+      "uid" : "596cf96b1305bf90",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350684449,
+        "stop" : 1652350701550,
+        "duration" : 17101
+      }
+    }, {
+      "uid" : "6903295f961715e9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350580076,
+        "stop" : 1652350600039,
+        "duration" : 19963
+      }
+    }, {
+      "uid" : "411f69ef713703dd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350528184,
+        "stop" : 1652350544409,
+        "duration" : 16225
+      }
+    }, {
+      "uid" : "5feeb2cd075cb190",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350468060,
+        "stop" : 1652350485056,
+        "duration" : 16996
+      }
+    }, {
+      "uid" : "c7b90e85d9939926",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350323688,
+        "stop" : 1652350339003,
+        "duration" : 15315
+      }
+    }, {
+      "uid" : "14439e16bbbef4e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350269398,
+        "stop" : 1652350285193,
+        "duration" : 15795
+      }
+    }, {
+      "uid" : "9ac06b25ee69e148",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350216964,
+        "stop" : 1652350231587,
+        "duration" : 14623
+      }
+    }, {
+      "uid" : "8962b36e42bc4365",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652350100536,
+        "stop" : 1652350115854,
+        "duration" : 15318
+      }
+    }, {
+      "uid" : "cad11dc3153003d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652349932683,
+        "stop" : 1652349947149,
+        "duration" : 14466
+      }
+    }, {
+      "uid" : "fd7a34d1d0fa64cc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652349863512,
+        "stop" : 1652349884132,
+        "duration" : 20620
+      }
+    }, {
+      "uid" : "ebd7ab1563de9598",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652349460198,
+        "stop" : 1652349486047,
+        "duration" : 25849
+      }
+    }, {
+      "uid" : "585a7cd2ebc99bcf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652349022664,
+        "stop" : 1652349093530,
+        "duration" : 70866
+      }
+    }, {
+      "uid" : "2764196882fcce3",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"Create account should create account with valid credentials\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js)",
+      "time" : {
+        "start" : 1652348827948,
+        "stop" : 1652348912585,
+        "duration" : 84637
+      }
+    }, {
+      "uid" : "fae2d05531e00693",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652348391789,
+        "stop" : 1652348449817,
+        "duration" : 58028
+      }
+    }, {
+      "uid" : "894cf80dc78f1d2b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652348260729,
+        "stop" : 1652348329620,
+        "duration" : 68891
+      }
+    }, {
+      "uid" : "5216b9ef7616549a",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"Create account should create account with valid credentials\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js)",
+      "time" : {
+        "start" : 1652348125650,
+        "stop" : 1652348202492,
+        "duration" : 76842
+      }
+    }, {
+      "uid" : "86c921733852ca2c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652347351797,
+        "stop" : 1652347423988,
+        "duration" : 72191
+      }
+    }, {
+      "uid" : "62bbe0bca257e173",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"Create account should create account with valid credentials\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js)",
+      "time" : {
+        "start" : 1652346617553,
+        "stop" : 1652346708513,
+        "duration" : 90960
+      }
+    }, {
+      "uid" : "17b065f3a2e3352b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652346301325,
+        "stop" : 1652346376000,
+        "duration" : 74675
+      }
+    }, {
+      "uid" : "310a063102fb3550",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 30000ms",
+      "time" : {
+        "start" : 1652346132833,
+        "stop" : 1652346225980,
+        "duration" : 93147
+      }
+    }, {
+      "uid" : "8dff3e5a16e92836",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652345348410,
+        "stop" : 1652345442607,
+        "duration" : 94197
+      }
+    }, {
+      "uid" : "2efd957629fa8de5",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"Create account should create account with valid credentials\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js)",
+      "time" : {
+        "start" : 1652344565628,
+        "stop" : 1652344657488,
+        "duration" : 91860
+      }
+    }, {
+      "uid" : "115089b8b46c2346",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652343745567,
+        "stop" : 1652343807488,
+        "duration" : 61921
+      }
+    }, {
+      "uid" : "fc448376c6a5424d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652343242502,
+        "stop" : 1652343301087,
+        "duration" : 58585
+      }
+    }, {
+      "uid" : "61c87c202b9db417",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652342804866,
+        "stop" : 1652342868186,
+        "duration" : 63320
+      }
+    }, {
+      "uid" : "4938622ba373976c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652342405791,
+        "stop" : 1652342470688,
+        "duration" : 64897
+      }
+    }, {
+      "uid" : "161ddf9145993af2",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 30000ms",
+      "time" : {
+        "start" : 1652339028592,
+        "stop" : 1652339106333,
+        "duration" : 77741
+      }
+    }, {
+      "uid" : "7d349dde9b234b2c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652277488469,
+        "stop" : 1652277540354,
+        "duration" : 51885
+      }
+    }, {
+      "uid" : "af641da097bc2eba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652276552427,
+        "stop" : 1652276570133,
+        "duration" : 17706
+      }
+    }, {
+      "uid" : "f0d8daad612b3efd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652275502807,
+        "stop" : 1652275522379,
+        "duration" : 19572
+      }
+    }, {
+      "uid" : "fcf8878a215f4d74",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652274649117,
+        "stop" : 1652274671753,
+        "duration" : 22636
+      }
+    }, {
+      "uid" : "9647d5cfb984a53",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652274313608,
+        "stop" : 1652274331585,
+        "duration" : 17977
+      }
+    }, {
+      "uid" : "89b08052fefd195e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652274250826,
+        "stop" : 1652274268887,
+        "duration" : 18061
+      }
+    }, {
+      "uid" : "940098331d8cc368",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652271643583,
+        "stop" : 1652271703053,
+        "duration" : 59470
+      }
+    }, {
+      "uid" : "c2725daf57da2bff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652265402417,
+        "stop" : 1652265446280,
+        "duration" : 43863
+      }
+    }, {
+      "uid" : "dcc21d649b2894e9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652262069175,
+        "stop" : 1652262125780,
+        "duration" : 56605
+      }
+    }, {
+      "uid" : "e03f58645b746cbe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652261830963,
+        "stop" : 1652261890420,
+        "duration" : 59457
+      }
+    }, {
+      "uid" : "5aa2d4bf65a24bd8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652261170976,
+        "stop" : 1652261237638,
+        "duration" : 66662
+      }
+    }, {
+      "uid" : "d1535f92ed6a88c7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651760321967,
+        "stop" : 1651760381954,
+        "duration" : 59987
+      }
+    }, {
+      "uid" : "20083c2fc8102309",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651754045623,
+        "stop" : 1651754099699,
+        "duration" : 54076
+      }
+    }, {
+      "uid" : "adcdc8c2ec904b82",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651753700261,
+        "stop" : 1651753744162,
+        "duration" : 43901
+      }
+    }, {
+      "uid" : "a29d42c73b526ff2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651753560904,
+        "stop" : 1651753605384,
+        "duration" : 44480
+      }
+    }, {
+      "uid" : "85ab67bb6f3c1e1",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"Create account should create account with valid credentials\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js)",
+      "time" : {
+        "start" : 1651733510663,
+        "stop" : 1651733570693,
+        "duration" : 60030
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f057138dbb384e7a.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

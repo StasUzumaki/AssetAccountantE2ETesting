@@ -1,0 +1,357 @@
+{
+  "uid" : "d87d93d51aa9004a",
+  "name" : "should create a register with existing register",
+  "fullName" : "create a new register.should create a register with existing register",
+  "historyId" : "f799f097a52cc90c038313fdc31a2404",
+  "time" : {
+    "start" : 1651680866707,
+    "stop" : 1651680866708,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 33,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a register with existing register"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-100.0.4896.127"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "5b0871a90a81190e",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651680815152,
+        "stop" : 1651680815155,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "210c6c1f6694b580",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651680719553,
+        "stop" : 1651680719555,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "10145c5210fa9f4f",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651680576195,
+        "stop" : 1651680576196,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "67c1cc32228e9ab1",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651680498910,
+        "stop" : 1651680498911,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "70ab881ce641f084",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651680388420,
+        "stop" : 1651680388421,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "8afc2b77f38323c6",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651680279384,
+        "stop" : 1651680279385,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "28d7ad13d5f9e8f8",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651680218788,
+        "stop" : 1651680218789,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "ef8bdc96aa3dd8c",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651680156208,
+        "stop" : 1651680156208,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "5216e87927d263da",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651679838838,
+        "stop" : 1651679838839,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "3457b8bea22a1381",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651679801024,
+        "stop" : 1651679801025,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "e1b570373537887e",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651679661489,
+        "stop" : 1651679661490,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "9fa9053132bb89fa",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651679414585,
+        "stop" : 1651679414587,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "3d25698609a8ef99",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651679372273,
+        "stop" : 1651679372273,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "ed524095a2a09c1e",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651679043723,
+        "stop" : 1651679043724,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "2e4fb6dc372fa189",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651678977407,
+        "stop" : 1651678977409,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "48be1c1ae12d76c3",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651678598889,
+        "stop" : 1651678598892,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "99d4fa1e73fc6372",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651678502821,
+        "stop" : 1651678502826,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "ecb4dcc079c6a812",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651678411023,
+        "stop" : 1651678411028,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "79f9f8358d52986",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651678325250,
+        "stop" : 1651678325255,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "30d48bacca3868e",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651678242491,
+        "stop" : 1651678242495,
+        "duration" : 4
+      }
+    }, {
+      "uid" : "1d7655c52715b95b",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651678181307,
+        "stop" : 1651678181308,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "33383656c574fe99",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651678030547,
+        "stop" : 1651678030549,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "b21cc8439372aa6e",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651675170659,
+        "stop" : 1651675170664,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "4deec10a98d4b770",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1651673802047,
+        "stop" : 1651673802049,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "77fc00b55a7163fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651671602900,
+        "stop" : 1651671613131,
+        "duration" : 10231
+      }
+    }, {
+      "uid" : "fef1b16f5abe2c78",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651671417950,
+        "stop" : 1651671449069,
+        "duration" : 31119
+      }
+    }, {
+      "uid" : "c4bd363444769a37",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651671179844,
+        "stop" : 1651671194840,
+        "duration" : 14996
+      }
+    }, {
+      "uid" : "988537165cc80ddb",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651670728107,
+        "stop" : 1651670762374,
+        "duration" : 34267
+      }
+    }, {
+      "uid" : "c2b07ef013bc8fc8",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651670073404,
+        "stop" : 1651670120565,
+        "duration" : 47161
+      }
+    }, {
+      "uid" : "f013ba41564bdc8c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651669653958,
+        "stop" : 1651669670860,
+        "duration" : 16902
+      }
+    }, {
+      "uid" : "a5c0b229bd3c57fb",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651669563772,
+        "stop" : 1651669598725,
+        "duration" : 34953
+      }
+    }, {
+      "uid" : "4d327cff507b9710",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651669020634,
+        "stop" : 1651669055022,
+        "duration" : 34388
+      }
+    }, {
+      "uid" : "ea686e7fb224afb",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651668821798,
+        "stop" : 1651668858362,
+        "duration" : 36564
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d87d93d51aa9004a.json",
+  "parameterValues" : [ "chrome-100.0.4896.127" ]
+}

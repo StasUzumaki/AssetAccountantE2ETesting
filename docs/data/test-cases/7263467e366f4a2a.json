@@ -1,0 +1,94 @@
+{
+  "uid" : "7263467e366f4a2a",
+  "name" : "should create account with valid credentials",
+  "fullName" : "Create account.should create account with valid credentials",
+  "historyId" : "de4ac02fad3cd031cb19ff86bb3e7abe",
+  "time" : {
+    "start" : 1651577922901,
+    "stop" : 1651577945468,
+    "duration" : 22567
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "net::ERR_CONNECTION_REFUSED at http://localhost/https%3A%2F%2Fdev.auth.faktored.com%2FAccount%2FAuthentication%2FVerifyEmail%3Ftoken%3DCfDJ8IdauIoS%252bS5CqvJMi8Ld8zYY0PVtGYtfV52QrAxeE4Xy7dFfMVOuL5vrc9pkM25tYB7KatM9XA1MVctc2lgZIS2UEMEJeM1b8V8eQ8uGbR2mQkP396f1JNsSzQSPhEzk%252bhbCrl8gDrS9QMkMuP%252bukYV4OpP%252bDQkQH9qinHDoO%252frpemUZP8c%252fI66mwXz8nPc3TXnPVctGOn4rkRBqzV7DGgfyDQqCveYKAH%252bbC96XIu1nD%252bIclIanEg3iLbUVj1%252fErg%253d%253d%26amp%3Bemail%3D36a710c5-4084-42af-b10f-0bcf0096a870%2540mailslurp.com%26amp%3BreturnUrl%3D%252fconnect%252fauthorize%252fcallback%253fresponse_type%253did_token%252520token%2526client_id%253dAssetAccountant%2526state%253dZG5oWnU0UHN2ZHVIRkJ6bHRwemppYjVFQWNsc3ppdS5LbW52cFBkU3hHdEUy%253bhttps%2525253A%2525252F%2525252Fdev.asset.accountant%2525252F%2526redirect_uri%253dhttps%25253A%25252F%25252Fdev.asset.accountant%2526scope%253dopenid%252520profile%252520email%252520asset-accountant-api.registers%2526nonce%253dZG5oWnU0UHN2ZHVIRkJ6bHRwemppYjVFQWNsc3ppdS5LbW52cFBkU3hHdEUy",
+  "statusTrace" : "net::ERR_CONNECTION_REFUSED at http://localhost/https%3A%2F%2Fdev.auth.faktored.com%2FAccount%2FAuthentication%2FVerifyEmail%3Ftoken%3DCfDJ8IdauIoS%252bS5CqvJMi8Ld8zYY0PVtGYtfV52QrAxeE4Xy7dFfMVOuL5vrc9pkM25tYB7KatM9XA1MVctc2lgZIS2UEMEJeM1b8V8eQ8uGbR2mQkP396f1JNsSzQSPhEzk%252bhbCrl8gDrS9QMkMuP%252bukYV4OpP%252bDQkQH9qinHDoO%252frpemUZP8c%252fI66mwXz8nPc3TXnPVctGOn4rkRBqzV7DGgfyDQqCveYKAH%252bbC96XIu1nD%252bIclIanEg3iLbUVj1%252fErg%253d%253d%26amp%3Bemail%3D36a710c5-4084-42af-b10f-0bcf0096a870%2540mailslurp.com%26amp%3BreturnUrl%3D%252fconnect%252fauthorize%252fcallback%253fresponse_type%253did_token%252520token%2526client_id%253dAssetAccountant%2526state%253dZG5oWnU0UHN2ZHVIRkJ6bHRwemppYjVFQWNsc3ppdS5LbW52cFBkU3hHdEUy%253bhttps%2525253A%2525252F%2525252Fdev.asset.accountant%2525252F%2526redirect_uri%253dhttps%25253A%25252F%25252Fdev.asset.accountant%2526scope%253dopenid%252520profile%252520email%252520asset-accountant-api.registers%2526nonce%253dZG5oWnU0UHN2ZHVIRkJ6bHRwemppYjVFQWNsc3ppdS5LbW52cFBkU3hHdEUy\n                Error: net::ERR_CONNECTION_REFUSED at http://localhost/https%3A%2F%2Fdev.auth.faktored.com%2FAccount%2FAuthentication%2FVerifyEmail%3Ftoken%3DCfDJ8IdauIoS%252bS5CqvJMi8Ld8zYY0PVtGYtfV52QrAxeE4Xy7dFfMVOuL5vrc9pkM25tYB7KatM9XA1MVctc2lgZIS2UEMEJeM1b8V8eQ8uGbR2mQkP396f1JNsSzQSPhEzk%252bhbCrl8gDrS9QMkMuP%252bukYV4OpP%252bDQkQH9qinHDoO%252frpemUZP8c%252fI66mwXz8nPc3TXnPVctGOn4rkRBqzV7DGgfyDQqCveYKAH%252bbC96XIu1nD%252bIclIanEg3iLbUVj1%252fErg%253d%253d%26amp%3Bemail%3D36a710c5-4084-42af-b10f-0bcf0096a870%2540mailslurp.com%26amp%3BreturnUrl%3D%252fconnect%252fauthorize%252fcallback%253fresponse_type%253did_token%252520token%2526client_id%253dAssetAccountant%2526state%253dZG5oWnU0UHN2ZHVIRkJ6bHRwemppYjVFQWNsc3ppdS5LbW52cFBkU3hHdEUy%253bhttps%2525253A%2525252F%2525252Fdev.asset.accountant%2525252F%2526redirect_uri%253dhttps%25253A%25252F%25252Fdev.asset.accountant%2526scope%253dopenid%252520profile%252520email%252520asset-accountant-api.registers%2526nonce%253dZG5oWnU0UHN2ZHVIRkJ6bHRwemppYjVFQWNsc3ppdS5LbW52cFBkU3hHdEUy\n                    at navigate (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\FrameManager.js:156:23)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async FrameManager.navigateFrame (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\FrameManager.js:131:21)\n                    at async Frame.goto (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\FrameManager.js:512:16)\n                    at async Page.goto (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\Page.js:1167:16)\n                    at async DevToolsDriver.navigateTo (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\devtools\\build\\commands\\navigateTo.js:18:5)\n                    at async Browser.wrappedCommand (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\devtools\\build\\devtoolsdriver.js:102:26)\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccount.spec.js:50:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 3,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create account"
+  }, {
+    "name" : "testClass",
+    "value" : "Create account"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create account with valid credentials"
+  }, {
+    "name" : "package",
+    "value" : "Create account"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Edge-100.0.1185.50"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b496ec7c76aa28c3",
+      "status" : "broken",
+      "statusDetails" : "net::ERR_CONNECTION_REFUSED at http://localhost/https%3A%2F%2Fdev.auth.faktored.com%2FAccount%2FAuthentication%2FVerifyEmail%3Ftoken%3DCfDJ8IdauIoS%252bS5CqvJMi8Ld8zbFK1u0xXdM0cEFScOb4Wj2YnpG%252bA8qMVAvg0iguH5IBq3%252bTA06PLCURQHbFflQimjHlrYf%252bRA8%252bT29GKNSAs4Ue%252fRrGPlv72%252f6RJVVOs%252bESyBr9shbk1JpbVJvL%252fs2co364ZQ2PsAbVGihcJiYZF8EkgqT13CrQe%252fMAe28Bd%252bdQnngCo2HuFSLbjQnN5fZfsFaNBpK2Mozn0foCrpPE9J3NTTN2YbVkDKe1TjOWzIN6Q%253d%253d%26amp%3Bemail%3Da5ab1946-100e-4b26-b2b0-e449cd3b6182%2540mailslurp.com%26amp%3BreturnUrl%3D%252fconnect%252fauthorize%252fcallback%253fresponse_type%253did_token%252520token%2526client_id%253dAssetAccountant%2526state%253dakZBWXNRbC4zUjZLR205enk0LUNESW5sV1JuTjQtV3VxYUFaNjVGSTNmdDEy%253bhttps%2525253A%2525252F%2525252Fdev.asset.accountant%2525252F%2526redirect_uri%253dhttps%25253A%25252F%25252Fdev.asset.accountant%2526scope%253dopenid%252520profile%252520email%252520asset-accountant-api.registers%2526nonce%253dakZBWXNRbC4zUjZLR205enk0LUNESW5sV1JuTjQtV3VxYUFaNjVGSTNmdDEy",
+      "time" : {
+        "start" : 1651577821328,
+        "stop" : 1651577846353,
+        "duration" : 25025
+      }
+    }, {
+      "uid" : "ef900b7315cc2504",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 30000ms",
+      "time" : {
+        "start" : 1651576976617,
+        "stop" : 1651577023747,
+        "duration" : 47130
+      }
+    }, {
+      "uid" : "29f793c50c41bdf3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651576917507,
+        "stop" : 1651576937557,
+        "duration" : 20050
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "7263467e366f4a2a.json",
+  "parameterValues" : [ "Edge-100.0.1185.50" ]
+}

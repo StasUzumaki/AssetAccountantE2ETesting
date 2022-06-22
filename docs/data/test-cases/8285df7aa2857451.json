@@ -1,0 +1,438 @@
+{
+  "uid" : "8285df7aa2857451",
+  "name" : "should have create xero account",
+  "fullName" : "Sign in with Xero.should have create xero account",
+  "historyId" : "1b989a43cfd789b0e180d9c61746bd09",
+  "time" : {
+    "start" : 1654676185960,
+    "stop" : 1654676212224,
+    "duration" : 26264
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 45,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have create xero account"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6102e93916848001",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654675999436,
+        "stop" : 1654676024456,
+        "duration" : 25020
+      }
+    }, {
+      "uid" : "1b56e1b66b3305c0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654672851697,
+        "stop" : 1654672882292,
+        "duration" : 30595
+      }
+    }, {
+      "uid" : "a8e3d882b50c0361",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654672672818,
+        "stop" : 1654672703733,
+        "duration" : 30915
+      }
+    }, {
+      "uid" : "79e58985a6d934d7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654672533801,
+        "stop" : 1654672566742,
+        "duration" : 32941
+      }
+    }, {
+      "uid" : "3374dd43b0ef65cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654672410419,
+        "stop" : 1654672436486,
+        "duration" : 26067
+      }
+    }, {
+      "uid" : "8794c99c0379a242",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654672319266,
+        "stop" : 1654672346534,
+        "duration" : 27268
+      }
+    }, {
+      "uid" : "7f63e3cdf38b7400",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654672184933,
+        "stop" : 1654672210743,
+        "duration" : 25810
+      }
+    }, {
+      "uid" : "ac8aad7f7e5fce45",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654671813608,
+        "stop" : 1654671839900,
+        "duration" : 26292
+      }
+    }, {
+      "uid" : "f7bead313d22b5f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654669088402,
+        "stop" : 1654669117756,
+        "duration" : 29354
+      }
+    }, {
+      "uid" : "27b6a5e654ef18ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654609973262,
+        "stop" : 1654610001618,
+        "duration" : 28356
+      }
+    }, {
+      "uid" : "bacd24a41e4646f0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654609784097,
+        "stop" : 1654609811608,
+        "duration" : 27511
+      }
+    }, {
+      "uid" : "4e6f6d74b0198c91",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654609460765,
+        "stop" : 1654609522371,
+        "duration" : 61606
+      }
+    }, {
+      "uid" : "9b486e37d8fb339f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654609319928,
+        "stop" : 1654609342128,
+        "duration" : 22200
+      }
+    }, {
+      "uid" : "1c8d05ffa84b5b0c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654609107275,
+        "stop" : 1654609129499,
+        "duration" : 22224
+      }
+    }, {
+      "uid" : "928330ec11963bcb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654608962705,
+        "stop" : 1654608987611,
+        "duration" : 24906
+      }
+    }, {
+      "uid" : "8c250fe963797cf0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654608765374,
+        "stop" : 1654608787685,
+        "duration" : 22311
+      }
+    }, {
+      "uid" : "fdbf44a226ab3478",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654608475347,
+        "stop" : 1654608500268,
+        "duration" : 24921
+      }
+    }, {
+      "uid" : "c961f0dc8bb27875",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654608416735,
+        "stop" : 1654608439941,
+        "duration" : 23206
+      }
+    }, {
+      "uid" : "8ba5b669fd19336c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654607466075,
+        "stop" : 1654607488589,
+        "duration" : 22514
+      }
+    }, {
+      "uid" : "2a84e4e0236bec73",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654606305217,
+        "stop" : 1654606344895,
+        "duration" : 39678
+      }
+    }, {
+      "uid" : "125caf81bf70da0f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654606260405,
+        "stop" : 1654606279062,
+        "duration" : 18657
+      }
+    }, {
+      "uid" : "3248ccdcf1418e3f",
+      "status" : "broken",
+      "statusDetails" : "element click intercepted: Element <span class=\"Checkbox__StyledCheckbox-sc-1dxs2xu-2 hgsQPn\"></span> is not clickable at point (564, 553). Other element would receive the click: <div style=\"width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;\"></div>\n                  (Session info: chrome=102.0.5005.63)",
+      "time" : {
+        "start" : 1654606195002,
+        "stop" : 1654606204505,
+        "duration" : 9503
+      }
+    }, {
+      "uid" : "5ab48766861eec7b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654606080741,
+        "stop" : 1654606098196,
+        "duration" : 17455
+      }
+    }, {
+      "uid" : "735a2e4431e6dcb6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654605929887,
+        "stop" : 1654605950326,
+        "duration" : 20439
+      }
+    }, {
+      "uid" : "c502a99ce7c99b70",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654605519795,
+        "stop" : 1654605538479,
+        "duration" : 18684
+      }
+    }, {
+      "uid" : "15fe2f8aad3f49b7",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654605059110,
+        "stop" : 1654605109640,
+        "duration" : 50530
+      }
+    }, {
+      "uid" : "b8f49078e2294b67",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654604973080,
+        "stop" : 1654605023468,
+        "duration" : 50388
+      }
+    }, {
+      "uid" : "37829c6188b17475",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654604894744,
+        "stop" : 1654604915575,
+        "duration" : 20831
+      }
+    }, {
+      "uid" : "2c3326d8861d7796",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654604730121,
+        "stop" : 1654604741864,
+        "duration" : 11743
+      }
+    }, {
+      "uid" : "8e7cb8430afc9677",
+      "status" : "failed",
+      "statusDetails" : "expected 'Start a 30-day free trial' to include 'Hi damaged! Confirm your email and st…'      \n                      actual expected\n                      \n                      'Start a 30-day free trial'undefined\n                      ",
+      "time" : {
+        "start" : 1654604703336,
+        "stop" : 1654604709427,
+        "duration" : 6091
+      }
+    }, {
+      "uid" : "df2f095185720883",
+      "status" : "failed",
+      "statusDetails" : "Malformed type for \"id\" parameter of command switchToFrame\n                Expected: (number|object|null)\n                Actual: string\n                \n                For more info see https://w3c.github.io/webdriver/#dfn-switch-to-frame\n                ",
+      "time" : {
+        "start" : 1654604345764,
+        "stop" : 1654604350967,
+        "duration" : 5203
+      }
+    }, {
+      "uid" : "70725d685d021251",
+      "status" : "failed",
+      "statusDetails" : "Malformed type for \"id\" parameter of command switchToFrame\n                Expected: (number|object|null)\n                Actual: string\n                \n                For more info see https://w3c.github.io/webdriver/#dfn-switch-to-frame\n                ",
+      "time" : {
+        "start" : 1654604250083,
+        "stop" : 1654604255611,
+        "duration" : 5528
+      }
+    }, {
+      "uid" : "dc89fa89736fa63e",
+      "status" : "broken",
+      "statusDetails" : "invalid argument: missing 'ELEMENT'\n                  (Session info: chrome=102.0.5005.63)",
+      "time" : {
+        "start" : 1654604184314,
+        "stop" : 1654604191118,
+        "duration" : 6804
+      }
+    }, {
+      "uid" : "3632501c8a151aa5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654603860929,
+        "stop" : 1654603891202,
+        "duration" : 30273
+      }
+    }, {
+      "uid" : "7eb5f8856c90a897",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654603154143,
+        "stop" : 1654603178108,
+        "duration" : 23965
+      }
+    }, {
+      "uid" : "61dc46a988bf847d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654603093854,
+        "stop" : 1654603116694,
+        "duration" : 22840
+      }
+    }, {
+      "uid" : "60cd35ea17af76f1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654603005844,
+        "stop" : 1654603029272,
+        "duration" : 23428
+      }
+    }, {
+      "uid" : "a2c7c89cd3a30738",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654602836425,
+        "stop" : 1654602858662,
+        "duration" : 22237
+      }
+    }, {
+      "uid" : "9efbae3e6e293d73",
+      "status" : "failed",
+      "statusDetails" : "expected 'Start a 30-day free trial' to include 'Hi past! Confirm your email and start…'      \n                      actual expected\n                      \n                      'Start a 30-day free trial'undefined\n                      ",
+      "time" : {
+        "start" : 1654601269787,
+        "stop" : 1654601293851,
+        "duration" : 24064
+      }
+    }, {
+      "uid" : "cf72dea2b2534476",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654601070378,
+        "stop" : 1654601128044,
+        "duration" : 57666
+      }
+    }, {
+      "uid" : "5bfbb385c573445",
+      "status" : "broken",
+      "statusDetails" : "invalid argument: missing 'ELEMENT'\n                  (Session info: chrome=102.0.5005.63)",
+      "time" : {
+        "start" : 1654600575270,
+        "stop" : 1654600598597,
+        "duration" : 23327
+      }
+    }, {
+      "uid" : "7b1ca70f85e5fc6e",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654599596986,
+        "stop" : 1654599654658,
+        "duration" : 57672
+      }
+    }, {
+      "uid" : "bdd3c04d12e06f88",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654598396192,
+        "stop" : 1654598440640,
+        "duration" : 44448
+      }
+    }, {
+      "uid" : "2860e4259501f693",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654597489711,
+        "stop" : 1654597533433,
+        "duration" : 43722
+      }
+    }, {
+      "uid" : "ea74f82a2c548b91",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654597046549,
+        "stop" : 1654597091659,
+        "duration" : 45110
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8285df7aa2857451.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

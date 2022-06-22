@@ -1,0 +1,62 @@
+{
+  "uid" : "d0e4bbaaca31626d",
+  "name" : "should validate CSV file",
+  "fullName" : "Asset Super Test.should validate CSV file",
+  "historyId" : "b27c45c52e39d1efd19e27027dd1c052",
+  "time" : {
+    "start" : 1655802726262,
+    "stop" : 1655802772446,
+    "duration" : 46184
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "done() called multiple times in test <Asset Super Test should validate CSV file> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js",
+  "statusTrace" : "Error: done() called multiple times in test <Asset Super Test should validate CSV file> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js\n                    at createMultipleDoneError (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\errors.js:428:13)\n                    at multiple (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:290:24)\n                    at done (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:301:14)\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:371:11\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should validate CSV file"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d0e4bbaaca31626d.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

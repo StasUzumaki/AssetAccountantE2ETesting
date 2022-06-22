@@ -1,0 +1,102 @@
+{
+  "uid" : "5aa41aedc4db7593",
+  "name" : "should create asset group (Blank) if no groups have been created",
+  "fullName" : "dev asset page.should create asset group (Blank) if no groups have been created",
+  "historyId" : "36c30953af1655395725a9f35b231ec2",
+  "time" : {
+    "start" : 1653573597205,
+    "stop" : 1653573614300,
+    "duration" : 17095
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 5,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-3"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset group (Blank) if no groups have been created"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2921d5cf0d6cccf8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653573556756,
+        "stop" : 1653573597191,
+        "duration" : 40435
+      }
+    }, {
+      "uid" : "7af43b4308d33ce1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652794926811,
+        "stop" : 1652794963035,
+        "duration" : 36224
+      }
+    }, {
+      "uid" : "5fc8a2e84f22e9dd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652794885290,
+        "stop" : 1652794900373,
+        "duration" : 15083
+      }
+    }, {
+      "uid" : "757fdd9b7961e931",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652794801751,
+        "stop" : 1652794817492,
+        "duration" : 15741
+      }
+    }, {
+      "uid" : "d2f302d006c346bf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652794763612,
+        "stop" : 1652794801739,
+        "duration" : 38127
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5aa41aedc4db7593.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

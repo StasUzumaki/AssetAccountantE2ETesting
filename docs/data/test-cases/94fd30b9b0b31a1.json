@@ -1,0 +1,60 @@
+{
+  "uid" : "94fd30b9b0b31a1",
+  "name" : "should add and reverse reassessment taxable use",
+  "fullName" : "dev asset page.should add and reverse reassessment taxable use",
+  "historyId" : "72171e42c7e5d2528fc24fb64b13b5e5",
+  "time" : {
+    "start" : 1655711485830,
+    "stop" : 1655711493027,
+    "duration" : 7197
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add and reverse reassessment taxable use"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "94fd30b9b0b31a1.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

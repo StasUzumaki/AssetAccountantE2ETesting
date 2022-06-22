@@ -1,0 +1,60 @@
+{
+  "uid" : "f1157b8b18b5c137",
+  "name" : "should create asset",
+  "fullName" : "create attachment.should create asset",
+  "historyId" : "2c6b60c1d90de7ffe8b1245d9ccb744c",
+  "time" : {
+    "start" : 1653300310114,
+    "stop" : 1653300329992,
+    "duration" : 19878
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create attachment"
+  }, {
+    "name" : "testClass",
+    "value" : "create attachment"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset"
+  }, {
+    "name" : "package",
+    "value" : "create attachment"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f1157b8b18b5c137.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

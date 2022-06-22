@@ -1,0 +1,60 @@
+{
+  "uid" : "2c118da8ffced447",
+  "name" : "should follow the URL for connect the QBO company",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.should follow the URL for connect the QBO company",
+  "historyId" : "e7c2a6bd4d106d88d5d1121e7d95f593",
+  "time" : {
+    "start" : 1654495384505,
+    "stop" : 1654495399527,
+    "duration" : 15022
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "should follow the URL for connect the QBO company"
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2c118da8ffced447.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

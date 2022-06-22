@@ -1,0 +1,60 @@
+{
+  "uid" : "ec68728f87d2bfeb",
+  "name" : "should link to account tab, add and reverse revaluation",
+  "fullName" : "dev asset page.should link to account tab, add and reverse revaluation",
+  "historyId" : "f76946837ee9622766440a2eb6e0f53",
+  "time" : {
+    "start" : 1655301603444,
+    "stop" : 1655301611125,
+    "duration" : 7681
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should link to account tab, add and reverse revaluation"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ec68728f87d2bfeb.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

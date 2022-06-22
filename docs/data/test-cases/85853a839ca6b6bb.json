@@ -1,0 +1,62 @@
+{
+  "uid" : "85853a839ca6b6bb",
+  "name" : "should create HP/Lease",
+  "fullName" : "create report.should create HP/Lease",
+  "historyId" : "fa08f1ab1c846f6663b0e8157d80c2c9",
+  "time" : {
+    "start" : 1653635438912,
+    "stop" : 1653635505868,
+    "duration" : 66956
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected false to be true      \n                      actual expected\n                      \n                      falsetrue\n                      ",
+  "statusTrace" : "AssertionError: expected false to be true\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createLease.spec.js:36:76)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create HP/Lease"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "85853a839ca6b6bb.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

@@ -1,0 +1,60 @@
+{
+  "uid" : "de3375f5a70ae04",
+  "name" : "should cheking if CSV file exist and validate it",
+  "fullName" : "create report.should cheking if CSV file exist and validate it",
+  "historyId" : "abbef07e37aa26bb43a3bfc9a01c7f53",
+  "time" : {
+    "start" : 1655797886510,
+    "stop" : 1655797907612,
+    "duration" : 21102
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "should cheking if CSV file exist and validate it"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "de3375f5a70ae04.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

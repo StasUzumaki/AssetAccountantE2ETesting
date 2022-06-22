@@ -1,0 +1,60 @@
+{
+  "uid" : "8ab4ee86b4dcf24c",
+  "name" : "should post journal to Spreadsheet",
+  "fullName" : "create journal.should post journal to Spreadsheet",
+  "historyId" : "c72977bbf700047cc775981a38eb0fb1",
+  "time" : {
+    "start" : 1655117783906,
+    "stop" : 1655117786039,
+    "duration" : 2133
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create journal"
+  }, {
+    "name" : "testClass",
+    "value" : "create journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should post journal to Spreadsheet"
+  }, {
+    "name" : "package",
+    "value" : "create journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8ab4ee86b4dcf24c.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

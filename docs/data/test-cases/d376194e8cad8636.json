@@ -1,0 +1,121 @@
+{
+  "uid" : "d376194e8cad8636",
+  "name" : "should follow the URL for connect the QBO company",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.should follow the URL for connect the QBO company",
+  "historyId" : "e7c2a6bd4d106d88d5d1121e7d95f593",
+  "time" : {
+    "start" : 1654496664854,
+    "stop" : 1654496675526,
+    "duration" : 10672
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 7,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "should follow the URL for connect the QBO company"
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2c118da8ffced447",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654495384505,
+        "stop" : 1654495399527,
+        "duration" : 15022
+      }
+    }, {
+      "uid" : "2676e889a4a5614b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654495032135,
+        "stop" : 1654495043649,
+        "duration" : 11514
+      }
+    }, {
+      "uid" : "af03e36365315f83",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654265291960,
+        "stop" : 1654265304366,
+        "duration" : 12406
+      }
+    }, {
+      "uid" : "3a0c98f7564a88a7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654264278462,
+        "stop" : 1654264289364,
+        "duration" : 10902
+      }
+    }, {
+      "uid" : "b4208797bbd8cdb8",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654254012957,
+        "stop" : 1654254047960,
+        "duration" : 35003
+      }
+    }, {
+      "uid" : "872ff09823098f5f",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654151786547,
+        "stop" : 1654151821553,
+        "duration" : 35006
+      }
+    }, {
+      "uid" : "7a70eb93f0edde34",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1654151568177,
+        "stop" : 1654151603193,
+        "duration" : 35016
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d376194e8cad8636.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

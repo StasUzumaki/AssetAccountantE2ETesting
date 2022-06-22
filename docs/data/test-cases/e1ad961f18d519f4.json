@@ -1,0 +1,60 @@
+{
+  "uid" : "e1ad961f18d519f4",
+  "name" : "should have land to dev asset accountant page and choose login with Xero",
+  "fullName" : "Map Chart of Accounts to Xero and post a Journal.should have land to dev asset accountant page and choose login with Xero",
+  "historyId" : "188c642692ece12232d21c7e1a58ddba",
+  "time" : {
+    "start" : 1654841453876,
+    "stop" : 1654841468955,
+    "duration" : 15079
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testClass",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have land to dev asset accountant page and choose login with Xero"
+  }, {
+    "name" : "package",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e1ad961f18d519f4.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

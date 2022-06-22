@@ -1,0 +1,62 @@
+{
+  "uid" : "95d18bf771280db5",
+  "name" : "should create asset",
+  "fullName" : "dev asset page.should create asset",
+  "historyId" : "b8c30be0ac53731ce05b7126a740aa98",
+  "time" : {
+    "start" : 1652095367109,
+    "stop" : 1652095436352,
+    "duration" : 69243
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "Timeout of 60000ms exceeded. The execution in the test \"dev asset page should create asset\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAsset.spec.js)",
+  "statusTrace" : "Error: Timeout of 60000ms exceeded. The execution in the test \"dev asset page should create asset\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAsset.spec.js)\n                    at createTimeoutError (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\errors.js:498:15)\n                    at Test.Runnable._timeoutError (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:431:10)\n                    at Timeout.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\mocha\\lib\\runnable.js:246:24)\n                    at listOnTimeout (node:internal/timers:559:17)\n                    at processTimers (node:internal/timers:502:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "95d18bf771280db5.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

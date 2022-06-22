@@ -1,0 +1,86 @@
+{
+  "uid" : "67ce18b0e92ca870",
+  "name" : "should create a register with existing register",
+  "fullName" : "create a new register.should create a register with existing register",
+  "historyId" : "36ae10223a65ee74848a7e5bddfacb66",
+  "time" : {
+    "start" : 1655128556785,
+    "stop" : 1655128573251,
+    "duration" : 16466
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 3,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a register with existing register"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3341afc0f951230",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655106511701,
+        "stop" : 1655106534755,
+        "duration" : 23054
+      }
+    }, {
+      "uid" : "1d542ae8223f42f8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655105889132,
+        "stop" : 1655105910761,
+        "duration" : 21629
+      }
+    }, {
+      "uid" : "1cadd9276cfe1123",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655103292943,
+        "stop" : 1655103314461,
+        "duration" : 21518
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "67ce18b0e92ca870.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

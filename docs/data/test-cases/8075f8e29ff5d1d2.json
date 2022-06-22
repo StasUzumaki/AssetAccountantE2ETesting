@@ -1,0 +1,198 @@
+{
+  "uid" : "8075f8e29ff5d1d2",
+  "name" : "should create asset group (Blank)",
+  "fullName" : "Map Chart of Accounts to Xero and post a Journal.should create asset group (Blank)",
+  "historyId" : "f5d21e230fc98c1c8706cee1cb8b4544",
+  "time" : {
+    "start" : 1655198233480,
+    "stop" : 1655198244270,
+    "duration" : 10790
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 17,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testClass",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset group (Blank)"
+  }, {
+    "name" : "package",
+    "value" : "Map Chart of Accounts to Xero and post a Journal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f6ea2b947a2ab0db",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655197258372,
+        "stop" : 1655197276416,
+        "duration" : 18044
+      }
+    }, {
+      "uid" : "be4624edf79c79b0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655196797995,
+        "stop" : 1655196812554,
+        "duration" : 14559
+      }
+    }, {
+      "uid" : "800ec3a13609c9cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655196431000,
+        "stop" : 1655196445844,
+        "duration" : 14844
+      }
+    }, {
+      "uid" : "583e88eb9f558311",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655196086396,
+        "stop" : 1655196100976,
+        "duration" : 14580
+      }
+    }, {
+      "uid" : "21c11043244f0465",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655195593352,
+        "stop" : 1655195608659,
+        "duration" : 15307
+      }
+    }, {
+      "uid" : "319b9d2c913c16fb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655194903836,
+        "stop" : 1655194918961,
+        "duration" : 15125
+      }
+    }, {
+      "uid" : "b9fbf2bd432bca83",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655128241636,
+        "stop" : 1655128254341,
+        "duration" : 12705
+      }
+    }, {
+      "uid" : "dbc68ac939a66b1e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654865808539,
+        "stop" : 1654865820984,
+        "duration" : 12445
+      }
+    }, {
+      "uid" : "1fbd018cda2bbe3a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654865330820,
+        "stop" : 1654865342174,
+        "duration" : 11354
+      }
+    }, {
+      "uid" : "1ed08725bbb13f6b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654862339430,
+        "stop" : 1654862350471,
+        "duration" : 11041
+      }
+    }, {
+      "uid" : "f0c547057a694de1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654861745970,
+        "stop" : 1654861757742,
+        "duration" : 11772
+      }
+    }, {
+      "uid" : "b99f981857341007",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654859814763,
+        "stop" : 1654859825622,
+        "duration" : 10859
+      }
+    }, {
+      "uid" : "da4771d14c4779e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654859258824,
+        "stop" : 1654859269656,
+        "duration" : 10832
+      }
+    }, {
+      "uid" : "7c1e8baad8f0842a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654855714359,
+        "stop" : 1654855726001,
+        "duration" : 11642
+      }
+    }, {
+      "uid" : "7076c088f982b56f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654853481253,
+        "stop" : 1654853497933,
+        "duration" : 16680
+      }
+    }, {
+      "uid" : "b1eb98f6daf98afd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654851814478,
+        "stop" : 1654851828791,
+        "duration" : 14313
+      }
+    }, {
+      "uid" : "b45d95b932462bb4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654851040869,
+        "stop" : 1654851110367,
+        "duration" : 69498
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8075f8e29ff5d1d2.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

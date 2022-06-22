@@ -1,0 +1,62 @@
+{
+  "uid" : "4852d35cadf8b889",
+  "name" : "should add file attachment",
+  "fullName" : "Asset Super Test.should add file attachment",
+  "historyId" : "63d8d3b7fb3ef3c36963522b24f1b616",
+  "time" : {
+    "start" : 1655722982290,
+    "stop" : 1655722982695,
+    "duration" : 405
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "javascript error: Cannot read properties of null (reading 'style')\n                  (Session info: chrome=102.0.5005.115)",
+  "statusTrace" : "javascript error: javascript error: Cannot read properties of null (reading 'style')\n                  (Session info: chrome=102.0.5005.115)\n                    at getErrorFromResponseBody (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriver\\build\\utils.js:197:12)\n                    at NodeJSRequest._request (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriver\\build\\request\\index.js:158:60)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Helper.addFilesAttachment (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:810:9)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js:133:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add file attachment"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4852d35cadf8b889.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

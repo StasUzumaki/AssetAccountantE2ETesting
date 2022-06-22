@@ -1,0 +1,62 @@
+{
+  "uid" : "1ad16a771e2b6a31",
+  "name" : "\"after all\" hook for dev asset page",
+  "fullName" : "dev asset page.\"after all\" hook for dev asset page",
+  "historyId" : "18bf390e41b7f48a95239a639dfd1ee2",
+  "time" : {
+    "start" : 1655367638366,
+    "stop" : 1655367706748,
+    "duration" : 68382
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "devAssetMainPage.deleteAllRegisters is not a function",
+  "statusTrace" : "TypeError: devAssetMainPage.deleteAllRegisters is not a function\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createClassifications.spec.js:17:32)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"after all\" hook for dev asset page"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1ad16a771e2b6a31.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

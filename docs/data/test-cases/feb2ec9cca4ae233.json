@@ -1,0 +1,260 @@
+{
+  "uid" : "feb2ec9cca4ae233",
+  "name" : "should wait for PDF file to download",
+  "fullName" : "create report.should wait for PDF file to download",
+  "historyId" : "d8b8df1938865d956a563ae9df499c99",
+  "time" : {
+    "start" : 1653660365198,
+    "stop" : 1653660365203,
+    "duration" : 5
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 24,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "should wait for PDF file to download"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2c8920625450729b",
+      "status" : "broken",
+      "statusDetails" : "ENOENT: no such file or directory, watch './tempDownloads'",
+      "time" : {
+        "start" : 1653643779429,
+        "stop" : 1653643779444,
+        "duration" : 15
+      }
+    }, {
+      "uid" : "58e453f89d43e022",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653643320395,
+        "stop" : 1653643320559,
+        "duration" : 164
+      }
+    }, {
+      "uid" : "296205db7a6f9e9e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642762693,
+        "stop" : 1653642762702,
+        "duration" : 9
+      }
+    }, {
+      "uid" : "dc71a5afd2f254df",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642632064,
+        "stop" : 1653642632271,
+        "duration" : 207
+      }
+    }, {
+      "uid" : "336fac2d81f90a72",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642493492,
+        "stop" : 1653642493704,
+        "duration" : 212
+      }
+    }, {
+      "uid" : "521a97ece61309c2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642312373,
+        "stop" : 1653642312538,
+        "duration" : 165
+      }
+    }, {
+      "uid" : "760f54a8cd320567",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642026358,
+        "stop" : 1653642026365,
+        "duration" : 7
+      }
+    }, {
+      "uid" : "ec0a0b7f539a1444",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653641833436,
+        "stop" : 1653641833629,
+        "duration" : 193
+      }
+    }, {
+      "uid" : "7c6cc96989cf69e7",
+      "status" : "broken",
+      "statusDetails" : "The \"path\" argument must be of type string. Received undefined",
+      "time" : {
+        "start" : 1653641619387,
+        "stop" : 1653641619403,
+        "duration" : 16
+      }
+    }, {
+      "uid" : "ceca7d4c26505165",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653641189043,
+        "stop" : 1653641189053,
+        "duration" : 10
+      }
+    }, {
+      "uid" : "e408299e59e8451a",
+      "status" : "broken",
+      "statusDetails" : "File did not exists and was not created during the timeout.",
+      "time" : {
+        "start" : 1653640184583,
+        "stop" : 1653640199599,
+        "duration" : 15016
+      }
+    }, {
+      "uid" : "8fc26104c84d24a0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653575718067,
+        "stop" : 1653575718185,
+        "duration" : 118
+      }
+    }, {
+      "uid" : "7746619c4d739016",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653485464504,
+        "stop" : 1653485464506,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "893589bde102fa76",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653477263781,
+        "stop" : 1653477263786,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "8f028cf7d37ff233",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653477095173,
+        "stop" : 1653477095178,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "b33988758f9a6701",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653476651286,
+        "stop" : 1653476651288,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "7e87f1389b6cd123",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653475824997,
+        "stop" : 1653475825088,
+        "duration" : 91
+      }
+    }, {
+      "uid" : "b3912e0fb7435974",
+      "status" : "broken",
+      "statusDetails" : "File did not exists and was not created during the timeout.",
+      "time" : {
+        "start" : 1653475664083,
+        "stop" : 1653475679092,
+        "duration" : 15009
+      }
+    }, {
+      "uid" : "46fefb307161952b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653475281930,
+        "stop" : 1653475281933,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "36fb44e59ea8f161",
+      "status" : "broken",
+      "statusDetails" : "File did not exists and was not created during the timeout.",
+      "time" : {
+        "start" : 1653475089145,
+        "stop" : 1653475104162,
+        "duration" : 15017
+      }
+    }, {
+      "uid" : "5a5a5f3fa867ed77",
+      "status" : "broken",
+      "statusDetails" : "File did not exists and was not created during the timeout.",
+      "time" : {
+        "start" : 1653474929321,
+        "stop" : 1653474944338,
+        "duration" : 15017
+      }
+    }, {
+      "uid" : "ead9e23e0042034c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653474770555,
+        "stop" : 1653474770610,
+        "duration" : 55
+      }
+    }, {
+      "uid" : "309c1d818840642b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653474144856,
+        "stop" : 1653474144860,
+        "duration" : 4
+      }
+    }, {
+      "uid" : "168726a588f5fc4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653474012668,
+        "stop" : 1653474012782,
+        "duration" : 114
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "feb2ec9cca4ae233.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

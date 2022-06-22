@@ -1,0 +1,62 @@
+{
+  "uid" : "5b4d204aa56a1d24",
+  "name" : "should create HP/Lease",
+  "fullName" : "Asset Super Test.should create HP/Lease",
+  "historyId" : "c680f587368300a4ebb33227325eb4a2",
+  "time" : {
+    "start" : 1655803557164,
+    "stop" : 1655803568537,
+    "duration" : 11373
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected false to be true      \n                      actual expected\n                      \n                      falsetrue\n                      ",
+  "statusTrace" : "AssertionError: expected false to be true\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js:155:76)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create HP/Lease"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5b4d204aa56a1d24.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

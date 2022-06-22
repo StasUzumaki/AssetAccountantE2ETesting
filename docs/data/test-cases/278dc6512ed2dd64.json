@@ -1,0 +1,50 @@
+{
+  "uid" : "278dc6512ed2dd64",
+  "name" : "should have land to dev asset accountant page and choose login with Intuit",
+  "fullName" : "Sign in with Xero.should have land to dev asset accountant page and choose login with Intuit",
+  "historyId" : "8c0cd0ff873dc7e9819f9162d572e0d",
+  "time" : {
+    "start" : 1654609034789,
+    "stop" : 1654609034789,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have land to dev asset accountant page and choose login with Intuit"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "278dc6512ed2dd64.json",
+  "parameterValues" : [ ]
+}

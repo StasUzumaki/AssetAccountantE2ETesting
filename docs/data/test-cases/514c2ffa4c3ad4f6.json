@@ -1,0 +1,259 @@
+{
+  "uid" : "514c2ffa4c3ad4f6",
+  "name" : "should cheking if PDF file exist and validate it",
+  "fullName" : "create report.should cheking if PDF file exist and validate it",
+  "historyId" : "f38ca8b00fafa60761f9e4b41f4773a4",
+  "time" : {
+    "start" : 1653660365204,
+    "stop" : 1653660365281,
+    "duration" : 77
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 24,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "should cheking if PDF file exist and validate it"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6d08355f701b9be8",
+      "status" : "broken",
+      "statusDetails" : "the string \"PDF File DOES not exist!!\" was thrown, throw an Error :)",
+      "time" : {
+        "start" : 1653643779446,
+        "stop" : 1653643779464,
+        "duration" : 18
+      }
+    }, {
+      "uid" : "a0129516718e90d0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653643320561,
+        "stop" : 1653643320723,
+        "duration" : 162
+      }
+    }, {
+      "uid" : "b0a8f524bb90338c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642762703,
+        "stop" : 1653642762848,
+        "duration" : 145
+      }
+    }, {
+      "uid" : "e8ce009da2242213",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642632272,
+        "stop" : 1653642632442,
+        "duration" : 170
+      }
+    }, {
+      "uid" : "b8cf0f9b0ba40dcb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642493706,
+        "stop" : 1653642493908,
+        "duration" : 202
+      }
+    }, {
+      "uid" : "92f3fc7000519f42",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642312538,
+        "stop" : 1653642312712,
+        "duration" : 174
+      }
+    }, {
+      "uid" : "2433c0bea989c252",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653642026366,
+        "stop" : 1653642026506,
+        "duration" : 140
+      }
+    }, {
+      "uid" : "d14bc804903c9748",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653641833630,
+        "stop" : 1653641833830,
+        "duration" : 200
+      }
+    }, {
+      "uid" : "6d014a46ac3163b3",
+      "status" : "broken",
+      "statusDetails" : "the string \"PDF File DOES not exist!!\" was thrown, throw an Error :)",
+      "time" : {
+        "start" : 1653641619405,
+        "stop" : 1653641619411,
+        "duration" : 6
+      }
+    }, {
+      "uid" : "5591885c1f7979d2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653641189054,
+        "stop" : 1653641189236,
+        "duration" : 182
+      }
+    }, {
+      "uid" : "30a992713cfc2196",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653640199605,
+        "stop" : 1653640199835,
+        "duration" : 230
+      }
+    }, {
+      "uid" : "1542af13860df02e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653575718185,
+        "stop" : 1653575718285,
+        "duration" : 100
+      }
+    }, {
+      "uid" : "3709ccfb595af1f1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653485464507,
+        "stop" : 1653485464571,
+        "duration" : 64
+      }
+    }, {
+      "uid" : "bf2435743c4a1989",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653477263786,
+        "stop" : 1653477263832,
+        "duration" : 46
+      }
+    }, {
+      "uid" : "f3536d9766d121ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653477095179,
+        "stop" : 1653477095268,
+        "duration" : 89
+      }
+    }, {
+      "uid" : "1812e069d15a0c10",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653476651289,
+        "stop" : 1653476651347,
+        "duration" : 58
+      }
+    }, {
+      "uid" : "6c11d3e437b47881",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653475825093,
+        "stop" : 1653475825183,
+        "duration" : 90
+      }
+    }, {
+      "uid" : "ff72ff165726cae1",
+      "status" : "broken",
+      "statusDetails" : "the string \"PDF File DOES not exist!!\" was thrown, throw an Error :)",
+      "time" : {
+        "start" : 1653475679093,
+        "stop" : 1653475679102,
+        "duration" : 9
+      }
+    }, {
+      "uid" : "91c4eb3d25aef6d0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653475281934,
+        "stop" : 1653475281986,
+        "duration" : 52
+      }
+    }, {
+      "uid" : "129a99752ac77d2d",
+      "status" : "broken",
+      "statusDetails" : "the string \"PDF File DOES not exist!!\" was thrown, throw an Error :)",
+      "time" : {
+        "start" : 1653475104162,
+        "stop" : 1653475104166,
+        "duration" : 4
+      }
+    }, {
+      "uid" : "b34ef05988bc41d0",
+      "status" : "broken",
+      "statusDetails" : "the string \"PDF File DOES not exist!!\" was thrown, throw an Error :)",
+      "time" : {
+        "start" : 1653474944339,
+        "stop" : 1653474944343,
+        "duration" : 4
+      }
+    }, {
+      "uid" : "6f2aec649700e921",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653474770610,
+        "stop" : 1653474770724,
+        "duration" : 114
+      }
+    }, {
+      "uid" : "d7fb09b1c0900729",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653474144861,
+        "stop" : 1653474144955,
+        "duration" : 94
+      }
+    }, {
+      "uid" : "381151fc604c6637",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653474012783,
+        "stop" : 1653474012879,
+        "duration" : 96
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "514c2ffa4c3ad4f6.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

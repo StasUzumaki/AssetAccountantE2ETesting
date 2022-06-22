@@ -1,0 +1,142 @@
+{
+  "uid" : "b88c7c334fb26ef7",
+  "name" : "should create 10 assets",
+  "fullName" : "create a new register.should create 10 assets",
+  "historyId" : "8e0490f434a4c1135a561783e1dd6a6d",
+  "time" : {
+    "start" : 1653574573240,
+    "stop" : 1653574748773,
+    "duration" : 175533
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.isElementDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:62:9)\n                    at async DevAssetMainpage.isAssetDescriptionTitleDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:781:16)\n                    at async Helper.createAsset (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:215:22)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\triggerSubscriptionUpgrade.spec.js:52:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 9,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-14"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create 10 assets"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "66e7b13c8bf93d09",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652955608994,
+        "stop" : 1652955768975,
+        "duration" : 159981
+      }
+    }, {
+      "uid" : "52d662b4dc144270",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652953408524,
+        "stop" : 1652953507658,
+        "duration" : 99134
+      }
+    }, {
+      "uid" : "a3a4c67b2567e29f",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1652945124407,
+        "stop" : 1652945159595,
+        "duration" : 35188
+      }
+    }, {
+      "uid" : "af74f4102b38b090",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652941281871,
+        "stop" : 1652941416201,
+        "duration" : 134330
+      }
+    }, {
+      "uid" : "f0ac3738038043c7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652940869221,
+        "stop" : 1652941012395,
+        "duration" : 143174
+      }
+    }, {
+      "uid" : "ac4247fa01fc5f9d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652883682615,
+        "stop" : 1652883894745,
+        "duration" : 212130
+      }
+    }, {
+      "uid" : "21a621c4d1a2bfee",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652876001861,
+        "stop" : 1652876125986,
+        "duration" : 124125
+      }
+    }, {
+      "uid" : "1e3ecd8dd1b732e1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652874470289,
+        "stop" : 1652874594958,
+        "duration" : 124669
+      }
+    }, {
+      "uid" : "edc183bc03a70e4",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 190000ms exceeded. The execution in the test \"create a new register should create 10 assets\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\triggerSubscriptionUpgrade.spec.js)",
+      "time" : {
+        "start" : 1652792325380,
+        "stop" : 1652792515387,
+        "duration" : 190007
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "b88c7c334fb26ef7.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

@@ -1,0 +1,128 @@
+{
+  "uid" : "57871bab352eb668",
+  "name" : "should create journal",
+  "fullName" : "dev asset page.should create journal",
+  "historyId" : "8f736ee5a24d2653e4bb0d0f9f49827b",
+  "time" : {
+    "start" : 1652185080169,
+    "stop" : 1652185119043,
+    "duration" : 38874
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 8,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create journal"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8afe0ed13d4c95ac",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652179891255,
+        "stop" : 1652179920300,
+        "duration" : 29045
+      }
+    }, {
+      "uid" : "627b500a72caa72d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652178854726,
+        "stop" : 1652178883465,
+        "duration" : 28739
+      }
+    }, {
+      "uid" : "b5bc02c590b4d48f",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 30000ms",
+      "time" : {
+        "start" : 1652178650352,
+        "stop" : 1652178712183,
+        "duration" : 61831
+      }
+    }, {
+      "uid" : "13311dc9964c5e2",
+      "status" : "failed",
+      "statusDetails" : "expected 'Draft\\n31 May 2022 - Test Description' to include 'Test Description uiui'      \n                      actual expected\n                      \n                      'Draft\\n31 May 2022 - Test Description'undefined\n                      ",
+      "time" : {
+        "start" : 1652178536175,
+        "stop" : 1652178565935,
+        "duration" : 29760
+      }
+    }, {
+      "uid" : "cf0e55de2d12c8e7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652178388100,
+        "stop" : 1652178416117,
+        "duration" : 28017
+      }
+    }, {
+      "uid" : "121d38f2019fa507",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652176253916,
+        "stop" : 1652176284927,
+        "duration" : 31011
+      }
+    }, {
+      "uid" : "22ff0dccf42f1589",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652175598602,
+        "stop" : 1652175627520,
+        "duration" : 28918
+      }
+    }, {
+      "uid" : "e0e79fcfa6c92a3b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652173313590,
+        "stop" : 1652173361783,
+        "duration" : 48193
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "57871bab352eb668.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

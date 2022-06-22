@@ -1,0 +1,118 @@
+{
+  "uid" : "17635c3124e0872a",
+  "name" : "should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)",
+  "fullName" : "invite user to organisation.should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)",
+  "historyId" : "cb3481a78f9b5deb28c6534d46fdd7d0",
+  "time" : {
+    "start" : 1653574327556,
+    "stop" : 1653574340042,
+    "duration" : 12486
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 7,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-11"
+  }, {
+    "name" : "suite",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testClass",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login as removed user and validate that this is unsuccessful(should see \"Create New Organisation\" title)"
+  }, {
+    "name" : "package",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8dce1d9bcbf98a26",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653055136286,
+        "stop" : 1653055148097,
+        "duration" : 11811
+      }
+    }, {
+      "uid" : "189ad71cb59639d8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653027068134,
+        "stop" : 1653027084966,
+        "duration" : 16832
+      }
+    }, {
+      "uid" : "c4573920542dab6b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652957316281,
+        "stop" : 1652957331904,
+        "duration" : 15623
+      }
+    }, {
+      "uid" : "6b2b3fb2b5fe1e5e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652956622925,
+        "stop" : 1652956634123,
+        "duration" : 11198
+      }
+    }, {
+      "uid" : "94b0f2fad3b09d33",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652884121463,
+        "stop" : 1652884133413,
+        "duration" : 11950
+      }
+    }, {
+      "uid" : "6a7fb59b17b5d6ef",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652876611933,
+        "stop" : 1652876622884,
+        "duration" : 10951
+      }
+    }, {
+      "uid" : "61b337e76bb5bd61",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652875777084,
+        "stop" : 1652875788575,
+        "duration" : 11491
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "17635c3124e0872a.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

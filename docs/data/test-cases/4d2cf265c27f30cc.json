@@ -1,0 +1,62 @@
+{
+  "uid" : "4d2cf265c27f30cc",
+  "name" : "should create asset",
+  "fullName" : "dev asset page.should create asset",
+  "historyId" : "b8c30be0ac53731ce05b7126a740aa98",
+  "time" : {
+    "start" : 1651835135032,
+    "stop" : 1651835146378,
+    "duration" : 11346
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "page.clickDropdownItemByIndex is not a function",
+  "statusTrace" : "TypeError: page.clickDropdownItemByIndex is not a function\n                    at DevAssetMainpage.selectNewAssetGroupValue (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:104:27)\n                    at Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAsset.spec.js:60:32)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4d2cf265c27f30cc.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

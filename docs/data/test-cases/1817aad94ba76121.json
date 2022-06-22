@@ -1,0 +1,60 @@
+{
+  "uid" : "1817aad94ba76121",
+  "name" : "should partial sell asset and reverse partial sale",
+  "fullName" : "Asset Super Test.should partial sell asset and reverse partial sale",
+  "historyId" : "9b743bd90f79cdc2752eee4c4761cce8",
+  "time" : {
+    "start" : 1655799297945,
+    "stop" : 1655799305575,
+    "duration" : 7630
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should partial sell asset and reverse partial sale"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1817aad94ba76121.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

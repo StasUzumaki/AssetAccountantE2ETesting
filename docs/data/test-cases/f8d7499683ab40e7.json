@@ -1,0 +1,60 @@
+{
+  "uid" : "f8d7499683ab40e7",
+  "name" : "should add and reverse reassessment taxable use",
+  "fullName" : "Asset Super Test.should add and reverse reassessment taxable use",
+  "historyId" : "d1f6f40049be8e6829013067cb5b62d5",
+  "time" : {
+    "start" : 1655718274093,
+    "stop" : 1655718283284,
+    "duration" : 9191
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add and reverse reassessment taxable use"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f8d7499683ab40e7.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

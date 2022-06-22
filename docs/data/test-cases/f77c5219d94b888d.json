@@ -1,0 +1,62 @@
+{
+  "uid" : "f77c5219d94b888d",
+  "name" : "should wait for CSV file to download",
+  "fullName" : "create report.should wait for CSV file to download",
+  "historyId" : "8a1408ebb9d37e9c0a59e2f16ea4f704",
+  "time" : {
+    "start" : 1653474947200,
+    "stop" : 1653474962214,
+    "duration" : 15014
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "File did not exists and was not created during the timeout.",
+  "statusTrace" : "Error: File did not exists and was not created during the timeout.\n                    at Timeout._onTimeout (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:492:24)\n                    at listOnTimeout (node:internal/timers:559:17)\n                    at processTimers (node:internal/timers:502:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "should wait for CSV file to download"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f77c5219d94b888d.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

@@ -1,0 +1,102 @@
+{
+  "uid" : "c212914105b5ae23",
+  "name" : "should add and reverse reassessment",
+  "fullName" : "dev asset page.should add and reverse reassessment",
+  "historyId" : "bf3fd9055c91c1c5453916a61585ed92",
+  "time" : {
+    "start" : 1655387043109,
+    "stop" : 1655387054765,
+    "duration" : 11656
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 5,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add and reverse reassessment"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6e44d50ce579b0cc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655386707731,
+        "stop" : 1655386719985,
+        "duration" : 12254
+      }
+    }, {
+      "uid" : "29579bb66ea53d68",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655363172717,
+        "stop" : 1655363186057,
+        "duration" : 13340
+      }
+    }, {
+      "uid" : "98772b06a337d475",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655362779136,
+        "stop" : 1655362790415,
+        "duration" : 11279
+      }
+    }, {
+      "uid" : "da0bd14c0964e6f8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655360792059,
+        "stop" : 1655360803411,
+        "duration" : 11352
+      }
+    }, {
+      "uid" : "2a05d9b044e6fb0c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655301527099,
+        "stop" : 1655301538556,
+        "duration" : 11457
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c212914105b5ae23.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

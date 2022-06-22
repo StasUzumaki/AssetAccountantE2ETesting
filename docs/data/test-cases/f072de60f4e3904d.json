@@ -1,0 +1,86 @@
+{
+  "uid" : "f072de60f4e3904d",
+  "name" : "should add and reverse opening balance",
+  "fullName" : "dev asset page.should add and reverse opening balance",
+  "historyId" : "c0a6a43bae74ea93bfd52e2a5f25ea14",
+  "time" : {
+    "start" : 1655711621224,
+    "stop" : 1655711627615,
+    "duration" : 6391
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 3,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add and reverse opening balance"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "eb64bc87c59e735d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655710442514,
+        "stop" : 1655710448857,
+        "duration" : 6343
+      }
+    }, {
+      "uid" : "5f5dfe534fbff143",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655709694715,
+        "stop" : 1655709701166,
+        "duration" : 6451
+      }
+    }, {
+      "uid" : "d94b044bd5945b2b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655709184513,
+        "stop" : 1655709190942,
+        "duration" : 6429
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f072de60f4e3904d.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

@@ -1,0 +1,50 @@
+{
+  "uid" : "56b4a306230c7bd6",
+  "name" : "should partial sell asset and reverse partial sale",
+  "fullName" : "dev asset page.should partial sell asset and reverse partial sale",
+  "historyId" : "a676029b3d31043f79221820b4dc077c",
+  "time" : {
+    "start" : 1655710843712,
+    "stop" : 1655710843712,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should partial sell asset and reverse partial sale"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "56b4a306230c7bd6.json",
+  "parameterValues" : [ ]
+}

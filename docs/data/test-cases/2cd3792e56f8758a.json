@@ -1,0 +1,86 @@
+{
+  "uid" : "2cd3792e56f8758a",
+  "name" : "\"after all\" hook for Account / User",
+  "fullName" : "Account / User.\"after all\" hook for Account / User",
+  "historyId" : "82cf31f7541bf2ff3422b3170e345358",
+  "time" : {
+    "start" : 1655467301290,
+    "stop" : 1655467444339,
+    "duration" : 143049
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.isElementDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:62:9)\n                    at async DevAssetMainpage.isAssetColumnHeaderDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:716:16)\n                    at async Helper.deleteAllAssets (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:613:26)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\accountUser.spec.js:35:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"after all\" hook for Account / User"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d0a10ae20186554e",
+      "status" : "broken",
+      "statusDetails" : "element (\"//tbody/tr\") still not displayed after 20000ms",
+      "time" : {
+        "start" : 1655456415928,
+        "stop" : 1655456447570,
+        "duration" : 31642
+      }
+    }, {
+      "uid" : "5d4e89bb938231a5",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1655455376535,
+        "stop" : 1655455448895,
+        "duration" : 72360
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "2cd3792e56f8758a.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

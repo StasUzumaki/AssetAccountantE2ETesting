@@ -1,0 +1,174 @@
+{
+  "uid" : "cd00f68cda7da3a4",
+  "name" : "should create a new register",
+  "fullName" : "dev asset page.should create a new register",
+  "historyId" : "656e371228e994c32830f1e0a0415422",
+  "time" : {
+    "start" : 1655386384783,
+    "stop" : 1655386418787,
+    "duration" : 34004
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 14,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a new register"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "789f5e52d7f23c95",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655386216155,
+        "stop" : 1655386245835,
+        "duration" : 29680
+      }
+    }, {
+      "uid" : "f2fae75681165218",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655386039005,
+        "stop" : 1655386074043,
+        "duration" : 35038
+      }
+    }, {
+      "uid" : "131eff191852214c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655385502110,
+        "stop" : 1655385536367,
+        "duration" : 34257
+      }
+    }, {
+      "uid" : "c7546cdb3660a299",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655384854746,
+        "stop" : 1655384889910,
+        "duration" : 35164
+      }
+    }, {
+      "uid" : "5bc448b0497fd68",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655384461564,
+        "stop" : 1655384496111,
+        "duration" : 34547
+      }
+    }, {
+      "uid" : "fc5d316ffe0b24ae",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655383268441,
+        "stop" : 1655383304011,
+        "duration" : 35570
+      }
+    }, {
+      "uid" : "651b3736d507ecc8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655380913175,
+        "stop" : 1655380954472,
+        "duration" : 41297
+      }
+    }, {
+      "uid" : "61d0285724d67083",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655378791809,
+        "stop" : 1655378839539,
+        "duration" : 47730
+      }
+    }, {
+      "uid" : "971591242322562f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655378283714,
+        "stop" : 1655378320641,
+        "duration" : 36927
+      }
+    }, {
+      "uid" : "fddf7961c34b6686",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655375539846,
+        "stop" : 1655375575299,
+        "duration" : 35453
+      }
+    }, {
+      "uid" : "cb1a8ea4e2b1d6aa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655375238183,
+        "stop" : 1655375267178,
+        "duration" : 28995
+      }
+    }, {
+      "uid" : "51f44760689696b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655374994624,
+        "stop" : 1655375023629,
+        "duration" : 29005
+      }
+    }, {
+      "uid" : "65e0fdc41f433ad3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655367743039,
+        "stop" : 1655367792249,
+        "duration" : 49210
+      }
+    }, {
+      "uid" : "f5c38c11234f670a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655367600975,
+        "stop" : 1655367635461,
+        "duration" : 34486
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cd00f68cda7da3a4.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

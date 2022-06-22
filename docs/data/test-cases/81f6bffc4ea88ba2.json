@@ -1,0 +1,60 @@
+{
+  "uid" : "81f6bffc4ea88ba2",
+  "name" : "should link to account tab, add and reverse adjustment",
+  "fullName" : "Asset Super Test.should link to account tab, add and reverse adjustment",
+  "historyId" : "3e6e20eda84255e36a17081216744533",
+  "time" : {
+    "start" : 1655794054376,
+    "stop" : 1655794071060,
+    "duration" : 16684
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should link to account tab, add and reverse adjustment"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "81f6bffc4ea88ba2.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

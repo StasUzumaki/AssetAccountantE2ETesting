@@ -1,0 +1,70 @@
+{
+  "uid" : "194f6c087fe14702",
+  "name" : "should login to master account, remove user from Register",
+  "fullName" : "Account / User.should login to master account, remove user from Register",
+  "historyId" : "d56528de1fec014204487bae12e0988b",
+  "time" : {
+    "start" : 1655712499544,
+    "stop" : 1655712515424,
+    "duration" : 15880
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should login to master account, remove user from Register"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a5b044d63fc585fd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655712407500,
+        "stop" : 1655712420119,
+        "duration" : 12619
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "194f6c087fe14702.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

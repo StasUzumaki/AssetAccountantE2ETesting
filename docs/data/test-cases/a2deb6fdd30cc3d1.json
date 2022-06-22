@@ -1,0 +1,120 @@
+{
+  "uid" : "a2deb6fdd30cc3d1",
+  "name" : "should link to account tab, add and reverse adjustment",
+  "fullName" : "dev asset page.should link to account tab, add and reverse adjustment",
+  "historyId" : "7b0b77887b2a2ec4222c46439003d062",
+  "time" : {
+    "start" : 1655711751471,
+    "stop" : 1655711797024,
+    "duration" : 45553
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 7,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should link to account tab, add and reverse adjustment"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ac2f0162f2fdd3da",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655711493028,
+        "stop" : 1655711519848,
+        "duration" : 26820
+      }
+    }, {
+      "uid" : "17eb554c6b1939bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655711353516,
+        "stop" : 1655711395094,
+        "duration" : 41578
+      }
+    }, {
+      "uid" : "d79cbdb4a6d04d3e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655711029100,
+        "stop" : 1655711067959,
+        "duration" : 38859
+      }
+    }, {
+      "uid" : "153fcb7e87cbf702",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655710888863,
+        "stop" : 1655710928533,
+        "duration" : 39670
+      }
+    }, {
+      "uid" : "7ab42035459a555a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655710500658,
+        "stop" : 1655710538900,
+        "duration" : 38242
+      }
+    }, {
+      "uid" : "655e810750b4b922",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655709709963,
+        "stop" : 1655709747524,
+        "duration" : 37561
+      }
+    }, {
+      "uid" : "a410d5c64acb1d29",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655709198850,
+        "stop" : 1655709227042,
+        "duration" : 28192
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a2deb6fdd30cc3d1.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

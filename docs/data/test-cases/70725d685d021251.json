@@ -1,0 +1,62 @@
+{
+  "uid" : "70725d685d021251",
+  "name" : "should have create xero account",
+  "fullName" : "Sign in with Xero.should have create xero account",
+  "historyId" : "1b989a43cfd789b0e180d9c61746bd09",
+  "time" : {
+    "start" : 1654604250083,
+    "stop" : 1654604255611,
+    "duration" : 5528
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Malformed type for \"id\" parameter of command switchToFrame\n                Expected: (number|object|null)\n                Actual: string\n                \n                For more info see https://w3c.github.io/webdriver/#dfn-switch-to-frame\n                ",
+  "statusTrace" : "Error: Malformed type for \"id\" parameter of command switchToFrame\n                Expected: (number|object|null)\n                Actual: string\n                \n                For more info see https://w3c.github.io/webdriver/#dfn-switch-to-frame\n                \n                    at Browser.protocolCommand (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriver\\build\\command.js:53:23)\n                    at Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:38)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async XeroAccounts.createAccountXero (C:\\Users\\oyani\\AssetAccountantE2ETesting\\helper\\xeroAccounts.js:27:9)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\signInWithXero.spec.js:28:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have create xero account"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "70725d685d021251.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

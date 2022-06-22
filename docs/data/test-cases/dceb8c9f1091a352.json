@@ -1,0 +1,152 @@
+{
+  "uid" : "dceb8c9f1091a352",
+  "name" : "should remove user from Organisation",
+  "fullName" : "Account / User.should remove user from Organisation",
+  "historyId" : "8dcd54d2a138569f55de775c2bfe7663",
+  "time" : {
+    "start" : 1655472998112,
+    "stop" : 1655473007865,
+    "duration" : 9753
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 11,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should remove user from Organisation"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "23954e424dd60c40",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655470331932,
+        "stop" : 1655470341561,
+        "duration" : 9629
+      }
+    }, {
+      "uid" : "7b73164975efbb03",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655469105501,
+        "stop" : 1655469114395,
+        "duration" : 8894
+      }
+    }, {
+      "uid" : "5a38db3d23309525",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655466966286,
+        "stop" : 1655466975008,
+        "duration" : 8722
+      }
+    }, {
+      "uid" : "9caae2f75bf7fdc6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655466169171,
+        "stop" : 1655466179439,
+        "duration" : 10268
+      }
+    }, {
+      "uid" : "8c0bb0a639bb917e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655464110795,
+        "stop" : 1655464117683,
+        "duration" : 6888
+      }
+    }, {
+      "uid" : "a2c5e93575ea738d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655463803206,
+        "stop" : 1655463809666,
+        "duration" : 6460
+      }
+    }, {
+      "uid" : "b99a80fc694f388b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655463386412,
+        "stop" : 1655463392886,
+        "duration" : 6474
+      }
+    }, {
+      "uid" : "73dec79b5fa8ea2b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655462266825,
+        "stop" : 1655462273827,
+        "duration" : 7002
+      }
+    }, {
+      "uid" : "84a0e92dc3646e",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1655461509493,
+        "stop" : 1655461544503,
+        "duration" : 35010
+      }
+    }, {
+      "uid" : "249f7d6b2f123c76",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655456406605,
+        "stop" : 1655456415927,
+        "duration" : 9322
+      }
+    }, {
+      "uid" : "62361eddf740bbdd",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1655455341513,
+        "stop" : 1655455376534,
+        "duration" : 35021
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "dceb8c9f1091a352.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

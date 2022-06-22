@@ -1,0 +1,62 @@
+{
+  "uid" : "be8ac341496a39d5",
+  "name" : "should add link attachment",
+  "fullName" : "create attachment.should add link attachment",
+  "historyId" : "a3134f6f272ed8431a23ece979dd0b15",
+  "time" : {
+    "start" : 1653308907473,
+    "stop" : 1653308910289,
+    "duration" : 2816
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "Invalid Chai property: waitForDisplayed",
+  "statusTrace" : "Error: Invalid Chai property: waitForDisplayed\n                    at Object.proxyGetter [as get] (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\chai\\lib\\chai\\utils\\proxify.js:78:17)\n                    at Helper.addLinkAttachment (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\helper.js:329:100)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAttachment.spec.js:39:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create attachment"
+  }, {
+    "name" : "testClass",
+    "value" : "create attachment"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add link attachment"
+  }, {
+    "name" : "package",
+    "value" : "create attachment"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "be8ac341496a39d5.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

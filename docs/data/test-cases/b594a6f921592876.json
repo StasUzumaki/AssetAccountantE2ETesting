@@ -1,0 +1,221 @@
+{
+  "uid" : "b594a6f921592876",
+  "name" : "should validate CSV file",
+  "fullName" : "Asset Super Test.should validate CSV file",
+  "historyId" : "b27c45c52e39d1efd19e27027dd1c052",
+  "time" : {
+    "start" : 1655818649509,
+    "stop" : 1655818709457,
+    "duration" : 59948
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 19,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testClass",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "testMethod",
+    "value" : "should validate CSV file"
+  }, {
+    "name" : "package",
+    "value" : "Asset Super Test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "47505791b6d966d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655814642789,
+        "stop" : 1655814703528,
+        "duration" : 60739
+      }
+    }, {
+      "uid" : "a575942c32ad2765",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655809912842,
+        "stop" : 1655809971033,
+        "duration" : 58191
+      }
+    }, {
+      "uid" : "3ac6ec55a0979b05",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655808212597,
+        "stop" : 1655808270457,
+        "duration" : 57860
+      }
+    }, {
+      "uid" : "9320c2ce780154ec",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655807056675,
+        "stop" : 1655807121482,
+        "duration" : 64807
+      }
+    }, {
+      "uid" : "3ddacc7429d46c6c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655805897327,
+        "stop" : 1655805957222,
+        "duration" : 59895
+      }
+    }, {
+      "uid" : "6bd408da92470a32",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655805212328,
+        "stop" : 1655805272405,
+        "duration" : 60077
+      }
+    }, {
+      "uid" : "d90e821eb03a1736",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655804595727,
+        "stop" : 1655804653283,
+        "duration" : 57556
+      }
+    }, {
+      "uid" : "f6b95622c32f7b77",
+      "status" : "broken",
+      "statusDetails" : "done() called multiple times in test <Asset Super Test should validate CSV file> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js",
+      "time" : {
+        "start" : 1655803613106,
+        "stop" : 1655803657395,
+        "duration" : 44289
+      }
+    }, {
+      "uid" : "60a14f74ecc189b3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655803311072,
+        "stop" : 1655803352618,
+        "duration" : 41546
+      }
+    }, {
+      "uid" : "1bbcf0a48966eb3a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655803058176,
+        "stop" : 1655803101837,
+        "duration" : 43661
+      }
+    }, {
+      "uid" : "d0e4bbaaca31626d",
+      "status" : "broken",
+      "statusDetails" : "done() called multiple times in test <Asset Super Test should validate CSV file> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js",
+      "time" : {
+        "start" : 1655802726262,
+        "stop" : 1655802772446,
+        "duration" : 46184
+      }
+    }, {
+      "uid" : "6db5113495c52556",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655802366804,
+        "stop" : 1655802408253,
+        "duration" : 41449
+      }
+    }, {
+      "uid" : "e6399157a4cc4cd8",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655801438236,
+        "stop" : 1655801497715,
+        "duration" : 59479
+      }
+    }, {
+      "uid" : "2c2c745ccf2eae4e",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655800557891,
+        "stop" : 1655800605404,
+        "duration" : 47513
+      }
+    }, {
+      "uid" : "f4dc4f7a93ecd304",
+      "status" : "broken",
+      "statusDetails" : "done() called multiple times in test <Asset Super Test should validate CSV file> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js; in addition, done() received error: Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilClickable (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:26:9)\n                    at async Page.click (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:32:9)\n                    at async DevAssetMainpage.clickCloseBtn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\devAssetMain.page.js:1571:16)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js:228:9)",
+      "time" : {
+        "start" : 1655799487433,
+        "stop" : 1655799532394,
+        "duration" : 44961
+      }
+    }, {
+      "uid" : "195f1cd2683d8498",
+      "status" : "broken",
+      "statusDetails" : "done() called multiple times in test <Asset Super Test should validate CSV file> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js",
+      "time" : {
+        "start" : 1655798728531,
+        "stop" : 1655798773239,
+        "duration" : 44708
+      }
+    }, {
+      "uid" : "270a6049626b3f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655798275558,
+        "stop" : 1655798317626,
+        "duration" : 42068
+      }
+    }, {
+      "uid" : "836be7e800318cd5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655797787741,
+        "stop" : 1655797829766,
+        "duration" : 42025
+      }
+    }, {
+      "uid" : "29ba602b1eb67f3e",
+      "status" : "broken",
+      "statusDetails" : "done() called multiple times in test <Asset Super Test should validate CSV file> of file C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\asset.spec.js",
+      "time" : {
+        "start" : 1655797484900,
+        "stop" : 1655797529944,
+        "duration" : 45044
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b594a6f921592876.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

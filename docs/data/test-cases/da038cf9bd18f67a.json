@@ -1,0 +1,60 @@
+{
+  "uid" : "da038cf9bd18f67a",
+  "name" : "should invite user and give them permissions for the Organisation and Register",
+  "fullName" : "invite user to organisation.should invite user and give them permissions for the Organisation and Register",
+  "historyId" : "233be49b538cb1115a12fb8453af4b6c",
+  "time" : {
+    "start" : 1652957227980,
+    "stop" : 1652957260016,
+    "duration" : 32036
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testClass",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "testMethod",
+    "value" : "should invite user and give them permissions for the Organisation and Register"
+  }, {
+    "name" : "package",
+    "value" : "invite user to organisation"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "da038cf9bd18f67a.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

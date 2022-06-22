@@ -1,0 +1,78 @@
+{
+  "uid" : "fa88de7e12568b8f",
+  "name" : "should create a new organisation",
+  "fullName" : "create organisation.should create a new organisation",
+  "historyId" : "99df4a2c4d6f4dc8ed2117be84abc6cf",
+  "time" : {
+    "start" : 1655128584217,
+    "stop" : 1655128621983,
+    "duration" : 37766
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create organisation"
+  }, {
+    "name" : "testClass",
+    "value" : "create organisation"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create a new organisation"
+  }, {
+    "name" : "package",
+    "value" : "create organisation"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4906d98060399add",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655106571579,
+        "stop" : 1655106617353,
+        "duration" : 45774
+      }
+    }, {
+      "uid" : "38752f82f44fa095",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655102503203,
+        "stop" : 1655102546495,
+        "duration" : 43292
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fa88de7e12568b8f.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

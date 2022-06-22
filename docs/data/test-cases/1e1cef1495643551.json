@@ -1,0 +1,78 @@
+{
+  "uid" : "1e1cef1495643551",
+  "name" : "should change subscription plan",
+  "fullName" : "create a new register.should change subscription plan",
+  "historyId" : "c926b7c09951c01bb0d3fe31c7be575c",
+  "time" : {
+    "start" : 1653573326286,
+    "stop" : 1653573347711,
+    "duration" : 21425
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should change subscription plan"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6b5ee943a26ae7cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652794380166,
+        "stop" : 1652794397057,
+        "duration" : 16891
+      }
+    }, {
+      "uid" : "1a0628d0e3410a29",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652778867886,
+        "stop" : 1652778890350,
+        "duration" : 22464
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1e1cef1495643551.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

@@ -1,0 +1,60 @@
+{
+  "uid" : "480bdd00bcdd7b3f",
+  "name" : "should land to dev account link and allow access to AA ",
+  "fullName" : "Create an account from Xero.should land to dev account link and allow access to AA ",
+  "historyId" : "396d49ba8beb13b7a69ce5ab03255ca4",
+  "time" : {
+    "start" : 1655194129685,
+    "stop" : 1655194158822,
+    "duration" : 29137
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should land to dev account link and allow access to AA "
+  }, {
+    "name" : "package",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "480bdd00bcdd7b3f.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

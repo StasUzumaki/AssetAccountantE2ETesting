@@ -1,0 +1,110 @@
+{
+  "uid" : "62aa6d3f5a1ffa53",
+  "name" : "should have logout from Xero account",
+  "fullName" : "Sign in with Xero.should have logout from Xero account",
+  "historyId" : "56ff6b76305bd637f4d3e89d2ae5d3a",
+  "time" : {
+    "start" : 1654680470298,
+    "stop" : 1654680473665,
+    "duration" : 3367
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 6,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have logout from Xero account"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1b5ebf8a9a62f10c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654679978453,
+        "stop" : 1654679981337,
+        "duration" : 2884
+      }
+    }, {
+      "uid" : "3a24849c5795f80",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654679694455,
+        "stop" : 1654679697294,
+        "duration" : 2839
+      }
+    }, {
+      "uid" : "4629907b0497d4b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654679464504,
+        "stop" : 1654679467708,
+        "duration" : 3204
+      }
+    }, {
+      "uid" : "e114ec3077393d41",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654679264387,
+        "stop" : 1654679268949,
+        "duration" : 4562
+      }
+    }, {
+      "uid" : "85fd8d63be065816",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654678909962,
+        "stop" : 1654678912873,
+        "duration" : 2911
+      }
+    }, {
+      "uid" : "667a84257ebb47fd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654677258577,
+        "stop" : 1654677262608,
+        "duration" : 4031
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "62aa6d3f5a1ffa53.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

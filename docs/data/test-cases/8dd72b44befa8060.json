@@ -1,0 +1,79 @@
+{
+  "uid" : "8dd72b44befa8060",
+  "name" : "should invite user and give them permissions for the Organisation and Register",
+  "fullName" : "create a new register.should invite user and give them permissions for the Organisation and Register",
+  "historyId" : "790cd36647a10acc56cf0d81bcd1500e",
+  "time" : {
+    "start" : 1652187651270,
+    "stop" : 1652187684641,
+    "duration" : 33371
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create a new register"
+  }, {
+    "name" : "testClass",
+    "value" : "create a new register"
+  }, {
+    "name" : "testMethod",
+    "value" : "should invite user and give them permissions for the Organisation and Register"
+  }, {
+    "name" : "package",
+    "value" : "create a new register"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.54"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2264815a08891fab",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652187151165,
+        "stop" : 1652187213560,
+        "duration" : 62395
+      }
+    }, {
+      "uid" : "6f9dc0bd9749d88b",
+      "status" : "failed",
+      "statusDetails" : "expected 'Loading…' to include 'An invitation has been sent to'      \n                      actual expected\n                      \n                      'Loading…'undefined\n                      ",
+      "time" : {
+        "start" : 1652186971825,
+        "stop" : 1652187003256,
+        "duration" : 31431
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8dd72b44befa8060.json",
+  "parameterValues" : [ "chrome-101.0.4951.54" ]
+}

@@ -1,0 +1,111 @@
+{
+  "uid" : "24a707be4e869122",
+  "name" : "should link to account tab, add and reverse adjustment",
+  "fullName" : "dev asset page.should link to account tab, add and reverse adjustment",
+  "historyId" : "8be99f184046d7aea35132d5a937d106",
+  "time" : {
+    "start" : 1655387132045,
+    "stop" : 1655387184438,
+    "duration" : 52393
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 6,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should link to account tab, add and reverse adjustment"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f0650222a5a4bf7b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655386812894,
+        "stop" : 1655386861387,
+        "duration" : 48493
+      }
+    }, {
+      "uid" : "8900c031e6db4b9f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655363253948,
+        "stop" : 1655363300442,
+        "duration" : 46494
+      }
+    }, {
+      "uid" : "ba8e3b9351e60e13",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655362849552,
+        "stop" : 1655362903809,
+        "duration" : 54257
+      }
+    }, {
+      "uid" : "477de1e206254dd7",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1655361725775,
+        "stop" : 1655361758932,
+        "duration" : 33157
+      }
+    }, {
+      "uid" : "d56033fc6ea02d8f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655360850315,
+        "stop" : 1655360894100,
+        "duration" : 43785
+      }
+    }, {
+      "uid" : "15194575fd7042b8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655301614114,
+        "stop" : 1655301669253,
+        "duration" : 55139
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "24a707be4e869122.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

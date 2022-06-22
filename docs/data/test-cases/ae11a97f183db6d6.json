@@ -1,0 +1,266 @@
+{
+  "uid" : "ae11a97f183db6d6",
+  "name" : "should add file attachment",
+  "fullName" : "create attachment.should add file attachment",
+  "historyId" : "21201dd875dd2e4301c65a43c39ecea7",
+  "time" : {
+    "start" : 1653657301552,
+    "stop" : 1653657339893,
+    "duration" : 38341
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 24,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create attachment"
+  }, {
+    "name" : "testClass",
+    "value" : "create attachment"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add file attachment"
+  }, {
+    "name" : "package",
+    "value" : "create attachment"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-101.0.4951.67"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "636ae94e99e2bbf1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653573767395,
+        "stop" : 1653573811287,
+        "duration" : 43892
+      }
+    }, {
+      "uid" : "e0b858a06b95a721",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653548314846,
+        "stop" : 1653548350031,
+        "duration" : 35185
+      }
+    }, {
+      "uid" : "6e3a4e0229ddf5ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653403425479,
+        "stop" : 1653403454592,
+        "duration" : 29113
+      }
+    }, {
+      "uid" : "3155c2092a1105c5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653401263027,
+        "stop" : 1653401294683,
+        "duration" : 31656
+      }
+    }, {
+      "uid" : "9e82ad0f31ab9746",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653399374707,
+        "stop" : 1653399407431,
+        "duration" : 32724
+      }
+    }, {
+      "uid" : "e0f5839b4123efb1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653387793710,
+        "stop" : 1653387826424,
+        "duration" : 32714
+      }
+    }, {
+      "uid" : "e674816bde85e1dd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653379658935,
+        "stop" : 1653379703122,
+        "duration" : 44187
+      }
+    }, {
+      "uid" : "16e793ba7255ebcf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653379347740,
+        "stop" : 1653379385669,
+        "duration" : 37929
+      }
+    }, {
+      "uid" : "806c3e75524369fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653379171504,
+        "stop" : 1653379175880,
+        "duration" : 4376
+      }
+    }, {
+      "uid" : "d3377c09b53bceb5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653378997502,
+        "stop" : 1653379001120,
+        "duration" : 3618
+      }
+    }, {
+      "uid" : "86fd73ca89c8ca3d",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653377966158,
+        "stop" : 1653378001737,
+        "duration" : 35579
+      }
+    }, {
+      "uid" : "a065fe1e5ccd19dc",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653377740620,
+        "stop" : 1653377776100,
+        "duration" : 35480
+      }
+    }, {
+      "uid" : "baf539e8f44cc2c5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653311458058,
+        "stop" : 1653311503182,
+        "duration" : 45124
+      }
+    }, {
+      "uid" : "d151c19bfde0378c",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1653309911734,
+        "stop" : 1653309911735,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "64de1f3739de23d",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1653309409620,
+        "stop" : 1653309409622,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "b51ecef3d7a00a90",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1653308910291,
+        "stop" : 1653308910292,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "306213398be0190f",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1653308551307,
+        "stop" : 1653308551308,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "bdbdebbd539a4b6e",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1653308327718,
+        "stop" : 1653308327720,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "f552d086dd6f1742",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1653308044162,
+        "stop" : 1653308044165,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "e44b905ff5273c1b",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1653304368121,
+        "stop" : 1653304368121,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "6f1d1fedb812fdac",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1653303737927,
+        "stop" : 1653303737928,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "2d7a9257d3d0d141",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1653303653019,
+        "stop" : 1653303653020,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "6d3e4e1d9da6a8b1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653300333679,
+        "stop" : 1653300349071,
+        "duration" : 15392
+      }
+    }, {
+      "uid" : "6f176ac1947f573d",
+      "status" : "failed",
+      "statusDetails" : "expected 'test.txt\\nUploaded by Create Asset Te…' to include '23, 2022 13:01 PM'      \n                      actual expected\n                      \n                      'test.txt\\nUploaded by Create Asset Testing at May 23, 2022 1:01 PM'undefined\n                      ",
+      "time" : {
+        "start" : 1653300068899,
+        "stop" : 1653300084762,
+        "duration" : 15863
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ae11a97f183db6d6.json",
+  "parameterValues" : [ "chrome-101.0.4951.67" ]
+}

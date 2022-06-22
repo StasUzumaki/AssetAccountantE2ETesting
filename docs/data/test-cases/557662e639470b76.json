@@ -1,0 +1,166 @@
+{
+  "uid" : "557662e639470b76",
+  "name" : "should create asset group (from template) if no groups have been created",
+  "fullName" : "create report.should create asset group (from template) if no groups have been created",
+  "historyId" : "9c514ac7140020a8b9620cf45250aa20",
+  "time" : {
+    "start" : 1655119291675,
+    "stop" : 1655119330744,
+    "duration" : 39069
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 13,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "create report"
+  }, {
+    "name" : "testClass",
+    "value" : "create report"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create asset group (from template) if no groups have been created"
+  }, {
+    "name" : "package",
+    "value" : "create report"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "fa14e3f15bf9791f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655110019010,
+        "stop" : 1655110072246,
+        "duration" : 53236
+      }
+    }, {
+      "uid" : "75174c529aa133ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655109631852,
+        "stop" : 1655109668160,
+        "duration" : 36308
+      }
+    }, {
+      "uid" : "288f56c2c0e8f12",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655108475256,
+        "stop" : 1655108504764,
+        "duration" : 29508
+      }
+    }, {
+      "uid" : "de0e4e52999acefb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655108178448,
+        "stop" : 1655108224624,
+        "duration" : 46176
+      }
+    }, {
+      "uid" : "4d4625d959f4d5d9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1654496523948,
+        "stop" : 1654496562282,
+        "duration" : 38334
+      }
+    }, {
+      "uid" : "9a2a06349ba62c44",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653995299546,
+        "stop" : 1653995329325,
+        "duration" : 29779
+      }
+    }, {
+      "uid" : "74bbdd911e3989ac",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653994948095,
+        "stop" : 1653994974652,
+        "duration" : 26557
+      }
+    }, {
+      "uid" : "f274dbbe8b44689f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653994600449,
+        "stop" : 1653994659251,
+        "duration" : 58802
+      }
+    }, {
+      "uid" : "3c8c5d1c543b1fc5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653992610174,
+        "stop" : 1653992649918,
+        "duration" : 39744
+      }
+    }, {
+      "uid" : "20582dfb7a1a6d65",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653915115861,
+        "stop" : 1653915145049,
+        "duration" : 29188
+      }
+    }, {
+      "uid" : "942aae307c26284c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653915044089,
+        "stop" : 1653915069680,
+        "duration" : 25591
+      }
+    }, {
+      "uid" : "ba42671ad0d9c778",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653908847078,
+        "stop" : 1653908881968,
+        "duration" : 34890
+      }
+    }, {
+      "uid" : "52050f08fe73f95f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653899557964,
+        "stop" : 1653899609724,
+        "duration" : 51760
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "557662e639470b76.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

@@ -1,0 +1,104 @@
+{
+  "uid" : "4652ac23c2944d3f",
+  "name" : "\"after all\" hook for Sign in with Xero",
+  "fullName" : "Sign in with Xero.\"after all\" hook for Sign in with Xero",
+  "historyId" : "d85da3a72ca86014fb4396af94f8b6e2",
+  "time" : {
+    "start" : 1654765205828,
+    "stop" : 1654765236071,
+    "duration" : 30243
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "No window found with title, url or name matching \"dev.asset.accountant\"",
+  "statusTrace" : "Error: No window found with title, url or name matching \"dev.asset.accountant\"\n                    at Browser.switchWindow (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\switchWindow.js:71:11)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\signInWithXero.spec.js:27:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 4,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"after all\" hook for Sign in with Xero"
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8b8832a056fabce",
+      "status" : "broken",
+      "statusDetails" : "connect ECONNREFUSED 127.0.0.1:9515",
+      "time" : {
+        "start" : 1654684773718,
+        "stop" : 1654684803415,
+        "duration" : 29697
+      }
+    }, {
+      "uid" : "8013f8d9d14ca74f",
+      "status" : "broken",
+      "statusDetails" : "No window found with title, url or name matching \"dev.asset.accountant\"",
+      "time" : {
+        "start" : 1654684296067,
+        "stop" : 1654684353791,
+        "duration" : 57724
+      }
+    }, {
+      "uid" : "da3669d7f763d0b6",
+      "status" : "broken",
+      "statusDetails" : "connect ECONNREFUSED 127.0.0.1:9515",
+      "time" : {
+        "start" : 1654683932587,
+        "stop" : 1654683957118,
+        "duration" : 24531
+      }
+    }, {
+      "uid" : "16c7fcf295e3764f",
+      "status" : "broken",
+      "statusDetails" : "chrome not reachable\n                  (Session info: chrome=102.0.5005.63)",
+      "time" : {
+        "start" : 1654683367997,
+        "stop" : 1654683451308,
+        "duration" : 83311
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "4652ac23c2944d3f.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

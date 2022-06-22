@@ -1,0 +1,78 @@
+{
+  "uid" : "50be2f61edc2d3a1",
+  "name" : "should have fill out business form",
+  "fullName" : "Create an account from Xero.should have fill out business form",
+  "historyId" : "8b89a3e765740b623174f8707aa0ae1d",
+  "time" : {
+    "start" : 1655198387041,
+    "stop" : 1655198398162,
+    "duration" : 11121
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have fill out business form"
+  }, {
+    "name" : "package",
+    "value" : "Create an account from Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8640b743192bcb47",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655194113188,
+        "stop" : 1655194129682,
+        "duration" : 16494
+      }
+    }, {
+      "uid" : "d17ec1112f6fd43e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655193738988,
+        "stop" : 1655193754610,
+        "duration" : 15622
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "50be2f61edc2d3a1.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

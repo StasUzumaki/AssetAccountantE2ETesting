@@ -1,0 +1,68 @@
+{
+  "uid" : "335f7205b778a238",
+  "name" : "should add AU company and connect QuickBooks to AA",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.should add AU company and connect QuickBooks to AA",
+  "historyId" : "b8a03b1dbaa63c267ecf59b086939184",
+  "time" : {
+    "start" : 1655713705118,
+    "stop" : 1655713753805,
+    "duration" : 48687
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition failed with the following reason: chrome not reachable\n                  (Session info: chrome=102.0.5005.115)",
+  "statusTrace" : "Error: waitUntil condition failed with the following reason: chrome not reachable\n                  (Session info: chrome=102.0.5005.115)\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:70:15\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.isElementDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:62:9)\n                    at async QuickbooksPage.isAuthorizeConnectFormDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\quickbooks.page.js:33:16)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\loginToExistAccFromQbo.spec.js:70:22)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "should add AU company and connect QuickBooks to AA"
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.115"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "335f7205b778a238.json",
+  "parameterValues" : [ "chrome-102.0.5005.115" ]
+}

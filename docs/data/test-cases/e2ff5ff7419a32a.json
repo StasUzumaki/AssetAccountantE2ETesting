@@ -1,0 +1,158 @@
+{
+  "uid" : "e2ff5ff7419a32a",
+  "name" : "should create intuit account",
+  "fullName" : "Create an AA account from QBO / connect to QBO from AA.should create intuit account",
+  "historyId" : "45ad27af9585c9d531d21efecddb61b",
+  "time" : {
+    "start" : 1653910349277,
+    "stop" : 1653910390479,
+    "duration" : 41202
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "waitUntil condition timed out after 35000ms",
+  "statusTrace" : "Error: waitUntil condition timed out after 35000ms\n                    at C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\webdriverio\\build\\commands\\browser\\waitUntil.js:68:19\n                    at async Browser.wrapCommandFn (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@wdio\\utils\\build\\shim.js:137:29)\n                    at async Page.waitUntilDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:14:9)\n                    at async Page.isElementDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\page.js:62:9)\n                    at async IntuitSignUp.isNotificationMessageDisplayed (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\pageobjects\\intuitSignUp.page.js:45:16)\n                    at async IntuitAccounts.createAccountIntuit (C:\\Users\\oyani\\AssetAccountantE2ETesting\\helper\\intuitAccounts.js:33:22)\n                    at async Context.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\test\\specs\\createAccountFromQbo.spec.js:16:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 10,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testClass",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create intuit account"
+  }, {
+    "name" : "package",
+    "value" : "Create an AA account from QBO / connect to QBO from AA"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "dcf6c377b50764b8",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653908546020,
+        "stop" : 1653908587440,
+        "duration" : 41420
+      }
+    }, {
+      "uid" : "8181f06f1d2fd0f4",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653908003176,
+        "stop" : 1653908044425,
+        "duration" : 41249
+      }
+    }, {
+      "uid" : "2b645d44e5faf861",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653907126176,
+        "stop" : 1653907167566,
+        "duration" : 41390
+      }
+    }, {
+      "uid" : "e8a8f9668524e92b",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653905204772,
+        "stop" : 1653905247273,
+        "duration" : 42501
+      }
+    }, {
+      "uid" : "2655dee7a2645118",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653903529106,
+        "stop" : 1653903570325,
+        "duration" : 41219
+      }
+    }, {
+      "uid" : "9b0edfcc98a45397",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653903307136,
+        "stop" : 1653903348368,
+        "duration" : 41232
+      }
+    }, {
+      "uid" : "4f71ebcba305af04",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653901641215,
+        "stop" : 1653901682821,
+        "duration" : 41606
+      }
+    }, {
+      "uid" : "e5d5e985fb0f165e",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653900081008,
+        "stop" : 1653900123046,
+        "duration" : 42038
+      }
+    }, {
+      "uid" : "2e6aa8212f2b345c",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653899718013,
+        "stop" : 1653899759168,
+        "duration" : 41155
+      }
+    }, {
+      "uid" : "78f2b43fa8189f15",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 35000ms",
+      "time" : {
+        "start" : 1653899500036,
+        "stop" : 1653899541865,
+        "duration" : 41829
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "e2ff5ff7419a32a.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

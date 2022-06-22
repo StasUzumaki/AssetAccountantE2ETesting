@@ -1,0 +1,88 @@
+{
+  "uid" : "7fd9b08d0a295734",
+  "name" : "should have activate xero account ",
+  "fullName" : "Sign in with Xero.should have activate xero account ",
+  "historyId" : "74c5011ed57ded4852be5368acaa8ed4",
+  "time" : {
+    "start" : 1654672734454,
+    "stop" : 1654672734455,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 4,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testClass",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have activate xero account "
+  }, {
+    "name" : "package",
+    "value" : "Sign in with Xero"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8862461b6fb4762b",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1654672589624,
+        "stop" : 1654672589624,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "6bb21fff5a87cdcb",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1654672484158,
+        "stop" : 1654672484158,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "3fcf6dff7e4d9cf9",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1654672386608,
+        "stop" : 1654672386608,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "ed10d5c982e8af25",
+      "status" : "skipped",
+      "statusDetails" : "Test ignored",
+      "time" : {
+        "start" : 1654672258580,
+        "stop" : 1654672258580,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7fd9b08d0a295734.json",
+  "parameterValues" : [ ]
+}

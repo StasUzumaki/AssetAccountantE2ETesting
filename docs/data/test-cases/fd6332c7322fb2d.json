@@ -1,0 +1,60 @@
+{
+  "uid" : "fd6332c7322fb2d",
+  "name" : "should invite user and give them permissions for the Register",
+  "fullName" : "Account / User.should invite user and give them permissions for the Register",
+  "historyId" : "40018a838928ab2fbba0a10c3a8c662",
+  "time" : {
+    "start" : 1655463409625,
+    "stop" : 1655463426404,
+    "duration" : 16779
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Account / User"
+  }, {
+    "name" : "testClass",
+    "value" : "Account / User"
+  }, {
+    "name" : "testMethod",
+    "value" : "should invite user and give them permissions for the Register"
+  }, {
+    "name" : "package",
+    "value" : "Account / User"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-102.0.5005.63"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fd6332c7322fb2d.json",
+  "parameterValues" : [ "chrome-102.0.5005.63" ]
+}

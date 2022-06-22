@@ -1,0 +1,86 @@
+{
+  "uid" : "c7b39ede5af907f5",
+  "name" : "\"before all\" hook for dev asset page",
+  "fullName" : "dev asset page.\"before all\" hook for dev asset page",
+  "historyId" : "a70f836e48b057808e83f4452c2aa369",
+  "time" : {
+    "start" : 1651652008789,
+    "stop" : 1651652029853,
+    "duration" : 21064
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "read ECONNRESET",
+  "statusTrace" : "RequestError: read ECONNRESET\n                    at ClientRequest.<anonymous> (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\got\\dist\\source\\core\\index.js:962:111)\n                    at Object.onceWrapper (node:events:646:26)\n                    at ClientRequest.emit (node:events:538:35)\n                    at ClientRequest.emit (node:domain:475:12)\n                    at ClientRequest.origin.emit (C:\\Users\\oyani\\AssetAccountantE2ETesting\\node_modules\\@szmarczak\\http-timer\\dist\\source\\index.js:43:20)\n                    at Socket.socketErrorListener (node:_http_client:442:9)\n                    at Socket.emit (node:events:526:28)\n                    at Socket.emit (node:domain:475:12)\n                    at emitErrorNT (node:internal/streams/destroy:157:8)\n                    at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n                    at TCP.onStreamRead (node:internal/stream_base_commons:217:20)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testClass",
+    "value" : "dev asset page"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"before all\" hook for dev asset page"
+  }, {
+    "name" : "package",
+    "value" : "dev asset page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-100.0.4896.127"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "da3a13dd9684fc23",
+      "status" : "broken",
+      "statusDetails" : "waitUntil condition timed out after 25000ms",
+      "time" : {
+        "start" : 1651648488100,
+        "stop" : 1651648514259,
+        "duration" : 26159
+      }
+    }, {
+      "uid" : "b4abed59016041ea",
+      "status" : "broken",
+      "statusDetails" : "this.waitForClickable is not a function",
+      "time" : {
+        "start" : 1651585909263,
+        "stop" : 1651585916373,
+        "duration" : 7110
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "c7b39ede5af907f5.json",
+  "parameterValues" : [ "chrome-100.0.4896.127" ]
+}
