@@ -5,7 +5,7 @@ on:
       - 'main' # Set branch of the GH repo to push
 jobs:
   test_suite: # Name of the job
-      runs-on: ubuntu-20.04 # Choosing OS
+      runs-on: windows-latest # Choosing OS
       steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
