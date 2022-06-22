@@ -3271,11 +3271,19 @@
       "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     },
     "items" : [ {
+      "uid" : "3193232c26530cf0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1655893688642,
+        "stop" : 1655893704657,
+        "duration" : 16015
+      }
+    }, {
       "uid" : "87de79f527074f75",
       "status" : "passed",
       "time" : {

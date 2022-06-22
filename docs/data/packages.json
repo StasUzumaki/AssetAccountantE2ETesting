@@ -4,13 +4,13 @@
     "name" : "login to account",
     "children" : [ {
       "name" : "should login to existing account",
-      "uid" : "87de79f527074f75",
+      "uid" : "3193232c26530cf0",
       "parentUid" : "1637130d4ceecc799f4afb4996c95304",
       "status" : "passed",
       "time" : {
-        "start" : 1655893626775,
-        "stop" : 1655893645277,
-        "duration" : 18502
+        "start" : 1655893688642,
+        "stop" : 1655893704657,
+        "duration" : 16015
       },
       "flaky" : false,
       "newFailed" : false,
