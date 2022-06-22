@@ -39,7 +39,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         if: always()
         with:
-          ACCESS_TOKEN: ${{ secrets.API_TOKEN_GITHUB }} 
+          token: ${{ secrets.API_TOKEN_GITHUB }} 
           branch: main 
           folder: allure-report 
           target-folder: docs
