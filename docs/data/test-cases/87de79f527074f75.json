@@ -1,12 +1,12 @@
 {
-  "uid" : "b0b96b2d52881637",
+  "uid" : "87de79f527074f75",
   "name" : "should login to existing account",
   "fullName" : "login to account.should login to existing account",
   "historyId" : "c1b8dca11bc8dbb3c02e16917960a743",
   "time" : {
-    "start" : 1655893558425,
-    "stop" : 1655893576472,
-    "duration" : 18047
+    "start" : 1655893626775,
+    "stop" : 1655893645277,
+    "duration" : 18502
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -14,7 +14,7 @@
   "flaky" : false,
   "newFailed" : false,
   "newBroken" : false,
-  "newPassed" : true,
+  "newPassed" : false,
   "retriesCount" : 0,
   "retriesStatusChange" : false,
   "beforeStages" : [ ],
@@ -60,11 +60,19 @@
         "failed" : 1,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 1,
+        "passed" : 2,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "items" : [ {
+        "uid" : "b0b96b2d52881637",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655893558425,
+          "stop" : 1655893576472,
+          "duration" : 18047
+        }
+      }, {
         "uid" : "3f4d01406c6c524e",
         "status" : "failed",
         "statusDetails" : "expected 'Demo Register' to include 'Demos Register'      \n                      actual expected\n                      \n                      'Demo Register'undefined\n                      ",
@@ -77,6 +85,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "b0b96b2d52881637.json",
+  "source" : "87de79f527074f75.json",
   "parameterValues" : [ "chrome-102.0.5005.115" ]
 }
