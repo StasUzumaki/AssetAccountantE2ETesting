@@ -1,12 +1,12 @@
 {
-  "uid" : "3193232c26530cf0",
+  "uid" : "61bfd087edc2739c",
   "name" : "should login to existing account",
   "fullName" : "login to account.should login to existing account",
   "historyId" : "c1b8dca11bc8dbb3c02e16917960a743",
   "time" : {
-    "start" : 1655893688642,
-    "stop" : 1655893704657,
-    "duration" : 16015
+    "start" : 1655893745952,
+    "stop" : 1655893763082,
+    "duration" : 17130
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -60,11 +60,19 @@
         "failed" : 1,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 3,
+        "passed" : 4,
         "unknown" : 0,
-        "total" : 4
+        "total" : 5
       },
       "items" : [ {
+        "uid" : "3193232c26530cf0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1655893688642,
+          "stop" : 1655893704657,
+          "duration" : 16015
+        }
+      }, {
         "uid" : "87de79f527074f75",
         "status" : "passed",
         "time" : {
@@ -93,6 +101,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "3193232c26530cf0.json",
+  "source" : "61bfd087edc2739c.json",
   "parameterValues" : [ "chrome-102.0.5005.115" ]
 }

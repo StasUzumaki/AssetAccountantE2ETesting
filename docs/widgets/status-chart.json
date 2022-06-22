@@ -1,10 +1,10 @@
 [ {
-  "uid" : "3193232c26530cf0",
+  "uid" : "61bfd087edc2739c",
   "name" : "should login to existing account",
   "time" : {
-    "start" : 1655893688642,
-    "stop" : 1655893704657,
-    "duration" : 16015
+    "start" : 1655893745952,
+    "stop" : 1655893763082,
+    "duration" : 17130
   },
   "status" : "passed",
   "severity" : "normal"
