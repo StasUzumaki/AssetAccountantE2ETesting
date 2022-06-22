@@ -16,7 +16,7 @@ jobs:
       - run: npm i
       - name: run test
       #trying to run test
-        run: npm run test:login # Our name of the headless script
+        run: npm run test:login:chrome:headless # Our name of the headless script
       - name: Copy History
         if: always()
         run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history
