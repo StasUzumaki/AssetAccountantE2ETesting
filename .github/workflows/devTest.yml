@@ -42,14 +42,14 @@ jobs:
           branch: main # The branch the action should deploy to.
           folder: allure-report # The folder the action should deploy.
           target-folder: docs
-      - name: Pushes docs to another repository
-        uses: cpina/github-action-push-to-another-repository@v1.3
-        if: always()
-        env:
-          API_TOKEN_GITHUB: ${{secrets.API_TOKEN_GITHUB}} # Instruction where to get token is below
-        with:
-          source-directory: 'docs'
-          destination-github-username: 'Stas' # Your username
-          destination-repository-name: 'AssetAccountantE2ETesting' # Name of your repo
-          user-email: stasl77775@gmail.com # Your email
-          target-branch: main 
+      #- name: Pushes docs to another repository
+       # uses: cpina/github-action-push-to-another-repository@v1.3
+       # if: always()
+       # env:
+       #   API_TOKEN_GITHUB: ${{secrets.API_TOKEN_GITHUB}} # Instruction where to get token is below
+       # with:
+       #  source-directory: 'docs'
+        #  destination-github-username: 'Stas' # Your username
+        #  destination-repository-name: 'AssetAccountantE2ETesting' # Name of your repo
+        #  user-email: stasl77775@gmail.com # Your email
+        #  target-branch: main 
