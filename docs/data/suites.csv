@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Jun 22 10:44:42 UTC 2022","Wed Jun 22 10:44:57 UTC 2022","15407","","login to account","","login to account","should login to existing account","should login to existing account",""
+"passed","Wed Jun 22 10:45:51 UTC 2022","Wed Jun 22 10:46:10 UTC 2022","19252","","login to account","","login to account","should login to existing account","should login to existing account",""
