@@ -1,4 +1,4 @@
-name: test "loginToExistingAcc"
+name: Main Github Actions
 on:
   push:
     branches:
@@ -39,10 +39,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         if: always()
         with:
-          token: ${{ secrets.API_TOKEN_GITHUB }} 
-          branch: main 
-          folder: allure-report 
-          target-folder: docs
+          branch: gh-pages # The branch the action should deploy to.
+          folder: allure-report
       #- name: Pushes docs to another repository
        # uses: cpina/github-action-push-to-another-repository@v1.3
        # if: always()
