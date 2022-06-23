@@ -13,24 +13,25 @@ const randomName = uniqueNamesGenerator({
 
 const registerNameSettings = randomName + '_TestRegister'
 const journalDescr = 'Test Description Movements for 31 May 2022'
-const filePathXlsx = './tempDownloads/2022-06-30 - '+ registerNameSettings +' - Test Description Movements for 31 May 2022.xlsx'
-const filePathPdf = './tempDownloads/'+ registerNameSettings +' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
-const filePathCsv = './tempDownloads/'+ registerNameSettings +' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
+const filePathXlsx = './tempDownloads/2022-06-30 - ' + registerNameSettings + ' - Test Description Movements for 31 May 2022.xlsx'
+const filePathPdf = './tempDownloads/' + registerNameSettings + ' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
+const filePathCsv = './tempDownloads/' + registerNameSettings + ' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
 
-describe('Asset Super Test', () => {
+describe('Pre-Deployment', () => {
     before('land to dev asset page', async () => {
         await browser.url(baseUrl.baseUrlLink)
     });
     after('logout', async () => {
-        // //deleting journal
+        await devAssetMainPage.clickCloseBtn()
+        // deleting journal
         await devAssetMainPage.clickJournalLink()
         await helper.deleteJournals()
-        // //deleting asset
+        // deleting asset
         await devAssetMainPage.clickAssetsLink()
         await helper.deleteAllAssets()
         // deleting asset group
         await helper.deleteAssetGroup()
-        //deleting register
+        // deleting register
         await devAssetMainPage.clickRegisterSelectionDropDown()
         await devAssetMainPage.clickAllRegistersLink()
         await helper.deleteAllRegisters()
@@ -52,112 +53,16 @@ describe('Asset Super Test', () => {
         await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
         await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
     });
-    it('should create asset group (from template) if no groups have been created', async () => {
-        await helper.createAssetGroupFromTemplate()
-    });
-    it('should create asset group (Blank) with existing group', async () => {
-        await devAssetMainPage.clickAssetsLink()
-        await devAssetMainPage.clickAssetsAddBtn()
+    it('should create asset group (Blank)', async () => {
         await helper.createAssetGroupBlank()
-    });
-    it('should create classifications', async () => {
-        await devAssetMainPage.clickRegisterSettingsLink()
-        await devAssetMainPage.clickClassificationLink()
-        await helper.addClassification()
-        await expect(await devAssetMainPage.isFirstClassificationDisplayed()).true
-        await helper.addClassification()
-        await expect(await devAssetMainPage.isSecondClassificationDisplayed()).true
     });
     it('should create asset', async () => {
         await devAssetMainPage.clickAssetsLink()
         await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
         await devAssetMainPage.clickAssetsAddBtn()
-        await helper.createAssetClassification()
+        await helper.createAsset()
     });
-    it('should add and reverse opening balance', async () => {
-        await helper.assetAddOpeningBalance()
-        await helper.assetReverseOpeningBalance()
-    });
-    it('should add sell and reverse sale', async () => {
-        await helper.assetSell()
-        await helper.assetReverseSale()
-    });
-    it('should write off asset and reverse write off', async () => {
-        await browser.pause(2000)
-        await helper.assetWriteOff()
-        await helper.assetReverseWriteOff()
-    });
-    it('should partial sell asset and reverse partial sale', async () => {
-        await browser.pause(2000)
-        await helper.assetPartialSell()
-        await helper.assetReversePartialSale()
-    });
-    it('should partial write off asset and reverse partial write off', async () => {
-        await browser.pause(2000)
-        await helper.assetPartialWriteOff()
-        await helper.assetReversePartialWriteOff()
-    });
-    it('should add and reverse reassessment', async () => {
-        await browser.pause(2000)
-        await helper.taxAddReassessment()
-        await helper.taxReverseReassessment()
-    });
-    xit('should add and reverse transfer to pool', async () => {
-        await browser.pause(2000)
-        await helper.taxAddTransferToPool()
-        await helper.taxReverseTransferToPool()
-    });
-    it('should add and reverse adjustment', async () => {
-        await browser.pause(2000)
-        await helper.taxAddAdjustment()
-        await helper.taxReverseAdjustment()
-    });
-    it('should add and reverse reassessment taxable use', async () => {
-        await browser.pause(2000)
-        await helper.taxAddReassessmentTaxableUse()
-        await helper.taxReverseReassessmentTaxableUse()
-    });
-    it('should link to account tab, add and reverse reassessment', async () => {
-        await browser.pause(2000)
-        await helper.accountsAddReassessment()
-        await helper.accountsReverseReasessment()
-    });
-    it('should link to account tab, add and reverse revaluation', async () => {
-        await browser.pause(2000)
-        await helper.accountsAddRevaluation()
-        await helper.accountsReverseRevaluation()
-    });
-    it('should link to account tab, add and reverse impairment', async () => {
-        await browser.pause(2000)
-        await helper.accountsAddImpairment()
-        await helper.accountsReverseImpairment()
-    });
-    it('should link to account tab, add and reverse adjustment', async () => {
-        await browser.pause(2000)
-        await helper.accountsAddAdjustment()
-        await helper.accountsReverseAdjustment()
-        //
-        await devAssetMainPage.clickReverseDropDown()
-        await devAssetMainPage.clickReverseTransferBtn()
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-        await devAssetMainPage.clickDeleteCofirmationOkBtn()
-        await browser.pause(3000)
-        await devAssetMainPage.clickReverseDropDown()
-        await devAssetMainPage.clickReverseTransferBtn()
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
-        await devAssetMainPage.clickDeleteCofirmationOkBtn()
-        await browser.pause(3000)
-    });
-    it('should add link attachment', async () => {
-        await devAssetMainPage.clickAssetDetailsLink()
-        await helper.addLinkAttachment()
-        await helper.deleteAllLinkAttachments()
-    });
-    it('should add file attachment', async () => {
-        await helper.addFilesAttachment()
-        await helper.deleteAllFilesAttachments()
-        //change delete func
-    });
+    //create lease
     it('should create HP/Lease', async () => {
         await devAssetMainPage.clickAssetsLink()
         await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
@@ -166,11 +71,11 @@ describe('Asset Super Test', () => {
         await helper.fillingOutLeaseForm()
         await devAssetMainPage.clickAlertMessageGenerateScheduleBtn()
         await helper.generatePaymentSchedule()
-        //await helper.fillingOutLeasePaymentForm()
         await devAssetMainPage.clickLeaseSaveBtn()
         await expect(await devAssetMainPage.isAssetColumnHeaderDisplayed()).true
         await expect(await devAssetMainPage.isLeaseColumnHeaderDisplayed()).true
     });
+    //create journal
     it('should create journal', async () => {
         await devAssetMainPage.clickJournalLink()
         await expect(await devAssetMainPage.isCurrentlyJournalsDisplayed()).true
@@ -187,7 +92,6 @@ describe('Asset Super Test', () => {
         await devAssetMainPage.clickExportDropDownBtn()
         await devAssetMainPage.clickExportAsExcelBtn()
         await expect(await devAssetMainPage.isChooseTransactionFormDisplayed()).true
-        //await devAssetMainPage.clickPurchasesCheckBox()
         await devAssetMainPage.clickPostBtn()
         await expect(await devAssetMainPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true
         await expect(await devAssetMainPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')
@@ -241,7 +145,5 @@ describe('Asset Super Test', () => {
     it('should validate CSV file', async () => {
         // cvs file validation
         await helper.csvValidation(filePathCsv)
-        await devAssetMainPage.clickCloseBtn()
     });
-
 });

@@ -1,3 +1,10 @@
+const path = require('path')
+const fs = require('fs');
+const rmdir = require('./util/rmdir')
+require('dotenv').config()
+
+global.downloadDir = path.join(__dirname, 'tempDownloads')
+
 exports.config = {
 
     specs: [
@@ -14,6 +21,9 @@ exports.config = {
         maxInstances: 5,
         browserName: 'chrome',
         'goog:chromeOptions': {
+            prefs: {
+                'download.default_directory': downloadDir,
+            },
             args: ['--headless', '--start-maximized', '--no-sandbox', '--disable-gpu', '--window-size=1280,800', '--allow-insecure-localhost']
         },
         acceptInsecureCerts: true
@@ -71,8 +81,14 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+     onPrepare: function (config, capabilities) {
+        if (fs.existsSync(downloadDir)) {
+            rmdir(downloadDir)
+        }
+        if (!fs.existsSync(downloadDir)) {
+            fs.mkdirSync(downloadDir)
+        }
+    },
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
@@ -152,8 +168,12 @@ exports.config = {
      * @param {Boolean} result.passed    true if test has passed, otherwise false
      * @param {Object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+     afterTest: function
+     (test, context, { error, result, duration, passed, retries }) {
+     if (error) {
+         browser.takeScreenshot();
+     }
+ },
 
 
     /**
@@ -196,8 +216,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+     onComplete: function (exitCode, config, capabilities, results) {
+        rmdir(downloadDir)
+    },
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session

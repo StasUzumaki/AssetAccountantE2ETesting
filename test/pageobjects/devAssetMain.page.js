@@ -58,6 +58,9 @@ const createAssetGroupTemplateBtn = '[routerlink*="template"]'
 const createAssetGroupBlankBtn = '[routerlink="../assetgroups/new"]'
 const assetGroupNameBlankField = '//div/div/div[2]/div[1]/input[1]'
 const assetGroupDescriptionBlankField = '//div/div/div[2]/div[1]/input[2]'
+const blankTaxMethodDropDown = '//div[1]/div[1]/select'
+const blankAccountsMethodDropDown = '//app-depreciation-method-selector/div[2]/div/select'
+const blankAccountsEffectiveLifeField = '//app-autocalc-life/div/input'
 const assetGroupBlankSaveBtn = '//div/div[1]/div[2]/div/button'
 const buildingsTemplateAssetForm = '//div[1]/label[1]/div'
 const buildingsTemplateCheckBox = '//*[@id="check[0]"]'
@@ -1804,6 +1807,18 @@ class DevAssetMainpage {
 
     async setAssetGroupNameBlankFieldValue(assetGroupNameBlankFieldInput) {
         return await page.setValue(assetGroupNameBlankField, assetGroupNameBlankFieldInput)
+    }
+
+    async selectBlankTaxMethodDropDownValue(blankTaxMethodDropDownValue){
+        return await page.clickDropdownItemByIndex(blankTaxMethodDropDown, blankTaxMethodDropDownValue)
+    }
+
+    async selectBlankAccountsMethodDropDownValue(blankAccountsMethodDropDownValue){
+        return await page.clickDropdownItemByIndex(blankAccountsMethodDropDown, blankAccountsMethodDropDownValue)
+    }
+
+    async setBlankAccountsEffectiveLifeFieldValue(blankAccountsEffectiveLifeFieldValue){
+        return await page.setValue(blankAccountsEffectiveLifeField, blankAccountsEffectiveLifeFieldValue)
     }
 
     async isNewAssetTitleDisplayed() {

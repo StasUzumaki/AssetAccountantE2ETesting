@@ -163,7 +163,7 @@ class Helper {
         await authPage.clickRegisterBtn()
     }
 
-    async createRegister() {
+    async createRegister(registerNameSettings) {
         await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true
         await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
         await devAssetMainPage.setRegisterNameValue(registerNameSettings)
@@ -241,6 +241,9 @@ class Helper {
         await devAssetMainPage.setAssetGroupNameBlankFieldValue(assetGroupName + randomCodeNumber)
         await expect(await devAssetMainPage.isAssetGroupDescriptionFieldDisplayed()).true
         await devAssetMainPage.setAssetGroupDescriptionBlankFieldValue('TestGroupDescription')
+        await devAssetMainPage.selectBlankTaxMethodDropDownValue(7)
+        await devAssetMainPage.selectBlankAccountsMethodDropDownValue(1)
+        await devAssetMainPage.setBlankAccountsEffectiveLifeFieldValue(40)
         await devAssetMainPage.clickAssetGroupBlankSaveBtn()
         await expect(await devAssetMainPage.isAssetGroupBlankAlertDisplayed()).true
         await expect(await devAssetMainPage.isAssetCardSectionDisplayed()).true
