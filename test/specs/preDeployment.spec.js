@@ -22,7 +22,6 @@ describe('Pre-Deployment', () => {
         await browser.url(baseUrl.baseUrlLink)
     });
     after('logout', async () => {
-        await devAssetMainPage.clickCloseBtn()
         // deleting journal
         await devAssetMainPage.clickJournalLink()
         await helper.deleteJournals()
@@ -48,7 +47,7 @@ describe('Pre-Deployment', () => {
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
         await devAssetMainPage.clickCreateFirstRegisterBtn()
-        await helper.createRegister(registerNameSettings)
+        await helper.createRegisterSuperTest(registerNameSettings)
         await devAssetMainPage.clickAssetsLink()
         await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
         await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
@@ -97,7 +96,7 @@ describe('Pre-Deployment', () => {
         await expect(await devAssetMainPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')
     });
     it('should wait for Excel file to download', async () => {
-        await helper.waitForFileExists(filePathXlsx, 15000)
+        await helper.waitForFileExists(filePathXlsx, 25000)
         expect(fs.existsSync(filePathXlsx)).to.be.true;
     });
     it('should read Excel file', async () => {
@@ -122,7 +121,7 @@ describe('Pre-Deployment', () => {
         await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
     });
     it('should wait for PDF file to download', async () => {
-        await helper.waitForFileExists(filePathPdf, 15000)
+        await helper.waitForFileExists(filePathPdf, 25000)
         expect(fs.existsSync(filePathPdf)).to.be.true;
     });
     it('should validate PDF file', async () => {
@@ -139,11 +138,12 @@ describe('Pre-Deployment', () => {
         await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
     });
     it('should wait for CSV file to download', async () => {
-        await helper.waitForFileExists(filePathCsv, 15000)
+        await helper.waitForFileExists(filePathCsv, 25000)
         expect(fs.existsSync(filePathCsv)).to.be.true;
     });
     it('should validate CSV file', async () => {
         // cvs file validation
         await helper.csvValidation(filePathCsv)
+        await devAssetMainPage.clickCloseBtn()
     });
 });

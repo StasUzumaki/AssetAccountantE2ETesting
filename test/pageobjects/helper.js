@@ -163,7 +163,22 @@ class Helper {
         await authPage.clickRegisterBtn()
     }
 
-    async createRegister(registerNameSettings) {
+    async createRegister() {
+        await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
+        await devAssetMainPage.setRegisterNameValue(registerNameSettings)
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
+        await devAssetMainPage.setRegisterEntityValue('testRegisterEntity')
+        await browser.pause(2000)
+        await devAssetMainPage.clickNextRegisterBtn()
+        await devAssetMainPage.clickTryForFreeBtn()
+        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true
+        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${registerNameSettings} › Settings`)
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
+    }
+
+    async createRegisterSuperTest(registerNameSettings) {
         await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true
         await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
         await devAssetMainPage.setRegisterNameValue(registerNameSettings)
@@ -318,7 +333,7 @@ class Helper {
         await devAssetMainPage.selectNewAssetGroupValue()
         await devAssetMainPage.setNewAssetCostValue('1000')
         await devAssetMainPage.setNewAssetPurchaseDateValue('06/05/22')
-        await devAssetMainPage.setNewAssetQuantityValue('5')
+        await devAssetMainPage.setNewAssetQuantityValue('10')
         await devAssetMainPage.selectNewAssetQuantityUnitsValue()
         await devAssetMainPage.selectFirstClassificationDropDownValue(2)
         await devAssetMainPage.selectSecondClassificationDropDownValue(2)
@@ -337,37 +352,43 @@ class Helper {
         await devAssetMainPage.setTaxWdvValue(300)
         await devAssetMainPage.setAccountsWdvValue(400)
         await devAssetMainPage.clickSaveBtn()
-        await expect(await devAssetMainPage.isTypeOpeningBalanceCellDisplayed()).true
+        await expect(await devAssetMainPage.isOpeningBalanceCellDisplayed()).true
+        await expect(await devAssetMainPage.getOpeningBalanceCellText()).contain('Opening Balance')
     }
 
     async assetReverseOpeningBalance() {
-        await browser.pause(4000)
+        //await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickOpeningBalanceBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isOpeningBalanceReservedCellDisplayed()).true
+        await expect(await devAssetMainPage.getOpeningBalanceReservedCellText()).contain('Opening Balance (Reversed)')
+
     }
 
     async assetSell() {
-        await browser.pause(3000)
         await devAssetMainPage.clickActionsDropDownBtn()
         await devAssetMainPage.clickActionSellBtn()
         await devAssetMainPage.setDateOfSaleValue('06/05/22')
         await devAssetMainPage.setSaleProceedsValue(200)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusSoldDisplayed()).true
+        await expect(await devAssetMainPage.isSaleCellDispalyed()).true
+        await expect(await devAssetMainPage.getSaleCellText()).contain('Sale')
     }
 
     async assetReverseSale() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickSaleBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isReversalSaleCellDisplayed()).true
+        await expect(await devAssetMainPage.getReversalSaleCellText()).contain('Reversal (Sale)')
     }
 
     async assetWriteOff() {
@@ -376,6 +397,8 @@ class Helper {
         await devAssetMainPage.setDateOfWriteOffValue('06/05/22')
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusSoldDisplayed()).true
+        await expect(await devAssetMainPage.isWriteOffCellDisplayed()).true
+        await expect(await devAssetMainPage.getWriteOffCellText()).contain('Write Off')
     }
 
     async assetReverseWriteOff() {
@@ -385,6 +408,8 @@ class Helper {
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isWriteOffReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getWriteOffReversedCellText()).contain('Write Off (Reversed)')
     }
 
     async assetPartialSell() {
@@ -394,16 +419,19 @@ class Helper {
         await devAssetMainPage.setDisposedQuantityValue(2)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isSalePartialCellDisplayed()).true
+        await expect(await devAssetMainPage.getSalePartialCellText()).contain('Sale (Partial)')
     }
 
     async assetReversePartialSale() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickSalePartialBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isSalePartialReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getSalePartialReversedCellText()).contain('Sale (Partial) (Reversed)')
     }
 
     async assetPartialWriteOff() {
@@ -412,16 +440,19 @@ class Helper {
         await devAssetMainPage.setDisposedQuantityValue(5)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isWriteOffPartialCellDisplayed()).true
+        await expect(await devAssetMainPage.getWriteOffPartialCellText()).contain('Write Off (Partial)')
     }
 
     async assetReversePartialWriteOff() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickWriteOffPartialBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isWriteOffPartialReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getWriteOffPartialReversedCellText()).contain('Reversal (Write Off (Partial))')
     }
 
     async taxAddReassessment() {
@@ -434,35 +465,43 @@ class Helper {
         await browser.pause(2000)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isReassessmentCellDisplayed()).true
+        await expect(await devAssetMainPage.getReassessmentCellText()).contain('Reassessment')
     }
 
     async taxReverseReassessment() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickReassessmentTaxBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isReassessmentReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getReassessmentReversedCellText()).contain('Reassessment (Reversed)')
     }
 
     async taxAddTransferToPool() {
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickTransferToPoolBtn()
+        await devAssetMainPage.clickLowValuePoolRadioBtn()
+        await devAssetMainPage.clickSaveSettingsSetupPoolsBtn()
         await devAssetMainPage.selectPoolValue()
         await expect(await devAssetMainPage.isWrittenDownValueDisplayed()).true
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isLowValuePoolLinkDisplayed()).true
+        await expect(await devAssetMainPage.isAddToPoolCellDisplayed()).true
+        await expect(await devAssetMainPage.getAddToPoolCellText()).contain('Add to Pool')
     }
 
     async taxReverseTransferToPool() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickTransferToPoolTax()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isTransferToPoolReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getTransferToPoolReversedCellText()).contain('Transfer to Pool (Reversed)')
     }
 
     async taxAddAdjustment() {
@@ -473,16 +512,19 @@ class Helper {
         await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAdjustmentCellDisplayed()).true
+        await expect(await devAssetMainPage.getAdjustmentCellText()).contain('Adjustment')
     }
 
     async taxReverseAdjustment() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickAdjustmentTaxBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isAdjustmentReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getAdjustmentReversedCellText()).contain('Adjustment (Reversed)')
     }
 
     async taxAddReassessmentTaxableUse() {
@@ -492,16 +534,19 @@ class Helper {
         await devAssetMainPage.setTaxableUsageValueFieldValue(80)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isTaxableUseCellDisplayed()).true
+        await expect(await devAssetMainPage.getTaxableUseCellText()).contain('Taxable Use')
     }
 
     async taxReverseReassessmentTaxableUse() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickTaxableUseBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isTaxableUseReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getTaxableUseReversedCellText()).contain('Taxable Use (Reversed)')
     }
 
     async accountsAddReassessment() {
@@ -514,16 +559,19 @@ class Helper {
         await browser.pause(2000)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isReassessmentCellDisplayed()).true
+        await expect(await devAssetMainPage.getReassessmentCellText()).contain('Reassessment')
     }
 
     async accountsReverseReasessment() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickReassessmentTaxBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isReassessmentReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getReassessmentReversedCellText()).contain('Reassessment (Reversed)')
     }
 
     async accountsAddRevaluation() {
@@ -535,16 +583,19 @@ class Helper {
         await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isRevaluationCellDisplayed()).true
+        await expect(await devAssetMainPage.getRevaluationCellText()).contain('Revaluation')
     }
 
     async accountsReverseRevaluation() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickRevaluationAccountsBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isRevaluationReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getRevaluationReversedCellText()).contain('Revaluation (Reversed)')
     }
 
     async accountsAddImpairment() {
@@ -556,16 +607,19 @@ class Helper {
         await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isImpairmentCellDisplayed()).true
+        await expect(await devAssetMainPage.getImpairmentCellText()).contain('Impairment')
     }
 
     async accountsReverseImpairment() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickImpairmentAccountsBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isImpairmentReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getImpairmentReversedCellText()).contain('Impairment (Reversed)')
     }
 
     async accountsAddAdjustment() {
@@ -577,16 +631,19 @@ class Helper {
         await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
+        await expect(await devAssetMainPage.isAdjustmentCellDisplayed()).true
+        await expect(await devAssetMainPage.getAdjustmentCellText()).contain('Adjustment')
     }
 
     async accountsReverseAdjustment() {
-        await browser.pause(4000)
         await devAssetMainPage.clickReverseDropDown()
         await devAssetMainPage.clickAdjustmentTaxBtn()
         await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
         await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await expect(await devAssetMainPage.isAdjustmentReversedCellDisplayed()).true
+        await expect(await devAssetMainPage.getAdjustmentReversedCellText()).contain('Adjustment (Reversed)')
     }
 
     async addClassification() {

@@ -171,50 +171,71 @@ const openingBalanceDate = '//app-period-selector/select'
 const taxWdv = '//app-form-control[2]//input'
 const accountsWdv = '//app-form-control[3]//input'
 const openingBalanceBtn = '//button[contains(text(), "Opening Balance")]'
-const typeOpeningBalanceCell = '//div[3]/div[2]/div/div/div[3]/div[2]'
-const typeOpeningBalanceReservedCell = '//div[2]/div[3]/div[2]/div/div/div[4]/div[2]'
+const openingBalanceCell = '//*[contains(text(), "Opening Balance") and @col-id="type"]'
+const openingBalanceReservedCell = '//*[contains(text(), "Opening Balance (Reversed)") and @col-id="type"]'
 const actionSellBtn = '//div/app-standard-page-content-grid/div/div[2]/div[2]/div/button[4]'
 const dateOfSale = '//app-date-input/div/input'
 const saleProceeds = '//app-currency-input/div/input'
+const saleCell = '//*[contains(text(), "Sale") and @col-id="type"]'
 const sale = '//button[contains(text(), "Sale")]'
+const reversalSaleCell = '//*[contains(text(), "Reversal (Sale)") and @col-id="type"]'
 const actionWriteOffBtn = '//div[2]/div[2]/div/button[5]'
 const dateOfWriteOff = '//app-date-input/div/input'
+const writeOffCell = '//*[contains(text(), "Write Off") and @col-id="type"]'
 const writenOffBtn = '//button[contains(text(), "Write Off")]'
+const writeOffReversedCell = '//*[contains(text(), "Write Off (Reversed)") and @col-id="type"]'
 const actionSellPartialBtn = '//div/div[2]/div[2]/div/button[6]'
 const disposedQuantity = '[formcontrolname="disposedQuantity"]'
+const salePartialCell = '//*[contains(text(), "Sale (Partial)") and @col-id="type"]'
 const salePartialBtn = '//button[contains(text(), "Sale (Partial)")]'
+const salePartialReversedCell = '//*[contains(text(), "Sale (Partial) (Reversed)") and @col-id="type"]'
 const actionWriteOffPartialBtn = '//div/div[2]/div[2]/div/button[7]'
+const writeOffPartialCell = '//*[contains(text(), "Write Off (Partial)") and @col-id="type"]'
 const writeOffPartialBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button'
+const writeOffPartialReversedCell = '//*[contains(text(), "Reversal (Write Off (Partial))") and @col-id="type"]'
 const assetTaxTabLink = '//div[1]/ul/li[1]/a'
 const assetAddDropDown = '//div[2]/div[2]/div/div/button'
 const reassessmentBtn = '//div[2]/div[2]/div/div/div/button[1]'
 const reassessMethodDropDown = '[formcontrolname="depreciationMethodId"]'
 const effectiveLifeField = '//app-autocalc-life/div/input'
 const effectiveLifeDropDown = '//app-autocalc-life/select'
+const reassessmentCell = '//*[contains(text(), "Reassessment") and @col-id="type"]'
 const reassessmentTaxBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const reassessmentReversedCell = '//*[contains(text(), "Reassessment (Reversed)") and @col-id="type"]'
 const transferToPoolBtn = '//div[2]/div[2]/div/div/div/button[2]'
 const lowValuePoolRadioBtn = '//*[@id="AULVPSBP-AU_LVP"]'
+const saveSettingsSetupPoolsBtn = '//app-transfer-asset-modal/div[3]/button[1]'
 const pool = '[formcontrolname="poolCode"]'
 const writtenDownValue = '//form/div[1]/div[2]/div/div[1]'
+const addToPoolCell = '//*[contains(text(), "Add to Pool") and @col-id="type"]'
 const transferToPoolTaxBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
 const lowValuePoolLink = '//div[1]/div/h4/a'
+const transferToPoolReversedCell = '//*[contains(text(), "Transfer to Pool (Reversed)") and @col-id="type"]'
 const adjustmentBtn = '//div[2]/div[2]/div/div/div/button[3]'
 const notesField = '[formcontrolname="notes"]'
 const costChangeField = '//form/div[1]/app-form-control[2]//input'
 const depreciationChangeField = '//form/div[1]/app-form-control[3]//input'
+const adjustmentCell = '//*[contains(text(), "Adjustment") and @col-id="type"]'
 const adjustmentTaxBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const adjustmentReversedCell = '//*[contains(text(), "Adjustment (Reversed)") and @col-id="type"]'
 const reassessmentOfTaxableUseBtn = '//div[2]/div[2]/div/div/div/button[4]'
+const taxableUseCell = '//*[contains(text(), "Taxable Use") and @col-id="type"]'
 const taxableUseBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
 const taxableUsageValueField = '//app-percentage-input/div/input'
+const taxableUseReversedCell = '//*[contains(text(), "Taxable Use (Reversed)") and @col-id="type"]'
 const assetAccountsTabLink = '//div[1]/ul/li[2]/a'
 const revaluationBtn = '//div[2]/div[2]/div/div/div/button[2]'
 const revaluedAmountField = '//app-currency-input/div/input' 
+const revaluationCell = '//*[contains(text(), "Revaluation") and @col-id="type"]'
 const revaluationAccountsBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const revaluationReversedCell = '//*[contains(text(), "Revaluation (Reversed)") and @col-id="type"]'
 const revalueAssetDate = '//app-period-selector/select'
 const impairmentBtn = '//div[2]/div/div/div/button[3]'
 const impairedValueField = '//app-currency-input/div/input'
 const impairAssetDate = '//app-period-selector/select'
+const impairmentCell = '//*[contains(text(), "Impairment") and @col-id="type"]'
 const impairmentAccountsBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
+const impairmentReversedCell = '//*[contains(text(), "Impairment (Reversed)") and @col-id="type"]'
 const accountsAdjustmentBtn = '//div[2]/div/div/div/button[4]'
 //journal
 const journalLink = '[href*="/journals"]'
@@ -930,12 +951,20 @@ class DevAssetMainpage {
         return await page.click(openingBalanceBtn)
     }
 
-    async isTypeOpeningBalanceCellDisplayed() {
-        return await page.isElementDisplayed(typeOpeningBalanceCell)
+    async isOpeningBalanceCellDisplayed() {
+        return await page.isElementDisplayed(openingBalanceCell)
     }
 
-    async isTypeOpeningBalanceReservedCellDisplayed() {
-        return await page.isElementDisplayed(typeOpeningBalanceReservedCell)
+    async getOpeningBalanceCellText(){
+        return await page.getElementText(openingBalanceCell)
+    }
+
+    async isOpeningBalanceReservedCellDisplayed() {
+        return await page.isElementDisplayed(openingBalanceReservedCell)
+    }
+
+    async getOpeningBalanceReservedCellText(){
+        return await page.getElementText(openingBalanceReservedCell)
     }
 
     async clickActionSellBtn() {
@@ -950,6 +979,22 @@ class DevAssetMainpage {
         return await page.setValue(saleProceeds, saleProceedsValue)
     }
 
+    async isSaleCellDispalyed(){
+        return await page.isElementDisplayed(saleCell)
+    }
+
+    async getSaleCellText(){
+        return await page.getElementText(saleCell)
+    }
+
+    async isReversalSaleCellDisplayed(){
+        return await page.isElementDisplayed(reversalSaleCell)
+    }
+
+    async getReversalSaleCellText(){
+        return await page.getElementText(reversalSaleCell)
+    }
+
     async clickSaleBtn() {
         return await page.click(sale)
     }
@@ -962,8 +1007,24 @@ class DevAssetMainpage {
         return await page.setValue(dateOfWriteOff, dateOfWriteOffValue)
     }
 
+    async isWriteOffCellDisplayed(){
+        return await page.isElementDisplayed(writeOffCell)
+    }
+
+    async getWriteOffCellText(){
+        return await page.getElementText(writeOffCell)
+    }
+
     async clickWritenOffBtn() {
         return await page.click(writenOffBtn)
+    }
+
+    async isWriteOffReversedCellDisplayed(){
+        return await page.isElementDisplayed(writeOffReversedCell)
+    }
+
+    async getWriteOffReversedCellText(){
+        return await page.getElementText(writeOffReversedCell)
     }
 
     async clickActionSellPartialBtn() {
@@ -974,16 +1035,48 @@ class DevAssetMainpage {
         return await page.setValue(disposedQuantity, disposedQuantityValue)
     }
 
+    async isSalePartialCellDisplayed(){
+        return await page.isElementDisplayed(salePartialCell)
+    }
+
+    async getSalePartialCellText(){
+        return await page.getElementText(salePartialCell)
+    }
+
     async clickSalePartialBtn() {
         return await page.click(salePartialBtn)
+    }
+
+    async isSalePartialReversedCellDisplayed(){
+        return await page.isElementDisplayed(salePartialReversedCell)
+    }
+
+    async getSalePartialReversedCellText(){
+        return await page.getElementText(salePartialReversedCell)
     }
 
     async clickActionWriteOffPartialBtn() {
         return await page.click(actionWriteOffPartialBtn)
     }
 
+    async isWriteOffPartialCellDisplayed(){
+        return await page.isElementDisplayed(writeOffPartialCell)
+    }
+
+    async getWriteOffPartialCellText(){
+        return await page.getElementText(writeOffPartialCell)
+    }
+
     async clickWriteOffPartialBtn() {
         return await page.click(writeOffPartialBtn)
+    }
+
+    async isWriteOffPartialReversedCellDisplayed(){
+        return await page.isElementDisplayed(writeOffPartialReversedCell)
+    }
+
+    async getWriteOffPartialReversedCellText(){
+        return await page.getElementText(writeOffPartialReversedCell)
     }
 
     async clickAssetTaxTabLink() {
@@ -1010,8 +1103,24 @@ class DevAssetMainpage {
         return await page.setValue(effectiveLifeField, effectiveLifeFieldValue)
     }
 
+    async isReassessmentCellDisplayed(){
+        return await page.isElementDisplayed(reassessmentCell)
+    }
+
+    async getReassessmentCellText(){
+        return await page.getElementText(reassessmentCell)
+    }
+
     async clickReassessmentTaxBtn(){
         return await page.click(reassessmentTaxBtn)
+    }
+
+    async isReassessmentReversedCellDisplayed(){
+        return await page.isElementDisplayed(reassessmentReversedCell)
+    }
+
+    async getReassessmentReversedCellText(){
+        return await page.getElementText(reassessmentReversedCell)
     }
 
     async clickTransferToPoolBtn(){
@@ -1022,6 +1131,10 @@ class DevAssetMainpage {
         return await page.click(lowValuePoolRadioBtn)
     }
 
+    async clickSaveSettingsSetupPoolsBtn(){
+        return await page.click(saveSettingsSetupPoolsBtn)
+    }
+
     async selectPoolValue(){
         return await page.clickDropdownItemByIndex(pool, 1)
     }
@@ -1030,12 +1143,28 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(writtenDownValue)
     }
 
+    async isAddToPoolCellDisplayed(){
+        return await page.isElementDisplayed(addToPoolCell)
+    }
+
+    async getAddToPoolCellText(){
+        return await page.getElementText(addToPoolCell)
+    }
+
     async clickTransferToPoolTax(){
         return await page.click(transferToPoolTaxBtn)
     }
 
     async isLowValuePoolLinkDisplayed(){
         return await page.isElementDisplayed(lowValuePoolLink)
+    }
+
+    async isTransferToPoolReversedCellDisplayed(){
+        return await page.isElementDisplayed(transferToPoolReversedCell)
+    }
+
+    async getTransferToPoolReversedCellText(){
+        return await page.getElementText(transferToPoolReversedCell)
     }
 
     async clickAdjustmentBtn(){
@@ -1054,12 +1183,36 @@ class DevAssetMainpage {
         return await page.setValue(depreciationChangeField, depreciationChangeFieldValue)
     }
 
+    async isAdjustmentCellDisplayed(){
+        return await page.isElementDisplayed(adjustmentCell)
+    }
+
+    async getAdjustmentCellText(){
+        return await page.getElementText(adjustmentCell)
+    }
+
     async clickAdjustmentTaxBtn(){
         return await page.click(adjustmentTaxBtn)
     }
 
+    async isAdjustmentReversedCellDisplayed(){
+        return await page.isElementDisplayed(adjustmentReversedCell)
+    }
+
+    async getAdjustmentReversedCellText(){
+        return await page.getElementText(adjustmentReversedCell)
+    }
+
     async clickReassessmentOfTaxableUseBtn(){
         return await page.click(reassessmentOfTaxableUseBtn)
+    }
+
+    async isTaxableUseCellDisplayed(){
+        return await page.isElementDisplayed(taxableUseCell)
+    }
+
+    async getTaxableUseCellText(){
+        return await page.getElementText(taxableUseCell)
     }
 
     async clickTaxableUseBtn(){
@@ -1074,6 +1227,14 @@ class DevAssetMainpage {
         return await page.setValue(taxableUsageValueField, taxableUsageValueFieldValue)
     }
 
+    async isTaxableUseReversedCellDisplayed(){
+        return await page.isElementDisplayed(taxableUseReversedCell)
+    }
+
+    async getTaxableUseReversedCellText(){
+        return await page.getElementText(taxableUseReversedCell)
+    }
+
     async clickAssetAccountsTabLink(){
         return await page.click(assetAccountsTabLink)
     }
@@ -1086,8 +1247,24 @@ class DevAssetMainpage {
         return await page.setValue(revaluedAmountField, revaluedAmountFieldValue)
     }
 
+    async isRevaluationCellDisplayed(){
+        return await page.isElementDisplayed(revaluationCell)
+    }
+
+    async getRevaluationCellText(){
+        return await page.getElementText(revaluationCell)
+    }
+
     async clickRevaluationAccountsBtn(){
         return await page.click(revaluationAccountsBtn)
+    }
+
+    async isRevaluationReversedCellDisplayed(){
+        return await page.isElementDisplayed(revaluationReversedCell)
+    }
+
+    async getRevaluationReversedCellText(){
+        return await page.getElementText(revaluationReversedCell)
     }
 
     async selectRevalueAssetDateValue(revalueAssetDateValue){
@@ -1106,8 +1283,24 @@ class DevAssetMainpage {
         return await page.clickDropdownItemByIndex(impairAssetDate, impairAssetDateValue)
     }
 
+    async isImpairmentCellDisplayed(){
+        return await page.isElementDisplayed(impairmentCell)
+    }
+
+    async getImpairmentCellText(){
+        return await page.getElementText(impairmentCell)
+    }
+
     async clickImpairmentAccountsBtn(){
         return await page.click(impairmentAccountsBtn)
+    }
+
+    async isImpairmentReversedCellDisplayed(){
+        return await page.isElementDisplayed(impairmentReversedCell)
+    }
+
+    async getImpairmentReversedCellText(){
+        return await page.getElementText(impairmentReversedCell)
     }
 
     async clickAccountsAdjustmentBtn(){
