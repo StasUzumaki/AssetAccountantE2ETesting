@@ -1,10 +1,9 @@
-const { click } = require('./page')
 const page = require('./page')
 
 const logInBtn = '[data-automationid="LoginSubmit--button"]'
 const emailLogIn = '[data-automationid="Username--input"]'
 const passwordLogIn = '[data-automationid="PassWord--input"]'
-const secondLayerOfSecurityText = '//div/div[1]/h1'
+const secondLayerOfSecurity = '//div/div[1]/h1'
 const notNowBtn = '//div/div[1]/button[2]'
 const allowAccessBtn = '//form/button[1]'
 const assetAccountantDevAccessForm = '/html/body/div/div/div/div[2]/div'
@@ -13,6 +12,18 @@ const approveBtn = '//*[@id="approveButton"]'
 const signUpLink = '[href*="https://www.xero.com/signup/"]'
 
 class XeroLogInPage{
+    async clickNotNowBtn(){
+        return await page.click(notNowBtn)
+    }
+
+    async getSecondLayerOfSecurityText(){
+        return await page.getElementText(secondLayerOfSecurity)
+    }
+
+    async isSecondLayerOfSecurityDisplayed(){
+        return await page.isElementDisplayed(secondLayerOfSecurity)
+    }
+
     async clickSignUpLink(){
         return await page.click(signUpLink)
     }
@@ -47,7 +58,6 @@ class XeroLogInPage{
 
     async setPasswordLogInValue(passwordLogInInput){
         return await page.setValue(passwordLogIn, passwordLogInInput)
-    }
-    
+    }    
 }
 module.exports = new XeroLogInPage()

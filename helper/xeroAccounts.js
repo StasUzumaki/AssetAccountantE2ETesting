@@ -20,6 +20,7 @@ const xeroPass = 'XeroPassword123'
 const phoneXero = Math.random().toString().slice(2, 12)
 
 class XeroAccounts {
+
     async createAccountXero() {
         await xeroSignUp.setFirstNameValue(shortUserName)
         await xeroSignUp.setLastNameValue(shortLastName)
@@ -45,7 +46,12 @@ class XeroAccounts {
         await xeroSignUp.clickNoEmployeesCheckBox()
         await xeroSignUp.setIndustryValue(industryName)
         await xeroSignUp.clickFinancialAssetItem()
-        await browser.pause(1000)
+        // await browser.switchToFrame(0)
+        // $('//*[@id="recaptcha-anchor"]').moveTo({30:60})
+        // await browser.pause(2000)
+        // await xeroSignUp.clickXeroSignUpCaptcha()
+        await browser.pause(15000)
+        //await browser.switchToParentFrame()
         await xeroSignUp.clickStartTrialBtn()
     }
 

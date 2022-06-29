@@ -1,4 +1,3 @@
-const { PageEmailPreviewFromJSON } = require('mailslurp-client')
 const page = require('./page')
 
 const saveBtn = '[type="submit"]'
