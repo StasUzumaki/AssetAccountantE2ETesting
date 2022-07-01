@@ -4,7 +4,7 @@ const googleMailPage = require('../pageobjects/googleMail.page')
 const baseUrl = require('../../data/baseURL')
 const { expect } = require('chai');
 const helper = require('../pageobjects/helper');
-const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator')
+const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
 
 const mainEmail = 'stasdevasset'
 const shortUserName = uniqueNamesGenerator({

@@ -14,7 +14,7 @@ const MailSlurp = require('mailslurp-client').default;
 const apiKey = process.env.API_MAILSLURP;
 const mailslurp = new MailSlurp({ apiKey });
 
-const journalDescr = 'Test Description Movements for 31 May 2022'
+const journalDescr = 'Test Description Movements'
 const shortLastName = uniqueNamesGenerator({
     dictionaries: [colors],
     length: 1
@@ -161,9 +161,9 @@ describe('Map Chart of Accounts to Xero and post a Journal', () => {
         await devAssetMainPage.clickIntegrationsLink()
         await devAssetMainPage.clickXeroDisconnectBtn()
         await expect(await devAssetMainPage.isDisconnectConfirmationFormDisplayed()).true
-        await devAssetMainPage.clickDisconnectConfirmationBtn() 
+        await devAssetMainPage.clickDisconnectConfirmationBtn()
         await expect(await devAssetMainPage.isExternalIntegrationFormDisplayed()).true
-    }); 
+    });
     it('should log out from Xero account', async () => {
         await browser.switchWindow('go.xero.com')
         await xeroAccounts.logoutXeroAccout()

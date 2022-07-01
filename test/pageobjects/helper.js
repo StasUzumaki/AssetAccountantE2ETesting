@@ -65,11 +65,11 @@ const filePathes = {
 class Helper {
 
     async platformLink() {
-        if (process.env.PLATFORM === 'dev') {
-            await browser.url(baseUrl.baseUrlLink)
+        if (process.env.PLATFORM === 'prod') {
+            await browser.url('https://app.asset.accountant')
         }
         else {
-            await browser.url('https://app.asset.accountant')
+            await browser.url(baseUrl.baseUrlLink)
         }
     }
 
@@ -230,6 +230,7 @@ class Helper {
         await expect(await devAssetMainPage.isCreateNewOrganisationFormDisplayed()).true
         await devAssetMainPage.setOrganisationNameField(randomOrgName)
         await devAssetMainPage.setOrganisationDescriptionField('testDescription')
+        await browser.pause(1000)
         await devAssetMainPage.selectCountryValue()
         await devAssetMainPage.setBillingContactNameField(randomOrgName)
         await devAssetMainPage.setBillingContactEmailField(loginData.userEmail)
@@ -878,7 +879,7 @@ class Helper {
         await expect(await devAssetMainPage.isAttachmentsFormDisplayed()).true
         await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`Link added by ${currentUserProfileName}`)
         await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${testNameForLink}`)
-        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${currentTime}`)
+        //await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${currentTime}`)
     }
 
     async addFilesAttachment() {
@@ -895,7 +896,7 @@ class Helper {
         })
         await expect(await devAssetMainPage.isAttachmentsFormDisplayed()).true
         await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`Uploaded by ${currentUserProfileName}`)
-        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${currentTime}`)
+        //await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${currentTime}`)
     }
 
     async deleteAllLinkAttachments() {

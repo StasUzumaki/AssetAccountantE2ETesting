@@ -54,7 +54,6 @@ describe('dev asset page', () => {
     });
     it('should partial write off asset and reverse partial write off', async () => {
         await helper.assetPartialWriteOff()
-        //await browser.pause(1000000)
         await helper.assetReversePartialWriteOff()
     });
     it('should add and reverse reassessment', async () => {

@@ -12,8 +12,8 @@ const randomName = uniqueNamesGenerator({
 });
 
 const registerNameSettings = randomName + '_TestRegister'
-const journalDescr = 'Test Description Movements for 31 May 2022'
-const filePathXlsx = './tempDownloads/2022-06-30 - ' + registerNameSettings + ' - Test Description Movements for 31 May 2022.xlsx'
+const journalDescr = 'Test Description Movements'
+const filePathXlsx = './tempDownloads/2022-07-31 - ' + registerNameSettings + ' - Test Description Movements.xlsx'
 const filePathPdf = './tempDownloads/' + registerNameSettings + ' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
 const filePathCsv = './tempDownloads/' + registerNameSettings + ' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
 
@@ -84,8 +84,6 @@ describe('Pre-Deployment', () => {
         await devAssetMainPage.clickCreateJournalBtn()
         await expect(await devAssetMainPage.isJournalTitleDisplayed()).true
         await expect(await devAssetMainPage.getJournalTitleText()).contain(`${journalDescr}`)
-        await expect(await devAssetMainPage.isAccountTypeCostCellDisplayed()).true
-        await expect(await devAssetMainPage.isAccountTypeClearingSuspenseCellDisplayed()).true
     });
     it('should post journal to Spreadsheet', async () => {
         await devAssetMainPage.clickExportDropDownBtn()

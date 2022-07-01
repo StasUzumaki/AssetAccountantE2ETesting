@@ -5,8 +5,8 @@ const helper = require('../pageobjects/helper');
 const fs = require('fs');
 const readXlsxFile = require('read-excel-file/node')
 
-const journalDescr = 'Test Description Movements for 31 May 2022'
-const filePathXlsx = './tempDownloads/2022-06-30 - Asset testing - Test Description Movements for 31 May 2022.xlsx'
+const journalDescr = 'Test Description Movements'
+const filePathXlsx = './tempDownloads/2022-07-31 - Asset testing - Test Description Movements.xlsx'
 
 describe('create journal', () => {
     before('land to dev asset page and login', async () => {
@@ -49,8 +49,8 @@ describe('create journal', () => {
         await devAssetMainPage.clickCreateJournalBtn()
         await expect(await devAssetMainPage.isJournalTitleDisplayed()).true
         await expect(await devAssetMainPage.getJournalTitleText()).contain(`${journalDescr}`)
-        await expect(await devAssetMainPage.isAccountTypeCostCellDisplayed()).true
-        await expect(await devAssetMainPage.isAccountTypeClearingSuspenseCellDisplayed()).true
+        // await expect(await devAssetMainPage.isAccountTypeCostCellDisplayed()).true
+        // await expect(await devAssetMainPage.isAccountTypeClearingSuspenseCellDisplayed()).true
     });
     it('should post journal to Spreadsheet', async () => {
         await devAssetMainPage.clickExportDropDownBtn()
