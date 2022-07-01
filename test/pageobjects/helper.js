@@ -4,13 +4,15 @@ const intuitSignUpPage = require('../pageobjects/intuitSignUp.page')
 const loginData = require('../../data/loginData')
 const googleMailPage = require('../pageobjects/googleMail.page')
 const googleMailboxData = require('../../data/googleMailboxData')
+const baseUrl = require('../../data/baseURL')
 const fs = require('fs');
 const assert = require('assert');
 const pdfParse = require('pdf-parse');
 const path = require('path');
 const csv = require('fast-csv');
 const { expect } = require('chai')
-const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator')
+const { uniqueNamesGenerator, adjectives, colors, animals, countries, languages, names, starWars } = require('unique-names-generator')
+require('dotenv').config()
 
 function getDateTime() {
     var now = new Date();
@@ -62,12 +64,29 @@ const filePathes = {
 
 class Helper {
 
+    async platformLink() {
+        if (process.env.PLATFORM === 'dev') {
+            await browser.url(baseUrl.baseUrlLink)
+        }
+        else {
+            await browser.url('https://app.asset.accountant')
+        }
+    }
+
     async randomClassificationName() {
         const randomClassName = uniqueNamesGenerator({
             dictionaries: [adjectives, animals, colors],
             length: 2
         });
         return randomClassName;
+    }
+
+    async randomName() {
+        const randomName = uniqueNamesGenerator({
+            dictionaries: [adjectives, animals, colors, countries, languages, names, starWars],
+            length: 1
+        });
+        return randomName;
     }
 
     async loginToGoogleMailBox() {
@@ -152,7 +171,7 @@ class Helper {
         await expect(await authPage.isSignInBtnDisplayed()).true
     }
 
-    async createAssetAccount(){
+    async createAssetAccount() {
         await authPage.clickCreateAccountBtn();
         await authPage.setFisrtNameValue(shortUserName)
         await authPage.setLastNameValue(shortLastName)
