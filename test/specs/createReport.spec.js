@@ -9,7 +9,7 @@ const filePathCsv = './tempDownloads/Asset testing - Asset Summary (Tax) 2021-07
 
 describe('create report', () => {
     before('land to dev asset page and login', async () => {
-        await browser.url(baseUrl.baseUrlLink)
+        await helper.platformLink()
         await helper.loginToAccountCreateAsset()
         await devAssetMainPage.clickFirstRegisterLink()
         //checking existing assets groups and assets

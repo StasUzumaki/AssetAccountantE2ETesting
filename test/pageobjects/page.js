@@ -81,6 +81,10 @@ class Page {
         await (await this.getElement(element)).scrollIntoView();
     }
 
+    async scrollElementIntoViewBottom(element) {
+        await (await this.getElement(element)).scrollIntoView(false);
+    }
+
     async isElementExisting(element) {
         return (await this.getElement(element)).isExisting();
     }

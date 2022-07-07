@@ -6,7 +6,7 @@ const helper = require('../pageobjects/helper');
 
 describe('create a new register', () => {
     before('land to dev asset page and login', async () => {
-        await browser.url(baseUrl.baseUrlLink)
+        await helper.platformLink()
         await helper.loginToAccountRegister()
         await helper.checkingExistingRegisters()
     });

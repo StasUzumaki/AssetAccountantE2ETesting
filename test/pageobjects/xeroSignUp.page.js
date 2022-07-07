@@ -7,7 +7,7 @@ const lastName = '[name="LastName"]'
 const email = '[name="EmailAddress"]'
 const password = '[name="Password"]'
 const phone = '[name="PhoneNumber"]'
-const locationDropDown = '//form/div/div[1]/select'
+const locationDropDown = '[name="LocationCode"]'
 const xeroSignUpCaptcha = '//*[@id="recaptcha-anchor"]'
 const privacyCheckBox = '//div[7]/div/label/span[1]'
 const marketingCommunicationsCheckBox = '//div[9]/div/label/span[1]'
@@ -20,7 +20,7 @@ const businessName = '[data-automationid="organisation-name--input"]'
 const industry = '[data-automationid="industry-autocompleter--input"]'
 const financialAssetItem = '//div[2]/div/div/div/ul/li[1]/button/span'
 const noEmployeesCheckBox = '//*[@id="organisation-do-you-have-employees"]/div/div/div/div[2]/label'
-const startTrialBtn = '//form/div[8]/div/button[1]'
+const startTrialBtn = '//form/div[9]/div/button[1]'
 
 class XeroSignUp{
 
@@ -72,8 +72,12 @@ class XeroSignUp{
         return await page.click(locationDropDown)
     }
 
+    async scrollIntoLocationDropDown(){
+        return await page.scrollElementIntoViewBottom(locationDropDown)
+    }
+
     async selectLocationDropDownValue(){
-        return await page.clickDropdownItemByIndex(locationDropDown, 4)//4
+        return await page.clickDropdownItemByIndex(locationDropDown, 4)
     }
 
     async clickNextConfirmationBtn(){

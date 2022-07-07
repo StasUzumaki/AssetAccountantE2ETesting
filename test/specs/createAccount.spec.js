@@ -15,7 +15,7 @@ const randomOrgName = shortUserName + '_org';
 
 describe('Create account', () => {
     before('land to dev asset page', async () => {
-        await browser.url(baseUrl.baseUrlLink)
+        await helper.platformLink()
     });
     after('logout', async () => {
         await helper.logout()

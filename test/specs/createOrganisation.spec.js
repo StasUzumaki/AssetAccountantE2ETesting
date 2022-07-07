@@ -5,7 +5,7 @@ const baseUrl = require('../../data/baseURL')
 
 describe('create organisation', () => {
     before('land to dev asset page and login', async () => {
-        await browser.url(baseUrl.baseUrlLink)
+        await helper.platformLink()
         await helper.loginToAccount()
     });
     after('logout', async () => {

@@ -1,6 +1,6 @@
 const page = require('./page')
 
-const logInBtn = '[data-automationid="LoginSubmit--button"]'
+const logInBtn = '[value="login"]'
 const emailLogIn = '[data-automationid="Username--input"]'
 const passwordLogIn = '[data-automationid="PassWord--input"]'
 const secondLayerOfSecurity = '//div/div[1]/h1'

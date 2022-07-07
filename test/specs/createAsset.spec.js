@@ -5,7 +5,7 @@ const helper = require('../pageobjects/helper');
 
 describe('dev asset page', () => {
     before('land to dev asset page and login', async () => {
-        await browser.url(baseUrl.baseUrlLink)
+        await helper.platformLink()
         await helper.loginToAccountCreateAsset()
         await devAssetMainPage.clickFirstRegisterLink()
         await helper.checkingExistingGroupsAndAssets()

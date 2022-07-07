@@ -10,7 +10,7 @@ const filePathXlsx = './tempDownloads/2022-07-31 - Asset testing - Test Descript
 
 describe('create journal', () => {
     before('land to dev asset page and login', async () => {
-        await browser.url(baseUrl.baseUrlLink)
+        await helper.platformLink()
         await helper.loginToAccountCreateAsset()
         await devAssetMainPage.clickFirstRegisterLink()
         //checking existing assets groups and assets

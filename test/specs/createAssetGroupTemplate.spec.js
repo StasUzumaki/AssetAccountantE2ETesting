@@ -5,7 +5,7 @@ const baseUrl = require('../../data/baseURL')
 
 describe('dev asset page', () => {
   before('land to dev asset page and login', async () => {
-    await browser.url(baseUrl.baseUrlLink)
+    await helper.platformLink()
     await helper.loginToAccountAssetGroup()
   })
   after('land to current register and delete created asset group', async () => {
@@ -20,7 +20,7 @@ describe('dev asset page', () => {
 
 describe('dev asset page', () => {
   before('land to dev asset page and login', async () => {
-    await browser.url(baseUrl.baseUrlLink)
+    await helper.platformLink()
     await helper.loginToAccountAssetGroup()
   })
   after('land to current register, delete created asset group and logout', async () => {
@@ -32,7 +32,7 @@ describe('dev asset page', () => {
     await helper.createAssetGroupFromTemplate()
   });
   it('should create asset group from template with existing group', async () => {
-    await browser.url(baseUrl.baseUrlLink)
+    await helper.platformLink()
     await devAssetMainPage.clickFirstRegisterLink()
     await devAssetMainPage.clickAssetsAddBtn()
     await devAssetMainPage.clickCreateAssetGroupTemplateBtn()
