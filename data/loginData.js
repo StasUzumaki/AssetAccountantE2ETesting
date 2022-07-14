@@ -13,7 +13,9 @@ const loginData = {
     userEmailAccountUser: 'stasdevasset+accountuser@gmail.com',
     userPasswAccountUser: 'SuperTestAccount',
     userEmailAccountAssetSuperTest: 'stasdevasset+supertestasset@gmail.com',
-    userPasswAccountAssetSuperTest: 'SuperTestAsset'
+    userPasswAccountAssetSuperTest: 'SuperTestAsset',
+    userEmailRoleOwner: 'stasdevasset+roletesting@gmail.com',
+    userPasswRoleOwner: 'devAssetTest'
 }
 
 module.exports = loginData;

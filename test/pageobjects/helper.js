@@ -165,6 +165,16 @@ class Helper {
         await authPage.clickSignInSubmitBtn()
     }
 
+    async loginToRoleTestingAccount(email, passw){
+        await authPage.clickSignInBtn()
+        await authPage.isUserNameLoginFieldDisplayed()
+        await authPage.setUserNameValue(email)
+        await authPage.clickNextBtn()
+        await authPage.isPasswordLoginFieldDisplayed()
+        await authPage.setPasswordSignInValue(passw)
+        await authPage.clickSignInSubmitBtn()
+    }
+
     async logout() {
         await devAssetMainPage.clickUserProfileLink()
         await devAssetMainPage.clickLogoutProfileBtn()

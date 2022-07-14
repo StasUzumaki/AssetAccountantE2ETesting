@@ -25,6 +25,10 @@ const registersLink = '//nav/section[2]/a'
 const organisationSettingsUpgradeBtn = '//app-payment-settings/div[1]/div/button'
 const allRegisters = '[class="dropdown-item text-primary"]'
 const firstRegisterLink = '//table/tbody/tr/td[2]/a'
+const secondRegisterLink = '//table/tbody/tr[2]/td[2]/a'
+const registersTable = '//app-standard-page-content-grid/table'
+const secondDropDownToggle = '//table/tbody/tr[2]/td[4]/div/button'
+const secondAchiveBtn = '//table/tbody/tr[2]/td[4]/div/div/button[3]'
 const dropDownRegisterMenu = '#dropdownBasic1'
 const archiveBtn = '//*[contains(text(), "Archive")]'
 const manageAccessBtn = '//*[contains(text(), "Manage")]'
@@ -39,6 +43,11 @@ const newAssetPurchaseDate = '//app-form-control[6]/div/div[2]/app-date-input/di
 const newAssetQuantity = '[formcontrolname="quantity"]'
 const newAssetQuantityUnitsSelect = '//div/div[2]/div/select'
 //
+const orgDetailsName = '//app-general-settings/form/div/div[2]/div[1]//input'
+const orgDetailsDescription = '[formcontrolname="description"]'
+const billingName = '//form/div/div[2]/div[2]/app-form-control[1]/div/div[2]/input'
+const billingEmail = '//form/div/div[2]/div[2]/app-form-control[2]/div/div[2]/input'
+const billingPhone = '//form/div/div[2]/div[2]/app-form-control[3]/div/div[2]/input'
 const createNewOrganisationForm = '[class="modal-content"]'
 const organisationNameField = '//form/div[1]/app-form-control[1]/div/div[2]/input'
 const organisationDescriptionField = '//form/div[1]/app-form-control[2]/div/div[2]/input'
@@ -115,6 +124,8 @@ const paymentForm = '[class="form-check"]'
 const subscriptionForm = '[class="modal-content"]'
 const toggleForAccountingFirms = '[class="switch"]'
 const closeBtn = '[class="btn-close"]'
+const cancelRegisterBtn = '//form/div[2]/button[1]'
+const cancelArchiveRegisterBtn = '//div[3]/button[1]'
 const standartChangePlanBtn = '//div[3]//div/button'
 const paymentMethodForm = '//ngb-modal-window[2]/div/div'
 const paymentUpgradeSubBtn = '[class="modal-footer"] button'
@@ -339,7 +350,6 @@ const transferClassificationDropDown = '//div/div[2]/div/div[1]/select'
 const firstClassificationUpdatedCell = '//div[3]/div[2]/div/div/div[6]/div[2]'
 const secondClassificationUpdatedCell = '//div[3]/div[2]/div/div/div[7]/div[2]'
 const reverseTransferBtn = '//app-standard-page/app-standard-page-content//div/div[2]/div[1]/div/button[3]'
-
 //integration 
 const quickbooksOnlineDropDown = '//*[@id="static-1-header"]/button'
 const connectToQuickBooksBtn = '//app-quickbooks-connect/div/input'
@@ -1446,6 +1456,10 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(organisationSettingsUpgradeBtn)
     }
 
+    async isChangePlanBtnClickable(){
+        return await page.isElementClickable(organisationSettingsUpgradeBtn)
+    }
+
     async isCurrentAccountPlanDispalyed() {
         return await page.isElementDisplayed(currentAccountPlan)
     }
@@ -1516,6 +1530,14 @@ class DevAssetMainpage {
 
     async clickInviteUserBtn() {
         return await page.click(inviteUserBtn)
+    }
+
+    async isInviteUserBtnDisplayed(){
+        return await page.isElementDisplayed(inviteUserBtn)
+    }
+
+    async isInviteUserBtnClickable(){
+        return await page.isElementClickable(inviteUserBtn)
     }
 
     async isAccountTypeClearingSuspenseCellDisplayed() {
@@ -1766,6 +1788,14 @@ class DevAssetMainpage {
         return await page.click(closeBtn)
     }
 
+    async clickCancelRegisterBtn(){
+        return await page.click(cancelRegisterBtn)
+    }
+
+    async clickCancelArchiveRegisterBtn(){
+        return await page.click(cancelArchiveRegisterBtn)
+    }
+
     async clickOrganisationSettingsUpgradeBtn() {
         return await page.click(organisationSettingsUpgradeBtn)
     }
@@ -1778,8 +1808,20 @@ class DevAssetMainpage {
         return await page.click(subscriptionAndPaymentLink)
     }
 
+    async isSubscriptionAndPaymentLinkClickable(){
+        return await page.isElementClickable(subscriptionAndPaymentLink)
+    }
+
     async clickUsersLink() {
         return await page.click(usersLink)
+    }
+
+    async isUserLinkDisplayed(){
+        return await page.isElementDisplayed(usersLink)
+    }
+
+    async isUserLinkClickable(){
+        return await page.isElementClickable(usersLink)
     }
 
     async clickNewAssetSaveBtn() {
@@ -1910,6 +1952,10 @@ class DevAssetMainpage {
         return await page.click(organisationSettingsLink)
     }
 
+    async isOrganisationSettingsLinkDisplayed(){
+        return await page.isElementDisplayed(organisationSettingsLink)
+    }
+
     async clickAssetsLink() {
         return await page.click(assetsLink)
     }
@@ -1928,6 +1974,14 @@ class DevAssetMainpage {
 
     async clickDropDownRegisterMenu() {
         return await page.click(dropDownRegisterMenu)
+    }
+
+    async clickSecondDropDownToggle(){
+        return await page.click(secondDropDownToggle)
+    }
+
+    async clickSecondAchiveBtn(){
+        return await page.click(secondAchiveBtn)
     }
 
     async clickArchiveBtn() {
@@ -2033,8 +2087,52 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(firstRegisterLink)
     }
 
+    async isRegistersTableDisplayed(){
+        return await page.isElementDisplayed(registersTable)
+    }
+
     async getRegisterNameText() {
         return await page.getElementText(firstRegisterLink)
+    }
+
+    async isOrgDetailsNameDisplayed(){
+        return await page.isElementDisplayed(orgDetailsName)
+    }
+
+    async isOrgDetailsNameClickable(){
+        return await page.isElementClickable(orgDetailsName)
+    }
+
+    async isOrgDetailsDescriptionDisplayed(){
+        return await page.isElementDisplayed(orgDetailsDescription)
+    }
+
+    async isOrgDetailsDescriptionClickable(){
+        return await page.isElementClickable(orgDetailsDescription)
+    }
+
+    async isBillingNameDisplayed(){
+        return await page.isElementDisplayed(billingName)
+    }
+
+    async isBillingNameClickable(){
+        return await page.isElementClickable(billingName)
+    }
+
+    async isBillingEmailDisplayed(){
+        return await page.isElementDisplayed(billingEmail)
+    }
+
+    async isBillingEmailClickable(){
+        return await page.isElementClickable(billingEmail)
+    }
+
+    async isBillingPhoneDisplayed(){
+        return await page.isElementDisplayed(billingPhone)
+    }
+
+    async isBillingPhoneClickable(){
+        return await page.isElementClickable(billingPhone)
     }
 
     async isCreateNewOrganisationFormDisplayed() {
