@@ -13,10 +13,10 @@ const shortUserName = uniqueNamesGenerator({
 const randomCodeNumber = Math.floor(Math.random() * 100);
 const tempGoogleMail = mainEmail + "+" + shortUserName + randomCodeNumber + "@gmail.com";
 
-describe('Feature check for a role "Owner"', () => {
+describe('Feature check for a role "Admin"', () => {
     before("land to dev asset page and login", async () => {
         await helper.platformLink();
-        await helper.loginToRoleTestingAccount(loginData.userEmailRoleOwner, loginData.userPasswRoleOwner);
+        await helper.loginToRoleTestingAccount(loginData.userEmailRoleAdmin, loginData.userPasswRoleAdmin);
     });
     after("logout", async () => {
         await helper.logout();
@@ -33,29 +33,22 @@ describe('Feature check for a role "Owner"', () => {
     it("Organisation settings is available", async () => {
         await devAssetMainPage.isOrganisationSettingsLinkDisplayed();
     });
-    it("Update organisation settings is available", async () => {
+    it("Update organisation settings is unavailable", async () => {
         await devAssetMainPage.isOrganisationSettingsLinkDisplayed();
         await devAssetMainPage.clickOrganisationSettingsLink();
         await expect(await devAssetMainPage.isOrgDetailsNameDisplayed()).true;
-        await expect(await devAssetMainPage.isOrgDetailsNameClickable()).true;
+        await expect(await devAssetMainPage.isOrgDetailsNameClickable()).false;
         await expect(await devAssetMainPage.isOrgDetailsDescriptionDisplayed()).true;
-        await expect(await devAssetMainPage.isOrgDetailsDescriptionClickable()).true;
+        await expect(await devAssetMainPage.isOrgDetailsDescriptionClickable()).false;
         await expect(await devAssetMainPage.isBillingNameDisplayed()).true;
-        await expect(await devAssetMainPage.isBillingNameClickable()).true;
+        await expect(await devAssetMainPage.isBillingNameClickable()).false;
         await expect(await devAssetMainPage.isBillingEmailDisplayed()).true;
-        await expect(await devAssetMainPage.isBillingEmailClickable()).true;
+        await expect(await devAssetMainPage.isBillingEmailClickable()).false;
         await expect(await devAssetMainPage.isBillingPhoneDisplayed()).true;
-        await expect(await devAssetMainPage.isBillingPhoneClickable()).true;
+        await expect(await devAssetMainPage.isBillingPhoneClickable()).false;
     });
-    it("Update subscription is available", async () => {
-        await expect(await devAssetMainPage.isSubscriptionAndPaymentLinkClickable()).true;
-        await devAssetMainPage.clickSubscriptionAndPaymentLink();
-        await expect(await devAssetMainPage.isChangePlanBtnDisplayed()).true;
-        await expect(await devAssetMainPage.isChangePlanBtnClickable()).true;
-        await expect(await devAssetMainPage.isPaymentFormDisplayed()).true;
-        await devAssetMainPage.clickOrganisationSettingsUpgradeBtn();
-        await expect(await devAssetMainPage.isSubscriptionFormDisplayed()).true;
-        await devAssetMainPage.clickCloseBtn();
+    it("Update subscription is unavailable", async () => {
+        await expect(await devAssetMainPage.isSubscriptionAndPaymentLinkClickable()).false;
         await browser.pause(2000);
     });
     it("Create invitation is available", async () => {
@@ -69,7 +62,6 @@ describe('Feature check for a role "Owner"', () => {
         await devAssetMainPage.setEmailInviteFieldValue(tempGoogleMail);
         await devAssetMainPage.clickInviteBtn();
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true;
-        //await expect(await devAssetMainPage.getInvintationAlertText()).contain(`An invitation has been sent to ${tempGoogleMail}`)
     });
     it("Resend invitation from Organisation is avaliable", async () => {
         await expect(await usersPage.isInvitedUserEmailCellDisplayed()).true;
@@ -91,13 +83,13 @@ describe('Feature check for a role "Owner"', () => {
         await expect(await usersPage.isListUsersDisplayed()).true;
     });
     it("Update user organisation role is avaliable", async () => {
-        await expect(await usersPage.isRoleDropDownToggleDisplayed()).true;
-        await expect(await usersPage.isRoleDropDownToggleClickable()).true;
-        await usersPage.clickRoleDropDownToggle();
+        await expect(await usersPage.isRoleDropDownToggleManagerDisplayed()).true;
+        await expect(await usersPage.isRoleDropDownToggleManagerClickable()).true;
+        await usersPage.clickRoleDropDownToggleManager();
     });
     it("Grant user register access is avaliable", async () => {
-        await usersPage.clickAdminMenuDropDown();
-        await usersPage.clickManageAccessBtn();
+        await usersPage.clickManagerMenuDropDown();
+        await usersPage.clickManageAccessManagerBtn();
         await expect(await usersPage.isRegistersTableDisplayed()).true;
         await devAssetMainPage.clickDropDownRegisterMenu();
         await usersPage.clickGrantAccessBtn();
@@ -108,7 +100,7 @@ describe('Feature check for a role "Owner"', () => {
     it("Update user register role is avaliable", async () => {
         await expect(await usersPage.isDemoRegisterRoleDropDownClickable()).true;
         await usersPage.clickDemoRegisterRoleDropDown();
-        await usersPage.clickRegisterManagerRoleBtn();
+        await usersPage.clickRegisterUserRoleBtn();
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true;
         await usersPage.clickAlertInvitationCloseBtn();
     });
@@ -121,22 +113,19 @@ describe('Feature check for a role "Owner"', () => {
     it("Remove user from organisation is avaliable", async () => {
         await usersPage.clickOrganisationSettingsBackLink();
         await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true;
-        await devAssetMainPage.clickUserAccessDropDown();
-        await devAssetMainPage.clickUserAccessOrgRemoveBtn();
+        await usersPage.clickManagerMenuDropDown();
+        await usersPage.clickManagerAccessOrgRemoveBtn();
         await expect(await devAssetMainPage.isDeleteConfirmationFormDisplayed()).true;
         await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true;
         await devAssetMainPage.clickCloseBtn();
     });
-    it("Transfer ownership is avaliable", async () => {
-        await browser.pause(2000)
-        await expect(await usersPage.isRoleDropDownToggleDisplayed()).true;
-        await expect(await usersPage.isRoleDropDownToggleClickable()).true;
-        await usersPage.clickRoleDropDownToggle();
-        await expect(await usersPage.isUserRoleAccountOwnerBtnDisplayed()).true;
-        await expect(await usersPage.isUserRoleAccountOwnerBtnClickable()).true;
-        await usersPage.clickUserRoleAccountOwnerBtn();
-        await expect(await devAssetMainPage.isDeleteConfirmationFormDisplayed()).true;
-        await devAssetMainPage.clickCloseBtn();
+    it("Transfer ownership is unavaliable", async () => {
+        await browser.pause(2000);
+        await expect(await usersPage.isRoleDropDownToggleManagerDisplayed()).true;
+        await expect(await usersPage.isRoleDropDownToggleManagerClickable()).true;
+        await usersPage.clickRoleDropDownToggleManager();
+        await expect(await usersPage.isUserRoleAccountManagerBtnDisplayed()).true;
+        await expect(await usersPage.isUserRoleAccountManagerBtnClickable()).false;
     });
     it("List registers is displayed", async () => {
         await devAssetMainPage.clickRegistersLink();
@@ -155,7 +144,7 @@ describe('Feature check for a role "Owner"', () => {
         await devAssetMainPage.clickCancelRegisterBtn();
     });
     it("Archivate register is avaliable", async () => {
-        await devAssetMainPage.clickDropDownRegisterMenu();
+        await usersPage.clickAdminRegisterDropDownToggle();
         await devAssetMainPage.clickArchiveBtn();
         await devAssetMainPage.clickCancelArchiveRegisterBtn();
     });

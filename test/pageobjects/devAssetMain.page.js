@@ -8,6 +8,7 @@ const assetsAddBtn = '//app-view-asset-actions/div/button'
 const createAssetBtn = '[routerlink="./new"]'
 const createFirstRegisterBtn = '//*[@class="col-6 col-lg-3 demo-action"]/button'
 const createRegisterBtn = '//div/div[2]/div/button[3]'
+const createARegisterBtn = '//app-alert/div/div[2]/button'
 const createNewRegisterForm = '[class="modal-content"]'
 const tableWithRegisters = '//tbody/tr'
 const tableWithAssets = '[class="ag-cell-wrapper ag-row-group-leaf-indent ag-row-group-indent-1"]'
@@ -106,7 +107,7 @@ const userAccessDropDown = '//table//tr[2]//td[4]/div/div/div/button'
 const userAccessRegisterRemoveBtn = '//table//tr[2]//td[4]/div/div/div//div/button'
 const userAccessOrgRemoveBtn = '//table//tr[2]//td[4]/div/div/div//div/button[2]'
 const organisationSettingsLink = '//nav/section[3]/div/a[4]'
-const organisationSettings = '//*[contains(text(), "Organisation Settings")]'
+const organisationSettings = '//nav/section[3]/div/a[4] [contains(text(), " Settings")]'
 const subscriptionAndPaymentLink = '//*[contains(text(), "Subscription") and @class="nav-link"]'
 const usersLink = '//*[contains(text(), "Users") and @class="nav-link"]'
 const inviteUserBtn = '[class="horizontal-wrap align-items-start"] button'
@@ -1371,7 +1372,6 @@ class DevAssetMainpage {
     async clickUserAccessOrgRemoveBtn() {
         return await page.click(userAccessOrgRemoveBtn)
     }
-
     async clickManageAccessBtn() {
         return await page.click(manageAccessBtn)
     }
@@ -1484,8 +1484,12 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(registerSettingsLink)
     }
 
-    async isOrganisationSettingsDisplayed() {
-        return await page.isElementDisplayed(organisationSettings)
+    async isOrganisationSettingsExisting(){
+        return await page.isElementExisting(organisationSettings)
+    }
+        
+    async isOrganisationSettingsClickable() {
+        return await page.isElementClickable(organisationSettings)
     }
 
     async isInvintationAlertDisplayed() {
@@ -1812,6 +1816,10 @@ class DevAssetMainpage {
         return await page.isElementClickable(subscriptionAndPaymentLink)
     }
 
+    async isSubscriptionAndPaymentLinkDisplayed(){
+        return await page.isElementDisplayed(subscriptionAndPaymentLink)
+    }
+
     async clickUsersLink() {
         return await page.click(usersLink)
     }
@@ -1918,6 +1926,10 @@ class DevAssetMainpage {
 
     async clickCreateRegisterBtn() {
         return await page.click(createRegisterBtn)
+    }
+
+    async clickCreateARegisterBtn(){
+        return await page.click(createARegisterBtn)
     }
 
     async clickRegisterSelectionDropDown() {
@@ -2089,6 +2101,10 @@ class DevAssetMainpage {
 
     async isRegistersTableDisplayed(){
         return await page.isElementDisplayed(registersTable)
+    }
+
+    async isRegistersTableExisting(){
+        return await page.isElementExisting(registersTable)
     }
 
     async getRegisterNameText() {
