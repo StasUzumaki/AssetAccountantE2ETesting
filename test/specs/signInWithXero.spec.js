@@ -71,9 +71,11 @@ describe('Sign in with Xero', () => {
         await expect(await xeroSignUpPage.isAddYourBusinessFormDisplayed()).true
         //fill out business form
         await xeroAccounts.filloutBusinessForm('DevAssetAcc', 'Financial Asset Broking Services')
+        await expect(await xeroLogInPage.isLogInBtnDisplayed()).true;
         //login to Xero acc
         await xeroLogInPage.setEmailLogInValue(inbox.emailAddress)
         await xeroLogInPage.setPasswordLogInValue(xeroPass)
+        await expect(await xeroLogInPage.isLogInBtnDisplayed()).true;
         await xeroLogInPage.clickLogInBtn()
         await expect(await xeroLogInPage.isSecondLayerOfSecurityDisplayed()).true
         await expect(await xeroLogInPage.getSecondLayerOfSecurityText()).contain('Add a second layer of security')

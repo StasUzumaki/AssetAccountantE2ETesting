@@ -1487,6 +1487,10 @@ class DevAssetMainpage {
     async isOrganisationSettingsExisting(){
         return await page.isElementExisting(organisationSettings)
     }
+
+    async isOrganisationSettingsDisplayed(){
+        return await page.isElementDisplayed(organisationSettings)
+    }
         
     async isOrganisationSettingsClickable() {
         return await page.isElementClickable(organisationSettings)

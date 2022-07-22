@@ -1,15 +1,12 @@
-const path = require('path')
-const fs = require('fs');
-const rmdir = require('./util/rmdir')
-require('dotenv').config()
+const path = require("path");
+const fs = require("fs");
+const rmdir = require("./util/rmdir");
+require("dotenv").config();
 
-global.downloadDir = path.join(__dirname, 'tempDownloads')
+global.downloadDir = path.join(__dirname, "tempDownloads");
 
 exports.config = {
-
-    specs: [
-        './test/specs/**/*.js'
-    ],
+    specs: ["./test/specs/**/*.js"],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -17,18 +14,26 @@ exports.config = {
 
     maxInstances: 5,
 
-    capabilities: [{
-        maxInstances: 5,
-        browserName: 'chrome',
-        'goog:chromeOptions': {
-            prefs: {
-                'download.default_directory': downloadDir,
+    capabilities: [
+        {
+            maxInstances: 5,
+            browserName: "chrome",
+            "goog:chromeOptions": {
+                prefs: {
+                    "download.default_directory": downloadDir,
+                },
+                args: [
+                    "--headless",
+                    "--start-maximized",
+                    "--no-sandbox",
+                    "--disable-gpu",
+                    "--window-size=1280,800",
+                    "--allow-insecure-localhost",
+                ],
             },
-            args: ['--headless', '--start-maximized', '--no-sandbox', '--disable-gpu', '--window-size=1280,800', '--allow-insecure-localhost']
+            acceptInsecureCerts: true,
         },
-        acceptInsecureCerts: true
-    },
-       /* {
+        /* {
             maxInstances: 1,
             browserName: 'firefox',
             'moz:firefoxOptions': {
@@ -45,11 +50,11 @@ exports.config = {
         }*/
     ],
 
-    logLevel: 'info',
+    logLevel: "info",
 
     bail: 0,
 
-    baseUrl: 'http://localhost',
+    baseUrl: "http://localhost",
 
     waitforTimeout: 20000,
 
@@ -57,19 +62,25 @@ exports.config = {
 
     connectionRetryCount: 3,
 
-    services: [['chromedriver']],
-    
-    framework: 'mocha',
+    services: [["chromedriver"]],
 
-    reporters: [['allure', {
-        outputDir: 'allure-results',
-        disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: false,
-    }], 'spec'],
+    framework: "mocha",
+
+    reporters: [
+        [
+            "allure",
+            {
+                outputDir: "allure-results",
+                disableWebdriverStepsReporting: true,
+                disableWebdriverScreenshotsReporting: false,
+            },
+        ],
+        "spec",
+    ],
 
     mochaOpts: {
-        ui: 'bdd',
-        timeout: 250000
+        ui: "bdd",
+        timeout: 250000,
     },
     //
     // =====
@@ -81,12 +92,12 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-     onPrepare: function (config, capabilities) {
+    onPrepare: function (config, capabilities) {
         if (fs.existsSync(downloadDir)) {
-            rmdir(downloadDir)
+            rmdir(downloadDir);
         }
         if (!fs.existsSync(downloadDir)) {
-            fs.mkdirSync(downloadDir)
+            fs.mkdirSync(downloadDir);
         }
     },
     /**
@@ -168,13 +179,11 @@ exports.config = {
      * @param {Boolean} result.passed    true if test has passed, otherwise false
      * @param {Object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-     afterTest: function
-     (test, context, { error, result, duration, passed, retries }) {
-     if (error) {
-         browser.takeScreenshot();
-     }
- },
-
+    afterTest: function (test, context, { error, result, duration, passed, retries }) {
+        if (error) {
+            browser.takeScreenshot();
+        }
+    },
 
     /**
      * Hook that gets executed after the suite has ended
@@ -216,14 +225,14 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-     onComplete: function (exitCode, config, capabilities, results) {
-        rmdir(downloadDir)
+    onComplete: function (exitCode, config, capabilities, results) {
+        rmdir(downloadDir);
     },
     /**
-    * Gets executed when a refresh happens.
-    * @param {String} oldSessionId session ID of the old session
-    * @param {String} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {String} oldSessionId session ID of the old session
+     * @param {String} newSessionId session ID of the new session
+     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
-}
+};

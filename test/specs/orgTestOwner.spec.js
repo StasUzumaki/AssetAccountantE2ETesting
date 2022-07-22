@@ -69,7 +69,7 @@ describe('Feature check for a role "Owner"', () => {
         await devAssetMainPage.setEmailInviteFieldValue(tempGoogleMail);
         await devAssetMainPage.clickInviteBtn();
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true;
-        //await expect(await devAssetMainPage.getInvintationAlertText()).contain(`An invitation has been sent to ${tempGoogleMail}`)
+        await browser.pause(1000)
     });
     it("Resend invitation from Organisation is avaliable", async () => {
         await expect(await usersPage.isInvitedUserEmailCellDisplayed()).true;
@@ -78,10 +78,12 @@ describe('Feature check for a role "Owner"', () => {
         await usersPage.clickUserAccessResendBtn();
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true;
         await usersPage.clickAlertInvitationCloseBtn();
+        await browser.pause(1000)
     });
     it("Revoke invitation from Organisation is avaliable", async () => {
         await expect(await usersPage.isInvitedUserEmailCellDisplayed()).true;
         await expect(await usersPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMail}`);
+        await browser.pause(1000)
         await usersPage.clickUserAccessDropDown();
         await usersPage.clickUserAccessOrgRemoveBtn();
         await usersPage.clickAlertInvitationCloseBtn();
@@ -94,6 +96,7 @@ describe('Feature check for a role "Owner"', () => {
         await expect(await usersPage.isRoleDropDownToggleDisplayed()).true;
         await expect(await usersPage.isRoleDropDownToggleClickable()).true;
         await usersPage.clickRoleDropDownToggle();
+        await browser.pause(1000)
     });
     it("Grant user register access is avaliable", async () => {
         await usersPage.clickAdminMenuDropDown();
@@ -104,6 +107,7 @@ describe('Feature check for a role "Owner"', () => {
         await expect(await usersPage.isDemoRegisterRoleDropDownDisplayed()).true;
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true;
         await usersPage.clickAlertInvitationCloseBtn();
+        await browser.pause(1000)
     });
     it("Update user register role is avaliable", async () => {
         await expect(await usersPage.isDemoRegisterRoleDropDownClickable()).true;

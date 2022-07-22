@@ -29,7 +29,7 @@ exports.config = {
                 'profile.managed_default_content_settings.javascript': 1
 
             },
-            args: ['--start-maximized', '--disable-extensions', '--disable-gpu']
+            args: ['--start-maximized', "--incognito", '--disable-extensions', '--disable-gpu', "--disable-site-isolation-trials"]
         },
         acceptInsecureCerts: true
     },

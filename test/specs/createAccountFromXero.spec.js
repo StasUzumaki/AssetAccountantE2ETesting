@@ -34,7 +34,7 @@ describe("Create an account from Xero", () => {
     });
     it("should have create and login to Xero account", async () => {
         const inbox = await mailslurp.inboxController.createInbox({});
-        expect(inbox.emailAddress).contain('@mailslurp');
+        expect(inbox.emailAddress).contain("@mailslurp");
         await xeroSignUpPage.clickXeroMainPageSignUpBtn();
         await browser.closeWindow();
         await browser.switchWindow("Sign up for free trial | Xero");
@@ -76,9 +76,11 @@ describe("Create an account from Xero", () => {
         await expect(await xeroSignUpPage.isAddYourBusinessFormDisplayed()).true;
         //fill out business form
         await xeroAccounts.filloutBusinessForm("DevAssetAcc", "Financial Asset Broking Services");
-        //login to Xero acc
+        await expect(await xeroLogInPage.isLogInBtnDisplayed()).true;
+        //login 
         await xeroLogInPage.setEmailLogInValue(inbox.emailAddress);
         await xeroLogInPage.setPasswordLogInValue(xeroPass);
+        await expect(await xeroLogInPage.isLogInBtnDisplayed()).true;
         await xeroLogInPage.clickLogInBtn();
         await expect(await xeroLogInPage.isSecondLayerOfSecurityDisplayed()).true;
         await expect(await xeroLogInPage.getSecondLayerOfSecurityText()).contain("Add a second layer of security");
