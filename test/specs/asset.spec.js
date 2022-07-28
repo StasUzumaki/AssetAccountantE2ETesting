@@ -39,7 +39,7 @@ describe('Asset Super Test', () => {
     //login to existing acc
     it('should login to existing account', async () => {
         await helper.loginToAccountAssetSuperTest()
-        await helper.checkingExistingRegisters()
+        await helper.checkingExistingRegistersSuperTest()
         await devAssetMainPage.clickJournalLink()
         await helper.checkingExistingJournals()
     });
@@ -177,8 +177,8 @@ describe('Asset Super Test', () => {
         await expect(await devAssetMainPage.isChooseTransactionFormDisplayed()).true
         //await devAssetMainPage.clickPurchasesCheckBox()
         await devAssetMainPage.clickPostBtn()
-        //await expect(await devAssetMainPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true
-        //await expect(await devAssetMainPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')
+        await expect(await devAssetMainPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true
+        await expect(await devAssetMainPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')
     });
     it('should wait for Excel file to download', async () => {
         await helper.waitForFileExists(filePathXlsx, 15000)

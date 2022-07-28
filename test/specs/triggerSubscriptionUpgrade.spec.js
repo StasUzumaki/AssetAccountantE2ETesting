@@ -62,7 +62,7 @@ describe('create a new register', () => {
         await devAssetMainPage.clickNewAssetUpgradeBtn()
         await expect(await devAssetMainPage.isSubscriptionFormDisplayed()).true
         await devAssetMainPage.clickToggleForAccountingFirms()
-        await devAssetMainPage.clickStandartChangePlanBtn()
+        await devAssetMainPage.clickStandartPlusLeasesChangePlanBtn()
         await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true
         await expect(await devAssetMainPage.isCardNumberInputDisplayed()).true
         await browser.switchToFrame(1)

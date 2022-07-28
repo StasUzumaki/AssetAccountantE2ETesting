@@ -537,6 +537,7 @@ class Helper {
     async taxAddAdjustment() {
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickAdjustmentBtn()
+        await devAssetMainPage.selectFirstUseDateDropDownValue(1)
         await devAssetMainPage.setCostChangeFieldValue(1000)
         await devAssetMainPage.setDepreciationChangeFieldValue('-300')
         await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
@@ -561,6 +562,7 @@ class Helper {
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickReassessmentOfTaxableUseBtn()
         await expect(await devAssetMainPage.isTaxableUsageValueFieldDisplayed()).true
+        await devAssetMainPage.selectFirstUseDateDropDownValue(1)
         await devAssetMainPage.setTaxableUsageValueFieldValue(80)
         await devAssetMainPage.clickSaveBtn()
         await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true
@@ -584,6 +586,7 @@ class Helper {
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickReassessmentBtn()
         await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
+        await devAssetMainPage.selectFirstUseDateDropDownValue(1)
         await devAssetMainPage.selectReassessMethodDropDownValue(2)
         await devAssetMainPage.setEffectiveLifeFieldValue(10)
         await browser.pause(2000)
@@ -656,6 +659,7 @@ class Helper {
         await devAssetMainPage.clickAssetAccountsTabLink()
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickAccountsAdjustmentBtn()
+        await devAssetMainPage.selectFirstUseDateDropDownValue(1)
         await devAssetMainPage.setCostChangeFieldValue(1000)
         await devAssetMainPage.setDepreciationChangeFieldValue('-300')
         await expect(await devAssetMainPage.isNotesFieldDisplayed()).true
@@ -815,6 +819,27 @@ class Helper {
         await devAssetMainPage.clickDemoRegisterBtn()
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')
+    }
+
+    async checkingExistingRegistersSuperTest() {
+        await expect(await devAssetMainPage.isOrganisationSettingsWithRegistersDisplayed()).true
+        const registerLink = await devAssetMainPage.isRegisterLinkDisplayed()
+        switch (await registerLink) {
+            case true:
+                await console.log("Register list size: " + await devAssetMainPage.getRegistersListSize())
+                const registersCount = await devAssetMainPage.getRegistersListSize()
+                for (let i = 0; i < registersCount; i++) {
+                    await devAssetMainPage.clickDropDownRegisterMenu()
+                    await devAssetMainPage.clickArchiveBtn()
+                    await devAssetMainPage.clickArchiveConfirmationOkBtn()
+                    await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true
+                    await browser.pause(1000)
+                }
+                await browser.refresh()
+            case false:
+                await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
+                await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
+        }
     }
 
     async checkingExistingRegisters() {

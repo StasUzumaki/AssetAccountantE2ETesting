@@ -86,7 +86,7 @@ describe('Account / User', () => {
         await devAssetMainPage.clickOrganisationSettingsUpgradeBtn()
         await expect(await devAssetMainPage.isSubscriptionFormDisplayed()).true
         await devAssetMainPage.clickToggleForAccountingFirms()
-        await devAssetMainPage.clickStandartChangePlanBtn()
+        await devAssetMainPage.clickStandartPlusLeasesChangePlanBtn()
         await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true
         await browser.switchToFrame(5)
         await devAssetMainPage.setCardNumberFieldValue('4242 4242 4242 4242')
@@ -107,7 +107,7 @@ describe('Account / User', () => {
     it('should login to existing account', async () => {
         await browser.url(baseUrl.baseUrlLink)
         await helper.loginToAccountUserSuperTest()
-        await helper.checkingExistingRegisters()
+        await helper.checkingExistingRegistersSuperTest()
     });
     //create a new org
     it('should create a new organisation', async () => {
@@ -383,7 +383,7 @@ describe('Account / User', () => {
         await devAssetMainPage.clickNewAssetUpgradeBtn()
         await expect(await devAssetMainPage.isSubscriptionFormDisplayed()).true
         await devAssetMainPage.clickToggleForAccountingFirms()
-        await devAssetMainPage.clickStandartChangePlanBtn()
+        await devAssetMainPage.clickStandartPlusLeasesChangePlanBtn()
         await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true
         await expect(await devAssetMainPage.isCardNumberInputDisplayed()).true
         await browser.switchToFrame(1)

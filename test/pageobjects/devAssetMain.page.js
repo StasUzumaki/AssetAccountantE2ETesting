@@ -96,6 +96,7 @@ const accountsDepreciationForm = '//div[2]/app-depreciation-method-selector/div[
 const newAssetSaveBtn = '[class="btn btn-primary mb-2 ms-2"]'
 //register settings link
 const registerSettingsLink = '//nav/section[3]/div/a[5]'
+const registerSettingsLinkOnly = '//nav/section[3]/div/a[4]'
 const registerSettingsWithXeroLink = '//nav/section[3]/div/a[6]'
 const integrationsLink = '//form/div/ul/li[4]/a'
 const classificationLink = '//form/div/ul/li[3]/a'
@@ -108,6 +109,7 @@ const userAccessRegisterRemoveBtn = '//table//tr[2]//td[4]/div/div/div//div/butt
 const userAccessOrgRemoveBtn = '//table//tr[2]//td[4]/div/div/div//div/button[2]'
 const organisationSettingsLink = '//nav/section[3]/div/a[4]'
 const organisationSettings = '//nav/section[3]/div/a[4] [contains(text(), " Settings")]'
+const organisationSettingsWithRegisters = '//*[contains(text(), "Organisation Settings")]'
 const subscriptionAndPaymentLink = '//*[contains(text(), "Subscription") and @class="nav-link"]'
 const usersLink = '//*[contains(text(), "Users") and @class="nav-link"]'
 const inviteUserBtn = '[class="horizontal-wrap align-items-start"] button'
@@ -128,6 +130,7 @@ const closeBtn = '[class="btn-close"]'
 const cancelRegisterBtn = '//form/div[2]/button[1]'
 const cancelArchiveRegisterBtn = '//div[3]/button[1]'
 const standartChangePlanBtn = '//div[3]//div/button'
+const standartPlusLeasesChangePlanBtn = '//div[2]/div[2]/div[2]//div/button'
 const paymentMethodForm = '//ngb-modal-window[2]/div/div'
 const paymentUpgradeSubBtn = '[class="modal-footer"] button'
 const currentAccountPlan = '[class="card p-4 border"]'
@@ -223,6 +226,7 @@ const transferToPoolTaxBtn = '//app-standard-page/app-standard-page-content//div
 const lowValuePoolLink = '//div[1]/div/h4/a'
 const transferToPoolReversedCell = '//*[contains(text(), "Transfer to Pool (Reversed)") and @col-id="type"]'
 const adjustmentBtn = '//div[2]/div[2]/div/div/div/button[3]'
+const firstUseDateDropDown = '//div[2]/app-fin-year-selector/select'
 const notesField = '[formcontrolname="notes"]'
 const costChangeField = '//form/div[1]/app-form-control[2]//input'
 const depreciationChangeField = '//form/div[1]/app-form-control[3]//input'
@@ -1181,6 +1185,10 @@ class DevAssetMainpage {
         return await page.click(adjustmentBtn)
     }
 
+    async selectFirstUseDateDropDownValue(firstUseDateDropDownValue){
+        return await page.clickDropdownItemByIndex(firstUseDateDropDown, firstUseDateDropDownValue)
+    }
+
     async isNotesFieldDisplayed(){
         return await page.isElementDisplayed(notesField)
     }
@@ -1476,12 +1484,20 @@ class DevAssetMainpage {
         return await page.click(registerSettingsLink)
     }
 
+    async clickRegisterSettingsLinkOnly(){
+        return await page.click(registerSettingsLinkOnly)
+    }
+
     async clickRegisterSettingsWithXeroLink() {
         return await page.click(registerSettingsWithXeroLink)
     }
 
     async isRegisterSettingsDisplayed() {
         return await page.isElementDisplayed(registerSettingsLink)
+    }
+
+    async isRegisterSettingsLinkOnly(){
+        return await page.isElementDisplayed(registerSettingsLinkOnly)
     }
 
     async isOrganisationSettingsExisting(){
@@ -1494,6 +1510,10 @@ class DevAssetMainpage {
         
     async isOrganisationSettingsClickable() {
         return await page.isElementClickable(organisationSettings)
+    }
+
+    async isOrganisationSettingsWithRegistersDisplayed(){
+        return await page.isElementDisplayed(organisationSettingsWithRegisters)
     }
 
     async isInvintationAlertDisplayed() {
@@ -1788,6 +1808,10 @@ class DevAssetMainpage {
         return await page.click(standartChangePlanBtn)
     }
 
+    async clickStandartPlusLeasesChangePlanBtn(){
+        return await page.click(standartPlusLeasesChangePlanBtn)
+    }
+
     async clickToggleForAccountingFirms() {
         return await page.click(toggleForAccountingFirms)
     }
@@ -2006,6 +2030,10 @@ class DevAssetMainpage {
 
     async clickArchiveConfirmationOkBtn() {
         return await page.click(archiveConfirmationOkBtn)
+    }
+
+    async isArchiveBtnExisting(){
+        return await page.isElementExisting(archiveBtn)
     }
 
     async clickBuidlingsTemtplateAssetForm() {
