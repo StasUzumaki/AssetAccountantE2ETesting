@@ -34,12 +34,13 @@ describe('Pre-Deployment', () => {
         await devAssetMainPage.clickRegisterSelectionDropDown()
         await devAssetMainPage.clickAllRegistersLink()
         await helper.deleteAllRegisters()
+        await browser.pause(1000)
         await helper.logout()
     });
     //login to existing acc
     it('should login to existing account', async () => {
         await helper.loginToAccountAssetSuperTest()
-        await helper.checkingExistingRegisters()
+        await helper.checkingExistingRegistersSuperTest()
         await devAssetMainPage.clickJournalLink()
         await helper.checkingExistingJournals()
     });
@@ -143,5 +144,6 @@ describe('Pre-Deployment', () => {
         // cvs file validation
         await helper.csvValidation(filePathCsv)
         await devAssetMainPage.clickCloseBtn()
+        await devAssetMainPage.clickAssetsLink()
     });
 });

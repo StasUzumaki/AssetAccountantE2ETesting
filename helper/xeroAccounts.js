@@ -26,8 +26,7 @@ class XeroAccounts {
         await xeroSignUp.setLastNameValue(shortLastName)
         await xeroSignUp.setEmailValue(tempGoogleMail)
         await xeroSignUp.setPhoneValue(phoneXero)
-        // await xeroSignUp.clickLocationDropDownSelect()
-        // await xeroSignUp.selectLocationDropDownValue()
+        await xeroSignUp.selectLocationDropDownValue(13)
         await browser.switchToFrame(0)
         $('//*[@id="recaptcha-anchor"]').moveTo({30:60})
         await browser.pause(2000)
@@ -35,7 +34,6 @@ class XeroAccounts {
         await browser.pause(15000)
         await browser.switchToParentFrame()
         await xeroSignUp.clickPrivacyCheckBox()
-        //await xeroSignUp.clickMarketingCommunicationsCheckBox()
         await xeroSignUp.clickNextConfirmationBtn()
         await expect(await xeroSignUp.isConfirmYourEmailMessageDisplayed()).true
         await expect(await xeroSignUp.isConfirmYourEmailTitleDisplayed()).true
