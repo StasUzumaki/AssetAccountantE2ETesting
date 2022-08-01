@@ -8,6 +8,7 @@ const email = '[name="EmailAddress"]'
 const password = '[name="Password"]'
 const phone = '[name="PhoneNumber"]'
 const locationDropDown = '//form/div[2]/div/div[5]/div'
+const activateLocationDropDown = '#LocationCode'
 const xeroSignUpCaptcha = '//*[@id="recaptcha-anchor"]'
 const privacyCheckBox = '//div[7]/div/label/span[1]'
 const marketingCommunicationsCheckBox = '//div[9]/div/label/span[1]'
@@ -80,7 +81,9 @@ class XeroSignUp{
         return await page.clickDropdownItemByIndex(locationDropDown, locationDropDownValue)
     }
 
-    
+    async selectActivateLocationDropDownValue(activateLocationDropDownValue){
+        return await page.clickDropdownItemByIndex(activateLocationDropDown, activateLocationDropDownValue)
+    }
 
     async clickNextConfirmationBtn(){
         return await page.click(nextConfirmationBtn)

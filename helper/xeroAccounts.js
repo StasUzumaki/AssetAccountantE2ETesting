@@ -26,7 +26,7 @@ class XeroAccounts {
         await xeroSignUp.setLastNameValue(shortLastName)
         await xeroSignUp.setEmailValue(tempGoogleMail)
         await xeroSignUp.setPhoneValue(phoneXero)
-        await xeroSignUp.selectLocationDropDownValue(13)
+        await xeroSignUp.selectLocationDropDownValue(12)
         await browser.switchToFrame(0)
         $('//*[@id="recaptcha-anchor"]').moveTo({30:60})
         await browser.pause(2000)

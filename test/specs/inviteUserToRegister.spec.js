@@ -4,7 +4,7 @@ const helper = require('../pageobjects/helper');
 const { expect } = require('chai');
 const baseUrl = require('../../data/baseURL')
 const googleMailPage = require('../pageobjects/googleMail.page')
-const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
+const { uniqueNamesGenerator, adjectives, colors, animals, names, starWars } = require('unique-names-generator');
 
 const mainEmail = 'stasdevasset'
 const shortUserName = uniqueNamesGenerator({
@@ -12,7 +12,7 @@ const shortUserName = uniqueNamesGenerator({
     length: 1
 });
 const shortLastName = uniqueNamesGenerator({
-    dictionaries: [colors],
+    dictionaries: [colors, names, starWars],
     length: 1
 });
 const randomCodeNumber = Math.floor(Math.random() * 100);

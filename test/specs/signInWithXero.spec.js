@@ -42,7 +42,7 @@ describe("Sign in with Xero", () => {
         await googleMailPage.clickXeroConfirmMail();
         await googleMailPage.clickXeroVerifyLink();
         await googleMailPage.clickBackBtn();
-        await expect(await googleMailPage.isSelectVerifyMessageCheckBoxClickable()).true;
+        //await expect(await googleMailPage.isSelectVerifyMessageCheckBoxClickable()).true;
         await browser.pause(1000);
         await googleMailPage.clickSelectVerifyMessageCheckBox();
         await googleMailPage.clickDeleteVerifyMessageBtn();
@@ -55,7 +55,7 @@ describe("Sign in with Xero", () => {
         //activate Xero account
         await browser.switchWindow("Activate Account | Xero Accounting");
         await xeroSignUpPage.setPasswordValue(xeroPass);
-        await xeroSignUpPage.selectLocationDropDownValue();
+        await xeroSignUpPage.selectActivateLocationDropDownValue(4);
         await xeroSignUpPage.clickSubmitBtn();
         await expect(await xeroSignUpPage.isAddYourBusinessFormDisplayed()).true;
         //fill out business form

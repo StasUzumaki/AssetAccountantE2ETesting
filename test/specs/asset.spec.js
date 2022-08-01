@@ -13,7 +13,7 @@ const randomName = uniqueNamesGenerator({
 
 const registerNameSettings = randomName + '_TestRegister'
 const journalDescr = 'Test Description Movements'
-const filePathXlsx = './tempDownloads/2022-07-31 - '+ registerNameSettings +' - Test Description Movements.xlsx'
+const filePathXlsx = './tempDownloads/2022-08-31 - '+ registerNameSettings +' - Test Description Movements.xlsx'
 const filePathPdf = './tempDownloads/'+ registerNameSettings +' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
 const filePathCsv = './tempDownloads/'+ registerNameSettings +' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
 
@@ -198,15 +198,21 @@ describe('Asset Super Test', () => {
         await devAssetMainPage.clickCurrentFyBtn()
         await devAssetMainPage.clickReportsBtn()
         await expect(await devAssetMainPage.isReportFormDisplayed()).true
+        await expect(await devAssetMainPage.isReportTypeDropDownClickable()).true
+        await browser.pause(2000)
         await devAssetMainPage.selectReportTypeDropDownValue()
-        await devAssetMainPage.setReportStartDateValue('01/07/2021')
-        await devAssetMainPage.setReportEndDateValue('30/06/2022')
+        await expect(await devAssetMainPage.isReportStartDateMonthDisplayed()).true
+        await devAssetMainPage.selectReportStartDateMonthValue(6)
+        await devAssetMainPage.setReportStartDateValue('2021')
+        await expect(await devAssetMainPage.isReportEndDateMonthDisplayed()).true
+        await devAssetMainPage.selectReportEndDateMonthValue(5)
+        await devAssetMainPage.setReportEndDateValue('2022')
         await devAssetMainPage.selectReportFormatDropDown(0)
         await devAssetMainPage.clickGenerateReportBtn()
         await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
     });
     it('should wait for PDF file to download', async () => {
-        await helper.waitForFileExists(filePathPdf, 15000)
+        await helper.waitForFileExists(filePathPdf, 25000)
         expect(fs.existsSync(filePathPdf)).to.be.true;
     });
     it('should validate PDF file', async () => {
@@ -215,15 +221,20 @@ describe('Asset Super Test', () => {
     });
     it('should create CSV report', async () => {
         await expect(await devAssetMainPage.isReportFormDisplayed()).true
+        await expect(await devAssetMainPage.isReportTypeDropDownClickable()).true
         await devAssetMainPage.selectReportTypeDropDownValue()
-        await devAssetMainPage.setReportStartDateValue('01/07/2021')
-        await devAssetMainPage.setReportEndDateValue('30/06/2022')
+        await expect(await devAssetMainPage.isReportStartDateMonthDisplayed()).true
+        await devAssetMainPage.selectReportStartDateMonthValue(6)
+        await devAssetMainPage.setReportStartDateValue('2021')
+        await expect(await devAssetMainPage.isReportEndDateMonthDisplayed()).true
+        await devAssetMainPage.selectReportEndDateMonthValue(5)
+        await devAssetMainPage.setReportEndDateValue('2022')
         await devAssetMainPage.selectReportFormatDropDown(1)
         await devAssetMainPage.clickGenerateReportBtn()
         await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
     });
     it('should wait for CSV file to download', async () => {
-        await helper.waitForFileExists(filePathCsv, 15000)
+        await helper.waitForFileExists(filePathCsv, 25000)
         expect(fs.existsSync(filePathCsv)).to.be.true;
     });
     it('should validate CSV file', async () => {

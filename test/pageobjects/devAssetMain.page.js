@@ -285,6 +285,8 @@ const reportForm = '//ng-component/form'
 const reportTypeDropDown = '[formcontrolname="reportType"]'
 const reportFormatDropDown = '[formcontrolname="format"]'
 const generateReportBtn = '//form/div[3]/button[2]'
+const reportStartDateMonth = '(//div/div[1]/select)[1]'
+const reportEndDateMonth = '(//div/div[1]/select)[2]'
 const reportStartDate = '//app-form-control[3]//input'
 const reportEndDate = '//app-form-control[4]//input'
 //lease
@@ -852,6 +854,10 @@ class DevAssetMainpage {
         return await page.isElementDisplayed(periodsForm)
     }
 
+    async isReportTypeDropDownClickable(){
+        return await page.isElementClickable(reportTypeDropDown)
+    }
+
     async selectReportTypeDropDownValue() {
         return await page.clickDropdownItemByIndex(reportTypeDropDown, 2)
     }
@@ -866,6 +872,22 @@ class DevAssetMainpage {
 
     async isGenerateReportBtnClikable() {
         return await (await page.getElement(generateReportBtn)).waitForClickable()
+    }
+
+    async isReportStartDateMonthDisplayed(){
+        return await page.isElementDisplayed(reportStartDateMonth)
+    }
+
+    async isReportEndDateMonthDisplayed(){
+        return await page.isElementDisplayed(reportEndDateMonth)
+    }
+
+    async selectReportStartDateMonthValue(reportStartDateMonthValue){
+        return await page.clickDropdownItemByIndex(reportStartDateMonth, reportStartDateMonthValue)
+    }
+
+    async selectReportEndDateMonthValue(reportEndDateMonthValue){
+        return await page.clickDropdownItemByIndex(reportEndDateMonth, reportEndDateMonthValue)
     }
 
     async setReportStartDateValue(reportStartDateInput) {

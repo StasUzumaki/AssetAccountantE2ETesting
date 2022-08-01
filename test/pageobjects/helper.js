@@ -332,7 +332,7 @@ class Helper {
     }
 
     async createAsset() {
-        const randomCodeNumber = Math.floor(Math.random() * 1000);
+        const randomCodeNumber = Math.floor(Math.random() * 10000);
         await devAssetMainPage.clickCreateAssetBtn()
         await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;
         await devAssetMainPage.setNewAssetNameValue(randomAssetName + randomCodeNumber)
@@ -486,6 +486,7 @@ class Helper {
     }
 
     async taxAddReassessment() {
+        await browser.pause(2000)
         await devAssetMainPage.clickAssetTaxTabLink()
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickReassessmentBtn()

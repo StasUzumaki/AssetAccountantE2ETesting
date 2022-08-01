@@ -35,7 +35,7 @@ describe('Create an account from Xero', () => {
         await googleMailPage.clickXeroConfirmMail()
         await googleMailPage.clickXeroVerifyLink()
         await googleMailPage.clickBackBtn()
-        await expect(await googleMailPage.isSelectVerifyMessageCheckBoxClickable()).true
+        //await expect(await googleMailPage.isSelectVerifyMessageCheckBoxClickable()).true
         await browser.pause(1000)
         await googleMailPage.clickSelectVerifyMessageCheckBox()
         await googleMailPage.clickDeleteVerifyMessageBtn()
@@ -47,7 +47,7 @@ describe('Create an account from Xero', () => {
     it('should have activate Xero account', async () => {
         await browser.switchWindow('Activate Account | Xero Accounting')
         await xeroSignUpPage.setPasswordValue(xeroPass)
-        //await xeroSignUpPage.selectLocationDropDownValue()
+        await xeroSignUpPage.selectActivateLocationDropDownValue(4);
         await xeroSignUpPage.clickSubmitBtn()
         await expect(await xeroSignUpPage.isAddYourBusinessFormDisplayed()).true
     });
