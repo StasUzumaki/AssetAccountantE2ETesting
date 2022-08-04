@@ -122,8 +122,8 @@ describe('Pre-Deployment', () => {
         await devAssetMainPage.selectReportEndDateMonthValue(5)
         await devAssetMainPage.setReportEndDateValue('2022')
         await devAssetMainPage.selectReportFormatDropDown(0)
-        await devAssetMainPage.clickGenerateReportBtn()
         await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
+        await devAssetMainPage.clickGenerateReportBtn()
     });
     it('should wait for PDF file to download', async () => {
         await helper.waitForFileExists(filePathPdf, 25000)
@@ -144,8 +144,8 @@ describe('Pre-Deployment', () => {
         await devAssetMainPage.selectReportEndDateMonthValue(5)
         await devAssetMainPage.setReportEndDateValue('2022')
         await devAssetMainPage.selectReportFormatDropDown(1)
-        await devAssetMainPage.clickGenerateReportBtn()
         await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
+        await devAssetMainPage.clickGenerateReportBtn()
     });
     it('should wait for CSV file to download', async () => {
         await helper.waitForFileExists(filePathCsv, 25000)

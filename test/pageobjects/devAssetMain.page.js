@@ -211,6 +211,10 @@ const assetTaxTabLink = '//div[1]/ul/li[1]/a'
 const assetAddDropDown = '//div[2]/div[2]/div/div/button'
 const reassessmentBtn = '//div[2]/div[2]/div/div/div/button[1]'
 const reassessMethodDropDown = '[formcontrolname="depreciationMethodId"]'
+const taxDepreciationMethod = '//app-depreciation-method-selector/div[1]/app-form-control[1]/div/div[2]/div[1]/select'
+const accountsDepreciationMethod = '//app-depreciation-method-selector/div[2]/app-form-control[1]/div/div[2]/div/select'
+const taxEffectiveLifeField = '(//div/div[2]/app-autocalc-life/div/input)[1]'
+const accountsEffectiveLifeField = '(//div/div[2]/app-autocalc-life/div/input)[2]'
 const effectiveLifeField = '//app-autocalc-life/div/input'
 const effectiveLifeDropDown = '//app-autocalc-life/select'
 const reassessmentCell = '//*[contains(text(), "Reassessment") and @col-id="type"]'
@@ -252,6 +256,10 @@ const impairmentCell = '//*[contains(text(), "Impairment") and @col-id="type"]'
 const impairmentAccountsBtn = '//app-standard-page/app-standard-page-content//div[2]/div[1]/div/button[1]'
 const impairmentReversedCell = '//*[contains(text(), "Impairment (Reversed)") and @col-id="type"]'
 const accountsAdjustmentBtn = '//div[2]/div/div/div/button[4]'
+const locationLabel = '//div[2]/div/label'
+const locationTitle = '//div[2]/div/div/h4'
+const serialNumberLabel = '//div[4]/div/label'
+const serialNumberTitle = '//div[4]/div/h4'
 //journal
 const journalLink = '[href*="/journals"]'
 const createBtn = '//app-standard-page-content/div//div/div[2]/button'
@@ -494,6 +502,22 @@ class DevAssetMainpage {
 
     async clickGeneralLedgerEditBtn() {
         return await page.click(generalLedgerEditBtn)
+    }
+
+    async selectTaxDepreciationValue(taxDepreciationMethodValue){
+        return await page.clickDropdownItemByIndex(taxDepreciationMethod, taxDepreciationMethodValue)
+    }
+
+    async selectAccountsDepreciationValue(accountsDepreciationMethodValue){
+        return await page.clickDropdownItemByIndex(accountsDepreciationMethod, accountsDepreciationMethodValue)
+    }
+
+    async setTaxEffectiveLifeFieldvalue(taxEffectiveLifeFieldValue){
+        return await page.setValue(taxEffectiveLifeField, taxEffectiveLifeFieldValue)
+    }
+
+    async setAccountsEffectiveLifeFieldValue(accountsEffectiveLifeFieldValue){
+        return await page.setValue(accountsEffectiveLifeField, accountsEffectiveLifeFieldValue)
     }
     //
     async isXeroAlertMessageDisplayed() {
@@ -1345,6 +1369,22 @@ class DevAssetMainpage {
 
     async clickAccountsAdjustmentBtn(){
         return await page.click(accountsAdjustmentBtn)
+    }
+
+    async getLocationTitleText(){
+        return await page.getElementText(locationTitle)
+    }
+
+    async isLocationLabelDisplayed(){
+        return await page.isElementDisplayed(locationLabel)
+    }
+
+    async isSerialNumberLabelDisplayed(){
+        return await page.isElementDisplayed(serialNumberLabel)
+    }
+
+    async getSerialNumberTitleText(){
+        return await page.getElementText(serialNumberTitle)
     }
     //
     async isRegisterInvitePanelDispalayed() {

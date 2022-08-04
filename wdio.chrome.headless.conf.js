@@ -21,6 +21,11 @@ exports.config = {
             "goog:chromeOptions": {
                 prefs: {
                     "download.default_directory": downloadDir,
+                    "download.prompt_for_download": false,
+                    "download.directory_upgrade": true,
+                    "safebrowsing.enabled": false,
+                    "safebrowsing.disable_download_protection": true,
+                    "profile.cookie_controls_mode": 0,
                 },
                 args: [
                     "--headless",
