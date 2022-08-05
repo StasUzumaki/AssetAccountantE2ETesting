@@ -16,9 +16,14 @@ const containsRevaluedAssetsNoBtn = '[for="containsRevaluedAssets-no"]'
 const differentPurchaseNoBtn = '[for="differentPurchase-no"]'
 const assetNameLabel = '//app-form-control[1]/div/div[1]/app-form-label'
 const quantityUnitsField = '[formcontrolname="quantityUnits"]'
+const assetNameSelect = '[formcontrolname="name"]'
+const codeSelect = '[formcontrolname="code"]'
+const descriptionSelect = '[formcontrolname="description"]'
 const assetGroupSelect = '(//*[@formcontrolname="assetGroupId"])[1]'
 const costSelect = '[formcontrolname="cost"]'
 const methodSelect = '[formcontrolname="method"]'
+const purchaseDateSelect = '[formcontrolname="purchase"]'
+const firstUseDate = '[formcontrolname="firstUse"]'
 const depreciationMethodSelect = '[formcontrolname="depreciationMethodId"]'
 const alertMassage = '[class="alert-message"]'
 const locationSelect = '(//div/div[2]/div/select)[1]'
@@ -39,15 +44,26 @@ const importCompleteStatus = '[class="badge bg-success rounded-pill text-white"]
 const importUnprocessedStatus = '[class="badge bg-warning rounded-pill text-white"]'
 const deleteBtn = '//table/tbody/tr/td[6]/div/div/div/div/button[3]'
 const assetImport = '//table/tbody/tr[1]'
+const assetImportLink = '//table/tbody/tr[1]/td[1]/a'
 const upgradeSubscriptionBtn = '//app-add-payment-method-modal/form/div[2]/button'
+const classificationTitle = '//form/div[1]/div/h5'
 
 class ImportsPage{
+
+    async isClassificationTitleDisplayed(){
+        return await page.isElementDisplayed(classificationTitle)
+    }
+
     async clickUpgradeSubscriptionBtn(){
         return await page.click(upgradeSubscriptionBtn)
     }
 
     async isAssetImportDisplayed(){
         return await page.isElementDisplayed(assetImport)
+    }
+
+    async clickAssetImportLink(){
+        return await page.click(assetImportLink)
     }
 
     async isAssetImportExisting(){
@@ -154,8 +170,20 @@ class ImportsPage{
         return await page.isElementDisplayed(methodSelect)
     }
 
+    async selectPurchaseDateValue(purchaseDateSelectValue){
+        return await page.clickDropdownItemByIndex(purchaseDateSelect, purchaseDateSelectValue)
+    }
+
+    async selectFirstUseDateValue(firstUseDatevalue){
+        return await page.clickDropdownItemByIndex(firstUseDate, firstUseDatevalue)
+    }
+
     async isCostSelectDisplayed(){
         return await page.isElementDisplayed(costSelect)
+    }
+    
+    async selectCostValue(costSelectValue){
+        return await page.clickDropdownItemByIndex(costSelect, costSelectValue)
     }
 
     async isAssetGroupSelectDisplayed(){
@@ -164,6 +192,18 @@ class ImportsPage{
 
     async isQuantityUnitsFieldDisplayed(){
         return await page.isElementDisplayed(quantityUnitsField)
+    }
+
+    async selectAssetNameValue(assetNameSelectValue){
+        return await page.clickDropdownItemByIndex(assetNameSelect, assetNameSelectValue)
+    }
+
+    async selectCodeValue(codeSelectValue){
+        return await page.clickDropdownItemByIndex(codeSelect, codeSelectValue)
+    }
+
+    async selectDescriptionValue(descriptionSelectValue){
+        return await page.clickDropdownItemByIndex(descriptionSelect, descriptionSelectValue)
     }
 
     async clickBulkActionLink(){

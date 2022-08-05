@@ -163,6 +163,7 @@ const selfAssessedCheckBox = '#asset-setting-1'
 const firstGroupLink = '//ng-component/div/div/div/a'
 const firstAssetLink = '//*/div/div[2]/div[2]/div[3]/div[1]/div[2]/div/span/span[4]/ng-component/div/div[1]/a'//'//ng-component/div/div[1]/a'
 const firstGroupListAssetsDropDown = '//*[@id="ngb-nav-21-panel"]/app-assets-grid//div[3]/div[1]/div[1]/div/span/span[2]'
+const firstGroupAssetsQuantity = '//div[1]/div/span/span[4]//span'
 const subscriptionLimitAlert = '[class="alert-message"]'
 const newAssetUpgradeBtn = '//app-alert/div/div[2]/button'
 const assetDetailsLink = '[ngbnavitem="details"] a'
@@ -1660,6 +1661,14 @@ class DevAssetMainpage {
 
     async isFirstAssetLinkDisplayed() {
         return await page.isElementDisplayed(firstAssetLink)
+    }
+
+    async getFirstGroupAssetsQuantityText(){
+        return await page.getElementText(firstGroupAssetsQuantity)
+    }
+
+    async isFirstGroupAssetsQuantityDisplayed(){
+        return await page.isElementDisplayed(firstGroupAssetsQuantity)
     }
 
     async setJournalDescriptionFieldValue(journalDescriptionInput) {
