@@ -192,7 +192,6 @@ describe('Account / User', () => {
         await browser.switchToWindow(handles[1])
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
         await expect(await devAssetMainPage.isFirstRegisterLinkDisplayed()).true
-        //await expect(await devAssetMainPage.getRegisterNameText()).contain('InviteUsers_Register')
         await helper.logout()
     });
     it('should login to master account, remove user from Register', async () => {
