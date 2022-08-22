@@ -58,8 +58,8 @@ const billingContactEmailField = '//form/div[1]/div/app-form-control[2]/div/div[
 const billingContactPhoneField = '//form/div[1]/div/app-form-control[3]/div/div[2]/input'
 const newOrganisationSaveBtn = '//div[@class="modal-footer"]/button[2]'
 const organisationNamesList = '//nav/section[2]/div/div'
-const demoRegisterLink = '[class="link ng-star-inserted"]'
-const settingsHeader = '[class="page-heading ng-star-inserted"] h3'
+const demoRegisterLink = '//app-header-bar//div[1]/div/span[1]'
+const settingsHeader = 'span[class="link ng-star-inserted"]'
 const settingsHeaderWithExistingReg = '[class="page-heading"] h3'
 const assetsLink = '[href*="/assets"]'
 const firstThingsFirstAlertMessage = '[class="alert-message"]'
@@ -232,6 +232,7 @@ const lowValuePoolLink = '//div[1]/div/h4/a'
 const transferToPoolReversedCell = '//*[contains(text(), "Transfer to Pool (Reversed)") and @col-id="type"]'
 const adjustmentBtn = '//div[2]/div[2]/div/div/div/button[3]'
 const firstUseDateDropDown = '//div[2]/app-fin-year-selector/select'
+const dateReassessmentDropDown = '//app-form-control/div/div[2]/app-period-selector/select'
 const notesField = '[formcontrolname="notes"]'
 const costChangeField = '//form/div[1]/app-form-control[2]//input'
 const depreciationChangeField = '//form/div[1]/app-form-control[3]//input'
@@ -278,6 +279,8 @@ const loadingImage = '[role="status"]'
 const postToXeroBtn = '//div/div[2]/button[2]'
 const chooseTransactionForm = '//div/div[2]/app-post-journal'
 const postBtn = '//app-post-journal/form/div/button[1]'
+const postedJournalCheckBox = '#recordSubmission'
+const postedCheckBoxEnable = '[class="ng-untouched ng-pristine ng-valid"]'
 const depreciationCheckBox = '//*[@id="include-depreciation"]'
 const purchasesCheckBox = '//*[@id="include-purchases"]'
 const successfulllyPostedToXeroAlert = '[class="alert-message"]'
@@ -782,6 +785,10 @@ class DevAssetMainpage {
         return await (await page.getElement(firstRegisterLink)).isDisplayed()
     }
 
+    async isPostedCheckBoxEnableDisplayed(){
+        return await (await page.getElement(postedCheckBoxEnable)).isDisplayed()
+    }
+
     async isAssetColumnHeaderDisplayed() {
         return await page.isElementDisplayed(assetColumnHeader)
     }
@@ -1234,6 +1241,10 @@ class DevAssetMainpage {
 
     async selectFirstUseDateDropDownValue(firstUseDateDropDownValue){
         return await page.clickDropdownItemByIndex(firstUseDateDropDown, firstUseDateDropDownValue)
+    }
+
+    async selectDateReassessmentDropDown(dateReassessmentDropDownValue){
+        return await page.clickDropdownItemByIndex(dateReassessmentDropDown, dateReassessmentDropDownValue)
     }
 
     async isNotesFieldDisplayed(){
@@ -1739,6 +1750,14 @@ class DevAssetMainpage {
         return await page.click(postBtn)
     }
 
+    async clickPostedJournalCheckBox(){
+        return await page.click(postedJournalCheckBox)
+    }
+
+    async isPostedJournalCheckBoxDisplayed(){
+        return await page.isElementDisplayed(postedJournalCheckBox)
+    }
+
     async isChooseTransactionFormDisplayed() {
         return await page.isElementDisplayed(chooseTransactionForm)
     }
@@ -1937,6 +1956,10 @@ class DevAssetMainpage {
 
     async clickCreateFirstRegisterBtn() {
         return await page.click(createFirstRegisterBtn)
+    }
+
+    async isCreateFirstRegisterBtnDisplayed(){
+        return await page.isElementDisplayed(createFirstRegisterBtn)
     }
 
     async clickUserProfileLink() {
