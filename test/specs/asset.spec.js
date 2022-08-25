@@ -19,7 +19,7 @@ const filePathCsv = './tempDownloads/'+ registerNameSettings +' - Asset Summary 
 
 describe('Asset Super Test', () => {
     before('land to dev asset page', async () => {
-        await helper.platformLink()
+        await browser.url(baseUrl.baseUrlLink)
     });
     after('logout', async () => {
         // //deleting journal

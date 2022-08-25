@@ -28,7 +28,7 @@ const randomOrgName = shortUserName + '_org';
 
 describe('Account / User', () => {
     before('land to dev asset page', async () => {
-        await helper.platformLink()
+        await browser.url(baseUrl.baseUrlLink)
     });
     after('logout', async () => {
         await devAssetMainPage.clickRegisterSelectionDropDown()
@@ -196,7 +196,7 @@ describe('Account / User', () => {
         await helper.logout()
     });
     it('should login to master account, remove user from Register', async () => {
-        await helper.platformLink()
+        await browser.url(baseUrl.baseUrlLink)
         await helper.loginToAccountUserSuperTest()
         await expect(await devAssetMainPage.isFirstRegisterLinkDisplayed()).true
         await devAssetMainPage.clickDropDownRegisterMenu()
@@ -224,7 +224,7 @@ describe('Account / User', () => {
         await helper.logout()
     });
     it('should login as removed user and validate that this is unsuccessful(should see "Create New Organisation" title)', async () => {
-        await helper.platformLink()
+        await browser.url(baseUrl.baseUrlLink)
         await authPage.clickSignInBtn()
         await authPage.isUserNameLoginFieldDisplayed()
         await authPage.setUserNameValue(tempGoogleMail)
@@ -238,7 +238,7 @@ describe('Account / User', () => {
 
     //invite user to register
     it('should login to existing account', async () => {
-        await helper.platformLink()
+        await browser.url(baseUrl.baseUrlLink)
         await helper.loginToAccountUserSuperTest()
     });
     //invite user to register
@@ -312,7 +312,7 @@ describe('Account / User', () => {
         await helper.logout()
     });
     it('should login to master account, remove user from Register', async () => {
-        await helper.platformLink()
+        await browser.url(baseUrl.baseUrlLink)
         await helper.loginToAccountUserSuperTest()
         await expect(await devAssetMainPage.isFirstRegisterLinkDisplayed()).true
         await devAssetMainPage.clickDropDownRegisterMenu()
@@ -327,7 +327,7 @@ describe('Account / User', () => {
         await helper.logout()
     });
     it('should login as removed user and see "You are now part of the organisation "org_name” but do not have access to any registers" alert)', async () => {
-        await helper.platformLink()
+        await browser.url(baseUrl.baseUrlLink)
         await authPage.clickSignInBtn()
         await authPage.isUserNameLoginFieldDisplayed()
         await authPage.setUserNameValue(tempGoogleMailReg)
