@@ -66,11 +66,13 @@ describe('Account / User', () => {
         await browser.pause(1000)
         await authPage.selectCountryDropDownValue(0)
         await authPage.clickCreateOrganizationBtn();
+        await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true;
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
     });
     //change sub
     it('should create a new register', async () => {
+        await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true;
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
         await devAssetMainPage.clickCreateFirstRegisterBtn()
@@ -105,7 +107,7 @@ describe('Account / User', () => {
     });
     //login to existing acc
     it('should login to existing account', async () => {
-        await browser.url(baseUrl.baseUrlLink)
+        await helper.platformLink()
         await helper.loginToAccountUserSuperTest()
         await helper.checkingExistingRegistersSuperTest()
     });

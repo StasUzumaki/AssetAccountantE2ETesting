@@ -196,8 +196,9 @@ class Helper {
         await browser.pause(2000)
         await devAssetMainPage.clickNextRegisterBtn()
         await devAssetMainPage.clickTryForFreeBtn()
+        await expect(await devAssetMainPage.isUserLinkDisplayed()).true;
         await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true
-        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${registerNameSettings} › Settings`)
+        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${registerNameSettings}`)
         await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
         await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
     }
@@ -211,8 +212,9 @@ class Helper {
         await browser.pause(2000)
         await devAssetMainPage.clickNextRegisterBtn()
         await devAssetMainPage.clickTryForFreeBtn()
+        await expect(await devAssetMainPage.isUserLinkDisplayed()).true;
         await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true
-        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${registerNameSettings} › Settings`)
+        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${registerNameSettings}`)
         await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
         await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
     }
@@ -241,8 +243,7 @@ class Helper {
         await devAssetMainPage.setBillingContactEmailField(loginData.userEmail)
         await devAssetMainPage.setBillingContactPhoneField('8888888888')
         await devAssetMainPage.clickNewOrganisationSaveBtn()
-        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true
-        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${randomOrgName}`)
+        await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')
     }
@@ -582,7 +583,7 @@ class Helper {
         await devAssetMainPage.clickAssetAddDropDown()
         await devAssetMainPage.clickReassessmentBtn()
         await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
-        await devAssetMainPage.selectFirstUseDateDropDownValue(1)
+        await devAssetMainPage.selectDateReassessmentDropDown(1)
         await devAssetMainPage.selectReassessMethodDropDownValue(2)
         await devAssetMainPage.setEffectiveLifeFieldValue(10)
         await browser.pause(2000)
@@ -813,6 +814,7 @@ class Helper {
             await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true
         }
         await devAssetMainPage.clickDemoRegisterBtn()
+        await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true;
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')
     }
@@ -833,6 +835,7 @@ class Helper {
                 }
                 await browser.refresh()
             case false:
+                await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true;
                 await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
                 await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
         }
@@ -854,6 +857,7 @@ class Helper {
                 }
                 await browser.refresh()
             case false:
+                await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true;
                 await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
                 await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register');
         }

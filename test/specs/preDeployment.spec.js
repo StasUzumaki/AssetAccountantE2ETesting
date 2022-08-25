@@ -91,6 +91,7 @@ describe('Pre-Deployment', () => {
         await devAssetMainPage.clickExportDropDownBtn()
         await devAssetMainPage.clickExportAsExcelBtn()
         await expect(await devAssetMainPage.isChooseTransactionFormDisplayed()).true
+        await devAssetMainPage.clickPostedJournalCheckBox();
         await devAssetMainPage.clickPostBtn()
         await expect(await devAssetMainPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true
         await expect(await devAssetMainPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')
