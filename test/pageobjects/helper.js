@@ -65,12 +65,7 @@ const filePathes = {
 class Helper {
 
     async platformLink() {
-        if (process.env.PLATFORM === 'prod') {
-            await browser.url('https://app.asset.accountant')
-        }
-        else {
-            await browser.url(baseUrl.baseUrlLink)
-        }
+        await browser.url(baseUrl.baseUrlLink)
     }
 
     async randomClassificationName() {
