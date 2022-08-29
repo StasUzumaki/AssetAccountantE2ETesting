@@ -18,7 +18,8 @@ exports.config = {
     maxInstances: 5,
 
     capabilities: [
-        {
+        
+       {
             maxInstances: 1,
             browserName: "chrome",
             "goog:chromeOptions": {
@@ -34,8 +35,9 @@ exports.config = {
                 args: ["--start-maximized", "--incognito", "--disable-extensions", "--disable-gpu", "--disable-site-isolation-trials"],
             },
             acceptInsecureCerts: true,
-        },
-        /* {
+        }, /*
+        
+         {
              maxInstances: 1,
              browserName: 'firefox',
              'moz:firefoxOptions': {
@@ -47,7 +49,13 @@ exports.config = {
              maxInstances: 1,
              browserName: "MicrosoftEdge",
              'ms:edgeOptions': {
-                 args: ['--start-maximized']
+                prefs: {
+                    "download.default_directory": downloadDir,
+                    "download.prompt_for_download": false,
+                    "download.directory_upgrade": true,
+                    "safebrowsing.enabled": false
+                },
+                 args: ['--start-maximized', "--disable-extensions", "--disable-gpu", "--disable-site-isolation-trials"]
              }
          }*/
     ],

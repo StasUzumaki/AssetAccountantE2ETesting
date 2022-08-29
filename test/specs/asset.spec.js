@@ -19,7 +19,7 @@ const filePathCsv = './tempDownloads/'+ registerNameSettings +' - Asset Summary 
 
 describe('Asset Super Test', () => {
     before('land to dev asset page', async () => {
-        await browser.url(baseUrl.baseUrlLink)
+        await helper.platformLink()
     });
     after('logout', async () => {
         // //deleting journal
@@ -175,6 +175,7 @@ describe('Asset Super Test', () => {
         await devAssetMainPage.clickExportDropDownBtn()
         await devAssetMainPage.clickExportAsExcelBtn()
         await expect(await devAssetMainPage.isChooseTransactionFormDisplayed()).true
+        //await helper.checkingPostedJournalCheckBox()\
         await devAssetMainPage.clickPostedJournalCheckBox();
         await devAssetMainPage.clickPostBtn()
         await expect(await devAssetMainPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true

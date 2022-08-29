@@ -6,7 +6,7 @@ const fs = require('fs');
 const readXlsxFile = require('read-excel-file/node')
 
 const journalDescr = 'Test Description Movements'
-const filePathXlsx = './tempDownloads/2022-07-31 - Asset testing - Test Description Movements.xlsx'
+const filePathXlsx = './tempDownloads/2022-08-31 - Asset testing - Test Description Movements.xlsx'
 
 describe('create journal', () => {
     before('land to dev asset page and login', async () => {
@@ -56,7 +56,7 @@ describe('create journal', () => {
         await devAssetMainPage.clickExportDropDownBtn()
         await devAssetMainPage.clickExportAsExcelBtn()
         await expect(await devAssetMainPage.isChooseTransactionFormDisplayed()).true
-        //await devAssetMainPage.clickPurchasesCheckBox()
+        await helper.checkingPostedJournalCheckBox()
         await devAssetMainPage.clickPostBtn()
         await expect(await devAssetMainPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true
         await expect(await devAssetMainPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')

@@ -1243,6 +1243,10 @@ class DevAssetMainpage {
         return await page.clickDropdownItemByIndex(firstUseDateDropDown, firstUseDateDropDownValue)
     }
 
+    async selectDateReassessmentDropDown(dateReassessmentDropDownValue){
+        return await page.clickDropdownItemByIndex(dateReassessmentDropDown, dateReassessmentDropDownValue)
+    }
+
     async isNotesFieldDisplayed(){
         return await page.isElementDisplayed(notesField)
     }
@@ -1961,7 +1965,7 @@ class DevAssetMainpage {
     async isCreateFirstRegisterBtnDisplayed(){
         return await page.isElementDisplayed(createFirstRegisterBtn)
     }
-    
+
     async clickUserProfileLink() {
         return await page.click(userProfileLink)
     }
