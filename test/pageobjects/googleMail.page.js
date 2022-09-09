@@ -1,7 +1,7 @@
-const Page = require('./page')
+const page = require('./page')
 
 const emailField = '#identifierId'
-const nextBtn = '[class="FliLIb DL0QTb"]'
+const nextBtn = '(//*[@class="VfPpkd-vQzf8d"])[2]' //'//span/section/div/div/div[4]/div[1]/div/div/button'
 const passwordField = '[type="password"]'
 const VerifyMessage = '//div[@class="Cp"]//tbody/tr[1]' 
 const inviteMessage = '//span[1][contains(text(), "You have been invited to ")]'
@@ -19,75 +19,75 @@ const xeroVerifyLink = '//center/table/tbody/tr[2]/td/p[3]/a'
 class GoogleMailPage {
 
     async clickXeroVerifyLink(){
-        return await Page.click(xeroVerifyLink)
+        return await page.click(xeroVerifyLink)
     }
 
     async clickXeroConfirmMail(){
-        return await Page.click(xeroConfirmMail)
+        return await page.click(xeroConfirmMail)
     }
 
     async isSelectVerifyMessageCheckBoxClickable(){
-        return await Page.isElementClickable(selectVerifyMessageCheckBox)
+        return await page.isElementClickable(selectVerifyMessageCheckBox)
     }
 
     async clickVerifyEmailIntuitLink(){
-        return await Page.click(verifyEmailIntuitLink)
+        return await page.click(verifyEmailIntuitLink)
     }
 
     async clickBackBtn(){
-        return await Page.click(backBtn)
+        return await page.click(backBtn)
     }
     
     async clickCloseAlertMessageBtn(){
-        return await Page.click(closeAlertMessageBtn)
+        return await page.click(closeAlertMessageBtn)
     }
 
     async isAlertMessageDisplayed(){
-        return await Page.isElementDisplayed(alertMessage)
+        return await page.isElementDisplayed(alertMessage)
     }
 
     async clickSelectVerifyMessageCheckBox(){
-        return await Page.click(selectVerifyMessageCheckBox)
+        return await page.click(selectVerifyMessageCheckBox)
     }
 
     async clickDeleteVerifyMessageBtn(){
-        return await Page.click(deleteVerifyMessageBtn)
+        return await page.click(deleteVerifyMessageBtn)
     }
 
     async clickInviteMessage(){
-        return await Page.click(inviteMessage)
+        return await page.click(inviteMessage)
     }
 
     async clickAcceptInvitationLinkLink(){
-        return await Page.click(acceptInvitationLink)
+        return await page.click(acceptInvitationLink)
     }
 
     async setEmailFieldValue(emailFieldInput){
-        return await Page.setValue(emailField, emailFieldInput)
+        return await page.setValue(emailField, emailFieldInput)
     }
 
     async setPasswordFieldValue(passwordFieldInput){
-        return await Page.setValue(passwordField, passwordFieldInput)
+        return await page.setValue(passwordField, passwordFieldInput)
     }
 
     async clickNextBtn(){
-        return await Page.click(nextBtn)
+        return await page.click(nextBtn)
     }
 
     async clickVerifyMessage(){
-        return await Page.click(VerifyMessage)
+        return await page.click(VerifyMessage)
     }
 
     async clickVerifyLink(){
-        return await Page.click(VerifyLink)
+        return await page.click(VerifyLink)
     }
 
     async isVerifyLinkDisplayed(){
-        return await Page.isElementDisplayed(VerifyLink)
+        return await page.isElementDisplayed(VerifyLink)
     }
 
     async scrollIntoVerifyLink(){
-        return await Page.scrollElementIntoViewTop(VerifyLink)
+        return await page.scrollElementIntoViewTop(VerifyLink)
     }
 }
  module.exports = new GoogleMailPage()

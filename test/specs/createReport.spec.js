@@ -2,7 +2,9 @@ const devAssetMainPage = require('../pageobjects/devAssetMain.page');
 const { expect } = require('chai');
 const baseUrl = require('../../data/baseURL');
 const helper = require('../pageobjects/helper');
+const dashboardPage = require('../pageobjects/dashboard.page')
 const fs = require('fs');
+const assetsPage = require('../pageobjects/assets.page');
 
 const filePathPdf = './tempDownloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
 const filePathCsv = './tempDownloads/Asset testing - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
@@ -11,7 +13,7 @@ describe('create report', () => {
     before('land to dev asset page and login', async () => {
         await helper.platformLink()
         await helper.loginToAccountCreateAsset()
-        await devAssetMainPage.clickFirstRegisterLink()
+        await dashboardPage.clickFirstRegisterLink()
         //checking existing assets groups and assets
         await helper.checkingExistingGroupsAndAssets()
         //checking existing journals
@@ -32,24 +34,24 @@ describe('create report', () => {
     });
     it('should create asset', async () => {
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
-        await devAssetMainPage.clickAssetsAddBtn()
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true
+        await assetsPage.clickAssetsAddBtn()
         await helper.createAsset()
     });
     it('should create PDF report', async () => {
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
-        await devAssetMainPage.clickCalendarBtn()
-        await expect(await devAssetMainPage.isPeriodsFormDisplayed()).true
-        await devAssetMainPage.clickCurrentFyBtn()
-        await devAssetMainPage.clickReportsBtn()
-        await expect(await devAssetMainPage.isReportFormDisplayed()).true
-        await devAssetMainPage.selectReportTypeDropDownValue()
-        await devAssetMainPage.setReportStartDateValue('01/07/2021')
-        await devAssetMainPage.setReportEndDateValue('30/06/2022')
-        await devAssetMainPage.selectReportFormatDropDown(0)
-        await devAssetMainPage.clickGenerateReportBtn()
-        await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true
+        await assetsPage.clickCalendarBtn()
+        await expect(await assetsPage.isPeriodsFormDisplayed()).true
+        await assetsPage.clickCurrentFyBtn()
+        await assetsPage.clickReportsBtn()
+        await expect(await assetsPage.isReportFormDisplayed()).true
+        await assetsPage.selectReportTypeDropDownValue()
+        await assetsPage.setReportStartDateValue('2021')
+        await assetsPage.setReportEndDateValue('2022')
+        await assetsPage.selectReportFormatDropDown(0)
+        await assetsPage.clickGenerateReportBtn()
+        await expect(await assetsPage.isGenerateReportBtnClikable()).true
     });
     it('should wait for PDF file to download', async () => {
         await helper.waitForFileExists(filePathPdf, 15000)
@@ -62,13 +64,13 @@ describe('create report', () => {
         await helper.pdfValidation(filePathPdf)
     });
     it('should create CSV report', async () => {
-        await expect(await devAssetMainPage.isReportFormDisplayed()).true
-        await devAssetMainPage.selectReportTypeDropDownValue()
-        await devAssetMainPage.setReportStartDateValue('01/07/2021')
-        await devAssetMainPage.setReportEndDateValue('30/06/2022')
-        await devAssetMainPage.selectReportFormatDropDown(1)
-        await devAssetMainPage.clickGenerateReportBtn()
-        await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
+        await expect(await assetsPage.isReportFormDisplayed()).true
+        await assetsPage.selectReportTypeDropDownValue()
+        await assetsPage.setReportStartDateValue('2021')
+        await assetsPage.setReportEndDateValue('2022')
+        await assetsPage.selectReportFormatDropDown(1)
+        await assetsPage.clickGenerateReportBtn()
+        await expect(await assetsPage.isGenerateReportBtnClikable()).true
     });
     it('should wait for CSV file to download', async () => {
         await helper.waitForFileExists(filePathCsv, 15000)

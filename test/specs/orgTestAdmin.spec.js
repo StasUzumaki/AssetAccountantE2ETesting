@@ -4,6 +4,11 @@ const { expect, use } = require("chai");
 const helper = require("../pageobjects/helper");
 const loginData = require("../../data/loginData");
 const { uniqueNamesGenerator, adjectives, colors, animals } = require("unique-names-generator");
+const dashboardPage = require("../pageobjects/dashboard.page");
+const organisationSettingsPage = require("../pageobjects/organisationSettings.page");
+const organisationSettingsUsersPage = require("../pageobjects/organisationSettingsUsers.page");
+const assetsPage = require("../pageobjects/assets.page");
+const assetPage = require("../pageobjects/asset.page");
 
 const mainEmail = "stasdevasset";
 const shortUserName = uniqueNamesGenerator({
@@ -22,9 +27,9 @@ describe('Feature check for a role "Admin"', () => {
         await helper.logout();
     });
     it("Organisation creation function is available", async () => {
-        await devAssetMainPage.clickFirstRegisterLink();
-        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+        await dashboardPage.clickFirstRegisterLink();
+        await expect(await assetsPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
         await devAssetMainPage.clickCreateOrganisationSelectionDropDown();
         await devAssetMainPage.clickCreateNewOrganisationLink();
         await expect(await devAssetMainPage.isCreateNewOrganisationFormDisplayed()).true;
@@ -36,28 +41,28 @@ describe('Feature check for a role "Admin"', () => {
     it("Update organisation settings is unavailable", async () => {
         await devAssetMainPage.isOrganisationSettingsLinkDisplayed();
         await devAssetMainPage.clickOrganisationSettingsLink();
-        await expect(await devAssetMainPage.isOrgDetailsNameDisplayed()).true;
-        await expect(await devAssetMainPage.isOrgDetailsNameClickable()).false;
-        await expect(await devAssetMainPage.isOrgDetailsDescriptionDisplayed()).true;
-        await expect(await devAssetMainPage.isOrgDetailsDescriptionClickable()).false;
-        await expect(await devAssetMainPage.isBillingNameDisplayed()).true;
-        await expect(await devAssetMainPage.isBillingNameClickable()).false;
-        await expect(await devAssetMainPage.isBillingEmailDisplayed()).true;
-        await expect(await devAssetMainPage.isBillingEmailClickable()).false;
-        await expect(await devAssetMainPage.isBillingPhoneDisplayed()).true;
-        await expect(await devAssetMainPage.isBillingPhoneClickable()).false;
+        await expect(await organisationSettingsPage.isOrgDetailsNameDisplayed()).true;
+        await expect(await organisationSettingsPage.isOrgDetailsNameClickable()).false;
+        await expect(await organisationSettingsPage.isOrgDetailsDescriptionDisplayed()).true;
+        await expect(await organisationSettingsPage.isOrgDetailsDescriptionClickable()).false;
+        await expect(await organisationSettingsPage.isBillingNameDisplayed()).true;
+        await expect(await organisationSettingsPage.isBillingNameClickable()).false;
+        await expect(await organisationSettingsPage.isBillingEmailDisplayed()).true;
+        await expect(await organisationSettingsPage.isBillingEmailClickable()).false;
+        await expect(await organisationSettingsPage.isBillingPhoneDisplayed()).true;
+        await expect(await organisationSettingsPage.isBillingPhoneClickable()).false;
     });
     it("Update subscription is unavailable", async () => {
-        await expect(await devAssetMainPage.isSubscriptionAndPaymentLinkClickable()).false;
+        await expect(await organisationSettingsUsersPage.isSubscriptionAndPaymentLinkClickable()).false;
         await browser.pause(2000);
     });
     it("Create invitation is available", async () => {
-        await expect(await devAssetMainPage.isUserLinkDisplayed()).true;
-        await expect(await devAssetMainPage.isUserLinkClickable()).true;
-        await devAssetMainPage.clickUsersLink();
-        await expect(await devAssetMainPage.isInviteUserBtnDisplayed()).true;
-        await expect(await devAssetMainPage.isInviteUserBtnClickable()).true;
-        await devAssetMainPage.clickInviteUserBtn();
+        await expect(await organisationSettingsPage.isUserLinkDisplayed()).true;
+        await expect(await organisationSettingsPage.isUserLinkClickable()).true;
+        await organisationSettingsPage.clickUsersLink();
+        await expect(await organisationSettingsUsersPage.isInviteUserBtnDisplayed()).true;
+        await expect(await organisationSettingsUsersPage.isInviteUserBtnClickable()).true;
+        await organisationSettingsUsersPage.clickInviteUserBtn();
         await expect(await devAssetMainPage.isInviteUserFormDisplayed()).true;
         await devAssetMainPage.setEmailInviteFieldValue(tempGoogleMail);
         await devAssetMainPage.clickInviteBtn();
@@ -95,7 +100,7 @@ describe('Feature check for a role "Admin"', () => {
         await usersPage.clickManagerMenuDropDown();
         await usersPage.clickManageAccessManagerBtn();
         await expect(await usersPage.isRegistersTableDisplayed()).true;
-        await devAssetMainPage.clickDropDownRegisterMenu();
+        await dashboardPage.clickDropDownRegisterMenu();
         await usersPage.clickGrantAccessBtn();
         await expect(await usersPage.isDemoRegisterRoleDropDownDisplayed()).true;
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true;
@@ -110,17 +115,17 @@ describe('Feature check for a role "Admin"', () => {
         await usersPage.clickAlertInvitationCloseBtn();
     });
     it("Remove access for register is avaliable", async () => {
-        await devAssetMainPage.clickDropDownRegisterMenu();
+        await dashboardPage.clickDropDownRegisterMenu();
         await usersPage.clickRemoveAccessBtn();
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true;
         await usersPage.clickAlertInvitationCloseBtn();
     });
     it("Remove user from organisation is avaliable", async () => {
         await usersPage.clickOrganisationSettingsBackLink();
-        await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true;
+        await expect(await organisationSettingsUsersPage.isInvitedUserEmailCellDisplayed()).true;
         await usersPage.clickManagerMenuDropDown();
         await usersPage.clickManagerAccessOrgRemoveBtn();
-        await expect(await devAssetMainPage.isDeleteConfirmationFormDisplayed()).true;
+        await expect(await assetPage.isDeleteConfirmationFormDisplayed()).true;
         await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true;
         await devAssetMainPage.clickCloseBtn();
     });
@@ -134,15 +139,14 @@ describe('Feature check for a role "Admin"', () => {
     });
     it("List registers is displayed", async () => {
         await devAssetMainPage.clickRegistersLink();
-        await expect(await devAssetMainPage.isRegistersTableDisplayed()).true;
+        await expect(await dashboardPage.isRegistersTableDisplayed()).true;
     });
     it("Create register is displayed", async () => {
-        await devAssetMainPage.clickCreateRegisterBtn();
+        await dashboardPage.clickCreateRegisterBtn();
         await devAssetMainPage.setRegisterNameValue("Test name for register");
         await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true;
         await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
         await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
-        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true;
         await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
         await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
         await browser.pause(2000);
@@ -150,7 +154,7 @@ describe('Feature check for a role "Admin"', () => {
     });
     it("Archivate register is avaliable", async () => {
         await usersPage.clickAdminRegisterDropDownToggle();
-        await devAssetMainPage.clickArchiveBtn();
-        await devAssetMainPage.clickCancelArchiveRegisterBtn();
+        await dashboardPage.clickArchiveBtn();
+        await dashboardPage.clickCancelArchiveRegisterBtn();
     });
 });

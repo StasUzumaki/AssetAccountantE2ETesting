@@ -1,7 +1,9 @@
 const devAssetMainPage = require('../pageobjects/devAssetMain.page')
 const helper = require('../pageobjects/helper')
 const { expect } = require('chai')
-const baseUrl = require('../../data/baseURL')
+const dashboardPage = require('../pageobjects/dashboard.page')
+const assetsPage = require('../pageobjects/assets.page')
+const assetGroups = require('../pageobjects/assetGroups.page')
 
 describe('dev asset page', () => {
   before('land to dev asset page and login', async () => {
@@ -13,7 +15,7 @@ describe('dev asset page', () => {
     await helper.logout()
   })
   it('should create asset group from template if no groups have been created', async () => {
-    await devAssetMainPage.clickFirstRegisterLink()
+    await dashboardPage.clickFirstRegisterLink()
     await helper.createAssetGroupFromTemplate()
   });
 });
@@ -28,20 +30,20 @@ describe('dev asset page', () => {
     await helper.logout()
   })
   it('should create asset group from template if no groups have been created', async () => {
-    await devAssetMainPage.clickFirstRegisterLink()
+    await dashboardPage.clickFirstRegisterLink()
     await helper.createAssetGroupFromTemplate()
   });
   it('should create asset group from template with existing group', async () => {
     await helper.platformLink()
-    await devAssetMainPage.clickFirstRegisterLink()
-    await devAssetMainPage.clickAssetsAddBtn()
-    await devAssetMainPage.clickCreateAssetGroupTemplateBtn()
-    await expect(await devAssetMainPage.isNewAssetGroupFromTemplateTitleDisplayed()).true
-    await expect(await devAssetMainPage.getNewAssetGroupFromTemplateTitleText()).contain(`New Asset Group from Template`)
-    await expect(await devAssetMainPage.isAssetsGroupFromTemplateFormsDisplayed()).true
-    await devAssetMainPage.clickCapitalWorksTemtplateCheckBox()
-    await devAssetMainPage.clickTemplateSaveBtn()
-    await expect(await devAssetMainPage.isSuccessfullySavedAlertMessageDisplayed()).true
-    await expect(await devAssetMainPage.getSuccessfullySavedAlertMessageText()).contain(`Saved 1 asset groups successfully`)
+    await dashboardPage.clickFirstRegisterLink()
+    await assetsPage.clickAssetsAddBtn()
+    await assetsPage.clickCreateAssetGroupTemplateBtn()
+    await expect(await assetGroups.isNewAssetGroupFromTemplateTitleDisplayed()).true
+    await expect(await assetGroups.getNewAssetGroupFromTemplateTitleText()).contain(`New Asset Group from Template`)
+    await expect(await assetGroups.isAssetsGroupFromTemplateFormsDisplayed()).true
+    await assetGroups.clickCapitalWorksTemtplateCheckBox()
+    await assetGroups.clickTemplateSaveBtn()
+    await expect(await assetGroups.isSuccessfullySavedAlertMessageDisplayed()).true
+    await expect(await assetGroups.getSuccessfullySavedAlertMessageText()).contain(`Saved 1 asset groups successfully`)
   });
 });

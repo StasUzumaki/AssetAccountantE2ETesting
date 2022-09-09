@@ -1,10 +1,15 @@
 const devAssetMainPage = require('../pageobjects/devAssetMain.page');
-const baseUrl = require('../../data/baseURL')
 const { expect } = require('chai');
 const helper = require('../pageobjects/helper');
 const fs = require('fs');
 const readXlsxFile = require('read-excel-file/node')
-const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator')
+const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
+const assetsPage = require('../pageobjects/assets.page');
+const registerSettingsPage = require('../pageobjects/registerSettings.page');
+const assetPage = require('../pageobjects/asset.page');
+const journalsPage = require('../pageobjects/journals.page');
+const leasePage = require('../pageobjects/lease.page');
+const classificationsPage = require('../pageobjects/classifications.page');
 
 const randomName = uniqueNamesGenerator({
     dictionaries: [adjectives, animals, colors],
@@ -13,7 +18,7 @@ const randomName = uniqueNamesGenerator({
 
 const registerNameSettings = randomName + '_TestRegister'
 const journalDescr = 'Test Description Movements'
-const filePathXlsx = './tempDownloads/2022-08-31 - '+ registerNameSettings +' - Test Description Movements.xlsx'
+const filePathXlsx = './tempDownloads/2022-09-30 - '+ registerNameSettings +' - Test Description Movements.xlsx'
 const filePathPdf = './tempDownloads/'+ registerNameSettings +' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.pdf'
 const filePathCsv = './tempDownloads/'+ registerNameSettings +' - Asset Summary (Tax) 2021-07-01 to 2022-06-30.csv'
 
@@ -49,29 +54,29 @@ describe('Asset Super Test', () => {
         await devAssetMainPage.clickCreateFirstRegisterBtn()
         await helper.createRegisterSuperTest(registerNameSettings)
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+        await expect(await assetsPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
     });
     it('should create asset group (from template) if no groups have been created', async () => {
         await helper.createAssetGroupFromTemplate()
     });
     it('should create asset group (Blank) with existing group', async () => {
         await devAssetMainPage.clickAssetsLink()
-        await devAssetMainPage.clickAssetsAddBtn()
+        await assetsPage.clickAssetsAddBtn()
         await helper.createAssetGroupBlank()
     });
     it('should create classifications', async () => {
         await devAssetMainPage.clickRegisterSettingsLink()
-        await devAssetMainPage.clickClassificationLink()
+        await registerSettingsPage.clickClassificationLink()
         await helper.addClassification()
-        await expect(await devAssetMainPage.isFirstClassificationDisplayed()).true
+        await expect(await classificationsPage.isFirstClassificationDisplayed()).true
         await helper.addClassification()
-        await expect(await devAssetMainPage.isSecondClassificationDisplayed()).true
+        await expect(await classificationsPage.isSecondClassificationDisplayed()).true
     });
     it('should create asset', async () => {
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
-        await devAssetMainPage.clickAssetsAddBtn()
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
+        await assetsPage.clickAssetsAddBtn()
         await helper.createAssetClassification()
     });
     it('should add and reverse opening balance', async () => {
@@ -127,19 +132,19 @@ describe('Asset Super Test', () => {
         await helper.accountsAddAdjustment()
         await helper.accountsReverseAdjustment()
         //
-        await devAssetMainPage.clickReverseDropDown()
-        await devAssetMainPage.clickReverseTransferBtn()
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await assetPage.clickReverseDropDown()
+        await assetPage.clickReverseTransferBtn()
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await browser.pause(3000)
-        await devAssetMainPage.clickReverseDropDown()
-        await devAssetMainPage.clickReverseTransferBtn()
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true
+        await assetPage.clickReverseDropDown()
+        await assetPage.clickReverseTransferBtn()
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await browser.pause(3000)
     });
     it('should add link attachment', async () => {
-        await devAssetMainPage.clickAssetDetailsLink()
+        await assetPage.clickAssetDetailsLink()
         await helper.addLinkAttachment()
         await helper.deleteAllLinkAttachments()
     });
@@ -150,36 +155,34 @@ describe('Asset Super Test', () => {
     });
     it('should create HP/Lease', async () => {
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
-        await devAssetMainPage.clickAssetsAddBtn()
-        await devAssetMainPage.clickCreateHpLeaseAssetBtn()
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true
+        await assetsPage.clickAssetsAddBtn()
+        await assetsPage.clickCreateHpLeaseAssetBtn()
         await helper.fillingOutLeaseForm()
-        await devAssetMainPage.clickAlertMessageGenerateScheduleBtn()
+        await leasePage.clickAlertMessageGenerateScheduleBtn()
         await helper.generatePaymentSchedule()
-        //await helper.fillingOutLeasePaymentForm()
-        await devAssetMainPage.clickLeaseSaveBtn()
-        await expect(await devAssetMainPage.isAssetColumnHeaderDisplayed()).true
-        await expect(await devAssetMainPage.isLeaseColumnHeaderDisplayed()).true
+        await leasePage.clickLeaseSaveBtn()
+        await expect(await assetPage.isAssetColumnHeaderDisplayed()).true
+        await expect(await leasePage.isLeaseColumnHeaderDisplayed()).true
     });
     it('should create journal', async () => {
         await devAssetMainPage.clickJournalLink()
-        await expect(await devAssetMainPage.isCurrentlyJournalsDisplayed()).true
-        await devAssetMainPage.clickCreateBtn()
-        await expect(await devAssetMainPage.isCreateJournalFormDisplayed()).true
-        await devAssetMainPage.setJournalDescriptionFieldValue(journalDescr)
-        await devAssetMainPage.clickCreateJournalBtn()
-        await expect(await devAssetMainPage.isJournalTitleDisplayed()).true
-        await expect(await devAssetMainPage.getJournalTitleText()).contain(`${journalDescr}`)
+        await expect(await journalsPage.isCurrentlyJournalsDisplayed()).true
+        await journalsPage.clickCreateBtn()
+        await expect(await journalsPage.isCreateJournalFormDisplayed()).true
+        await journalsPage.setJournalDescriptionFieldValue(journalDescr)
+        await journalsPage.clickCreateJournalBtn()
+        await expect(await journalsPage.isJournalTitleDisplayed()).true
+        await expect(await journalsPage.getJournalTitleText()).contain(`${journalDescr}`)
     });
     it('should post journal to Spreadsheet', async () => {
-        await devAssetMainPage.clickExportDropDownBtn()
-        await devAssetMainPage.clickExportAsExcelBtn()
-        await expect(await devAssetMainPage.isChooseTransactionFormDisplayed()).true
-        //await helper.checkingPostedJournalCheckBox()\
-        await devAssetMainPage.clickPostedJournalCheckBox();
-        await devAssetMainPage.clickPostBtn()
-        await expect(await devAssetMainPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true
-        await expect(await devAssetMainPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')
+        await journalsPage.clickExportDropDownBtn()
+        await journalsPage.clickExportAsExcelBtn()
+        await expect(await journalsPage.isChooseTransactionFormDisplayed()).true
+        await journalsPage.clickPostedJournalCheckBox();
+        await journalsPage.clickPostBtn()
+        await expect(await journalsPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true
+        await expect(await journalsPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')
     });
     it('should wait for Excel file to download', async () => {
         await helper.waitForFileExists(filePathXlsx, 15000)
@@ -193,24 +196,24 @@ describe('Asset Super Test', () => {
     //create report 
     it('should create PDF report', async () => {
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
-        await devAssetMainPage.clickCalendarBtn()
-        await expect(await devAssetMainPage.isPeriodsFormDisplayed()).true
-        await devAssetMainPage.clickCurrentFyBtn()
-        await devAssetMainPage.clickReportsBtn()
-        await expect(await devAssetMainPage.isReportFormDisplayed()).true
-        await expect(await devAssetMainPage.isReportTypeDropDownClickable()).true
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true
+        await assetsPage.clickCalendarBtn()
+        await expect(await assetsPage.isPeriodsFormDisplayed()).true
+        await assetsPage.clickCurrentFyBtn()
+        await assetsPage.clickReportsBtn()
+        await expect(await assetsPage.isReportFormDisplayed()).true
+        await expect(await assetsPage.isReportTypeDropDownClickable()).true
         await browser.pause(2000)
-        await devAssetMainPage.selectReportTypeDropDownValue()
-        await expect(await devAssetMainPage.isReportStartDateMonthDisplayed()).true
-        await devAssetMainPage.selectReportStartDateMonthValue(6)
-        await devAssetMainPage.setReportStartDateValue('2021')
-        await expect(await devAssetMainPage.isReportEndDateMonthDisplayed()).true
-        await devAssetMainPage.selectReportEndDateMonthValue(5)
-        await devAssetMainPage.setReportEndDateValue('2022')
-        await devAssetMainPage.selectReportFormatDropDown(0)
-        await devAssetMainPage.clickGenerateReportBtn()
-        await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
+        await assetsPage.selectReportTypeDropDownValue()
+        await expect(await assetsPage.isReportStartDateMonthDisplayed()).true
+        await assetsPage.selectReportStartDateMonthValue(6)
+        await assetsPage.setReportStartDateValue('2021')
+        await expect(await assetsPage.isReportEndDateMonthDisplayed()).true
+        await assetsPage.selectReportEndDateMonthValue(5)
+        await assetsPage.setReportEndDateValue('2022')
+        await assetsPage.selectReportFormatDropDown(0)
+        await assetsPage.clickGenerateReportBtn()
+        await expect(await assetsPage.isGenerateReportBtnClikable()).true
     });
     it('should wait for PDF file to download', async () => {
         await helper.waitForFileExists(filePathPdf, 25000)
@@ -221,18 +224,18 @@ describe('Asset Super Test', () => {
         await helper.pdfValidation(filePathPdf)
     });
     it('should create CSV report', async () => {
-        await expect(await devAssetMainPage.isReportFormDisplayed()).true
-        await expect(await devAssetMainPage.isReportTypeDropDownClickable()).true
-        await devAssetMainPage.selectReportTypeDropDownValue()
-        await expect(await devAssetMainPage.isReportStartDateMonthDisplayed()).true
-        await devAssetMainPage.selectReportStartDateMonthValue(6)
-        await devAssetMainPage.setReportStartDateValue('2021')
-        await expect(await devAssetMainPage.isReportEndDateMonthDisplayed()).true
-        await devAssetMainPage.selectReportEndDateMonthValue(5)
-        await devAssetMainPage.setReportEndDateValue('2022')
-        await devAssetMainPage.selectReportFormatDropDown(1)
-        await devAssetMainPage.clickGenerateReportBtn()
-        await expect(await devAssetMainPage.isGenerateReportBtnClikable()).true
+        await expect(await assetsPage.isReportFormDisplayed()).true
+        await expect(await assetsPage.isReportTypeDropDownClickable()).true
+        await assetsPage.selectReportTypeDropDownValue()
+        await expect(await assetsPage.isReportStartDateMonthDisplayed()).true
+        await assetsPage.selectReportStartDateMonthValue(6)
+        await assetsPage.setReportStartDateValue('2021')
+        await expect(await assetsPage.isReportEndDateMonthDisplayed()).true
+        await assetsPage.selectReportEndDateMonthValue(5)
+        await assetsPage.setReportEndDateValue('2022')
+        await assetsPage.selectReportFormatDropDown(1)
+        await assetsPage.clickGenerateReportBtn()
+        await expect(await assetsPage.isGenerateReportBtnClikable()).true
     });
     it('should wait for CSV file to download', async () => {
         await helper.waitForFileExists(filePathCsv, 25000)

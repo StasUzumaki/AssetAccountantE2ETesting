@@ -7,6 +7,7 @@ const xeroMainPage = require("../pageobjects/xeroMain.page");
 const xeroLogInPage = require("../pageobjects/xeroLogIn.page");
 const googleMailPage = require("../pageobjects/googleMail.page");
 const googleMailboxData = require("../../data/googleMailboxData");
+const registerSettingsPage = require('../pageobjects/registerSettings.page')
 const { expect } = require("chai");
 const baseUrl = require("../../data/baseURL");
 const { uniqueNamesGenerator, adjectives, colors, animals } = require("unique-names-generator");
@@ -87,7 +88,7 @@ describe("Sign in with Xero", () => {
     });
     it("should connect to Xero and verify that", async () => {
         await devAssetMainPage.clickRegisterSettingsLink();
-        await devAssetMainPage.clickIntegrationsLink();
+        await registerSettingsPage.clickIntegrationsLink();
         await devAssetMainPage.clickXeroDropDown();
         await devAssetMainPage.clickConnectToXeroBtn();
         await expect(await xeroLogInPage.isOrganisationDataFormDisplayed()).true;

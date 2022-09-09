@@ -2,6 +2,10 @@ const devAssetMainPage = require('../pageobjects/devAssetMain.page');
 const { expect } = require('chai');
 const baseUrl = require('../../data/baseURL');
 const helper = require('../pageobjects/helper');
+const assetsPage = require('../pageobjects/assets.page');
+const registerSettingsPage = require('../pageobjects/registerSettings.page');
+const assetPage = require('../pageobjects/asset.page');
+const classificationsPage = require('../pageobjects/classifications.page');
 
 describe('dev asset page', () => {
     before('land to dev asset page and login', async () => {
@@ -23,16 +27,16 @@ describe('dev asset page', () => {
         await devAssetMainPage.clickCreateFirstRegisterBtn()
         await helper.createRegister()
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstThingsFirstAlertMessageDisplayed()).true
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
+        await expect(await assetsPage.isFirstThingsFirstAlertMessageDisplayed()).true
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
     });
     it('should create classifications', async () => {
         await devAssetMainPage.clickRegisterSettingsLink()
-        await devAssetMainPage.clickClassificationLink()
+        await registerSettingsPage.clickClassificationLink()
         await helper.addClassification()
-        await expect(await devAssetMainPage.isFirstClassificationDisplayed()).true
+        await expect(await classificationsPage.isFirstClassificationDisplayed()).true
         await helper.addClassification()
-        await expect(await devAssetMainPage.isSecondClassificationDisplayed()).true
+        await expect(await classificationsPage.isSecondClassificationDisplayed()).true
     });
     it('should create asset group (from template) if no groups have been created', async () => {
         await devAssetMainPage.clickAssetsLink()
@@ -40,31 +44,31 @@ describe('dev asset page', () => {
     });
     it('should create asset', async () => {
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
-        await devAssetMainPage.clickAssetsAddBtn()
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
+        await assetsPage.clickAssetsAddBtn()
         await helper.createAssetClassification()
     });
     it('should verify that Classifications have been added', async () => {
-        await devAssetMainPage.clickAssetAccountsTabLink()
-        await expect(await devAssetMainPage.isFirstClassificationAddedCellDisplayed()).true
-        await expect(await devAssetMainPage.isSecondClassificationAddedCellDisplayed()).true
+        await assetPage.clickAssetAccountsTabLink()
+        await expect(await classificationsPage.isFirstClassificationAddedCellDisplayed()).true
+        await expect(await classificationsPage.isSecondClassificationAddedCellDisplayed()).true
     });
     it('should make some transfer', async () => {
-        await devAssetMainPage.clickAssetDetailsLink()
-        await devAssetMainPage.clickFirstClassificationTransferLink()
-        await devAssetMainPage.selectTransferEffectiveDateValue(1)
-        await devAssetMainPage.selectTransferClassificationDropDownValue(4)
+        await assetPage.clickAssetDetailsLink()
+        await assetPage.clickFirstClassificationTransferLink()
+        await assetPage.selectTransferEffectiveDateValue(1)
+        await assetPage.selectTransferClassificationDropDownValue(4)
         await devAssetMainPage.clickSaveBtn()
-        await devAssetMainPage.clickSecondClassificationTransferLink()
-        await devAssetMainPage.selectTransferEffectiveDateValue(1)
-        await devAssetMainPage.selectTransferClassificationDropDownValue(1)
+        await assetPage.clickSecondClassificationTransferLink()
+        await assetPage.selectTransferEffectiveDateValue(1)
+        await assetPage.selectTransferClassificationDropDownValue(1)
         await devAssetMainPage.clickSaveBtn()
     });
     it('should verify that Classifications have been transferred', async () => {
-        await devAssetMainPage.clickAssetAccountsTabLink()
-        await expect(await devAssetMainPage.isFirstClassificationUpdatedCellDisplayed()).true
-        await expect(await devAssetMainPage.getFirstClassificationUpdatedCellText()).contain('Classification Updated')
-        await expect(await devAssetMainPage.isSecondClassificationUpdatedCellDisplayed()).true
-        await expect(await devAssetMainPage.getSecondClassificationUpdatedCellText()).contain('Classification Updated')
+        await assetPage.clickAssetAccountsTabLink()
+        await expect(await assetPage.isFirstClassificationUpdatedCellDisplayed()).true
+        await expect(await assetPage.getFirstClassificationUpdatedCellText()).contain('Classification Updated')
+        await expect(await assetPage.isSecondClassificationUpdatedCellDisplayed()).true
+        await expect(await assetPage.getSecondClassificationUpdatedCellText()).contain('Classification Updated')
     });
 });

@@ -4,15 +4,17 @@ const baseUrl = require('../../data/baseURL');
 const helper = require('../pageobjects/helper');
 const fs = require('fs');
 const readXlsxFile = require('read-excel-file/node')
-
+const dashboardPage = require('../pageobjects/dashboard.page');
+const assetsPage = require('../pageobjects/assets.page');
+const journalsPage = require('../pageobjects/journals.page');
 const journalDescr = 'Test Description Movements'
-const filePathXlsx = './tempDownloads/2022-08-31 - Asset testing - Test Description Movements.xlsx'
+const filePathXlsx = './tempDownloads/2022-09-30 - Asset testing - Test Description Movements.xlsx'
 
 describe('create journal', () => {
     before('land to dev asset page and login', async () => {
         await helper.platformLink()
         await helper.loginToAccountCreateAsset()
-        await devAssetMainPage.clickFirstRegisterLink()
+        await dashboardPage.clickFirstRegisterLink()
         //checking existing assets groups and assets
         await helper.checkingExistingGroupsAndAssets()
         //checking existing journals
@@ -36,30 +38,28 @@ describe('create journal', () => {
     });
     it('should create asset', async () => {
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
-        await devAssetMainPage.clickAssetsAddBtn()
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true
+        await assetsPage.clickAssetsAddBtn()
         await helper.createAsset()
     });
     it('should create journal', async () => {
         await devAssetMainPage.clickJournalLink()
-        await expect(await devAssetMainPage.isCurrentlyJournalsDisplayed()).true
-        await devAssetMainPage.clickCreateBtn()
-        await expect(await devAssetMainPage.isCreateJournalFormDisplayed()).true
-        await devAssetMainPage.setJournalDescriptionFieldValue(journalDescr)
-        await devAssetMainPage.clickCreateJournalBtn()
-        await expect(await devAssetMainPage.isJournalTitleDisplayed()).true
-        await expect(await devAssetMainPage.getJournalTitleText()).contain(`${journalDescr}`)
-        // await expect(await devAssetMainPage.isAccountTypeCostCellDisplayed()).true
-        // await expect(await devAssetMainPage.isAccountTypeClearingSuspenseCellDisplayed()).true
+        await expect(await journalsPage.isCurrentlyJournalsDisplayed()).true
+        await journalsPage.clickCreateBtn()
+        await expect(await journalsPage.isCreateJournalFormDisplayed()).true
+        await journalsPage.setJournalDescriptionFieldValue(journalDescr)
+        await journalsPage.clickCreateJournalBtn()
+        await expect(await journalsPage.isJournalTitleDisplayed()).true
+        await expect(await journalsPage.getJournalTitleText()).contain(`${journalDescr}`)
     });
     it('should post journal to Spreadsheet', async () => {
-        await devAssetMainPage.clickExportDropDownBtn()
-        await devAssetMainPage.clickExportAsExcelBtn()
-        await expect(await devAssetMainPage.isChooseTransactionFormDisplayed()).true
+        await journalsPage.clickExportDropDownBtn()
+        await journalsPage.clickExportAsExcelBtn()
+        await expect(await journalsPage.isChooseTransactionFormDisplayed()).true
         await helper.checkingPostedJournalCheckBox()
-        await devAssetMainPage.clickPostBtn()
-        await expect(await devAssetMainPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true
-        await expect(await devAssetMainPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')
+        await journalsPage.clickPostBtn()
+        await expect(await journalsPage.isSuccessfulllyPostedToExcelAlertDisplayed()).true
+        await expect(await journalsPage.getSuccessfulllyPostedToExcelAlertText()).contain('This journal was successfully posted to Spreadsheet')
     });
     it('should wait for Excel file to download', async () => {
         await helper.waitForFileExists(filePathXlsx, 15000)

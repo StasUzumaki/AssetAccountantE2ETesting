@@ -7,6 +7,10 @@ const path = require("path");
 const fs = require("fs");
 const readXlsxFile = require("read-excel-file/node");
 const exp = require("constants");
+const assetPage = require("../pageobjects/asset.page");
+const assetsPage = require("../pageobjects/assets.page");
+const assetGroups = require('../pageobjects/assetGroups.page');
+const subscriptionAndPaymentPage = require("../pageobjects/subscriptionAndPayment.page");
 
 const filePathXlsx = "./tempDownloads/AssetImportTemplate.xlsx";
 
@@ -34,8 +38,8 @@ describe("create a new register", () => {
         await devAssetMainPage.clickCreateFirstRegisterBtn();
         await helper.createRegister();
         await devAssetMainPage.clickAssetsLink();
-        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+        await expect(await assetsPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
     });
     it("should visit to Bulk Action and upload spreadsheet", async () => {
         const filePath = path.join(__dirname, "../../data/AssetImportTemplate.xlsx");
@@ -111,25 +115,25 @@ describe("create a new register", () => {
         await expect(await importsPage.isImportCompleteStatusDisplayed()).true;
         await expect(await importsPage.getImportCompleteStatusText()).contain("Complete");
         await devAssetMainPage.clickAssetsLink();
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
-        await devAssetMainPage.clickFirstGroupLink();
-        await devAssetMainPage.clickFirstAssetLink();
-        await expect(await devAssetMainPage.isAssetColumnHeaderDisplayed()).true;
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
+        await assetsPage.clickFirstGroupLink();
+        await assetsPage.clickFirstAssetLink();
+        await expect(await assetPage.isAssetColumnHeaderDisplayed()).true;
     });
     it("should have sure the serial number and location has been added", async () => {
-        await devAssetMainPage.clickAssetDetailsLink();
-        await expect(await devAssetMainPage.isLocationLabelDisplayed()).true;
-        await expect(await devAssetMainPage.getLocationTitleText()).contain("Brisbane");
-        await expect(await devAssetMainPage.isSerialNumberLabelDisplayed()).true;
-        await expect(await devAssetMainPage.getSerialNumberTitleText()).contain("192348576");
+        await assetPage.clickAssetDetailsLink();
+        await expect(await assetPage.isLocationLabelDisplayed()).true;
+        await expect(await assetPage.getLocationTitleText()).contain("Brisbane");
+        await expect(await assetPage.isSerialNumberLabelDisplayed()).true;
+        await expect(await assetPage.getSerialNumberTitleText()).contain("192348576");
     });
     it("should have try to add new asset (11th)", async () => {
         await devAssetMainPage.clickAssetsLink();
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
-        await devAssetMainPage.clickAssetsAddBtn();
-        await devAssetMainPage.clickCreateAssetBtn();
-        await expect(await devAssetMainPage.isSubscriptionLimitAlertDisplayed()).true;
-        await expect(await devAssetMainPage.getSubscriptionLimitAlertText()).contain(`Subscription Limit`);
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
+        await assetsPage.clickAssetsAddBtn();
+        await assetsPage.clickCreateAssetBtn();
+        await expect(await assetsPage.isSubscriptionLimitAlertDisplayed()).true;
+        await expect(await assetsPage.getSubscriptionLimitAlertText()).contain(`Subscription Limit`);
     });
     it("should have back to Bulk Actions and check that 'download import' works", async () => {
         await importsPage.clickBulkActionLink();
@@ -155,31 +159,31 @@ describe("create a new register", () => {
     });
     it("should have add one asset", async () => {
         await devAssetMainPage.clickAssetsLink();
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
         await browser.refresh();
-        await devAssetMainPage.clickAssetsAddBtn();
+        await assetsPage.clickAssetsAddBtn();
         //create asset
-        await devAssetMainPage.clickCreateAssetBtn();
-        await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;
-        await devAssetMainPage.setNewAssetNameValue("Asset 11");
-        await devAssetMainPage.setNewAssetCodeNumberValue("FA-000011");
-        await devAssetMainPage.setNewAssetDescriptionValue("Description");
-        await devAssetMainPage.selectNewAssetGroupValue();
-        await devAssetMainPage.setNewAssetCostValue("1100");
-        await devAssetMainPage.setNewAssetPurchaseDateValue("11/01/21");
-        await devAssetMainPage.setNewAssetQuantityValue("10");
-        await devAssetMainPage.selectNewAssetQuantityUnitsValue();
-        await devAssetMainPage.selectFirstClassificationDropDownValue(1);
-        await expect(await devAssetMainPage.isDepreciationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isTaxDepreciationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isAccountsDepreciationFormDisplayed()).true;
-        await devAssetMainPage.selectTaxDepreciationValue(2);
-        await devAssetMainPage.selectAccountsDepreciationValue(1);
-        await devAssetMainPage.setTaxEffectiveLifeFieldvalue(11);
-        await devAssetMainPage.setAccountsEffectiveLifeFieldValue(11);
+        await assetsPage.clickCreateAssetBtn();
+        await expect(await assetGroups.isNewAssetTitleDisplayed()).true;
+        await assetPage.setNewAssetNameValue("Asset 11");
+        await assetPage.setNewAssetCodeNumberValue("FA-000011");
+        await assetPage.setNewAssetDescriptionValue("Description");
+        await assetPage.selectNewAssetGroupValue();
+        await assetPage.setNewAssetCostValue("1100");
+        await assetPage.setNewAssetPurchaseDateValue("11/01/21");
+        await assetPage.setNewAssetQuantityValue("10");
+        await assetPage.selectNewAssetQuantityUnitsValue();
+        await assetPage.selectFirstClassificationDropDownValue(1);
+        await expect(await assetGroups.isDepreciationFormDisplayed()).true;
+        await expect(await assetGroups.isTaxDepreciationFormDisplayed()).true;
+        await expect(await assetGroups.isAccountsDepreciationFormDisplayed()).true;
+        await assetPage.selectTaxDepreciationValue(2);
+        await assetPage.selectAccountsDepreciationValue(1);
+        await assetPage.setTaxEffectiveLifeFieldvalue(11);
+        await assetPage.setAccountsEffectiveLifeFieldValue(11);
         await browser.pause(1000);
-        await devAssetMainPage.clickNewAssetSaveBtn();
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
+        await assetGroups.clickNewAssetSaveBtn();
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
         await importsPage.clickBulkActionLink();
         await importsPage.clickNewUploadDropDownBtn();
         await importsPage.clickNewAssetsBtn();
@@ -188,25 +192,25 @@ describe("create a new register", () => {
         await expect(await importsPage.isImportFileInputDisplayed()).true;
         await importsPage.setImportFileInputValue(remoteFilePath);
         await importsPage.clickUploadBtn();
-        await expect(await devAssetMainPage.isSubscriptionLimitAlertDisplayed()).true;
-        await expect(await devAssetMainPage.getSubscriptionLimitAlertText()).contain(`Subscription Limit`);
+        await expect(await assetsPage.isSubscriptionLimitAlertDisplayed()).true;
+        await expect(await assetsPage.getSubscriptionLimitAlertText()).contain(`Subscription Limit`);
     });
     it("should have upload the same spreadsheet and update subscription", async () => {
-        await devAssetMainPage.clickNewAssetUpgradeBtn();
-        await devAssetMainPage.clickToggleForAccountingFirms();
-        await devAssetMainPage.clickStandartPlusLeasesChangePlanBtn();
-        await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true;
-        await expect(await devAssetMainPage.isCardNumberInputDisplayed()).true;
+        await assetsPage.clickNewAssetUpgradeBtn();
+        await subscriptionAndPaymentPage.clickToggleForAccountingFirms();
+        await subscriptionAndPaymentPage.clickStandartPlusLeasesChangePlanBtn();
+        await expect(await subscriptionAndPaymentPage.isPaymentMethodFormDisplayed()).true;
+        await expect(await subscriptionAndPaymentPage.isCardNumberInputDisplayed()).true;
         await browser.switchToFrame(1);
-        await devAssetMainPage.setCardNumberFieldValue("4242 4242 4242 4242");
+        await subscriptionAndPaymentPage.setCardNumberFieldValue("4242 4242 4242 4242");
         await browser.switchToParentFrame();
-        await expect(await devAssetMainPage.isCardExpiryInputDisplayed()).true;
+        await expect(await subscriptionAndPaymentPage.isCardExpiryInputDisplayed()).true;
         await browser.switchToFrame(2);
-        await devAssetMainPage.setCardExpiryFieldValue("0324");
+        await subscriptionAndPaymentPage.setCardExpiryFieldValue("0324");
         await browser.switchToParentFrame();
-        await expect(await devAssetMainPage.isCvcInputDisplayed()).true;
+        await expect(await subscriptionAndPaymentPage.isCvcInputDisplayed()).true;
         await browser.switchToFrame(3);
-        await devAssetMainPage.setCvcFieldValue("777");
+        await subscriptionAndPaymentPage.setCvcFieldValue("777");
         await browser.switchToParentFrame();
         await importsPage.clickUpgradeSubscriptionBtn();
         await expect(await importsPage.isImportUnprocessedStatusDisplayed()).true;
@@ -277,9 +281,9 @@ describe("create a new register", () => {
         await expect(await importsPage.isImportCompleteStatusDisplayed()).true;
         await expect(await importsPage.getImportCompleteStatusText()).contain("Complete");
         await devAssetMainPage.clickAssetsLink();
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
-        await expect(await devAssetMainPage.isFirstGroupAssetsQuantityDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstGroupAssetsQuantityText()).contain("6");
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
+        await expect(await assetsPage.isFirstGroupAssetsQuantityDisplayed()).true;
+        await expect(await assetsPage.getFirstGroupAssetsQuantityText()).contain("6");
     });
     it("should have rollback and delete import", async () => {
         await importsPage.clickBulkActionLink();
@@ -296,8 +300,8 @@ describe("create a new register", () => {
     });
     it("make sure the imported assets were removed", async () => {
         await devAssetMainPage.clickAssetsLink();
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
-        await expect(await devAssetMainPage.isFirstGroupAssetsQuantityDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstGroupAssetsQuantityText()).contain("1");
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
+        await expect(await assetsPage.isFirstGroupAssetsQuantityDisplayed()).true;
+        await expect(await assetsPage.getFirstGroupAssetsQuantityText()).contain("1");
     });
 });

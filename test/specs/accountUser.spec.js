@@ -1,10 +1,18 @@
 const authPage = require('../pageobjects/authentication.page')
 const devAssetMainPage = require('../pageobjects/devAssetMain.page');
 const googleMailPage = require('../pageobjects/googleMail.page')
-const baseUrl = require('../../data/baseURL')
+const dashboardPage = require('../pageobjects/dashboard.page');
+const organisationSettingsPage = require('../pageobjects/organisationSettings.page')
 const { expect } = require('chai');
 const helper = require('../pageobjects/helper');
 const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
+const assetPage = require('../pageobjects/asset.page');
+const assetsPage = require('../pageobjects/assets.page');
+const assetGroups = require('../pageobjects/assetGroups.page')
+const organisationSettingsUsersPage = require('../pageobjects/organisationSettingsUsers.page');
+const registerSettingsUsersPage = require('../pageobjects/registerSettingsUsers.page');
+const subscriptionAndPaymentPage = require('../pageobjects/subscriptionAndPayment.page');
+
 
 const mainEmail = 'stasdevasset'
 const shortUserName = uniqueNamesGenerator({
@@ -78,31 +86,32 @@ describe('Account / User', () => {
         await devAssetMainPage.clickCreateFirstRegisterBtn()
         await helper.createRegister()
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+        await expect(await assetsPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
     });
     it('should change subscription plan', async () => {
         await devAssetMainPage.clickOrganisationSettingsLink()
-        await devAssetMainPage.clickSubscriptionAndPaymentLink()
-        await expect(await devAssetMainPage.isPaymentFormDisplayed()).true
-        await devAssetMainPage.clickOrganisationSettingsUpgradeBtn()
-        await expect(await devAssetMainPage.isSubscriptionFormDisplayed()).true
-        await devAssetMainPage.clickToggleForAccountingFirms()
-        await devAssetMainPage.clickStandartPlusLeasesChangePlanBtn()
-        await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true
+        await organisationSettingsUsersPage.clickSubscriptionAndPaymentLink()
+        await expect(await subscriptionAndPaymentPage.isPaymentFormDisplayed()).true
+        await subscriptionAndPaymentPage.clickOrganisationSettingsUpgradeBtn()
+        await expect(await subscriptionAndPaymentPage.isSubscriptionFormDisplayed()).true
+        await subscriptionAndPaymentPage.clickToggleForAccountingFirms()
+        await subscriptionAndPaymentPage.clickStandartPlusLeasesChangePlanBtn()
+        await expect(await subscriptionAndPaymentPage.isPaymentMethodFormDisplayed()).true
+        await expect(await subscriptionAndPaymentPage.isCardNumberInputDisplayed()).true
         await browser.switchToFrame(5)
-        await devAssetMainPage.setCardNumberFieldValue('4242 4242 4242 4242')
+        await subscriptionAndPaymentPage.setCardNumberFieldValue('4242 4242 4242 4242')
         await browser.switchToParentFrame()
         await browser.switchToFrame(6)
-        await devAssetMainPage.setCardExpiryFieldValue('0324')
+        await subscriptionAndPaymentPage.setCardExpiryFieldValue('0324')
         await browser.switchToParentFrame()
         await browser.switchToFrame(7)
-        await devAssetMainPage.setCvcFieldValue('777')
+        await subscriptionAndPaymentPage.setCvcFieldValue('777')
         await browser.switchToParentFrame()
-        await devAssetMainPage.clickPaymentUpgradeSubBtn()
-        await expect(await devAssetMainPage.isCurrentPaymentMethodAlertDisplayed()).true
-        await expect(await devAssetMainPage.isCurrentAccountPlanDispalyed()).true
-        await expect(await devAssetMainPage.isChangePlanBtnDisplayed()).true
+        await subscriptionAndPaymentPage.clickPaymentUpgradeSubBtn()
+        await expect(await subscriptionAndPaymentPage.isCurrentPaymentMethodAlertDisplayed()).true
+        await expect(await subscriptionAndPaymentPage.isCurrentAccountPlanDispalyed()).true
+        await expect(await subscriptionAndPaymentPage.isChangePlanBtnDisplayed()).true
         await helper.logout()
     });
     //login to existing acc
@@ -120,30 +129,30 @@ describe('Account / User', () => {
         await devAssetMainPage.clickCreateFirstRegisterBtn()
         await helper.createRegister()
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstThingsFirstAlertMessageDisplayed()).true
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
+        await expect(await assetsPage.isFirstThingsFirstAlertMessageDisplayed()).true
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
         await devAssetMainPage.clickRegisterSelectionDropDown()
         await devAssetMainPage.clickAllRegistersLink()
     });
     //invite user to org
     it('should invite user and give them permissions for the Organisation and Register', async () => {
-        await devAssetMainPage.clickFirstRegisterLink()
-        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
+        await dashboardPage.clickFirstRegisterLink()
+        await expect(await assetsPage.isCreateAssetGroupTemplateBtnDisplayed()).true
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
         await devAssetMainPage.clickOrganisationSettingsLink()
-        await devAssetMainPage.clickUsersLink()
-        await devAssetMainPage.clickInviteUserBtn()
+        await organisationSettingsPage.clickUsersLink()
+        await organisationSettingsUsersPage.clickInviteUserBtn()
         await expect(await devAssetMainPage.isInviteUserFormDisplayed()).true
         await devAssetMainPage.setEmailInviteFieldValue(tempGoogleMail)
-        await devAssetMainPage.clickRegisterCheckBoxForInvite()
-        await devAssetMainPage.clickRegisterRoleDropDown()
-        await devAssetMainPage.clickRegisterUserRoleBtn()
+        await organisationSettingsUsersPage.clickRegisterCheckBoxForInvite()
+        await organisationSettingsUsersPage.clickRegisterRoleDropDown()
+        await organisationSettingsUsersPage.clickRegisterUserRoleBtn()
         await devAssetMainPage.clickInviteBtn()
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
-        await expect(await devAssetMainPage.isInvitedUserNameCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserNameCellText()).contain(`(Invitation Pending)`)
-        await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMail}`)
+        await expect(await organisationSettingsUsersPage.isInvitedUserNameCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserNameCellText()).contain(`(Invitation Pending)`)
+        await expect(await organisationSettingsUsersPage.isInvitedUserEmailCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMail}`)
         await helper.logout()
     });
     it('should find and accept email invitation', async () => {
@@ -191,35 +200,35 @@ describe('Account / User', () => {
         await browser.closeWindow()
         await browser.switchToWindow(handles[1])
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
-        await expect(await devAssetMainPage.isFirstRegisterLinkDisplayed()).true
+        await expect(await dashboardPage.isFirstRegisterLinkDisplayed()).true
         await helper.logout()
     });
     it('should login to master account, remove user from Register', async () => {
         await helper.platformLink()
         await helper.loginToAccountUserSuperTest()
-        await expect(await devAssetMainPage.isFirstRegisterLinkDisplayed()).true
-        await devAssetMainPage.clickDropDownRegisterMenu()
-        await devAssetMainPage.clickManageAccessBtn()
-        await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMail}`)
-        await devAssetMainPage.clickUserAccessDropDown()
-        await devAssetMainPage.clickUserAccessRegisterRemoveBtn()
+        await expect(await dashboardPage.isFirstRegisterLinkDisplayed()).true
+        await dashboardPage.clickDropDownRegisterMenu()
+        await dashboardPage.clickManageAccessBtn()
+        await expect(await organisationSettingsUsersPage.isInvitedUserEmailCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMail}`)
+        await organisationSettingsUsersPage.clickUserAccessDropDown()
+        await organisationSettingsUsersPage.clickUserAccessRegisterRemoveBtn()
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
-        await expect(await devAssetMainPage.isInvitedUserRoleCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserRoleCellText()).contain('(No Access)')
+        await expect(await organisationSettingsUsersPage.isInvitedUserRoleCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserRoleCellText()).contain('(No Access)')
     });
     it('should remove user from Organisation', async () => {
         await devAssetMainPage.clickOrganisationSettingsLink()
-        await devAssetMainPage.clickUsersLink()
-        await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMail}`)
-        await devAssetMainPage.clickUserAccessDropDown()
-        await devAssetMainPage.clickUserAccessOrgRemoveBtn()
-        await expect(await devAssetMainPage.isDeleteConfirmationFormDisplayed()).true
+        await organisationSettingsPage.clickUsersLink()
+        await expect(await organisationSettingsUsersPage.isInvitedUserEmailCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMail}`)
+        await organisationSettingsUsersPage.clickUserAccessDropDown()
+        await organisationSettingsUsersPage.clickUserAccessOrgRemoveBtn()
+        await expect(await assetPage.isDeleteConfirmationFormDisplayed()).true
         await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
-        await expect(await devAssetMainPage.isInvitedUserEmailCellExist())
+        await expect(await organisationSettingsUsersPage.isInvitedUserEmailCellExist())
         await helper.logout()
     });
     it('should login as removed user and validate that this is unsuccessful(should see "Create New Organisation" title)', async () => {
@@ -242,23 +251,23 @@ describe('Account / User', () => {
     });
     //invite user to register
     it('should invite user and give them permissions for the Register', async () => {
-        await devAssetMainPage.clickFirstRegisterLink();
-        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+        await dashboardPage.clickFirstRegisterLink();
+        await expect(await assetsPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
         await devAssetMainPage.clickRegisterSettingsLink()
-        await devAssetMainPage.clickUsersLink()
-        await expect(await devAssetMainPage.isRegisterInvitePanelDispalayed()).true;
-        await devAssetMainPage.clickInviteUserBtn()
+        await organisationSettingsPage.clickUsersLink()
+        await expect(await registerSettingsUsersPage.isRegisterInvitePanelDispalayed()).true;
+        await organisationSettingsUsersPage.clickInviteUserBtn()
         await expect(await devAssetMainPage.isInviteUserFormDisplayed()).true;
         await devAssetMainPage.setEmailInviteFieldValue(tempGoogleMailReg)
-        await devAssetMainPage.clickRegisterSettingsRoleDropDownMenu()
-        await devAssetMainPage.clickRegisterSettingsUserRoleBtn()
+        await registerSettingsUsersPage.clickRegisterSettingsRoleDropDownMenu()
+        await registerSettingsUsersPage.clickRegisterSettingsUserRoleBtn()
         await devAssetMainPage.clickInviteBtn()
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true;
-        await expect(await devAssetMainPage.isInvitedUserNameCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserNameCellText()).contain(`(Invitation Pending)`)
-        await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMailReg}`)
+        await expect(await organisationSettingsUsersPage.isInvitedUserNameCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserNameCellText()).contain(`(Invitation Pending)`)
+        await expect(await organisationSettingsUsersPage.isInvitedUserEmailCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMailReg}`)
         await helper.logout()
     });
     it('should find and accept email invitation', async () => {
@@ -306,23 +315,22 @@ describe('Account / User', () => {
         await browser.closeWindow()
         await browser.switchToWindow(handles[1])
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
-        await expect(await devAssetMainPage.isFirstRegisterLinkDisplayed()).true
-        //await expect(await devAssetMainPage.getRegisterNameText()).contain('InviteUsers_Register')
+        await expect(await dashboardPage.isFirstRegisterLinkDisplayed()).true
         await helper.logout()
     });
     it('should login to master account, remove user from Register', async () => {
         await helper.platformLink()
         await helper.loginToAccountUserSuperTest()
-        await expect(await devAssetMainPage.isFirstRegisterLinkDisplayed()).true
-        await devAssetMainPage.clickDropDownRegisterMenu()
-        await devAssetMainPage.clickManageAccessBtn()
-        await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMailReg}`)
-        await devAssetMainPage.clickUserAccessDropDown()
-        await devAssetMainPage.clickUserAccessRegisterRemoveBtn()
+        await expect(await dashboardPage.isFirstRegisterLinkDisplayed()).true
+        await dashboardPage.clickDropDownRegisterMenu()
+        await dashboardPage.clickManageAccessBtn()
+        await expect(await organisationSettingsUsersPage.isInvitedUserEmailCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMailReg}`)
+        await organisationSettingsUsersPage.clickUserAccessDropDown()
+        await organisationSettingsUsersPage.clickUserAccessRegisterRemoveBtn()
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
-        await expect(await devAssetMainPage.isInvitedUserRoleCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserRoleCellText()).contain('(No Access)')
+        await expect(await organisationSettingsUsersPage.isInvitedUserRoleCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserRoleCellText()).contain('(No Access)')
         await helper.logout()
     });
     it('should login as removed user and see "You are now part of the organisation "org_name” but do not have access to any registers" alert)', async () => {
@@ -334,29 +342,29 @@ describe('Account / User', () => {
         await authPage.isPasswordLoginFieldDisplayed()
         await authPage.setPasswordSignInValue(passwToAccount)
         await authPage.clickSignInSubmitBtn()
-        await expect(await devAssetMainPage.isFirstThingsFirstAlertMessageDisplayed()).true
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain('You are now part of the organisation ')
+        await expect(await assetsPage.isFirstThingsFirstAlertMessageDisplayed()).true
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain('You are now part of the organisation ')
         await helper.logout()
     });
     it('should login to master account and remove user from Organisation', async () => {
         await helper.loginToAccountUserSuperTest()
-        await devAssetMainPage.clickFirstRegisterLink()
+        await dashboardPage.clickFirstRegisterLink()
         await devAssetMainPage.clickOrganisationSettingsLink()
-        await devAssetMainPage.clickUsersLink()
-        await expect(await devAssetMainPage.isInvitedUserEmailCellDisplayed()).true
-        await expect(await devAssetMainPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMailReg}`)
-        await devAssetMainPage.clickUserAccessDropDown()
-        await devAssetMainPage.clickUserAccessOrgRemoveBtn()
-        await expect(await devAssetMainPage.isDeleteConfirmationFormDisplayed()).true
+        await organisationSettingsPage.clickUsersLink()
+        await expect(await organisationSettingsUsersPage.isInvitedUserEmailCellDisplayed()).true
+        await expect(await organisationSettingsUsersPage.getInvitedUserEmailCellText()).contain(`${tempGoogleMailReg}`)
+        await organisationSettingsUsersPage.clickUserAccessDropDown()
+        await organisationSettingsUsersPage.clickUserAccessOrgRemoveBtn()
+        await expect(await assetPage.isDeleteConfirmationFormDisplayed()).true
         await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true
         await devAssetMainPage.clickDeleteCofirmationOkBtn()
         await expect(await devAssetMainPage.isInvintationAlertDisplayed()).true
-        await expect(await devAssetMainPage.isInvitedUserEmailCellExist())
+        await expect(await organisationSettingsUsersPage.isInvitedUserEmailCellExist())
     });
     //triggerSubscriptionUpgrade
     it('should create asset group (from template) if no groups have been created', async () => {
         await devAssetMainPage.clickRegistersLink()
-        await devAssetMainPage.clickFirstRegisterLink()
+        await dashboardPage.clickFirstRegisterLink()
         await devAssetMainPage.clickAssetsLink()
         await helper.createAssetGroupFromTemplate()
     });
@@ -364,60 +372,60 @@ describe('Account / User', () => {
         await devAssetMainPage.clickAssetsLink()
         const assetsAmount = 5;
         for (let i = 0; i < assetsAmount; i++) {
-            await devAssetMainPage.clickAssetsAddBtn()
+            await assetsPage.clickAssetsAddBtn()
             await helper.createAsset()
             await devAssetMainPage.clickAssetsLink()
         }
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
         for (let i = 0; i < assetsAmount; i++) {
-            await devAssetMainPage.clickAssetsAddBtn()
+            await assetsPage.clickAssetsAddBtn()
             await helper.createAsset()
             await devAssetMainPage.clickAssetsLink()
         }
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
     });
     it('should create and fail 11 asset and change subscription plan', async () => {
-        await devAssetMainPage.clickAssetsAddBtn()
-        await devAssetMainPage.clickCreateAssetBtn()
-        await expect(await devAssetMainPage.isSubscriptionLimitAlertDisplayed()).true
-        await expect(await devAssetMainPage.getSubscriptionLimitAlertText()).contain(`Subscription Limit`)
-        await devAssetMainPage.clickNewAssetUpgradeBtn()
-        await expect(await devAssetMainPage.isSubscriptionFormDisplayed()).true
-        await devAssetMainPage.clickToggleForAccountingFirms()
-        await devAssetMainPage.clickStandartPlusLeasesChangePlanBtn()
-        await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true
-        await expect(await devAssetMainPage.isCardNumberInputDisplayed()).true
+        await assetsPage.clickAssetsAddBtn()
+        await assetsPage.clickCreateAssetBtn()
+        await expect(await assetsPage.isSubscriptionLimitAlertDisplayed()).true
+        await expect(await assetsPage.getSubscriptionLimitAlertText()).contain(`Subscription Limit`)
+        await assetsPage.clickNewAssetUpgradeBtn()
+        await expect(await subscriptionAndPaymentPage.isSubscriptionFormDisplayed()).true
+        await subscriptionAndPaymentPage.clickToggleForAccountingFirms()
+        await subscriptionAndPaymentPage.clickStandartPlusLeasesChangePlanBtn()
+        await expect(await subscriptionAndPaymentPage.isPaymentMethodFormDisplayed()).true
+        await expect(await subscriptionAndPaymentPage.isCardNumberInputDisplayed()).true
         await browser.switchToFrame(1)
-        await devAssetMainPage.setCardNumberFieldValue('4242 4242 4242 4242')
+        await subscriptionAndPaymentPage.setCardNumberFieldValue('4242 4242 4242 4242')
         await browser.switchToParentFrame()
-        await expect(await devAssetMainPage.isCardExpiryInputDisplayed()).true
+        await expect(await subscriptionAndPaymentPage.isCardExpiryInputDisplayed()).true
         await browser.switchToFrame(2)
-        await devAssetMainPage.setCardExpiryFieldValue('0324')
+        await subscriptionAndPaymentPage.setCardExpiryFieldValue('0324')
         await browser.switchToParentFrame()
-        await expect(await devAssetMainPage.isCvcInputDisplayed()).true
+        await expect(await subscriptionAndPaymentPage.isCvcInputDisplayed()).true
         await browser.switchToFrame(3)
-        await devAssetMainPage.setCvcFieldValue('777')
+        await subscriptionAndPaymentPage.setCvcFieldValue('777')
         await browser.switchToParentFrame()
-        await devAssetMainPage.clickPaymentUpgradeSubBtn()
-        await expect(await devAssetMainPage.isCurrentPaymentMethodAlertDisplayed()).true
+        await subscriptionAndPaymentPage.clickPaymentUpgradeSubBtn()
+        await expect(await subscriptionAndPaymentPage.isCurrentPaymentMethodAlertDisplayed()).true
     });
     it('should create 11 asset', async () => {
         const randomCodeNumber = Math.floor(Math.random() * 1000);
-        await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;
-        await devAssetMainPage.setNewAssetNameValue(randomAssetName + randomCodeNumber)
-        await devAssetMainPage.setNewAssetCodeNumberValue(randomCodeNumber)
-        await devAssetMainPage.setNewAssetDescriptionValue('testDescr')
-        await devAssetMainPage.selectNewAssetGroupValue()
-        await devAssetMainPage.setNewAssetCostValue('200')
-        await devAssetMainPage.setNewAssetPurchaseDateValue('06/05/22')
-        await devAssetMainPage.setNewAssetQuantityValue('1')
-        await devAssetMainPage.selectNewAssetQuantityUnitsValue()
-        await expect(await devAssetMainPage.isDepreciationFormDisplayed()).true
-        await expect(await devAssetMainPage.isTaxDepreciationFormDisplayed()).true
-        await expect(await devAssetMainPage.isAccountsDepreciationFormDisplayed()).true
+        await expect(await assetGroups.isNewAssetTitleDisplayed()).true;
+        await assetPage.setNewAssetNameValue(randomAssetName + randomCodeNumber)
+        await assetPage.setNewAssetCodeNumberValue(randomCodeNumber)
+        await assetPage.setNewAssetDescriptionValue('testDescr')
+        await assetPage.selectNewAssetGroupValue()
+        await assetPage.setNewAssetCostValue('200')
+        await assetPage.setNewAssetPurchaseDateValue('06/05/22')
+        await assetPage.setNewAssetQuantityValue('1')
+        await assetPage.selectNewAssetQuantityUnitsValue()
+        await expect(await assetGroups.isDepreciationFormDisplayed()).true
+        await expect(await assetGroups.isTaxDepreciationFormDisplayed()).true
+        await expect(await assetGroups.isAccountsDepreciationFormDisplayed()).true
         await browser.pause(1000)
-        await devAssetMainPage.clickNewAssetSaveBtn()
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await assetGroups.clickNewAssetSaveBtn()
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true
     });
 });
 

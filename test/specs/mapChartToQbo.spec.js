@@ -4,6 +4,9 @@ const { expect } = require('chai');
 const baseUrl = require('../../data/baseURL')
 const helper = require('../pageobjects/helper');
 const intuitAccounts = require('../../helper/intuitAccounts');
+const dashboardPage = require('../pageobjects/dashboard.page');
+const assetsPage = require('../pageobjects/assets.page');
+const registerSettingsPage = require('../pageobjects/registerSettings.page')
 
 
 describe('Map Chart of Accounts to QBO and post a Journal', () => {
@@ -15,12 +18,12 @@ describe('Map Chart of Accounts to QBO and post a Journal', () => {
         await console.log("Register list size: " + await devAssetMainPage.getRegistersListSize())
         const registersCount = await devAssetMainPage.getRegistersListSize()
         for(let i = 0; i < registersCount; i++) {
-            await devAssetMainPage.clickDropDownRegisterMenu()
-            await devAssetMainPage.clickArchiveBtn()
-            await devAssetMainPage.clickArchiveConfirmationOkBtn()
-            await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true
+            await dashboardPage.clickDropDownRegisterMenu()
+            await dashboardPage.clickArchiveBtn()
+            await dashboardPage.clickArchiveConfirmationOkBtn()
+            await expect(await dashboardPage.isSuccessArchivedRegisterMessageDisplayed()).true
         }
-        await devAssetMainPage.clickDemoRegisterBtn()
+        await dashboardPage.clickDemoRegisterBtn()
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')
         await helper.logout()
@@ -29,12 +32,12 @@ describe('Map Chart of Accounts to QBO and post a Journal', () => {
         await devAssetMainPage.clickCreateFirstRegisterBtn()
         await helper.createRegister()
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstThingsFirstAlertMessageDisplayed()).true
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
+        await expect(await assetsPage.isFirstThingsFirstAlertMessageDisplayed()).true
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
     });
     it('should connect to QBO account', async () => {
         await devAssetMainPage.clickRegisterSettingsLink()
-        await devAssetMainPage.clickIntegrationsLink()
+        await registerSettingsPage.clickIntegrationsLink()
         await devAssetMainPage.clickQuickbooksOnlineDropDown()
         await devAssetMainPage.clickConnectToQuickBooksBtn()
         await intuitAccounts.loginToExistingtIntuitAccount()

@@ -3,6 +3,10 @@ const { expect } = require('chai')
 const baseUrl = require('../../data/baseURL')
 const helper = require('../pageobjects/helper')
 const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator')
+const assetPage = require('../pageobjects/asset.page')
+const assetsPage = require('../pageobjects/assets.page')
+const assetGroups = require('../pageobjects/assetGroups.page')
+const subscriptionAndPaymentPage = require('../pageobjects/subscriptionAndPayment.page')
 
 const randomName = uniqueNamesGenerator({
     dictionaries: [adjectives, animals, colors],
@@ -32,8 +36,8 @@ describe('create a new register', () => {
         await devAssetMainPage.clickCreateFirstRegisterBtn()
         await helper.createRegister()
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
+        await expect(await assetsPage.isCreateAssetGroupTemplateBtnDisplayed()).true
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
     });
     it('should create asset group (from template) if no groups have been created', async () => {
         await helper.createAssetGroupFromTemplate()
@@ -42,59 +46,59 @@ describe('create a new register', () => {
         await devAssetMainPage.clickAssetsLink()
         const assetsAmount = 5;
         for (let i = 0; i < assetsAmount; i++) {
-            await devAssetMainPage.clickAssetsAddBtn()
+            await assetsPage.clickAssetsAddBtn()
             await helper.createAsset()
             await devAssetMainPage.clickAssetsLink()
         }
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
         for (let i = 0; i < assetsAmount; i++) {
-            await devAssetMainPage.clickAssetsAddBtn()
+            await assetsPage.clickAssetsAddBtn()
             await helper.createAsset()
             await devAssetMainPage.clickAssetsLink()
         }
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
     });
     it('should create and fail 11 asset and change subscription plan', async () => {
-        await devAssetMainPage.clickAssetsAddBtn()
-        await devAssetMainPage.clickCreateAssetBtn()
-        await expect(await devAssetMainPage.isSubscriptionLimitAlertDisplayed()).true
-        await expect(await devAssetMainPage.getSubscriptionLimitAlertText()).contain(`Subscription Limit`)
-        await devAssetMainPage.clickNewAssetUpgradeBtn()
-        await expect(await devAssetMainPage.isSubscriptionFormDisplayed()).true
-        await devAssetMainPage.clickToggleForAccountingFirms()
-        await devAssetMainPage.clickStandartPlusLeasesChangePlanBtn()
-        await expect(await devAssetMainPage.isPaymentMethodFormDisplayed()).true
-        await expect(await devAssetMainPage.isCardNumberInputDisplayed()).true
+        await assetsPage.clickAssetsAddBtn()
+        await assetsPage.clickCreateAssetBtn()
+        await expect(await assetsPage.isSubscriptionLimitAlertDisplayed()).true
+        await expect(await assetsPage.getSubscriptionLimitAlertText()).contain(`Subscription Limit`)
+        await assetsPage.clickNewAssetUpgradeBtn()
+        await expect(await subscriptionAndPaymentPage.isSubscriptionFormDisplayed()).true
+        await subscriptionAndPaymentPage.clickToggleForAccountingFirms()
+        await subscriptionAndPaymentPage.clickStandartPlusLeasesChangePlanBtn()
+        await expect(await subscriptionAndPaymentPage.isPaymentMethodFormDisplayed()).true
+        await expect(await subscriptionAndPaymentPage.isCardNumberInputDisplayed()).true
         await browser.switchToFrame(1)
-        await devAssetMainPage.setCardNumberFieldValue('4242 4242 4242 4242')
+        await subscriptionAndPaymentPage.setCardNumberFieldValue('4242 4242 4242 4242')
         await browser.switchToParentFrame()
-        await expect(await devAssetMainPage.isCardExpiryInputDisplayed()).true
+        await expect(await subscriptionAndPaymentPage.isCardExpiryInputDisplayed()).true
         await browser.switchToFrame(2)
-        await devAssetMainPage.setCardExpiryFieldValue('0324')
+        await subscriptionAndPaymentPage.setCardExpiryFieldValue('0324')
         await browser.switchToParentFrame()
-        await expect(await devAssetMainPage.isCvcInputDisplayed()).true
+        await expect(await subscriptionAndPaymentPage.isCvcInputDisplayed()).true
         await browser.switchToFrame(3)
-        await devAssetMainPage.setCvcFieldValue('777')
+        await subscriptionAndPaymentPage.setCvcFieldValue('777')
         await browser.switchToParentFrame()
-        await devAssetMainPage.clickPaymentUpgradeSubBtn()
-        await expect(await devAssetMainPage.isCurrentPaymentMethodAlertDisplayed()).true
+        await subscriptionAndPaymentPage.clickPaymentUpgradeSubBtn()
+        await expect(await subscriptionAndPaymentPage.isCurrentPaymentMethodAlertDisplayed()).true
     });
     it('should create 11 asset', async () => {
         const randomCodeNumber = Math.floor(Math.random() * 1000);
-        await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;
-        await devAssetMainPage.setNewAssetNameValue(randomAssetName + randomCodeNumber)
-        await devAssetMainPage.setNewAssetCodeNumberValue(randomCodeNumber)
-        await devAssetMainPage.setNewAssetDescriptionValue('testDescr')
-        await devAssetMainPage.selectNewAssetGroupValue()
-        await devAssetMainPage.setNewAssetCostValue('200')
-        await devAssetMainPage.setNewAssetPurchaseDateValue('06/05/22')
-        await devAssetMainPage.setNewAssetQuantityValue('1')
-        await devAssetMainPage.selectNewAssetQuantityUnitsValue()
-        await expect(await devAssetMainPage.isDepreciationFormDisplayed()).true
-        await expect(await devAssetMainPage.isTaxDepreciationFormDisplayed()).true
-        await expect(await devAssetMainPage.isAccountsDepreciationFormDisplayed()).true
+        await expect(await assetGroups.isNewAssetTitleDisplayed()).true;
+        await assetPage.setNewAssetNameValue(randomAssetName + randomCodeNumber)
+        await assetPage.setNewAssetCodeNumberValue(randomCodeNumber)
+        await assetPage.setNewAssetDescriptionValue('testDescr')
+        await assetPage.selectNewAssetGroupValue()
+        await assetPage.setNewAssetCostValue('200')
+        await assetPage.setNewAssetPurchaseDateValue('06/05/22')
+        await assetPage.setNewAssetQuantityValue('1')
+        await assetPage.selectNewAssetQuantityUnitsValue()
+        await expect(await assetGroups.isDepreciationFormDisplayed()).true
+        await expect(await assetGroups.isTaxDepreciationFormDisplayed()).true
+        await expect(await assetGroups.isAccountsDepreciationFormDisplayed()).true
         await browser.pause(1000)
-        await devAssetMainPage.clickNewAssetSaveBtn()
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true
+        await assetGroups.clickNewAssetSaveBtn()
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true
     });
 });

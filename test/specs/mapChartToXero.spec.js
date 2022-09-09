@@ -10,6 +10,9 @@ const xeroLogInPage = require("../pageobjects/xeroLogIn.page");
 const googleMailPage = require("../pageobjects/googleMail.page");
 const googleMailboxData = require("../../data/googleMailboxData");
 const { uniqueNamesGenerator, adjectives, colors, animals } = require("unique-names-generator");
+const assetsPage = require("../pageobjects/assets.page");
+const registerSettingsPage = require('../pageobjects/registerSettings.page');
+const journalsPage = require("../pageobjects/journals.page");
 
 const journalDescr = "Test Description Movements";
 const shortLastName = uniqueNamesGenerator({
@@ -99,12 +102,12 @@ describe("Map Chart of Accounts to Xero and post a Journal", () => {
         await devAssetMainPage.clickCreateFirstRegisterBtn();
         await helper.createRegister();
         await devAssetMainPage.clickAssetsLink();
-        await expect(await devAssetMainPage.isFirstThingsFirstAlertMessageDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+        await expect(await assetsPage.isFirstThingsFirstAlertMessageDisplayed()).true;
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
     });
     it("should connect to Xero and verify that", async () => {
         await devAssetMainPage.clickRegisterSettingsLink();
-        await devAssetMainPage.clickIntegrationsLink();
+        await registerSettingsPage.clickIntegrationsLink();
         await devAssetMainPage.clickXeroDropDown();
         await devAssetMainPage.clickConnectToXeroBtn();
         await expect(await xeroLogInPage.isOrganisationDataFormDisplayed()).true;
@@ -120,28 +123,28 @@ describe("Map Chart of Accounts to Xero and post a Journal", () => {
     });
     it("should create asset", async () => {
         await devAssetMainPage.clickAssetsLink();
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
-        await devAssetMainPage.clickAssetsAddBtn();
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
+        await assetsPage.clickAssetsAddBtn();
         await helper.createAsset();
     });
     it("should create journal", async () => {
         await devAssetMainPage.clickJournalLink();
-        await expect(await devAssetMainPage.isCurrentlyJournalsDisplayed()).true;
-        await devAssetMainPage.clickCreateBtn();
-        await expect(await devAssetMainPage.isCreateJournalFormDisplayed()).true;
-        await devAssetMainPage.setJournalDescriptionFieldValue(journalDescr);
-        await devAssetMainPage.clickCreateJournalBtn();
-        await expect(await devAssetMainPage.isJournalTitleDisplayed()).true;
-        await expect(await devAssetMainPage.getJournalTitleText()).contain(`${journalDescr}`);
+        await expect(await journalsPage.isCurrentlyJournalsDisplayed()).true;
+        await journalsPage.clickCreateBtn();
+        await expect(await journalsPage.isCreateJournalFormDisplayed()).true;
+        await journalsPage.setJournalDescriptionFieldValue(journalDescr);
+        await journalsPage.clickCreateJournalBtn();
+        await expect(await journalsPage.isJournalTitleDisplayed()).true;
+        await expect(await journalsPage.getJournalTitleText()).contain(`${journalDescr}`);
     });
     it("should post journal to Xero", async () => {
-        await devAssetMainPage.clickPostToXeroBtn();
-        await expect(await devAssetMainPage.isChooseTransactionFormDisplayed()).true;
-        await devAssetMainPage.clickPostBtn();
-        await expect(await devAssetMainPage.isSuccessfulllyPostedToXeroAlertDisplayed()).true;
+        await journalsPage.clickPostToXeroBtn();
+        await expect(await journalsPage.isChooseTransactionFormDisplayed()).true;
+        await journalsPage.clickPostBtn();
+        await expect(await journalsPage.isSuccessfulllyPostedToXeroAlertDisplayed()).true;
     });
     it("should verify that we can see the journal in Xero", async () => {
-        await devAssetMainPage.clickViewJournalInXeroLink();
+        await journalsPage.clickViewJournalInXeroLink();
         const handles = await browser.getWindowHandles();
         await browser.switchToWindow(handles[3]);
         await expect(await xeroMainPage.isJournalFromAssetAccountantDisplayed()).true;
@@ -149,7 +152,7 @@ describe("Map Chart of Accounts to Xero and post a Journal", () => {
     it("should disconnect from from Xero", async () => {
         await browser.switchWindow("dev.asset.accountant");
         await devAssetMainPage.clickRegisterSettingsWithXeroLink();
-        await devAssetMainPage.clickIntegrationsLink();
+        await registerSettingsPage.clickIntegrationsLink();
         await devAssetMainPage.clickXeroDisconnectBtn();
         await expect(await devAssetMainPage.isDisconnectConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDisconnectConfirmationBtn();

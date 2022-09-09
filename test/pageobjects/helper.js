@@ -1,9 +1,12 @@
 const devAssetMainPage = require("./devAssetMain.page");
 const authPage = require("./authentication.page");
-const intuitSignUpPage = require("../pageobjects/intuitSignUp.page");
 const loginData = require("../../data/loginData");
 const googleMailPage = require("../pageobjects/googleMail.page");
 const googleMailboxData = require("../../data/googleMailboxData");
+const dashboardPage = require('../pageobjects/dashboard.page')
+const assetPage = require('../pageobjects/asset.page')
+const assetGroups = require('../pageobjects/assetGroups.page')
+const assetsPage = require("./assets.page");
 const baseUrl = require("../../data/baseURL");
 const fs = require("fs");
 const assert = require("assert");
@@ -12,6 +15,10 @@ const path = require("path");
 const csv = require("fast-csv");
 const { expect } = require("chai");
 const { uniqueNamesGenerator, adjectives, colors, animals, countries, languages, names, starWars } = require("unique-names-generator");
+const organisationSettingsPage = require("./organisationSettings.page");
+const journalsPage = require("./journals.page");
+const leasePage = require("./lease.page");
+const classificationsPage = require("./classifications.page");
 require("dotenv").config();
 
 function getDateTime() {
@@ -64,11 +71,7 @@ const filePathes = {
 
 class Helper {
     async platformLink() {
-        if (process.env.PLATFORM === "prod") {
-            await browser.url("https://app.asset.accountant");
-        } else {
-            await browser.url(baseUrl.baseUrlLink);
-        }
+        await browser.url(baseUrl.baseUrlLink)
     }
 
     async randomClassificationName() {
@@ -191,35 +194,35 @@ class Helper {
     }
 
     async createRegister() {
-        await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true;
-        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
-        await devAssetMainPage.setRegisterNameValue(registerNameSettings);
-        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
-        await devAssetMainPage.setRegisterEntityValue("testRegisterEntity");
-        await browser.pause(2000);
-        await devAssetMainPage.clickNextRegisterBtn();
-        await devAssetMainPage.clickTryForFreeBtn();
-        await expect(await devAssetMainPage.isUserLinkDisplayed()).true;
-        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true;
-        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${registerNameSettings}`);
-        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
-        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
+        await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
+        await devAssetMainPage.setRegisterNameValue(registerNameSettings)
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
+        await devAssetMainPage.setRegisterEntityValue('testRegisterEntity')
+        await browser.pause(2000)
+        await devAssetMainPage.clickNextRegisterBtn()
+        await devAssetMainPage.clickTryForFreeBtn()
+        await expect(await organisationSettingsPage.isUserLinkDisplayed()).true;
+        await expect(await organisationSettingsPage.isSettingsHeaderDisplayed()).true
+        await expect(await organisationSettingsPage.getSettingsHeaderText()).contain(`${registerNameSettings}`)
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
     }
 
     async createRegisterSuperTest(registerNameSettings) {
-        await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true;
-        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
-        await devAssetMainPage.setRegisterNameValue(registerNameSettings);
-        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
-        await devAssetMainPage.setRegisterEntityValue("testRegisterEntity");
-        await browser.pause(2000);
-        await devAssetMainPage.clickNextRegisterBtn();
-        await devAssetMainPage.clickTryForFreeBtn();
-        await expect(await devAssetMainPage.isUserLinkDisplayed()).true;
-        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true;
-        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${registerNameSettings}`);
-        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
-        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
+        await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
+        await devAssetMainPage.setRegisterNameValue(registerNameSettings)
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
+        await devAssetMainPage.setRegisterEntityValue('testRegisterEntity')
+        await browser.pause(2000)
+        await devAssetMainPage.clickNextRegisterBtn()
+        await devAssetMainPage.clickTryForFreeBtn()
+        await expect(await organisationSettingsPage.isUserLinkDisplayed()).true;
+        await expect(await organisationSettingsPage.isSettingsHeaderDisplayed()).true
+        await expect(await organisationSettingsPage.getSettingsHeaderText()).contain(`${registerNameSettings}`)
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
     }
 
     async createRegisterWithExistingRegister() {
@@ -229,626 +232,623 @@ class Helper {
         await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
         await devAssetMainPage.setRegisterEntityValue("testRegisterEntity");
         await devAssetMainPage.clickNextRegisterBtn();
-        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true;
+        await expect(await organisationSettingsPage.isSettingsHeaderDisplayed()).true;
         await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
         await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
     }
 
     async createOrganisation() {
-        await devAssetMainPage.clickCreateOrganisationSelectionDropDown();
-        await devAssetMainPage.clickCreateNewOrganisationLink();
-        await expect(await devAssetMainPage.isCreateNewOrganisationFormDisplayed()).true;
-        await devAssetMainPage.setOrganisationNameField(randomOrgName);
-        await devAssetMainPage.setOrganisationDescriptionField("testDescription");
-        await browser.pause(1000);
-        await devAssetMainPage.selectCountryValue();
-        await devAssetMainPage.setBillingContactNameField(randomOrgName);
-        await devAssetMainPage.setBillingContactEmailField(loginData.userEmail);
-        await devAssetMainPage.setBillingContactPhoneField("8888888888");
-        await devAssetMainPage.clickNewOrganisationSaveBtn();
-        //await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true;
-        //await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${randomOrgName}`);
+        await devAssetMainPage.clickCreateOrganisationSelectionDropDown()
+        await devAssetMainPage.clickCreateNewOrganisationLink()
+        await expect(await devAssetMainPage.isCreateNewOrganisationFormDisplayed()).true
+        await devAssetMainPage.setOrganisationNameField(randomOrgName)
+        await devAssetMainPage.setOrganisationDescriptionField('testDescription')
+        await browser.pause(1000)
+        await devAssetMainPage.selectCountryValue()
+        await devAssetMainPage.setBillingContactNameField(randomOrgName)
+        await devAssetMainPage.setBillingContactEmailField(loginData.userEmail)
+        await devAssetMainPage.setBillingContactPhoneField('8888888888')
+        await devAssetMainPage.clickNewOrganisationSaveBtn()
         await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true
-        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
-        await expect(await devAssetMainPage.getDemoRegisterText()).contain("Demo Register");
+        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
+        await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')
     }
 
     async deleteAssetGroup() {
         await devAssetMainPage.clickAssetsLink();
-        await console.log("Assets Group list size: " + (await devAssetMainPage.getAssetsGroupListSize()));
-        const assetsGroupCount = await devAssetMainPage.getAssetsGroupListSize();
+        await console.log("Assets Group list size: " + (await assetsPage.getAssetsGroupListSize()));
+        const assetsGroupCount = await assetsPage.getAssetsGroupListSize();
         for (let i = 0; i < assetsGroupCount; i++) {
-            await devAssetMainPage.clickEditGroupBtn();
-            await expect(await devAssetMainPage.isNameGroupFieldDisplayed()).true;
-            await expect(await devAssetMainPage.isDescriptionGroupFieldDisplayed()).true;
-            await devAssetMainPage.clickDeleteGroupBtn();
+            await assetGroups.clickEditGroupBtn();
+            await expect(await assetGroups.isNameGroupFieldDisplayed()).true;
+            await expect(await assetGroups.isDescriptionGroupFieldDisplayed()).true;
+            await assetGroups.clickDeleteGroupBtn();
             await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true;
             await devAssetMainPage.clickDeleteCofirmationOkBtn();
         }
-        await expect(await devAssetMainPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+        await expect(await assetsPage.isCreateAssetGroupTemplateBtnDisplayed()).true;
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
     }
 
     async createAssetGroupFromTemplate() {
-        await devAssetMainPage.clickCreateAssetGroupTemplateBtn();
-        await expect(await devAssetMainPage.isNewAssetGroupFromTemplateTitleDisplayed()).true;
-        await expect(await devAssetMainPage.getNewAssetGroupFromTemplateTitleText()).contain(`New Asset Group from Template`);
-        await expect(await devAssetMainPage.isAssetsGroupFromTemplateFormsDisplayed()).true;
-        await devAssetMainPage.clickBuidlingsTemtplateCheckBox();
-        await devAssetMainPage.clickTemplateSaveBtn();
-        await expect(await devAssetMainPage.isSuccessfullySavedAlertMessageDisplayed()).true;
-        await expect(await devAssetMainPage.getSuccessfullySavedAlertMessageText()).contain(`Saved 1 asset groups successfully`);
+        await assetsPage.clickCreateAssetGroupTemplateBtn();
+        await expect(await assetGroups.isNewAssetGroupFromTemplateTitleDisplayed()).true;
+        await expect(await assetGroups.getNewAssetGroupFromTemplateTitleText()).contain(`New Asset Group from Template`);
+        await expect(await assetGroups.isAssetsGroupFromTemplateFormsDisplayed()).true;
+        await assetGroups.clickBuidlingsTemtplateCheckBox();
+        await assetGroups.clickTemplateSaveBtn();
+        await expect(await assetGroups.isSuccessfullySavedAlertMessageDisplayed()).true;
+        await expect(await assetGroups.getSuccessfullySavedAlertMessageText()).contain(`Saved 1 asset groups successfully`);
     }
 
     async createAssetGroupBlank() {
         const randomCodeNumber = Math.floor(Math.random() * 100);
-        await devAssetMainPage.clickCreateAssetGroupBlankBtn();
-        await expect(await devAssetMainPage.isAssetGroupNameFieldDisplayed()).true;
-        await devAssetMainPage.setAssetGroupNameBlankFieldValue(assetGroupName + randomCodeNumber);
-        await expect(await devAssetMainPage.isAssetGroupDescriptionFieldDisplayed()).true;
-        await devAssetMainPage.setAssetGroupDescriptionBlankFieldValue("TestGroupDescription");
-        await devAssetMainPage.selectBlankTaxMethodDropDownValue(7);
-        await devAssetMainPage.selectBlankAccountsMethodDropDownValue(1);
-        await devAssetMainPage.setBlankAccountsEffectiveLifeFieldValue(40);
-        await devAssetMainPage.clickAssetGroupBlankSaveBtn();
-        await expect(await devAssetMainPage.isAssetGroupBlankAlertDisplayed()).true;
-        await expect(await devAssetMainPage.isAssetCardSectionDisplayed()).true;
+        await assetsPage.clickCreateAssetGroupBlankBtn();
+        await expect(await assetGroups.isAssetGroupNameFieldDisplayed()).true;
+        await assetGroups.setAssetGroupNameBlankFieldValue(assetGroupName + randomCodeNumber);
+        await expect(await assetGroups.isAssetGroupDescriptionFieldDisplayed()).true;
+        await assetGroups.setAssetGroupDescriptionBlankFieldValue("TestGroupDescription");
+        await assetGroups.selectBlankTaxMethodDropDownValue(7);
+        await assetGroups.selectBlankAccountsMethodDropDownValue(1);
+        await assetGroups.setBlankAccountsEffectiveLifeFieldValue(40);
+        await assetGroups.clickAssetGroupBlankSaveBtn();
+        await expect(await assetGroups.isAssetGroupBlankAlertDisplayed()).true;
+        await expect(await assetGroups.isAssetCardSectionDisplayed()).true;
     }
 
     async createAssetGroupBlankWithGeneralLedger() {
         const randomCodeNumber = Math.floor(Math.random() * 100);
-        await devAssetMainPage.clickCreateAssetGroupBlankBtn();
-        await expect(await devAssetMainPage.isAssetGroupNameFieldDisplayed()).true;
-        await devAssetMainPage.setAssetGroupNameBlankFieldValue(assetGroupName + randomCodeNumber);
-        await expect(await devAssetMainPage.isAssetGroupDescriptionFieldDisplayed()).true;
-        await devAssetMainPage.setAssetGroupDescriptionBlankFieldValue("TestGroupDescription");
-        await devAssetMainPage.selectTaxDepreciationMethodDropDownValue(1);
-        await devAssetMainPage.setTaxDepreciationEffectiveLifeValue("1");
-        await devAssetMainPage.selectAccountsDepreciationMethodDropDownValue(1);
-        await devAssetMainPage.setAccountsDepreciationEffectiveLifeValue("1");
-        await devAssetMainPage.clickGeneralLedgerEditBtn();
-        await devAssetMainPage.selectClearingSuspenceDropDownValue(7);
-        await devAssetMainPage.selectCostDropDownValue(14);
-        await devAssetMainPage.selectAccumulatedDepreciationDropDownValue(7);
-        await devAssetMainPage.selectDepreciationExpenseValue(2);
-        await devAssetMainPage.selectImmediateClaimDropDownValue(4);
-        await devAssetMainPage.selectProfitOnDisposalDropDownValue(9);
-        await devAssetMainPage.selectLossOnDisposalDropDownValue(1);
-        await devAssetMainPage.selectRevaluationReserveDropDownValue(5);
-        await devAssetMainPage.selectAccumulatedImpairmentDropDownValue(2);
-        await devAssetMainPage.selectRevaluationLossDropDownValue(2);
-        await devAssetMainPage.selectImpairmentLossDropDownValue(2);
-        await devAssetMainPage.selectCurrentLeaseLiabilityDropDownValue(5);
-        await devAssetMainPage.selectNonCurrentLeaseLiabilityDropDownValue(2);
-        await devAssetMainPage.selectLeasePaymentClearingDropDownValue(3);
-        await devAssetMainPage.selectCurrentUnexpiredInterestDropDownValue(1);
-        await devAssetMainPage.selectNonCurrentUnexpiredInterestDropDownValue(12);
-        await devAssetMainPage.selectInterestChargeDropDownValue(4);
-        await devAssetMainPage.selectProfitOnTerminationOfLeaseDropDownValue(2);
-        await devAssetMainPage.selectLossOnTerminationOfLeaseDropDownValue(2);
-        await devAssetMainPage.clickGeneralLedgerSaveBtn();
-        await devAssetMainPage.clickAssetGroupBlankSaveBtn();
-        await expect(await devAssetMainPage.isAssetGroupBlankAlertDisplayed()).true;
-        await expect(await devAssetMainPage.isAssetCardSectionDisplayed()).true;
+        await assetsPage.clickCreateAssetGroupBlankBtn();
+        await expect(await assetGroups.isAssetGroupNameFieldDisplayed()).true;
+        await assetGroups.setAssetGroupNameBlankFieldValue(assetGroupName + randomCodeNumber);
+        await expect(await assetGroups.isAssetGroupDescriptionFieldDisplayed()).true;
+        await assetGroups.setAssetGroupDescriptionBlankFieldValue("TestGroupDescription");
+        await assetGroups.selectTaxDepreciationMethodDropDownValue(1);
+        await assetGroups.setTaxDepreciationEffectiveLifeValue("1");
+        await assetGroups.selectAccountsDepreciationMethodDropDownValue(1);
+        await assetGroups.setAccountsDepreciationEffectiveLifeValue("1");
+        await assetGroups.clickGeneralLedgerEditBtn();
+        await assetGroups.selectClearingSuspenceDropDownValue(7);
+        await assetGroups.selectCostDropDownValue(14);
+        await assetGroups.selectAccumulatedDepreciationDropDownValue(7);
+        await assetGroups.selectDepreciationExpenseValue(2);
+        await assetGroups.selectImmediateClaimDropDownValue(4);
+        await assetGroups.selectProfitOnDisposalDropDownValue(9);
+        await assetGroups.selectLossOnDisposalDropDownValue(1);
+        await assetGroups.selectRevaluationReserveDropDownValue(5);
+        await assetGroups.selectAccumulatedImpairmentDropDownValue(2);
+        await assetGroups.selectRevaluationLossDropDownValue(2);
+        await assetGroups.selectImpairmentLossDropDownValue(2);
+        await assetGroups.selectCurrentLeaseLiabilityDropDownValue(5);
+        await assetGroups.selectNonCurrentLeaseLiabilityDropDownValue(2);
+        await assetGroups.selectLeasePaymentClearingDropDownValue(3);
+        await assetGroups.selectCurrentUnexpiredInterestDropDownValue(1);
+        await assetGroups.selectNonCurrentUnexpiredInterestDropDownValue(12);
+        await assetGroups.selectInterestChargeDropDownValue(4);
+        await assetGroups.selectProfitOnTerminationOfLeaseDropDownValue(2);
+        await assetGroups.selectLossOnTerminationOfLeaseDropDownValue(2);
+        await assetGroups.clickGeneralLedgerSaveBtn();
+        await assetGroups.clickAssetGroupBlankSaveBtn();
+        await expect(await assetGroups.isAssetGroupBlankAlertDisplayed()).true;
+        await expect(await assetGroups.isAssetCardSectionDisplayed()).true;
     }
 
     async createAsset() {
         const randomCodeNumber = Math.floor(Math.random() * 10000);
-        await devAssetMainPage.clickCreateAssetBtn();
-        await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;
-        await devAssetMainPage.setNewAssetNameValue(randomAssetName + randomCodeNumber);
-        await devAssetMainPage.setNewAssetCodeNumberValue(randomCodeNumber);
-        await devAssetMainPage.setNewAssetDescriptionValue("testDescr");
-        await devAssetMainPage.selectNewAssetGroupValue();
-        await devAssetMainPage.setNewAssetCostValue("500");
-        await devAssetMainPage.setNewAssetPurchaseDateValue("06/05/22");
-        await devAssetMainPage.setNewAssetQuantityValue("10");
-        await devAssetMainPage.selectNewAssetQuantityUnitsValue();
-        await expect(await devAssetMainPage.isDepreciationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isTaxDepreciationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isAccountsDepreciationFormDisplayed()).true;
-        //await devAssetMainPage.clickSelfAssessedCheckBox()
-        //await devAssetMainPage.setTaxDepreciationNotesFieldValue('test notes test notes')
+        await assetsPage.clickCreateAssetBtn();
+        await expect(await assetGroups.isNewAssetTitleDisplayed()).true;
+        await assetPage.setNewAssetNameValue(randomAssetName + randomCodeNumber);
+        await assetPage.setNewAssetCodeNumberValue(randomCodeNumber);
+        await assetPage.setNewAssetDescriptionValue("testDescr");
+        await assetPage.selectNewAssetGroupValue();
+        await assetPage.setNewAssetCostValue("500");
+        await assetPage.setNewAssetPurchaseDateValue("06/05/22");
+        await assetPage.setNewAssetQuantityValue("10");
+        await assetPage.selectNewAssetQuantityUnitsValue();
+        await expect(await assetGroups.isDepreciationFormDisplayed()).true;
+        await expect(await assetGroups.isTaxDepreciationFormDisplayed()).true;
+        await expect(await assetGroups.isAccountsDepreciationFormDisplayed()).true;
         await browser.pause(1000);
-        await devAssetMainPage.clickNewAssetSaveBtn();
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
+        await assetGroups.clickNewAssetSaveBtn();
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
     }
 
     async createAssetClassification() {
         const randomCodeNumber = Math.floor(Math.random() * 1000);
-        await devAssetMainPage.clickCreateAssetBtn();
-        await expect(await devAssetMainPage.isNewAssetTitleDisplayed()).true;
-        await devAssetMainPage.setNewAssetNameValue(randomAssetName + randomCodeNumber);
-        await devAssetMainPage.setNewAssetCodeNumberValue(randomCodeNumber);
-        await devAssetMainPage.setNewAssetDescriptionValue("testDescr");
-        await devAssetMainPage.selectNewAssetGroupValue();
-        await devAssetMainPage.setNewAssetCostValue("1000");
-        await devAssetMainPage.setNewAssetPurchaseDateValue("06/05/22");
-        await devAssetMainPage.setNewAssetQuantityValue("10");
-        await devAssetMainPage.selectNewAssetQuantityUnitsValue();
-        await devAssetMainPage.selectFirstClassificationDropDownValue(2);
-        await devAssetMainPage.selectSecondClassificationDropDownValue(2);
-        await expect(await devAssetMainPage.isDepreciationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isTaxDepreciationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isAccountsDepreciationFormDisplayed()).true;
+        await assetsPage.clickCreateAssetBtn();
+        await expect(await assetGroups.isNewAssetTitleDisplayed()).true;
+        await assetPage.setNewAssetNameValue(randomAssetName + randomCodeNumber);
+        await assetPage.setNewAssetCodeNumberValue(randomCodeNumber);
+        await assetPage.setNewAssetDescriptionValue("testDescr");
+        await assetPage.selectNewAssetGroupValue();
+        await assetPage.setNewAssetCostValue("1000");
+        await assetPage.setNewAssetPurchaseDateValue("06/05/22");
+        await assetPage.setNewAssetQuantityValue("10");
+        await assetPage.selectNewAssetQuantityUnitsValue();
+        await assetPage.selectFirstClassificationDropDownValue(2);
+        await assetPage.selectSecondClassificationDropDownValue(2);
+        await expect(await assetGroups.isDepreciationFormDisplayed()).true;
+        await expect(await assetGroups.isTaxDepreciationFormDisplayed()).true;
+        await expect(await assetGroups.isAccountsDepreciationFormDisplayed()).true;
         await browser.pause(1000);
-        await devAssetMainPage.clickNewAssetSaveBtn();
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
+        await assetGroups.clickNewAssetSaveBtn();
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
     }
 
     async assetAddOpeningBalance() {
-        await devAssetMainPage.clickActionsDropDownBtn();
-        await devAssetMainPage.clickAddOpeningBalanceBtn();
-        await devAssetMainPage.selectOpeningBalanceDateValue();
-        await devAssetMainPage.setTaxWdvValue(300);
-        await devAssetMainPage.setAccountsWdvValue(400);
+        await assetPage.clickActionsDropDownBtn();
+        await assetPage.clickAddOpeningBalanceBtn();
+        await assetPage.selectOpeningBalanceDateValue();
+        await assetPage.setTaxWdvValue(300);
+        await assetPage.setAccountsWdvValue(400);
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isOpeningBalanceCellDisplayed()).true;
-        await expect(await devAssetMainPage.getOpeningBalanceCellText()).contain("Opening Balance");
+        await expect(await assetPage.isOpeningBalanceCellDisplayed()).true;
+        await expect(await assetPage.getOpeningBalanceCellText()).contain("Opening Balance");
     }
 
     async assetReverseOpeningBalance() {
         //await browser.pause(4000)
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickOpeningBalanceBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickOpeningBalanceBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isOpeningBalanceReservedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getOpeningBalanceReservedCellText()).contain("Opening Balance (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isOpeningBalanceReservedCellDisplayed()).true;
+        await expect(await assetPage.getOpeningBalanceReservedCellText()).contain("Opening Balance (Reversed)");
     }
 
     async assetSell() {
-        await devAssetMainPage.clickActionsDropDownBtn();
-        await devAssetMainPage.clickActionSellBtn();
-        await devAssetMainPage.setDateOfSaleValue("06/05/22");
-        await devAssetMainPage.setSaleProceedsValue(200);
+        await assetPage.clickActionsDropDownBtn();
+        await assetPage.clickActionSellBtn();
+        await assetPage.setDateOfSaleValue("06/05/22");
+        await assetPage.setSaleProceedsValue(200);
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusSoldDisplayed()).true;
-        await expect(await devAssetMainPage.isSaleCellDispalyed()).true;
-        await expect(await devAssetMainPage.getSaleCellText()).contain("Sale");
+        await expect(await assetPage.isAssetStatusSoldDisplayed()).true;
+        await expect(await assetPage.isSaleCellDispalyed()).true;
+        await expect(await assetPage.getSaleCellText()).contain("Sale");
     }
 
     async assetReverseSale() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickSaleBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickSaleBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isReversalSaleCellDisplayed()).true;
-        await expect(await devAssetMainPage.getReversalSaleCellText()).contain("Reversal (Sale)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isReversalSaleCellDisplayed()).true;
+        await expect(await assetPage.getReversalSaleCellText()).contain("Reversal (Sale)");
     }
 
     async assetWriteOff() {
-        await devAssetMainPage.clickActionsDropDownBtn();
-        await devAssetMainPage.clickActionWriteOffBtn();
-        await devAssetMainPage.setDateOfWriteOffValue("06/05/22");
+        await assetPage.clickActionsDropDownBtn();
+        await assetPage.clickActionWriteOffBtn();
+        await assetPage.setDateOfWriteOffValue("06/05/22");
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusSoldDisplayed()).true;
-        await expect(await devAssetMainPage.isWriteOffCellDisplayed()).true;
-        await expect(await devAssetMainPage.getWriteOffCellText()).contain("Write Off");
+        await expect(await assetPage.isAssetStatusSoldDisplayed()).true;
+        await expect(await assetPage.isWriteOffCellDisplayed()).true;
+        await expect(await assetPage.getWriteOffCellText()).contain("Write Off");
     }
 
     async assetReverseWriteOff() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickWritenOffBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickWritenOffBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isWriteOffReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getWriteOffReversedCellText()).contain("Write Off (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isWriteOffReversedCellDisplayed()).true;
+        await expect(await assetPage.getWriteOffReversedCellText()).contain("Write Off (Reversed)");
     }
 
     async assetPartialSell() {
-        await devAssetMainPage.clickActionsDropDownBtn();
-        await devAssetMainPage.clickActionSellPartialBtn();
-        await devAssetMainPage.setSaleProceedsValue(100);
-        await devAssetMainPage.setDisposedQuantityValue(2);
+        await assetPage.clickActionsDropDownBtn();
+        await assetPage.clickActionSellPartialBtn();
+        await assetPage.setSaleProceedsValue(100);
+        await assetPage.setDisposedQuantityValue(2);
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isSalePartialCellDisplayed()).true;
-        await expect(await devAssetMainPage.getSalePartialCellText()).contain("Sale (Partial)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isSalePartialCellDisplayed()).true;
+        await expect(await assetPage.getSalePartialCellText()).contain("Sale (Partial)");
     }
 
     async assetReversePartialSale() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickSalePartialBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickSalePartialBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isSalePartialReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getSalePartialReversedCellText()).contain("Sale (Partial) (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isSalePartialReversedCellDisplayed()).true;
+        await expect(await assetPage.getSalePartialReversedCellText()).contain("Sale (Partial) (Reversed)");
     }
 
     async assetPartialWriteOff() {
-        await devAssetMainPage.clickActionsDropDownBtn();
-        await devAssetMainPage.clickActionWriteOffPartialBtn();
-        await devAssetMainPage.setDisposedQuantityValue(5);
+        await assetPage.clickActionsDropDownBtn();
+        await assetPage.clickActionWriteOffPartialBtn();
+        await assetPage.setDisposedQuantityValue(5);
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isWriteOffPartialCellDisplayed()).true;
-        await expect(await devAssetMainPage.getWriteOffPartialCellText()).contain("Write Off (Partial)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isWriteOffPartialCellDisplayed()).true;
+        await expect(await assetPage.getWriteOffPartialCellText()).contain("Write Off (Partial)");
     }
 
     async assetReversePartialWriteOff() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickWriteOffPartialBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickWriteOffPartialBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isWriteOffPartialReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getWriteOffPartialReversedCellText()).contain("Reversal (Write Off (Partial))");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isWriteOffPartialReversedCellDisplayed()).true;
+        await expect(await assetPage.getWriteOffPartialReversedCellText()).contain("Reversal (Write Off (Partial))");
     }
 
     async taxAddReassessment() {
         await browser.pause(2000);
-        await devAssetMainPage.clickAssetTaxTabLink();
-        await devAssetMainPage.clickAssetAddDropDown();
-        await devAssetMainPage.clickReassessmentBtn();
-        await devAssetMainPage.setTaxDepreciationNotesFieldValue("test notes test notes");
-        await devAssetMainPage.selectReassessMethodDropDownValue(5);
-        await devAssetMainPage.setEffectiveLifeFieldValue(5);
+        await assetPage.clickAssetTaxTabLink();
+        await assetPage.clickAssetAddDropDown();
+        await assetPage.clickReassessmentBtn();
+        await assetPage.setTaxDepreciationNotesFieldValue("test notes test notes");
+        await assetPage.selectReassessMethodDropDownValue(5);
+        await assetPage.setEffectiveLifeFieldValue(5);
         await browser.pause(2000);
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isReassessmentCellDisplayed()).true;
-        await expect(await devAssetMainPage.getReassessmentCellText()).contain("Reassessment");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isReassessmentCellDisplayed()).true;
+        await expect(await assetPage.getReassessmentCellText()).contain("Reassessment");
     }
 
     async taxReverseReassessment() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickReassessmentTaxBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickReassessmentTaxBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isReassessmentReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getReassessmentReversedCellText()).contain("Reassessment (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isReassessmentReversedCellDisplayed()).true;
+        await expect(await assetPage.getReassessmentReversedCellText()).contain("Reassessment (Reversed)");
     }
 
     async taxAddTransferToPool() {
-        await devAssetMainPage.clickAssetAddDropDown();
-        await devAssetMainPage.clickTransferToPoolBtn();
-        await devAssetMainPage.clickLowValuePoolRadioBtn();
-        await devAssetMainPage.clickSaveSettingsSetupPoolsBtn();
-        await devAssetMainPage.selectPoolValue();
-        await expect(await devAssetMainPage.isWrittenDownValueDisplayed()).true;
+        await assetPage.clickAssetAddDropDown();
+        await assetPage.clickTransferToPoolBtn();
+        await assetPage.clickLowValuePoolRadioBtn();
+        await assetPage.clickSaveSettingsSetupPoolsBtn();
+        await assetPage.selectPoolValue();
+        await expect(await assetPage.isWrittenDownValueDisplayed()).true;
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isLowValuePoolLinkDisplayed()).true;
-        await expect(await devAssetMainPage.isAddToPoolCellDisplayed()).true;
-        await expect(await devAssetMainPage.getAddToPoolCellText()).contain("Add to Pool");
+        await expect(await assetPage.isLowValuePoolLinkDisplayed()).true;
+        await expect(await assetPage.isAddToPoolCellDisplayed()).true;
+        await expect(await assetPage.getAddToPoolCellText()).contain("Add to Pool");
     }
 
     async taxReverseTransferToPool() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickTransferToPoolTax();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickTransferToPoolTax();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isTransferToPoolReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getTransferToPoolReversedCellText()).contain("Transfer to Pool (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isTransferToPoolReversedCellDisplayed()).true;
+        await expect(await assetPage.getTransferToPoolReversedCellText()).contain("Transfer to Pool (Reversed)");
     }
 
     async taxAddAdjustment() {
-        await devAssetMainPage.clickAssetAddDropDown();
-        await devAssetMainPage.clickAdjustmentBtn();
-        await devAssetMainPage.selectFirstUseDateDropDownValue(1);
-        await devAssetMainPage.setCostChangeFieldValue(1000);
-        await devAssetMainPage.setDepreciationChangeFieldValue("-300");
-        await expect(await devAssetMainPage.isNotesFieldDisplayed()).true;
+        await assetPage.clickAssetAddDropDown();
+        await assetPage.clickAdjustmentBtn();
+        await assetPage.selectFirstUseDateDropDownValue(1);
+        await assetPage.setCostChangeFieldValue(1000);
+        await assetPage.setDepreciationChangeFieldValue("-300");
+        await expect(await assetPage.isNotesFieldDisplayed()).true;
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAdjustmentCellDisplayed()).true;
-        await expect(await devAssetMainPage.getAdjustmentCellText()).contain("Adjustment");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAdjustmentCellDisplayed()).true;
+        await expect(await assetPage.getAdjustmentCellText()).contain("Adjustment");
     }
 
     async taxReverseAdjustment() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickAdjustmentTaxBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickAdjustmentTaxBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isAdjustmentReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getAdjustmentReversedCellText()).contain("Adjustment (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isAdjustmentReversedCellDisplayed()).true;
+        await expect(await assetPage.getAdjustmentReversedCellText()).contain("Adjustment (Reversed)");
     }
 
     async taxAddReassessmentTaxableUse() {
-        await devAssetMainPage.clickAssetAddDropDown();
-        await devAssetMainPage.clickReassessmentOfTaxableUseBtn();
-        await expect(await devAssetMainPage.isTaxableUsageValueFieldDisplayed()).true;
-        await devAssetMainPage.selectFirstUseDateDropDownValue(1);
-        await devAssetMainPage.setTaxableUsageValueFieldValue(80);
+        await assetPage.clickAssetAddDropDown();
+        await assetPage.clickReassessmentOfTaxableUseBtn();
+        await expect(await assetPage.isTaxableUsageValueFieldDisplayed()).true;
+        await assetPage.selectFirstUseDateDropDownValue(1);
+        await assetPage.setTaxableUsageValueFieldValue(80);
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isTaxableUseCellDisplayed()).true;
-        await expect(await devAssetMainPage.getTaxableUseCellText()).contain("Taxable Use");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isTaxableUseCellDisplayed()).true;
+        await expect(await assetPage.getTaxableUseCellText()).contain("Taxable Use");
     }
 
     async taxReverseReassessmentTaxableUse() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickTaxableUseBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickTaxableUseBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isTaxableUseReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getTaxableUseReversedCellText()).contain("Taxable Use (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isTaxableUseReversedCellDisplayed()).true;
+        await expect(await assetPage.getTaxableUseReversedCellText()).contain("Taxable Use (Reversed)");
     }
 
     async accountsAddReassessment() {
-        await devAssetMainPage.clickAssetAccountsTabLink();
-        await devAssetMainPage.clickAssetAddDropDown();
-        await devAssetMainPage.clickReassessmentBtn();
-        await devAssetMainPage.setTaxDepreciationNotesFieldValue("test notes test notes");
-        await devAssetMainPage.selectDateReassessmentDropDown(1)
-        await devAssetMainPage.selectReassessMethodDropDownValue(2);
-        await devAssetMainPage.setEffectiveLifeFieldValue(10);
-        await browser.pause(2000);
-        await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isReassessmentCellDisplayed()).true;
-        await expect(await devAssetMainPage.getReassessmentCellText()).contain("Reassessment");
+        await assetPage.clickAssetAccountsTabLink()
+        await assetPage.clickAssetAddDropDown()
+        await assetPage.clickReassessmentBtn()
+        await assetPage.setTaxDepreciationNotesFieldValue('test notes test notes')
+        await assetPage.selectDateReassessmentDropDown(1)
+        await assetPage.selectReassessMethodDropDownValue(2)
+        await assetPage.setEffectiveLifeFieldValue(10)
+        await browser.pause(2000)
+        await devAssetMainPage.clickSaveBtn()
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true
+        await expect(await assetPage.isReassessmentCellDisplayed()).true
+        await expect(await assetPage.getReassessmentCellText()).contain('Reassessment')
     }
 
     async accountsReverseReasessment() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickReassessmentTaxBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickReassessmentTaxBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isReassessmentReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getReassessmentReversedCellText()).contain("Reassessment (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isReassessmentReversedCellDisplayed()).true;
+        await expect(await assetPage.getReassessmentReversedCellText()).contain("Reassessment (Reversed)");
     }
 
     async accountsAddRevaluation() {
-        await devAssetMainPage.clickAssetAccountsTabLink();
-        await devAssetMainPage.clickAssetAddDropDown();
-        await devAssetMainPage.clickRevaluationBtn();
-        await devAssetMainPage.selectRevalueAssetDateValue(1);
-        await devAssetMainPage.setRevaluedAmountFieldValue(100);
-        await expect(await devAssetMainPage.isNotesFieldDisplayed()).true;
+        await assetPage.clickAssetAccountsTabLink();
+        await assetPage.clickAssetAddDropDown();
+        await assetPage.clickRevaluationBtn();
+        await assetPage.selectRevalueAssetDateValue(1);
+        await assetPage.setRevaluedAmountFieldValue(100);
+        await expect(await assetPage.isNotesFieldDisplayed()).true;
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isRevaluationCellDisplayed()).true;
-        await expect(await devAssetMainPage.getRevaluationCellText()).contain("Revaluation");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isRevaluationCellDisplayed()).true;
+        await expect(await assetPage.getRevaluationCellText()).contain("Revaluation");
     }
 
     async accountsReverseRevaluation() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickRevaluationAccountsBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickRevaluationAccountsBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isRevaluationReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getRevaluationReversedCellText()).contain("Revaluation (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isRevaluationReversedCellDisplayed()).true;
+        await expect(await assetPage.getRevaluationReversedCellText()).contain("Revaluation (Reversed)");
     }
 
     async accountsAddImpairment() {
-        await devAssetMainPage.clickAssetAccountsTabLink();
-        await devAssetMainPage.clickAssetAddDropDown();
-        await devAssetMainPage.clickImpairmentBtn();
-        await devAssetMainPage.selectImpairAssetDateValue(1);
-        await devAssetMainPage.setImpairedValueFieldValue(100);
-        await expect(await devAssetMainPage.isNotesFieldDisplayed()).true;
+        await assetPage.clickAssetAccountsTabLink();
+        await assetPage.clickAssetAddDropDown();
+        await assetPage.clickImpairmentBtn();
+        await assetPage.selectImpairAssetDateValue(1);
+        await assetPage.setImpairedValueFieldValue(100);
+        await expect(await assetPage.isNotesFieldDisplayed()).true;
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isImpairmentCellDisplayed()).true;
-        await expect(await devAssetMainPage.getImpairmentCellText()).contain("Impairment");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isImpairmentCellDisplayed()).true;
+        await expect(await assetPage.getImpairmentCellText()).contain("Impairment");
     }
 
     async accountsReverseImpairment() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickImpairmentAccountsBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickImpairmentAccountsBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isImpairmentReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getImpairmentReversedCellText()).contain("Impairment (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isImpairmentReversedCellDisplayed()).true;
+        await expect(await assetPage.getImpairmentReversedCellText()).contain("Impairment (Reversed)");
     }
 
     async accountsAddAdjustment() {
-        await devAssetMainPage.clickAssetAccountsTabLink();
-        await devAssetMainPage.clickAssetAddDropDown();
-        await devAssetMainPage.clickAccountsAdjustmentBtn();
-        await devAssetMainPage.selectFirstUseDateDropDownValue(1);
-        await devAssetMainPage.setCostChangeFieldValue(1000);
-        await devAssetMainPage.setDepreciationChangeFieldValue("-300");
-        await expect(await devAssetMainPage.isNotesFieldDisplayed()).true;
+        await assetPage.clickAssetAccountsTabLink();
+        await assetPage.clickAssetAddDropDown();
+        await assetPage.clickAccountsAdjustmentBtn();
+        await assetPage.selectFirstUseDateDropDownValue(1);
+        await assetPage.setCostChangeFieldValue(1000);
+        await assetPage.setDepreciationChangeFieldValue("-300");
+        await expect(await assetPage.isNotesFieldDisplayed()).true;
         await devAssetMainPage.clickSaveBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAdjustmentCellDisplayed()).true;
-        await expect(await devAssetMainPage.getAdjustmentCellText()).contain("Adjustment");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAdjustmentCellDisplayed()).true;
+        await expect(await assetPage.getAdjustmentCellText()).contain("Adjustment");
     }
 
     async accountsReverseAdjustment() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickAdjustmentTaxBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickAdjustmentTaxBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
-        await expect(await devAssetMainPage.isAssetDescriptionTitleDisplayed()).true;
-        await expect(await devAssetMainPage.isAdjustmentReversedCellDisplayed()).true;
-        await expect(await devAssetMainPage.getAdjustmentReversedCellText()).contain("Adjustment (Reversed)");
+        await expect(await assetPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await assetPage.isAssetDescriptionTitleDisplayed()).true;
+        await expect(await assetPage.isAdjustmentReversedCellDisplayed()).true;
+        await expect(await assetPage.getAdjustmentReversedCellText()).contain("Adjustment (Reversed)");
     }
 
     async addClassification() {
-        await devAssetMainPage.clickAddClassificationBtn();
-        await devAssetMainPage.setClassificationNameFieldValue(await this.randomClassificationName());
-        await devAssetMainPage.setFirstOptionFieldValue(await this.randomClassificationName());
-        await devAssetMainPage.setSecondOptionFieldValue(await this.randomClassificationName());
-        await devAssetMainPage.setThirdOptionFieldValue(await this.randomClassificationName());
-        await devAssetMainPage.setFourthOptionFieldValue(await this.randomClassificationName());
-        await devAssetMainPage.setFifthOptionFieldValue(await this.randomClassificationName());
+        await classificationsPage.clickAddClassificationBtn();
+        await classificationsPage.setClassificationNameFieldValue(await this.randomClassificationName());
+        await classificationsPage.setFirstOptionFieldValue(await this.randomClassificationName());
+        await classificationsPage.setSecondOptionFieldValue(await this.randomClassificationName());
+        await classificationsPage.setThirdOptionFieldValue(await this.randomClassificationName());
+        await classificationsPage.setFourthOptionFieldValue(await this.randomClassificationName());
+        await classificationsPage.setFifthOptionFieldValue(await this.randomClassificationName());
         await devAssetMainPage.clickSaveBtn();
     }
 
     async deleteAsset() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickSetQuantityBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickSetQuantityBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+        await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickFirstUseBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickFirstUseBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+        await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true;
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickPurchaseBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+        await expect(await assetPage.isFirstUseAlertMessageDisplayted()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickPurchaseBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+        await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await devAssetMainPage.clickDeleteAssetBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickDeleteAssetBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true;
+        await expect(await assetsPage.isTaxViewFormDisplayed()).true;
     }
 
     async deleteAllAssets() {
-        await devAssetMainPage.clickContractedGroupDropDown();
-        await devAssetMainPage.isFirstAssetLinkDisplayed();
-        await console.log("Assets list size: " + (await devAssetMainPage.getAssetsListSize()));
-        const assetsCount = await devAssetMainPage.getAssetsListSize();
-        await devAssetMainPage.clickFirstGroupLink();
+        await assetsPage.clickContractedGroupDropDown();
+        await assetsPage.isFirstAssetLinkDisplayed();
+        await console.log("Assets list size: " + (await assetsPage.getAssetsListSize()));
+        const assetsCount = await assetsPage.getAssetsListSize();
+        await assetsPage.clickFirstGroupLink();
         for (let i = 0; i < assetsCount; i++) {
-            await devAssetMainPage.clickFirstGroupLink();
-            await devAssetMainPage.isFirstAssetLinkDisplayed();
-            await devAssetMainPage.clickFirstAssetLink();
-            await expect(await devAssetMainPage.isAssetColumnHeaderDisplayed()).true;
+            await assetsPage.clickFirstGroupLink();
+            await assetsPage.isFirstAssetLinkDisplayed();
+            await assetsPage.clickFirstAssetLink();
+            await expect(await assetPage.isAssetColumnHeaderDisplayed()).true;
             //checking if that lease
-            const leaseColumnDisplayed = await devAssetMainPage.isLeaseColumnHeaderDisplayed();
+            const leaseColumnDisplayed = await leasePage.isLeaseColumnHeaderDisplayed();
             if ((await leaseColumnDisplayed) === true) {
-                await devAssetMainPage.clickReverseDropDown();
-                await devAssetMainPage.clickSetQuantityBtn();
-                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+                await assetPage.clickReverseDropDown();
+                await assetPage.clickSetQuantityBtn();
+                await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+                await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
                 await devAssetMainPage.clickDeleteCofirmationOkBtn();
-                await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true;
-                await devAssetMainPage.clickReverseDropDown();
-                await devAssetMainPage.clickLeaseBtn();
-                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+                await expect(await assetPage.isFirstUseAlertMessageDisplayted()).true;
+                await assetPage.clickReverseDropDown();
+                await assetPage.clickLeaseBtn();
+                await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+                await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
                 await devAssetMainPage.clickDeleteCofirmationOkBtn();
-                await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true;
-                await devAssetMainPage.clickDeleteAssetBtn();
-                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+                await expect(await assetPage.isFirstUseAlertMessageDisplayted()).true;
+                await assetPage.clickDeleteAssetBtn();
+                await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
                 await devAssetMainPage.clickDeleteCofirmationOkBtn();
-                await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true;
+                await expect(await assetsPage.isTaxViewFormDisplayed()).true;
             } else {
-                await devAssetMainPage.clickReverseDropDown();
-                await devAssetMainPage.clickSetQuantityBtn();
-                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+                await assetPage.clickReverseDropDown();
+                await assetPage.clickSetQuantityBtn();
+                await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+                await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
                 await devAssetMainPage.clickDeleteCofirmationOkBtn();
-                await devAssetMainPage.clickReverseDropDown();
-                await devAssetMainPage.clickFirstUseBtn();
-                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+                await assetPage.clickReverseDropDown();
+                await assetPage.clickFirstUseBtn();
+                await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+                await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
                 await devAssetMainPage.clickDeleteCofirmationOkBtn();
-                await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true;
-                await devAssetMainPage.clickReverseDropDown();
-                await devAssetMainPage.clickPurchaseBtn();
-                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-                await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+                await expect(await assetPage.isFirstUseAlertMessageDisplayted()).true;
+                await assetPage.clickReverseDropDown();
+                await assetPage.clickPurchaseBtn();
+                await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+                await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
                 await devAssetMainPage.clickDeleteCofirmationOkBtn();
-                await devAssetMainPage.clickDeleteAssetBtn();
-                await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+                await assetPage.clickDeleteAssetBtn();
+                await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
                 await devAssetMainPage.clickDeleteCofirmationOkBtn();
-                await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true;
+                await expect(await assetsPage.isTaxViewFormDisplayed()).true;
             }
         }
     }
 
     async deleteClassificationInAsset() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickReverseTransferBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickReverseTransferBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
         await browser.pause(3000);
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickReverseTransferBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickReverseTransferBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
         await browser.pause(3000);
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickReverseTransferBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickReverseTransferBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
         await browser.pause(3000);
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickReverseTransferBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickReverseTransferBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
         await browser.pause(3000);
     }
 
     async deleteJournals() {
-        await console.log("Journals list size: " + (await devAssetMainPage.getJournalsListSize()));
-        const journalsCount = await devAssetMainPage.getJournalsListSize();
+        await console.log("Journals list size: " + (await journalsPage.getJournalsListSize()));
+        const journalsCount = await journalsPage.getJournalsListSize();
         for (let i = 0; i < journalsCount; i++) {
-            await expect(await devAssetMainPage.isFirstJournalItemDisplayed()).true;
-            await devAssetMainPage.clickFirstJournalItemLink();
-            await expect(await devAssetMainPage.isExportJournalDropDownDisplayed()).true;
-            await devAssetMainPage.clickDeleteCurrentJournalBtn();
+            await expect(await journalsPage.isFirstJournalItemDisplayed()).true;
+            await journalsPage.clickFirstJournalItemLink();
+            await expect(await journalsPage.isExportJournalDropDownDisplayed()).true;
+            await journalsPage.clickDeleteCurrentJournalBtn();
             await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true;
             await devAssetMainPage.clickDeleteCofirmationOkBtn();
         }
-        await expect(await devAssetMainPage.isCurrentlyJournalsDisplayed()).true;
+        await expect(await journalsPage.isCurrentlyJournalsDisplayed()).true;
     }
 
     async deleteAllRegisters() {
-        await console.log("Register list size: " + (await devAssetMainPage.getRegistersListSize()));
-        const registersCount = await devAssetMainPage.getRegistersListSize();
+        await console.log("Register list size: " + (await dashboardPage.getRegistersListSize()));
+        const registersCount = await dashboardPage.getRegistersListSize();
         for (let i = 0; i < registersCount; i++) {
-            await devAssetMainPage.clickDropDownRegisterMenu();
-            await devAssetMainPage.clickArchiveBtn();
-            await devAssetMainPage.clickArchiveConfirmationOkBtn();
-            await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true;
+            await dashboardPage.clickDropDownRegisterMenu();
+            await dashboardPage.clickArchiveBtn();
+            await dashboardPage.clickArchiveConfirmationOkBtn();
+            await expect(await dashboardPage.isSuccessArchivedRegisterMessageDisplayed()).true;
         }
-        await devAssetMainPage.clickDemoRegisterBtn();
+        await dashboardPage.clickDemoRegisterBtn()
         await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true;
-        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
-        await expect(await devAssetMainPage.getDemoRegisterText()).contain("Demo Register");
+        await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
+        await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')
     }
 
     async checkingPostedJournalCheckBox() {
-        await expect(await devAssetMainPage.isPostedJournalCheckBoxDisplayed()).true;
-        await expect(await devAssetMainPage.isChooseTransactionFormDisplayed()).true;
+        await expect(await journalsPage.isPostedJournalCheckBoxDisplayed()).true;
+        await expect(await journalsPage.isChooseTransactionFormDisplayed()).true;
         const currUrl = await browser.getUrl();
         if (await currUrl.includes("https://dev.asset.accountant/")) {
-            await devAssetMainPage.clickPostedJournalCheckBox();
+            await journalsPage.clickPostedJournalCheckBox();
         } else {
-            await expect(await devAssetMainPage.isPostedJournalCheckBoxDisplayed()).true;
+            await expect(await journalsPage.isPostedJournalCheckBoxDisplayed()).true;
         }
     }
 
     async checkingExistingRegistersSuperTest() {
         await expect(await devAssetMainPage.isOrganisationSettingsWithRegistersDisplayed()).true;
-        const registerLink = await devAssetMainPage.isRegisterLinkDisplayed();
+        const registerLink = await dashboardPage.isRegisterLinkDisplayed();
         switch (await registerLink) {
             case true:
-                await console.log("Register list size: " + (await devAssetMainPage.getRegistersListSize()));
-                const registersCount = await devAssetMainPage.getRegistersListSize();
+                await console.log("Register list size: " + (await dashboardPage.getRegistersListSize()));
+                const registersCount = await dashboardPage.getRegistersListSize();
                 for (let i = 0; i < registersCount; i++) {
-                    await devAssetMainPage.clickDropDownRegisterMenu();
-                    await devAssetMainPage.clickArchiveBtn();
-                    await devAssetMainPage.clickArchiveConfirmationOkBtn();
-                    await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true;
+                    await dashboardPage.clickDropDownRegisterMenu();
+                    await dashboardPage.clickArchiveBtn();
+                    await dashboardPage.clickArchiveConfirmationOkBtn();
+                    await expect(await dashboardPage.isSuccessArchivedRegisterMessageDisplayed()).true;
                     await browser.pause(1000);
                 }
                 await browser.refresh();
             case false:
+                await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true;
                 await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
                 //await expect(await devAssetMainPage.getDemoRegisterText()).contain("Demo Register");
         }
@@ -856,20 +856,21 @@ class Helper {
 
     async checkingExistingRegisters() {
         await expect(await devAssetMainPage.isOrganisationSettingsDisplayed()).true;
-        const registerLink = await devAssetMainPage.isRegisterLinkDisplayed();
+        const registerLink = await dashboardPage.isRegisterLinkDisplayed();
         switch (await registerLink) {
             case true:
-                await console.log("Register list size: " + (await devAssetMainPage.getRegistersListSize()));
-                const registersCount = await devAssetMainPage.getRegistersListSize();
+                await console.log("Register list size: " + (await dashboardPage.getRegistersListSize()));
+                const registersCount = await dashboardPage.getRegistersListSize();
                 for (let i = 0; i < registersCount; i++) {
-                    await devAssetMainPage.clickDropDownRegisterMenu();
-                    await devAssetMainPage.clickArchiveBtn();
-                    await devAssetMainPage.clickArchiveConfirmationOkBtn();
-                    await expect(await devAssetMainPage.isSuccessArchivedRegisterMessageDisplayed()).true;
+                    await dashboardPage.clickDropDownRegisterMenu();
+                    await dashboardPage.clickArchiveBtn();
+                    await dashboardPage.clickArchiveConfirmationOkBtn();
+                    await expect(await dashboardPage.isSuccessArchivedRegisterMessageDisplayed()).true;
                     await browser.pause(1000);
                 }
                 await browser.refresh();
             case false:
+                await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true;
                 await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true;
                 await expect(await devAssetMainPage.getDemoRegisterText()).contain("Demo Register");
         }
@@ -877,17 +878,17 @@ class Helper {
 
     async checkingExistingGroupsAndAssets() {
         await expect(await devAssetMainPage.isRegisterSettingsDisplayed()).true;
-        const GroupBtnTemplateValue = await devAssetMainPage.isGroupTemplateBtnDisplayed();
+        const GroupBtnTemplateValue = await assetsPage.isGroupTemplateBtnDisplayed();
         switch (await GroupBtnTemplateValue) {
             case true:
-                await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
+                await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`);
                 break;
             case false:
-                await expect(await devAssetMainPage.isEditBtnDisplayed()).true;
-                const ContractedGroupDropDownValue = await devAssetMainPage.isContractedGroupDropDownDisplayed();
+                await expect(await assetGroups.isEditBtnDisplayed()).true;
+                const ContractedGroupDropDownValue = await assetsPage.isContractedGroupDropDownDisplayed();
                 if ((await ContractedGroupDropDownValue) === true) {
                     await this.deleteAllAssets();
-                    await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true;
+                    await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
                     await this.deleteAssetGroup();
                 } else {
                     await this.deleteAssetGroup();
@@ -897,8 +898,8 @@ class Helper {
     }
 
     async checkingExistingJournals() {
-        await expect(await devAssetMainPage.isLoadingImageDisplayed()).true;
-        const DeleteJournalBtnValue = await devAssetMainPage.isDeleteJournalBtnDisplayed();
+        await expect(await journalsPage.isLoadingImageDisplayed()).true;
+        const DeleteJournalBtnValue = await journalsPage.isDeleteJournalBtnDisplayed();
         switch (await DeleteJournalBtnValue) {
             case true:
                 await this.deleteJournals();
@@ -916,17 +917,16 @@ class Helper {
         const randomCodeNumber = Math.floor(Math.random() * 1000);
         const testNameForLink = "testNameForLink" + randomCodeNumber;
         const urlForLink = "https://" + "testURL" + randomCodeNumber + ".com";
-        await devAssetMainPage.clickAddAttachmentDropDownBtn();
-        await devAssetMainPage.clickAddLinkBtn();
-        await expect(await devAssetMainPage.isAddLinkFormDisplayed()).true;
-        await devAssetMainPage.setLinkNameFieldValue(testNameForLink);
-        await devAssetMainPage.setUrlFieldValue(urlForLink);
-        await devAssetMainPage.clickAddBtn();
-        await expect(await devAssetMainPage.isAddLinkFormExist());
-        await expect(await devAssetMainPage.isAttachmentsFormDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`Link added by ${currentUserProfileName}`);
-        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${testNameForLink}`);
-        //await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${currentTime}`)
+        await assetPage.clickAddAttachmentDropDownBtn();
+        await assetPage.clickAddLinkBtn();
+        await expect(await assetPage.isAddLinkFormDisplayed()).true;
+        await assetPage.setLinkNameFieldValue(testNameForLink);
+        await assetPage.setUrlFieldValue(urlForLink);
+        await assetPage.clickAddBtn();
+        await expect(await assetPage.isAddLinkFormExist());
+        await expect(await assetPage.isAttachmentsFormDisplayed()).true;
+        await expect(await assetPage.getFirstAttachmentText()).contain(`Link added by ${currentUserProfileName}`);
+        await expect(await assetPage.getFirstAttachmentText()).contain(`${testNameForLink}`);
     }
 
     async addFilesAttachment() {
@@ -937,34 +937,33 @@ class Helper {
         await browser.execute(async () => {
             document.getElementById("import-upload").style.display = "block";
         });
-        await devAssetMainPage.setAttachmentFileUploadInputValue(remoteFilePath);
+        await assetPage.setAttachmentFileUploadInputValue(remoteFilePath);
         await browser.execute(async () => {
             document.getElementById("import-upload").style.display = "none";
         });
-        await expect(await devAssetMainPage.isAttachmentsFormDisplayed()).true;
-        await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`Uploaded by ${currentUserProfileName}`);
-        //await expect(await devAssetMainPage.getFirstAttachmentText()).contain(`${currentTime}`)
+        await expect(await assetPage.isAttachmentsFormDisplayed()).true;
+        await expect(await assetPage.getFirstAttachmentText()).contain(`Uploaded by ${currentUserProfileName}`);
     }
 
     async deleteAllLinkAttachments() {
-        await console.log("Attachments list size: " + (await devAssetMainPage.getAttachmentsListSize()));
-        const attahcmentsCount = await devAssetMainPage.getAttachmentsListSize();
+        await console.log("Attachments list size: " + (await assetPage.getAttachmentsListSize()));
+        const attahcmentsCount = await assetPage.getAttachmentsListSize();
         for (let i = 0; i < attahcmentsCount; i++) {
-            await devAssetMainPage.clickDeleteLinkAttachmentBtn();
+            await assetPage.clickDeleteLinkAttachmentBtn();
             await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true;
             await devAssetMainPage.clickDeleteCofirmationOkBtn();
         }
-        await expect(await devAssetMainPage.isAttachmentsFormExist());
+        await expect(await assetPage.isAttachmentsFormExist());
     }
     async deleteAllFilesAttachments() {
-        await console.log("Attachments list size: " + (await devAssetMainPage.getAttachmentsListSize()));
-        const attahcmentsCount = await devAssetMainPage.getAttachmentsListSize();
+        await console.log("Attachments list size: " + (await assetPage.getAttachmentsListSize()));
+        const attahcmentsCount = await assetPage.getAttachmentsListSize();
         for (let i = 0; i < attahcmentsCount; i++) {
-            await devAssetMainPage.clickDeleteFileAttachmentBtn();
+            await assetPage.clickDeleteFileAttachmentBtn();
             await expect(await devAssetMainPage.isDeleteConfirmationTitleDisplayed()).true;
             await devAssetMainPage.clickDeleteCofirmationOkBtn();
         }
-        await expect(await devAssetMainPage.isAttachmentsFormExist());
+        await expect(await assetPage.isAttachmentsFormExist());
     }
 
     async pdfValidation(currPath) {
@@ -1098,66 +1097,66 @@ class Helper {
 
     async fillingOutLeaseForm() {
         const randomCodeNumber = Math.floor(Math.random() * 100);
-        await expect(await devAssetMainPage.isNewLeaseAssetFormDisplayed()).true;
-        await expect(await devAssetMainPage.isPaymentLeaseAssetFormDisplayed()).true;
-        await expect(await devAssetMainPage.isAmountLeaseFormDisplayed()).true;
-        await devAssetMainPage.setLeaseNameFieldValue(randomLeaseName + randomCodeNumber);
-        await devAssetMainPage.setLeaseCodeNumberFieldValue(randomCodeNumber);
-        await devAssetMainPage.setLeaseDescrFieldValue("test descritpion for lease");
-        await devAssetMainPage.setLeaseGroupSelectValue();
-        await devAssetMainPage.clickHirePurchaseYesBtn();
-        await devAssetMainPage.clickHirePurchaseNoBtn();
-        await devAssetMainPage.setLeaseStartDateValue("10/05/2022");
-        await devAssetMainPage.setLeaseFirstUseDateValue("25/05/2022");
-        await devAssetMainPage.setLeaseQuantityFieldValue("1");
-        await devAssetMainPage.setLeaseQuantityUnitsSelectValue();
+        await expect(await leasePage.isNewLeaseAssetFormDisplayed()).true;
+        await expect(await leasePage.isPaymentLeaseAssetFormDisplayed()).true;
+        await expect(await leasePage.isAmountLeaseFormDisplayed()).true;
+        await leasePage.setLeaseNameFieldValue(randomLeaseName + randomCodeNumber);
+        await leasePage.setLeaseCodeNumberFieldValue(randomCodeNumber);
+        await leasePage.setLeaseDescrFieldValue("test descritpion for lease");
+        await leasePage.setLeaseGroupSelectValue();
+        await leasePage.clickHirePurchaseYesBtn();
+        await leasePage.clickHirePurchaseNoBtn();
+        await leasePage.setLeaseStartDateValue("10/05/2022");
+        await leasePage.setLeaseFirstUseDateValue("25/05/2022");
+        await leasePage.setLeaseQuantityFieldValue("1");
+        await leasePage.setLeaseQuantityUnitsSelectValue();
     }
 
     async fillingOutLeasePaymentForm() {
-        await devAssetMainPage.setPaymentDateFieldValue("20/05/2022");
-        await devAssetMainPage.setPaymentPrincipalFieldValue(200);
-        await devAssetMainPage.setPaymentInterestFieldValue(500);
-        await devAssetMainPage.setPaymentOtherFieldValue(100);
+        await leasePage.setPaymentDateFieldValue("20/05/2022");
+        await leasePage.setPaymentPrincipalFieldValue(200);
+        await leasePage.setPaymentInterestFieldValue(500);
+        await leasePage.setPaymentOtherFieldValue(100);
     }
 
     async generatePaymentSchedule() {
-        await expect(await devAssetMainPage.isGeneratePaymentScheduleFormDisplayed()).true;
-        await expect(await devAssetMainPage.getGeneratePaymentScheduleTitleText()).contain("Generate Payment Schedule");
-        await devAssetMainPage.setAmountFinancedFieldValue(50000);
-        await devAssetMainPage.setFirstLeasePaymentFieldValue(1500);
-        await devAssetMainPage.setFirstFrequencyDropDownValue(1);
-        await devAssetMainPage.clickAddPaymentsBtn();
-        await devAssetMainPage.setSecondLeasePaymentFieldValue(2500);
-        await devAssetMainPage.setSecondFrequencyDropDownValue(4);
-        await devAssetMainPage.setSecondQuantityFieldValue(24);
-        await devAssetMainPage.clickGenerateScheduleBtn();
-        await expect(await devAssetMainPage.isPaymentScheduleTableDisplayed()).true;
-        await devAssetMainPage.clickUseScheduleBtn();
-        const amountCapitalisedValue = await devAssetMainPage.getAmountCapitalisedFieldValue();
+        await expect(await leasePage.isGeneratePaymentScheduleFormDisplayed()).true;
+        await expect(await leasePage.getGeneratePaymentScheduleTitleText()).contain("Generate Payment Schedule");
+        await leasePage.setAmountFinancedFieldValue(50000);
+        await leasePage.setFirstLeasePaymentFieldValue(1500);
+        await leasePage.setFirstFrequencyDropDownValue(1);
+        await leasePage.clickAddPaymentsBtn();
+        await leasePage.setSecondLeasePaymentFieldValue(2500);
+        await leasePage.setSecondFrequencyDropDownValue(4);
+        await leasePage.setSecondQuantityFieldValue(24);
+        await leasePage.clickGenerateScheduleBtn();
+        await expect(await leasePage.isPaymentScheduleTableDisplayed()).true;
+        await leasePage.clickUseScheduleBtn();
+        const amountCapitalisedValue = await leasePage.getAmountCapitalisedFieldValue();
         assert.strictEqual(amountCapitalisedValue, "50000", "Values are not equal!!!!");
     }
 
     async deleteLease() {
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickSetQuantityBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickSetQuantityBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+        await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickFirstUseBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickFirstUseBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+        await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isFirstUseAlertMessageDisplayted()).true;
-        await devAssetMainPage.clickReverseDropDown();
-        await devAssetMainPage.clickLeaseBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
-        await expect(await devAssetMainPage.isReversalConfirmationTitleDisplayed()).true;
+        await expect(await assetPage.isFirstUseAlertMessageDisplayted()).true;
+        await assetPage.clickReverseDropDown();
+        await assetPage.clickLeaseBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
+        await expect(await assetPage.isReversalConfirmationTitleDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await devAssetMainPage.clickDeleteAssetBtn();
-        await expect(await devAssetMainPage.isReversalConfirmationFormDisplayed()).true;
+        await assetPage.clickDeleteAssetBtn();
+        await expect(await assetPage.isReversalConfirmationFormDisplayed()).true;
         await devAssetMainPage.clickDeleteCofirmationOkBtn();
-        await expect(await devAssetMainPage.isTaxViewFormDisplayed()).true;
+        await expect(await assetsPage.isTaxViewFormDisplayed()).true;
     }
 }
 

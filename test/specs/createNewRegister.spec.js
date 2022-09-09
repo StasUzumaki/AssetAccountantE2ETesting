@@ -2,7 +2,9 @@ const authPage = require('../pageobjects/authentication.page')
 const devAssetMainPage = require('../pageobjects/devAssetMain.page');
 const { expect } = require('chai');
 const baseUrl = require('../../data/baseURL')
+const dashboardPage = require('../pageobjects/dashboard.page')
 const helper = require('../pageobjects/helper');
+const assetsPage = require('../pageobjects/assets.page');
 
 describe('create a new register', () => {
     before('land to dev asset page and login', async () => {
@@ -18,17 +20,17 @@ describe('create a new register', () => {
         await devAssetMainPage.clickCreateFirstRegisterBtn()
         await helper.createRegister()
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstThingsFirstAlertMessageDisplayed()).true
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
+        await expect(await assetsPage.isFirstThingsFirstAlertMessageDisplayed()).true
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
         await devAssetMainPage.clickRegisterSelectionDropDown()
         await devAssetMainPage.clickAllRegistersLink()
     });
     it('should create a register with existing register', async () => {
-        await devAssetMainPage.clickCreateRegisterBtn()
+        await dashboardPage.clickCreateRegisterBtn()
         await helper.createRegisterWithExistingRegister()
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstThingsFirstAlertMessageDisplayed()).true
-        await expect(await devAssetMainPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
+        await expect(await assetsPage.isFirstThingsFirstAlertMessageDisplayed()).true
+        await expect(await assetsPage.getFirstThingsFirstAlertMessageText()).contain(`First things first`)
         await devAssetMainPage.clickRegisterSelectionDropDown()
         await devAssetMainPage.clickAllRegistersLink()
     });

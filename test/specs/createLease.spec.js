@@ -2,12 +2,16 @@ const devAssetMainPage = require('../pageobjects/devAssetMain.page');
 const { expect } = require('chai');
 const baseUrl = require('../../data/baseURL');
 const helper = require('../pageobjects/helper');
+const dashboardPage = require('../pageobjects/dashboard.page');
+const assetsPage = require('../pageobjects/assets.page');
+const leasePage = require('../pageobjects/lease.page');
+const assetPage = require('../pageobjects/asset.page');
 
 describe('create report', () => {
     before('land to dev asset page and login', async () => {
         await helper.platformLink()
         await helper.loginToAccountCreateAsset()
-        await devAssetMainPage.clickFirstRegisterLink()
+        await dashboardPage.clickFirstRegisterLink()
         //checking existing assets groups and assets
         await helper.checkingExistingGroupsAndAssets()
     });
@@ -25,15 +29,14 @@ describe('create report', () => {
     });
     it('should create HP/Lease', async () => {
         await devAssetMainPage.clickAssetsLink()
-        await expect(await devAssetMainPage.isFirstGroupLinkDisplayed()).true
-        await devAssetMainPage.clickAssetsAddBtn()
-        await devAssetMainPage.clickCreateHpLeaseAssetBtn()
+        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true
+        await assetsPage.clickAssetsAddBtn()
+        await assetsPage.clickCreateHpLeaseAssetBtn()
         await helper.fillingOutLeaseForm()
-        await devAssetMainPage.clickAlertMessageGenerateScheduleBtn()
+        await leasePage.clickAlertMessageGenerateScheduleBtn()
         await helper.generatePaymentSchedule()
-        //await helper.fillingOutLeasePaymentForm()
-        await devAssetMainPage.clickLeaseSaveBtn()
-        await expect(await devAssetMainPage.isAssetColumnHeaderDisplayed()).true
-        await expect(await devAssetMainPage.isLeaseColumnHeaderDisplayed()).true
+        await leasePage.clickLeaseSaveBtn()
+        await expect(await assetPage.isAssetColumnHeaderDisplayed()).true
+        await expect(await leasePage.isLeaseColumnHeaderDisplayed()).true
     });
 });
