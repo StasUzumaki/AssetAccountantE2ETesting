@@ -194,35 +194,35 @@ class Helper {
     }
 
     async createRegister() {
-        await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true
-        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
-        await devAssetMainPage.setRegisterNameValue(registerNameSettings)
-        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
-        await devAssetMainPage.setRegisterEntityValue('testRegisterEntity')
-        await browser.pause(2000)
-        await devAssetMainPage.clickNextRegisterBtn()
-        await devAssetMainPage.clickTryForFreeBtn()
-        await expect(await organisationSettingsPage.isUserLinkDisplayed()).true;
-        await expect(await organisationSettingsPage.isSettingsHeaderDisplayed()).true
-        await expect(await organisationSettingsPage.getSettingsHeaderText()).contain(`${registerNameSettings}`)
-        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
-        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
+        await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true;
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
+        await devAssetMainPage.setRegisterNameValue(registerNameSettings);
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
+        await devAssetMainPage.setRegisterEntityValue("testRegisterEntity");
+        await browser.pause(2000);
+        await devAssetMainPage.clickNextRegisterBtn();
+        await devAssetMainPage.clickTryForFreeBtn();
+        await expect(await devAssetMainPage.isUserLinkDisplayed()).true;
+        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true;
+        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${registerNameSettings}`);
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
     }
 
     async createRegisterSuperTest(registerNameSettings) {
-        await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true
-        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
-        await devAssetMainPage.setRegisterNameValue(registerNameSettings)
-        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
-        await devAssetMainPage.setRegisterEntityValue('testRegisterEntity')
-        await browser.pause(2000)
-        await devAssetMainPage.clickNextRegisterBtn()
-        await devAssetMainPage.clickTryForFreeBtn()
-        await expect(await organisationSettingsPage.isUserLinkDisplayed()).true;
-        await expect(await organisationSettingsPage.isSettingsHeaderDisplayed()).true
-        await expect(await organisationSettingsPage.getSettingsHeaderText()).contain(`${registerNameSettings}`)
-        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true
-        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true
+        await expect(await devAssetMainPage.isCreateNewRegisterFormDisplayed()).true;
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
+        await devAssetMainPage.setRegisterNameValue(registerNameSettings);
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
+        await devAssetMainPage.setRegisterEntityValue("testRegisterEntity");
+        await browser.pause(2000);
+        await devAssetMainPage.clickNextRegisterBtn();
+        await devAssetMainPage.clickTryForFreeBtn();
+        await expect(await devAssetMainPage.isUserLinkDisplayed()).true;
+        await expect(await devAssetMainPage.isSettingsHeaderDisplayed()).true;
+        await expect(await devAssetMainPage.getSettingsHeaderText()).contain(`${registerNameSettings}`);
+        await expect(await devAssetMainPage.isRegisterNameFieldDisplayed()).true;
+        await expect(await devAssetMainPage.isEntityNameFieldDisplayed()).true;
     }
 
     async createRegisterWithExistingRegister() {
@@ -582,18 +582,18 @@ class Helper {
     }
 
     async accountsAddReassessment() {
-        await assetPage.clickAssetAccountsTabLink()
-        await assetPage.clickAssetAddDropDown()
-        await assetPage.clickReassessmentBtn()
-        await assetPage.setTaxDepreciationNotesFieldValue('test notes test notes')
-        await assetPage.selectDateReassessmentDropDown(1)
-        await assetPage.selectReassessMethodDropDownValue(2)
-        await assetPage.setEffectiveLifeFieldValue(10)
-        await browser.pause(2000)
-        await devAssetMainPage.clickSaveBtn()
-        await expect(await assetPage.isAssetStatusIsUseDispayed()).true
-        await expect(await assetPage.isReassessmentCellDisplayed()).true
-        await expect(await assetPage.getReassessmentCellText()).contain('Reassessment')
+        await devAssetMainPage.clickAssetAccountsTabLink();
+        await devAssetMainPage.clickAssetAddDropDown();
+        await devAssetMainPage.clickReassessmentBtn();
+        await devAssetMainPage.setTaxDepreciationNotesFieldValue("test notes test notes");
+        await devAssetMainPage.selectDateReassessmentDropDown(1)
+        await devAssetMainPage.selectReassessMethodDropDownValue(2);
+        await devAssetMainPage.setEffectiveLifeFieldValue(10);
+        await browser.pause(2000);
+        await devAssetMainPage.clickSaveBtn();
+        await expect(await devAssetMainPage.isAssetStatusIsUseDispayed()).true;
+        await expect(await devAssetMainPage.isReassessmentCellDisplayed()).true;
+        await expect(await devAssetMainPage.getReassessmentCellText()).contain("Reassessment");
     }
 
     async accountsReverseReasessment() {
@@ -815,7 +815,7 @@ class Helper {
             await dashboardPage.clickArchiveConfirmationOkBtn();
             await expect(await dashboardPage.isSuccessArchivedRegisterMessageDisplayed()).true;
         }
-        await dashboardPage.clickDemoRegisterBtn()
+        await devAssetMainPage.clickDemoRegisterBtn();
         await expect(await devAssetMainPage.isCreateFirstRegisterBtnDisplayed()).true;
         await expect(await devAssetMainPage.isDemoRegisterLinkDisplayed()).true
         await expect(await devAssetMainPage.getDemoRegisterText()).contain('Demo Register')

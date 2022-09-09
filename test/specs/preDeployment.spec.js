@@ -24,6 +24,7 @@ const filePathCsv = './tempDownloads/' + registerNameSettings + ' - Asset Summar
 describe('Pre-Deployment', () => {
     before('land to dev asset page', async () => {
         await helper.platformLink()
+        
     });
     after('logout', async () => {
         // deleting journal
