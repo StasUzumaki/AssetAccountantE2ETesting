@@ -14,7 +14,7 @@ const MailSlurp = require('mailslurp-client').default;
 const apiKey = process.env.API_MAILSLURP;
 const mailslurp = new MailSlurp({ apiKey });
 
-const journalDescr = 'Test Description Movements'
+const journalDescr = 'Test Description Movements for 31 May 2022'
 const shortLastName = uniqueNamesGenerator({
     dictionaries: [colors],
     length: 1

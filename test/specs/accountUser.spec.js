@@ -12,7 +12,8 @@ const assetGroups = require('../pageobjects/assetGroups.page')
 const organisationSettingsUsersPage = require('../pageobjects/organisationSettingsUsers.page');
 const registerSettingsUsersPage = require('../pageobjects/registerSettingsUsers.page');
 const subscriptionAndPaymentPage = require('../pageobjects/subscriptionAndPayment.page');
-
+const path = require("path");
+const importsPage = require("../pageobjects/imports.page");
 
 const mainEmail = 'stasdevasset'
 const shortUserName = uniqueNamesGenerator({
@@ -368,22 +369,83 @@ describe('Account / User', () => {
         await devAssetMainPage.clickAssetsLink()
         await helper.createAssetGroupFromTemplate()
     });
-    it('should create 10 assets', async () => {
-        await devAssetMainPage.clickAssetsLink()
-        const assetsAmount = 5;
-        for (let i = 0; i < assetsAmount; i++) {
-            await assetsPage.clickAssetsAddBtn()
-            await helper.createAsset()
-            await devAssetMainPage.clickAssetsLink()
-        }
-        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
-        for (let i = 0; i < assetsAmount; i++) {
-            await assetsPage.clickAssetsAddBtn()
-            await helper.createAsset()
-            await devAssetMainPage.clickAssetsLink()
-        }
-        await expect(await assetsPage.isFirstGroupLinkDisplayed()).true;
+    //import 10 assets
+    it("should visit to Bulk Action and upload spreadsheet", async () => {
+        const filePath = path.join(__dirname, "../../data/AssetImportTemplate.xlsx");
+        const remoteFilePath = await browser.uploadFile(filePath);
+        await importsPage.clickBulkActionLink();
+        await importsPage.clickNewUploadDropDownBtn();
+        await importsPage.clickNewAssetsBtn();
+        await expect(await importsPage.isImportFileInputDisplayed()).true;
+        await importsPage.setImportFileInputValue(remoteFilePath);
+        await importsPage.clickUploadBtn();
+        await expect(await importsPage.isImportNameDisplayed()).true;
     });
+    it("should have fill import details", async () => {
+        await importsPage.selectOpeningBalanceDateValue(5);
+        await importsPage.setYearInputValue("2022");
+        await importsPage.clickContainsPooledAssetsNoBtn();
+        await importsPage.clickContainsRevaluedAssetsNoBtn();
+        await importsPage.clickDifferentPurchaseNoBtn();
+        await importsPage.clickNextBtn();
+    });
+    it("should have map Asset fields", async () => {
+        await expect(await importsPage.isQuantityUnitsFieldDisplayed()).true;
+        await importsPage.selectAssetNameValue(1);
+        await importsPage.selectCodeValue(2);
+        await importsPage.selectDescriptionValue(3);
+        await importsPage.clickNextBtn();
+    });
+    it("should have setup Asset Groups", async () => {
+        await expect(await importsPage.isAssetGroupSelectDisplayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have map purchase date & cost", async () => {
+        await expect(await importsPage.isCostSelectDisplayed()).true;
+        await importsPage.selectCostValue(6)
+        await importsPage.selectPurchaseDateValue(4)
+        await importsPage.selectFirstUseDateValue(5)
+        await importsPage.clickNextBtn();
+    });
+    it("should have map tax fields", async () => {
+        await expect(await importsPage.isMethodSelectDisplayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have set up Tax Depreciation Methods", async () => {
+        await expect(await importsPage.isDepreciationMethodSelectDislpayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have map your Accounts fields", async () => {
+        await expect(await importsPage.isMethodSelectDisplayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have set up Accounts Depreciation Methods", async () => {
+        await expect(await importsPage.isDepreciationMethodSelectDislpayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have map remaining columns", async () => {
+        await expect(await importsPage.isAlertMessageDisplayed()).true;
+        await importsPage.clickLocationCheckBox();
+        await importsPage.clickSerialNumberCheckBox();
+        await importsPage.selectLocationValue(2);
+        await importsPage.selectSerialNumberValue(1);
+        await importsPage.clickNextBtn();
+    });
+    it("should have import summary", async () => {
+        await expect(await importsPage.isTaxDetailsDisplayed()).true;
+        await expect(await importsPage.isAccountDetailsDisplayed()).true;
+        await importsPage.clickProcessBtn();
+    });
+    it("should have verify that assets have been added to the register", async () => {
+        await expect(await importsPage.isViewAssetsLinkDisplayed()).true;
+        await expect(await importsPage.getImportResultText()).contain(" successfully imported.");
+        await importsPage.clickDoneBtn();
+        await expect(await importsPage.isAssetImportDisplayed()).true;
+        await expect(await importsPage.isImportCompleteStatusDisplayed()).true;
+        await expect(await importsPage.getImportCompleteStatusText()).contain("Complete");
+        await devAssetMainPage.clickAssetsLink();
+    });
+    //
     it('should create and fail 11 asset and change subscription plan', async () => {
         await assetsPage.clickAssetsAddBtn()
         await assetsPage.clickCreateAssetBtn()

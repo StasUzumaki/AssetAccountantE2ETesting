@@ -3,7 +3,7 @@ const page = require('./page')
 const paymentForm = '[class="form-check"]'
 const subscriptionForm = '[class="modal-content"]'
 const toggleForAccountingFirms = '[class="switch"]'
-const standartChangePlanBtn = '//div[3]//div/button'
+const standartChangePlanBtn = '//div[2]/div[2]/app-pricing-package-actions/div/button'
 const standartPlusLeasesChangePlanBtn = '//div[2]/div[2]/div[2]//div/button'
 const paymentMethodForm = '//ngb-modal-window[2]/div/div'
 const paymentUpgradeSubBtn = '[class="modal-footer"] button'

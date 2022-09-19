@@ -29,7 +29,7 @@ const newOrganisationSaveBtn = '//div[@class="modal-footer"]/button[2]'
 const organisationNamesList = '//nav/section[2]/div/div'
 const demoRegisterLink = '//app-header-bar/div/div/div[1]/div'
 const settingsHeaderWithExistingReg = '[class="page-heading"] h3'
-const assetsLink = '[href*="/assets"]'
+const assetsLink = `(//a[contains(@class,'btn ng-star-inserted')])[1]` //'[href*="/assets"]'
 const journalLink = '[href*="/journals"]'
 const deleteConfirmationOkBtn = `//*[@class='modal-footer']/button[2]`
 const deleteConfirmationTitle = '//*[contains(text(), "Delete Confirmation")]'

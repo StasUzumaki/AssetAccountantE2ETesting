@@ -1,5 +1,4 @@
 const devAssetMainPage = require('../pageobjects/devAssetMain.page');
-const baseUrl = require('../../data/baseURL')
 const { expect } = require('chai');
 const helper = require('../pageobjects/helper');
 const fs = require('fs');
@@ -9,6 +8,8 @@ const assetsPage = require('../pageobjects/assets.page');
 const journalsPage = require('../pageobjects/journals.page');
 const leasePage = require('../pageobjects/lease.page');
 const assetPage = require('../pageobjects/asset.page');
+const path = require("path");
+const importsPage = require("../pageobjects/imports.page");
 
 const randomName = uniqueNamesGenerator({
     dictionaries: [adjectives, animals, colors],
@@ -30,11 +31,6 @@ describe('Pre-Deployment', () => {
         // deleting journal
         await devAssetMainPage.clickJournalLink()
         await helper.deleteJournals()
-        // deleting asset
-        await devAssetMainPage.clickAssetsLink()
-        await helper.deleteAllAssets()
-        // deleting asset group
-        await helper.deleteAssetGroup()
         // deleting register
         await devAssetMainPage.clickRegisterSelectionDropDown()
         await devAssetMainPage.clickAllRegistersLink()
@@ -161,6 +157,81 @@ describe('Pre-Deployment', () => {
         // cvs file validation
         await helper.csvValidation(filePathCsv)
         await devAssetMainPage.clickCloseBtn()
-        await devAssetMainPage.clickAssetsLink()
+    });
+    //
+    it("should visit to Bulk Action and upload spreadsheet", async () => {
+        const filePath = path.join(__dirname, "../../data/AssetImportTemplate8.xlsx");
+        const remoteFilePath = await browser.uploadFile(filePath);
+        await importsPage.clickBulkActionLink();
+        await importsPage.clickNewUploadDropDownBtn();
+        await importsPage.clickNewAssetsBtn();
+        await expect(await importsPage.isImportFileInputDisplayed()).true;
+        await importsPage.setImportFileInputValue(remoteFilePath);
+        await importsPage.clickUploadBtn();
+        await expect(await importsPage.isImportNameDisplayed()).true;
+    });
+    it("should have fill import details", async () => {
+        await importsPage.selectOpeningBalanceDateValue(5);
+        await importsPage.setYearInputValue("2022");
+        await importsPage.clickContainsPooledAssetsNoBtn();
+        await importsPage.clickContainsRevaluedAssetsNoBtn();
+        await importsPage.clickDifferentPurchaseNoBtn();
+        await importsPage.clickNextBtn();
+    });
+    it("should have map Asset fields", async () => {
+        await expect(await importsPage.isQuantityUnitsFieldDisplayed()).true;
+        await importsPage.selectAssetNameValue(1);
+        await importsPage.selectCodeValue(2);
+        await importsPage.selectDescriptionValue(3);
+        await importsPage.clickNextBtn();
+    });
+    it("should have setup Asset Groups", async () => {
+        await expect(await importsPage.isAssetGroupSelectDisplayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have map purchase date & cost", async () => {
+        await expect(await importsPage.isCostSelectDisplayed()).true;
+        await importsPage.selectCostValue(6)
+        await importsPage.selectPurchaseDateValue(4)
+        await importsPage.selectFirstUseDateValue(5)
+        await importsPage.clickNextBtn();
+    });
+    it("should have map tax fields", async () => {
+        await expect(await importsPage.isMethodSelectDisplayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have set up Tax Depreciation Methods", async () => {
+        await expect(await importsPage.isDepreciationMethodSelectDislpayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have map your Accounts fields", async () => {
+        await expect(await importsPage.isMethodSelectDisplayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have set up Accounts Depreciation Methods", async () => {
+        await expect(await importsPage.isDepreciationMethodSelectDislpayed()).true;
+        await importsPage.clickNextBtn();
+    });
+    it("should have map remaining columns", async () => {
+        await expect(await importsPage.isAlertMessageDisplayed()).true;
+        await importsPage.clickLocationCheckBox();
+        await importsPage.clickSerialNumberCheckBox();
+        await importsPage.selectLocationValue(2);
+        await importsPage.selectSerialNumberValue(1);
+        await importsPage.clickNextBtn();
+    });
+    it("should have import summary", async () => {
+        await expect(await importsPage.isTaxDetailsDisplayed()).true;
+        await expect(await importsPage.isAccountDetailsDisplayed()).true;
+        await importsPage.clickProcessBtn();
+    });
+    it("should have verify that assets have been added to the register", async () => {
+        await expect(await importsPage.isViewAssetsLinkDisplayed()).true;
+        await expect(await importsPage.getImportResultText()).contain(" successfully imported.");
+        await importsPage.clickDoneBtn();
+        await expect(await importsPage.isAssetImportDisplayed()).true;
+        await expect(await importsPage.isImportCompleteStatusDisplayed()).true;
+        await expect(await importsPage.getImportCompleteStatusText()).contain("Complete");
+        await devAssetMainPage.clickAssetsLink();
     });
 });
